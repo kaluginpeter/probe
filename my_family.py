@@ -16,6 +16,20 @@ my_family_height = [
 
 # Выведите на консоль рост отца в формате
 #   Рост отца - ХХ см
-print('Рост моего Отца', my_family_height[0])
+
+print('Рост моего Отца', my_family_height[0][1], 'см')
+
 # Выведите на консоль общий рост вашей семьи как сумму ростов всех членов
 #   Общий рост моей семьи - ХХ см
+
+dad = my_family_height[0][1]
+
+mum = my_family_height[1][1]
+
+bro = my_family_height[2][1]
+
+me = my_family_height[3][1]
+
+all_height_my_family = dad + mum + bro + me
+
+print('Общий рост моей семьи состовляет', all_height_my_family, 'см')
