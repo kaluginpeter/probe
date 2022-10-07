@@ -26,7 +26,7 @@ enjoy = violator_songs_list[5][1]
 clean = violator_songs_list[8][1]
 all_time_songs1 = world + enjoy + clean
 print('''Общее время звучания: 'Halo', 'Enjoy the Silence', 'Clean' составляет''', all_time_songs1)
-# Повторяем со вторым словарем песен группы Depeche Mode
+# Повторяем, но теперт со словарем песен группы Depeche Mode
 violator_songs_dict = {
     'World in My Eyes': 4.76,
     'Sweetest Perfection': 4.43,
@@ -41,5 +41,10 @@ violator_songs_dict = {
 
 # печатаем общее время звучания трех песен: 'Sweetest Perfection', 'Policy of Truth' и 'Blue Dress'
 #   А другие три песни звучат ХХХ минут
-
+sweetest = violator_songs_dict['Sweetest Perfection']
+policy = violator_songs_dict['Policy of Truth']
+blue = violator_songs_dict['Blue Dress']
+all_time_songs2 = sweetest + policy + blue
+print('А другие три песни звучат', all_time_songs2, 'минут')
+#И снова хоумворк выполнен. До скорой встречи с вами был kaluginpeter
 
