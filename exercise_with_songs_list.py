@@ -21,9 +21,11 @@ violator_songs_list = [
 #   Три песни звучат ХХХ минут
 # Можно делать много вычислений внутри print() - но это плохой стиль(The Zen of Python спасибо не скажет).
 # Лучше заранее вычислить необходимое, а затем в print(выводить)
-
-
-
+world = violator_songs_list[0][1]
+enjoy = violator_songs_list[5][1]
+clean = violator_songs_list[8][1]
+all_time_songs1 = world + enjoy + clean
+print('''Общее время звучания: 'Halo', 'Enjoy the Silence', 'Clean' составляет''', all_time_songs1)
 # Повторяем со вторым словарем песен группы Depeche Mode
 violator_songs_dict = {
     'World in My Eyes': 4.76,
