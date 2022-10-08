@@ -60,6 +60,18 @@ sofa_price2 = sofa_items2['price']
 sofa_cost = sofa_quantity * sofa_price + sofa_quantity2 * sofa_price2
 print('Диван -', sofa_quantity + sofa_quantity2, 'шт, стоимость', sofa_cost, 'руб')
 
+chair_code = goods['Стул']
+chair_items = store[chair_code][0]
+chair_items2 = store[chair_code][1]
+chair_items3 = store[chair_code][2]
+chair_quantity = chair_items['quantity']
+chair_quantity2 = chair_items2['quantity']
+chair_quantity3 = chair_items3['quantity']
+chair_price = chair_items['price']
+chair_price2 = chair_items2['price']
+chair_price3 = chair_items3['price']
+chair_cost = chair_quantity * chair_price + chair_quantity2 * chair_price2 + chair_quantity3 * chair_price3
+print('Стул -', chair_quantity + chair_quantity2 + chair_quantity3, 'шт, стоимость', chair_cost, 'руб')
 
 
 
