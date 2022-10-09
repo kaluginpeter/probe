@@ -37,3 +37,16 @@ elif month == 12:
     print('31')
 else:
     print('Такого месяца не существует')
+
+# Это был простой перебор цифр, но можно поступить иначе
+months_list = [1, 3, 5, 7, 8, 10, 12]
+months_list1 = [4, 6, 9, 11]
+month = int(input())
+if month in months_list:
+    print('В этом месяце - 31 день')
+elif month in months_list1:
+    print('В этом месяце - 30 дней')
+elif month == 2:
+    print('В этом месяце - 28 дней')
+else:
+    print('Такого месяца не существует')
