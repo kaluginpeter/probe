@@ -45,6 +45,11 @@ store = {
 #         подсчет количества товара
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
+for items in goods:
+    codes = goods[items]
+    items_quantitys = store[codes]
+    quantity = items_quantitys[0]['quantity']
+    cost = items_quantitys[0]['price']
 
 
 
