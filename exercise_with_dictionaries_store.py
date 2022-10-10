@@ -50,8 +50,10 @@ for items in goods:
     items_quantitys = store[codes]
     quantity = items_quantitys[0]['quantity']
     cost = items_quantitys[0]['price']
-
-
+    for codes in store:
+        final_quantity = quantity
+        final_cost = cost * final_quantity
+    print(items, final_quantity, 'шт,', 'стоимость', final_cost, 'руб')
 
 
 
