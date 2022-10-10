@@ -45,18 +45,11 @@ store = {
 #         подсчет количества товара
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
-for items in goods:
-    codes = goods[items]
-    items_quantitys = store[codes]
-    quantity = items_quantitys[0]['quantity']
-    cost = items_quantitys[0]['price']
-    for codes in store:
-        final_quantity = quantity
-        final_cost = cost * final_quantity
-    print(items, final_quantity, 'шт,', 'стоимость', final_cost, 'руб')
-
-
-
-
+for good, id in goods.items():
+    quantity, price = 0, 0
+    for variant in store[id]:
+        quantity += variant['quantity']
+        price += variant['quantity'] * variant['price']
+    print(good, quantity, price)
 
 
