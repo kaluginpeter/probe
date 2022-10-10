@@ -19,3 +19,6 @@ paper_x, paper_y = 8, 9
 # paper_x, paper_y = 11, 9
 # paper_x, paper_y = 9, 11
 # (можно просто раскоментировать нужную строку и проверить свой код)
+# Хочу по экспериментировать и решить через булевы значения
+value_x = envelop_x > paper_x
+value_y = envelop_y > paper_y
