@@ -39,3 +39,11 @@ for animal in zoo_pets:
 else:
     print('Тут слона нет...')
 print('Выход из цикла')
+
+# Можно пропустить остаток цикла через - continue
+zoo_pets = ['lion', 'skunk', 'elephant', 'monkey', 'horse']
+for animal in zoo_pets:
+    if animal == 'skunk':
+        continue
+    print('У нас в руках', animal)
+print('Выход из цикла')
