@@ -18,3 +18,12 @@ for animal in zoo_pets:
     letters_count += len(animal)
     pass
 print('Всего букв', letters_count)
+
+# Способ принудительный останов цикла - break
+zoo_pets = ['lion', 'elephant', 'monkey', 'skunk', 'horse']
+for animal in zoo_pets:
+    print('Сейчас переменная animal указывает на', animal)
+    if animal == 'elephant':
+        print('Нашли слона! :)')
+        break
+    print('Это не слон....')
