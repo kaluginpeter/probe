@@ -17,3 +17,4 @@ while counter < 9:
     expenses = expenses + percent
     expenses1 += expenses
     counter += 1
+request_grant = expenses1 - educational_grant * 10
