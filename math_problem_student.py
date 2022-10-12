@@ -10,4 +10,10 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
-
+counter = 0
+expenses1 = 12000
+while counter < 9:
+    percent = expenses * 0.03
+    expenses = expenses + percent
+    expenses1 += expenses
+    counter += 1
