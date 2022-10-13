@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Привет с тобой kaluginpeter, сегодня попробуем порисовать с помощью библиотеки simple_draw
 # Теперь в заданиях буду использовать тудушки
+import random
+
 import simple_draw as sd
 
 sd.resolution = (1200, 600)
@@ -23,8 +25,10 @@ for y in range(100, 301, 100):
         point = sd.get_point(x, y)
         bubble(point=point, step=5)
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
-# TODO здесь ваш код
-
+for _ in range(100):
+    point = sd.random_point()
+    step = random.randint(2, 10)
+    bubble(point=point, step=step)
 sd.pause()
 
 
