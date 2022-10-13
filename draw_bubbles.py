@@ -13,11 +13,11 @@ def bubble(point, step):
     for _ in range(3):
         radius += step
         sd.circle(center_position=point, radius=radius)
-point = sd.get_point(100, 100)
-bubble(point=point, step=10)
 # Нарисовать 10 пузырьков в ряд
 # TODO здесь ваш код
-
+for x in range(100, 1001, 100):
+    point = sd.get_point(x, 100)
+    bubble(point=point, step=5)
 # Нарисовать три ряда по 10 пузырьков
 # TODO здесь ваш код
 
