@@ -26,3 +26,8 @@ def calc(first=5, second=7):
     print('Сумма чисел', first, 'и ', second, '=', first+second)
 calc(second=5)
 print('В этом примере мы задали значение только переменной "b", а переменная "a" приняла значение по умолчанию')
+
+def calc(first=5, second=7):
+    print('Сумма чисел', first, 'и ', second, '=', first+second)
+calc()
+print('В этом примере мы использовали только значения по умолчанию')
