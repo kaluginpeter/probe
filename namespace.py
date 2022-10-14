@@ -31,3 +31,8 @@ def calc(first=5, second=7):
     print('Сумма чисел', first, 'и ', second, '=', first+second)
 calc()
 print('В этом примере мы использовали только значения по умолчанию')
+
+def calc(first=5, second=7):
+    print('Сумма чисел', first, 'и ', second, '=', first+second)
+calc(first=10, second=10)
+print('В этом примере мы задали именованные значения')
