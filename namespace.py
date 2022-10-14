@@ -36,3 +36,6 @@ def calc(first=5, second=7):
     print('Сумма чисел', first, 'и ', second, '=', first+second)
 calc(first=10, second=10)
 print('В этом примере мы задали именованные значения')
+
+# Let's talk about unpacking parameters
+# Распаковка значений требуется для "разложения по полочкам" принимаемых значений будь то отсписка или же от словаря
