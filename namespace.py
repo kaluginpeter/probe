@@ -38,4 +38,13 @@ calc(first=10, second=10)
 print('В этом примере мы задали именованные значения')
 
 # Let's talk about unpacking parameters
-# Распаковка значений требуется для "разложения по полочкам" принимаемых значений будь то отсписка или же от словаря
+# Распаковка значений требуется для "разложения по полочкам" принимаемых значений будь то от списка или же от словаря
+# For example:
+def scraping_some_list(*args):
+    print('Result scraping list')
+    print('Type', type(args))
+    print('List is', args)
+    for i, arg in enumerate(args):
+        print('Позиционный элемент', i, '=', arg)
+youtube = ['channels', 'videos', 'music', 'shorts']
+scraping_some_list(*youtube)
