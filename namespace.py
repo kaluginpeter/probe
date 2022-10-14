@@ -48,3 +48,12 @@ def scraping_some_list(*args):
         print('Позиционный элемент', i, '=', arg)
 youtube = ['channels', 'videos', 'music', 'shorts']
 scraping_some_list(*youtube)
+# For example(for dictionaries):
+def scraping_some_dict(**kwargs):
+    print('Result scraping dictionaries')
+    print('Type', type(kwargs))
+    print('List is', kwargs)
+    for key, value in kwargs.items():
+        print('Именованный аргумент', key, '=', value)
+youtube_dict = {'channel': 'video', 'shorts':'shorts_video', 'music':'musical_perfomance',}
+scraping_some_dict(**youtube_dict)
