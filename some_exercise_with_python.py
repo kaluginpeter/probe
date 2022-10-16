@@ -32,3 +32,14 @@ second = {4:987, 5:654, 6:321}
 third = {7:159, 8:357, 9:951}
 fothy = {**first, **second, **third}
 print(fothy)
+
+# Задача 5
+# Напишите проверку на то, является ли строка палиндромом.
+# Палиндром — это слово или фраза, которые одинаково читаются слева направо и справа налево.
+some_words = ['world', 'tenet', 'eye', 'racecar']
+for word in some_words:
+    rev_word = word[::-1]
+    if word == rev_word:
+        print('Palindrome')
+    else:
+        print('Nah')
