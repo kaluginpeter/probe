@@ -24,3 +24,11 @@ list.sort()
 print(list)
 list.sort(reverse=True)
 print(list)
+
+# Задача 4
+# Напишите программу для слияния нескольких словарей в один.
+first = {1:123, 2:456, 3:789,}
+second = {4:987, 5:654, 6:321}
+third = {7:159, 8:357, 9:951}
+fothy = {**first, **second, **third}
+print(fothy)
