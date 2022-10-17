@@ -18,3 +18,10 @@ def greet(name, owner):
 # Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific
 # given number of dragons, will he survive?
 # Return True if yes, False otherwise :)
+def hero(bullets, dragons):
+    if bullets // dragons == 2:
+        return True
+    elif bullets and dragons == 0:
+            return True
+    else:
+        return False
