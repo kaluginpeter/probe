@@ -6,3 +6,9 @@
 # case	             return
 # name equals owner	 'Hello boss'
 # otherwise	         'Hello guest'
+def greet(name, owner):
+    # Add code here
+    if name == owner:
+        return "Hello boss"
+    else:
+        return "Hello guest"
