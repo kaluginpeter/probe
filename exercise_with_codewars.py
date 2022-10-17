@@ -40,3 +40,8 @@ def even_or_odd(number):
 # 1 + 2
 # summation(8) -> 36
 # 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+def summation(num):
+    count = 0
+    for i in range(num+1):
+        count += i
+    return count
