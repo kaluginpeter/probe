@@ -51,3 +51,6 @@ def summation(num):
 # * "String"      -> "SSttrriinngg"
 # * "Hello World" -> "HHeelllloo  WWoorrlldd"
 # * "1234!_ "     -> "11223344!!__  "
+def double_char(s):
+    double = 2
+    return ''.join([char*double for char in s])
