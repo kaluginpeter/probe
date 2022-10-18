@@ -73,3 +73,7 @@ def maps(a):
 def sum_array(a):
     return sum(a)
 # Хотя задачи носят решение короткого характера, думал я над ними довольно долго
+
+# Your task is to create a function that does four basic mathematical operations.
+# The function should take three arguments - operation(string/char), value1(number), value2(number).
+# The function should return result of numbers after applying the chosen operation.
