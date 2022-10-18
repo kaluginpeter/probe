@@ -88,3 +88,5 @@ def basic_op(operator, value1, value2):
         return value1 / value2
 
 # Write a function which converts the input string to uppercase.
+def make_upper_case(s):
+    return s.upper()
