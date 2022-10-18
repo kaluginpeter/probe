@@ -70,3 +70,6 @@ def maps(a):
 # Output: 9.2
 # Input: []
 # Output: 0
+def sum_array(a):
+    return sum(a)
+# Хотя задачи носят решение короткого характера, думал я над ними довольно долго
