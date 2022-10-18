@@ -54,3 +54,8 @@ def summation(num):
 def double_char(s):
     double = 2
     return ''.join([char*double for char in s])
+
+# Upd: Hello it's again kaluginpeter. Today we make some tasks on Codewars
+# Given an array of integers, return a new array with each value doubled.
+# For example:
+# [1, 2, 3] --> [2, 4, 6]
