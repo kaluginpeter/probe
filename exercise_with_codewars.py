@@ -86,3 +86,5 @@ def basic_op(operator, value1, value2):
         return value1 * value2
     elif operator == '/':
         return value1 / value2
+
+# Write a function which converts the input string to uppercase.
