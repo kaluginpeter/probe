@@ -105,3 +105,5 @@ def reverse_seq(n):
 # "double  spaces"      ==> "elbuod  secaps"
 def reverse_words(text):
     return ' '.join([x[::-1] for x in text.split(' ')])
+
+# We need a function that can transform a string into a number. What ways of achieving this do you know?
