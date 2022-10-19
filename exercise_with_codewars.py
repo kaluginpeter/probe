@@ -118,3 +118,6 @@ def string_to_number(s):
 # make_negative(0);  # return 0
 def make_negative( number ):
     return -abs(number)
+
+# Clock shows h hours, m minutes and s seconds after midnight.
+# Your task is to write a function which returns the time since midnight in milliseconds.
