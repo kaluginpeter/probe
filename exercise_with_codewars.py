@@ -192,3 +192,5 @@ def count_positives_sum_negatives(arr):
 # The output should be two capital letters with a dot separating them.
 # It should look like this:
 # Sam Harris => S.H
+def abbrev_name(name):
+    return ('.'.join([e[0] for e in name.split()]).upper())
