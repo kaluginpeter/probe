@@ -144,3 +144,4 @@ def bmi(weight, height):
     elif bmi_m > 30:
         return "Obese"
 
+# You get an array of numbers, return the sum of all of the positives ones.
