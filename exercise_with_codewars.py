@@ -198,3 +198,5 @@ def abbrev_name(name):
 # Нужно написать каждое слово с большой буквы, но проблема здесь в апострофах
 def to_jaden_case(string):
     return " ".join(w.capitalize() for w in string.split())
+
+# Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
