@@ -203,3 +203,6 @@ def to_jaden_case(string):
 def digitize(n):
     sec_a = [int(a) for a in str(n)]
     return list(reversed(sec_a))
+
+# Write a function that accepts an integer n and a string s as parameters,
+# and returns a string of s repeated exactly n times.
