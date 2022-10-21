@@ -196,3 +196,5 @@ def abbrev_name(name):
     return ('.'.join([e[0] for e in name.split()]).upper())
 
 # Нужно написать каждое слово с большой буквы, но проблема здесь в апострофах
+def to_jaden_case(string):
+    return " ".join(w.capitalize() for w in string.split())
