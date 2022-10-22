@@ -247,3 +247,6 @@ def number(*bus_stops):
         for add, leave in stations:
             count += add - leave
     return count
+
+# In this kata you will create a function that takes a list of non-negative integers
+# and strings and returns a new list with the strings filtered out.
