@@ -230,3 +230,6 @@ def odd_or_even(arr):
         return 'odd'
 
 # Given an array of integers your solution should find the smallest integer.
+# В этой задаче у меня получилось прибегнуть к хитрости
+def find_smallest_int(arr):
+    return min(arr)
