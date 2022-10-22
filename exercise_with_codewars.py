@@ -228,3 +228,5 @@ def odd_or_even(arr):
         return 'even'
     elif sum(arr) % 2 != 0:
         return 'odd'
+
+# Given an array of integers your solution should find the smallest integer.
