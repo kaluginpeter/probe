@@ -262,3 +262,6 @@ def filter_list(l):
 # The first character in the string is always a number.
 def get_age(age):
     return int(age[0])
+
+# Create a function that returns the sum of the two lowest positive numbers
+# given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
