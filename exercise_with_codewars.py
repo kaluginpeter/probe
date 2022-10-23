@@ -281,3 +281,7 @@ def stray(arr):
 
 # Your task is to find the first element of an array that is not consecutive.
 # By not consecutive we mean not exactly 1 larger than the previous element of the array.
+def first_non_consecutive(arr):
+    for i, j in enumerate(arr, arr[0]):
+        if i!=j:
+            return j
