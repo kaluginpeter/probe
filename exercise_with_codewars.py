@@ -296,3 +296,5 @@ def bool_to_word(boolean):
 # Complete the solution so that the function will break up camel casing, using a space between words.
 def solution(s):
     return ''.join(' ' + char if char.isupper() else char.strip() for char in s).strip()
+
+# We need a function that can transform a number (integer) into a string.
