@@ -298,3 +298,5 @@ def solution(s):
     return ''.join(' ' + char if char.isupper() else char.strip() for char in s).strip()
 
 # We need a function that can transform a number (integer) into a string.
+def number_to_string(num):
+    return str(num)
