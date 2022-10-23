@@ -285,3 +285,5 @@ def first_non_consecutive(arr):
     for i, j in enumerate(arr, arr[0]):
         if i!=j:
             return j
+
+# Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
