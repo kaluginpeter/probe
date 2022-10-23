@@ -292,3 +292,5 @@ def bool_to_word(boolean):
         return 'Yes'
     else:
         return 'No'
+
+# Complete the solution so that the function will break up camel casing, using a space between words.
