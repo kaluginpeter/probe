@@ -300,3 +300,6 @@ def solution(s):
 # We need a function that can transform a number (integer) into a string.
 def number_to_string(num):
     return str(num)
+
+# Check to see if a string has the same amount of 'x's and 'o's.
+# The method must return a boolean and be case insensitive. The string can contain any char.
