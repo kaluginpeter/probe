@@ -322,3 +322,5 @@ def duplicate_count(text):
         if text.count(x) > 1:
             count += 1
     return count
+
+# Write a function that returns both the minimum and maximum number of the given list/array.
