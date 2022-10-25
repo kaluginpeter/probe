@@ -364,3 +364,6 @@ def validate_pin(pin):
         return True
     else:
         return False
+
+# Take an array and remove every second element from the array.
+# Always keep the first element and start removing with the next element.
