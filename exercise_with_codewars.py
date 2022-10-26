@@ -430,3 +430,8 @@ def quarter_of(month):
         return 3
     elif month in fourth:
         return 4
+
+# It's pretty straightforward.
+#  Your goal is to create a function that removes the first and last characters of a string.
+#  You're given one parameter, the original string.
+#  You don't have to worry with strings with less than two characters.
