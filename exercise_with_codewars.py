@@ -438,3 +438,5 @@ def quarter_of(month):
 def remove_char(s):
     return s[1:-1]
 
+# Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
