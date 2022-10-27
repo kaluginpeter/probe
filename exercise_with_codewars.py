@@ -472,3 +472,5 @@ def divisors(n):
 
 # Create a function that accepts 2 string arguments
 # and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+def str_count(strng, letter):
+    return strng.count(letter)
