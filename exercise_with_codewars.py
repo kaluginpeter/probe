@@ -440,5 +440,7 @@ def remove_char(s):
 
 # Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 def remove_exclamation_marks(s):
-    return ''.join( word for word in s if word not in '!')
+    return ''.join(word for word in s if word not in '!')
+
+# Very simple, given an integer or a floating-point number, find its opposite.
 
