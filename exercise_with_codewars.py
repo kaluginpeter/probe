@@ -463,3 +463,9 @@ def are_you_playing_banjo(name):
         return name + ' does not play banjo'
 
 # Count the number of divisors of a positive integer n.
+def divisors(n):
+    count = 0
+    for i in range(1, n+1):
+        if n % i == 0:
+            count+=1
+    return count
