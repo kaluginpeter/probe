@@ -486,3 +486,6 @@ def is_pangram(s):
     list = 'abcdefghijklmnopqrstuvwxyz'
     pangram = set(s) & set(list)
     return len(pangram) == len(list)
+
+# Complete the function so that it finds the average of the three scores passed to it
+# and returns the letter value associated with that grade.
