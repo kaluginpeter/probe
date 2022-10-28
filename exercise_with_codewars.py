@@ -480,3 +480,9 @@ def str_count(strng, letter):
 # because it uses the letters A-Z at least once (case is irrelevant).
 # Given a string, detect whether or not it is a pangram.
 # Return True if it is, False if not. Ignore numbers and punctuation.
+def is_pangram(s):
+    s = s.lower()
+    count = 0
+    list = 'abcdefghijklmnopqrstuvwxyz'
+    pangram = set(s) & set(list)
+    return len(pangram) == len(list)
