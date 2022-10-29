@@ -591,3 +591,7 @@ def find_uniq(arr):
 # In this simple exercise, you will create a program that will take two lists of integers, a and b.
 # Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b.
 # You must find the difference of the cuboids' volumes regardless of which is bigger.
+def find_difference(a, b):
+    q_a = (a[0] * a[1]) * a[2]
+    q_b = (b[0] * b[1]) * b[2]
+    return abs(q_a - q_b)
