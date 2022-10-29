@@ -567,3 +567,5 @@ def switch_it_up(number):
         9: 'Nine',
     }
     return numbers[number]
+
+# Simple, remove the spaces from the string, then return the resultant string.
