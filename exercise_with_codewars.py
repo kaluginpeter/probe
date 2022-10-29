@@ -573,3 +573,17 @@ def no_space(x):
     return x.replace(' ' ,'')
 
 # There is an array with some numbers. All numbers are equal except for one. Try to find it!
+def find_uniq(arr):
+    found = set()
+    found_again = set()
+
+    for a in arr:
+        if a in found_again:
+            continue
+        if a in found:
+            found.remove(a)
+            found_again.add(a)
+        else:
+            found.add(a)
+    res = list(found)
+    return (res[0])
