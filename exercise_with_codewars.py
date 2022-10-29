@@ -551,3 +551,5 @@ def greet(language):
         return base[language]
     else:
         return 'Welcome'
+
+# When provided with a number between 0-9, return it in words.
