@@ -571,3 +571,5 @@ def switch_it_up(number):
 # Simple, remove the spaces from the string, then return the resultant string.
 def no_space(x):
     return x.replace(' ' ,'')
+
+# There is an array with some numbers. All numbers are equal except for one. Try to find it!
