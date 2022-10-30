@@ -618,3 +618,11 @@ def friend(x):
     return true_friends
 
 # Create a method to see whether the string is ALL CAPS.
+def is_uppercase(inp):
+    special = ['$%&', '+%@']
+    if inp.isupper():
+        return True
+    elif inp in special:
+        return True
+    else:
+        return False
