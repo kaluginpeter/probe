@@ -626,3 +626,5 @@ def is_uppercase(inp):
         return True
     else:
         return False
+
+# Write a function which calculates the average of the numbers in a given list.
