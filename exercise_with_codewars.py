@@ -616,3 +616,5 @@ def friend(x):
         else:
             pass
     return true_friends
+
+# Create a method to see whether the string is ALL CAPS.
