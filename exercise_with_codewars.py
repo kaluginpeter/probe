@@ -608,3 +608,11 @@ def square_sum(numbers):
 # Make a program that filters a list of strings and returns a list with only your friends name in it.
 # If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours!
 # Otherwise, you can be sure he's not...
+def friend(x):
+    true_friends = []
+    for name in x:
+        if len(name) == 4 and name.isalpha():
+            true_friends.append(name)
+        else:
+            pass
+    return true_friends
