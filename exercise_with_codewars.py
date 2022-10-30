@@ -617,7 +617,7 @@ def friend(x):
             pass
     return true_friends
 
-# Create a method to see whether the string is ALL CAPS.
+# Create a method to see whether the string is ALL CAPS. UPD: isupper() not worked with special simbols
 def is_uppercase(inp):
     special = ['$%&', '+%@']
     if inp.isupper():
@@ -628,3 +628,5 @@ def is_uppercase(inp):
         return False
 
 # Write a function which calculates the average of the numbers in a given list.
+def find_average(numbers):
+    return sum(numbers) / len(numbers)
