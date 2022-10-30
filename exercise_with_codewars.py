@@ -597,3 +597,6 @@ def find_difference(a, b):
     return abs(q_a - q_b)
 
 # Given a year, return the century it is in.
+import math
+def century(year):
+    return (math.ceil(year / 100))
