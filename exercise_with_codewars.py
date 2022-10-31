@@ -655,3 +655,7 @@ def human_years_cat_years_dog_years(human_years):
             cat_years+=4
             dog_years+=5
         return [human_years, cat_years, dog_years]
+
+# Implement the function unique_in_order which takes as argument a sequence
+# and returns a list of items without any elements with the same value next to each other
+# and preserving the original order of elements.
