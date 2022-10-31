@@ -633,3 +633,8 @@ def find_average(numbers):
 
 # You have to write a function that accepts three parameters:
 # If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+def enough(cap, on, wait):
+    if on + wait < cap:
+        return 0
+    else:
+        return abs(cap - (on + wait))
