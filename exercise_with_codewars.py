@@ -659,3 +659,12 @@ def human_years_cat_years_dog_years(human_years):
 # Implement the function unique_in_order which takes as argument a sequence
 # and returns a list of items without any elements with the same value next to each other
 # and preserving the original order of elements.
+def unique_in_order(iterable):
+    new = []
+    if not iterable:
+        return []
+    for i in range(len(iterable)-1):
+        if iterable[i] != iterable[i + 1]:
+            new.append(iterable[i])
+    new.append(iterable[-1])
+    return new
