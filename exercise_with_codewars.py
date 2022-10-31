@@ -673,3 +673,9 @@ def unique_in_order(iterable):
 # Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
 # If the parameter is itself not a perfect square then -1 should be returned.
 # You may assume the parameter is non-negative.
+def find_next_square(sq):
+    perfect_sq = sq ** .5
+    if perfect_sq.is_integer():
+        return (perfect_sq + 1) ** 2
+    else:
+        return -1
