@@ -679,3 +679,6 @@ def find_next_square(sq):
         return (perfect_sq + 1) ** 2
     else:
         return -1
+
+# Complete the function that takes a non-negative integer n as input,
+# and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
