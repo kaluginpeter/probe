@@ -630,3 +630,6 @@ def is_uppercase(inp):
 # Write a function which calculates the average of the numbers in a given list.
 def find_average(numbers):
     return sum(numbers) / len(numbers)
+
+# You have to write a function that accepts three parameters:
+# If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
