@@ -638,3 +638,6 @@ def enough(cap, on, wait):
         return 0
     else:
         return abs(cap - (on + wait))
+
+# I got them at the same time as kitten/puppy. That was humanYears years ago.
+# Return their respective ages now as [humanYears,catYears,dogYears]
