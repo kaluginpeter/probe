@@ -716,3 +716,8 @@ def between(a,b):
     for i in range(a, b+1):
         list.append(i)
     return list
+
+# Define String.prototype.toAlternatingCase
+# (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase
+# in your selected language; see the initial solution for details)
+# such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
