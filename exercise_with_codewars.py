@@ -708,3 +708,6 @@ def array_diff(a, b):
         if i not in b:
             list.append(i)
     return list
+
+# Complete the function that takes two integers (a, b, where a < b)
+# and return an array of all integers between the input parameters, including them.
