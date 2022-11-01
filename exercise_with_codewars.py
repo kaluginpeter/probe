@@ -698,3 +698,6 @@ def powers_of_two(n):
 # They will not contain numerals.
 def feast(beast, dish):
     return beast[0] == dish[0] and beast[-1] == dish[-1]
+
+# Your goal in this kata is to implement a difference function,
+# which subtracts one list from another and returns the result.
