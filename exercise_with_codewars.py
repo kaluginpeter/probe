@@ -723,3 +723,6 @@ def between(a,b):
 # such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 def to_alternating_case(string):
     return ''.join([char.lower() if char.isupper() else char.upper() for char in string])
+
+# Write a function that takes an array of strings as an argument
+# and returns a sorted array containing the same strings, ordered from shortest to longest.
