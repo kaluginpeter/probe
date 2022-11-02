@@ -742,3 +742,14 @@ def remove_smallest(numbers):
         return numbers
 
 # Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+def sum_str(a, b):
+    if a and b:
+        c = int(a) + int(b)
+        return str(c)
+    elif a == '' and b == '':
+        return '0'
+    else:
+        if a:
+            return a
+        else:
+            return b
