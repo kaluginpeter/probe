@@ -774,3 +774,7 @@ def tower_builder(n_floors):
             second_elem+='*'
         list.append(first_elem + second_elem + first_elem)
     return list
+
+# You are given two interior angles (in degrees) of a triangle.
+# Write a function to return the 3rd.
+# Note: only positive integers will be tested.
