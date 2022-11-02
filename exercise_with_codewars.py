@@ -760,3 +760,6 @@ def sum_str(a, b):
 def twice_as_old(dad_years_old, son_years_old):
     ages = son_years_old * 2
     return abs(ages - dad_years_old)
+
+# Build a pyramid-shaped tower, as an array/list of strings,
+# given a positive integer number of floors. A tower block is represented with "*" character.
