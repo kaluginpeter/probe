@@ -729,3 +729,7 @@ def to_alternating_case(string):
 def sort_by_length(arr):
     arr.sort(key=len)
     return sorted(arr, key=len)
+
+# Given an array of integers, remove the smallest value.
+# Do not mutate the original array/list. If there are multiple elements with the same value,
+# remove the one with a lower index. If you get an empty array/list, return an empty array/list.
