@@ -733,3 +733,10 @@ def sort_by_length(arr):
 # Given an array of integers, remove the smallest value.
 # Do not mutate the original array/list. If there are multiple elements with the same value,
 # remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+def remove_smallest(numbers):
+    if numbers:
+        new_list = numbers.copy()
+        new_list.remove(min(new_list))
+        return new_list
+    else:
+        return numbers
