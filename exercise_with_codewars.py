@@ -790,3 +790,7 @@ def max_sequence(arr):
         local_max_sum = max(local_max_sum + elem, elem)
         global_max = max(local_max_sum, global_max)
     return global_max
+
+# This time no story, no theory. The examples below show you how to write function accum:
+# Examples:
+# accum("abcd") -> "A-Bb-Ccc-Dddd"
