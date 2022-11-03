@@ -794,3 +794,11 @@ def max_sequence(arr):
 # This time no story, no theory. The examples below show you how to write function accum:
 # Examples:
 # accum("abcd") -> "A-Bb-Ccc-Dddd"
+def accum(s):
+    word = ''
+    count = -1
+    for i in s:
+        count+=1
+        char = i.lower() * count
+        word = word + (i.upper() + char + '-')
+    return word[:-1]
