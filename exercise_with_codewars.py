@@ -780,3 +780,6 @@ def tower_builder(n_floors):
 # Note: only positive integers will be tested.
 def other_angle(a,b):
     return 180 - a - b
+
+# The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array
+# or list of integers
