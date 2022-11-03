@@ -813,3 +813,9 @@ def index(array, n):
         return -1
 
 # Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+def square_digits(num):
+    elem = ''
+    for i in str(num):
+        square = int(i) ** 2
+        elem += str(square)
+    return int(elem)
