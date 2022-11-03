@@ -783,3 +783,10 @@ def other_angle(a,b):
 
 # The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array
 # or list of integers
+def max_sequence(arr):
+    local_max_sum = 0
+    global_max = 0
+    for elem in arr:
+        local_max_sum = max(local_max_sum + elem, elem)
+        global_max = max(local_max_sum, global_max)
+    return global_max
