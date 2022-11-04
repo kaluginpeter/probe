@@ -867,3 +867,5 @@ def correct(s):
     s = s.replace('0', 'O')
     s = s.replace('1', 'I')
     return s
+
+# Write a function that when given a URL as a string, parses out just the domain name and returns it as a string.
