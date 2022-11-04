@@ -838,3 +838,7 @@ def duplicate_encode(word):
 # If it is a square, return its area. If it is a rectangle, return its perimeter.
 def area_or_perimeter(l , w):
     return ((l + w) * 2 if l != w else l * w)
+
+# Your job is to write a function which increments a string, to create a new string.
+# If the string already ends with a number, the number should be incremented by 1.
+# If the string does not end with a number. the number 1 should be appended to the new string.
