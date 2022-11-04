@@ -862,3 +862,8 @@ def maximum(arr):
     return max(arr)
 
 # Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+def correct(s):
+    s = s.replace('5', 'S')
+    s = s.replace('0', 'O')
+    s = s.replace('1', 'I')
+    return s
