@@ -860,3 +860,5 @@ def minimum(arr):
 
 def maximum(arr):
     return max(arr)
+
+# Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
