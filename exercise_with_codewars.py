@@ -903,3 +903,7 @@ def times(second_integer):
     return lambda integer: integer * second_integer
 def divided_by(second_integer):
     return lambda integer: integer / second_integer
+
+# An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+# Implement a function that determines whether a string that contains only letters is an isogram.
+# Assume the empty string is an isogram. Ignore letter case.
