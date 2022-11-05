@@ -930,3 +930,9 @@ def expanded_form(num):
     return " + ".join(list_of_numbers)
 
 # Your task is to write a function that takes a string and return a new string with all vowels removed.
+def disemvowel(string_):
+    list = ['a','e','i','o','u', 'A','E','I','O','U']
+    for char in string_:
+        if char in list:
+            string_ = string_.replace(char, '')
+    return string_
