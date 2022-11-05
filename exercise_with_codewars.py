@@ -928,3 +928,5 @@ def expanded_form(num):
             list_of_numbers.append(char + "0" * lenght)
         lenght -= 1
     return " + ".join(list_of_numbers)
+
+# Your task is to write a function that takes a string and return a new string with all vowels removed.
