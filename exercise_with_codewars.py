@@ -920,3 +920,11 @@ def is_isogram(string):
 
 # You will be given a number and you will need to return it as a string in Expanded Form. For example:
 # expanded_form(12) # Should return '10 + 2'
+def expanded_form(num):
+    list_of_numbers = []
+    lenght = len(str(num)) - 1
+    for char in str(num):
+        if char != "0":
+            list_of_numbers.append(char + "0" * lenght)
+        lenght -= 1
+    return " + ".join(list_of_numbers)
