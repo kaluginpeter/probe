@@ -959,3 +959,5 @@ def DNA_strand(dna):
 geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 def goose_filter(birds):
     return [elem for elem in birds if elem not in geese]
+
+# Complete the function/method so that it returns the url with anything after the anchor (#) removed.
