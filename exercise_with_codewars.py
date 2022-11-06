@@ -983,3 +983,12 @@ def get_volume_of_cuboid(length, width, height):
 # a grade for the exam and a number of completed projects.
 # This function should take two arguments:
 # exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10:
+        return 100
+    elif exam > 75 and projects >= 5:
+        return 90
+    elif exam > 50 and projects >= 2:
+        return 75
+    else:
+        return 0
