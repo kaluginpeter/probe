@@ -956,3 +956,6 @@ def DNA_strand(dna):
 
 # Write a function that takes a list of strings as an argument
 # and returns a filtered list containing the same elements but with the 'geese' removed.
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    return [elem for elem in birds if elem not in geese]
