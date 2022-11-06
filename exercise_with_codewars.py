@@ -961,3 +961,8 @@ def goose_filter(birds):
     return [elem for elem in birds if elem not in geese]
 
 # Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+def remove_url_anchor(url):
+    if url.count('#'):
+        index = url.index('#')
+        return url[:index]
+    return url
