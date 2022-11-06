@@ -953,3 +953,6 @@ def DNA_strand(dna):
         elif char == 'C':
             dnk += 'G'
     return dnk
+
+# Write a function that takes a list of strings as an argument
+# and returns a filtered list containing the same elements but with the 'geese' removed.
