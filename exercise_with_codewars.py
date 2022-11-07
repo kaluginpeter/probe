@@ -1011,3 +1011,10 @@ def descending_order(num):
 # A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
 # Every smiling face must have a smiling mouth that should be marked with either ) or D
 # No additional characters are allowed except for those mentioned.
+def count_smileys(arr):
+    count = 0
+    list = [':)', ':D', ';)', ';D', ':-)', ':~)', ';-)', ';~)', ':-D', ':~D', ';-D', ';~D']
+    for elem in range(len(arr)):
+        if arr[elem] in list:
+            count += 1
+    return count
