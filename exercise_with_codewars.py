@@ -992,3 +992,7 @@ def final_grade(exam, projects):
         return 75
     else:
         return 0
+
+# Your task is to make a function that can take any non-negative integer as an argument
+# and return it with its digits in descending order.
+# Essentially, rearrange the digits to create the highest possible number.
