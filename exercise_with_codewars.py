@@ -996,3 +996,10 @@ def final_grade(exam, projects):
 # Your task is to make a function that can take any non-negative integer as an argument
 # and return it with its digits in descending order.
 # Essentially, rearrange the digits to create the highest possible number.
+def descending_order(num):
+    order = []
+    if num >= 0:
+        for i in str(num):
+            order.append(int(i))
+    order.sort(reverse=True)
+    return int(''.join(map(str, order)))
