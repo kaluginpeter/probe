@@ -1059,3 +1059,8 @@ def high_and_low(numbers):
     return integer + str(list[-1]) + ' ' + str(list[0])
 
 # Given a non-empty array of integers, return the result of multiplying the values together in order.
+def grow(arr):
+    integer = 1
+    for elem in arr:
+        integer *= elem
+    return integer
