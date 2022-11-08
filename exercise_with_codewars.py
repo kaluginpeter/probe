@@ -1064,3 +1064,5 @@ def grow(arr):
     for elem in arr:
         integer *= elem
     return integer
+
+# Complete the solution so that it reverses the string passed into it.
