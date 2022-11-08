@@ -1051,3 +1051,9 @@ def two_sum(numbers, target):
 
 # In this little assignment you are given a string of space separated numbers,
 # and have to return the highest and lowest number.
+import re
+def high_and_low(numbers):
+    list = [int(s) for s in re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?", numbers)]
+    list.sort()
+    integer = ''
+    return integer + str(list[-1]) + ' ' + str(list[0])
