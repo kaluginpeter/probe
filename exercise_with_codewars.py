@@ -1048,3 +1048,6 @@ def two_sum(numbers, target):
         for j in range(i+1, len(numbers)):
             if numbers[i] + numbers[j] == target:
                 return [i, j]
+
+# In this little assignment you are given a string of space separated numbers,
+# and have to return the highest and lowest number.
