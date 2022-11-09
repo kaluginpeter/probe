@@ -1093,3 +1093,7 @@ total_goals = la_liga_goals + champions_league_goals + copa_del_rey_goals
 # It is your job to fix the code and get the program working again!
 def say_hello(name):
     return 'Hello, ' + name
+
+# Your task is to make function, which returns the sum of a sequence of integers.
+# The sequence is defined by 3 non-negative values: begin, end, step (inclusive).
+# If begin value is greater than the end, function should returns 0
