@@ -1114,3 +1114,9 @@ def smash(words):
 # Instead, you end up with an ordinary rectangle! Those blasted things!
 # If you just had a way to know, whether you're currently working in vain…
 # Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+import math
+
+def is_square(n):
+    if n < 0:
+        return False
+    return n == math.isqrt(n) ** 2
