@@ -1081,3 +1081,5 @@ def solution(nums):
 # Each positive becomes negatives, and the negatives become positives.
 def invert(lst):
     return [i * -1 for i in lst]
+
+# Use variables to find the sum of the goals Messi scored in 3 competitions
