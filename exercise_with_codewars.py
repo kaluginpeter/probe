@@ -1152,3 +1152,5 @@ def get_sum(a,b):
 # Sometimes there are problems: lack of colors,
 # technical malfunction and a "bad" control string is produced
 # e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+def printer_error(s):
+    return f"{len([n for n in s if n in 'nopqrstuvwxyz'])}/{len(s)}"
