@@ -1134,3 +1134,11 @@ def check_for_factor(base, factor):
 # Given two integers a and b,
 # which can be positive or negative, find the sum of all the integers between
 # and including them and return it. If the two numbers are equal return a or b.
+def get_sum(a,b):
+    if a == b:
+        return a
+    list = []
+    step = 1 if a < b else -1
+    for i in range(a, b + step, step):
+        list.append(i)
+    return sum(list)
