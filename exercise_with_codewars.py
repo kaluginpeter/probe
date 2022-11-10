@@ -1120,3 +1120,6 @@ def is_square(n):
     if n < 0:
         return False
     return n == math.isqrt(n) ** 2
+
+# Write a function that always returns 5
+# Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
