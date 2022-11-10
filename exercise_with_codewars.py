@@ -1154,3 +1154,7 @@ def get_sum(a,b):
 # e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
 def printer_error(s):
     return f"{len([n for n in s if n in 'nopqrstuvwxyz'])}/{len(s)}"
+
+# Take 2 strings s1 and s2 including only letters from a to z.
+# Return a new sorted string, the longest possible,
+# containing distinct letters - each taken only once - coming from s1 or s2.
