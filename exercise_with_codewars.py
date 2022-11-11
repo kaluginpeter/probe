@@ -1182,3 +1182,7 @@ def get_real_floor(n):
 # If you can, try writing it in only one line of code.
 def find_multiples(integer, limit):
     return [i for i in range(integer, limit + 1, integer)]
+
+# The main idea is to count all the occurring characters in a string.
+# If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+# What if the string is empty? Then the result should be empty object literal, {}.
