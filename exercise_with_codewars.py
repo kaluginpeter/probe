@@ -1180,3 +1180,5 @@ def get_real_floor(n):
 # For example, if the parameters passed are (2, 6),
 # the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 # If you can, try writing it in only one line of code.
+def find_multiples(integer, limit):
+    return [i for i in range(integer, limit + 1, integer)]
