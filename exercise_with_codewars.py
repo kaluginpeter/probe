@@ -1242,3 +1242,8 @@ def get_winner(ballots):
 # The highest or lowest element respectively is a single element at each edge,
 # even if there are more than one with the same value.
 # Mind the input validation.
+def sum_array(arr):
+    if arr == [] or arr is None or len(arr) == 1:
+        return 0
+    integer = sum(arr)
+    return integer - max(arr) - min(arr)
