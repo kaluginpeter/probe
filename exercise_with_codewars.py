@@ -1266,3 +1266,6 @@ def count_by(x, n):
     for i in range(x, x * n + 1, x):
         list.append(i)
     return list
+
+# I created this function to add five to any number that was passed in to it
+# and return the new value. It doesn't throw any errors but it returns the wrong number.
