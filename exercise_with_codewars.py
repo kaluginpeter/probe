@@ -1228,3 +1228,11 @@ def goals(laLiga, copaDelRey, championsLeague):
 # You do not know the names in advance (because there are no candidates).
 # A name wins the election if it gets more than n/2 votes
 # (n = number of all votes, i.e. n is equal to the size of the given list).
+def get_winner(ballots):
+    list = []
+    for elem in ballots:
+        list.append(elem)
+    elite = set(list)
+    for char in elite:
+        if list.count(char) > len(ballots) / 2 or list.count(char) == len(ballots):
+            return char
