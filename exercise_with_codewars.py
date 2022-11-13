@@ -1290,3 +1290,7 @@ def order(sentence):
 
 # There is a queue for the self-checkout tills at the supermarket.
 # Your task is write a function to calculate the total time required for all the customers to check out!
+def queue_time(customers, n):
+    time=[0]*n
+    for custom in customers: time[time.index(min(time))]+=custom
+    return max(time)
