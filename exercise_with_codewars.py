@@ -1278,3 +1278,12 @@ def add_five(num):
 # Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
 # If the input string is empty, return an empty string.
 # The words in the input String will only contain valid consecutive numbers.
+def order(sentence):
+    list = sentence.split()
+    new_list = []
+    for i in range(1, len(list) + 1):
+        for elem in list:
+            for char in elem:
+                if char == str(i):
+                    new_list.append(elem)
+    return ' '.join(new_list)
