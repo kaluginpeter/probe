@@ -1309,3 +1309,9 @@ def mxdiflg(a1, a2):
 # and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
 # Warn the sheep in front of the wolf that it is about to be eaten.
 # Remember that you are standing at the front of the queue which is at the end of the array:
+def warn_the_sheep(queue):
+    if queue.index('wolf') == len(queue)-1:
+        return 'Pls go away and stop eating my sheep'
+    else:
+        ind = len(queue) - queue.index('wolf') - 1
+        return (f"Oi! Sheep number {ind}! You are about to be eaten by a wolf!")
