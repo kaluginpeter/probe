@@ -1315,3 +1315,8 @@ def warn_the_sheep(queue):
     else:
         ind = len(queue) - queue.index('wolf') - 1
         return (f"Oi! Sheep number {ind}! You are about to be eaten by a wolf!")
+
+# An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+# Note: anagrams are case insensitive
+# Complete the function to return true if the two arguments given are anagrams of each other;
+# return false otherwise.
