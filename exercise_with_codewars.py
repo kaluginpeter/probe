@@ -1354,3 +1354,7 @@ def hello(name=None):
 # and return true if they are in love and false if they aren't.
 def lovefunc( flower1, flower2 ):
     return (flower1 % 2 != 0 and flower2 % 2 == 0) or (flower2 % 2 != 0 and flower1 % 2 == 0)
+
+# A perfect number is a number in which the sum of its divisors (excluding itself) are equal to itself.
+# Write a function that can verify if the given integer n is a perfect number,
+# and return True if it is, or return False if not.
