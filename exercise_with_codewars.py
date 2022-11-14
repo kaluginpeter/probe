@@ -1339,3 +1339,7 @@ def rps(p1, p2):
         return 'Player 2 won!'
     elif p1 == 'scissors' and p2 == 'paper':
         return 'Player 1 won!'
+
+# Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World!
+# if name is not given (or passed as an empty String).
+# Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
