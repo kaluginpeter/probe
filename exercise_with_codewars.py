@@ -1322,3 +1322,6 @@ def warn_the_sheep(queue):
 # return false otherwise.
 def is_anagram(test, original):
     return set(test.lower()) == set(original.lower()) and len(test) == len(original)
+
+# Rock Paper Scissors
+# Let's play! You have to return which player won! In case of a draw return Draw!.
