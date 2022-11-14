@@ -1360,3 +1360,9 @@ def lovefunc( flower1, flower2 ):
 # and return True if it is, or return False if not.
 def isPerfect(n):
     return n in [6, 28, 496, 8128, 33550336, 8589869056, 137438691328]
+
+# Rules:
+# Children under 14 old.
+# Teens under 18 old.
+# Young under 21 old.
+# Adults have 21 or more.
