@@ -1382,3 +1382,13 @@ def wave(people):
 # He drops the ball out of the window. The ball bounces (for example), to two-thirds of its height (a bounce of 0.66).
 # His mother looks out of a window 1.5 meters from the ground.
 # How many times will the mother see the ball pass in front of her window (including when it's falling and bouncing?
+def bouncing_ball(h, bounce, window):
+    if h > 0 and 0 < bounce < 1 and h > window:
+        count = 0
+        while h > window:
+            count += 1
+            h = h * bounce
+            if h > window:
+                count += 1
+        return count
+    return -1
