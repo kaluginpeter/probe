@@ -1431,3 +1431,7 @@ def decrypt(encrypted_text, n):
     for i in range(1, n + 1):
         list.append(decrypt_one_rep(list[i - 1]))
     return list[n]
+
+# You are given two sorted arrays that both only contain integers.
+# Your task is to find a way to merge them into a single one, sorted in asc order.
+# Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
