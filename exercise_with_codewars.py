@@ -1399,3 +1399,7 @@ def bouncing_ball(h, bounce, window):
 def flatten_and_sort(array):
     new_list = [elem for sublist in array for elem in sublist]
     return sorted(new_list)
+
+# Implement a pseudo-encryption algorithm which given a string S
+# and an integer N concatenates all the odd-indexed characters of S with all the even-indexed characters of S,
+# this process should be repeated N times.
