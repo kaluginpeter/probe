@@ -1396,3 +1396,6 @@ def bouncing_ball(h, bounce, window):
 # Given a two-dimensional array of integers,
 # return the flattened version of the array with all the integers in the sorted (ascending) order.
 # Example:
+def flatten_and_sort(array):
+    new_list = [elem for sublist in array for elem in sublist]
+    return sorted(new_list)
