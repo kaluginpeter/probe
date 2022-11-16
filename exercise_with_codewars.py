@@ -1484,3 +1484,6 @@ def find_short(s):
 # Given a string str, reverse it and omit all non-alphabetic characters.
 def reverse_letter(string):
     return ''.join(reversed(list(i for i in string if i in 'qwertyuiopasdfghjklzxcvbnm')))
+
+# Given an array of integers, find the one that appears an odd number of times.
+# There will always be only one integer that appears an odd number of times.
