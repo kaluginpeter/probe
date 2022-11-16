@@ -1480,3 +1480,5 @@ def number(lines):
 def find_short(s):
     # your code here
     return len(list(i for i in sorted(s.split(), key=len))[0])
+
+# Given a string str, reverse it and omit all non-alphabetic characters.
