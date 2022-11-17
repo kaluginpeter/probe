@@ -1494,3 +1494,19 @@ def find_it(seq):
 # or false depending on if the integer is a prime.
 # Per Wikipedia, a prime number ( or a prime ) is a natural number greater than 1
 # that has no positive divisors other than 1 and itself.
+from math import sqrt
+def is_prime(num):
+    flag = True
+    prime_flag = 0
+    if(num > 1):
+	    for i in range(2, int(sqrt(num)) + 1):
+		    if (num % i == 0):
+			    prime_flag = 1
+			    break
+	    if prime_flag == 0:
+		    flag = True
+	    else:
+		    flag = False
+    else:
+	    flag = False
+    return flag
