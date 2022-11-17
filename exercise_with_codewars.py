@@ -1510,3 +1510,7 @@ def is_prime(num):
     else:
 	    flag = False
     return flag
+
+# So this function should return the first pair of two prime numbers spaced
+# with a gap of g between the limits m, n if these numbers exist otherwise `nil
+# or null or None or Nothing (or ... depending on the language).
