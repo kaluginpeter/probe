@@ -1561,3 +1561,8 @@ def check_exam(arr1,arr2):
 # your task is to find the sum of the minimum values in each row.
 def sum_of_minimums(numbers):
     return sum(min(i) for i in numbers)
+
+# Complete the method which accepts an array of integers, and returns one of the following:
+# "yes, ascending" - if the numbers in the array are sorted in an ascending order
+# "yes, descending" - if the numbers in the array are sorted in a descending order
+# "no" - otherwise
