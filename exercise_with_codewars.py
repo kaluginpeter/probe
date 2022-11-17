@@ -1559,3 +1559,5 @@ def check_exam(arr1,arr2):
 
 # Given a 2D ( nested ) list ( array, vector, .. ) of size m * n,
 # your task is to find the sum of the minimum values in each row.
+def sum_of_minimums(numbers):
+    return sum(min(i) for i in numbers)
