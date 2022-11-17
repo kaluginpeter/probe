@@ -1514,3 +1514,28 @@ def is_prime(num):
 # So this function should return the first pair of two prime numbers spaced
 # with a gap of g between the limits m, n if these numbers exist otherwise `nil
 # or null or None or Nothing (or ... depending on the language).
+def gap(g, m, n):
+    first_int = 0
+    second_int = 0
+    for i in range(m,n+1):
+        if int_is_prime(i):
+            if first_int == 0:
+                first_int = i
+            elif second_int == 0:
+                second_int = i
+            else:
+                first_int = second_int
+                second_int = i
+        if second_int - first_int == g:
+            return [first_int, second_int]
+    return None
+
+def int_is_prime(n):
+    if n <= 0 or n == 1:
+        return False
+    i = 2
+    while (i <= n ** 0.5 ):
+        if n % i == 0:
+            return False
+        i += 1
+    return True
