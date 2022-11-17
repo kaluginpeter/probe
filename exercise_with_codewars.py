@@ -1545,3 +1545,14 @@ def int_is_prime(n):
 # The two arrays are not empty and are the same length. Return the score for this array of answers,
 # giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer,
 # represented as an empty string (in C the space character is used).
+def check_exam(arr1,arr2):
+    count = 0
+    for i in range(len(arr1)):
+        if arr1[i] == arr2[i]:
+            count += 4
+            continue
+        elif arr2[i] == '':
+            count += 0
+            continue
+        count -= 1
+    return (count if count > 0 else 0)
