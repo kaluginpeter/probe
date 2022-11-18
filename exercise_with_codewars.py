@@ -1572,3 +1572,6 @@ def is_sorted_and_how(arr):
     elif sorted(arr, key = int, reverse = True) == arr:
         return 'yes, descending'
     return 'no'
+
+# Given a list of digits, return the smallest number that could be formed from these digits,
+# using the digits only once (ignore duplicates).
