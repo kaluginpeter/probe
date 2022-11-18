@@ -1622,4 +1622,12 @@ def rot13(message):
     return ''.join(transform.get(char, char) for char in message)
 
 # Given an integer as input, can you round it to the next (meaning, "greater than or equal") multiple of 5?
+def round_to_next5(n):
+    if n == 0:
+        pass
+    elif abs(n)%5 == 0:
+        pass
+    else:
+        n =  n - n%5 + 5
+    return n
 
