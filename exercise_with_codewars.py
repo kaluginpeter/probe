@@ -1615,4 +1615,9 @@ def choose_best_sum(t, k, ls):
 # they should be returned as they are. Only letters from the latin/english alphabet should be shifted,
 # like in the original Rot13 "implementation".
 # Please note that using encode is considered cheating.
+def rot13(message):
+    key = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    val = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+    transform = dict(zip(key, val))
+    return ''.join(transform.get(char, char) for char in message)
 
