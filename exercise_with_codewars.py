@@ -1597,4 +1597,14 @@ def add_binary(a,b):
 # or equal to the given limit t, if that sum exists, or otherwise nil, null, None, Nothing,
 # depending on the language. In that case with C, C++, D, Dart, Fortran, F#, Go, Julia, Kotlin,
 # Nim, OCaml, Pascal, Perl, PowerShell, Reason, Rust, Scala, Shell, Swift return -1.
+import itertools
+def choose_best_sum(t, k, ls):
+    combinations = list(itertools.combinations(ls, k))
+    condition = [sum(distance) for distance in combinations]
+    condition2 = [distance for distance in condition if distance <= t]
+    if condition2 == []:
+        largest_distance = None
+    else:
+        largest_distance = max([distance for distance in condition if distance <= t])
+    return largest_distance
 
