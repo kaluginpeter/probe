@@ -1588,3 +1588,13 @@ def min_value(digits):
 def add_binary(a,b):
     sum = bin(int(a) + int(b))
     return ''.join(list(sum)[2:])
+
+# The function chooseBestSum (or choose_best_sum or ... depending on the language)
+# will take as parameters t (maximum sum of distances, integer >= 0),
+# k (number of towns to visit, k >= 1) and ls (list of distances,
+# all distances are positive or zero integers and this list has at least one element).
+# The function returns the "best" sum ie the biggest possible sum of k distances less than
+# or equal to the given limit t, if that sum exists, or otherwise nil, null, None, Nothing,
+# depending on the language. In that case with C, C++, D, Dart, Fortran, F#, Go, Julia, Kotlin,
+# Nim, OCaml, Pascal, Perl, PowerShell, Reason, Rust, Scala, Shell, Swift return -1.
+
