@@ -1575,3 +1575,9 @@ def is_sorted_and_how(arr):
 
 # Given a list of digits, return the smallest number that could be formed from these digits,
 # using the digits only once (ignore duplicates).
+def min_value(digits):
+    list = sorted(set(digits))
+    integer = ''
+    for elem in list:
+        integer += str(elem)
+    return int(integer)
