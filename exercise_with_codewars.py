@@ -1664,4 +1664,10 @@ def open_or_senior(data):
 # Luckily, Alice and Bob are able to encode the motif as a number.
 # Can you help them to remove numbers such that their list contains each number only up to N times,
 # without changing the order?
-
+def delete_nth(order,max_e):
+    sort_list = []
+    for elem in order:
+        if sort_list.count(elem) >= max_e:
+            continue
+        sort_list.append(elem)
+    return sort_list
