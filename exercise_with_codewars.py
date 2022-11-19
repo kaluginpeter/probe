@@ -1639,4 +1639,6 @@ def reverse(st):
 
 # Write a function named sumDigits which takes a number as input
 # and returns the sum of the absolute value of each of the number's decimal digits.
+def sumDigits(number):
+    return sum(int(d) for d in str(abs(number)))
 
