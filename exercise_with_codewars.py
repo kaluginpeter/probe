@@ -1705,3 +1705,6 @@ def evaporator(content, evap_per_day, threshold):
         percentage = percentage - percentage * (evap_per_day / 100)
         result += 1
     return result
+
+# You will be given an array of numbers. You have to sort the odd numbers
+# in ascending order while leaving the even numbers at their original positions.
