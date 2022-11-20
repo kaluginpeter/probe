@@ -1675,3 +1675,12 @@ def delete_nth(order,max_e):
 # Given a number, say prod (for product), we search two Fibonacci numbers F(n) and F(n+1) verifying
 # Your function product Fib takes an integer(prod) and returns an array
 # depending on the language if F(n) * F(n+1) = prod.
+def productFib(prod):
+    First_val = 0
+    Second_val = 1
+    next = 0
+    while First_val * Second_val < prod:
+            next = First_val + Second_val
+            First_val = Second_val
+            Second_val = next
+    return [First_val, Second_val, True if First_val * Second_val == prod else False]
