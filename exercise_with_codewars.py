@@ -1708,3 +1708,6 @@ def evaporator(content, evap_per_day, threshold):
 
 # You will be given an array of numbers. You have to sort the odd numbers
 # in ascending order while leaving the even numbers at their original positions.
+def sort_array(source_array):
+    odds = iter(sorted(elem for elem in source_array if elem % 2))
+    return [next(odds) if elem % 2 else elem for elem in source_array]
