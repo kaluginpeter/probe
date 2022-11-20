@@ -1684,3 +1684,5 @@ def productFib(prod):
             First_val = Second_val
             Second_val = next
     return [First_val, Second_val, True if First_val * Second_val == prod else False]
+
+# Given a sequence of numbers, find the largest pair sum in the sequence.
