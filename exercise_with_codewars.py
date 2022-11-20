@@ -1698,3 +1698,10 @@ def words_to_marks(s):
 # We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day)
 # and the threshold (threshold) in percentage beyond which the evaporator is no longer useful.
 # All numbers are strictly positive.
+def evaporator(content, evap_per_day, threshold):
+    result = 0;
+    percentage = 100;
+    while percentage > threshold:
+        percentage = percentage - percentage * (evap_per_day / 100)
+        result += 1
+    return result
