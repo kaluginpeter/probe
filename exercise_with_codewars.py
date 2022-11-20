@@ -1671,3 +1671,7 @@ def delete_nth(order,max_e):
             continue
         sort_list.append(elem)
     return sort_list
+
+# Given a number, say prod (for product), we search two Fibonacci numbers F(n) and F(n+1) verifying
+# Your function product Fib takes an integer(prod) and returns an array
+# depending on the language if F(n) * F(n+1) = prod.
