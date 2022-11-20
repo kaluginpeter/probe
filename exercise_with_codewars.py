@@ -1692,3 +1692,5 @@ def largest_pair_sum(numbers):
 # Your task is to write a function which calculates the value
 # of a word based off the sum of the alphabet positions of its characters.
 # The input will always be made of only lowercase letters and will never be empty.
+def words_to_marks(s):
+    return sum(ord(char) - 96 for char in s)
