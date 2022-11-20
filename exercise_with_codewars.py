@@ -1694,3 +1694,7 @@ def largest_pair_sum(numbers):
 # The input will always be made of only lowercase letters and will never be empty.
 def words_to_marks(s):
     return sum(ord(char) - 96 for char in s)
+
+# We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day)
+# and the threshold (threshold) in percentage beyond which the evaporator is no longer useful.
+# All numbers are strictly positive.
