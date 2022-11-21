@@ -1737,3 +1737,7 @@ def calculate_years(principal, interest, tax, desired):
 # Each segment is 8 bits long, meaning the order of these segments needs to be reversed, for example:
 def data_reverse(data):
     return [elem for i in range(len(data), -1, -8) for elem in data[i: i + 8]]
+
+# Implement a function that accepts 3 integer values a, b, c.
+# The function should return true if a triangle can be built with
+# the sides of given length and false in any other case.
