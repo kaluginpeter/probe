@@ -1723,3 +1723,12 @@ def solution(string, ending):
 # The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly.
 # After paying taxes 'T' for the year the new sum is re-invested.
 # Note to Tax: not the invested principal is taxed, but only the year's accrued interest
+def calculate_years(principal, interest, tax, desired):
+    count = 0
+    if principal == desired:
+            return count
+    while principal < desired:
+        count += 1
+        percent = principal * interest - (principal * interest * tax)
+        principal += percent
+    return count
