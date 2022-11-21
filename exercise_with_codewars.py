@@ -1711,3 +1711,6 @@ def evaporator(content, evap_per_day, threshold):
 def sort_array(source_array):
     odds = iter(sorted(elem for elem in source_array if elem % 2))
     return [next(odds) if elem % 2 else elem for elem in source_array]
+
+# Complete the solution so that it returns true if the first argument(string)
+# passed in ends with the 2nd argument (also a string).
