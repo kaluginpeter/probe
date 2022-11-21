@@ -1735,3 +1735,5 @@ def calculate_years(principal, interest, tax, desired):
 
 # A stream of data is received and needs to be reversed.
 # Each segment is 8 bits long, meaning the order of these segments needs to be reversed, for example:
+def data_reverse(data):
+    return [elem for i in range(len(data), -1, -8) for elem in data[i: i + 8]]
