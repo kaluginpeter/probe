@@ -1743,3 +1743,5 @@ def data_reverse(data):
 # the sides of given length and false in any other case.
 def is_triangle(a, b, c):
     return max(a, b ,c) < a + b + c - max(a, b ,c)
+
+# Your task is to write function factorial.
