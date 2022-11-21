@@ -1745,3 +1745,6 @@ def is_triangle(a, b, c):
     return max(a, b ,c) < a + b + c - max(a, b ,c)
 
 # Your task is to write function factorial.
+import math
+def factorial(n):
+    return math.factorial(n)
