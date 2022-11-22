@@ -1769,3 +1769,5 @@ def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
 # We want to know the index of the vowels in a given word,
 # for example, there are two vowels in the word super (the second and fourth letters).
 # So given a string "super", we should return a list of [2, 4].
+def vowel_indices(word):
+    return [index + 1 for index, elem in enumerate(word) if elem.lower() in 'aeoiuy']
