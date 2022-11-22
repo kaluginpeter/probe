@@ -1780,3 +1780,18 @@ def vowel_indices(word):
 # Write a function that accepts fight string consists of only small letters and return who wins the fight.
 # When the left side wins return Left side wins!, when the right side wins return Right side wins!,
 # in other case return Let's fight again!.
+def alphabet_war(fight):
+    left_side = {'w': 4, 'p': 3, 'b': 2, 's': 1}
+    right_side = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
+    left_count = 0
+    right_count = 0
+    for char in fight:
+        if char in left_side:
+            left_count += left_side[char]
+        elif char in right_side:
+            right_count += right_side[char]
+    if left_count > right_count:
+        return 'Left side wins!'
+    elif right_count > left_count:
+        return 'Right side wins!'
+    return "Let's fight again!"
