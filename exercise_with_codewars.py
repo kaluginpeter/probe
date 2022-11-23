@@ -1804,3 +1804,8 @@ def alphabet_war(fight):
 # and the second one is the total weight of team 2.
 def row_weights(array):
     return sum(i for i in array[::2]), sum(i for i in array[1::2])
+
+# In this Kata, you will be given a string that may have mixed uppercase and lowercase letters
+# and your task is to convert that string to either lowercase only or uppercase only based on:
+# make as few changes as possible.
+# if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
