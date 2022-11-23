@@ -1832,3 +1832,6 @@ def nb_year(p0, percent, aug, p):
         count += 1
     return count
 
+# Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
+def angle(n):
+    return 180 * (n - 2)
