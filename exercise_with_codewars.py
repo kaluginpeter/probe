@@ -1831,3 +1831,4 @@ def nb_year(p0, percent, aug, p):
         p0 += int(p0 * (percent / 100) + aug)
         count += 1
     return count
+
