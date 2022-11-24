@@ -1867,5 +1867,21 @@ def longest_consec(strarr, k):
         if strarr and 0 < k <= len(strarr) else ""
 
 # Let us begin with an example:
-# A man has a rather old car being worth $2000. He saw a secondhand car being worth $8000. He wants to keep his old car until he can buy the secondhand one.
-# He thinks he can save $1000 each month but the prices of his old car and of the new one decrease of 1.5 percent per month. Furthermore this percent of loss increases of 0.5 percent at the end of every two months. Our man finds it difficult to make all these calculations.
+# A man has a rather old car being worth $2000.
+# He saw a secondhand car being worth $8000.
+# He wants to keep his old car until he can buy the secondhand one.
+# He thinks he can save $1000 each month but the prices of his old car
+# and of the new one decrease of 1.5 percent per month.
+# Furthermore this percent of loss increases of 0.5 percent at the end of every two months.
+# Our man finds it difficult to make all these calculations.
+def nbMonths(start_price_old, start_price_new, saving_per_month, percent_loss_by_month):
+    months = 0
+    savings = 0
+    while start_price_old + savings < start_price_new:
+        months += 1
+        savings += saving_per_month
+        if months % 2 == 0:
+            percent_loss_by_month += 0.5
+        start_price_old *= ((100 - percent_loss_by_month) / 100)
+        start_price_new *= ((100 - percent_loss_by_month) / 100)
+    return [months, round(start_price_old + savings - start_price_new)]
