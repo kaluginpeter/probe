@@ -1859,3 +1859,6 @@ def dig_pow(n, p):
         count += int(char) ** p
         p += 1
     return count // n if count % n == 0 else -1
+
+# You are given an array(list) strarr of strings and an integer k.
+# Your task is to return the first longest string consisting of k consecutive strings taken in the array.
