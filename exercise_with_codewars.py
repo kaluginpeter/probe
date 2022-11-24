@@ -1862,3 +1862,5 @@ def dig_pow(n, p):
 
 # You are given an array(list) strarr of strings and an integer k.
 # Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+def longest_consec(strarr, k):
+    return max(["".join(strarr[i:i+k]) for i in range(len(strarr)-k+1)], key=len) if strarr and 0 < k <= len(strarr) else ""
