@@ -1863,4 +1863,9 @@ def dig_pow(n, p):
 # You are given an array(list) strarr of strings and an integer k.
 # Your task is to return the first longest string consisting of k consecutive strings taken in the array.
 def longest_consec(strarr, k):
-    return max(["".join(strarr[i:i+k]) for i in range(len(strarr)-k+1)], key=len) if strarr and 0 < k <= len(strarr) else ""
+    return max(["".join(strarr[i:i+k]) for i in range(len(strarr)-k+1)], key=len)\
+        if strarr and 0 < k <= len(strarr) else ""
+
+# Let us begin with an example:
+# A man has a rather old car being worth $2000. He saw a secondhand car being worth $8000. He wants to keep his old car until he can buy the secondhand one.
+# He thinks he can save $1000 each month but the prices of his old car and of the new one decrease of 1.5 percent per month. Furthermore this percent of loss increases of 0.5 percent at the end of every two months. Our man finds it difficult to make all these calculations.
