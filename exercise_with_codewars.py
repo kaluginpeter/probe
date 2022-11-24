@@ -1892,3 +1892,6 @@ def nbMonths(start_price_old, start_price_new, saving_per_month, percent_loss_by
 # If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
 def bumps(road):
     return "Woohoo!" if road.count("n") <= 15 else "Car Dead"
+
+# Find the number with the most digits.
+# If two numbers in the argument array have the same number of digits, return the first one in the array.
