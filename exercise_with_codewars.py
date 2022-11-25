@@ -1962,3 +1962,5 @@ def _if(bool, func1, func2):
     return func1() if bool == True else func2()
 
 # Your task is to write a function which returns the sum of following series upto nth term(parameter).
+def series_sum(n):
+    return '{:.2f}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
