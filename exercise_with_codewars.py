@@ -1925,3 +1925,6 @@ def add_length(str_):
 # Assume shortenToDate's output will be the shortened string, e.g., "Friday May 2".
 def shorten_to_date(long_date):
     return long_date.split(',')[0]
+
+# A student was working on a function and made some syntax mistakes while coding.
+# Help them find their mistakes and fix them.
