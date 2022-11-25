@@ -1908,3 +1908,6 @@ def find_longest(arr):
 # (without the width of the first and last pillar).
 def pillars(num_pill, dist, width):
     return (num_pill - 2) * width + (100 * dist) * (num_pill - 1) if num_pill > 1 else 0
+
+# What if we need the length of the words separated by a space
+# to be added at the end of that same word and have it returned as an array?
