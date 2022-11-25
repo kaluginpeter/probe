@@ -1944,3 +1944,8 @@ def sale_hotdogs(n):
     return n * 90
 
 # Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+def replace_exclamation(s):
+    for char in s:
+        if char.lower() in 'aeiou':
+            s = s.replace(char, '!')
+    return s
