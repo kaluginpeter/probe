@@ -1930,3 +1930,5 @@ def shorten_to_date(long_date):
 # Help them find their mistakes and fix them.
 def main(verb, noun):
     return verb + noun
+
+# Code as fast as you can! You need to double the integer and return it.
