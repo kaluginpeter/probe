@@ -1960,3 +1960,5 @@ def generate_shape(n: int) -> str:
 # When bool is truth-ish, func1 should be called, otherwise call the func2.
 def _if(bool, func1, func2):
     return func1() if bool == True else func2()
+
+# Your task is to write a function which returns the sum of following series upto nth term(parameter).
