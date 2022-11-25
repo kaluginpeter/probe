@@ -1911,3 +1911,5 @@ def pillars(num_pill, dist, width):
 
 # What if we need the length of the words separated by a space
 # to be added at the end of that same word and have it returned as an array?
+def add_length(str_):
+    return [f"{i} {len(i)}" for i in str_.split()]
