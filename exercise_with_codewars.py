@@ -2002,3 +2002,17 @@ def highest_rank(arr):
     return max(k for k, v in c.items() if v == m)
 
 # We want to generate a function that computes the series starting from 0 and ending until the given number.
+def show_sequence(n):
+    sum=0
+    s=''
+    if n==0:
+        return "0=0"
+    elif n<0:
+        return str(n)+"<0"
+    else:
+        for i in range(0,n+1):
+            sum += i
+            s+=str(i)+'+'
+        s = s.strip('+')
+        s = s +" = "+str(sum)
+        return s
