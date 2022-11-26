@@ -2035,3 +2035,9 @@ def same_case(a: str, b: str) -> int:
 # Write a function that returns a string in which firstname is swapped with last name.
 def name_shuffler(str_):
     return ' '.join(str_.split()[::-1])
+
+# To find the volume (centimeters cubed) of a cuboid you use the formula:
+# volume = Length * Width * Height
+# But someone forgot to use proper record keeping,
+# so we only have the volume, and the length of a single side!
+# It's up to you to find out whether the cuboid has equal sides (= is a cube).
