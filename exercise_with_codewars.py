@@ -1995,3 +1995,8 @@ def alphabet_position(text):
 # Complete the method which returns the number which is most frequent in the given input array.
 # If there is a tie for most frequent number, return the largest number among them.
 # Note: no empty arrays will be given.
+from collections import Counter
+def highest_rank(arr):
+    c = Counter(arr)
+    m = max(c.values())
+    return max(k for k, v in c.items() if v == m)
