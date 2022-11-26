@@ -2041,3 +2041,5 @@ def name_shuffler(str_):
 # But someone forgot to use proper record keeping,
 # so we only have the volume, and the length of a single side!
 # It's up to you to find out whether the cuboid has equal sides (= is a cube).
+def cube_checker(volume, side):
+    return volume == side ** 3 if volume > 0 and side > 0 else False
