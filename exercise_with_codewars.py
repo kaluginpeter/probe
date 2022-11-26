@@ -1991,3 +1991,7 @@ def get_even_numbers(arr):
 # If anything in the text isn't a letter, ignore it and don't return it.
 def alphabet_position(text):
     return ' '.join([str(ord(char) - 96) for char in text.lower() if char >= 'a' and char<= 'z'])
+
+# Complete the method which returns the number which is most frequent in the given input array.
+# If there is a tie for most frequent number, return the largest number among them.
+# Note: no empty arrays will be given.
