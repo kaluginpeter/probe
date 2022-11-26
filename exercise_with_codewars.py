@@ -1978,3 +1978,6 @@ def distinct(seq):
 # for lower case vowels (a, e, i, o, u).
 # If they are, change the array value to a string of that vowel.
 # Return the resulting array.
+def is_vow(s):
+    vowels = {97: 'a', 111: 'o', 117: 'u', 101: 'e', 105: 'i'}
+    return [vowels.get(elem, elem) for elem in s]
