@@ -1986,3 +1986,6 @@ def is_vow(s):
 # For more information on how to use this function, visit https://docs.python.org/3/library/functions.html#filter
 def get_even_numbers(arr):
     return list(filter(lambda x: x % 2 == 0, arr))
+
+# In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+# If anything in the text isn't a letter, ignore it and don't return it.
