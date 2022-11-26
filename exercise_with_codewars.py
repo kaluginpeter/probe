@@ -1981,3 +1981,6 @@ def distinct(seq):
 def is_vow(s):
     vowels = {97: 'a', 111: 'o', 117: 'u', 101: 'e', 105: 'i'}
     return [vowels.get(elem, elem) for elem in s]
+
+# In Python, there is a built-in filter function that operates similarly to JS's filter.
+# For more information on how to use this function, visit https://docs.python.org/3/library/functions.html#filter
