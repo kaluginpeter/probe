@@ -2016,3 +2016,5 @@ def show_sequence(n):
         s = s.strip('+')
         s = s +" = "+str(sum)
         return s
+
+# Remove all exclamation marks from the end of sentence.
