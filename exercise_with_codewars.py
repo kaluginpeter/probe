@@ -2000,3 +2000,5 @@ def highest_rank(arr):
     c = Counter(arr)
     m = max(c.values())
     return max(k for k, v in c.items() if v == m)
+
+# We want to generate a function that computes the series starting from 0 and ending until the given number.
