@@ -2033,3 +2033,5 @@ def same_case(a: str, b: str) -> int:
     return 1 if a.islower() and b.islower() or a.isupper() and b.isupper() else 0
 
 # Write a function that returns a string in which firstname is swapped with last name.
+def name_shuffler(str_):
+    return ' '.join(str_.split()[::-1])
