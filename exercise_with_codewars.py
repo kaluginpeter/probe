@@ -2103,3 +2103,4 @@ def dashatize(num):
     return num_str.strip('-').replace('--','-')
 
 # Fix the variables assigments so that this code stores the string 'devLab' in the variable name.
+a, b, name = 'dev', 'Lab', 'devLab'
