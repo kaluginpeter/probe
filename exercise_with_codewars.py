@@ -2058,3 +2058,5 @@ def comp(array1, array2):
     if array1 == None or array2 == None:
         return False
     return sorted(number ** 2 for number in array1) == sorted(array2)
+
+# Output: String with comma delimited elements of the array in th same order.
