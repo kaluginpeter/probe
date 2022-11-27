@@ -2070,3 +2070,6 @@ def print_array(arr):
 # Note: The character is a string of length 1 or an empty string.
 def contamination(text, char):
     return char * len(text) if text and char != '' else ''
+
+# Write a function that takes a positive integer n, sums all the cubed values from 1 to n, and returns that sum.
+# Assume that the input n will always be a positive integer.
