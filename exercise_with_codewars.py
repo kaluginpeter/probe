@@ -2082,3 +2082,5 @@ def sum_cubes(n):
 # out a string such as 5 minutes, 14 apples, or 1 sun.
 # You only need to worry about english grammar rules for this kata,
 # where anything that isn't singular (one of something), it is plural (not one of something).
+def plural(n):
+    return n != 1
