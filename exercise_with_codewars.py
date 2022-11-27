@@ -2060,3 +2060,5 @@ def comp(array1, array2):
     return sorted(number ** 2 for number in array1) == sorted(array2)
 
 # Output: String with comma delimited elements of the array in th same order.
+def print_array(arr):
+    return ','.join(str(i) for i in arr)
