@@ -2091,3 +2091,8 @@ def plural(n):
 # if the array contains the value, false if not. With strings you will need to account for case.
 def check(a, x):
     return x in a
+
+# Given a variable n,
+# If n is an integer, Return a string with dash'-'marks before and after each odd integer,
+# but do not begin or end the string with a dash mark. If n is negative, then the negative sign should be removed.
+# If n is not an integer, return the string "None".
