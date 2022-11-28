@@ -2119,3 +2119,6 @@ def digits(n):
 # the name equals "Santa Claus" and the password is "Ho Ho Ho!"
 # (yes, even Santa has a secret password with uppercase and lowercase letters
 # and special characters :D), the return value must be true. Otherwise it should return false.
+class Sleigh(object):
+    def authenticate(self, name, password):
+        return name == 'Santa Claus' and password == 'Ho Ho Ho!'
