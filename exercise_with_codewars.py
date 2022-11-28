@@ -2186,3 +2186,7 @@ def isDigit(string):
         return False
 
 # The objective of Duck, duck, goose is to walk in a circle, tapping on each player's head until one is chosen.
+def duck_duck_goose(players, goose):
+    while len(players) < goose:
+        goose -= len(players)
+    return players[goose - 1].name
