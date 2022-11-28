@@ -2190,3 +2190,6 @@ def duck_duck_goose(players, goose):
     while len(players) < goose:
         goose -= len(players)
     return players[goose - 1].name
+
+# Make a function that will return a greeting statement that uses an input;
+# your program should return, "Hello, <name> how are you doing today?".
