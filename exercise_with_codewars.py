@@ -2143,3 +2143,6 @@ def check_coupon(entered_code, correct_code, current_date, expiration_date):
             return True
         return False
     return False
+
+# Complete the function, which calculates how much you need to
+# tip based on the total amount of the bill and the service.
