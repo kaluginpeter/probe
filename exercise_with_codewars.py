@@ -2195,3 +2195,5 @@ def duck_duck_goose(players, goose):
 # your program should return, "Hello, <name> how are you doing today?".
 def greet(name):
     return f'Hello, {name} how are you doing today?'
+
+# Write a function that returns the total surface area and volume of a box as an array: [area, volume]
