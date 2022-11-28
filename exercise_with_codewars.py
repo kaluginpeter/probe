@@ -2154,3 +2154,6 @@ def calculate_tip(amount, rating):
     return 'Rating not recognised'
 
 # You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+def define_suit(card):
+    return 'clubs' if 'C' in card else 'spades' if 'S' in card\
+        else 'diamonds' if 'D' in card else 'hearts' if 'H' in card else None
