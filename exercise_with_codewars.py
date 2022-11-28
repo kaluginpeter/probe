@@ -2157,3 +2157,6 @@ def calculate_tip(amount, rating):
 def define_suit(card):
     return 'clubs' if 'C' in card else 'spades' if 'S' in card\
         else 'diamonds' if 'D' in card else 'hearts' if 'H' in card else None
+
+# Create a method that accepts a list and an item,
+# and returns true if the item belongs to the list, otherwise false.
