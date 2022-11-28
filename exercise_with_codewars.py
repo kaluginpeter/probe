@@ -2152,3 +2152,5 @@ def calculate_tip(amount, rating):
     if rating.lower() in rating_dict:
         return math.ceil(rating_dict[rating.lower()] * amount / 100)
     return 'Rating not recognised'
+
+# You get any card as an argument. Your task is to return the suit of this card (in lowercase).
