@@ -2175,3 +2175,6 @@ def leo(oscar):
     elif oscar == 86: return 'Not even for Wolf of wallstreet?!'
     elif oscar != 88 and oscar != 86 and oscar < 88: return 'When will you give Leo an Oscar?'
     elif oscar > 88: return 'Leo got one already!'
+
+# Given a string s, write a method (function) that will return true if
+# its a valid single integer or floating number or false if its not.
