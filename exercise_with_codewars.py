@@ -2203,4 +2203,6 @@ def get_size(w,h,d):
 # Write a function which removes from string all non-digit characters
 # and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
 def get_number_from_string(string):
-    return int(''.join(list(i for i in string if i in '0123456789')))
+    return int(''.join(list(i for i in string if i in '0123456789')))\
+
+# Your task is to sum the differences between consecutive pairs in the array in descending order.
