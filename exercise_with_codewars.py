@@ -2218,3 +2218,5 @@ def sum_of_differences(arr):
 # The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
 def validate_code(code):
     return str(code)[0] in '123'
+
+# Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
