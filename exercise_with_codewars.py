@@ -2289,3 +2289,5 @@ def nb_dig(n, d):
 # Herr J.G. Büttner, to keep the bored and unruly young schoolboy Karl Friedrich Gauss
 # busy for a good long time, while he teaching arithmetic to his mates,
 # assigned him the problem of adding up all the whole numbers from 1 through a given number n.
+def f(n):
+    return sum(range(1, n + 1)) if type(n) is int and n > 0 else None
