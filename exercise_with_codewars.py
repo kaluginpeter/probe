@@ -2220,3 +2220,6 @@ def validate_code(code):
     return str(code)[0] in '123'
 
 # Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+def min_sum(arr):
+    arr = sorted(arr)
+    return sum(arr[i]*arr[-i-1] for i in range(len(arr)//2))
