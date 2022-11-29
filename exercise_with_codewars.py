@@ -2206,3 +2206,10 @@ def get_number_from_string(string):
     return int(''.join(list(i for i in string if i in '0123456789')))\
 
 # Your task is to sum the differences between consecutive pairs in the array in descending order.
+def sum_of_differences(arr):
+    arr = sorted(arr, reverse = True)
+    list = []
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            list.append(arr[i] - arr[j])
+    return max(list) if len(arr) > 1 else 0
