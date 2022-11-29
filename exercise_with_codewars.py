@@ -2278,3 +2278,9 @@ def close_compare(a, b, margin=0):
 # Square all numbers k (0 <= k <= n) between 0 and n.
 # Count the numbers of digits d used in the writing of all the k**2.
 # Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
+def nb_dig(n, d):
+    values_list = list(range(0, n+1))
+    list_squared = list(map(lambda x: str(x**2), values_list))
+    str_list_squared = ''.join(list_squared)
+    print(str(d))
+    return str_list_squared.count(str(d))
