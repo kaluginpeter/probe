@@ -2228,3 +2228,29 @@ def min_sum(arr):
 #  the array can't be empty
 # only non-negative, single digit integers are allowed
 # Return nil (or your language's equivalent) for invalid inputs.
+def up_array(arr):
+    integer = ''
+    list = []
+    print(arr)
+    if len(arr) < 1 :
+        return None
+    elif len(arr) == 1 and arr[0] <=9:
+        return [1]
+    for i in arr:
+        if len(str(i)) > 1 or i < 0:
+            return None
+    else:
+        for elem in arr:
+            if str(elem) in '1234567890':
+                integer += str(elem)
+    if integer[0] == '0' and integer[1] != '0':
+        integer = int(integer[1:]) + 1
+        integer = '0' + str(integer)
+    elif integer[0] == '0' and integer[1] == '0':
+        integer = int(integer[2:]) + 1
+        integer = '00' + str(integer)
+    elif integer[0] != '0':
+        integer = str(int(integer) + 1)
+    for char in integer:
+        list.append(int(char))
+    return list
