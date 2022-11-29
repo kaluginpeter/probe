@@ -2265,3 +2265,7 @@ def arr(n=0):
 # [1, 2, 3, 4, 5]  -->  [1, 3, 5]
 # [2, 4, 6]        -->  []
 odds = lambda list: [i for i in list if i % 2 !=0]
+
+# Create a function close_compare that accepts 3 parameters: a, b, and an optional margin.
+# The function should return whether a is lower than, close to, or higher than b.
+# a is considered "close to" b if margin is greater than or equal to the distance between a and b.
