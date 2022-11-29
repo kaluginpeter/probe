@@ -2199,3 +2199,6 @@ def greet(name):
 # Write a function that returns the total surface area and volume of a box as an array: [area, volume]
 def get_size(w,h,d):
     return [((w * h) + (w * d) + (h * d)) * 2, w * h * d]
+
+# Write a function which removes from string all non-digit characters
+# and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
