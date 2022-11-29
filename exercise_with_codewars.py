@@ -2284,3 +2284,8 @@ def nb_dig(n, d):
     str_list_squared = ''.join(list_squared)
     print(str(d))
     return str_list_squared.count(str(d))
+
+# Due to another of his misbehaved, the primary school's teacher of the young Gauß,
+# Herr J.G. Büttner, to keep the bored and unruly young schoolboy Karl Friedrich Gauss
+# busy for a good long time, while he teaching arithmetic to his mates,
+# assigned him the problem of adding up all the whole numbers from 1 through a given number n.
