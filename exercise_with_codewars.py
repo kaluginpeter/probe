@@ -2269,3 +2269,7 @@ odds = lambda list: [i for i in list if i % 2 !=0]
 # Create a function close_compare that accepts 3 parameters: a, b, and an optional margin.
 # The function should return whether a is lower than, close to, or higher than b.
 # a is considered "close to" b if margin is greater than or equal to the distance between a and b.
+def close_compare(a, b, margin=0):
+    if a < b and b - a > margin: return -1
+    elif a - b > margin and a > b: return 1
+    elif a - b <= margin: return 0
