@@ -2213,3 +2213,6 @@ def sum_of_differences(arr):
         for j in range(i + 1, len(arr)):
             list.append(arr[i] - arr[j])
     return max(list) if len(arr) > 1 else 0
+
+# Basic regex tasks. Write a function that takes in a numeric code of any length.
+# The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
