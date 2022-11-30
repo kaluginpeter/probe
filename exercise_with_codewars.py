@@ -2323,3 +2323,6 @@ def capitals(word):
 # Complete the function which converts hex number (given as a string) to a decimal number.
 def hex_to_dec(s):
     return int(s, 16)
+
+# Create a combat function that takes the player's current health
+# and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
