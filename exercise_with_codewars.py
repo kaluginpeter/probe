@@ -2300,3 +2300,13 @@ def f(n):
 # You need to work out if the shark will get to you before you can get to the pontoon.
 # To make it easier... as you do the mental calculations in the water you either freeze
 # when you realise you are dead, or swim when you realise you can make it!
+def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+    if dolphin:
+        if pontoon_distance / you_speed < shark_distance / (shark_speed / 2):
+            return 'Alive!'
+        else:
+            return 'Shark Bait!'
+    elif pontoon_distance / you_speed > shark_distance / shark_speed:
+        return 'Shark Bait!'
+    elif pontoon_distance / you_speed < shark_distance / shark_speed:
+        return 'Alive!'
