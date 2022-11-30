@@ -2364,3 +2364,6 @@ def calculator(x,y,op):
 # RNA differs slightly from DNA its chemical structure and contains no Thymine.
 # In RNA Thymine is replaced by another nucleic acid Uracil ('U').
 # Create a function which translates a given DNA string into RNA.
+def dna_to_rna(dna):
+    dict = {'G': 'G', 'C': 'C', 'A': 'A', 'T': 'U'}
+    return ''.join(list(dict[char] for char in dna))
