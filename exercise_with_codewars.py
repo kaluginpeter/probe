@@ -2335,3 +2335,7 @@ def combat(health, damage):
 # m is excluded from the multiples
 def sum_mul(n, m):
     return sum(range(n, m, n)) if m > 0 and n > 0 else 'INVALID'
+
+# Your job is simple, if x squared is more than 1000,
+# return It's hotter than the sun!!, else, return Help yourself to a honeycomb Yorkie for the glovebox.
+# Note: Input will either be a positive integer (or a string for untyped languages).
