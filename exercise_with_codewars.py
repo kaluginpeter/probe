@@ -2341,3 +2341,11 @@ def sum_mul(n, m):
 # Note: Input will either be a positive integer (or a string for untyped languages).
 def apple(x):
   return "It's hotter than the sun!!" if int(x)**2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
+
+# You are required to create a simple calculator that returns
+# the result of addition, subtraction, multiplication or division of two numbers.
+# Your function will accept three arguments:
+# The first and second argument should be numbers.
+# The third argument should represent a sign indicating the operation to perform on these two numbers.
+# if the variables are not numbers or the sign does not belong to the list above
+# a message "unknown value" must be returned.
