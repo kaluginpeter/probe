@@ -2319,3 +2319,5 @@ def get_ascii(c):
 # The function must return an ordered list containing the indexes of all capital letters in the string.
 def capitals(word):
     return [value for value, i in enumerate(word) if i.isupper()]
+
+# Complete the function which converts hex number (given as a string) to a decimal number.
