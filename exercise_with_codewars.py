@@ -2312,3 +2312,5 @@ def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
         return 'Alive!'
 
 # Get ASCII value of a character.
+def get_ascii(c):
+   return ord(c)
