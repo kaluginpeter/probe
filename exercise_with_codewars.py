@@ -2333,3 +2333,5 @@ def combat(health, damage):
 # Keep in Mind
 # n and m are natural numbers (positive integers)
 # m is excluded from the multiples
+def sum_mul(n, m):
+    return sum(range(n, m, n)) if m > 0 and n > 0 else 'INVALID'
