@@ -2367,3 +2367,7 @@ def calculator(x,y,op):
 def dna_to_rna(dna):
     dict = {'G': 'G', 'C': 'C', 'A': 'A', 'T': 'U'}
     return ''.join(list(dict[char] for char in dna))
+
+# Find the sum of the odd numbers within an array, after cubing the initial integers.
+# The function should return undefined/None/nil/NULL if any of the values aren't numbers.
+# Note: Booleans should not be considered as numbers.
