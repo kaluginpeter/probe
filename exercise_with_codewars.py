@@ -2328,3 +2328,8 @@ def hex_to_dec(s):
 # and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
 def combat(health, damage):
     return health - damage if health > damage else 0
+
+# Find the sum of all multiples of n below m
+# Keep in Mind
+# n and m are natural numbers (positive integers)
+# m is excluded from the multiples
