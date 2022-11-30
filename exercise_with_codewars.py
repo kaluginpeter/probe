@@ -2310,3 +2310,5 @@ def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
         return 'Shark Bait!'
     elif pontoon_distance / you_speed < shark_distance / shark_speed:
         return 'Alive!'
+
+# Get ASCII value of a character.
