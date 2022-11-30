@@ -2349,3 +2349,11 @@ def apple(x):
 # The third argument should represent a sign indicating the operation to perform on these two numbers.
 # if the variables are not numbers or the sign does not belong to the list above
 # a message "unknown value" must be returned.
+def calculator(x,y,op):
+    if type(x) == int and type(y) == int:
+        dict_op = {'+': x+y, '-': x-y, '*': x*y, '/': x/y}
+        if op in dict_op and x !=0 and y !=0:
+            return dict_op[op]
+        else:
+            return 'unknown value'
+    return 'unknown value'
