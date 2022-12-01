@@ -2414,3 +2414,8 @@ def encode(st):
 def decode(st):
     dict = {'1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u'}
     return ''.join([dict[char] if char in dict else char for char in st])
+
+# You can print your name on a billboard ad. Find out how much it will cost you.
+# Each character has a default price of £30, but that can be different if you are given 2 parameters instead of 1.
+# You can not use multiplier "*" operator.
+# If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 leters * 30 = 600 (Space counts as a character).
