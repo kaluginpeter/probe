@@ -2455,3 +2455,8 @@ def div_con(x):
 # The task
 # Given a number, find if it is balanced, and return the string "Balanced" or "Not Balanced" accordingly.
 # The passed number will always be positive.
+def balanced_num(number):
+    s = str(number)
+    l = (len(s)-1)//2
+    same = len(s) < 3 or sum(map(int, s[:l])) == sum(map(int, s[-l:]))
+    return "Balanced" if same else "Not Balanced"
