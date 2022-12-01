@@ -2433,3 +2433,6 @@ def bin_to_decimal(inp):
 # Repetition in array/list's numbers could occur, so don't remove duplications.
 def nth_smallest(arr, pos):
     return sorted(arr)[pos-1]
+
+# Implement String#digit? (in Java StringUtils.isDigit(String)),
+# which should return true if given object is a digit (0-9), false otherwise.
