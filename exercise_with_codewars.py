@@ -2382,3 +2382,5 @@ def cube_odd(arr):
 # lst contains integers, that means it may contain some negative numbers
 # if lst is empty or contains a single element, return 0
 # lst is not sorted
+def max_diff(lst):
+    return max(lst) - min(lst) if lst else 0
