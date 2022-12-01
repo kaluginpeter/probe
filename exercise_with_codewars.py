@@ -2386,3 +2386,5 @@ def max_diff(lst):
     return max(lst) - min(lst) if lst else 0
 
 # Your task is simply to count the total number of lowercase letters in a string.
+def lowercase_count(strng):
+    return len(list(i for i in strng if i.islower()))
