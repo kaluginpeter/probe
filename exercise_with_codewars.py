@@ -2394,3 +2394,6 @@ def lowercase_count(strng):
 # Array/list size is at least 4 .
 # Array/list numbers could be a mixture of positives , negatives .
 # Have no fear , It is guaranteed that no Zeroes will exists .
+def men_from_boys(arr):
+    return sorted(list(set(list(i for i in arr if i % 2 == 0)))) +\
+           sorted(list(set(list(i for i in arr if i % 2 != 0))), reverse = True)
