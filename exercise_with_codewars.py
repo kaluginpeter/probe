@@ -2384,3 +2384,5 @@ def cube_odd(arr):
 # lst is not sorted
 def max_diff(lst):
     return max(lst) - min(lst) if lst else 0
+
+# Your task is simply to count the total number of lowercase letters in a string.
