@@ -2406,3 +2406,11 @@ def men_from_boys(arr):
 # back into vowels according to the same pattern shown above.
 # For example, decode("h3 th2r2") would return "hi there".
 # For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
+def encode(st):
+    dict = {'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5'}
+    return ''.join([dict[char] if char in dict else char for char in st])
+
+
+def decode(st):
+    dict = {'1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u'}
+    return ''.join([dict[char] if char in dict else char for char in st])
