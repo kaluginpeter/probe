@@ -2531,3 +2531,5 @@ def spacify(string):
 # recognition software for scanning in the text of old novels to your database.
 # At first it seems to capture words okay, but you quickly notice that it throws
 # in a lot of numbers at random places in the text.
+def string_clean(s):
+    return ''.join('' if ch.isdigit() else ch for ch in s)
