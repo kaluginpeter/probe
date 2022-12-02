@@ -2507,3 +2507,5 @@ def parse_float(string):
     try: return float(string)
     except Exception:
         return None
+
+# Your task, is to create NxN multiplication table, of size provided in parameter.
