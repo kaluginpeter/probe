@@ -2460,3 +2460,8 @@ def balanced_num(number):
     l = (len(s)-1)//2
     same = len(s) < 3 or sum(map(int, s[:l])) == sum(map(int, s[-l:]))
     return "Balanced" if same else "Not Balanced"
+
+# A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+# Task
+# Given a number determine if it Automorphic or not .
+
