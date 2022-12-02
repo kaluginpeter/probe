@@ -2464,4 +2464,6 @@ def balanced_num(number):
 # A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
 # Task
 # Given a number determine if it Automorphic or not .
+def automorphic(n):
+    return 'Automorphic' if str(n**2).count(str(n)) else 'Not!!'
 
