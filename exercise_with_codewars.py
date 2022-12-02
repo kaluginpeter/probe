@@ -2498,3 +2498,5 @@ def get_char(c):
 # If num is negative, ignore its sign and treat it as a positive value
 # If nth is not positive, return -1
 # Keep in mind that 42 = 00042. This means that findDigit(42, 5) would return 0
+def find_digit(num, nth):
+    return int(str(num)[-nth]) if nth <= len(str(num)) and nth > 0 else -1 if nth <= 0 else 0
