@@ -2522,3 +2522,5 @@ def temple_strings(obj, feature):
 import collections
 def ordered_count(inp):
     return list(collections.Counter(inp).items())
+
+# Modify the spacify function so that it returns the given string with spaces inserted between each character.
