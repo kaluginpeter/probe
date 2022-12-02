@@ -2488,3 +2488,5 @@ def is_valid_walk(walk):
         return False not in list
     return False
 
+# Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
+
