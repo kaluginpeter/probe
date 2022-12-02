@@ -2477,4 +2477,14 @@ def automorphic(n):
 # so create a function that will return true if the walk the app gives you
 # will take you exactly ten minutes (you don't want to be early or late!) and will,
 # of course, return you to your starting point. Return false otherwise.
+def is_valid_walk(walk):
+    list = []
+    dict = {'n': 's', 's': 'n',
+           'e': 'w', 'w': 'e'}
+    if len(walk) == 10:
+        for elem in walk:
+            list.append(walk.count(elem) == walk.count(dict[elem]))
+        print(list)
+        return False not in list
+    return False
 
