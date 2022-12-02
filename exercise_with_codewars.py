@@ -2500,3 +2500,6 @@ def get_char(c):
 # Keep in mind that 42 = 00042. This means that findDigit(42, 5) would return 0
 def find_digit(num, nth):
     return int(str(num)[-nth]) if nth <= len(str(num)) and nth > 0 else -1 if nth <= 0 else 0
+
+# Write function parse_float which takes a string/list and returns a number
+# or 'none' if conversion is not possible.
