@@ -2552,4 +2552,23 @@ def max_tri_sum(numbers):
 # will split up a series of letters into two words (eg. "elephant" and "ride").
 # The abbreviated version of the word should have the first letter,
 # then the number of removed characters, then the last letter (eg. "elephant ride" => "e6t r2e").
-
+def abbreviate(s):
+    word = ""
+    sentence = []
+    result = []
+    for i in s:
+        if i.isalpha():
+            word += i
+        else:
+            sentence.append(word)
+            sentence.append(i)
+            word = ""
+            continue
+    if word:
+        sentence.append(word)
+    for i in sentence:
+        if len(i) >= 4:
+            result += i[0] + str(len(i)-2) + i[-1]
+        else:
+            result += i
+    return "".join(result)
