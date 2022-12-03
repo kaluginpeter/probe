@@ -2628,3 +2628,7 @@ from math import pi
 
 def square_area(A):
     return round((2 * A / pi) ** 2, 2)
+
+# Write a function called sortGiftCode/sort_gift_code/SortGiftCode that accepts
+# a string containing up to 26 unique alphabetical characters, and returns
+# a string containing the same characters in alphabetical order.
