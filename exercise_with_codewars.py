@@ -2590,3 +2590,9 @@ def shortcut( s ):
 # If the year of birth equals the year requested return: "You were born this very year!"
 # "..." are to be replaced by the number, followed and proceeded by a single space.
 # Mind that you need to account for both "year" and "years", depending on the result.
+def calculate_age(year_of_birth, current_year):
+    return f"You are {current_year - year_of_birth} {'year' if current_year - year_of_birth == 1 else 'years'} old."\
+        if year_of_birth < current_year else\
+        f"You will be born in {year_of_birth - current_year}" \
+        f" {'year' if year_of_birth - current_year == 1 else 'years'}." \
+            if year_of_birth > current_year else 'You were born this very year!'
