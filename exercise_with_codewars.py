@@ -2616,3 +2616,6 @@ def reverse_alternate(s):
 # Your job is to write an algorithm that gets you from the input to the output.
 def pre_fizz(n):
     return [i for i in range(1, n + 1)]
+
+# You'll be given a string, and have to return the sum of all characters as an int.
+# The function should be able to handle all ASCII characters.
