@@ -2539,4 +2539,6 @@ def string_clean(s):
 # Array/list size is at least 3 .
 # Array/list numbers could be a mixture of positives , negatives and zeros .
 # Repetition of numbers in the array/list could occur , So (duplications are not included when summing).
+def max_tri_sum(numbers):
+    return sum(list(sorted(set(numbers), reverse = True))[:3])
 
