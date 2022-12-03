@@ -2596,3 +2596,8 @@ def calculate_age(year_of_birth, current_year):
         f"You will be born in {year_of_birth - current_year}" \
         f" {'year' if year_of_birth - current_year == 1 else 'years'}." \
             if year_of_birth > current_year else 'You were born this very year!'
+
+# Reverse every other word in a given string, then return the string.
+# Throw away any leading or trailing whitespace, while ensuring there
+# is exactly one space between each word. Punctuation marks should be
+# treated as if they are a part of the word in this kata.
