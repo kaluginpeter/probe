@@ -2574,3 +2574,5 @@ def abbreviate(s):
     return "".join(result)
 
 # Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+def shortcut( s ):
+    return ''.join([i if i not in 'aeoiu' else '' for i in s])
