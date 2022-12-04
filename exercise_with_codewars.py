@@ -2652,3 +2652,6 @@ def last(s):
 # Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
 def adjacent_element_product(array):
     return max(a * b for a, b in zip(array, array[1:]))
+
+# Write a small function that returns the values of an array that are not odd.
+# All values in the array will be integers. Return the good values in the order they are given.
