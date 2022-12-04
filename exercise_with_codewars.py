@@ -2677,3 +2677,13 @@ def whatday(num):
 # Write a function, persistence, that takes in a positive parameter num
 # and returns its multiplicative persistence, which is the numbe
 # r of times you must multiply the digits in num until you reach a single digit.
+def persistence(n):
+    count = 0
+    integer = 1
+    while len(str(n)) > 1:
+        count += 1
+        for elem in str(n):
+            integer *= int(elem)
+        n = integer
+        integer = 1
+    return count
