@@ -2669,3 +2669,7 @@ def array(string):
 
 # Complete the function which returns the weekday according to the input number:
 # Otherwise returns "Wrong, please enter a number between 1 and 7"
+def whatday(num):
+    dict = {1: 'Sunday', 2: 'Monday', 3: 'Tuesday',
+            4: 'Wednesday', 5: 'Thursday', 6: 'Friday', 7: 'Saturday'}
+    return dict[num] if num in dict else 'Wrong, please enter a number between 1 and 7'
