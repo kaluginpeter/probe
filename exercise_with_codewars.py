@@ -2655,3 +2655,12 @@ def adjacent_element_product(array):
 
 # Write a small function that returns the values of an array that are not odd.
 # All values in the array will be integers. Return the good values in the order they are given.
+def no_odds(values):
+    return [i for i in values if i % 2 == 0]
+
+# You are given a string containing a sequence of character sequences separated by commas.
+# Write a function which returns a new string containing the same character sequences except
+# the first and the last ones but this time separated by spaces.
+# If the input string is empty or the removal of the first
+# and last items would cause the resulting string to be empty,
+# return an empty value (represented as a generic value NULL in the examples below).
