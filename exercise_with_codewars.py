@@ -2666,3 +2666,6 @@ def no_odds(values):
 # return an empty value (represented as a generic value NULL in the examples below).
 def array(string):
     return ' '.join(string.split(',')[1:-1]) or None
+
+# Complete the function which returns the weekday according to the input number:
+# Otherwise returns "Wrong, please enter a number between 1 and 7"
