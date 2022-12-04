@@ -2673,3 +2673,7 @@ def whatday(num):
     dict = {1: 'Sunday', 2: 'Monday', 3: 'Tuesday',
             4: 'Wednesday', 5: 'Thursday', 6: 'Friday', 7: 'Saturday'}
     return dict[num] if num in dict else 'Wrong, please enter a number between 1 and 7'
+
+# Write a function, persistence, that takes in a positive parameter num
+# and returns its multiplicative persistence, which is the numbe
+# r of times you must multiply the digits in num until you reach a single digit.
