@@ -2725,3 +2725,10 @@ def tidyNumber(n):
 # or equal to 1 return 0 since the car didn't move.
 # Example:
 # with the above data your function gps(s, x)should return 74
+def gps(s, x):
+    speed = []
+    lenght = 0
+    for elem in x:
+        speed.append(3600 * (elem - lenght) / s)
+        lenght = elem
+    return max(speed) if len(x) > 0 else 0
