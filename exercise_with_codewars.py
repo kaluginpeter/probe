@@ -2648,3 +2648,5 @@ class Person:
 # them in the order they appeared in the given string.
 def last(s):
     return sorted(s.split(), key=lambda x: x[-1])
+
+# Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
