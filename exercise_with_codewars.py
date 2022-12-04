@@ -2664,3 +2664,5 @@ def no_odds(values):
 # If the input string is empty or the removal of the first
 # and last items would cause the resulting string to be empty,
 # return an empty value (represented as a generic value NULL in the examples below).
+def array(string):
+    return ' '.join(string.split(',')[1:-1]) or None
