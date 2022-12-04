@@ -2650,3 +2650,5 @@ def last(s):
     return sorted(s.split(), key=lambda x: x[-1])
 
 # Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+def adjacent_element_product(array):
+    return max(a * b for a, b in zip(array, array[1:]))
