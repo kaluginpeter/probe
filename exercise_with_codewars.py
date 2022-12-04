@@ -2706,3 +2706,7 @@ def combine_names(first, last):
 # it will return an array containing only the name as is"
 def who_is_paying(name):
     return [name,name[:2]] if len(name) > 2 else [name]
+
+# A Tidy number is a number whose digits are in non-decreasing order.
+# Task
+# Given a number, Find if it is Tidy or not .
