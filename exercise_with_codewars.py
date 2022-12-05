@@ -2789,3 +2789,6 @@ def to_binary(n):
 from math import factorial
 def strong_num(number):
     return 'STRONG!!!!' if sum(factorial(int(i)) for i in str(number)) == number else 'Not Strong !!'
+
+# Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+# If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
