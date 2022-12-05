@@ -2748,3 +2748,5 @@ def pairs(ar):
 # and divide the coefficient (the first argument) by that new number.
 # For example for 3x^2, the integral would be 1x^3: we added 1 to the exponent,
 # and divided the coefficient by that new number).
+def integrate(coefficient, exponent):
+    return f"{int(coefficient / (exponent+1))}x^{exponent+1}"
