@@ -2834,3 +2834,5 @@ def solve(arr):
 # Your goal is to retrieve the number from the text, can you return the number back to its original state?
 # Task
 # Your task is to return a number from a string.
+def filter_string(string):
+    return int(''.join(i for i in string if i.isdigit()))
