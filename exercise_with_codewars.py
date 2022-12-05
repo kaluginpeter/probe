@@ -2732,3 +2732,6 @@ def gps(s, x):
         speed.append(3600 * (elem - lenght) / s)
         lenght = elem
     return max(speed) if len(x) > 0 else 0
+
+# In this Kata your task will be to return the count of pairs that have consecutive numbers as follows:
+
