@@ -2734,4 +2734,11 @@ def gps(s, x):
     return max(speed) if len(x) > 0 else 0
 
 # In this Kata your task will be to return the count of pairs that have consecutive numbers as follows:
-
+def pairs(ar):
+    counter = 0
+    for i in range(0, len(ar)-1,2):
+        if i+1 > len(ar):
+            break
+        elif abs(ar[i] - ar[i+1]) == 1:
+            counter += 1
+    return counte
