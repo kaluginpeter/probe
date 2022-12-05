@@ -2781,3 +2781,8 @@ def solve(s):
 # Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
 def to_binary(n):
     return int(bin(n)[2:])
+
+# Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+# For example, 145 is strong, since 1! + 4! + 5! = 1 + 24 + 120 = 145.
+# Task
+# Given a number, Find if it is Strong or not and return either "STRONG!!!!" or "Not Strong !!".
