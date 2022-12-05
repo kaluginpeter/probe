@@ -2829,3 +2829,8 @@ def to_freud(sentence):
 # Remove the duplicates from a list of integers, keeping the last ( rightmost ) occurrence of each element.
 def solve(arr):
     return list(dict.fromkeys(arr[::-1]))[::-1]
+
+# Oh, no! The number has been mixed up with the text.
+# Your goal is to retrieve the number from the text, can you return the number back to its original state?
+# Task
+# Your task is to return a number from a string.
