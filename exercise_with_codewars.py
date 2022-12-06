@@ -2842,4 +2842,8 @@ def filter_string(string):
 # Array/list size is at least 3 .
 # Array/list's numbers Will be mixture of positives , negatives and zeros
 # Repetition of numbers in the array/list could occur.
-
+def max_product(lst, n_largest_elements):
+    mul = 1
+    for n in sorted(lst, reverse=True)[:n_largest_elements]:
+        mul *= n
+    return mul
