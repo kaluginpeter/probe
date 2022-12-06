@@ -2912,3 +2912,7 @@ def contain_all_rots(strng, arr):
 # total2 = 656661
 #               ^
 # Then return the difference between the sum of the digits in total1 and total2:
+def calc(x):
+    word= ''.join([str(ord(i)) for i in x])
+    word1 = ''.join([str(ord(i)) for i in x]).replace('7', '1')
+    return sum(int(i) for i in word) - sum(int(i) for i in word1)
