@@ -2891,3 +2891,14 @@ log = 'roll_dice move combat get_coins buy_health print_status'.split()
 # Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
 # a boolean true if all rotations of strng are included in arr
 # false otherwise
+def contain_all_rots(strng, arr):
+    rotate = strng
+    if not len(arr) or not strng:
+        return True
+    for index in range(len(strng)):
+        if rotate  not in arr:
+            return False
+        first_letter = rotate[0]
+        rotate = rotate[1:]
+        rotate += first_letter
+    return True
