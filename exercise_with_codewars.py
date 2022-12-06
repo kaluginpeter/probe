@@ -2864,3 +2864,6 @@ def distance_between_points(a, b):
     return ((b.x - a.x) ** 2 + (b.y - a.y) ** 2) ** 0.5
 
 # Your task is to find the nearest square number, nearest_sq(n), of a positive integer n.
+import math
+def nearest_sq(n):
+    return round(math.sqrt(n))**2
