@@ -2867,3 +2867,8 @@ def distance_between_points(a, b):
 import math
 def nearest_sq(n):
     return round(math.sqrt(n))**2
+
+# Color Ghost
+# Create a class Ghost
+# Ghost objects are instantiated without any arguments.
+# Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
