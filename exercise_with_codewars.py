@@ -2884,3 +2884,10 @@ from preloaded import *
 health, position, coins = 100, 0, 0
 def main(): pass
 log = 'roll_dice move combat get_coins buy_health print_status'.split()
+
+# Input:
+# a string strng
+# an array of strings arr
+# Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
+# a boolean true if all rotations of strng are included in arr
+# false otherwise
