@@ -2920,3 +2920,9 @@ def calc(x):
 # An element is leader if it is greater than The Sum all the elements to its right side.
 # Task
 # Given an array/list [] of integers , Find all the LEADERS in the array.
+def array_leaders(numbers):
+    output = []
+    for i in range(0, len(numbers)):
+        if numbers[i] > sum(numbers[i+1:]):
+            output.append(numbers[i])
+    return output
