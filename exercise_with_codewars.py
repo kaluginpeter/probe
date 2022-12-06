@@ -2847,3 +2847,8 @@ def max_product(lst, n_largest_elements):
     for n in sorted(lst, reverse=True)[:n_largest_elements]:
         mul *= n
     return mul
+
+# To complete this Kata you need to make a function multiplyAll/multiply_all which takes
+# an array of integers as an argument. This function must return another function,
+# which takes a single integer as an argument and returns a new array.
+# The returned array should consist of each of the elements from the first array multiplied by the integer.
