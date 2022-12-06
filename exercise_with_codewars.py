@@ -2916,3 +2916,7 @@ def calc(x):
     word= ''.join([str(ord(i)) for i in x])
     word1 = ''.join([str(ord(i)) for i in x]).replace('7', '1')
     return sum(int(i) for i in word) - sum(int(i) for i in word1)
+
+# An element is leader if it is greater than The Sum all the elements to its right side.
+# Task
+# Given an array/list [] of integers , Find all the LEADERS in the array.
