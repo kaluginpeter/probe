@@ -2936,3 +2936,8 @@ def array_leaders(numbers):
 # If the array is null/nil/None or empty you should return empty array ([]).
 # The rotten fruit name will be in this camelcase (rottenFruit).
 # The returned array should be in lowercase.
+def remove_rotten(bag_of_fruits):
+    try:
+        return [i.replace('rotten', '').lower() if 'rotten' in i else i.lower() for i in bag_of_fruits]
+    except:
+        return []
