@@ -3008,3 +3008,10 @@ def outed(meet, boss):
 # function should return "It's Evil!" in case of evil number and "It's Odious!" in case of odious number.
 def evil(n):
     return "It's Evil!" if  bin(n).count('1') % 2 == 0 else "It's Odious!"
+
+# Every now and then people in the office moves teams or departments.
+# Depending what people are doing with their time they can become more or less boring.
+# Time to assess the current team.
+# You will be provided with an object(staff) containing the staff names as keys,
+# and the department they work in as values.
+# Each department has a different boredom assessment score, as follows:
