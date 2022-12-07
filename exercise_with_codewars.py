@@ -2979,3 +2979,6 @@ def HQ9(code):
 # Assume the second parameter will be a string holding one of two values: 'value' and 'index'.
 def find_smallest(numbers,to_return):
     return numbers.index(min(numbers)) if to_return == 'index' else min(numbers)
+
+# There's a "3 for 2" (or "2+1" if you like) offer on mangoes.
+# For a given quantity and price (per mango), calculate the total cost of the mangoes.
