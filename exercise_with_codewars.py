@@ -3033,3 +3033,9 @@ def boredom(staff):
         if v in dict_score:
             boredom_score += dict_score.get(v)
     return 'kill me now' if boredom_score <= 80 else 'i can handle this' if 80 < boredom_score < 100 else 'party time!!'
+
+# You have access to the ship "draft" and "crew".
+# "Draft" is the total ship weight and "crew" is the number of humans on the ship.
+# Each crew member adds 1.5 units to the ship draft. If after removing the weight
+# of the crew, the draft is still more than 20, then the ship is worth looting.
+# Any ship weighing that much must have a lot of booty!
