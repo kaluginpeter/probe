@@ -3055,3 +3055,6 @@ class Ship:
 # Return the total cost rounded to 2 decimal places.
 # Also you can guess that there will not be negative or non-numeric inputs.
 # Good Luck!
+def fuel_price(litres, price_per_liter):
+    discount = int(min(litres, 10)/2) * 5 / 100
+    return round((price_per_liter - discount) * litres, 2)
