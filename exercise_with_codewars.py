@@ -3058,3 +3058,6 @@ class Ship:
 def fuel_price(litres, price_per_liter):
     discount = int(min(litres, 10)/2) * 5 / 100
     return round((price_per_liter - discount) * litres, 2)
+
+# Given a string made up of letters a, b, and/or c, switch the position
+# of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
