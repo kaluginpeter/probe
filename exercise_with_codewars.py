@@ -2958,3 +2958,9 @@ def remove_rotten(bag_of_fruits):
 # Note that the phrase can also be written as "3.50" or "three fifty".
 def is_lock_ness_monster(string):
     return True in [i in string for i in ['tree fiddy', '3.50', 'three fifty']]
+
+# You task is to implement an simple interpreter for the notorious esoteric language HQ9+
+# that will work for a single character input:
+# If the input is 'H', return 'Hello World!'
+# If the input is 'Q', return the input
+# If the input is '9', return the full lyrics of 99 Bottles of Beer. It should be formatted like this:
