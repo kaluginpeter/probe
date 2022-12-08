@@ -3102,3 +3102,6 @@ def pythagorean_triple(integers):
 # "Burger Fries Chicken Pizza Pizza Pizza Sandwich Milkshake Milkshake Coke"
 # The kitchen staff expect the items to be in the same order as they appear in the menu.
 # The menu items are fairly simple, there is no overlap in the names of the items:
+def get_order(order):
+    menu = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke"]
+    return "".join([(i + " ") * order.count(i.lower()) for i in menu if i.lower() in order]).rstrip()
