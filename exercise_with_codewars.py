@@ -3128,3 +3128,7 @@ class Man(Human):
     pass
 class Woman(Human):
     pass
+
+# Make multiple functions that will return the sum,
+# difference, modulus, product, quotient, and the exponent respectively.
+# Please use the following function names:
