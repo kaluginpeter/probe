@@ -3070,3 +3070,5 @@ def switcheroo(string):
 # and adds 2 spaces between each letter (or special character)
 # to create this V A P O R W A V E effect.
 # Note that spaces should be ignored in this case.
+def vaporcode(s):
+    return '  '.join(i.upper() for i in s.replace(' ', ''))
