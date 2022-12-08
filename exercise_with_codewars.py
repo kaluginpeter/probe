@@ -3105,3 +3105,6 @@ def pythagorean_triple(integers):
 def get_order(order):
     menu = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke"]
     return "".join([(i + " ") * order.count(i.lower()) for i in menu if i.lower() in order]).rstrip()
+
+# Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+# (the dedicated builtin(s) functionalities are deactivated)
