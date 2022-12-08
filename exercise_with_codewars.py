@@ -3090,3 +3090,5 @@ def excluding_vat_price(price):
 # determine if it is possible to form a Pythagorean Triple using those 3 integers.
 # A Pythagorean Triple consists of arranging 3 integers, such that:
 # a2 + b2 = c2
+def pythagorean_triple(integers):
+    return sorted(integers)[0]**2 + sorted(integers)[1]**2 == sorted(integers)[2]**2
