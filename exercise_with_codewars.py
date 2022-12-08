@@ -3151,3 +3151,5 @@ def subt(a,b):
 # as strings and outputs a sequence of numbers.
 # ie:["1", "2", "3"] to [1, 2, 3]
 # Note that you can receive floats as well.
+def to_float_array(arr):
+    return list(map(float, arr))
