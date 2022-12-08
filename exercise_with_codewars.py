@@ -3085,3 +3085,8 @@ def _all(seq, fun):
 # Write a function that calculates the original product price, without VAT.
 def excluding_vat_price(price):
     return round(price - price / 115 * 15, 2) if price else -1
+
+# Given an unsorted array of 3 positive integers [ n1, n2, n3 ],
+# determine if it is possible to form a Pythagorean Triple using those 3 integers.
+# A Pythagorean Triple consists of arranging 3 integers, such that:
+# a2 + b2 = c2
