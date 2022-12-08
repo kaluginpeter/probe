@@ -3063,3 +3063,10 @@ def fuel_price(litres, price_per_liter):
 # of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
 def switcheroo(string):
     return string.replace('a', '-').replace('b', 'a').replace('-', 'b')
+
+# ASC Week 1 Challenge 4 (Medium #1)
+# Write a function that converts any sentence into a V A P O R W A V E sentence.
+# a V A P O R W A V E sentence converts all the letters into uppercase,
+# and adds 2 spaces between each letter (or special character)
+# to create this V A P O R W A V E effect.
+# Note that spaces should be ignored in this case.
