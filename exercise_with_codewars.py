@@ -3153,3 +3153,6 @@ def subt(a,b):
 # Note that you can receive floats as well.
 def to_float_array(arr):
     return list(map(float, arr))
+
+# Given a string made of digits [0-9], return a string where
+# each digit is repeated a number of times equals to its value.
