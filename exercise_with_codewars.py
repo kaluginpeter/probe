@@ -3174,3 +3174,5 @@ def disarium_number(number):
 # C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
 def cat_mouse(x):
     return 'Escaped!' if x.count('.') > 3 else 'Caught!'
+
+# Modify the kebabize function so that it converts a camel case string into a kebab case.
