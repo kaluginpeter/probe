@@ -3235,3 +3235,6 @@ def calculate(num1, operation, num2):
 # and then greets that name, capitalized and ends with an exclamation point.
 def greet(name):
     return f'Hello {name.title()}!'
+
+# In this first kata in the series, you need to define a Hero prototype
+# to be used in a terminal game. The hero should have the following attributes:
