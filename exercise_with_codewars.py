@@ -3172,3 +3172,5 @@ def disarium_number(number):
 # The cat can jump over three characters. So:
 # C.....m returns 'Escaped!' <-- more than three characters between
 # C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
+def cat_mouse(x):
+    return 'Escaped!' if x.count('.') > 3 else 'Caught!'
