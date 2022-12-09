@@ -3204,3 +3204,5 @@ def capitalize(s,ind):
 # So the result of function meeting(s) will be:
 # "(CORWILL, ALFRED)(CORWILL, FRED)(CORWILL, RAPHAEL)
 # (CORWILL, WILFRED)(TORNBULL, BARNEY)(TORNBULL, BETTY)(TORNBULL, BJON)"
+def meeting(s):
+    return ''.join(sorted('({1}, {0})'.format(*(x.split(':'))) for x in s.upper().split(';')))
