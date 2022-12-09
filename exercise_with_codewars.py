@@ -3165,3 +3165,10 @@ def explode(s):
 # Given a number, Find if it is Disarium or not .
 def disarium_number(number):
     return 'Disarium !!' if sum(int(i)**(int(j) + 1) for j, i in enumerate(str(number))) == number else 'Not !!'
+
+# You will be given a string (x) featuring a cat 'C' and a mouse 'm'.
+# The rest of the string will be made up of '.'.
+# You need to find out if the cat can catch the mouse from it's current position.
+# The cat can jump over three characters. So:
+# C.....m returns 'Escaped!' <-- more than three characters between
+# C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
