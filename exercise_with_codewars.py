@@ -3217,3 +3217,12 @@ def likes(names):
     elif 1 < len(names) < 4:
         return ', '.join(names[:-1]) + f" and {names[-1]} like this"
     return f"{'no one' if len(names) == 0 else names[0]} likes this"
+
+# Write a function called calculate that takes 3 values.
+# The first and third values are numbers. The second value is a character.
+# If the character is "+" , "-", "*", or "/", the function will
+# return the result of the corresponding mathematical function on the two numbers.
+# If the string is not one of the specified characters, the function should return
+# null (throw an ArgumentException in C#).
+# Keep in mind, you cannot divide by zero. If an attempt to divide by zero is made,
+# return null (throw an ArgumentException in C#)/(None in Python).
