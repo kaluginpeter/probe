@@ -3230,3 +3230,6 @@ def calculate(num1, operation, num2):
     dict = {'+': num1 + num2, '-': num1 - num2,
            '*': num1 * num2, '/': num1 / num2 if num1 !=0 and num2 !=0 else None}
     return dict[operation] if operation in dict else None
+
+# Write a method that takes one argument as name
+# and then greets that name, capitalized and ends with an exclamation point.
