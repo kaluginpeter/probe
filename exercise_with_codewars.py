@@ -3163,3 +3163,5 @@ def explode(s):
 # with their respective positions is equal to the number itself.
 # Task
 # Given a number, Find if it is Disarium or not .
+def disarium_number(number):
+    return 'Disarium !!' if sum(int(i)**(int(j) + 1) for j, i in enumerate(str(number))) == number else 'Not !!'
