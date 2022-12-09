@@ -3176,3 +3176,6 @@ def cat_mouse(x):
     return 'Escaped!' if x.count('.') > 3 else 'Caught!'
 
 # Modify the kebabize function so that it converts a camel case string into a kebab case.
+import re
+def kebabize(string):
+    return '-'.join(re.split('(?<=.)(?=[A-Z])', re.sub(r'[0-9]+', '', string))).lower()
