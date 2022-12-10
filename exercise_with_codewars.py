@@ -3317,3 +3317,5 @@ def alternateCase(s):
 # containing the integers from the first argument to the second inclusive.
 # Input
 # Pair of integers greater than or equal to 0. The second argument will always be greater than or equal to the first.
+def generate_integers(m, n):
+    return [i for i in range(m,n+1)]
