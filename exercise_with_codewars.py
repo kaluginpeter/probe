@@ -3271,3 +3271,7 @@ def to_leet_speak(str):
             'N' : 'N',  'O': '0',  'P' : 'P',  'Q' : 'Q',  'R' : 'R',  'S' : '$',
             'T' : '7',  'U' : 'U',  'V' : 'V',  'W' : 'W',  'X' : 'X',  'Y' : 'Y',  'Z' : '2', ' ': ' '}
     return ''.join(dict[i] for i in str)
+
+# Given a string, write a function that returns the string
+# with a question mark ("?") appends to the end, unless the original
+# string ends with a question mark, in which case, returns the original string.
