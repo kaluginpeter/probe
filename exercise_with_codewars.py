@@ -3261,3 +3261,7 @@ def unlucky_days(year):
 def correct_polish_letters(st):
     dict = {'ą':'a', 'ć':'c', 'ę':'e', 'ł':'l', 'ń':'n', 'ó':'o', 'ś':'s', 'ź':'z', 'ż':'z'}
     return ''.join(dict[i] if i in dict else i for i in st)
+
+# Your task is to write a function toLeetSpeak that converts a regular english sentence to Leetspeak.
+#More about LeetSpeak You can read at wiki -> https://en.wikipedia.org/wiki/Leet
+# Consider only uppercase letters (no lowercase letters, no numbers) and spaces.
