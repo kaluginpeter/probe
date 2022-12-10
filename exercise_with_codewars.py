@@ -3250,3 +3250,6 @@ class Hero(object):
 # After your code executes the websites array should == ["codewars"]
 # The websites array has already been defined for you using the following code:
 websites.append("codewars")
+
+# Friday 13th or Black Friday is considered as unlucky day. Calculate how many unlucky days are in the given year.
+# Find the number of Friday 13th in the given year.
