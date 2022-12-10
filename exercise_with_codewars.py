@@ -3319,3 +3319,9 @@ def alternateCase(s):
 # Pair of integers greater than or equal to 0. The second argument will always be greater than or equal to the first.
 def generate_integers(m, n):
     return [i for i in range(m,n+1)]
+
+# Write a function
+# vowel_2_index
+# that takes in a string and replaces all the vowels [a,e,i,o,u]
+# with their respective positions within that string.
+# E.g:
