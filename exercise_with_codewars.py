@@ -3256,3 +3256,5 @@ websites.append("codewars")
 import calendar
 def unlucky_days(year):
 	return sum(calendar.weekday(year, m, 13) == 4 for m in range(1, 13))
+
+# There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
