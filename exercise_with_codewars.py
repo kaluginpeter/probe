@@ -3291,3 +3291,5 @@ def sort_my_string(s):
 # Notes:
 # return an empty array if your array is empty
 # arrays will only contain numbers so don't worry about checking that
+def incrementer(nums):
+    return [i+j+1 if i+j+1<10 else int(str(i+j+1)[-1]) for i,j in enumerate(nums)]
