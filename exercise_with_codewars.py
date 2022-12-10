@@ -3305,3 +3305,5 @@ def incrementer(nums):
 # by 1 while the value at position 2 is multiplied by 2.
 # Input will only contain lowercase characters and spaces.
 # Good luck!
+def name_value(my_list):
+    return [sum(ord(k)-96 if k.isalpha() else 0 for k in j) * (i+1) for i, j in enumerate(my_list)]
