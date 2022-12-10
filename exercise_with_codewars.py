@@ -3325,3 +3325,5 @@ def generate_integers(m, n):
 # that takes in a string and replaces all the vowels [a,e,i,o,u]
 # with their respective positions within that string.
 # E.g:
+def vowel_2_index(string):
+    return ''.join(str(i+1) if j.lower() in 'aeiou' else j for i, j in enumerate(string))
