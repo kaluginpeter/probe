@@ -3253,3 +3253,6 @@ websites.append("codewars")
 
 # Friday 13th or Black Friday is considered as unlucky day. Calculate how many unlucky days are in the given year.
 # Find the number of Friday 13th in the given year.
+import calendar
+def unlucky_days(year):
+	return sum(calendar.weekday(year, m, 13) == 4 for m in range(1, 13))
