@@ -3348,3 +3348,5 @@ def year_days(year):
 # Note: in case you don't get why this kata is about English beggars,
 # then you are not familiar on how religiously queues are taken in the kingdom ;)
 # Note 2: do not modify the input array.
+def beggars(values, n):
+    return [sum(values[i::n]) for i in range(n)]
