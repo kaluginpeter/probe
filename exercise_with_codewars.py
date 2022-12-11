@@ -3330,3 +3330,6 @@ def vowel_2_index(string):
 
 # A variation of determining leap years, assuming only integers are used and years can be negative and positive.
 # Write a function which will return the days in the year and the year entered in a string. For example:
+import calendar
+def year_days(year):
+    return f"{year} has {366 if calendar.isleap(abs(year)) else 365} days"
