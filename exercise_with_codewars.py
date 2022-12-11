@@ -3369,3 +3369,7 @@ def find_children(dancing_brigade):
 # an array of the first m multiples of the real number n. Assume that m is a positive integer.
 def multiples(m, n):
     return [i * n for i in range(1, m+1)]
+
+# Jumping number is the number that All adjacent digits in it differ by 1.
+# Task
+# Given a number, Find if it is Jumping or not .
