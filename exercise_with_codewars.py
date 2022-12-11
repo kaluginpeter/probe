@@ -3327,3 +3327,6 @@ def generate_integers(m, n):
 # E.g:
 def vowel_2_index(string):
     return ''.join(str(i+1) if j.lower() in 'aeiou' else j for i, j in enumerate(string))
+
+# A variation of determining leap years, assuming only integers are used and years can be negative and positive.
+# Write a function which will return the days in the year and the year entered in a string. For example:
