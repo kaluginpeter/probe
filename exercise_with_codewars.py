@@ -3387,3 +3387,5 @@ def jumping_number(number):
 # containing coefficients of the equations in the order (a, b, c).
 # Since there are infinitely many solutions to this problem, we fix a = 1.
 # Remember, the roots can be written like (x-x1) * (x-x2) = 0
+def quadratic(x1, x2):
+    return (1, -(x1 + x2), x1 * x2)
