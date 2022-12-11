@@ -3423,3 +3423,7 @@ rooms = {
 # The string output needs to be in the specific form - "X hour(s) and X minute(s)"
 def to_time(seconds):
     return f'{seconds//3600} hour(s) and {(seconds//60)%60} minute(s)'
+
+# Write a function to get the first element(s) of a sequence.
+# Passing a parameter n (default=1) will return the first n element(s) of the sequence.
+# If n == 0 return an empty sequence []
