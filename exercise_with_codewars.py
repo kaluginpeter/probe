@@ -3361,3 +3361,6 @@ def beggars(values, n):
 # -Function input: String contains only letters, uppercase letters are unique.
 # Task:
 # Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
+def find_children(dancing_brigade):
+    list = sorted(set([i.lower() for i in dancing_brigade]))
+    return ''.join(i.upper() + i * dancing_brigade.count(i) for i in list)
