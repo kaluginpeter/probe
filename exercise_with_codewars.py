@@ -3389,3 +3389,12 @@ def jumping_number(number):
 # Remember, the roots can be written like (x-x1) * (x-x2) = 0
 def quadratic(x1, x2):
     return (1, -(x1 + x2), x1 * x2)
+
+# Find the difference between the sum of the squares of the first n natural
+# numbers (1 <= n <= 100) and the square of their sum.
+# Example
+# For example, when n = 10:
+# The square of the sum of the numbers is:
+# (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)2 = 552 = 3025
+# The sum of the squares of the numbers is:
+# 12 + 22 + 32 + 42 + 52 + 62 + 72 + 82 + 92 + 102 = 385
