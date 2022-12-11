@@ -3364,3 +3364,6 @@ def beggars(values, n):
 def find_children(dancing_brigade):
     list = sorted(set([i.lower() for i in dancing_brigade]))
     return ''.join(i.upper() + i * dancing_brigade.count(i) for i in list)
+
+# Implement a function, multiples(m, n), which returns
+# an array of the first m multiples of the real number n. Assume that m is a positive integer.
