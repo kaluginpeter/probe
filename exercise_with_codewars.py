@@ -3525,3 +3525,6 @@ def string_transformer(s):
 
 # In this Kata, you will be given two strings a and b
 # and your task will be to return the characters that are not common in the two strings.
+def solve(a,b):
+    return ''.join(i if i not in b else '' for i in a) + ''.join(i if i not in a else '' for i in b)
+#set(a)^(set(b))
