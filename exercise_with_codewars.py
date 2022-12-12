@@ -3490,3 +3490,7 @@ def solve(arr):
         str = list(map(lambda x: x[0] == x[1], zip(str, range(1,len(str)+1))))
         output.append(str.count(True))
     return output
+
+# Find the length of the longest substring in the given string s that is the same in reverse.
+# As an example, if the input was “I like racecars that go fast”, the substring (racecar) length would be 7.
+# If the length of the input string is 0, the return value must be 0.
