@@ -3494,3 +3494,24 @@ def solve(arr):
 # Find the length of the longest substring in the given string s that is the same in reverse.
 # As an example, if the input was “I like racecars that go fast”, the substring (racecar) length would be 7.
 # If the length of the input string is 0, the return value must be 0.
+def longest_palindrome (s):
+    if(len(s) == 0):
+        return 0
+    results = set()
+    string_length = len(s)
+    for i, char in enumerate(s):
+        start, end = i-1, i+1
+        while start >=0 and end < string_length and s[start] == s[end]:
+            results.add(s[start:end+1])
+            start -= 1
+            end += 1
+        start, end = i, i + 1
+        while start >= 0 and end < string_length and s[start] == s[end]:
+            results.add(s[start:end+1])
+            start -= 1
+            end += 1
+    lst = sorted(list(results), key=len)
+    if(len(lst) == 0):
+        return 1
+    else:
+        return len(lst[-1])
