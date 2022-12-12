@@ -3476,3 +3476,10 @@ def compare(s1,s2):
 # Then, it has to print out an expression (like 28x^7). "^1" should not be truncated when exponent = 2.
 def derive(coefficient, exponent):
     return f"{coefficient*exponent}x^{exponent-1 if exponent >2 else exponent}"
+
+# Consider the word "abode". We can see that the letter a is in position 1
+# and b is in position 2. In the alphabet, a and b are also in positions 1 and 2.
+# Notice also that d and e in abode occupy the positions they would occupy in the alphabet,
+# which are positions 4 and 5.
+# Given an array of words, return an array of the number of letters that occupy their
+# positions in the alphabet for each word.
