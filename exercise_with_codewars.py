@@ -3541,3 +3541,7 @@ def say_hello(name, city, state):
 # A simple example is 3, 6, 9, 12, 15, 18, 21, ..., where the pattern is: "add 3 to the previous term".
 # In this kata, we will be using a more complicated sequence: 0, 1, 3, 6, 10, 15, 21, 28,
 # ... This sequence is generated with the pattern: "the nth term is the sum of numbers from 0 to n, inclusive".
+def sum_of_n(n):
+    if n < 0:
+        return sorted([sum(x for x in range(i,1)) for i in range(n, 1)])[::-1]
+    return [sum([x for x in range(i+1)]) for i in range(n+1)]
