@@ -3455,3 +3455,9 @@ def fold_to(distance):
 # our job is to figure out the original price.
 def discover_original_price(discounted_price, sale_percentage):
     return round(discounted_price / (100 - sale_percentage) * 100, 2)
+
+# Compare two strings by comparing the sum of their values (ASCII character code).
+# For comparing treat all letters as UpperCase
+# null/NULL/Nil/None should be treated as empty strings
+# If the string contains other characters than letters, treat the whole string as it would be empty
+# Your method should return true, if the strings are equal and false if they are not equal.
