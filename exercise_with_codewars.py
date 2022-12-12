@@ -3483,3 +3483,10 @@ def derive(coefficient, exponent):
 # which are positions 4 and 5.
 # Given an array of words, return an array of the number of letters that occupy their
 # positions in the alphabet for each word.
+def solve(arr):
+    output = []
+    for str in arr:
+        str = list(map(lambda x: ord(x.lower())-96, list(str)))
+        str = list(map(lambda x: x[0] == x[1], zip(str, range(1,len(str)+1))))
+        output.append(str.count(True))
+    return output
