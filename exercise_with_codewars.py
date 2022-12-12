@@ -3522,3 +3522,6 @@ def longest_palindrome (s):
 # Note: You will have to handle multiple spaces, and leading/trailing spaces.
 def string_transformer(s):
     return ' '.join(s.swapcase().split(' ')[::-1])
+
+# In this Kata, you will be given two strings a and b
+# and your task will be to return the characters that are not common in the two strings.
