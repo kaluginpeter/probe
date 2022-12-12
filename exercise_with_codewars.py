@@ -3453,3 +3453,5 @@ def fold_to(distance):
 # the return type must be of type decimal and the number must be rounded to two decimal places.
 # We will be given the sale price (discounted price), and the sale percentage,
 # our job is to figure out the original price.
+def discover_original_price(discounted_price, sale_percentage):
+    return round(discounted_price / (100 - sale_percentage) * 100, 2)
