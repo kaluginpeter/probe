@@ -3590,3 +3590,5 @@ def hydrate(drink_string):
 # Entries are always positive ints, higher than zero.
 # Farmer knows the total amount of sheep, this is a third parameter.
 # You need to return the amount of sheep lost (not returned to the farm) after final sheep counting on Saturday.
+def lost_sheep(friday,saturday,total):
+    return total - sum(friday + saturday)
