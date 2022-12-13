@@ -3602,3 +3602,5 @@ def lost_sheep(friday,saturday,total):
 # returning true if exactly one of the two expressions evaluate to true, false otherwise.
 def xor(a,b):
     return a != b
+
+# Create a function args_count, that returns the count of passed arguments
