@@ -3615,3 +3615,5 @@ def remove(s):
 
 # Two red beads are placed between every two blue beads.
 # There are N blue beads. After looking at the arrangement below work out the number of red beads.
+def count_red_beads(n):
+    return 0 if n < 2 else n*2-2
