@@ -3606,3 +3606,7 @@ def xor(a,b):
 # Create a function args_count, that returns the count of passed arguments
 def args_count(*args, **kwargs):
     return len(args) + len(kwargs)
+
+# Remove all exclamation marks from sentence but ensure a exclamation
+# mark at the end of string. For a beginner kata, you can assume that the
+# input data is always a non empty string, no need to verify it.
