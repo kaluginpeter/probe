@@ -3612,3 +3612,6 @@ def args_count(*args, **kwargs):
 # input data is always a non empty string, no need to verify it.
 def remove(s):
     return s.replace("!", "") + "!"
+
+# Two red beads are placed between every two blue beads.
+# There are N blue beads. After looking at the arrangement below work out the number of red beads.
