@@ -3570,3 +3570,7 @@ def evens_and_odds(n):
 # Array/list's numbers Will be mixture of positives and negatives also zeros_
 # Repetition of numbers in the array/list could occur.
 # The Maximum Gap is computed Regardless the sign.
+import numpy as np
+def max_gap(numbers):
+    numbers = np.array(sorted(numbers))
+    return np.max(numbers[1:]-numbers[:-1])
