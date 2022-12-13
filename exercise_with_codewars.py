@@ -3555,3 +3555,8 @@ def am_i_wilson(n):
     list = [5, 13, 563, 5971, 558771, 1964215, 8121909,
             12326713, 23025711, 26921605, 341569806, 399292158]
     return n in list
+
+# This kata is about converting numbers to their binary or hexadecimal representation:
+# If a number is even, convert it to binary.
+# If a number is odd, convert it to hex.
+# Numbers will be positive. The hexadecimal string should be lowercased.
