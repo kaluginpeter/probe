@@ -3668,3 +3668,11 @@ def potatoes(p0, w0, p1):
 # 5
 # Your job is to implement these functions in your given language.
 # Make sure it doesn't edit the array; that would cause problems! Here's a cheat sheet:
+def head(lst):
+    return lst[0]
+def tail(lst):
+    return lst[1:]
+def init(lst):
+    return lst[:-1]
+def last(lst):
+    return lst[-1]
