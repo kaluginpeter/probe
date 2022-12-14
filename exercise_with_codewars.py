@@ -3890,4 +3890,6 @@ def maze_runner(maze, directions):
 
 # Define a method/function that removes from a given array
 # of integers all the values contained in a second array.
-
+class List(object):
+    def remove_(self, integer_list, values_list):
+        return [i for i in integer_list if i not in values_list]
