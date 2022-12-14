@@ -3630,3 +3630,5 @@ def divisible_by_three(st):
         if s < 0:
             return False
     return True
+
+# Teach snoopy and scooby doo how to bark using object methods. Currently only snoopy can bark and not scooby doo.
