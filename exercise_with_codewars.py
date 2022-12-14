@@ -3692,3 +3692,10 @@ def meeting(rooms):
 # To avoid any fights you need to distribute the money fairly. That's where this Kata comes in.
 # Kata Task
 # Given the start and end letterbox numbers, write a method to return the frequency of all 10 digits painted.
+def paint_letterboxes(start, finish):
+    squad = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in range(start,finish+1):
+        while i != 0:
+            squad[i % 10]+=1
+            i //= 10
+    return squad
