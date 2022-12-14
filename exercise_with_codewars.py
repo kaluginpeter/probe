@@ -3795,3 +3795,7 @@ def logical_calc(array, op):
         return any(array)
     elif op == "XOR":
         return reduce(lambda x, y: x ^ y, array)
+
+# In this kata, you will do addition and subtraction on a given string. The return value must be also a string.
+# Note: the input will not be empty.
+
