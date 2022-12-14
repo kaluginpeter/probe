@@ -3764,3 +3764,7 @@ def seven_ate9(str_):
 # Vowels are any of aeiou.
 # Good luck!
 # If you like substring Katas, please try:
+import re
+def solve(s):
+    matches = re.findall('[aeiou]+', s)
+    return max(list(map(len, matches)))
