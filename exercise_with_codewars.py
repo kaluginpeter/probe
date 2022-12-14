@@ -3787,3 +3787,11 @@ def ip_to_int32(ip):
 
 # Given an array of Boolean values and a logical operator,
 # return a Boolean result based on sequentially applying the operator to the values in the array.
+from functools import reduce
+def logical_calc(array, op):
+    if op == "AND":
+        return all(array)
+    elif op == "OR":
+        return any(array)
+    elif op == "XOR":
+        return reduce(lambda x, y: x ^ y, array)
