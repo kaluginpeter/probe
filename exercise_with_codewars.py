@@ -3846,5 +3846,12 @@ class Block:
 # order (letters and digits - more precisely sorted by codepoint);
 # the different groups will be separated by '/'. See examples and "Example Tests".
 # Hopefully other examples can make this clearer.
-
+def mix(s1, s2):
+    dictionary = {}
+    for ch in "abcdefghijklmnopqrstuvwxyz":
+        val1, val2 = s1.count(ch), s2.count(ch)
+        if max(val1, val2) > 1:
+            which = "1" if val1 > val2 else "2" if val2 > val1 else "="
+            dictionary[ch] = (-max(val1, val2), which + ":" + ch * max(val1, val2))
+    return "/".join(dictionary[ch][1] for ch in sorted(dictionary, key=lambda x: dictionary[x]))
 
