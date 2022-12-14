@@ -3750,3 +3750,5 @@ def new_avg(arr, newavg):
 # The result should also be ordered from highest to lowest.
 def two_highest(arg1):
     return sorted(set(arg1), reverse=True)[:2]
+
+# Write a function that removes every lone 9 that is inbetween 7s.
