@@ -3888,3 +3888,6 @@ def maze_runner(maze, directions):
         if maze[startY][startX] == 3: return "Finish"
     return "Lost"
 
+# Define a method/function that removes from a given array
+# of integers all the values contained in a second array.
+
