@@ -3784,3 +3784,6 @@ def ip_to_int32(ip):
         b = bin(int(part))[2:]
         res += "%08d" % (int(b))
     return(int(res, 2))
+
+# Given an array of Boolean values and a logical operator,
+# return a Boolean result based on sequentially applying the operator to the values in the array.
