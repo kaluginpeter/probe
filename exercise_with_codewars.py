@@ -3862,4 +3862,7 @@ def mix(s1, s2):
 # cycleLength - Integer representing the length of the cycle in days
 # Return true if the number of days passed from last to today
 # is greater than cycleLength. Otherwise, return false.
+from datetime import *
+def period_is_late(last, today, cycle_length):
+    return last + timedelta(days = cycle_length) < today
 
