@@ -3778,3 +3778,9 @@ def solve(s):
 # So 128.32.10.1 == 10000000.00100000.00001010.00000001
 # Because the above IP address has 32 bits, we can represent it as the 32 bit number: 2149583361.
 # Write a function ip_to_int32(ip) ( JS: ipToInt32(ip) ) that takes an IPv4 address and returns a 32 bit number.
+def ip_to_int32(ip):
+    res = ''
+    for part in ip.split('.'):
+        b = bin(int(part))[2:]
+        res += "%08d" % (int(b))
+    return(int(res, 2))
