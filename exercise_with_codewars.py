@@ -3737,3 +3737,10 @@ class Guesser:
 # Notes:
 # all donations and navg are numbers (integers or floats), arr can be empty.
 # See examples below and "Sample Tests" to see which return is to be done.
+from math import ceil
+def new_avg(arr, newavg):
+    ndon = float(newavg) * (len(arr) + 1) - sum(arr)
+    if ndon >= 0:
+        return ceil(ndon)
+    else:
+        raise ValueError('Negative number found')
