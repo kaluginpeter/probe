@@ -3706,3 +3706,15 @@ def paint_letterboxes(start, finish):
 # If the user guess is right it should return true.
 # If the user guess is wrong it should return false and lose a life.
 # Can you finish the game so all the rules are met?
+class Guesser:
+    def __init__(self, number, lives):
+        self.number = number
+        self.lives = lives
+
+    def guess(self, n):
+        if self.lives < 1:
+            raise 'Too many guesses!'
+        if self.number == n:
+            return True
+        self.lives -= 1
+        return False
