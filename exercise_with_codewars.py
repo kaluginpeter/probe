@@ -3918,3 +3918,6 @@ def shorter_reverse_longer(a, b):
     if len(a) < len(b):
         return f'{a}{b[::-1]}{a}'
     return f'{b}{a[::-1]}{b}'
+
+# Complete the function to find the count of the most frequent item of an array.
+# You can assume that input is an array of integers. For an empty array return 0
