@@ -3989,3 +3989,5 @@ def seven(m):
 # tuples or a structin C - C: see Examples test Cases - )
 # Each part will be in a string
 # Elements of a pair must be in the same order as in the original array.
+def partlist(arr):
+    return [(" ".join(arr[:i]), " ".join(arr[i:])) for i in range(1, len(arr))]
