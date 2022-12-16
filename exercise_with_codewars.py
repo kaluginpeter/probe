@@ -3967,3 +3967,11 @@ def check_three_and_two(array):
     if max(count_letter.values()) == 3 and min(count_letter.values()) == 2:
         return True
     return False
+
+# Your task is to return to the function seven(m)
+# (m integer >= 0) an array (or a pair, depending on the language)
+# of numbers, the first being the last number m with at most 2 digits
+# obtained by your function (this last m will be divisible or not by 7),
+# the second one being the number of steps to get the result.
+# Forth Note:
+# Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
