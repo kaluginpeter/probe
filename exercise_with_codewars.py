@@ -3975,3 +3975,10 @@ def check_three_and_two(array):
 # the second one being the number of steps to get the result.
 # Forth Note:
 # Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
+def seven(m):
+    steps = 0
+    while True:
+        if m < 100:
+            return (m, steps)
+        m = m // 10 - 2 * (m % 10)
+        steps += 1
