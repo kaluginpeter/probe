@@ -3899,3 +3899,6 @@ class List(object):
 # The format should be "KEY = VALUE". Each key/value pair should be separated by a comma except for the last pair.
 def solution(pairs):
     return ",".join(sorted(["{} = {}".format(k,v) for k,v in pairs.items()]))
+
+# Complete the solution so that it returns a formatted string.
+# The return value should equal "Value is VALUE" where value is a 5 digit padded number.
