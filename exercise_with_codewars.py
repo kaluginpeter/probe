@@ -3907,3 +3907,5 @@ def solution(value):
     return 'Value is ' + '0'*(5-len(value)) + value
 
 # Write a function that returns the number of occurrences of an element in an array.
+def number_of_occurrences(element, sample):
+    return sample.count(element)
