@@ -3956,3 +3956,6 @@ def average(array):
 # You can assume that the number is not negative.
 def reverse_bits(n):
     return int(str(bin(n).replace("0b", ""))[::-1], 2)
+
+# Given an array with exactly 5 strings "a", "b" or "c" (chars in Java, characters in Fortran),
+# check if the array contains three and two of the same values.
