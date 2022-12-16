@@ -3905,3 +3905,5 @@ def solution(pairs):
 def solution(value):
     value = str(value)
     return 'Value is ' + '0'*(5-len(value)) + value
+
+# Write a function that returns the number of occurrences of an element in an array.
