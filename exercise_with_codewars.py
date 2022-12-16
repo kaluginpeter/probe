@@ -3943,3 +3943,7 @@ def most_frequent_item_count(collection):
 def validate_hello(greetings):
     hellos = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc']
     return any(greet in greetings.lower() for greet in hellos)
+
+# Create a function that returns the average of an array of numbers ("scores"),
+# rounded to the nearest whole number. You are not allowed to use any loops
+# (including for, for/in, while, and do/while loops).
