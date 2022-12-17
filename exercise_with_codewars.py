@@ -4056,3 +4056,10 @@ def solve(s):
     elif ch.isdigit(): num += 1
     else: sp += 1
   return [uc, lc, num, sp]
+
+# Given an array/list [] of integers , Construct a product array Of same size
+# Such That prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
+# Notes
+# Array/list size is at least 2 .
+# Array/list's numbers Will be only Positives
+# Repetition of numbers in the array/list could occur.
