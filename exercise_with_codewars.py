@@ -4048,3 +4048,11 @@ def get_min_max(seq):
 # In this Kata, you will be given a string and your task will
 # be to return a list of ints detailing the count of uppercase letters,
 # lowercase, numbers and special characters, as follows.
+def solve(s):
+  uc, lc, num, sp = 0, 0, 0, 0
+  for ch in s:
+    if ch.isupper(): uc += 1
+    elif ch.islower(): lc += 1
+    elif ch.isdigit(): num += 1
+    else: sp += 1
+  return [uc, lc, num, sp]
