@@ -4087,3 +4087,5 @@ def even_last(numbers):
         numbers = [num for i, num in enumerate(numbers) if i % 2 ==0]
         total = sum(numbers) * last
     return total
+
+# When provided with a String, capitalize all vowels
