@@ -4040,3 +4040,5 @@ def alias_gen(f_name, l_name):
         return '{} {}'.format(FIRST_NAME[f_name[0].upper()], SURNAME[l_name[0].upper()])
     else:
         return 'Your name must start with a letter from A - Z.'
+
+# Implement a function that returns the minimal and the maximal value of a list (in this order).
