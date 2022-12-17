@@ -4042,3 +4042,5 @@ def alias_gen(f_name, l_name):
         return 'Your name must start with a letter from A - Z.'
 
 # Implement a function that returns the minimal and the maximal value of a list (in this order).
+def get_min_max(seq):
+    return (min(seq), max(seq))
