@@ -4073,3 +4073,5 @@ def product_array(numbers):
 # there is also an element n - 1 or n + 1 in the array.
 # Write a function named isNice / IsNice that returns true if its array argument is a Nice array,
 # else false.An empty array is not considered nice.
+def is_nice(arr):
+    return all(i+1 in arr or i-1 in arr for i in arr) if arr else 0
