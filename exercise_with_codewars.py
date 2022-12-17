@@ -4075,3 +4075,8 @@ def product_array(numbers):
 # else false.An empty array is not considered nice.
 def is_nice(arr):
     return all(i+1 in arr or i-1 in arr for i in arr) if arr else 0
+
+# Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL),
+# multiplied by the integer at the last index.
+# Indices in sequence start from 0.
+# If the sequence is empty, you should return 0.
