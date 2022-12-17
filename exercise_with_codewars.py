@@ -4101,3 +4101,5 @@ def swap(st):
 # of units of merch they would like to buy. Your function should return
 # True if you have the merchandise in stock to complete the sale, otherwise it should return False.
 # Valid data will always be passed in and n will always be >= 1.
+def fillable(stock, merch, n):
+    return merch in stock and stock[merch] >= n
