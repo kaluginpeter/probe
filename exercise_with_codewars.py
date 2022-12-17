@@ -4006,3 +4006,5 @@ def is_vowel(s):
 # max = age + 0.10 * age
 # You should floor all your answers so that an integer is given instead
 # of a float (which doesn't represent age). Return your answer in the form [min]-[max]
+def dating_range(age):
+    return f"{int(age/2+7) if age > 14 else int(age - 0.10 * age)}-{int((age-7)*2) if age > 14 else int(age + 0.10 * age)}"
