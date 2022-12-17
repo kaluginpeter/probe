@@ -4089,3 +4089,5 @@ def even_last(numbers):
     return total
 
 # When provided with a String, capitalize all vowels
+def swap(st):
+    return ''.join(i.swapcase() if i in 'aeiou' else i for i in st)
