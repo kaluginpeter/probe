@@ -3991,3 +3991,6 @@ def seven(m):
 # Elements of a pair must be in the same order as in the original array.
 def partlist(arr):
     return [(" ".join(arr[:i]), " ".join(arr[i:])) for i in range(1, len(arr))]
+
+# Implement the function which should return true if given object
+# is a vowel (meaning a, e, i, o, u, uppercase or lowercase), and false otherwise.
