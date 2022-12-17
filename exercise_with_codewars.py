@@ -4068,3 +4068,8 @@ from functools import reduce
 def product_array(numbers):
     tot = reduce(mul,numbers)
     return [tot//n for n in numbers]
+
+# A Nice array is defined to be an array where for every value n in the array,
+# there is also an element n - 1 or n + 1 in the array.
+# Write a function named isNice / IsNice that returns true if its array argument is a Nice array,
+# else false.An empty array is not considered nice.
