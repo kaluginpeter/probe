@@ -4063,3 +4063,8 @@ def solve(s):
 # Array/list size is at least 2 .
 # Array/list's numbers Will be only Positives
 # Repetition of numbers in the array/list could occur.
+from operator import mul
+from functools import reduce
+def product_array(numbers):
+    tot = reduce(mul,numbers)
+    return [tot//n for n in numbers]
