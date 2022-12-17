@@ -4044,3 +4044,7 @@ def alias_gen(f_name, l_name):
 # Implement a function that returns the minimal and the maximal value of a list (in this order).
 def get_min_max(seq):
     return (min(seq), max(seq))
+
+# In this Kata, you will be given a string and your task will
+# be to return a list of ints detailing the count of uppercase letters,
+# lowercase, numbers and special characters, as follows.
