@@ -4161,3 +4161,6 @@ def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
 # It is guaranteed that a and b are both present in arr.
 def consecutive(arr, a, b):
     return arr.index(a) == arr.index(b)-1 or arr.index(a) == arr.index(b)+1
+
+# Write a function that takes a string and an an integer n as parameters
+# and returns a list of all words that are longer than n.
