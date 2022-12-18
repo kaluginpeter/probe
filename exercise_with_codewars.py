@@ -4154,3 +4154,8 @@ def filter_lucky(lst):
 # For example, guessBlue(5, 5, 2, 3) should return 0.6.
 def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
     return (blue_start-blue_pulled)/(blue_start-blue_pulled+red_start-red_pulled)
+
+# You are given a list of unique integers arr, and two integers a and b.
+# Your task is to find out whether or not a and b appear consecutively in arr,
+# and return a boolean value (True if a and b are consecutive, False otherwise).
+# It is guaranteed that a and b are both present in arr.
