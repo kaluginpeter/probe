@@ -4112,3 +4112,6 @@ def fillable(stock, merch, n):
 # of non space characters. Below are some examples of what the function should return:
 def valid_spacing(s):
     return ' '.join(s.split()) == s
+
+# Just a simple sorting usage. Create a function that returns
+# the elements of the input-array / list sorted in lexicographical order.
