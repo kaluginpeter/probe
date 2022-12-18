@@ -4110,3 +4110,5 @@ def fillable(stock, merch, n):
 # For this kata, the definition of valid spacing is one space between words,
 # and no leading or trailing spaces. Words can be any consecutive sequence
 # of non space characters. Below are some examples of what the function should return:
+def valid_spacing(s):
+    return ' '.join(s.split()) == s
