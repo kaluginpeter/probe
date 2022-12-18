@@ -4179,3 +4179,5 @@ def save(sizes, hd):
 
 # In this exercise, a string is passed to a method and a new string has
 # to be returned with the first character of each word in the string.
+def make_string(s):
+    return ''.join(i[0] for i in s.split())
