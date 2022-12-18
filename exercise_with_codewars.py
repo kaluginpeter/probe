@@ -4174,3 +4174,5 @@ def filter_long_words(sentence, n):
 # Capacity of the HD (0 <= c <= 500)
 # Output:
 # Number of files that can be fully saved in the HD.
+def save(sizes, hd):
+    return sum([sum(sizes[:i+1]) <= hd for i in range(len(sizes))])
