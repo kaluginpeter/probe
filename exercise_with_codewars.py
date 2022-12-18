@@ -4176,3 +4176,6 @@ def filter_long_words(sentence, n):
 # Number of files that can be fully saved in the HD.
 def save(sizes, hd):
     return sum([sum(sizes[:i+1]) <= hd for i in range(len(sizes))])
+
+# In this exercise, a string is passed to a method and a new string has
+# to be returned with the first character of each word in the string.
