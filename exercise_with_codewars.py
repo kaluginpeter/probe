@@ -4226,3 +4226,10 @@ def longest_word(string_of_words):
     return sorted(string_of_words.split(), key=len)[-1]
 
 # Given a year, Find The next happy year or The closest year You'll see your best friend
+def next_happy_year(year):
+    happy_year = False
+    while happy_year == False:
+        year += 1
+        if len(set(list(str(year)))) == 4:
+            happy_year = True
+    return year
