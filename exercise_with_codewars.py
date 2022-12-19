@@ -4216,3 +4216,5 @@ class Cube(object):
 # you have decided to write a function that will return the first n elements of the sequence with
 # the given common difference d and first element a. Note that the difference may be zero!
 # The result should be a string of numbers, separated by comma and space.
+def arithmetic_sequence_elements(a, d, n):
+	return ', '.join(str(a + i * d) for i in range(n))
