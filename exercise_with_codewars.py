@@ -4246,3 +4246,9 @@ def next_happy_year(year):
 # You know that the coordinates of the barycenter are given by the following formulas.
 def bar_triang(*args):
     return list(map(lambda a: round(sum(a) / 3.0, 4), zip(*args)))
+
+# You will be given an array of objects representing data about developers
+# who have signed up to attend the next coding meetup that you are organising.
+# Given the following input array:
+# write a function that when executed as findAdmin(list1, 'JavaScript')
+# returns only the JavaScript developers who are GitHub admins:
