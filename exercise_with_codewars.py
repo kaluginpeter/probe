@@ -4252,3 +4252,6 @@ def bar_triang(*args):
 # Given the following input array:
 # write a function that when executed as findAdmin(list1, 'JavaScript')
 # returns only the JavaScript developers who are GitHub admins:
+from typing import List
+def find_admin(lst, lang):
+    return [i for i in lst if i['language'] == lang and i['githubAdmin'] == 'yes']
