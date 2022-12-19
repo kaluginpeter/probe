@@ -4274,3 +4274,10 @@ def get_strings(city):
 # All numbers will be positive.
 # Numbers could occur more than once , (Duplications may exist).
 # Threshold K will always be reachable.
+def minimum_steps(numbers, value):
+    numbers = sorted(numbers)
+    count = 0
+    for i in range(len(numbers)):
+        count+=numbers[i]
+        if count >= value:
+            return i
