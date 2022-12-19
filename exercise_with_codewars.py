@@ -4189,3 +4189,6 @@ def make_string(s):
 import re
 def sum_of_integers_in_string(s):
     return sum([int(i) for i in re.findall(r'\d+', s)])
+
+# Write a function to greet a person. Function will take name as input
+# and greet the person by saying hello. Return null/nil/None if input is empty string or null/nil/None.
