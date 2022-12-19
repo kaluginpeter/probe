@@ -4258,3 +4258,11 @@ def find_admin(lst, lang):
 
 # You receive the name of a city as a string, and you need to return
 # a string that shows how many times each letter shows up in the string by using asterisks (*).
+def get_strings(city):
+    letters = {}
+    for letter in city:
+        if letter.lower() not in letters:
+            letters[letter.lower()] = 1
+        else:
+            letters[letter.lower()] += 1
+    return ",".join(key + ":" + "*"*value for key, value in letters.items() if key != " ")
