@@ -4255,3 +4255,6 @@ def bar_triang(*args):
 from typing import List
 def find_admin(lst, lang):
     return [i for i in lst if i['language'] == lang and i['githubAdmin'] == 'yes']
+
+# You receive the name of a city as a string, and you need to return
+# a string that shows how many times each letter shows up in the string by using asterisks (*).
