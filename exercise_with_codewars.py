@@ -4218,3 +4218,7 @@ class Cube(object):
 # The result should be a string of numbers, separated by comma and space.
 def arithmetic_sequence_elements(a, d, n):
 	return ', '.join(str(a + i * d) for i in range(n))
+
+# When given a string of space separated words, return the word with the longest length.
+# If there are multiple words with the longest length,
+# return the last instance of the word with the longest length.
