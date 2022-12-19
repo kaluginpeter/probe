@@ -4224,3 +4224,5 @@ def arithmetic_sequence_elements(a, d, n):
 # return the last instance of the word with the longest length.
 def longest_word(string_of_words):
     return sorted(string_of_words.split(), key=len)[-1]
+
+# Given a year, Find The next happy year or The closest year You'll see your best friend
