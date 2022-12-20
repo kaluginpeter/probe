@@ -4374,3 +4374,12 @@ def count_letters_and_digits(s):
 # If you do, return 'Clean', else return 'Cr@p'.
 # Watch out though - if your dog is out there ('D'), he gets very
 # touchy about being watched. If he is there you need to return 'Dog!!'.
+def crap(garden, bags, cap):
+    c = 0
+    for el in garden:
+        for e in el:
+            if e == "@":
+                c += 1
+            if e == "D":
+                return "Dog!!"
+    return "Clean" if c <= bags * cap else "Cr@p"
