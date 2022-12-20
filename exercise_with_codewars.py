@@ -4354,3 +4354,5 @@ def fly_by(lamps, drone):
 # Example: 2-horizontal scaling of s: => "aabbccdd\neeffgghh\niijjkkll\nmmnnoopp"
 # A v-vertical scaling of a string consists of replicating v times each part of the squared string.
 # Example: 2-vertical scaling of s: => "abcd\nabcd\nefgh\nefgh\nijkl\nijkl\nmnop\nmnop"
+def scale(strng, k, n):
+    return '\n'.join(''.join(b * k for b in a) for a in strng.split('\n') for _ in range(n)) if strng else ''
