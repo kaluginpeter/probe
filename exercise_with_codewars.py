@@ -4344,3 +4344,5 @@ def triple_x(s):
 # Anywhere the drone has flown, including its current position,
 # will result in the lamp at that position switching on.
 # Return the resulting lamps string. See example tests for more clarity.
+def fly_by(lamps, drone):
+    return 'o'*len(drone) + lamps[len(drone):] if len(drone) <= len(lamps) else 'o'*len(lamps)
