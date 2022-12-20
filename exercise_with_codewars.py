@@ -4356,3 +4356,7 @@ def fly_by(lamps, drone):
 # Example: 2-vertical scaling of s: => "abcd\nabcd\nefgh\nefgh\nijkl\nijkl\nmnop\nmnop"
 def scale(strng, k, n):
     return '\n'.join(''.join(b * k for b in a) for a in strng.split('\n') for _ in range(n)) if strng else ''
+
+# Bob is a lazy man.
+# He needs you to create a method that can determine how many
+# letters (both uppercase and lowercase ASCII letters) and digits are in a given string.
