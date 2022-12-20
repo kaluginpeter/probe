@@ -4310,3 +4310,9 @@ def extra_perfect(n):
 # Note that numbers written as strings are strings and must be sorted with the other strings.
 def db_sort(arr):
     return sorted([i for i in arr if type(i) == int]) + sorted([i for i in arr if type(i) == str])
+
+# Gordon Ramsay shouts. He shouts and swears. There may be something wrong with him.
+# Anyway, you will be given a string of four words. Your job is to turn them in to Gordon language.
+# Rules:
+# Obviously the words should be Caps, Every word should end with '!!!!',
+# Any letter 'a' or 'A' should become '@', Any other vowel should become '*'.
