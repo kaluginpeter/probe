@@ -4322,3 +4322,5 @@ def gordon(a):
 
 # Given two numbers x and n, calculate the (positive) nth root of x; this means that being r = result, r^n = x
 # Examples
+def root(x, n):
+    return x**(1/n)
