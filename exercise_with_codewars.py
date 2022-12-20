@@ -4294,3 +4294,5 @@ def solution(st, limit):
 # but one of them seems to be missing.
 # Write a function that accepts a sequence of unique integers between 0 and 9 (inclusive),
 # and returns the missing element.
+def get_missing_element(seq):
+    return [i for i in range(10) if i not in seq][0]
