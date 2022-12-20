@@ -4319,3 +4319,6 @@ def db_sort(arr):
 def gordon(a):
     trans = a.lower().maketrans({'a':'@', 'e':'*', 'o':'*','u':'*','i':'*'})
     return '!!!! '.join(a.translate(trans).upper().split()) + '!!!!'
+
+# Given two numbers x and n, calculate the (positive) nth root of x; this means that being r = result, r^n = x
+# Examples
