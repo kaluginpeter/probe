@@ -4360,3 +4360,5 @@ def scale(strng, k, n):
 # Bob is a lazy man.
 # He needs you to create a method that can determine how many
 # letters (both uppercase and lowercase ASCII letters) and digits are in a given string.
+def count_letters_and_digits(s):
+    return len([i for i in s if i.isdigit() or i.isalpha()])
