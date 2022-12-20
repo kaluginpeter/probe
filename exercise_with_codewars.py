@@ -4324,3 +4324,6 @@ def gordon(a):
 # Examples
 def root(x, n):
     return x**(1/n)
+
+# Given a string, return true if the first instance of "x"
+# in the string is immediately followed by the string "xx".
