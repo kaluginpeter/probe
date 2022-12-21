@@ -4396,3 +4396,6 @@ def elevator_distance(array):
 # separated with a single space (but no trailing spaces).
 # The keys of the preloaded dictionary are uppercase letters A-Z
 # and the values are predetermined words, for example:
+dictionary
+def make_backronym(acronym):
+    return ' '.join(dictionary[i.upper()] for i in acronym)
