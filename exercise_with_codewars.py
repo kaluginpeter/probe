@@ -4388,3 +4388,5 @@ def crap(garden, bags, cap):
 # then back up to the 8th floor. You have travelled a total of 3 + 6 = 9 floors of distance.
 # Given an array representing a series of floors you must reach by elevator,
 # return an integer representing the total distance travelled for visiting each floor in the array in order.
+def elevator_distance(array):
+    return sum([abs(array[i] - array[i+1]) for i in range(len(array)-1)])
