@@ -4475,3 +4475,6 @@ def find_all(array, n):
 # a=26, z=1 etc. You should also account for '!', '?' and ' ' that are represented by
 # '27', '28' and '29' respectively.
 # All inputs will be valid.
+def switcher(arr):
+    letters = ' ?!abcdefghijklmnopqrstuvwxyz'
+    return ''.join(letters[::-1][int(idx) - 1] for idx in arr)
