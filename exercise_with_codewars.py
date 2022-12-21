@@ -4428,3 +4428,12 @@ def movie(card, ticket, perc):
 # about developers who have signed up to attend the next coding meetup that you are organising.
 # Your task is to return an object which includes the count
 # of food options selected by the developers on the meetup sign-up form..
+from typing import List
+def order_food(lst):
+    meals = {}
+    for i in lst:
+        if i['meal'] not in meals:
+            meals[i['meal']] = 1
+        else:
+            meals[i['meal']] += 1
+    return meals
