@@ -4442,3 +4442,9 @@ def order_food(lst):
 # You are given a string of n lines, each substring being n characters long: For example:
 # s = "abcd\nefgh\nijkl\nmnop"
 # We will study some transformations of this square of strings.
+def vert_mirror(strng):
+    return '\n'.join(i[::-1] for i in strng.split('\n'))
+def hor_mirror(strng):
+    return '\n'.join(strng.split('\n')[::-1])
+def oper(fct, s):
+    return fct(s)
