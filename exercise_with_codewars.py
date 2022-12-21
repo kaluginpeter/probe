@@ -4413,3 +4413,13 @@ def make_backronym(acronym):
 # when rounded up to the next dollar, will be cheaper than System A.
 # The function movie has 3 parameters: card (price of the card), ticket (normal price of a ticket),
 # perc (fraction of what he paid for the previous ticket) and returns the first n such that
+import math
+def movie(card, ticket, perc):
+    total_card = card
+    total_tickets = 0
+    i = 1
+    while math.ceil(total_card) >= total_tickets:
+        total_card += ticket *(perc**i)
+        total_tickets += ticket
+        i += 1
+    return i - 1
