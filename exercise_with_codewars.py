@@ -4462,3 +4462,8 @@ def two_decimal_places(number):
 # Given a number determine if it special number or not .
 def special_number(n):
     return "Special!!" if max(str(n)) <= "5" else "NOT!!"
+
+# Given an array (a list in Python) of integers and an integer n, find all occurrences of n
+# in the given array and return another array containing all the index positions of n in the given array.
+# If n is not in the given array, return an empty array [].
+# Assume that n and all values in the given array will always be integers.
