@@ -4487,3 +4487,8 @@ def switcher(arr):
 # with the first and last letter, combined into one word (WITHOUT "The" in front), like this:
 # "alaska" -> "Alaskalaska"
 # Complete the function that takes a noun as a string, and returns her preferred band name written as a string.
+def band_name_generator(name):
+    name = name.lower()
+    if name[0] == name[-1]:
+        return (name[:-1] + name).capitalize()
+    return "The {}".format(name.capitalize())
