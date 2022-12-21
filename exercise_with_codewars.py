@@ -4467,3 +4467,5 @@ def special_number(n):
 # in the given array and return another array containing all the index positions of n in the given array.
 # If n is not in the given array, return an empty array [].
 # Assume that n and all values in the given array will always be integers.
+def find_all(array, n):
+    return [e for e,i in enumerate(array) if i == n]
