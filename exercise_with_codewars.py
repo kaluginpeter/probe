@@ -4558,3 +4558,5 @@ def broken(inp):
     return inp.translate(inp.maketrans({'0':'1', '1':'0'}))
 
 # Write a function that finds the sum of all its arguments.
+def sum_args(*args):
+    return sum([*args])
