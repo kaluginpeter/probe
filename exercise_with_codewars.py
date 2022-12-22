@@ -4602,3 +4602,8 @@ def find_screen_height(width, ratio):
 # if n is anything other than an integer or integer-formatted string (e.g. '123') that is >=0, throw a TypeError
 # When throwing a TypeError, the message should be n is invalid, where
 # you replace n for the actual value passed to the function.
+def prefill(n,v='undefined'):
+    if str(n).isdigit()==True:
+        return [v for _ in range(int(n))]
+    else:
+        raise TypeError('%s is invalid'%(n))
