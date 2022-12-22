@@ -4588,3 +4588,7 @@ def to_nato(words):
 # output the screen dimensions as a string written as WIDTHxHEIGHT.
 # Note: The calculated height should be represented as an integer.
 # If the height is fractional, truncate it.
+def find_screen_height(width, ratio):
+    lhs, rhs = list(map(int, ratio.split(':')))
+    height = int(width * rhs/lhs)
+    return str(width) + 'x' + str(height)
