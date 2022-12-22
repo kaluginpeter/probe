@@ -4520,3 +4520,12 @@ def num_primorial(n):
 # And, worse part of it, regrettably I won't get to hear non-native Italian speakers trying to pronounce it :(
 # So, if we are to start our Tribonacci sequence with [1, 1, 1] as a starting
 # input (AKA signature), we have this sequence:
+def tribonacci(signature, n):
+    if n == 0:
+        return []
+    def fib(n):
+        a, b, c = signature[0], signature[1], signature[2]
+        for _ in range(n):
+            yield a
+            a, b, c = b, c, a+b+c
+    return list(fib(n))
