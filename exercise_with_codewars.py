@@ -4492,3 +4492,9 @@ def band_name_generator(name):
     if name[0] == name[-1]:
         return (name[:-1] + name).capitalize()
     return "The {}".format(name.capitalize())
+
+# Is similar to factorial of a number, In primorial, not all the natural numbers get multiplied,
+# only prime numbers are multiplied to calculate the primorial of a number.
+# It's denoted with P# and it is the product of the first n prime numbers.
+# Task
+# Given a number N , calculate its primorial.
