@@ -4573,3 +4573,6 @@ def sum_args(*args):
 # Xray should not have a dash within.
 # Every word and punctuation mark should be seperated by a space ' '.
 # There should be no trailing whitespace
+NATO
+def to_nato(words):
+    return ' '.join(NATO[i.upper()] if i not in ',.!?' else i for i in words.replace(' ', ''))
