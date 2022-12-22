@@ -4624,3 +4624,19 @@ def prefill(n,v='undefined'):
 # belonging to each category of M and to sum their quantity according to each category.
 # For the lists L and M of example you have to return the
 # string (in Haskell/Clojure/Racket/Prolog a list of pairs):
+def stock_list(listOfArt, listofCat):
+	stock = {}
+	result=''
+	for a in listOfArt:
+		cat = a.split(' ')[0][0:1]
+		if stock.get(cat):
+			stock[cat]+= int(a.split(' ')[1])
+		else:
+			stock[cat] = int(a.split(' ')[1])
+	for c in listofCat:
+		if stock.get(c):
+			result+='({0} : {1}) - '.format(c, stock.get(c))
+		else:
+			result+='({0} : {1}) - '.format(c, 0)
+	if all(s == 0 for s in stock.values()): return ''
+	return result[0:len(result)-3] if result.endswith(' ') else result
