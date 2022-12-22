@@ -4556,3 +4556,5 @@ def find_missing_number(sequence):
 # Given a string of binary, return the version the photocopier gives you as a string.
 def broken(inp):
     return inp.translate(inp.maketrans({'0':'1', '1':'0'}))
+
+# Write a function that finds the sum of all its arguments.
