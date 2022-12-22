@@ -4538,3 +4538,14 @@ def tribonacci(signature, n):
 # 1 if there are any non-numeric elements in the input ("invalid", e.g. "1 2 a")
 # n if the elements are part of such a sequence, but some numbers are missing,
 # and n is the lowest of them ("broken", e.g. "1 2 4" or "1 5")
+def find_missing_number(sequence):
+    if not sequence:
+        return 0
+    try:
+        sequence = set(int(a) for a in sequence.split())
+    except ValueError:
+        return 1
+    for b in range(1, max(sequence) + 1):
+        if b not in sequence:
+            return b
+    return 0
