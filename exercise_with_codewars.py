@@ -4683,3 +4683,24 @@ def prev_mult_of_three(n):
 # zipcode:street and town,street and town,.../house number,house number,...
 # The street numbers must be in the same order as the streets where they belong.
 # If a given zipcode doesn't exist in the list of clients' addresses return "zipcode:/"
+def travel(r, zipcode):
+    l = r.split(',')
+    lst = []
+    l_n = []
+    con = ''
+    for elem in l:
+        if zipcode == elem[-8:]:
+            lst.append(elem[:-9])
+    for i in lst:
+        while True:
+            for char in i:
+                if char.isdigit():
+                    con += char
+                    continue
+                l_n.append(con)
+                con = ''
+                break
+            break
+    for i in range(len(lst)):
+        lst[i] = lst[i][len(l_n[i])+1:]
+    return f"{zipcode}:{','.join(i for i in lst)}/{','.join(i for i in l_n)}"
