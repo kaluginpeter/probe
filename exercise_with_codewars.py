@@ -4650,3 +4650,8 @@ def even_or_odd(s):
     a = sum(int(i) for i in s if int(i)%2 != 0)
     b = sum(int(i) for i in s if int(i)%2 == 0)
     return 'Even is greater than Odd' if b > a else 'Odd is greater than Even' if a>b else 'Even and Odd are the same'
+
+# Given two words and a letter, return a single word that's a combination of both words,
+# merged at the point where the given letter first appears in each word.
+# The returned word should have the beginning of the first word and the ending of the second,
+# with the dividing letter in the middle. You can assume both words will contain the dividing letter.
