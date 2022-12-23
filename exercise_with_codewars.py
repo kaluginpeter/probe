@@ -4657,3 +4657,8 @@ def even_or_odd(s):
 # with the dividing letter in the middle. You can assume both words will contain the dividing letter.
 def string_merge(string1, string2, letter):
     return string1[:string1.index(letter)] + string2[string2.index(letter):]
+
+# Given a positive integer n: 0 < n < 1e6,
+# remove the last digit until you're left with a number that is a multiple of three.
+# Return n if the input is already a multiple of three,
+# and if no such number exists, return null, a similar empty value, or -1.
