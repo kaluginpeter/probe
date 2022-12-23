@@ -4757,3 +4757,11 @@ def find_nb(M):
 # 3 friends go out together: A spends £20, B spends £15, and C spends £10.
 # The function should return an object/dict showing that A should receive £5,
 # B should receive £0, and C should pay £5.
+group = {
+    'A': 20,
+    'B': 15,
+    'C': 10
+}
+def split_the_bill(x):
+    total_each_owed = sum(x.values())/float(len(x))
+    return {key:round(value - total_each_owed, 2) for key, value in x.items()}
