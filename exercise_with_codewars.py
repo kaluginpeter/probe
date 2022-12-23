@@ -4655,3 +4655,5 @@ def even_or_odd(s):
 # merged at the point where the given letter first appears in each word.
 # The returned word should have the beginning of the first word and the ending of the second,
 # with the dividing letter in the middle. You can assume both words will contain the dividing letter.
+def string_merge(string1, string2, letter):
+    return string1[:string1.index(letter)] + string2[string2.index(letter):]
