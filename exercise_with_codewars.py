@@ -4732,3 +4732,12 @@ def oper(fct, s):
 # integer m and you have to return the integer n such
 # as n3+(n−1)3+(n−2)3+...+13=m n^3 + (n-1)^3 + (n-2)^3 + ... + 1^3 = mn
 # 3 +(n−1) 3 +(n−2) 3 +...+1 3 =m if such a n exists or -1 if there is no such n.
+def find_nb(M):
+    m = 0
+    i = 0
+    while m < M:
+        m += i ** 3
+        if m == M:
+            return i
+        i += 1
+    return -1
