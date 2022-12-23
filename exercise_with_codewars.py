@@ -4715,3 +4715,9 @@ def travel(r, zipcode):
 # with dots interspersed in order (hopefully) to better show the rotation when printed.
 # s = "abcd\nefgh\nijkl\nmnop" -->
 # "abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"
+def rot(strng):
+    return strng[::-1]
+def selfie_and_rot(strng):
+    return '\n'.join(i+'.'*len(i) for i in strng.split('\n')) + '\n' +'\n'.join('.'*len(i)+i[::-1] for i in strng.split('\n')[::-1])
+def oper(fct, s):
+    return fct(s)
