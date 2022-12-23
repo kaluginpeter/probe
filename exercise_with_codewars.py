@@ -4778,3 +4778,7 @@ def bingo(array):
     for elem in array:
         lst.append(string.ascii_lowercase[elem-1])
     return 'WIN' if all(i in lst for i in 'bingo') else 'LOSE'
+
+# Let's create some scrolling text!
+# Your task is to complete the function which takes a string,
+# and returns an array with all possible rotations of the given string, in uppercase.
