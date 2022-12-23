@@ -4811,3 +4811,5 @@ def wallpaper(l, w, h):
     if 0 in (l, w, h):
         return 'zero'
     return WORDS[int(ceil((((l * h) * 2 + (w * h) * 2) * 1.15) / 5.2))]
+
+# Count the number of exclamation marks and question marks, return the product.
