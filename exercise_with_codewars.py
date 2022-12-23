@@ -4772,3 +4772,9 @@ def split_the_bill(x):
 # Write a function where you will win the game if your numbers can spell "BINGO".
 # They do not need to be in the right order in the input array. Otherwise you will lose.
 # Your outputs should be "WIN" or "LOSE" respectively.
+import string
+def bingo(array):
+    lst = []
+    for elem in array:
+        lst.append(string.ascii_lowercase[elem-1])
+    return 'WIN' if all(i in lst for i in 'bingo') else 'LOSE'
