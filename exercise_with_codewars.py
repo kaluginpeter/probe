@@ -4704,3 +4704,14 @@ def travel(r, zipcode):
     for i in range(len(lst)):
         lst[i] = lst[i][len(l_n[i])+1:]
     return f"{zipcode}:{','.join(i for i in lst)}/{','.join(i for i in l_n)}"
+
+# You are given a string of n lines, each substring being n characters long: For example:
+# s = "abcd\nefgh\nijkl\nmnop"
+# We will study some transformations of this square of strings.
+# Clock rotation 180 degrees: rot
+# rot(s) => "ponm\nlkji\nhgfe\ndcba"
+# selfie_and_rot(s) (or selfieAndRot or selfie-and-rot)
+# It is initial string + string obtained by clock rotation 180 degrees
+# with dots interspersed in order (hopefully) to better show the rotation when printed.
+# s = "abcd\nefgh\nijkl\nmnop" -->
+# "abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"
