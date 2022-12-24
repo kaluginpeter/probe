@@ -4928,3 +4928,7 @@ def move_ten(st):
 # which will be passed two functions or lambdas. Ruby functions will
 # be passed, and should return, either a proc or a lambda.
 # Remember that the resulting composed function may be passed multiple arguments!
+def compose(f, g):
+    def wrapper(*args):
+        return f(g(*args))
+    return wrapper
