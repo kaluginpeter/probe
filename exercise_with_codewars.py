@@ -4839,3 +4839,8 @@ def well(arr):
 # Don't worry about other brackets like "[]" and "{}" as these will never appear.
 # There can be multiple parentheses.
 # The parentheses can be nested.
+import re
+def remove_parentheses(s):
+    while re.findall(r"\([^()]*\)", s):
+        s = re.sub(r"\([^()]*\)", "", s)
+    return s
