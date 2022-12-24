@@ -4883,3 +4883,7 @@ def tankvol(h, d, vt):
     cylinder_length = vt / (math.pi * (radius * radius))
     volume = cylinder_length * (((radius * radius) * math.acos((radius - h) / radius)) - ((radius - h) * math.sqrt((2 * radius * h) - (h * h))))
     return int(volume)
+
+# Given a list of integers values, your job is to return the sum of the values;
+# however, if the same integer value appears multiple times in the list,
+# you can only count it once in your sum.
