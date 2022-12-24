@@ -4828,3 +4828,14 @@ def well(arr):
     l = [j.lower() if type(j) == str else j for i in arr for j in i]
     con = l.count('good')
     return 'Fail!' if con == 0 else 'Publish!' if 1 <= con <= 2 else 'I smell a series!'
+
+# In this kata you are given a string for example:
+# "example(unwanted thing)example"
+# Your task is to remove everything inside the parentheses as well as the parentheses themselves.
+# The example above would return:
+# "exampleexample"
+# Notes
+# Other than parentheses only letters and spaces can occur in the string.
+# Don't worry about other brackets like "[]" and "{}" as these will never appear.
+# There can be multiple parentheses.
+# The parentheses can be nested.
