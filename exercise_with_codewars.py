@@ -4900,3 +4900,14 @@ def unique_sum(lst):
 # return the dictionary with all values equal to 0.
 # If a float is passed into the function, its value should be rounded down,
 # and the resulting dictionary should never contain fractions of a coin.
+def loose_change(cents):
+    d = {'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0}
+    if cents > 0:
+        d['Quarters'] = cents//25
+        cents = cents- 25*(cents//25)
+        d['Dimes'] = cents // 10
+        cents = cents-10*(cents//10)
+        d['Nickels'] = cents // 5
+        cents = cents-5*(cents//5)
+        d['Pennies'] = cents // 1
+    return d
