@@ -4887,3 +4887,5 @@ def tankvol(h, d, vt):
 # Given a list of integers values, your job is to return the sum of the values;
 # however, if the same integer value appears multiple times in the list,
 # you can only count it once in your sum.
+def unique_sum(lst):
+    return sum(set(lst)) if lst else None
