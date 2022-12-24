@@ -4877,3 +4877,9 @@ def is_lucky(n):
 # or null integers). You can assume that h <= d.
 # Could you calculate the remaining volume of the liquid? Your function
 # tankvol(h, d, vt) returns an integer which is the truncated result (e.g floor) of your float calculation.
+import math
+def tankvol(h, d, vt):
+    radius = d / 2
+    cylinder_length = vt / (math.pi * (radius * radius))
+    volume = cylinder_length * (((radius * radius) * math.acos((radius - h) / radius)) - ((radius - h) * math.sqrt((2 * radius * h) - (h * h))))
+    return int(volume)
