@@ -4844,3 +4844,7 @@ def remove_parentheses(s):
     while re.findall(r"\([^()]*\)", s):
         s = re.sub(r"\([^()]*\)", "", s)
     return s
+
+# Create the function consecutive(arr) that takes an array of integers
+# and return the minimum number of integers needed to make the contents
+# of arr consecutive from the lowest number to the highest number.
