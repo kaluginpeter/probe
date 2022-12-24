@@ -4911,3 +4911,7 @@ def loose_change(cents):
         cents = cents-5*(cents//5)
         d['Pennies'] = cents // 1
     return d
+
+# Move every letter in the provided string forward 10 letters through the alphabet.
+# If it goes past 'z', start again at 'a'.
+# Input will be a string with length > 0.
