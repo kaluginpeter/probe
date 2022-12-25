@@ -4953,3 +4953,11 @@ def solution(n,d):
 # other input provided (win). If your total is more than or equal to (win),
 # return 'Winner!'. Else return 'Loser!'.
 # All inputs will be in the correct format. Strings on tickets are not always the same length.
+def bingo(ticket,win):
+    count = 0
+    for i in ticket:
+        for j in i[0]:
+            if ord(j)==i[1]:
+                count += 1
+                break
+    return 'Winner!' if count >= win else 'Loser!'
