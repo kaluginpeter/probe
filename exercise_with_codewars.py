@@ -4932,3 +4932,8 @@ def compose(f, g):
     def wrapper(*args):
         return f(g(*args))
     return wrapper
+
+# Your job is to implement a function which returns the last D digits of an integer N as a list.
+# Special cases:
+# If D > (the number of digits of N), return all the digits.
+# If D <= 0, return an empty list.
