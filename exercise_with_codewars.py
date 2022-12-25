@@ -4997,4 +4997,8 @@ def prime_factors(n):
 # Note that the number will always be non-negative (>= 0).
 import re
 def insert_dash(num):
-    return re.sub(r'([13579])(?=[13579])', r'\1-', str(num))
+    return re.sub(r'([13579])(?=[13579])', r'\1-', str(num))\
+
+# Write a function that returns true if the number is a "Very Even" number.
+# If a number is a single digit, then it is simply "Very Even" if it itself is even.
+# If it has 2 or more digits, it is "Very Even" if the sum of its digits is "Very Even".
