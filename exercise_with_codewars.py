@@ -5070,3 +5070,6 @@ def get_ages(sum_, diff):
     if sum_ < 0 or diff < 0 or a < 0 or b < 0:
         return None
     return (b,a)
+
+# Create a function add(n)/Add(n) which returns a function that always adds n to any number
+# Note for Java: the return type and methods have not been provided to make it a bit more challenging.
