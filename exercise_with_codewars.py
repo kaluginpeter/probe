@@ -5064,3 +5064,9 @@ def thirt(n):
 # sum < 0
 # difference < 0
 # Either of the calculated ages come out to be negative
+def get_ages(sum_, diff):
+    a = (sum_ - diff)/2
+    b = sum_ - a
+    if sum_ < 0 or diff < 0 or a < 0 or b < 0:
+        return None
+    return (b,a)
