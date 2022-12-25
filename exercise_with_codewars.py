@@ -5046,3 +5046,15 @@ def find(s):
 # the second right most digit with the second left most digit of the number in the sequence.
 # The cycle goes on and you sum all these products. Repeat this process until
 # the sequence of sums is stationary.
+def thirt(n):
+    pattern = [1, 10, 9, 12, 3, 4]
+    sum = 0
+    while True:
+        current_sum = 0
+        for index, digit in enumerate(str(n)[::-1]):
+            current_index = index % len(pattern)
+            current_sum += int(digit) * pattern[current_index]
+        if sum == current_sum:
+            return sum
+        sum = current_sum
+        n = current_sum
