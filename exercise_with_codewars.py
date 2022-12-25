@@ -5075,3 +5075,8 @@ def get_ages(sum_, diff):
 # Note for Java: the return type and methods have not been provided to make it a bit more challenging.
 def add(n):
     return lambda x: x + n
+
+# Write a program that outputs the top n elements from a list.
+# Example:
+# largest(2, [7,6,5,4,3,2,1])
+# => [6,7]
