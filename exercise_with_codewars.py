@@ -5019,3 +5019,9 @@ def is_very_even_number(n):
 # ex1 ~O~O~O~O P has 0 deaf rats
 # ex2 P O~ O~ ~O O~ has 1 deaf rat
 # ex3 ~O~O~O~OP~O~OO~ has 2 deaf rats
+import re
+def count_deaf_rats(town):
+    t = town.split('P')
+    return find(t[0]).count('O~') + find(t[1]).count('~O')
+def find(s):
+    return [''.join(j) for j in re.findall('(~O)|(O~)', s)]
