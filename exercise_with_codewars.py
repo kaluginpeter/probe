@@ -5080,3 +5080,5 @@ def add(n):
 # Example:
 # largest(2, [7,6,5,4,3,2,1])
 # => [6,7]
+def largest(n,xs):
+    return sorted(xs)[-n:]
