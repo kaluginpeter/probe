@@ -4937,3 +4937,5 @@ def compose(f, g):
 # Special cases:
 # If D > (the number of digits of N), return all the digits.
 # If D <= 0, return an empty list.
+def solution(n,d):
+    return [int(i) for i in str(n)[-d:]] if d > 0 else []
