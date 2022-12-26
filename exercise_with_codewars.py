@@ -5101,3 +5101,6 @@ def split_in_parts(s, part_length):
 # and 19 * 91 = 1729 --> the number that we started with.
 # Complete the function which tests if a positive integer n is Harshad number,
 # and returns True if the product of its digit sum and its digit sum reversed equals n; otherwise return False.
+def number_joy(n):
+    s = sum(int(i) for i in str(n))
+    return s * int(str(s)[::-1]) == n
