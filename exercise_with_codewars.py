@@ -5129,3 +5129,5 @@ def freq_seq(s, sep):
 # Once you have the located string you are finally going to multiply by it the
 # third provided parameter, which will also be an integer.
 # You are additionally required to add a hyphen in between each word.
+def modify_multiply(st, loc, num):
+    return '-'.join(st.split()[loc] for i in range(num))
