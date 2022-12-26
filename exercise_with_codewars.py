@@ -5104,3 +5104,12 @@ def split_in_parts(s, part_length):
 def number_joy(n):
     s = sum(int(i) for i in str(n))
     return s * int(str(s)[::-1]) == n
+
+# Nickname Generator
+# Write a function, nicknameGenerator that takes
+# a string name as an argument and returns the first 3 or 4 letters as a nickname.
+# If the 3rd letter is a consonant, return the first 3 letters.
+# nickname("Robert") //=> "Rob"
+# nickname("Kimberly") //=> "Kim"
+# nickname("Samantha") //=> "Sam"
+# If the 3rd letter is a vowel, return the first 4 letters.
