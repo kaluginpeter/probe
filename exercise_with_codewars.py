@@ -5085,3 +5085,8 @@ def largest(n,xs):
 
 # The aim of this kata is to split a given string into different strings
 # of equal size (note size of strings is passed to the method)
+def split_in_parts(s, part_length):
+    words = []
+    for i in range(0, len(s), part_length):
+        words.append(s[i:i+part_length])
+    return ' '.join(words)
