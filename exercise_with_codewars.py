@@ -5138,3 +5138,6 @@ def modify_multiply(st, loc, num):
 # So if an 'a' or an 'A' appears anywhere in the input string (any number of times),
 # set the first character of the output string to '1', otherwise to '0'.
 # if 'b' or 'B' appears in the string, set the second character to '1', and so on for the rest of the alphabet.
+def change(st):
+    alp = "abcdefghijklmnopqrstuvwxyz"
+    return "".join(["1" if c in st or c.upper() in st else "0" for c in alp]) if len(st) else "00000000000000000000000000"
