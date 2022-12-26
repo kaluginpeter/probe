@@ -5082,3 +5082,6 @@ def add(n):
 # => [6,7]
 def largest(n,xs):
     return sorted(xs)[-n:]
+
+# The aim of this kata is to split a given string into different strings
+# of equal size (note size of strings is passed to the method)
