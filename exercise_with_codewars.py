@@ -5113,3 +5113,5 @@ def number_joy(n):
 # nickname("Kimberly") //=> "Kim"
 # nickname("Samantha") //=> "Sam"
 # If the 3rd letter is a vowel, return the first 4 letters.
+def nickname_generator(name):
+    return "Error: Name too short" if len(name) < 4 else name[:3+(name[2] in "aeiuo")]
