@@ -5185,3 +5185,10 @@ def variance(town, strng):
 
 # Your task is to write a higher order function for chaining together a list of unary functions.
 # In other words, it should return a function that does a left fold on the given functions.
+def chained(functions):
+    def apply(param):
+        result = param
+        for f in functions:
+            result = f(result)
+        return result
+    return apply
