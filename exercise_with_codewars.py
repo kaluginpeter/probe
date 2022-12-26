@@ -5115,3 +5115,7 @@ def number_joy(n):
 # If the 3rd letter is a vowel, return the first 4 letters.
 def nickname_generator(name):
     return "Error: Name too short" if len(name) < 4 else name[:3+(name[2] in "aeiuo")]
+
+# Return an output string that translates an input string s/$s by
+# replacing each character in s/$s with a number representing
+# the number of times that character occurs in s/$s and separating each number with the character(s) sep/$sep.
