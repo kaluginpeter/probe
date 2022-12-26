@@ -5148,3 +5148,12 @@ def change(st):
 # the rest of keys should have a None (JS null)value. If there not enough keys, just ignore the rest of values.
 def createDict(keys, values):
     return {k:(values[e] if e<len(values) else None) for e,k in enumerate(keys)}
+
+# dataand data1 are two strings with rainfall records of a few cities for months from January
+# to December. The records of towns are separated by \n. The name of each town is followed by :.
+# data and towns can be seen in "Your Test Cases:".
+# Task:
+# function: mean(town, strng) should return the average of rainfall
+# for the city town and the strng data or data1 (In R and Julia this function is called avg).
+# function: variance(town, strng) should return the variance of rainfall
+# for the city town and the strng data or data1.
