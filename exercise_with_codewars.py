@@ -5141,3 +5141,8 @@ def modify_multiply(st, loc, num):
 def change(st):
     alp = "abcdefghijklmnopqrstuvwxyz"
     return "".join(["1" if c in st or c.upper() in st else "0" for c in alp]) if len(st) else "00000000000000000000000000"
+
+# There are two lists, possibly of different lengths. The first one consists of keys,
+# the second one consists of values. Write a function createDict(keys, values)
+# that returns a dictionary created from keys and values. If there are not enough values,
+# the rest of keys should have a None (JS null)value. If there not enough keys, just ignore the rest of values.
