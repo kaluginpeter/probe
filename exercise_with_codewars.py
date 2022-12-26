@@ -5182,3 +5182,6 @@ def variance(town, strng):
             squared_nums = [(x-mean)**2 for x in float_numbers]
             return sum(squared_nums)/(len(squared_nums))
     return -1
+
+# Your task is to write a higher order function for chaining together a list of unary functions.
+# In other words, it should return a function that does a left fold on the given functions.
