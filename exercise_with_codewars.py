@@ -5320,3 +5320,10 @@ def iter_pi(epsilon):
 def is_divisible(*args):
     l =[*args]
     return all(l[0] % i == 0 for i in l[1:])
+
+# Help Suzuki rake his garden!
+# The monastery has a magnificent Zen garden made of white gravel and rocks and it
+# is raked diligently everyday by the monks. Suzuki having a keen eye
+# is always on the lookout for anything creeping into the garden that must
+# be removed during the daily raking such as insects or moss.
+# You will be given a string representing the garden such as:
