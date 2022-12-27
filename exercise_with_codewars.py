@@ -5199,3 +5199,5 @@ Unscramble the eggs.
 # inserted directly after each consonant. You need to return the string before it became eggcoded.
 def unscramble_eggs(word):
     return word.replace('egg','')
+
+# Create function fib that returns n'th element of Fibonacci sequence (classic programming task).
