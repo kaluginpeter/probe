@@ -5327,3 +5327,6 @@ def is_divisible(*args):
 # is always on the lookout for anything creeping into the garden that must
 # be removed during the daily raking such as insects or moss.
 # You will be given a string representing the garden such as:
+VALID = {'gravel', 'rock'}
+def rake_garden(garden):
+    return ' '.join(a if a in VALID else 'gravel' for a in garden.split())
