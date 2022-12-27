@@ -5210,3 +5210,10 @@ def fibonacci(n: int) -> int:
 # In this Kata, you will be given an array of unique elements, and your task
 # is to rearrange the values so that the first max value is followed by the first minimum,
 # followed by second max value then second min value, etc.
+def solve(arr):
+    l = sorted(arr, reverse=True)
+    ls = []
+    for i in range(len(arr)//2+1):
+        ls.append(l[i])
+        ls.append(l[::-1][i])
+    return ls[:-2] if len(arr)%2 == 0 else ls[:-1]
