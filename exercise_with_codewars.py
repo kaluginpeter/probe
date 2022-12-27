@@ -5223,3 +5223,7 @@ def solve(arr):
 # starting from the beginning of the array.
 # After each removal the size of the string decreases (there is no empty space).
 # Return the only letter left.
+def last_survivor(letters, coords):
+    for i in coords:
+        letters = letters[:i] + letters[i+1:]
+    return letters
