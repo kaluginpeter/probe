@@ -5314,3 +5314,6 @@ def iter_pi(epsilon):
             my_pi += (1.0 / (count * 2 + 1)) * 4
         count += 1
     return [count, round(my_pi, 10)]
+
+# Create a function isDivisible(n,...) that checks if the first argument
+# n is divisible by all other arguments (return true if no other arguments)
