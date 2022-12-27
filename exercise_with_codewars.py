@@ -5260,3 +5260,15 @@ def caffeine_buzz(n):
 # You have to create a method, that corrects a given time string.
 # There was a problem in addition, so many of the time strings are broken.
 # Time is formatted using the 24-hour clock, so from 00:00:00 to 23:59:59.
+def time_correct(t):
+    if not t:
+        return t
+    try:
+        h, m, s = map(int, t.split(":"))
+        s = h * 3600 + m * 60 + s
+        _, s = divmod(s, 86400)
+        h, s = divmod(s, 3600)
+        m, s = divmod(s, 60)
+        return "{:02}:{:02}:{:02}".format(h, m, s)
+    except ValueError:
+        return None
