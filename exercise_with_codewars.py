@@ -5317,3 +5317,6 @@ def iter_pi(epsilon):
 
 # Create a function isDivisible(n,...) that checks if the first argument
 # n is divisible by all other arguments (return true if no other arguments)
+def is_divisible(*args):
+    l =[*args]
+    return all(l[0] % i == 0 for i in l[1:])
