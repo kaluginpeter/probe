@@ -5233,3 +5233,8 @@ def last_survivor(letters, coords):
 # a power of two is a number of the form 2n where n is an integer,
 # i.e. the result of exponentiation with number two as the base and integer n as the exponent.
 # You may assume the input is always valid.
+def power_of_two(n: int) -> list:
+    i = 2
+    while i < n:
+        i=i*2
+    return i == n if n!=1 else True
