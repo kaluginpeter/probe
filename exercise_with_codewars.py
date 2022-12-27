@@ -5303,3 +5303,14 @@ def multiples(s1,s2,s3):
 # on the language (See sample tests) with
 # your number of iterations
 # your approximation of PI with 10 decimals
+from math import pi
+def iter_pi(epsilon):
+    count = 1
+    my_pi = 4.0
+    while abs(pi - my_pi) > epsilon:
+        if count % 2:
+            my_pi -= (1.0 / (count * 2 + 1)) * 4
+        else:
+            my_pi += (1.0 / (count * 2 + 1)) * 4
+        count += 1
+    return [count, round(my_pi, 10)]
