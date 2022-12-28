@@ -5398,3 +5398,5 @@ def stanton_measure(arr):
 # In Python / Java / C / NASM / Haskell / the input will be a float.
 def is_negative_zero(n):
     return str(n) == '-0.0'
+
+# Our loose definition of Vampire Numbers can be described as follows:
