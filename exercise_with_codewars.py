@@ -5369,3 +5369,5 @@ def pendulum(values):
     right = sorted_values[1::2]
     left = sorted_values[2::2]
     return left[::-1] + mid + right
+
+# Sort the given array of strings in alphabetical order, case insensitive. For example:
