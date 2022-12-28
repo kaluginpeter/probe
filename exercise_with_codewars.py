@@ -5414,3 +5414,6 @@ def vampire_test(x, y):
 def pattern(n):
     OUTPUT = '1{}{}'.format
     return '\n'.join(OUTPUT('*' * a, a + 1 if a else '') for a in range(n))
+
+# The UK driving number is made up from the personal details of the driver. The individual letters
+# and digits can be code using the below information
