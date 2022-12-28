@@ -5411,3 +5411,6 @@ def vampire_test(x, y):
 # Note: There is no newline in the end (after the pattern ends)
 # Examples
 # pattern(3) should return "1\n1*2\n1**3", e.g. the following:
+def pattern(n):
+    OUTPUT = '1{}{}'.format
+    return '\n'.join(OUTPUT('*' * a, a + 1 if a else '') for a in range(n))
