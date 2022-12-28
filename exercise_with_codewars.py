@@ -5404,3 +5404,10 @@ def vampire_test(x, y):
     l = [i for i in str(x * y)]
     w = str(x) + str(y)
     return all(i in l for i in w) and len(w) == len(l)
+
+# Task
+# Using n as a parameter in the function pattern, where n>0,
+# \complete the codes to get the pattern (take the help of examples):
+# Note: There is no newline in the end (after the pattern ends)
+# Examples
+# pattern(3) should return "1\n1*2\n1**3", e.g. the following:
