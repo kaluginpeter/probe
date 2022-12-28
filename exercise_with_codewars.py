@@ -5396,3 +5396,5 @@ def stanton_measure(arr):
 # Write a function that returns true if the input number is -0 and false otherwise (True and False for Python).
 # In JavaScript / TypeScript / Coffeescript the input will be a number.
 # In Python / Java / C / NASM / Haskell / the input will be a float.
+def is_negative_zero(n):
+    return str(n) == '-0.0'
