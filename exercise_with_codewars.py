@@ -5446,3 +5446,9 @@ def driver(data):
 # Given the sum and gcd of two numbers, return those two numbers in ascending order.
 # If the numbers do not exist, return -1, (or NULL in C, tuple (-1,-1)
 # in C#, pair (-1,-1) in C++,None in Rust, array {-1,-1}  in Java and Golang).
+def solve(s,g):
+    for i in range(g, s+1, g):
+        remainder = s - i
+        if remainder % g == 0:
+            return (i, remainder)
+    return -1
