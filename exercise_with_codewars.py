@@ -5363,3 +5363,9 @@ def max_rot(n):
 # The Higher than smallest , goes to the right .
 # The Next higher number goes to the left of minimum number and So on ,
 # in a to-and-fro manner similar to that of a Pendulum.
+def pendulum(values):
+    sorted_values = sorted(values)
+    mid = [sorted_values [0]]
+    right = sorted_values[1::2]
+    left = sorted_values[2::2]
+    return left[::-1] + mid + right
