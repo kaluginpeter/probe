@@ -5391,3 +5391,8 @@ def even_chars(st):
 # in the array and 3 occurs 1 time.
 def stanton_measure(arr):
     return arr.count(arr.count(1))
+
+# There exist two zeroes: +0 (or just 0) and -0.
+# Write a function that returns true if the input number is -0 and false otherwise (True and False for Python).
+# In JavaScript / TypeScript / Coffeescript the input will be a number.
+# In Python / Java / C / NASM / Haskell / the input will be a float.
