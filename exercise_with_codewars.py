@@ -5442,3 +5442,7 @@ def driver(data):
         lic += "9"
     lic += "9AA"
     return lic.upper()
+
+# Given the sum and gcd of two numbers, return those two numbers in ascending order.
+# If the numbers do not exist, return -1, (or NULL in C, tuple (-1,-1)
+# in C#, pair (-1,-1) in C++,None in Rust, array {-1,-1}  in Java and Golang).
