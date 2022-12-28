@@ -5400,3 +5400,7 @@ def is_negative_zero(n):
     return str(n) == '-0.0'
 
 # Our loose definition of Vampire Numbers can be described as follows:
+def vampire_test(x, y):
+    l = [i for i in str(x * y)]
+    w = str(x) + str(y)
+    return all(i in l for i in w) and len(w) == len(l)
