@@ -5371,3 +5371,5 @@ def pendulum(values):
     return left[::-1] + mid + right
 
 # Sort the given array of strings in alphabetical order, case insensitive. For example:
+def sortme(words):
+    return sorted(words,key=lambda x: x.lower())
