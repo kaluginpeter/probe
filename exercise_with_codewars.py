@@ -5570,3 +5570,5 @@ def calc_type(a, b, res):
 # Create a single string with the characters and return it as a[1] while maintaining the original order.
 def mean(lst):
     return [sum(int(i) for i in lst if i.isdigit())/10, ''.join(j for j in lst if j.isalpha())]
+
+# Write reverseList function that simply reverses lists.
