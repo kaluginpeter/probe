@@ -5572,3 +5572,5 @@ def mean(lst):
     return [sum(int(i) for i in lst if i.isdigit())/10, ''.join(j for j in lst if j.isalpha())]
 
 # Write reverseList function that simply reverses lists.
+def reverse_list(lst):
+    return lst[::-1]
