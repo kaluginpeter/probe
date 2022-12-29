@@ -5462,3 +5462,9 @@ def generate_integers(n):
 
 # An element in an array is dominant if it is greater than all elements to its right.
 # You will be given an array and your task will be to return a list of all dominant elements. For example:
+def solve(arr):
+    l = []
+    for i in range(len(arr)):
+        if max(arr[i:]) == arr[i] and arr[i] not in l:
+            l.append(arr[i])
+    return l
