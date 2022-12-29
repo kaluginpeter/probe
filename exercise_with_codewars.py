@@ -5568,3 +5568,5 @@ def calc_type(a, b, res):
 # Return an array of length 2 with a[0] representing the mean of the ten
 # integers as a floating point number. There will always be 10 integers and 10 characters.
 # Create a single string with the characters and return it as a[1] while maintaining the original order.
+def mean(lst):
+    return [sum(int(i) for i in lst if i.isdigit())/10, ''.join(j for j in lst if j.isalpha())]
