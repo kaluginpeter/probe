@@ -5540,3 +5540,11 @@ def what_is_the_time(time_in_mirror):
     return ans
 
 # Remove all exclamation marks from sentence except at the end.
+def remove(s):
+    count = 0
+    j = s
+    while j.endswith('!'):
+        count += 1
+        j = j[:-1]
+    r = (len(s)-len(j))
+    return j.replace('!', '') + '!' * r
