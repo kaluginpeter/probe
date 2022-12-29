@@ -5459,3 +5459,6 @@ def solve(s,g):
 # n/$n can be any integer greater than or equal to 0.
 def generate_integers(n):
     return list(range(n + 1))
+
+# An element in an array is dominant if it is greater than all elements to its right.
+# You will be given an array and your task will be to return a list of all dominant elements. For example:
