@@ -5580,3 +5580,6 @@ def reverse_list(lst):
 # triangle with sides a, b, and c (x, y, z in COBOL). Heron 's formula:
 # s∗(s−a)∗(s−b)∗(s−c)\sqrt {s * (s - a) * (s - b) * (s - c)} s∗(s−a)∗(s−b)∗(s−c)
 # Output should have 2 digits precision.
+def heron(a, b, c):
+    i=(a+b+c)/2
+    return round((i*(i-a)*(i-b)*(i-c))**.5, 2)
