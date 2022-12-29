@@ -5499,3 +5499,5 @@ def initialize_names(name):
 # The function must return a multi-dimensional array containing four inner arrays
 # The final value in each inner array must be the actual value to be displayed
 # Values returned in the array must be of the type number
+def counter_effect(hit_count):
+    return [range(int(i)+1) for i in hit_count]
