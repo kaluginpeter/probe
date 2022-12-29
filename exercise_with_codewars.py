@@ -5538,3 +5538,5 @@ def what_is_the_time(time_in_mirror):
     else:
         ans += '0' + str(minute1)
     return ans
+
+# Remove all exclamation marks from sentence except at the end.
