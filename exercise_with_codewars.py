@@ -5608,3 +5608,8 @@ def find_children(santas_list, children):
 # and outputs the index at which the sole odd number is located.
 # This method should work with arrays with negative numbers. If there are
 # no odd numbers in the array, then the method should output -1.
+def odd_one(arr):
+    try:
+        return arr.index(max([i for i in arr if i%2!=0]))
+    except:
+        return -1
