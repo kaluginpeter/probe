@@ -5663,3 +5663,5 @@ def arr_check(arr):
 # Examples (input -> output)
 # "kata" -> false ('a' comes after 'k')
 # "ant" -> true (all characters are in alphabetical order)
+def alphabetic(s):
+    return s == "".join(sorted(s))
