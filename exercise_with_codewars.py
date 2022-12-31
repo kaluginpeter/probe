@@ -5841,3 +5841,5 @@ def game(n):
 # Return an array of the resulting objects.
 # All inputs will be arrays of numbers.
 # All character codes are valid lower case letters. The input array will not be empty.
+def num_obj(s):
+    return [{str(i) : chr(i)} for i in s]
