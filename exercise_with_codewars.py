@@ -5799,3 +5799,5 @@ def find_even_index(arr):
 
 # Remove words from the sentence if they contain exactly one exclamation mark.
 # Words are separated by a single space, without leading/trailing spaces.
+def remove(s):
+    return ' '.join(filter(lambda word: word.count('!') != 1, s.split(' ')))
