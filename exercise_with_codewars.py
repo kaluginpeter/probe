@@ -5746,3 +5746,18 @@ def solve(s):
 # result -> [0, 1, 3] no chairs free in room 0, take 1 from room 1, take 3 from room 2. no need to
 # consider room 3 as you have your 4 chairs already.
 # If you need no chairs, return "Game On". If there aren't enough spare chairs available, return "Not enough!".
+def meeting(rooms, need):
+    if need == 0:
+        return 'Game On'
+    count = []
+    for room in rooms:
+        if room[1] - len(room[0]) >0:
+            if room[1] - len(room[0]) >= need:
+                count.append(need)
+                return count
+            else:
+                count.append(room[1] - len(room[0]))
+                need -= room[1] - len(room[0])
+        else:
+            count.append(0)
+    return "Not enough!"
