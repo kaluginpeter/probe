@@ -5791,3 +5791,8 @@ def womens_age(n):
 # They both are equal to 0 when added. (Empty arrays are equal to 0 in this problem)
 # Index 0 is the place where the left side and right side are equal.
 # Note: Please remember that in most programming/scripting languages the index of an array starts at 0.
+def find_even_index(arr):
+    for i in range(len(arr)):
+        if sum(arr[:i]) == sum(arr[i+1:]):
+            return i
+    return -1
