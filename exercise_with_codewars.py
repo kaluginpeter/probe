@@ -5856,3 +5856,21 @@ def num_obj(s):
 # So this function should return the first pair of the two prime numbers spaced with a step of g between the
 # limits m, n if these g-steps prime numbers exist otherwise
 # nil or null or None or Nothing or [] or "0, 0" or {0, 0} or 0 0 or "" (depending on the language).
+def step(g, m, n):
+    prime_list = []
+    for num in range(m, n):
+        number_prime = isPrime(num)
+        prime_list.append(number_prime)
+        if number_prime == True:
+            if len(prime_list) > g:
+                if prime_list[num-g-m] == True:
+                    return [num-g, num]
+            else:
+                previous_prime = num
+def isPrime(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+        elif i*i > num:
+            return True
+    return True
