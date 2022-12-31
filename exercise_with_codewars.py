@@ -5768,3 +5768,7 @@ def meeting(rooms, need):
 # Your task is to translate the given age to the much desired 20 (or 21) years,
 # and indicate the number base, in the format specified below.
 # Note: input will be always > 21
+def womens_age(n):
+    base = n // 2
+    remainder = n % 2
+    return "{}? That's just {}, in base {}!".format(n, 20 + remainder, base)
