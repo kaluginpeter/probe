@@ -5702,3 +5702,13 @@ def sabb(s, value, happiness):
 # solve([0,1,2,3,'a','b']) = 0. Again, Even - Odd = 2 - 2 = 0. Ignore letters.
 # The input will be an array of lowercase letters and numbers only.
 # In some languages (Haskell, C++, and others), input will be an array of strings:
+def solve(a):
+    count_e = 0
+    count_o = 0
+    for elem in a:
+        if str(elem).isdigit():
+            if elem %2==0:
+                count_e += 1
+            elif elem %2!=0:
+                count_o += 1
+    return count_e - count_o
