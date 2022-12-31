@@ -5796,3 +5796,6 @@ def find_even_index(arr):
         if sum(arr[:i]) == sum(arr[i+1:]):
             return i
     return -1
+
+# Remove words from the sentence if they contain exactly one exclamation mark.
+# Words are separated by a single space, without leading/trailing spaces.
