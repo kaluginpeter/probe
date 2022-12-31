@@ -5727,3 +5727,5 @@ def length(head):
 
 # In this Kata, we will check if a string contains consecutive letters
 # as they appear in the English alphabet and if each letter occurs only once.
+def solve(s):
+    return "".join(sorted(s)) in "abcdefghijklmnopqrstuvwxyz"
