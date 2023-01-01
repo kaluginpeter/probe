@@ -5970,3 +5970,7 @@ def killer(suspect_info, dead):
 # the result of calling the given function/lambda with the given arguments.
 def spread(func, args):
     return func(*args)
+
+# Complete the function that takes an array of words.
+# You must concatenate the nth letter from each word to construct a new
+# word which should be returned as a string, where n is the position of the word in the list.
