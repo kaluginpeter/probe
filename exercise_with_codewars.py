@@ -6005,3 +6005,7 @@ class Dictionary():
 # The input for each function is the output of the previous function
 # (except the first function, which takes the starting value as its input).
 # Return the final value after execution is complete.
+def chain(init_val, functions):
+    for func in functions:
+        init_val = func(init_val)
+    return init_val
