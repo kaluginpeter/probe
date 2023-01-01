@@ -5918,3 +5918,10 @@ def riders(stations):
 
 # Remove all exclamation marks from the end of words. Words are separated by a
 # single space. There are no exclamation marks within a word.
+def remove(s):
+    l = []
+    for i in s.split():
+        while i.endswith('!'):
+            i = i[:-1]
+        l.append(i)
+    return ' '.join(l)
