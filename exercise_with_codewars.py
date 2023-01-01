@@ -5900,3 +5900,9 @@ def most_frequent_days(year):
             if days.count(day) == total:
                 result.append(day)
     return list(map(lambda x: names[x], result))
+
+# Kata Task
+# stations is a list/array of distances (miles) from one station to the next along the Pony Express route.
+# Implement the riders method/function, to return how many riders are necessary
+# to get the mail from one end to the other.
+# NOTE: Each rider travels as far as he can, but never more than 100 miles.
