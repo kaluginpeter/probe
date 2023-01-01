@@ -5930,3 +5930,13 @@ def remove(s):
 # duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
 # Note: numbers and their corresponding string representations should not
 # be treated as duplicates (i.e., "1" != 1).
+def duplicates(array):
+    l = []
+    d = []
+    for elem in array:
+        if elem not in l:
+            l.append(elem)
+            continue
+        elif elem in l and elem not in d:
+            d.append(elem)
+    return d
