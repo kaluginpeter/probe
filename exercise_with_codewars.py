@@ -5906,3 +5906,12 @@ def most_frequent_days(year):
 # Implement the riders method/function, to return how many riders are necessary
 # to get the mail from one end to the other.
 # NOTE: Each rider travels as far as he can, but never more than 100 miles.
+def riders(stations):
+	riders, travelled = 1, 0
+	for miles in stations:
+		if travelled + miles > 100:
+			riders += 1
+			travelled = miles
+		else:
+			travelled += miles
+	return riders
