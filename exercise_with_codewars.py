@@ -5887,3 +5887,16 @@ def isPrime(num):
 # Week starts on Monday.
 # Year is between 1583 and 4000.
 # Calendar is Gregorian.
+from datetime import date
+def most_frequent_days(year):
+    names = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    start = date(year,1,1).weekday()
+    end = date(year, 12, 31).weekday()
+    days = list(range(start, 7)) + list(range(0 ,end +1))
+    total = days.count(max(days,key=days.count))
+    result = []
+    for day in [0,1,2,3,4,5,6]:
+        if day in days:
+            if days.count(day) == total:
+                result.append(day)
+    return list(map(lambda x: names[x], result))
