@@ -5960,3 +5960,7 @@ def compute_depth(n):
 # Task.
 # Given a dictionary with all the names of the suspects and everyone that they have
 # seen on that day which may look like this:
+def killer(suspect_info, dead):
+    for k,v in suspect_info.items():
+        if all(i in v for i in dead):
+            return k
