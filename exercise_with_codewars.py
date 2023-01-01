@@ -5940,3 +5940,6 @@ def duplicates(array):
         elif elem in l and elem not in d:
             d.append(elem)
     return d
+
+# The depth of an integer n is defined to be how many multiples
+# of n it is necessary to compute before all 10 digits have appeared at least once in some multiple.
