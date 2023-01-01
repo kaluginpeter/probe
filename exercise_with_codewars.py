@@ -5943,3 +5943,13 @@ def duplicates(array):
 
 # The depth of an integer n is defined to be how many multiples
 # of n it is necessary to compute before all 10 digits have appeared at least once in some multiple.
+def compute_depth(n):
+    l = []
+    count = 1
+    while len(l)<10:
+        s = n*count
+        for i in str(s):
+            if i not in l:
+                l.append(i)
+        count+=1
+    return count-1
