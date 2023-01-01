@@ -5915,3 +5915,6 @@ def riders(stations):
 		else:
 			travelled += miles
 	return riders
+
+# Remove all exclamation marks from the end of words. Words are separated by a
+# single space. There are no exclamation marks within a word.
