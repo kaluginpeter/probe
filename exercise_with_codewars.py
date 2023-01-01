@@ -5983,3 +5983,18 @@ def nth_char(words):
     return word
 
 # In this kata, your job is to create a class Dictionary which you can add words to and their entries. Example:
+class Dictionary():
+    def __init__(self):
+        self.d = {}
+
+    def newentry(self, word, definition):
+        self.word = word
+        self.definition = definition
+        self.d[self.word] = self.definition
+
+    def look(self, key):
+        self.key = key
+        try:
+            return self.d[self.key]
+        except:
+            return f"Can't find entry for {self.key}"
