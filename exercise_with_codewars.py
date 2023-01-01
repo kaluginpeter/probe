@@ -5981,3 +5981,5 @@ def nth_char(words):
         word += words[i][i]
         i+=1
     return word
+
+# In this kata, your job is to create a class Dictionary which you can add words to and their entries. Example:
