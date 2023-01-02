@@ -6131,3 +6131,8 @@ def make_password(phrase):
 # In this kata, we want to sort the vowels in a special format.
 # Task
 # Write a function which takes a input string s and return a string in the following way:
+def sort_vowels(s):
+    try:
+        return '\n'.join(i+'|' if i.lower() not in 'aeoiu' else '|'+i for i in s)
+    except:
+        return ''
