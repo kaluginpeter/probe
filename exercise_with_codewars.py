@@ -6148,3 +6148,9 @@ def sort_vowels(s):
 # When the last vowel in the word is
 # a front vowel (e, é, i, í, ö, ő, ü, ű) the suffix is -nek
 # a back vowel (a, á, o, ó, u, ú) the suffix is -nak
+def dative(word):
+    for letter in word[::-1]:
+        if letter in "eéiíöőüű":
+            return word + "nek"
+        elif letter in "aáoóuú":
+            return word + "nak"
