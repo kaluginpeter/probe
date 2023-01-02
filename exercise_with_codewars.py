@@ -6079,3 +6079,12 @@ def fruit(reels, spins):
 # Well, guess what? You have to build a Xbonacci function that takes a signature of X elements -
 # and remember each next element is the sum of the last X elements -
 # and returns the first n elements of the so seeded sequence.
+def Xbonacci(signature,n):
+    result = signature[:]
+    for x in range(n-len(signature)):
+        current_fib = 0
+        start = len(result) - len(signature)
+        for y in result[start:]:
+            current_fib += y
+        result.append(current_fib)
+    return result[:n]
