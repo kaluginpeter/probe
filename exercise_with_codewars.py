@@ -6014,3 +6014,12 @@ def chain(init_val, functions):
 # (but not at beginning or end). The length of the strings, before and after the colon, are random.
 # Your job is to return a list of two strings
 # (in the same order as the original list), but with the characters after each colon swapped.
+def tail_swap(strings):
+    l = []
+    final = []
+    for i in strings:
+        for elem in i.split(':'):
+            l.append(elem)
+    final.append(l[0] + ':' + l[3])
+    final.append(l[2] + ':' + l[1])
+    return final
