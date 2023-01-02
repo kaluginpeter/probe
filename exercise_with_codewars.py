@@ -6126,3 +6126,8 @@ def make_password(phrase):
     d = {'i': '1', 'o': '0', 's':'5'}
     word = [i[0] for i in phrase.split()]
     return ''.join(d[i.lower()] if i.lower() in d else i for i in word)
+
+# Sort the Vowels!
+# In this kata, we want to sort the vowels in a special format.
+# Task
+# Write a function which takes a input string s and return a string in the following way:
