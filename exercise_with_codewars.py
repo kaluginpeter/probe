@@ -6163,3 +6163,6 @@ def dative(word):
 # It is necessary to write a function that takes a coordinate on the x-axis and y-axis
 # and returns a list of all the neighboring points. Points inside your returned list
 # need not be sorted (any order is valid).
+def cartesian_neighbor(x, y):
+    return [(x - 1, y - 1), (x - 1, y), (x - 1, y + 1), (x, y - 1), (x, y + 1), (x + 1, y - 1), (x + 1, y),
+            (x + 1, y + 1)]
