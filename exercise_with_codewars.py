@@ -6309,3 +6309,4 @@ def determineTime(arr):
 # The brute force approach would be to generate all the permutations of the
 # string and check each one of them whether it is a palindrome. However,
 # an optimized approach will not require this at all.
+permute_a_palindrome=lambda s:bool(len(list(filter(lambda x:x%2!=0,[s.count(char) for char in set(s)])))<2)
