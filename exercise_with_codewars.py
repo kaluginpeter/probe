@@ -6214,3 +6214,6 @@ def parse_html_color(color):
 # s  c  o  u  t
 # 19  3 15 21 20
 # Then we add to each obtained digit consecutive digits from the key. For example. In case of key equal to 1939 :
+def decode(code, key):
+    key=str(key)
+    return "".join([chr(code[i] +96 - int(key[i%len(key)])) for i in range(0, len(code))])
