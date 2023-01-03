@@ -6217,3 +6217,5 @@ def parse_html_color(color):
 def decode(code, key):
     key=str(key)
     return "".join([chr(code[i] +96 - int(key[i%len(key)])) for i in range(0, len(code))])
+
+# Write a program that, given a word, computes the scrabble score for that word.
