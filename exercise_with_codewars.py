@@ -6178,3 +6178,5 @@ def pofi(n):
 # Count how often sign changes in array.
 # result
 # number from 0 to ... . Empty array returns 0
+def catch_sign_change(lst):
+    return sum((x>=0)!=(y>=0) for x, y in zip(lst,lst[1:]))
