@@ -6189,3 +6189,6 @@ def catch_sign_change(lst):
 # using the same hashing algorithm and simply see if the password hashes are the same.
 # Create the function that converts a given string into an md5 hash. The return value
 # should be encoded in hexadecimal.
+from hashlib import md5
+def pass_hash(str):
+    return md5(str.encode()).hexdigest()
