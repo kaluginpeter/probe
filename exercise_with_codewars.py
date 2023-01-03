@@ -6174,3 +6174,7 @@ def cartesian_neighbor(x, y):
 # in its simplest form, as a string (answer may contain iii).
 def pofi(n):
     return ['1','i','-1','-i'][n % 4]
+
+# Count how often sign changes in array.
+# result
+# number from 0 to ... . Empty array returns 0
