@@ -6310,3 +6310,14 @@ def determineTime(arr):
 # string and check each one of them whether it is a palindrome. However,
 # an optimized approach will not require this at all.
 permute_a_palindrome=lambda s:bool(len(list(filter(lambda x:x%2!=0,[s.count(char) for char in set(s)])))<2)
+
+# Linked Lists - Get Nth
+# Implement a GetNth() function that takes a linked list and an integer
+# index and returns the node stored at the Nth index position. GetNth()
+# uses the C numbering convention that the first node is index 0, the second is index 1, ... and so on.
+# So for the list 42 -> 13 -> 666, GetNth(1) should return Node(13);
+# getNth(1 -> 2 -> 3 -> null, 0).data === 1
+# getNth(1 -> 2 -> 3 -> null, 1).data === 2
+# The index should be in the range [0..length-1]. If it is not,
+# or if the list is empty, GetNth() should throw/raise
+# an exception (ArgumentException in C#, InvalidArgumentException in PHP, Exception in Java).
