@@ -6275,3 +6275,11 @@ def scrabble_score(st):
 # Your return value will be a string containing the combination of Fizz, Buzz, Cuckoo,
 # and/or tick sounds that the clock needs to make at that time, separated by spaces.
 # Note that although the input is in 24-hour time, cuckoo clocks' cuckoos are in 12-hour time.
+def fizz_buzz_cuckoo_clock(time):
+    hh, mm = map(int, time.split(":"))
+    if mm ==  0:return " ".join(["Cuckoo"] * (hh % 12 or 12))
+    elif mm == 30:return "Cuckoo"
+    elif mm % 15 == 0:return "Fizz Buzz"
+    elif mm %  3 == 0:return "Fizz"
+    elif mm %  5 == 0:return "Buzz"
+    else:return "tick"
