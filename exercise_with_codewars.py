@@ -6321,3 +6321,10 @@ permute_a_palindrome=lambda s:bool(len(list(filter(lambda x:x%2!=0,[s.count(char
 # The index should be in the range [0..length-1]. If it is not,
 # or if the list is empty, GetNth() should throw/raise
 # an exception (ArgumentException in C#, InvalidArgumentException in PHP, Exception in Java).
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+def get_nth(node, index):
+    if node and index >= 0: return node if index < 1 else get_nth(node.next, index - 1)
+    raise ValueError
