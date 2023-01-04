@@ -6355,3 +6355,5 @@ def ipv4_address(address):
 # you attach an altimeter to his backpack and you read the data from his way back at the next day.
 # Task
 # You're given a list of compareable elements:
+def is_monotone(heights):
+    return heights == sorted(heights) if heights else True
