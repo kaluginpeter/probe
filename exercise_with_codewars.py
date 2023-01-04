@@ -6447,3 +6447,6 @@ def calculator(txt):
         return l[0] * len(l[2])
     elif '//' in l:
         return l[0][:len(l[0])//len(l[2])]
+
+# Write a function that flattens an Array of Array
+# objects into a flat Array. Your function must only do one level of flattening.
