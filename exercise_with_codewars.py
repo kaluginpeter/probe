@@ -6328,3 +6328,7 @@ class Node(object):
 def get_nth(node, index):
     if node and index >= 0: return node if index < 1 else get_nth(node.next, index - 1)
     raise ValueError
+
+# Implement String#ipv4_address?, which should return true if given object is an IPv4 address
+# - four numbers (0-255) separated by dots.
+# It should only accept addresses in canonical representation, so no leading 0s, spaces etc.
