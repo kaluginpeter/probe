@@ -6477,3 +6477,12 @@ def is_square(a):
 # so "hello", "helLo" and "heLlo" will all return the same word pattern.
 # Your task is to return the word pattern for a given word. All words provided will
 # be non-empty strings of alphabetic characters only, i.e. matching the regex "[a-zA-Z]+".
+def word_pattern(word):
+    output = ''
+    conversion = []
+    word = word.lower()
+    for letter in word:
+        if letter not in conversion:
+            conversion.append(letter)
+        output += str(conversion.index(letter)) +'.'
+    return output[:-1]
