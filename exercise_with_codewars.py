@@ -6463,3 +6463,7 @@ def diagonal_sum(array):
 # Your function should return true if all elements in the array are square numbers and false if not.
 # An empty array should return undefined / None / nil /false (for C).
 # You can assume that all array elements will be positive integers.
+from math import isqrt
+def is_square(a):
+    if a:
+        return all(isqrt(x)**2 == x for x in a)
