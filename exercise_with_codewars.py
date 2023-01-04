@@ -6457,3 +6457,9 @@ def flatten(lst):
 # the first array, the second value of the second array, the third value of the third array, and so on...
 def diagonal_sum(array):
     return sum(array[i][i] for i in range(len(array)))
+
+# Write a function that checks whether all elements in an array are square numbers. The function
+# should be able to take any number of array elements.
+# Your function should return true if all elements in the array are square numbers and false if not.
+# An empty array should return undefined / None / nil /false (for C).
+# You can assume that all array elements will be positive integers.
