@@ -6672,3 +6672,5 @@ def odd_ones_out(numbers):
 # take every first letter from word in given string
 # uppercase it
 # join them toghether
+def to_acronym(inp):
+    return ''.join(i[0].upper() for i in inp.split())
