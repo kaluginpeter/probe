@@ -6588,3 +6588,7 @@ def pos_average(s):
 # Your function will receive an integer between 1 and 10000 (maybe you think that in principle
 # it would be cool to count up to, say, a billion, but considering how many years it would take
 # it is just not possible) and return the string "black" or "white" -- here are a few more examples:
+def black_or_white_key(key_press_count):
+    count = (key_press_count - 1) % 88 % 12
+    l = [0, 2, 3, 5, 7, 8, 10]
+    return 'white' if count in l else 'black'
