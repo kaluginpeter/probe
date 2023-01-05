@@ -6499,3 +6499,10 @@ def word_pattern(word):
 # You must add up the character ASCII code of each even indexed
 # (assume a 0 based indexing) character in the string, with
 # the alphabetical position ("a" = 1, "b" = 2, etc.) of each odd indexed character to get the string's total.
+import string
+def cake(candles, debris):
+    fallen_candles = sum(
+        string.ascii_letters.index(char) if index % 2 else ord(char)
+        for index, char in enumerate(debris)
+    )
+    return "Fire!" if candles and fallen_candles > candles * 0.7 else "That was close!"
