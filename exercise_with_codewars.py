@@ -6646,3 +6646,6 @@ def oper(fct, s):
 # difference l - r being as small as possible. In other words the
 # right wing must be nearly as steep as the left wing.
 # The function is make_valley or makeValley or make-valley.
+def make_valley(l):
+    l = sorted(l, reverse = True)
+    return l[::2] + l[1::2][::-1]
