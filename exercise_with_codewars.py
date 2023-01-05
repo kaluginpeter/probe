@@ -6665,3 +6665,10 @@ def make_valley(l):
 # Here are more examples:
 def odd_ones_out(numbers):
     return [i for i in numbers if numbers.count(i)%2==0]
+
+# Write function which takes a string and make an acronym of it.
+# Rule of making acronym in this kata:
+# split string to words by space char
+# take every first letter from word in given string
+# uppercase it
+# join them toghether
