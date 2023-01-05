@@ -6512,3 +6512,5 @@ def cake(candles, debris):
 # The method should return an array of sentences declaring the state or country and its capital.
 def capital(capitals):
     return [f"The capital of {c.get('state') or c['country']} is {c['capital']}" for c in capitals]
+
+# Write a function that doubles every second integer in a list, starting from the left.
