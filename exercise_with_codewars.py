@@ -6663,3 +6663,5 @@ def make_valley(l):
 # the number 3 appears three times
 # 2 and 3 both appear an odd number of times, so they are removed from the list. The final result is: [1,1]
 # Here are more examples:
+def odd_ones_out(numbers):
+    return [i for i in numbers if numbers.count(i)%2==0]
