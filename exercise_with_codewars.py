@@ -6606,3 +6606,16 @@ def longest(s):
         if len(match) > len(current_longest):
             current_longest = match
     return current_longest
+
+# You are given a string of n lines, each substring being n characters long: For example:
+# s = "abcd\nefgh\nijkl\nmnop"
+# We will study some transformations of this square of strings.
+# Symmetry with respect to the main diagonal: diag_1_sym (or diag1Sym or diag-1-sym)
+# diag_1_sym(s) => "aeim\nbfjn\ncgko\ndhlp"
+# Clockwise rotation 90 degrees: rot_90_clock (or rot90Clock or rot-90-clock)
+# rot_90_clock(s) => "miea\nnjfb\nokgc\nplhd"
+# selfie_and_diag1(s) (or selfieAndDiag1 or selfie-and-diag1) It is initial
+# string + string obtained by symmetry with respect to the main diagonal.
+# s = "abcd\nefgh\nijkl\nmnop" -->
+# "abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"
+# or printed for the last:
