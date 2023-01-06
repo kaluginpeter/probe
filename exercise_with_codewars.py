@@ -6674,3 +6674,8 @@ def odd_ones_out(numbers):
 # join them toghether
 def to_acronym(inp):
     return ''.join(i[0].upper() for i in inp.split())
+
+# This Kata is intended as a small challenge for my students
+# All Star Code Challenge #16
+# Create a function called noRepeat() that takes a string argument and
+# returns a single letter string of the first not repeated character in the entire string.
