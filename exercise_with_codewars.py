@@ -6690,3 +6690,5 @@ def no_repeat(string):
 # 4020 should return ["4", "40", "402", "4020"]
 # 80200 should return ["8", "80", "802", "8020", "80200"]
 # PS: The input is guaranteed to be an integer in the range [0, 1000000]
+def create_array_of_tiers(n):
+    return [str(n)[:i] for i in range(1,len(str(n))+1)]
