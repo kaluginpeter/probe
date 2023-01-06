@@ -6725,3 +6725,7 @@ def all_non_consecutive(a):
 # will always be a definitive middle element.
 def mirror(data: list) -> list:
     return sorted(data) + sorted(data, reverse=True)[1:]
+
+# This Kata is intended as a small challenge for my students
+# All Star Code Challenge #1
+# Write a function, called sumPPG, that takes two NBA player objects/struct/Hash/Dict/Class and sums their PPG
