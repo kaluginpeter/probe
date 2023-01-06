@@ -6696,3 +6696,5 @@ def create_array_of_tiers(n):
 # Impliment the reverse function, which takes in input n and reverses it.
 # For instance, reverse(123) should return 321. You should do this
 # without converting the inputted number into a string.
+def reverse(n, count=0):
+	return reverse(n // 10, count * 10 + n % 10) if n else count
