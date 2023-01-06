@@ -6729,3 +6729,5 @@ def mirror(data: list) -> list:
 # This Kata is intended as a small challenge for my students
 # All Star Code Challenge #1
 # Write a function, called sumPPG, that takes two NBA player objects/struct/Hash/Dict/Class and sums their PPG
+def sum_ppg(player_one, player_two):
+    return player_one['ppg'] + player_two['ppg']
