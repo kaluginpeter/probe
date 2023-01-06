@@ -6738,3 +6738,5 @@ def sum_ppg(player_one, player_two):
 # after a division. For example the remainder of 5 / 2 is 1, so 5 modulo 2 is 1.
 # Example
 # If the input is 78, then you should return "01:18", because 78 minutes converts to 1 hour and 18 minutes.
+def time_convert(num):
+    return '%02d:%02d' % (num // 60, num % 60) if num > 0 else '00:00'
