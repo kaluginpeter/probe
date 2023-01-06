@@ -6692,3 +6692,7 @@ def no_repeat(string):
 # PS: The input is guaranteed to be an integer in the range [0, 1000000]
 def create_array_of_tiers(n):
     return [str(n)[:i] for i in range(1,len(str(n))+1)]
+
+# Impliment the reverse function, which takes in input n and reverses it.
+# For instance, reverse(123) should return 321. You should do this
+# without converting the inputted number into a string.
