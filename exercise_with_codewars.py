@@ -6711,3 +6711,5 @@ def how_many_years (date1,date2):
 # E.g., if we have an array [1,2,3,4,6,7,8,15,16] then 6 and 15 are non-consecutive.
 # You should return the results as an array of objects with two values i:
 # <the index of the non-consecutive number> and n: <the non-consecutive number>.
+def all_non_consecutive(a):
+    return [{"i": i, "n": y} for i, (x, y) in enumerate(zip(a, a[1:]), 1) if x != y - 1]
