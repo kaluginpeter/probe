@@ -6679,3 +6679,5 @@ def to_acronym(inp):
 # All Star Code Challenge #16
 # Create a function called noRepeat() that takes a string argument and
 # returns a single letter string of the first not repeated character in the entire string.
+def no_repeat(string):
+    return [i for i in string if string.count(i) == 1][0]
