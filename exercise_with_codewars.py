@@ -6790,3 +6790,5 @@ class LinkedList:
 # [1, 2, 3]
 # Assume all inputs are valid lists
 # with at least one value.For the purpose of simplicity, all values will be either numbers, strings, or Booleans.
+def list_to_array(lst):
+    return ([lst.value] + list_to_array(lst.next)) if lst else []
