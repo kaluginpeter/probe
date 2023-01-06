@@ -6740,3 +6740,9 @@ def sum_ppg(player_one, player_two):
 # If the input is 78, then you should return "01:18", because 78 minutes converts to 1 hour and 18 minutes.
 def time_convert(num):
     return '%02d:%02d' % (num // 60, num % 60) if num > 0 else '00:00'
+
+# You have a group chat application, but who is online!?
+# You want to show your users which of their friends are online and available to chat!
+# Given an input of an array of objects containing usernames, status and time since last activity (in mins),
+# create a function to work out who is online, offline and away.
+# If someone is online but their lastActivity was more than 10 minutes ago they are to be considered away.
