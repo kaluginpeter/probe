@@ -6723,3 +6723,5 @@ def all_non_consecutive(a):
 # and 10000. Your function should not mutate the input array, and this will be tested
 # (where applicable). Notice that the returned list will always be of odd size, since there
 # will always be a definitive middle element.
+def mirror(data: list) -> list:
+    return sorted(data) + sorted(data, reverse=True)[1:]
