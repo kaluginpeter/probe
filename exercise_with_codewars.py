@@ -6701,3 +6701,5 @@ def reverse(n, count=0):
 
 # Write a function that receives two strings as parameter. This strings are in the following
 # format of date: YYYY/MM/DD. Your job is: Take the years and calculate the difference between them.
+def how_many_years (date1,date2):
+    return abs(int(date1.split('/')[0]) - int(date2.split('/')[0]))
