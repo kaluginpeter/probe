@@ -6698,3 +6698,6 @@ def create_array_of_tiers(n):
 # without converting the inputted number into a string.
 def reverse(n, count=0):
 	return reverse(n // 10, count * 10 + n % 10) if n else count
+
+# Write a function that receives two strings as parameter. This strings are in the following
+# format of date: YYYY/MM/DD. Your job is: Take the years and calculate the difference between them.
