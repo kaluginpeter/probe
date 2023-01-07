@@ -6911,3 +6911,10 @@ def geometric_sequence_elements(a, r, n):
 # a pair for the scoreboard!
 # e.g. "The score is four nil" should return [4,0]
 # Either teams score has a range of 0-9, and the ref won't say the same string every time e.g.
+def scoreboard(string):
+    d = {'one':1, 'two':2, 'three':3, 'four':4, 'five':5, 'six':6, 'seven':7, 'eight':8, 'nine': 9 , 'nil':0}
+    score = []
+    for elem in string.split():
+        if elem in d:
+            score.append(d[elem])
+    return score
