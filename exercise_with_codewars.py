@@ -6886,3 +6886,14 @@ def rotate(str_):
 # iii) If b ≥ 2*a, set b = b - 2*a, and repeat step (i). Otherwise, return [a,b].
 # a and b will both be lower than 10E8.
 # More examples in tests cases. Good luck!
+def solve(a,b):
+    if a == 0 or b == 0:
+        return [a,b]
+    elif a >= 2*b:
+        a = a-2*b
+        return solve(a,b)
+    elif b >= 2*a:
+        b = b-2*a
+        return solve(a,b)
+    else:
+        return [a,b]
