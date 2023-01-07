@@ -6821,3 +6821,15 @@ def paul(x):
 # low marks they got. High marks are 9 & 10, average marks are 7 & 8, and low marks are 1 to 6.
 # Return list [class_average, dictionary] if there are different type of marks, or [class_average,
 # dictionary, "They did well"] if there are only high marks.
+def test(r):
+    avr = round(sum(r)/len(r), 3)
+    h, a, l = 0, 0, 0
+    for mark in r:
+        if 9 <= mark <= 10:
+            h += 1
+        elif 7 <= mark <= 8:
+            a += 1
+        elif 1 <= mark <= 6:
+            l += 1
+    l = [avr, {'h': h, 'a': a, 'l': l}, f"{'They did well' if a + l == 0 else ''}"]
+    return l[:-1] if l[-1] == '' else l
