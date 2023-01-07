@@ -6869,3 +6869,12 @@ def get_naughty_names(people):
 # making you come up with the text strings.
 # Create a function named rotate() that accepts a string argument and returns an array of
 # strings with each letter from the input string being rotated to the end.
+def rotate(str_):
+    l = [i for i in str_]
+    result = []
+    for i in range(len(l)):
+        temp = l[0]
+        l.append(temp)
+        l.pop(0)
+        result.append(''.join(l))
+    return result
