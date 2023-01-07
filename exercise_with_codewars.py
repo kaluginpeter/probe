@@ -6921,3 +6921,5 @@ def scoreboard(string):
 
 # In this Kata the aim is to compare each pair of integers from 2 arrays, and return a new array of large numbers.
 # Note: Both arrays have the same dimensions.
+def get_larger_numbers(a, b):
+    return [max(a[i], b[i]) for i,j in enumerate(a)]
