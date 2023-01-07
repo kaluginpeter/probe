@@ -6902,3 +6902,5 @@ def solve(a,b):
 # Since you are also a programmer, you have decided to write a function that
 # will print first n elements of the sequence with the given constant r and first element a.
 # Result should be separated by comma and space.
+def geometric_sequence_elements(a, r, n):
+    return ", ".join(str(a * r ** i) for i in range(n))
