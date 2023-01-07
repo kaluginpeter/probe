@@ -6792,3 +6792,7 @@ class LinkedList:
 # with at least one value.For the purpose of simplicity, all values will be either numbers, strings, or Booleans.
 def list_to_array(lst):
     return ([lst.value] + list_to_array(lst.next)) if lst else []
+
+# Oh no! Ghosts have reportedly swarmed the city. It's your job to get rid of them and save the day!
+# In this kata, strings represent buildings while whitespaces within those strings represent ghosts.
+# So what are you waiting for? Return the building(string) without any ghosts(whitespaces)!
