@@ -6897,3 +6897,8 @@ def solve(a,b):
         return solve(a,b)
     else:
         return [a,b]
+
+# In your class, you have started lessons about geometric progression.
+# Since you are also a programmer, you have decided to write a function that
+# will print first n elements of the sequence with the given constant r and first element a.
+# Result should be separated by comma and space.
