@@ -7034,3 +7034,8 @@ def solve(lists):
 import math
 def area_of_polygon_inside_circle(r, n):
     return float("{:.3f}".format((math.sin(2 * math.pi / n) * r * r * n) / 2))
+
+# There are some stones on Bob's table in a row, and each of
+# them can be red, green or blue, indicated by the characters R, G, and B.
+# Help Bob find the minimum number of stones he needs to remove from the table
+# so that the stones in each pair of adjacent stones have different colours.
