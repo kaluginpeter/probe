@@ -6959,3 +6959,5 @@ def pyramid(balls):
         i += 1
         s+=1
     return s
+
+# Find the last element of the given argument(s).
