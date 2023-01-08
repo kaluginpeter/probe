@@ -6946,3 +6946,8 @@ def changer(s):
         else:
             word += i
     return word
+
+# Remember the triangle of balls in billiards? To build a classic triangle (5 levels) you need 15 balls.
+# With 3 balls you can build a 2-level triangle, etc.
+# For more examples, Write a function that takes number of balls (≥ 1) and
+# calculates how many levels you can build a triangle.
