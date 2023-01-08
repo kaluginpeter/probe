@@ -6951,3 +6951,11 @@ def changer(s):
 # With 3 balls you can build a 2-level triangle, etc.
 # For more examples, Write a function that takes number of balls (≥ 1) and
 # calculates how many levels you can build a triangle.
+def pyramid(balls):
+    s = 0
+    i=1
+    while balls >= i:
+        balls -= i
+        i += 1
+        s+=1
+    return s
