@@ -6976,3 +6976,7 @@ def last(*args):
 # arithmetic_sequence_sum(2, 3, 5) should return 40:
 def arithmetic_sequence_sum(a, r, n):
     return sum(a + r * i for i in range(n))
+
+# Implement a function that receives a string, and lets you extend it with repeated calls. When no argument
+# is passed you should return a string consisting of space-separated words you've received earlier.
+# Note: there will always be at least 1 string; all inputs will be non-empty.
