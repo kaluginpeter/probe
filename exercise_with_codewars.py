@@ -6923,3 +6923,11 @@ def scoreboard(string):
 # Note: Both arrays have the same dimensions.
 def get_larger_numbers(a, b):
     return [max(a[i], b[i]) for i,j in enumerate(a)]
+
+# Create a function that takes a string as a parameter and does the following, in this order:
+# Replaces every letter with the letter following it in the alphabet (see note below)
+# Makes any vowels capital
+# Makes any consonants lower case
+# Note:
+# the alphabet should wrap around, so Z becomes A
+# in this kata, y isn't considered as a vowel.
