@@ -6997,3 +6997,6 @@ class create_message(str):
 # >5 hairs --> "Hobo!"
 # So for this head: "------/------" you shoud return:
 # ["-------------", "Unicorn"]
+def bald(s):
+    c = 'Clean!' if s.count('/') == 0 else 'Unicorn!' if s.count('/') == 1 else 'Homer!' if s.count('/') == 2 else 'Careless!' if 3 <= s.count('/') <= 5 else 'Hobo!'
+    return [s.replace('/', '-'), c]
