@@ -7031,3 +7031,6 @@ def solve(lists):
 # or circle_radius which passes through all the vertices of the polygon
 # (such circle is called circumscribed circle or circumcircle). The answer should be a number rounded to
 # 3 decimal places.
+import math
+def area_of_polygon_inside_circle(r, n):
+    return float("{:.3f}".format((math.sin(2 * math.pi / n) * r * r * n) / 2))
