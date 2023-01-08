@@ -6974,3 +6974,5 @@ def last(*args):
 # (a), and a number of occurences of the given integer (r), based on the element's position within the sequence.
 # For example:
 # arithmetic_sequence_sum(2, 3, 5) should return 40:
+def arithmetic_sequence_sum(a, r, n):
+    return sum(a + r * i for i in range(n))
