@@ -7039,3 +7039,11 @@ def area_of_polygon_inside_circle(r, n):
 # them can be red, green or blue, indicated by the characters R, G, and B.
 # Help Bob find the minimum number of stones he needs to remove from the table
 # so that the stones in each pair of adjacent stones have different colours.
+import re
+def solution(stones):
+    res = 0
+    for i in 'RGB':
+        matches = re.findall(rf'{i}+', stones)
+        for match in matches:
+            res += len(match)-1
+    return res
