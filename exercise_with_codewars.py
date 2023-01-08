@@ -7018,3 +7018,8 @@ def sum_square_even_root_odd(nums):
 # See test cases for more examples.
 # Good luck!
 # If you like this Kata, please try:
+def solve(lists):
+    res = 1
+    for list in lists:
+        res *= len(set(list))
+    return res
