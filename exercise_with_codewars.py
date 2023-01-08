@@ -6961,3 +6961,8 @@ def pyramid(balls):
     return s
 
 # Find the last element of the given argument(s).
+def last(*args):
+    try:
+        return [args][-1][-1][-1]
+    except:
+        return args[-1]
