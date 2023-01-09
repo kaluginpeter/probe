@@ -7076,3 +7076,12 @@ def sum_or_product(array, n):
 # There will be no empty spaces in the seating plan.
 # There will be no empty arrays.
 # Each row will be at least one seat long.
+def bin_rota(arr):
+    l = []
+    for i in range(len(arr)):
+        if i % 2 == 0:
+            l += arr[i]
+            continue
+        else:
+            l += arr[i][::-1]
+    return l
