@@ -7160,3 +7160,5 @@ def multiple(x):
 # If the string isn't contained in any of the strings in the array,
 # the method returns an array containing a single string: "Empty" (or Nothing in Haskell,
 # or "None" in Python and C)
+def word_search(query, seq):
+    return [i for i in seq if query.lower() in i.lower()] or ["None"]
