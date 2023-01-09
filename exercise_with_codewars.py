@@ -7055,3 +7055,8 @@ def solution(stones):
 # If the product of the n smallest numbers is higher, return "product"
 # If the 2 values are equal, return "same"
 # Note The array will never be empty and n will always be smaller than the length of the array.
+import functools
+def sum_or_product(array, n):
+    big = sum(sorted(array)[-n:])
+    small = functools.reduce(lambda a, b : a * b, sorted(array)[:n])
+    return 'sum' if big > small else 'product' if small > big else 'same'
