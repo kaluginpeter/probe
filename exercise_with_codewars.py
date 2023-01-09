@@ -7109,3 +7109,13 @@ def string_breakers(n, st):
 # from that string using the following rule:
 # - first remove all letter 'a', followed by letter 'b', then 'c', etc...
 # - remove the leftmost character first.
+def solve(st,k):
+    num, removed = 0, 0
+    while removed < k and st:
+        if chr(num+97) in st:
+            indx = st.index(chr(num+97))
+            st = st[0:indx] + st[indx+1:]
+            removed += 1
+        else:
+            num += 1
+    return st
