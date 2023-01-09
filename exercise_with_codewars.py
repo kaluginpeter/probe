@@ -7093,3 +7093,6 @@ def bin_rota(arr):
 # and the value of that item must be 0. like this:
 def complete_series(seq):
     return [i for i in range(max(seq)+1)] if len(set(seq)) == len(seq) else [0]
+
+# I will give you an integer (N) and a string. Break the string up into as
+# many substrings of N as you can without spaces. If there are leftover characters, include those as well.
