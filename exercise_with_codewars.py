@@ -7104,3 +7104,8 @@ def string_breakers(n, st):
         l.append(st[:n])
         st = st[n:]
     return '\n'.join(l)
+
+# In this Kata, you will be given a lower case string and your task will be to remove k characters
+# from that string using the following rule:
+# - first remove all letter 'a', followed by letter 'b', then 'c', etc...
+# - remove the leftmost character first.
