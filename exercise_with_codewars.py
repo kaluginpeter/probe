@@ -7133,3 +7133,6 @@ def solve(st,k):
 # Practical info:
 # The .bark() method of a dog should return the string 'Woof!'.
 # The contructor you made (it is preloaded) looks like this:
+def bark(self):
+    return "Woof!"
+Dog.bark = bark
