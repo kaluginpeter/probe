@@ -7136,3 +7136,6 @@ def solve(st,k):
 def bark(self):
     return "Woof!"
 Dog.bark = bark
+
+# Write a function that accepts two arguments: an array/list of integers and another integer (n).
+# Determine the number of times where two integers in the array have a difference of n.
