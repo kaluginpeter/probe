@@ -7091,3 +7091,5 @@ def bin_rota(arr):
 # If the numbers in the sequence provided are not in order you should order them,
 # but if a value repeats, then you must return a sequence with only one item,
 # and the value of that item must be 0. like this:
+def complete_series(seq):
+    return [i for i in range(max(seq)+1)] if len(set(seq)) == len(seq) else [0]
