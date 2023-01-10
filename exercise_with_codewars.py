@@ -7346,3 +7346,7 @@ def days_represented(trips):
 def task(w,n,c):
     workers = {"Monday" : "James", "Tuesday" : "John", "Wednesday" : "Robert", "Thursday" : "Michael", "Friday" : "William"}
     return f"It is {w} today, {workers[w]}, you have to work, you must spray {n} trees and you need {n * c} dollars to buy liquid"
+
+# Write a function consonantCount, consonant_count or ConsonantCount that takes a string of English-language
+# text and returns the number of consonants in the string.
+# Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
