@@ -7305,3 +7305,7 @@ class List(object):
 # the 1st string reversed with inverted case and then mirrored; e.g Water -> RETAwwATER
 def reverse_and_mirror(s1, s2):
     return f"{s2[::-1].swapcase()}@@@{s1[::-1].swapcase()}{s1.swapcase()}"
+
+# Write a function that will randomly upper and lower characters in a string - randomCase() (random_case()
+# for Python).
+# A few examples:
