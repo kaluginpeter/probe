@@ -7294,3 +7294,7 @@ def owned_cat_and_dog(cy, dy):
 # one will be a digit to count, and second one, its corresponding total frequency in all
 # the integers of the first list. This list of tuples should be ordered with the same order that the digits
 # have in digitsList
+class List(object):
+    def count_spec_digits(self, integers_list, digits_list):
+        s = "".join(str(i) for i in integers_list)
+        return [(dig, s.count(str(dig))) for dig in digits_list]
