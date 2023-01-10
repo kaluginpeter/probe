@@ -7352,3 +7352,11 @@ def task(w,n,c):
 # Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
 def consonant_count(s):
     return sum([1 if i not in 'aeiou' and i.isalpha() else 0 for i in s.replace(' ', '').lower()])
+
+# Is it possible to write a book without the letter 'e' ?
+# Task
+# Given String str, return:
+# How many "e" does it contain (case-insensitive) in string format.
+# If given String doesn't contain any "e", return: "There is no "e"."
+# If given String is empty, return empty String.
+# If given String is `null`/`None`/`nil`, return `null`/`None`/`nil`
