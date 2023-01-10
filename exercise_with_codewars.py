@@ -7247,3 +7247,8 @@ def more_zeros(s):
 import math
 def circle_area(r):
     return round(math.pi*r**2, 2) if type(r) == int and r > 0 else False
+
+# Normally we have firstname, middle and the last name but there may be more than one word in a name
+# like a South Indian one.
+# Similar to those kinda names we need to initialize the names.
+# See the pattern below:
