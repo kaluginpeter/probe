@@ -7327,3 +7327,8 @@ def pattern(n):
 # the company is represented in the foreign country. The first number of the pair
 # is the number of the day of arrival and the second number of the pair is the day
 # of departure of someone who travels, i.e. 1 january is number 1 and 31 of december is 365.
+def days_represented(trips):
+    s = set()
+    for i in trips:
+        s.update(range(i[0], i[1] + 1))
+    return len(s)
