@@ -7372,3 +7372,10 @@ def find_e(s):
 # be eight digits long.
 def word_to_bin(word):
     return [bin(ord(letter))[2:].zfill(8) for letter in word]
+
+# In this Kata, you will be given an integer array and your task is
+# to return the sum of elements occupying prime-numbered indices.
+# The first element of the array is at index 0.
+# Good luck!
+# If you like this Kata, try:
+# Dominant primes. It takes this idea a step further.
