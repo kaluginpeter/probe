@@ -7261,3 +7261,6 @@ def initials(name):
 # Write a function, taking two strings in parameter, that tests whether or not the first string contains
 # all of the letters of the second string, in order.
 # The function should return true if that is the case, and else false. Letter comparison should be case-INsensitive.
+def name_in_str(str, name):
+    word = iter(str.lower())
+    return all(i in word for i in name.lower())
