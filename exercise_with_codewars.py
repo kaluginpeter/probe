@@ -7366,3 +7366,7 @@ def find_e(s):
         return c if s != '' and int(c) > 0 else 'There is no "e".' if int(c) == 0 and s!='' else '' if s == '' else None
     except:
         return None
+
+# Write a function that takes a string and returns an array containing binary
+# numbers equivalent to the ASCII codes of the characters of the string. The binary strings should
+# be eight digits long.
