@@ -7244,3 +7244,6 @@ def more_zeros(s):
 # Complete the function circleArea so that it will return the area of a circle with the given radius.
 # Round the returned number to two decimal places (except for Haskell).
 # If the radius is not positive or not a number, return false.
+import math
+def circle_area(r):
+    return round(math.pi*r**2, 2) if type(r) == int and r > 0 else False
