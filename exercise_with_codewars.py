@@ -7309,3 +7309,6 @@ def reverse_and_mirror(s1, s2):
 # Write a function that will randomly upper and lower characters in a string - randomCase() (random_case()
 # for Python).
 # A few examples:
+import random
+def random_case(x):
+    return "".join([random.choice([i.lower(), i.upper()]) for i in x])
