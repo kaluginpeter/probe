@@ -7189,3 +7189,16 @@ def my_parse_int(string):
 # The method takes an array of people who have listened to the song that day.
 # The output should be how many new listeners the song gained on that day out of all listeners.
 # Names should be treated in a case-insensitive manner, i.e. "John" is the same as "john".
+class Song:
+    def __init__(self, title, artist):
+        self.title = title
+        self.artist = artist
+        self.listeners = list(map(lambda listener: listener.lower(), artist))
+    def how_many(self, listeners):
+        listens = 0
+        for listener in listeners:
+            listener = listener.lower()
+            if listener not in self.listeners:
+                self.listeners.append(listener)
+                listens += 1
+        return listens
