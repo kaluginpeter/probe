@@ -7312,3 +7312,6 @@ def reverse_and_mirror(s1, s2):
 import random
 def random_case(x):
     return "".join([random.choice([i.lower(), i.upper()]) for i in x])
+
+# You have to write a function pattern which creates the following pattern upto n number of rows.
+# If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
