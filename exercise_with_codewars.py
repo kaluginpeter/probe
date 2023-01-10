@@ -7233,3 +7233,10 @@ def what_time_is_it(angle):
 # representation of its ASCII value consists of more zeros than ones.
 # You should remove any duplicate characters, keeping the first occurrence of any such duplicates, so they
 # are in the same order in the final array as they first appeared in the input string.
+def more_zeros(s):
+    l = []
+    for i in s:
+        c = format(ord(i), 'b')
+        if c.count('1') < c.count('0') and i not in l:
+            l.append(i)
+    return l
