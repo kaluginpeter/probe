@@ -7252,3 +7252,5 @@ def circle_area(r):
 # like a South Indian one.
 # Similar to those kinda names we need to initialize the names.
 # See the pattern below:
+def initials(name):
+    return '.'.join(i.upper()[0] if i.lower() != name.split()[-1].lower() else i.capitalize() for i in name.split())
