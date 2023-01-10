@@ -7227,3 +7227,9 @@ def what_time_is_it(angle):
     elif min < 10 and calc > 9: return f"{calc}:0{min}"
     elif min > 9 and calc < 10: return f"0{calc}:{min}"
     elif min > 9 and calc > 9: return f"{calc}:{min}"
+
+# Create a moreZeros function which will receive a string for input, and return an array
+# (or null terminated string in C) containing only the characters from that string whose binary
+# representation of its ASCII value consists of more zeros than ones.
+# You should remove any duplicate characters, keeping the first occurrence of any such duplicates, so they
+# are in the same order in the final array as they first appeared in the input string.
