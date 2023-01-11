@@ -7413,3 +7413,7 @@ def solution(full_text, search_text):
 # 15 has binary representation 1111 and has 0 binary gaps.
 # Write function gap(num) that,  given a positive num,  returns the length of its longest binary gap.
 # The function should return 0 if num doesn't contain a binary gap.
+def gap(num):
+    binary = str(bin(num)).strip('0').split('b')[1]
+    binary = binary.split('1')
+    return max(list(map(lambda x: len(x), binary)))
