@@ -7401,3 +7401,5 @@ def snail(column, day, night):
     return count
 
 # Complete the solution so that it returns the number of times the search_text is found within the full_text.
+def solution(full_text, search_text):
+    return full_text.count(search_text)
