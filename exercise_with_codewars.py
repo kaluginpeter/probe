@@ -7483,3 +7483,13 @@ class Harshad:
         return list(islice(filter(self.is_valid, (i for i in count(start+1))), c))
 
 # Remember the spongebob meme that is meant to make fun of people by repeating what they say in a mocking way?
+def sponge_meme( s ):
+    bob = ''
+    i = 0
+    while i < len(s):
+        if i % 2 != 0:
+            bob += s[i].lower()
+        else:
+            bob += s[i].upper()
+        i += 1
+    return bob
