@@ -7470,3 +7470,14 @@ class Calculator:
 # You do not need to care about the passed parameters in the test cases, they will always
 # be valid integers (except for the start argument in getSerie() which is optional and should default to 0).
 # Note: only the first 2000 Harshad numbers will be checked in the tests.
+from itertools import count, islice
+class Harshad:
+    @staticmethod
+    def is_valid(number):
+        return number % sum(int(i) for i in str(number)) == 0
+    @classmethod
+    def get_next(self, number):
+        return next(i for i in count(number+1) if self.is_valid(i))
+    @classmethod
+    def get_series(self, c, start = 0):
+        return list(islice(filter(self.is_valid, (i for i in count(start+1))), c))
