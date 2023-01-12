@@ -7446,3 +7446,7 @@ def filter_homogenous(arrays):
 # Calculator.average()
 # The test also expects that when you pass no arguments, it returns 0. The arguments are expected to be integers.
 # It expects Calculator.average(3,4,5) to return 4.
+class Calculator:
+    @staticmethod
+    def average(*args):
+        return sum(args) / len(args) if args else 0
