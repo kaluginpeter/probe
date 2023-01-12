@@ -7440,3 +7440,9 @@ def small_enough(a, limit):
 # No implicit type casting is allowed. A subarray [1, '2'] would be considered illegal and should be filtered out.
 def filter_homogenous(arrays):
     return [i for i in arrays if (all(type(a) == int for a in i) or all(type(a) == str for a in i)) and i]
+
+# Let's build a calculator that can calculate the average for an arbitrary number of arguments.
+# The test expects you to provide a Calculator object with an average method:
+# Calculator.average()
+# The test also expects that when you pass no arguments, it returns 0. The arguments are expected to be integers.
+# It expects Calculator.average(3,4,5) to return 4.
