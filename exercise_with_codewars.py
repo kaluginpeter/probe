@@ -7481,3 +7481,5 @@ class Harshad:
     @classmethod
     def get_series(self, c, start = 0):
         return list(islice(filter(self.is_valid, (i for i in count(start+1))), c))
+
+# Remember the spongebob meme that is meant to make fun of people by repeating what they say in a mocking way?
