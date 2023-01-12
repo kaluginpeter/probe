@@ -7566,3 +7566,9 @@ def duplicates(arr):
 # Indeed it can happen that the decoding is impossible for strings composed
 # of whatever letters from "a" to "z" when positive integer num has not been
 # correctly chosen. In that case return "Impossible to decode".
+from string import ascii_lowercase as aLow
+def decode(r):
+    i = next(i for i, c in enumerate(r) if c.isalpha())
+    n, r = int(r[:i]), r[i:]
+    maps = {chr(97 + n * k % 26): v for k, v in enumerate(aLow)}
+    return "Impossible to decode" if len(maps) != 26 else ''.join(maps[c] for c in r)
