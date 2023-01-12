@@ -7522,3 +7522,13 @@ def inside_out_word(s):
 # if Alice's band wins: Alice made "Kurt" proud! if Bob's band
 # wins: Bob made "Jeff" proud! if they end up with a draw: that looks like a "draw"! Rock on!
 # The solution to the example above should therefore appear like '1, 2: Bob made "Jeff" proud!'.
+def solve(a, b):
+    alice = sum(i > j for i, j in zip(a, b))
+    bob = sum(j > i for i, j in zip(a, b))
+    if alice == bob:
+        words = 'that looks like a "draw"! Rock on!'
+    elif alice > bob:
+        words = 'Alice made "Kurt" proud!'
+    else:
+        words = 'Bob made "Jeff" proud!'
+    return f"{alice}, {bob}: {words}"
