@@ -7438,3 +7438,5 @@ def small_enough(a, limit):
 # Please keep in mind that for this kata, we assume that empty arrays are not homogenous.
 # The resultant arrays should be in the order they were originally in and should not have its values changed.
 # No implicit type casting is allowed. A subarray [1, '2'] would be considered illegal and should be filtered out.
+def filter_homogenous(arrays):
+    return [i for i in arrays if (all(type(a) == int for a in i) or all(type(a) == str for a in i)) and i]
