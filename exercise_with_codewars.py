@@ -7425,3 +7425,5 @@ def gap(num):
 # You can assume all values in the array are numbers.
 # Do not use loops. Do not modify input array.
 # Looking for more, loop-restrained fun? Check out the other kata in the series:
+def small_enough(a, limit):
+    return max(a) <= limit
