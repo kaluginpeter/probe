@@ -7589,3 +7589,11 @@ def to_currency(price):
 # ASCII codes
 def order_word(s):
     return ''.join(sorted(s, key=ord)) if s else 'Invalid String!'
+
+# You are given a string of words and numbers. Extract the expression including:
+# the operator: either addition ("gains") or subtraction ("loses")
+# the two numbers that we are operating on
+# Return the result of the calculation.
+# Notes:
+# "loses" and "gains" are the only two words describing operators
+# No fruit debts nor bitten apples = The numbers are integers and no negatives
