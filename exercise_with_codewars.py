@@ -7572,3 +7572,7 @@ def decode(r):
     n, r = int(r[:i]), r[i:]
     maps = {chr(97 + n * k % 26): v for k, v in enumerate(aLow)}
     return "Impossible to decode" if len(maps) != 26 else ''.join(maps[c] for c in r)
+
+# Write a function that takes an integer in input and outputs a string with currency format.
+# Integer in currency format is expressed by a string of number where every three characters are separated by comma.
+# For example:
