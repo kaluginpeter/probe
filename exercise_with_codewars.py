@@ -7639,3 +7639,10 @@ def is_triangular(t):
 # Write function which will create a string from a list of strings, separated by space.
 def words_to_sentence(words):
     return ' '.join(words)
+
+# Convert a hash into an array. Nothing more, Nothing less.
+# {name: 'Jeremy', age: 24, role: 'Software Engineer'}
+# should be converted into
+# [["name", "Jeremy"], ["age", 24], ["role", "Software Engineer"]]
+# Note: The output array should be sorted alphabetically.
+# Good Luck!
