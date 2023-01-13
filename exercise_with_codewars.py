@@ -7611,3 +7611,5 @@ def pluck(objs, name):
 # Searching through the code you find that all logins ending with a "_" make problems.
 # So you want to write a function that takes an array of pairs of login-names and e-mails,
 # and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_".
+def search_names(logins):
+    return list(filter(lambda x: x[0].endswith('_'), logins))
