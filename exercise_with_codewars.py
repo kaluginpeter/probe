@@ -7604,3 +7604,5 @@ def calculate(string):
 # Implement a function which takes a sequence of objects and a property name, and returns a sequence containing
 # the named property of each object.
 # For example:
+def pluck(objs, name):
+    return [d[name] if name in d else None for d in objs]
