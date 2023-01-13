@@ -7597,3 +7597,6 @@ def order_word(s):
 # Notes:
 # "loses" and "gains" are the only two words describing operators
 # No fruit debts nor bitten apples = The numbers are integers and no negatives
+def calculate(string):
+    d = {'gains': int(string.split()[2]) + int(string.split()[-1]), 'loses': int(string.split()[2]) - int(string.split()[-1])}
+    return d['gains'] if 'gains' in string else d['loses']
