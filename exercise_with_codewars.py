@@ -7600,3 +7600,7 @@ def order_word(s):
 def calculate(string):
     d = {'gains': int(string.split()[2]) + int(string.split()[-1]), 'loses': int(string.split()[2]) - int(string.split()[-1])}
     return d['gains'] if 'gains' in string else d['loses']
+
+# Implement a function which takes a sequence of objects and a property name, and returns a sequence containing
+# the named property of each object.
+# For example:
