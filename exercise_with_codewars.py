@@ -7627,3 +7627,6 @@ def sort_dict(d):
 # All the numbers should be treaded as positive integer. eg, 11-14
 # should be treated as two numbers 11 and 14. Same as 3.14, should be treated as two numbers 3 and 14
 # If no number was given in the string, it should return 0
+import re
+def sum_from_string(string):
+    return sum(int(i) for i in re.findall("\d+",string))
