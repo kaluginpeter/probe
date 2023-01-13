@@ -7637,3 +7637,5 @@ def is_triangular(t):
     return (8 * t + 1)**.5 % 1 == 0
 
 # Write function which will create a string from a list of strings, separated by space.
+def words_to_sentence(words):
+    return ' '.join(words)
