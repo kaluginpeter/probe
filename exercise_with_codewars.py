@@ -7587,3 +7587,5 @@ def to_currency(price):
 # • the given string can be lowercase and uppercase.
 # • the string could include spaces or other special characters like '# ! or ,'. Sort them based on their
 # ASCII codes
+def order_word(s):
+    return ''.join(sorted(s, key=ord)) if s else 'Invalid String!'
