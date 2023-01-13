@@ -7576,3 +7576,5 @@ def decode(r):
 # Write a function that takes an integer in input and outputs a string with currency format.
 # Integer in currency format is expressed by a string of number where every three characters are separated by comma.
 # For example:
+def to_currency(price):
+  return '{:,}'.format(price)
