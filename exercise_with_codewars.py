@@ -7613,3 +7613,7 @@ def pluck(objs, name):
 # and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_".
 def search_names(logins):
     return list(filter(lambda x: x[0].endswith('_'), logins))
+
+# Python dictionaries are inherently unsorted. So what do you do if you need to sort the contents of a dictionary?
+# Create a function that returns a sorted list of (key, value) tuples (Javascript: arrays of 2 items).
+# The list must be sorted by the value and be sorted largest to smallest.
