@@ -7740,3 +7740,5 @@ def password(s):
 # The students will line up and wait for their turn.
 # You will be given a string of student names. Sort them and return a list of names in descending order.
 # Here is an example input:
+def lineup_students(s):
+    return sorted(s.split(), key=lambda i:(len(i), i), reverse=True)
