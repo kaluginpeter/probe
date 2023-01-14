@@ -7709,3 +7709,6 @@ def scramble(string, array):
 # resorting to a list reversal or prependig the elements to a list.
 def climb(n):
     return  [n >> n.bit_length() - i - 1 for i in range(n.bit_length())]
+
+# Given an array of strings, reverse them and their order in such way that their length
+# stays the same as the length of the original inputs.
