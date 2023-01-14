@@ -7715,3 +7715,8 @@ def climb(n):
 def reverse(a):
     l = reversed(''.join(a))
     return [''.join(next(l) for k in i) for i in a]
+
+# Write a function generatePairs (Javascript) / generate_pairs (Python / Ruby) that accepts an integer argument
+# n and generates an array containing the pairs of integers [a, b] that satisfy the following conditions:
+# 0 <= a <= b <= n
+# The pairs should be sorted by increasing values of a then increasing values of b.
