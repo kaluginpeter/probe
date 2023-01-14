@@ -7788,3 +7788,5 @@ def get_villain_name(birthdate):
 # startsWith("hello", "he") should return true.
 # The length of the "string" as well as the "prefix" can be defined by the formula: 0 <= length < +Infinity
 # No characters should be ignored and/or omitted during the test, e.g. whitespace characters should not be ignored.
+def starts_with(st, prefix):
+    return st.startswith(prefix)
