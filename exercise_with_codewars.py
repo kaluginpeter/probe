@@ -7730,3 +7730,6 @@ def generate_pairs(n):
 # There needs to be at least 1 number.
 # The password needs to be at least 8 characters long.
 # You are permitted to use any methods to validate the password.
+import re
+def password(s):
+    return bool(re.match(r'(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8}', s))
