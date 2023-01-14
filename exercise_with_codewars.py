@@ -7666,3 +7666,15 @@ def convert_hash_to_array(hash):
 # Remember that first is in the index 0 .. just saying ...
 def nthterm(first, n, c):
     return first + n * c
+
+# The way the ohms value needs to be formatted in the string you return depends on the magnitude of the value:
+# For resistors less than 1000 ohms, return a string containing the number of ohms, a space,
+# the word "ohms" followed by a comma and a space, the tolerance value (5, 10, or 20), and a percent sign.
+# For example, for the "yellow violet black" resistor mentioned above, you would return "47 ohms, 20%".
+# For resistors greater than or equal to 1000 ohms, but less than 1000000 ohms, you will use the same
+# format as above, except that the ohms value will be divided by 1000 and have a lower-case "k" after it.
+# For example, for a resistor with bands of "yellow violet red gold", you would return "4.7k ohms, 5%"
+# For resistors of 1000000 ohms or greater, you will divide the ohms value by 1000000 and have
+# an upper-case "M" after it. For example, for a resistor with bands of
+# "brown black green silver", you would return "1M ohms, 10%"
+# Test case resistor values will all be between 10 ohms and 990M ohms.
