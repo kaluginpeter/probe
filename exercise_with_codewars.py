@@ -7678,3 +7678,9 @@ def nthterm(first, n, c):
 # an upper-case "M" after it. For example, for a resistor with bands of
 # "brown black green silver", you would return "1M ohms, 10%"
 # Test case resistor values will all be between 10 ohms and 990M ohms.
+def decode_resistor_colors(bands):
+    d = {'black':0, 'brown':1, 'red':2, 'orange':3, 'yellow':4, 'green':5, 'blue':6, 'violet':7, 'gray':8, 'white':9, 'silver':10, 'gold':5}
+    bands = [d[b] for b in bands.split()]
+    ohms = (bands[0] * 10 + bands[1]) * 10 ** bands[2]
+    ohms, sfx = (ohms/1000000.0, 'M') if ohms > 999999 else (ohms / 1000.0, 'k') if ohms > 999 else (ohms, '')
+    return "{}{} ohms, {}%".format(int(ohms) if ohms // 1 == ohms else ohms, sfx, bands[3] if len(bands) > 3 else 20)
