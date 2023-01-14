@@ -7722,3 +7722,11 @@ def reverse(a):
 # The pairs should be sorted by increasing values of a then increasing values of b.
 def generate_pairs(n):
     return [[i,j] for i in range(n+1) for j in range(i, n+1)]
+
+# Your job is to create a simple password validation function, as seen on many websites.
+# The rules for a valid password are as follows:
+# There needs to be at least 1 uppercase letter.
+# There needs to be at least 1 lowercase letter.
+# There needs to be at least 1 number.
+# The password needs to be at least 8 characters long.
+# You are permitted to use any methods to validate the password.
