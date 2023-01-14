@@ -7664,3 +7664,5 @@ def convert_hash_to_array(hash):
 # n is the index of the value we want.
 # c is the constant added between the terms.
 # Remember that first is in the index 0 .. just saying ...
+def nthterm(first, n, c):
+    return first + n * c
