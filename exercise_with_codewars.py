@@ -7775,3 +7775,16 @@ def get_villain_name(birthdate):
     first = [ "The Evil","The Vile","The Cruel", "The Trashy","The Despicable", "The Embarrassing", "The Disreputable","The Atrocious", "The Twirling",  "The Orange","The Terrifying", "The Awkward"]
     last = ["Mustache", "Pickle", "Hood Ornament", "Raisin", "Recycling Bin", "Potato", "Tomato", "House Cat", "Teaspoon", "Laundry Basket"]
     return first[birthdate.month - 1] + ' ' + last[int(str(birthdate.day)[-1])]
+
+# Challenge: Given two null-terminated strings in the arguments "string"
+# and "prefix", determine if "string" starts with the "prefix" string. Return true or false.
+# Example:
+# startsWith("hello world!", "hello"); // should return true
+# startsWith("hello world!", "HELLO"); // should return false
+# startsWith("nowai", "nowaisir"); // should return false
+# Addendum: For this problem, an empty "prefix" string should always return true for any value of "string".
+# If the length of the "prefix" string is greater than the length of the "string", return false.
+# The check should be case-sensitive, i.e. startsWith("hello", "HE") should return false, whereas
+# startsWith("hello", "he") should return true.
+# The length of the "string" as well as the "prefix" can be defined by the formula: 0 <= length < +Infinity
+# No characters should be ignored and/or omitted during the test, e.g. whitespace characters should not be ignored.
