@@ -7720,3 +7720,5 @@ def reverse(a):
 # n and generates an array containing the pairs of integers [a, b] that satisfy the following conditions:
 # 0 <= a <= b <= n
 # The pairs should be sorted by increasing values of a then increasing values of b.
+def generate_pairs(n):
+    return [[i,j] for i in range(n+1) for j in range(i, n+1)]
