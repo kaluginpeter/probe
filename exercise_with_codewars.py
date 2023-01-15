@@ -7830,3 +7830,7 @@ def hamming_distance(a, b):
 # returns true if the array is an array of all possibilities, else false.
 def is_all_possibilities(arr):
     return sorted(arr) == list(range(0, max(arr)+1)) if arr else False
+
+# You are given a string representing a number in binary. Your task is to delete
+# all the unset bits in this string and return the corresponding number (after keeping only the '1's).
+# In practice, you should implement this function:
