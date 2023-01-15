@@ -7822,3 +7822,5 @@ def baby_shark_lyrics():
 # For this first Kata, you will write a function hamming_distance(a, b) with two equal-length strings
 # containing only 0s and 1s as parameters. There is no need to test the parameters for validity
 # (but you can, if you want).The function's output should be the hamming distance of the two strings as an integer.
+def hamming_distance(a, b):
+    return sum(1 for k,v in zip(a, b) if k!=v)
