@@ -7804,3 +7804,6 @@ def capitals_first(string):
 # If all the characters are unique, return the first character of the string.
 # If there is no unique character, return null in JS or Java, and None in Python.
 # You can assume, that the input string has always non-zero length.
+def first_non_repeated(s):
+    result = [i for i in s if s.count(i) == 1]
+    return result[0] if result else None
