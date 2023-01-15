@@ -7799,3 +7799,8 @@ def starts_with(st, prefix):
 # For an input String: "hey You, Sort me Already!" the function should return: "You, Sort Already! hey me"
 def capitals_first(string):
     return ' '.join([i for i in string.split() if i[0].isupper()] + [i for i in string.split() if i[0].islower()])
+
+# You need to write a function, that returns the first non-repeated character in the given string.
+# If all the characters are unique, return the first character of the string.
+# If there is no unique character, return null in JS or Java, and None in Python.
+# You can assume, that the input string has always non-zero length.
