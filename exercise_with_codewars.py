@@ -7872,3 +7872,8 @@ def shuffle_it(arr, *args):
 # Implement a function to calculate the sum of the numerical values in a nested list. For example :
 def sum_nested(lst):
 	return sum(sum_nested(x) if isinstance(x,list) else x for x in lst)
+
+# In this Kata, you will be given a string and your task is to return the most valuable character.
+# The value of a character is the difference between the index of its last occurrence and the index
+# of its first occurrence. Return the character that has the highest value. If there is
+# a tie, return the alphabetically lowest character. [For Golang return rune]
