@@ -7870,3 +7870,5 @@ def shuffle_it(arr, *args):
     return arr
 
 # Implement a function to calculate the sum of the numerical values in a nested list. For example :
+def sum_nested(lst):
+	return sum(sum_nested(x) if isinstance(x,list) else x for x in lst)
