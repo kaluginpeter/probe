@@ -7856,3 +7856,11 @@ def is_it_a_num(s: str) -> str:
     n = ''.join(i for i in s if i.isdigit())
     res = n.startswith('0') and len(n) == 11
     return n if res else 'Not a phone number'
+
+# Task
+# Create a function shuffleIt. The function accepts two or more parameters. The first parameter arr
+# is an array of numbers, followed by an arbitrary number of numeric arrays.
+# Each numeric array contains two numbers, which are indices for elements in
+# arr (the numbers will always be within bounds). For every such array, swap the
+# elements. Try to use all your new skills: arrow functions,
+# the spread operator, destructuring, and rest parameters.
