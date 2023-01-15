@@ -7807,3 +7807,6 @@ def capitals_first(string):
 def first_non_repeated(s):
     result = [i for i in s if s.count(i) == 1]
     return result[0] if result else None
+
+# Create a function, as short as possible, that returns this lyrics.
+# Your code should be less than 300 characters. Watch out for the three points at the end of the song.
