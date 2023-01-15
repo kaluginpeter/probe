@@ -7868,3 +7868,5 @@ def shuffle_it(arr, *args):
     for k,v in args:
         arr[k], arr[v] = arr[v], arr[k]
     return arr
+
+# Implement a function to calculate the sum of the numerical values in a nested list. For example :
