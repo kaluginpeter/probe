@@ -7864,3 +7864,7 @@ def is_it_a_num(s: str) -> str:
 # arr (the numbers will always be within bounds). For every such array, swap the
 # elements. Try to use all your new skills: arrow functions,
 # the spread operator, destructuring, and rest parameters.
+def shuffle_it(arr, *args):
+    for k,v in args:
+        arr[k], arr[v] = arr[v], arr[k]
+    return arr
