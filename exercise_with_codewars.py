@@ -7810,3 +7810,9 @@ def first_non_repeated(s):
 
 # Create a function, as short as possible, that returns this lyrics.
 # Your code should be less than 300 characters. Watch out for the three points at the end of the song.
+def baby_shark_lyrics():
+    l = ['Baby shark', 'Mommy shark', 'Daddy shark', 'Grandma shark', 'Grandpa shark', "Let's go hunt"]
+    res = ''
+    for i in l:
+        res += f"{i}, doo doo doo doo doo doo\n"*3 + i+'!\n'
+    return res + "Run away,…"
