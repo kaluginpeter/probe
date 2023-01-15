@@ -7877,3 +7877,5 @@ def sum_nested(lst):
 # The value of a character is the difference between the index of its last occurrence and the index
 # of its first occurrence. Return the character that has the highest value. If there is
 # a tie, return the alphabetically lowest character. [For Golang return rune]
+def solve(st):
+    return sorted((st.find(i) - st.rfind(i), i) for i in set(st))[0][1]
