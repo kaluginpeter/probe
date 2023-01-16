@@ -7945,3 +7945,8 @@ def duplicate_elements(m, n):
 # order. Numbering starts with 1.
 def strange_math(n, k):
     return sorted(range(n + 1), key=str).index(k)
+
+# In this Kata, you will be given a string and your task will be to return the length of the
+# longest prefix that is also a suffix. A prefix is the start of a string while
+# the suffix is the end of a string. For instance, the prefixes of the string
+# "abcd" are ["a","ab","abc"]. The suffixes are ["bcd", "cd", "d"]. You should not overlap the prefix and suffix.
