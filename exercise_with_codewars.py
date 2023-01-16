@@ -7950,3 +7950,5 @@ def strange_math(n, k):
 # longest prefix that is also a suffix. A prefix is the start of a string while
 # the suffix is the end of a string. For instance, the prefixes of the string
 # "abcd" are ["a","ab","abc"]. The suffixes are ["bcd", "cd", "d"]. You should not overlap the prefix and suffix.
+def solve(st):
+    return next((i for i in range(len(st) // 2, 0, -1) if st[:i] == st[-i:]), 0)
