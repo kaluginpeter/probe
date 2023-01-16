@@ -7912,3 +7912,5 @@ def remove_chars(s):
 # Write the function :
 # def encode(str)
 # that takes in a string str and replaces all the letters with their respective positions in the English alphabet.
+def encode(string):
+    return ''.join(str(ord(i.lower())-96) if i.isalpha() else i for i in string)
