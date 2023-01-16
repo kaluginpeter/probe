@@ -7901,3 +7901,7 @@ def explode(arr):
 # Note: the function should also work with negative numbers and floats.
 def avg_array(arrs):
     return [sum(i) / len(i) for i in zip(*arrs)]
+
+# Let's assume we need "clean" strings. Clean means a string should only contain letters a-z, A-Z and spaces.
+# We assume that there are no double spaces or line breaks.
+# Write a function that takes a string and returns a string without the unnecessary characters.
