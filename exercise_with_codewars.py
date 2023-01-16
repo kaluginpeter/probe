@@ -7914,3 +7914,7 @@ def remove_chars(s):
 # that takes in a string str and replaces all the letters with their respective positions in the English alphabet.
 def encode(string):
     return ''.join(str(ord(i.lower())-96) if i.isalpha() else i for i in string)
+
+# Kevin is noticing his space run out! Write a function that removes the spaces from
+# the values and returns an array showing the space decreasing. For example, running this function
+# on the array ['i', 'have','no','space'] would produce ['i','ihave','ihaveno','ihavenospace'].
