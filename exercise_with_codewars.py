@@ -7895,3 +7895,7 @@ def move_vowels(s):
 def explode(arr):
     numbers = [i for i in arr if type(i) == int]
     return [arr] * sum(numbers) if numbers else "Void!"
+
+# Create a function that takes a 2D array as an input, and outputs another array that contains
+# the average values for the numbers in the nested arrays at the corresponding indexes.
+# Note: the function should also work with negative numbers and floats.
