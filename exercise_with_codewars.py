@@ -7943,3 +7943,5 @@ def duplicate_elements(m, n):
 # Input: 1 <= n <= 100 000 , 1 <= k <= n.
 # Output: position of the number k in sequence of the first n natural numbers in lexicographic
 # order. Numbering starts with 1.
+def strange_math(n, k):
+    return sorted(range(n + 1), key=str).index(k)
