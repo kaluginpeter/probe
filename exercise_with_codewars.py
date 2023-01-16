@@ -7879,3 +7879,7 @@ def sum_nested(lst):
 # a tie, return the alphabetically lowest character. [For Golang return rune]
 def solve(st):
     return sorted((st.find(i) - st.rfind(i), i) for i in set(st))[0][1]
+
+# Given a string as input, move all of its vowels to the end of the string, in the same order as they were before.
+# Vowels are (in this kata): a, e, i, o, u
+# Note: all provided input strings are lowercase.
