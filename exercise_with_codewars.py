@@ -7892,3 +7892,6 @@ def move_vowels(s):
 # Once you have your score, you must return an array of arrays. Each sub array will be the same as
 # (x) and the number of sub arrays should be equal to the score.
 # For example:
+def explode(arr):
+    numbers = [i for i in arr if type(i) == int]
+    return [arr] * sum(numbers) if numbers else "Void!"
