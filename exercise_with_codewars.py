@@ -7907,3 +7907,8 @@ def avg_array(arrs):
 # Write a function that takes a string and returns a string without the unnecessary characters.
 def remove_chars(s):
     return ''.join(i for i in s if i.isalpha() or i == ' ')
+
+# This is a follow up from my kata The old switcheroo
+# Write the function :
+# def encode(str)
+# that takes in a string str and replaces all the letters with their respective positions in the English alphabet.
