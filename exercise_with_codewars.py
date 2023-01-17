@@ -7967,3 +7967,9 @@ def solve(st):
 # (number to be tested) so it tells the doctor if I'm afraid or not. (return a boolean)
 def am_I_afraid(day,num):
     return {'Monday':  num == 12,'Tuesday': num > 95,'Wednesday': num == 34,'Thursday': num == 0,'Friday': num % 2 == 0,'Saturday': num ==  56,'Sunday': num == 666 or num == -666,}[day]
+
+# There were and still are many problem in CW about palindrome numbers and palindrome strings. We
+# suposse that you know which kind of numbers they are. If not, you
+# may search about them using your favourite search engine.
+# In this kata you will be given a positive integer, val and you have to create the function next_pal
+# ()(nextPal Javascript) that will output the smallest palindrome number higher than val.
