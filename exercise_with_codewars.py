@@ -8049,3 +8049,8 @@ def arr2bin(arr):
 # How much is Michael going to pay? Calculate the amount with two decimals, if necessary.
 def michael_pays(cost):
     return round(cost if cost < 5 else max(cost * 2 / 3, cost - 10), 2)
+
+# Complete the function word (string) and returns a string that spells the word using the NATO phonetic alphabet.
+# There should be a space between each word in the returned string, and the first letter of each word should
+# be capitalized.
+# For those of you that don't want your fingers to bleed, this kata already has a dictionary typed out for you.
