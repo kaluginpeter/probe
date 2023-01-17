@@ -7990,3 +7990,5 @@ def ones_complement(binary_number):
 # Can you write a program which calculate easyline(n) where n is the horizontal line number?
 # The function will take n (with: n>= 0) as parameter and will return the sum of the squares
 # of the binomial coefficients on line n.
+def easyline(n):
+    return easyline(n - 1) * (4 * n - 2) // n if n else 1
