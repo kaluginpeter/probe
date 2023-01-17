@@ -8017,3 +8017,6 @@ def cost(mins):
 # An array is called zero-plentiful if it contains multiple zeros, and every sequence of zeros is at
 # least 4 items long.
 # Your task is to return the number of zero sequences if the given array is zero-plentiful, oherwise 0.
+def zero_plentiful(a):
+    r = [len(i) for i in ''.join('0' if not e else ' ' for e in a).strip().split()]
+    return len(r) if r and min(r) >= 4 else 0
