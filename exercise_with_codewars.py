@@ -7978,3 +7978,6 @@ def next_pal(val):
     while str(val) != str(val)[::-1]:
         val += 1
     return val
+
+# The Ones' Complement of a binary number is the number obtained by swapping all the
+# 0s for 1s and all the 1s for 0s. For example:
