@@ -8041,3 +8041,9 @@ def get_turkish_number(n):
 # Note: The sum of an empty array is zero.
 def arr2bin(arr):
     return bin(sum(arr))[2:] if all(type(i) == int for i in arr) else False
+
+# Kate and Michael want to buy a pizza and share it. Depending on the price of the pizza,
+# they are going to divide the costs:
+# If the pizza is less than €5,- Michael invites Kate, so Michael pays the full price.
+# Otherwise Kate will contribute 1/3 of the price, but no more than €10 (she's broke :-) and Michael pays the rest.
+# How much is Michael going to pay? Calculate the amount with two decimals, if necessary.
