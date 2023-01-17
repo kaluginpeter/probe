@@ -8010,3 +8010,6 @@ def generate_pairs(m, n):
 # have a lesson for 65 minutes or 1 hr 35 mins, he will only have to pay for an hour or 1hr 30 minutes respectively.
 # For a given lesson time in minutes (min) , write a function cost to calculate how much the lesson
 # costs. Input is always > 0.
+import math
+def cost(mins):
+    return 30 + 10 * math.ceil(max(0, mins - 60 - 5) / 30)
