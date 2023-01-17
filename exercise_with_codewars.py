@@ -8047,3 +8047,5 @@ def arr2bin(arr):
 # If the pizza is less than €5,- Michael invites Kate, so Michael pays the full price.
 # Otherwise Kate will contribute 1/3 of the price, but no more than €10 (she's broke :-) and Michael pays the rest.
 # How much is Michael going to pay? Calculate the amount with two decimals, if necessary.
+def michael_pays(cost):
+    return round(cost if cost < 5 else max(cost * 2 / 3, cost - 10), 2)
