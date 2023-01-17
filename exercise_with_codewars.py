@@ -8013,3 +8013,7 @@ def generate_pairs(m, n):
 import math
 def cost(mins):
     return 30 + 10 * math.ceil(max(0, mins - 60 - 5) / 30)
+
+# An array is called zero-plentiful if it contains multiple zeros, and every sequence of zeros is at
+# least 4 items long.
+# Your task is to return the number of zero sequences if the given array is zero-plentiful, oherwise 0.
