@@ -7981,3 +7981,5 @@ def next_pal(val):
 
 # The Ones' Complement of a binary number is the number obtained by swapping all the
 # 0s for 1s and all the 1s for 0s. For example:
+def ones_complement(binary_number):
+    return ''.join('1' if i == '0' else '0' for i in binary_number)
