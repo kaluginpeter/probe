@@ -8031,3 +8031,7 @@ def zero_plentiful(a):
 # all other numbers are simply [tens] + [unit], like twenty one in English.
 # Unlike English, Turkish does not have "teen"-suffixed numbers; e.g.
 # 13 would be directly translated as "ten three" rather than "thirteen" in English.
+def get_turkish_number(n):
+    units = ' bir iki üç dört beş altı yedi sekiz dokuz'.split(' ')
+    tens  = ' on yirmi otuz kırk elli altmış yetmiş seksen doksan'.split(' ')
+    return f'{tens[n // 10]} {units[n % 10]}'.strip() or 'sıfır'
