@@ -8083,3 +8083,6 @@ def convert(number):
 # Note: The input will always be valid (an array and three numbers)
 def score_test(tests, right, omit, wrong):
     return tests.count(0) * right + tests.count(1) * omit - tests.count(2) * wrong
+
+# In this kata you need to build a function to return either true/True or false/False
+# if a string can be seen as the repetition of a simpler/shorter subpattern or not.
