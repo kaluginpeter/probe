@@ -8086,3 +8086,5 @@ def score_test(tests, right, omit, wrong):
 
 # In this kata you need to build a function to return either true/True or false/False
 # if a string can be seen as the repetition of a simpler/shorter subpattern or not.
+def has_subpattern(string):
+    return (string * 2).find(string, 1) != len(string)
