@@ -8081,3 +8081,5 @@ def convert(number):
 # The points awarded for ommitted answers (note that this may be negative)
 # The points deducted for incorrect answers (hint: this value has to be subtracted)
 # Note: The input will always be valid (an array and three numbers)
+def score_test(tests, right, omit, wrong):
+    return tests.count(0) * right + tests.count(1) * omit - tests.count(2) * wrong
