@@ -8171,3 +8171,6 @@ def sum_no_duplicates(l):
 # All input object properties will have only numeric values. Objects are combined
 # together so that the values of matching keys are added together.
 # An example:
+from collections import Counter
+def combine(*args):
+    return sum((Counter(i) for i in args), Counter())
