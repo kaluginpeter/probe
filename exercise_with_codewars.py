@@ -8056,3 +8056,9 @@ def michael_pays(cost):
 # For those of you that don't want your fingers to bleed, this kata already has a dictionary typed out for you.
 def nato(word):
     return ' '.join(LETTERS[i.upper()] for i in word)
+
+# You have to create a function that converts integer given as string into ASCII uppercase letters.
+# All ASCII characters have their numerical order in table.
+# For example,
+# from ASCII table, character of number 65 is "A".
+# Numbers will be next to each other, So you have to split given number to two digit long integers.
