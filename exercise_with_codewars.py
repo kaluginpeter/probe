@@ -8111,3 +8111,10 @@ def time_for_milk_and_cookies(dt):
 # an object with a vowels and consonants total of 0 because the input was NOT a string.
 # Refer to the Example section for a more visual representation of which inputs you could receive
 # and the outputs expected. :)
+def get_count(words=""):
+    if not isinstance(words, str):
+        return {'vowels': 0,'consonants': 0}
+    letter = "".join([c.lower() for c in words if c.isalpha()])
+    vowel = "".join([c for c in letter if c in 'aeiou'])
+    conson = "".join([c for c in letter if c not in 'aeiou'])
+    return {'vowels': len(vowel),'consonants': len(conson)}
