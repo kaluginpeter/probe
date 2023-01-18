@@ -8165,3 +8165,9 @@ def i_tri(s):
 # For instance, for the list [3, 4, 3, 6] , the function should return 10.
 def sum_no_duplicates(l):
     return sum([i for i in l if l.count(i) == 1])
+
+# Your task is to write a function that takes two or more objects and returns a new
+# object which combines all the input objects.
+# All input object properties will have only numeric values. Objects are combined
+# together so that the values of matching keys are added together.
+# An example:
