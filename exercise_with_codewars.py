@@ -8095,3 +8095,5 @@ def has_subpattern(string):
 # Time for Milk and Cookies
 # Complete the function function that accepts a Date object, and returns true if it's
 # Christmas Eve (December 24th), false otherwise.
+def time_for_milk_and_cookies(dt):
+    return str(dt)[-5:-3] == '12' and str(dt)[-2:] == '24'
