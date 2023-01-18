@@ -8088,3 +8088,10 @@ def score_test(tests, right, omit, wrong):
 # if a string can be seen as the repetition of a simpler/shorter subpattern or not.
 def has_subpattern(string):
     return (string * 2).find(string, 1) != len(string)
+
+# Happy Holidays fellow Code Warriors!
+# It's almost Christmas Eve, so we need to prepare some milk and cookies for Santa! Wait...
+# when exactly do we need to do that?
+# Time for Milk and Cookies
+# Complete the function function that accepts a Date object, and returns true if it's
+# Christmas Eve (December 24th), false otherwise.
