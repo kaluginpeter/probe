@@ -8127,3 +8127,9 @@ def get_count(words=""):
 # arguments, a value val, and the exponent of the power, pow_, and outputs the value that
 def find_next_power(val, pow_):
     return int(val ** (1.0 / pow_) + 1) ** pow_
+
+# Sam is an avid collector of numbers. Every time he finds a new number he throws it on the top of his number-pile.
+# Help Sam organise his collection so he can take it to the International Number Collectors Conference in Cologne.
+# Given an array of numbers, your function should return an array of arrays, where
+# each subarray contains all the duplicates of a particular number. Subarrays should be in the same
+# order as the first occurence of the number they contain:
