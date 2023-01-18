@@ -8152,3 +8152,11 @@ def group(arr):
 # and 'Nearly there!' as the value.
 # Finally, if the athlete has completed te distance, return "You're done! Stop running!".
 # All distance should be calculated to two decimal places.
+def i_tri(s):
+    time = 2.4 + 112.0 + 26.2
+    v = time - s
+    k = "Swim" if s < 2.4 else "Bike" if s >= 2.4 and s < 114.4 else 'Run'
+    if s == 0: return 'Starting Line... Good Luck!'
+    elif s >= time: return "You're done! Stop running!"
+    elif time - s <= 10: return {'Run':'Nearly there!'}
+    else: return {k: "{:.2f}".format(v) + ' to go!'}
