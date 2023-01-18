@@ -8062,3 +8062,9 @@ def nato(word):
 # For example,
 # from ASCII table, character of number 65 is "A".
 # Numbers will be next to each other, So you have to split given number to two digit long integers.
+def convert(number):
+    word = ''
+    while number:
+        word += chr(int(number[:2]))
+        number = number[2:]
+    return word
