@@ -8160,3 +8160,6 @@ def i_tri(s):
     elif s >= time: return "You're done! Stop running!"
     elif time - s <= 10: return {'Run':'Nearly there!'}
     else: return {k: "{:.2f}".format(v) + ' to go!'}
+
+# Please write a function that sums a list, but ignores any duplicate items in the list.
+# For instance, for the list [3, 4, 3, 6] , the function should return 10.
