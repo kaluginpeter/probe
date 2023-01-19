@@ -8187,3 +8187,5 @@ def combine(*args):
 # the 1st indexed letters to create the word 'live', etc.
 # Shorter words will have an empty string in the place once the word has already
 # been mapped out (see the last element in the last element in the array).
+def arr_adder(arr):
+    return ' '.join(map(''.join, zip(*arr)))
