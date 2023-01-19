@@ -8224,3 +8224,8 @@ def max_sum(arr,ranges):
 # word has an uneven number of characters, you leave the middle at its previous place:
 def reverse_by_center(s):
     return s[len(s)//2:] + s[:len(s)//2] if len(s) % 2 == 0 else s[len(s)//2+1:] + s[len(s)//2] + s[:len(s)//2]
+
+# This kata is all about adding numbers.
+# You will create a function named add. This function will return the sum
+# of all the arguments. Sounds easy, doesn't it??
+# Well here's the twist. The inputs will gradually increase with their index as parameter to the function.
