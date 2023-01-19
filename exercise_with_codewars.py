@@ -8266,3 +8266,6 @@ def is_int_array(arr):
 # Translations and comments (and upvotes) welcome!
 def factory(x):
     return lambda i: [x * j for j in i]
+
+# Create a function that returns the lowest product of 4 consecutive digits in a number given as a string.
+# This should only work if the number has 4 digits or more. If not, return "Number is too small".
