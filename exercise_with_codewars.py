@@ -8222,3 +8222,5 @@ def max_sum(arr,ranges):
 # your secret messages, you've come up with the following system: you take
 # the word, cut it in half, and place the first half behind the latter. If the
 # word has an uneven number of characters, you leave the middle at its previous place:
+def reverse_by_center(s):
+    return s[len(s)//2:] + s[:len(s)//2] if len(s) % 2 == 0 else s[len(s)//2+1:] + s[len(s)//2] + s[:len(s)//2]
