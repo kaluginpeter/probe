@@ -8207,3 +8207,10 @@ def part(arr):
     l = ['Partridge', 'PearTree', 'Chat', 'Dan', 'Toblerone', 'Lynn', 'AlphaPapa', 'Nomad']
     s = sum(1 for i in arr if i in l)
     return f"Mine's a Pint{'!'*s}" if any(i in l for i in arr) else "Lynn, I've pierced my foot on a spike!!"
+
+# When no more interesting kata can be resolved, I just choose to create the new kata, to
+# solve their own, to enjoy the process --myjinxin2015 said
+# Note:
+# arr/$a always has at least 5 elements;
+# range/$range/ranges always has at least 1 element;
+# All inputs are valid;
