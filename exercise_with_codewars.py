@@ -8243,3 +8243,5 @@ def add(*args):
 # You may assume:
 # there will be no punctuation besides full stops and spaces
 # all but the last full stop will be followed by a space and at least one word
+def fix(paragraph):
+    return '. '.join(i.capitalize() for i in paragraph.split('. '))
