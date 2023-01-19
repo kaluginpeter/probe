@@ -8214,3 +8214,5 @@ def part(arr):
 # arr/$a always has at least 5 elements;
 # range/$range/ranges always has at least 1 element;
 # All inputs are valid;
+def max_sum(arr,ranges):
+    return max([sum(arr[i] for i in range(j[0], j[1]+1)) for j in ranges])
