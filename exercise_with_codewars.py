@@ -8216,3 +8216,9 @@ def part(arr):
 # All inputs are valid;
 def max_sum(arr,ranges):
     return max([sum(arr[i] for i in range(j[0], j[1]+1)) for j in ranges])
+
+# Do you speak retsec?
+# You and your friends want to play undercover agents. In order to exchange
+# your secret messages, you've come up with the following system: you take
+# the word, cut it in half, and place the first half behind the latter. If the
+# word has an uneven number of characters, you leave the middle at its previous place:
