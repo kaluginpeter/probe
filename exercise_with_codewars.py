@@ -8196,3 +8196,10 @@ def arr_adder(arr):
 def equable_triangle(a,b,c):
     p = (a + b + c) / 2
     return (p*(p-a)*(p-b)*(p-c)) ** .5 == a + b + c
+
+# To celebrate today's launch of my Hero's new book: Alan Partridge: Nomad, We
+# have a new series of kata arranged around the great man himself.
+# Task
+# Given an array of terms, if any of those terms relate to Alan Partridge, return Mine's a Pint!
+# The number of exclamation mark (!) after the t should be determined by the number of Alan
+# related terms you find in the given array (x). The related terms are as follows:
