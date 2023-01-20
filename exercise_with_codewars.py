@@ -8361,3 +8361,5 @@ def format_poem(poem):
 # Task:
 # Given a list of the times you need to brew each coffee, return the minimum total waiting time.
 # If you get it right, you will get that raise your boss promised you!
+def barista(coffees):
+    return sum(v * (k + 1) + 2 * k for k,v in enumerate(sorted(coffees, reverse=True)))
