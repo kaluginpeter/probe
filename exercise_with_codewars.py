@@ -8327,3 +8327,5 @@ def decode(str):
 # possible. Only integer amounts will be input, NO floats. This function
 # should output a sequence, where each element in the array represents the
 # amount of a certain bill type. The array will be set up in this manner:
+def give_change(amount):
+    return (amount % 5, (amount%10) // 5, ((amount % 50) % 20) // 10, (amount % 50) // 20, (amount % 100) // 50, amount // 100)
