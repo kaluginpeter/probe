@@ -8318,3 +8318,7 @@ def nerdify(txt):
 # Input/Output
 # The input string consists of lowercase and uperrcase characters and white . The substitution has to be
 # case-sensitive.
+def encode(str):
+    return str.translate(str.maketrans("GDRPLKAEYOUIgdrplkaeyoui","AEYOUIGDRPLKaeyouigdrplk"))
+def decode(str):
+    return encode(str)
