@@ -8295,3 +8295,6 @@ def alan(arr):
 # You only have to handle valid numbers, not Infinity, NaN, or similar. Always return a positive decimal part.
 def get_decimal(n):
     return abs(n) % 1
+
+# Make your strings more nerdy: Replace all 'a'/'A' with 4, 'e'/'E' with 3 and
+# 'l' with 1 e.g. "Fundamentals" --> "Fund4m3nt41s"
