@@ -8345,3 +8345,5 @@ def make_parts(arr, chunkSize):
 # Try to solve this challenge with the str.split() and the str.join() string methods.
 # Every sentence will end with a period, and every new sentence will have one space before the previous period.
 # Be careful about trailing whitespace in your solution.
+def format_poem(poem):
+    return '.\n'.join(poem.split('. '))
