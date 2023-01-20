@@ -8284,3 +8284,6 @@ def number_format(n):
 # you will write needs to return the colour as 'key' and association as its 'value'.
 def colour_association(arr):
     return [{i[0]: i[1]} for i in arr]
+
+# Your job is to check that the provided list / array of stations contains all
+# of the stops Alan mentions. The list of stops are as follows:
