@@ -8275,3 +8275,5 @@ def lowest_product(input):
     return min(reduce(mul, [*map(int, input)][i:i + 4]) for i in range(0, len(input) - 3)) if len(input) > 3 else "Number is too small"
 
 # Format any integer provided into a string with "," (commas) in the correct places.
+def number_format(n):
+    return format(n, ',d')
