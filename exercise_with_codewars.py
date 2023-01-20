@@ -8323,9 +8323,7 @@ def encode(str):
 def decode(str):
     return encode(str)
 
-# Create a function that will take any amount of money and break it down to the smallest number of bills as
-# possible. Only integer amounts will be input, NO floats. This function
-# should output a sequence, where each element in the array represents the
-# amount of a certain bill type. The array will be set up in this manner:
-def give_change(amount):
-    return (amount % 5, (amount%10) // 5, ((amount % 50) % 20) // 10, (amount % 50) // 20, (amount % 100) // 50, amount // 100)
+# Write function makeParts or make_parts (depending on your language) that will
+# take an array as argument and the size of the chunk.
+# Example: if an array of size 123 is given and chunk size is 10 there will be
+# 13 parts, 12 of size 10 and 1 of size 3.
