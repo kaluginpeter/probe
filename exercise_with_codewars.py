@@ -8287,3 +8287,6 @@ def colour_association(arr):
 
 # Your job is to check that the provided list / array of stations contains all
 # of the stops Alan mentions. The list of stops are as follows:
+def alan(arr):
+    stations = ['Rejection','Disappointment','Backstabbing Central','Shattered Dreams Parkway']
+    return 'Smell my cheese you mother!' if all(i in arr for i in stations) else 'No, seriously, run. You will miss it.'
