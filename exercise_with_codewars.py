@@ -8322,3 +8322,8 @@ def encode(str):
     return str.translate(str.maketrans("GDRPLKAEYOUIgdrplkaeyoui","AEYOUIGDRPLKaeyouigdrplk"))
 def decode(str):
     return encode(str)
+
+# Create a function that will take any amount of money and break it down to the smallest number of bills as
+# possible. Only integer amounts will be input, NO floats. This function
+# should output a sequence, where each element in the array represents the
+# amount of a certain bill type. The array will be set up in this manner:
