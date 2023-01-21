@@ -8389,3 +8389,6 @@ def factorial(n):
 def pattern(n):
     c = n if n % 2 == 0 else n + 1
     return '\n'.join(str(i)*i for i in range(1, c, 2))
+
+# You have two arrays in this kata, every array contains unique elements only. Your task
+# is to calculate number of elements in the first array which are also present in the second array.
