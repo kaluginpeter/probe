@@ -8405,3 +8405,12 @@ def match_arrays(v, r):
 # tie if equal, including if list is empty
 # Please note that any prefix that might appear in the binary representation, e.g. 0b,
 # should not be counted towards the battle.
+def bits_battle(numbers):
+    odd = 0
+    even = 0
+    for n in numbers:
+        if n % 2:
+            odd += bin(n).count('1')
+        elif n != 0 and n % 2 == 0:
+            even += bin(n)[2:].count('0')
+    return 'odds win' if odd > even else 'evens win' if even > odd else 'tie'
