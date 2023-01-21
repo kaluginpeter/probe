@@ -8439,3 +8439,6 @@ def t_area(s):
 # arbitrary sequence (possibly empty) of lowercase letters. No other character of string a can be replaced.
 # If it is possible to replace the asterix in a to obtain string b, then string b matches the pattern.
 # If the string matches, return true else false.
+import re
+def solve(a, b):
+    return bool(re.fullmatch(a.replace('*', '.*'), b))
