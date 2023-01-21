@@ -8451,3 +8451,9 @@ def solve(a, b):
 # The start time will always be before the end time.
 def elapsed_seconds(start, end):
     return (end - start).total_seconds()
+
+# The input will be an array of dictionaries.
+# Return the values as a string-seperated sentence in the order of their keys' integer equivalent
+# (increasing order).
+# The keys are not reoccurring and their range is -999 < key < 999. The dictionaries'
+# keys & values will always be strings and will always not be empty.
