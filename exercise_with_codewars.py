@@ -8363,3 +8363,8 @@ def format_poem(poem):
 # If you get it right, you will get that raise your boss promised you!
 def barista(coffees):
     return sum(v * (k + 1) + 2 * k for k,v in enumerate(sorted(coffees, reverse=True)))
+
+# Implement function which will return sum of roots of a quadratic equation rounded
+# to 2 decimal places, if there are any possible roots, else return None/null/nil/nothing.
+# If you use discriminant,when discriminant = 0, x1 = x2 = root => return sum of both roots.
+# There will always be valid arguments.
