@@ -8414,3 +8414,9 @@ def bits_battle(numbers):
         elif n != 0 and n % 2 == 0:
             even += bin(n)[2:].count('0')
     return 'odds win' if odd > even else 'evens win' if even > odd else 'tie'
+
+# Create a function mispelled(word1, word2):
+# It checks if the word2 differs from word1 by at most one character.
+# This can include an extra char at the end or the beginning of either of words.
+# In the tests that expect true, the mispelled word will always differ mostly by
+# one character. If the two words are the same, return True.
