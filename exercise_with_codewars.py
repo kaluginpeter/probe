@@ -8377,3 +8377,6 @@ def roots(a,b,c):
 # this blows up the stack for large values of n - most systems
 # cannot handle stack depths much greater than 2000 levels.
 # Write an implementation to calculate the factorial of arbitrarily large numbers, without recursion.
+import math
+def factorial(n):
+    return math.prod(list(range(1, n + 1))) if n >= 0 else None
