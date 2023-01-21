@@ -8386,3 +8386,6 @@ def factorial(n):
 # If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
 # If any even number is passed as argument then the pattern should last upto the largest
 # odd number which is smaller than the passed even number.
+def pattern(n):
+    c = n if n % 2 == 0 else n + 1
+    return '\n'.join(str(i)*i for i in range(1, c, 2))
