@@ -8457,3 +8457,5 @@ def elapsed_seconds(start, end):
 # (increasing order).
 # The keys are not reoccurring and their range is -999 < key < 999. The dictionaries'
 # keys & values will always be strings and will always not be empty.
+def sentence(ds):
+    return ' '.join(v for k, v in sorted((int(k), v) for d in ds for k, v in d.items()))
