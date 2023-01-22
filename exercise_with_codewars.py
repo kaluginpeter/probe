@@ -8540,3 +8540,6 @@ def f(x, a, b, c):
 # in ascending order starting with '#010101', '#020202', etc. (using lower case letters).
 def shades_of_grey(n):
     return [ '#{0:02x}{0:02x}{0:02x}'.format(i+1) for i in range(min(254, n)) ]
+
+# You have to write a function pattern which creates the following pattern upto n number of rows.
+# If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
