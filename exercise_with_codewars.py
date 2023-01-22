@@ -8479,3 +8479,5 @@ def pak(s):
 # A level multiplier is also used. The game starts at level 0. The level increases
 # every ten lines you clear. Note that after increasing the level, the total number of cleared lines is not reset.
 # For our task you can use this table:
+def get_score(arr) -> int:
+    return sum([0, 40, 100, 300, 1200][v] * (1 + (sum(arr[:k]) // 10)) for k, v in enumerate(arr))
