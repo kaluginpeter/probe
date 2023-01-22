@@ -8497,3 +8497,7 @@ def hex_hash(code):
 # use of mod in Python
 def is_even(n):
     return n // 2 == n / 2
+
+# Implement the method lastIndexOf (last_index_of in PHP and Python), which accepts a linked list (head) and
+# a value, and returns the index (zero based) of the last occurrence of that value if exists, or -1 otherwise.
+# For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, lastIndexOf / last_index_of should return 3.
