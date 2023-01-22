@@ -8519,3 +8519,11 @@ def last_index_of(head, search_val):
 # of the penultimate line of s2 except the last char
 # and so on until the nth line of strng has the n chars of the nth line of s1
 # plus the first char of the first line of s2.
+def compose(s1, s2):
+    s1 = s1.split("\n")
+    s2 = s2.split("\n")[::-1]
+    count = len(s1)
+    out = []
+    for i in range(count):
+        out.append(s1[i][:i+1] + s2[i][:(count-i)])
+    return "\n".join(out)
