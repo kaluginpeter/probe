@@ -8488,3 +8488,10 @@ def get_score(arr) -> int:
 # the numbers in the hex strings (ignore letters).
 def hex_hash(code):
     return sum(int(i) for j in code for i in hex(ord(j)) if i.isdigit())
+
+# Is the number even?
+# If the numbers is even return true. If it's odd, return false.
+# Oh yeah... the following symbols/commands have been disabled!
+# use of %
+# use of .even? in Ruby
+# use of mod in Python
