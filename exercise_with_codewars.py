@@ -8527,3 +8527,7 @@ def compose(s1, s2):
     for i in range(count):
         out.append(s1[i][:i+1] + s2[i][:(count-i)])
     return "\n".join(out)
+
+# Suppose a variable x can have only three possible different values a, b and c, and you wish to assign to x
+# the value other than its current one, and you wish your code to be independent of the values of a, b and c.
+# What is the most efficient way to cycle among three values? Write a function f so that it satisfies
