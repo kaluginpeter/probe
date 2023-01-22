@@ -8495,3 +8495,5 @@ def hex_hash(code):
 # use of %
 # use of .even? in Ruby
 # use of mod in Python
+def is_even(n):
+    return n // 2 == n / 2
