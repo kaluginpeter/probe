@@ -8486,3 +8486,5 @@ def get_score(arr) -> int:
 # Wait, that would be too easy! Every character of the string should be converted
 # to the hex value of its ascii code, then the result should be the sum of
 # the numbers in the hex strings (ignore letters).
+def hex_hash(code):
+    return sum(int(i) for j in code for i in hex(ord(j)) if i.isdigit())
