@@ -8538,3 +8538,5 @@ def f(x, a, b, c):
 # Write a function that takes a number n as a parameter and return an array containing
 # n shades of grey in hexadecimal code (#aaaaaa for example). The array should be sorted
 # in ascending order starting with '#010101', '#020202', etc. (using lower case letters).
+def shades_of_grey(n):
+    return [ '#{0:02x}{0:02x}{0:02x}'.format(i+1) for i in range(min(254, n)) ]
