@@ -8465,3 +8465,5 @@ def sentence(ds):
 # Anyway, as some basic language education(??) this kata requires you to turn any sentence provided (s)
 # into ex-pat balinese waffle by inserting the word 'pak' between every other word. Simple 8kyu :D
 # Pak should not be the first or last word. Strings of just spaces should return an empty string.
+def pak(s):
+    return ' pak '.join(s.split())
