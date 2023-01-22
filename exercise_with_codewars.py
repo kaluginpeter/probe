@@ -8481,3 +8481,8 @@ def pak(s):
 # For our task you can use this table:
 def get_score(arr) -> int:
     return sum([0, 40, 100, 300, 1200][v] * (1 + (sum(arr[:k]) // 10)) for k, v in enumerate(arr))
+
+# Complete the function that accepts a valid string and returns an integer.
+# Wait, that would be too easy! Every character of the string should be converted
+# to the hex value of its ascii code, then the result should be the sum of
+# the numbers in the hex strings (ignore letters).
