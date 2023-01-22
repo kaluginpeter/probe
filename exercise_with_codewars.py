@@ -8543,3 +8543,5 @@ def shades_of_grey(n):
 
 # You have to write a function pattern which creates the following pattern upto n number of rows.
 # If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
+def pattern(integer):
+    return "\n".join("".join(str(j) for j in range(integer, integer - i, -1)) for i in range(1, integer + 1))
