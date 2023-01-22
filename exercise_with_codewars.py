@@ -8554,3 +8554,5 @@ def pattern(integer):
 # this will occur at oddly-indexed locations. For instance, in Python,
 # the values at indices 1, 3, 5, etc. should be squared because these are the second,
 # fourth, and sixth positions in the list.
+def alternate_sq_sum(arr):
+    return sum(v ** 2 if k % 2 else v for k, v in enumerate(arr))
