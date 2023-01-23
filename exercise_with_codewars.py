@@ -8629,3 +8629,6 @@ def shift_left(word1, word2, n = 0):
 
 # In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
 # Your task is to output a list of everything inbetween both occurrences of this element in the list.
+def duplicate_sandwich(arr):
+    start, end = [k for k, v in enumerate(arr) if arr.count(v) > 1]
+    return arr[start+1:end]
