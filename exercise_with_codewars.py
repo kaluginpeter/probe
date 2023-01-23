@@ -8652,3 +8652,9 @@ def max_product(a):
     a.remove(max1)
     max2 = max(a)
     return max1 * max2
+
+# This Kata is intended as a small challenge for my students
+# All Star Code Challenge #20
+# Create a function called addArrays() that combines two arrays of equal length, summing each element of the
+# first with the corresponding element in the second, returning the "combined" summed array.
+# Raise an error if input arguments are not of equal length.
