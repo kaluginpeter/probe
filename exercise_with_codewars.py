@@ -8558,3 +8558,5 @@ def alternate_sq_sum(arr):
     return sum(v ** 2 if k % 2 else v for k, v in enumerate(arr))
 
 # Write a function which maps a function over the lists in a list:
+def grid_map(inp, op):
+    return [list(map(op, i)) for i in inp]
