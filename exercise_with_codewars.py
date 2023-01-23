@@ -8658,3 +8658,5 @@ def max_product(a):
 # Create a function called addArrays() that combines two arrays of equal length, summing each element of the
 # first with the corresponding element in the second, returning the "combined" summed array.
 # Raise an error if input arguments are not of equal length.
+def add_arrays(array1, array2):
+    return [array1[k] + array2[k] for k, v in enumerate(array1)] if len(array1) == len(array2) else Error
