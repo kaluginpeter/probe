@@ -8635,3 +8635,8 @@ def duplicate_sandwich(arr):
 
 # Complete the solution. It should try to retrieve the value of the array at the index provided.
 # If the index is out of the array's max bounds then it should return the default value instead.
+def solution(items, index, default_value):
+    try:
+        return items[index]
+    except:
+        return default_value
