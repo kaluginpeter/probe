@@ -8647,3 +8647,8 @@ def solution(items, index, default_value):
 # All inputs will be valid.
 # Passing [2, 6, 3] should return 18, the product of [6, 3].
 # Disclaimer: only accepts solutions that are faster than his, which has a running time O(nlogn).
+def max_product(a):
+    max1 = max(a)
+    a.remove(max1)
+    max2 = max(a)
+    return max1 * max2
