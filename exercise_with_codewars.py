@@ -8583,3 +8583,6 @@ class Converter():
 # Notes:
 # The sorting step is vital.
 # Input arrays are non-empty.
+def median(array):
+    l = len(array) % 2 != 0
+    return sorted(array)[len(array)//2] if l else (sorted(array)[len(array)//2-1] + sorted(array)[len(array)//2])/2
