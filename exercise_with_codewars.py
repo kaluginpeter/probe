@@ -8597,3 +8597,14 @@ def median(array):
 # it should be included in the count.
 # Return "Not valid" instead if any one of the inputs is not an integer or is less than 0.
 # For this kata, single digit numbers will NOT be considered numerical palindromes.
+def palindrome(num,s):
+    if type(num) != int or num <= 0 or type(s) != int or s < 0:
+        return 'Not valid'
+    l = []
+    c = 0
+    while c < s:
+        if str(num) == str(num)[::-1] and len(str(num)) > 1:
+            l.append(num)
+            c += 1
+        num += 1
+    return l
