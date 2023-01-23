@@ -8560,3 +8560,9 @@ def alternate_sq_sum(arr):
 # Write a function which maps a function over the lists in a list:
 def grid_map(inp, op):
     return [list(map(op, i)) for i in inp]
+
+# Write a module Converter that can take ASCII text and convert it to hexadecimal. The class should
+# also be able to take hexadecimal and convert it to ASCII text. To make the
+# conversion well defined, each ASCII character is represented by exactly two hex digits,
+# left-padding with a 0 if needed. The conversion from ascii to
+# hex should produce lowercase strings (i.e. f6 instead of F6).
