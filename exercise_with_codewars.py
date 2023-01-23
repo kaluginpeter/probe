@@ -8566,3 +8566,10 @@ def grid_map(inp, op):
 # conversion well defined, each ASCII character is represented by exactly two hex digits,
 # left-padding with a 0 if needed. The conversion from ascii to
 # hex should produce lowercase strings (i.e. f6 instead of F6).
+class Converter():
+    @staticmethod
+    def to_ascii(h):
+        return bytes.fromhex(h).decode()
+    @staticmethod
+    def to_hex(s):
+        return ''.join(hex(ord(i))[2:] for i in s)
