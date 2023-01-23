@@ -8626,3 +8626,6 @@ def shift_left(word1, word2, n = 0):
         return shift_left(word1[1:], word2, n + 1)
     else:
         return shift_left(word1, word2[1:], n + 1)
+
+# In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
+# Your task is to output a list of everything inbetween both occurrences of this element in the list.
