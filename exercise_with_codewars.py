@@ -8619,3 +8619,10 @@ def palindrome(num,s):
 # Notes
 # Both strings consist of lowercase latin letters.
 # If the string is already empty, you cannot perform any more delete operations.
+def shift_left(word1, word2, n = 0):
+    if word1 == word2:
+        return n
+    elif len(word1) > len(word2):
+        return shift_left(word1[1:], word2, n + 1)
+    else:
+        return shift_left(word1, word2[1:], n + 1)
