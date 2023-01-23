@@ -8660,3 +8660,6 @@ def max_product(a):
 # Raise an error if input arguments are not of equal length.
 def add_arrays(array1, array2):
     return [array1[k] + array2[k] for k, v in enumerate(array1)] if len(array1) == len(array2) else Error
+
+# Complete the method that returns true if 2 integers share at least
+# two 1 bits, otherwise return false. For simplicity assume that all numbers are non-negative.
