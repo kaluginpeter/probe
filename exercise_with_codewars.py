@@ -8632,3 +8632,6 @@ def shift_left(word1, word2, n = 0):
 def duplicate_sandwich(arr):
     start, end = [k for k, v in enumerate(arr) if arr.count(v) > 1]
     return arr[start+1:end]
+
+# Complete the solution. It should try to retrieve the value of the array at the index provided.
+# If the index is out of the array's max bounds then it should return the default value instead.
