@@ -8556,3 +8556,5 @@ def pattern(integer):
 # fourth, and sixth positions in the list.
 def alternate_sq_sum(arr):
     return sum(v ** 2 if k % 2 else v for k, v in enumerate(arr))
+
+# Write a function which maps a function over the lists in a list:
