@@ -8719,3 +8719,5 @@ def alpha_seq(s):
 # Assume that:
 # x is an unsigned, 32-bit integer;
 # the bits are zero-indexed (the least significant bit is position 0)
+def any_odd(x):
+    return '1' in list(bin(x))[-2::-2]
