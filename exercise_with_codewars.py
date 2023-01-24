@@ -8675,3 +8675,6 @@ def shared_bits(a, b):
 # To keep: only alpha characters, space characters and exclamation marks.
 # To remove: numbers and these characters: %$&/£?@
 # Result should be all in uppercase.
+import re
+def rad_ladies(name):
+    return "".join(re.findall("[A-Z\s!]+", name.upper()))
