@@ -8705,3 +8705,5 @@ def pass_the_door_man(word):
 # !!false = false
 # Your task is to complete the function 'negationValue()' that takes a string of negations with a value and
 # returns what the value would be if those negations were applied to it.
+def negation_value(str, val):
+    return bool(not val if str.count('!') % 2 else val)
