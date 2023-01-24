@@ -8695,3 +8695,7 @@ def minimum(a, x):
 # The answer to the Club Doorman is 20 * 3 = 60
 # TASK
 # The function passTheDoorMan with a given string word shall return the right number.
+def pass_the_door_man(word):
+    for char in word:
+        if char*2 in word:
+            return (ord(char)-96) * 3
