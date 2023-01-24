@@ -8753,3 +8753,6 @@ def olympic_ring(string):
 # For example: 'Piccadilly', 56, 93, 243, 20, 14 -> "£6.90"
 # Your task is to calculate the total cost of the journey and return the cost rounded to 2
 # decimal places in the format (where x is a number): £x.xx
+def london_city_hacker(journey):
+    vehicle = "".join("t" if isinstance(k, str) else "b" for k in journey).replace("bb", "b")
+    return f"£{sum(2.4 if i == 't' else 1.5 for i in vehicle):.2f}"
