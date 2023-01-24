@@ -8678,3 +8678,6 @@ def shared_bits(a, b):
 import re
 def rad_ladies(name):
     return "".join(re.findall("[A-Z\s!]+", name.upper()))
+
+# Given two integers a and x, return the minimum non-negative number to add
+# to / subtract from a to make it a multiple of x.
