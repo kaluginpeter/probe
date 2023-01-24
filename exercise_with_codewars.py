@@ -8769,3 +8769,6 @@ def zipvalidate(postcode):
 # first half lowercased and the last half uppercased.
 # eg: foobar == fooBAR
 # If it is an odd number then 'round' it up to find which letters to uppercase. See example below.
+def sillycase(silly):
+    half_life = (len(silly) + 1) // 2
+    return silly[:half_life].lower() + silly[half_life:].upper()
