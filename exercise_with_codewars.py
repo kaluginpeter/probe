@@ -8712,3 +8712,5 @@ def negation_value(str, val):
 # as a string of comma-separated sequences sorted alphabetically, with each
 # sequence starting with an uppercase character followed by n-1 lowercase characters, where n
 # is the letter's alphabet position 1-26.
+def alpha_seq(s):
+    return ",".join((char*(ord(char)-96)).capitalize() for char in sorted(s.lower()))
