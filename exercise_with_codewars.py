@@ -8732,3 +8732,13 @@ def any_odd(x):
 # if score is 1 or less, return 'Not even a medal!'; if score is 2, return 'Bronze!'; if score is 3,
 # return 'Silver!'; if score is more than 3, return 'Gold!';
 # Dots over i's and any other letters don't count as rings.
+def olympic_ring(string):
+    ring = 'abdegopqADOPQRBB'
+    count = sum(string.count(c) for c in ring) // 2
+    if count <= 1:
+        return 'Not even a medal!'
+    if count == 2:
+        return 'Bronze!'
+    if count == 3:
+        return 'Silver!'
+    return 'Gold!'
