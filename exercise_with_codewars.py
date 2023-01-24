@@ -8764,3 +8764,8 @@ def london_city_hacker(journey):
 # Please also keep in mind that a valid post code cannot start with 0, 5, 7, 8 or 9
 def zipvalidate(postcode):
     return len(postcode) == 6 and postcode.isdigit() and postcode[0] not in "05789"
+
+# Create a function that takes a string and returns that string with the
+# first half lowercased and the last half uppercased.
+# eg: foobar == fooBAR
+# If it is an odd number then 'round' it up to find which letters to uppercase. See example below.
