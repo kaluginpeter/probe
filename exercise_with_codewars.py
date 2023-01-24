@@ -8714,3 +8714,8 @@ def negation_value(str, val):
 # is the letter's alphabet position 1-26.
 def alpha_seq(s):
     return ",".join((char*(ord(char)-96)).capitalize() for char in sorted(s.lower()))
+
+# Return true when any odd bit of x equals 1; false otherwise.
+# Assume that:
+# x is an unsigned, 32-bit integer;
+# the bits are zero-indexed (the least significant bit is position 0)
