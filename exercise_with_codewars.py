@@ -8707,3 +8707,8 @@ def pass_the_door_man(word):
 # returns what the value would be if those negations were applied to it.
 def negation_value(str, val):
     return bool(not val if str.count('!') % 2 else val)
+
+# In this kata you will be given a random string of letters and tasked with returning them
+# as a string of comma-separated sequences sorted alphabetically, with each
+# sequence starting with an uppercase character followed by n-1 lowercase characters, where n
+# is the letter's alphabet position 1-26.
