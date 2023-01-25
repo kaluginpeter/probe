@@ -8812,3 +8812,5 @@ def area(d, l):
 # Given the following input array:
 # Write a function that returns the array sorted alphabetically by the programming language.
 # In case there are some developers that code in the same language, sort them alphabetically by the first name:
+def sort_by_language(arr):
+	return sorted(arr, key=lambda x: (x["language"], x["first_name"]))
