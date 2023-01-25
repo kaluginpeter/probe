@@ -8841,3 +8841,11 @@ def sumsum(n):
 # Write push() and buildOneTwoThree() functions to easily update and initialize
 # linked lists. Try to use the push() function within your buildOneTwoThree() function.
 # Here's an example of push() usage:
+class Node(object):
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+def push(head, data):
+    return Node(data, head)
+def build_one_two_three():
+    return Node(1, Node(2, Node(3)))
