@@ -8804,3 +8804,5 @@ def rpsls(p1, p2):
 # the input diagonal is less than or equal to the length of the side,
 # return "Not a rectangle". If the resultant area has decimals round it to two places.
 # This kata is meant for beginners. Rank and upvote to bring it out of beta!
+def area(d, l):
+    return "Not a rectangle" if d <= l else round(l * (d**2 - l**2) **.5, 2)
