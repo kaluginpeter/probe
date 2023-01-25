@@ -8821,3 +8821,5 @@ def sort_by_language(arr):
 # Return a nested array or a tuple depending on the language:
 # The first sequence being only the 1s and 0s from the original sequence.
 # The second sequence being the indexes of the elements greater than 1 in the original sequence.
+def binary_cleaner(lst):
+    return [i for i in lst if i < 2], [k for k, v in enumerate(lst) if v > 1]
