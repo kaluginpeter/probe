@@ -8814,3 +8814,10 @@ def area(d, l):
 # In case there are some developers that code in the same language, sort them alphabetically by the first name:
 def sort_by_language(arr):
 	return sorted(arr, key=lambda x: (x["language"], x["first_name"]))
+
+# Task
+# Implement a function which finds the numbers less than 2, and
+# the indices of numbers greater than 1 in the given sequence, and returns them as a pair of sequences.
+# Return a nested array or a tuple depending on the language:
+# The first sequence being only the 1s and 0s from the original sequence.
+# The second sequence being the indexes of the elements greater than 1 in the original sequence.
