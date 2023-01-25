@@ -8869,3 +8869,6 @@ def zip_with(fn, a1, a2):
 # On the other hand, the word "HOME" is not a shifter.
 # Find the number of unique shifter words in the input string (without duplicates). All shifters to
 # be counted, even if they are paired (like "MOM" and "WOW"). String contains only uppercase letters.
+import re
+def shifter(st):
+     return len(set(re.findall(r"\b[HINOSXZMW]+\b", st)))
