@@ -8775,3 +8775,9 @@ def sillycase(silly):
 
 # You have to create a method "compoundArray" which should take as input two int arrays
 # of different length and return one int array with numbers of both arrays shuffled one by one.
+def compound_array(a, b):
+    l = []
+    while a or b:
+        if a: l.append(a.pop(0))
+        if b: l.append(b.pop(0))
+    return l
