@@ -8823,3 +8823,10 @@ def sort_by_language(arr):
 # The second sequence being the indexes of the elements greater than 1 in the original sequence.
 def binary_cleaner(lst):
     return [i for i in lst if i < 2], [k for k, v in enumerate(lst) if v > 1]
+
+# Let us consider integer coordinates x, y in the Cartesian plane and three functions f, g, h defined by:
+# f: 1 <= x <= n, 1 <= y <= n --> f(x, y) = min(x, y)
+# g: 1 <= x <= n, 1 <= y <= n --> g(x, y) = max(x, y)
+# h: 1 <= x <= n, 1 <= y <= n --> h(x, y) = x + y
+# where n is a given integer (n >= 1) and x, y are integers.
+# In the table below you can see the value of the function f with n = 6.
