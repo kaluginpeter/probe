@@ -8806,3 +8806,9 @@ def rpsls(p1, p2):
 # This kata is meant for beginners. Rank and upvote to bring it out of beta!
 def area(d, l):
     return "Not a rectangle" if d <= l else round(l * (d**2 - l**2) **.5, 2)
+
+# You will be given an array of objects representing data about developers who have signed
+# up to attend the next coding meetup that you are organising.
+# Given the following input array:
+# Write a function that returns the array sorted alphabetically by the programming language.
+# In case there are some developers that code in the same language, sort them alphabetically by the first name:
