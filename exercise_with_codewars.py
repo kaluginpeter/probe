@@ -8830,3 +8830,9 @@ def binary_cleaner(lst):
 # h: 1 <= x <= n, 1 <= y <= n --> h(x, y) = x + y
 # where n is a given integer (n >= 1) and x, y are integers.
 # In the table below you can see the value of the function f with n = 6.
+def sumin(n):
+    return n * (n + 1) * (2 * n + 1) // 6
+def sumax(n):
+    return n * (n + 1) * (4 * n - 1) // 6
+def sumsum(n):
+    return n * n * (n + 1)
