@@ -8856,3 +8856,5 @@ def build_one_two_three():
 # If the arrays are of unequal length, the output will only be as long as the shorter one.
 # (Values of the longer array are simply not used.)
 # Inputs should not be modified.
+def zip_with(fn, a1, a2):
+    return list(map(fn, a1, a2))
