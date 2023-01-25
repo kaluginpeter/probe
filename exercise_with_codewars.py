@@ -8836,3 +8836,8 @@ def sumax(n):
     return n * (n + 1) * (4 * n - 1) // 6
 def sumsum(n):
     return n * n * (n + 1)
+
+# Linked Lists - Push & BuildOneTwoThree
+# Write push() and buildOneTwoThree() functions to easily update and initialize
+# linked lists. Try to use the push() function within your buildOneTwoThree() function.
+# Here's an example of push() usage:
