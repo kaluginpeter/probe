@@ -8772,3 +8772,6 @@ def zipvalidate(postcode):
 def sillycase(silly):
     half_life = (len(silly) + 1) // 2
     return silly[:half_life].lower() + silly[half_life:].upper()
+
+# You have to create a method "compoundArray" which should take as input two int arrays
+# of different length and return one int array with numbers of both arrays shuffled one by one.
