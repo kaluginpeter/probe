@@ -8953,3 +8953,7 @@ from statistics import median, mean
 def mean_vs_median(numbers):
     med, mea = median(numbers), mean(numbers)
     return 'mean' if mea > med else 'median' if med > mea else 'same'
+
+# Mash 2 arrays together so that the returning array has alternating elements of the
+# 2 arrays . Both arrays will always be the same length.
+# eg. [1,2,3] + ['a','b','c'] = [1, 'a', 2, 'b', 3, 'c']
