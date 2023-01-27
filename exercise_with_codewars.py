@@ -8973,3 +8973,7 @@ def array_mash(a, b):
 def no_ifs_no_buts(a, b):
     dictionary = {a < b:'smaller than', a == b:'equal to', a > b: 'greater than'}
     return f'{a} is {dictionary[True]} {b}'
+
+# This is the first part of this kata series. Second part is here and third part is here
+# Add two English words together!
+# Implement a class Arith (struct struct Arith{value : &'static str,} in Rust) such that
