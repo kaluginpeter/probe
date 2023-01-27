@@ -8895,3 +8895,11 @@ def nth_fib(n):
 # get 5 but for n = 26 we also get 5. Nevertheless 5 is the integer square root of 26.
 # The kata is to return the count of the progression of integer approximations that the algorithm makes.
 # Reference:
+def int_rac(n, guess):
+    count = 0
+    while True:
+        count += 1
+        next = (guess + n // guess) // 2
+        if next == guess:
+            return count
+        guess = next
