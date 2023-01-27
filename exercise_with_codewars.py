@@ -8963,3 +8963,10 @@ def array_mash(a, b):
         l.append(a.pop(0))
         l.append(b.pop(0))
     return l
+
+# Write a function that accepts two parameters (a and b) and says whether a is smaller
+# than, bigger than, or equal to b.
+# Here is an example code:
+# There's only one problem...
+# You can't use if statements, and you can't use shorthands like (a < b)?true:false;
+# in fact the word "if" and the character "?" are not allowed in the code.
