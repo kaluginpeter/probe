@@ -8999,3 +8999,6 @@ class Arith():
 #  [7, 8, 9]]
 # Remember that the indexes start from one and not zero.
 # Then you output a string like this:
+def grid_index(grid, indexes):
+    l = [i for j in grid for i in j]
+    return ''.join(l[i - 1] for i in indexes)
