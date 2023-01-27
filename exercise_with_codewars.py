@@ -8919,3 +8919,8 @@ def int_rac(n, guess):
 # Don't forget to take the rate for a day to be p divided by 36000 since banks
 # consider that there are 360 days in a year.
 # You have: a0 > 0, p% > 0, a >= a0
+from math import ceil, log
+from datetime import date, timedelta as td
+def date_nb_days(a0, a, p):
+    dur = log(a, 1 + p / 36000.0) - log(a0, 1 + p / 36000.0)
+    return str(date(2016, 1, 1) + td(ceil(dur)))
