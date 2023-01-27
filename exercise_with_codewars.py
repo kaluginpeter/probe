@@ -9011,3 +9011,5 @@ def grid_index(grid, indexes):
 # These amounts are already preloaded as floats into the CHANGE dictionary for you to use!
 # You should return the total in the format $x.xx.
 # Examples:
+def change_count(s):
+    return f"${sum(CHANGE[i] for i in s.split()):.2f}"
