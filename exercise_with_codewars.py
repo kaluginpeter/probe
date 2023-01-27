@@ -8949,3 +8949,7 @@ def trim(phrase, size):
 # 'same' - in case both mean and median share the same value
 # Reminder: Median
 # Array will always be valid (odd-length >= 3)
+from statistics import median, mean
+def mean_vs_median(numbers):
+    med, mea = median(numbers), mean(numbers)
+    return 'mean' if mea > med else 'median' if med > mea else 'same'
