@@ -8970,3 +8970,6 @@ def array_mash(a, b):
 # There's only one problem...
 # You can't use if statements, and you can't use shorthands like (a < b)?true:false;
 # in fact the word "if" and the character "?" are not allowed in the code.
+def no_ifs_no_buts(a, b):
+    dictionary = {a < b:'smaller than', a == b:'equal to', a > b: 'greater than'}
+    return f'{a} is {dictionary[True]} {b}'
