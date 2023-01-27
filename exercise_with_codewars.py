@@ -8977,3 +8977,12 @@ def no_ifs_no_buts(a, b):
 # This is the first part of this kata series. Second part is here and third part is here
 # Add two English words together!
 # Implement a class Arith (struct struct Arith{value : &'static str,} in Rust) such that
+integer = ['zero', 'one', 'two', 'three', 'four', 'five',
+           'six', 'seven', 'eight', 'nine', 'ten','eleven',
+           'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+           'seventeen', 'eighteen', 'nineteen', 'twenty']
+class Arith():
+    def __init__(self, int):
+        self.i = integer.index(int)
+    def add(self, int):
+         return integer[integer.index(int) + self.i]
