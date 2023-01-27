@@ -9002,3 +9002,12 @@ class Arith():
 def grid_index(grid, indexes):
     l = [i for j in grid for i in j]
     return ''.join(l[i - 1] for i in indexes)
+
+# You've been collecting change all day, and it's starting to pile up in your pocket, but
+# you're too lazy to see how much you've found.
+# Good thing you can code!
+# Create change_count() to return a dollar amount of how much change you have!
+# Valid types of change include:
+# These amounts are already preloaded as floats into the CHANGE dictionary for you to use!
+# You should return the total in the format $x.xx.
+# Examples:
