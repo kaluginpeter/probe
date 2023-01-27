@@ -8935,3 +8935,9 @@ def date_nb_days(a0, a, p):
 # If the string is smaller or equal than the maximum string length,
 # then simply return the string with no trimming or dots required.
 # e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
+def trim(phrase, size):
+    if len(phrase) <= size:
+        return phrase
+    elif size <= 3 :
+        return phrase[:size] + '...'
+    return phrase[:size - 3] + '...'
