@@ -9118,3 +9118,5 @@ def vector_length(v):
 # checkVowel('cat', 4)  ->   false // this position doesn't exist
 # }
 # P.S. If n < 0, return false
+def check_vowel(string, position):
+    return string[position].lower() in 'aeoiu' if position >= 0 and position <= len(string) else False
