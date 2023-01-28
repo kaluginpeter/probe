@@ -9120,3 +9120,6 @@ def vector_length(v):
 # P.S. If n < 0, return false
 def check_vowel(string, position):
     return string[position].lower() in 'aeoiu' if position >= 0 and position <= len(string) else False
+
+# Update the solution method to round the argument value to the closest
+# precision of two. The argument will always be a float.
