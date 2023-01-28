@@ -9108,3 +9108,13 @@ def diagonal(m):
 import math
 def vector_length(v):
     return math.sqrt(math.pow(v[0][0] - v[1][0], 2) + math.pow(v[0][1] - v[1][1], 2))
+
+# Check if it is a vowel(a, e, i, o, u,) on the n position in a string
+# (the first argument). Don't forget about uppercase.
+# A few cases:
+# {
+# checkVowel('cat', 1)  ->   true // 'a' is a vowel
+# checkVowel('cat', 0)  ->   false // 'c' is not a vowel
+# checkVowel('cat', 4)  ->   false // this position doesn't exist
+# }
+# P.S. If n < 0, return false
