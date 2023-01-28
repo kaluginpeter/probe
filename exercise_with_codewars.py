@@ -9034,3 +9034,5 @@ def reject(seq, predicate):
 # Write the function eq_sum_powdig(), that finds the numbers below a given upper
 # limit hMax (inclusive) that fulfills this property but with different exponents as the power for the digits.
 # eq_sum_powdig(hMax, exp): ----> sequence of numbers (sorted list) (Number one should not be considered).
+def eq_sum_powdig(hMax, exp):
+    return [i for i in range(2, hMax + 1) if sum(int(j) ** exp for j in str(i)) == i]
