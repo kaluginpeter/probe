@@ -9039,3 +9039,5 @@ def eq_sum_powdig(hMax, exp):
 
 # Write a function that adds from two invocations.
 # All inputs will be integers.
+def add(a):
+    return lambda x: x + a
