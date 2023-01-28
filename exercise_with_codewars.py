@@ -9069,3 +9069,9 @@ def middle_me(N, X, Y):
 # In this kata you will be given a sequence of the dimensions
 # of rectangles ( sequence with width and length ) and circles ( radius - just a number ).
 # Your task is to return a new sequence of dimensions, sorted ascending by area.
+def sort_by_area(seq):
+    def func(x):
+        if isinstance(x, tuple):
+            return x[0] * x[1]
+        return 3.14 * x * x
+    return sorted(seq, key=func)
