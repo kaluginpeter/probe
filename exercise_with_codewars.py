@@ -9036,3 +9036,6 @@ def reject(seq, predicate):
 # eq_sum_powdig(hMax, exp): ----> sequence of numbers (sorted list) (Number one should not be considered).
 def eq_sum_powdig(hMax, exp):
     return [i for i in range(2, hMax + 1) if sum(int(j) ** exp for j in str(i)) == i]
+
+# Write a function that adds from two invocations.
+# All inputs will be integers.
