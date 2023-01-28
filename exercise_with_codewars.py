@@ -9061,3 +9061,7 @@ def even_and_odd(n):
 # Rules:
 # If X cannot be placed in the middle, return X.
 # N will always be > 0.
+def middle_me(N, X, Y):
+    if N % 2 == 1:
+        return X
+    return Y * (N // 2) + X + Y * (N // 2)
