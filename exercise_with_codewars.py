@@ -9050,3 +9050,7 @@ def add(a):
 # 4628	4628	0
 # 0 is considered as an even number.
 # In C and JavaScript you should return an array of two elements such as the first is NE and the second is NO.
+def even_and_odd(n):
+    even = ''.join(str(i) for i in str(n) if int(i) % 2 == 0)
+    odd = ''.join(str(i) for i in str(n) if int(i) % 2 != 0)
+    return (int(even) if even else 0, int(odd) if odd else 0)
