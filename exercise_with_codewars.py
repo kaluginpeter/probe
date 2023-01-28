@@ -9065,3 +9065,7 @@ def middle_me(N, X, Y):
     if N % 2 == 1:
         return X
     return Y * (N // 2) + X + Y * (N // 2)
+
+# In this kata you will be given a sequence of the dimensions
+# of rectangles ( sequence with width and length ) and circles ( radius - just a number ).
+# Your task is to return a new sequence of dimensions, sorted ascending by area.
