@@ -9251,3 +9251,6 @@ def abundant_number(num):
 # (If you run out of ammo at the same time as the remaining zombies reach you, return
 # "You shot X zombies before being eaten: overwhelmed.".)
 # Good luck! (I think you're going to need it.)
+def zombie_shootout(z, r, a):
+    count = min(r * 2, a)
+    return f"You shot all {z} zombies." if count >= z else f"You shot {count} zombies before being eaten: { 'overwhelmed' if count == 2 * r else 'ran out of ammo'}."
