@@ -9133,3 +9133,13 @@ def solution(n):
 # role for that employee or if no employee is not found it should return "Does not work here!"
 # The array is preloaded and can be referenced using the variable employees ($employees in Ruby). It uses the
 # following structure.
+def find_employees_role(name):
+    for i in employees:
+        if len(name.split()) > 1:
+            if name.split()[0] == i['first_name']:
+                if name.split()[1] == i['last_name']:
+                    return i['role']
+        elif len(name.split()) == 0:
+            if name.split()[0] == i['first_name']:
+                return i['role']
+    return 'Does not work here!'
