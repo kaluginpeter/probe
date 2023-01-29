@@ -9210,3 +9210,6 @@ def sexy_name(name):
 # Write a script that takes an array of possible passwords and a string
 # of binary representing the possible password. Convert the binary to a string and compare to
 # the password array. If the password is found, return the password string, else return false;
+def decode_pass(pass_list, bits):
+    pas = "".join(chr(int(x, 2)) for x in bits.split())
+    return pas if pas in pass_list else False
