@@ -9203,3 +9203,10 @@ def sort_list(sort_key, l):
 def sexy_name(name):
     s = sum(SCORES[i.upper()] for i in name.replace(' ', ''))
     return 'THE ULTIMATE SEXIEST' if s >=600 else 'VERY SEXY' if 301 <= s <= 599 else 'PRETTY SEXY' if 61 <= s <= 300 else 'NOT TOO SEXY'
+
+# A wealthy client has forgotten the password to his business website, but he has a list of
+# possible passwords. His previous developer has left a file on the server with the name password.txt.
+# You open the file and realize it's in binary format.
+# Write a script that takes an array of possible passwords and a string
+# of binary representing the possible password. Convert the binary to a string and compare to
+# the password array. If the password is found, return the password string, else return false;
