@@ -9186,3 +9186,6 @@ def append(listA, listB):
 # Condiments: free
 def total_bill(s):
     return s.count('r') * 2 if s.count('r') < 5 else (s.count('r') - (s.count('r')//5)) * 2
+
+# You'll be passed an array of objects (list) - you must sort them in
+# descending order based on the value of the specified property (sortBy).
