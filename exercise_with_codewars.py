@@ -9154,3 +9154,17 @@ def find_employees_role(name):
 # and the other is not, simply return the non-null/NULL/None/nil list.
 # The push() and buildOneTwoThree() (build_one_two_three() in PHP and ruby) functions need not be
 # redefined. The Node class is also predefined for you in PHP.
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+def last(head):
+    n = head
+    while n and n.next:
+    	n = n.next
+    return n
+def append(listA, listB):
+    if not listA:
+    	return listB
+    last(listA).next = listB
+    return listA
