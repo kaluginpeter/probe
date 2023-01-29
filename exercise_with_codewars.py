@@ -9184,3 +9184,5 @@ def append(listA, listB):
 # for the bill. The current price for the dishes are as follows:
 # Red plates of sushi: $2 each - but every 5th one is free!
 # Condiments: free
+def total_bill(s):
+    return s.count('r') * 2 if s.count('r') < 5 else (s.count('r') - (s.count('r')//5)) * 2
