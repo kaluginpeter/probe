@@ -9200,3 +9200,6 @@ def sort_list(sort_key, l):
 #               'N': 450, 'O': 80, 'P': 2, 'Q': 12, 'R': 400, 'S': 113, 'T': 405,
 #               'U': 11, 'V': 10, 'W': 10, 'X': 3, 'Y': 210, 'Z': 23}
 # The program must return how sexy one's name is according to the "Sexy score ranking" chart.
+def sexy_name(name):
+    s = sum(SCORES[i.upper()] for i in name.replace(' ', ''))
+    return 'THE ULTIMATE SEXIEST' if s >=600 else 'VERY SEXY' if 301 <= s <= 599 else 'PRETTY SEXY' if 61 <= s <= 300 else 'NOT TOO SEXY'
