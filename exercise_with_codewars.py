@@ -9223,3 +9223,5 @@ def decode_pass(pass_list, bits):
 # Useful link: Sequence
 # Be sure to check out my Arithmetic sequence Kata first ;)
 # Don't forget about the indexing pitfall ;)
+def seqlist(first,c,l):
+    return list(range(first,first+l*c,c))
