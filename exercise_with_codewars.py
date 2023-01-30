@@ -9271,3 +9271,8 @@ def getSlope(p1, p2):
 # Your task is to write a function maskify, which changes all but the last four characters into '#'.
 def maskify(cc):
     return '#'*len(cc[:-4])+cc[-4:] if len(cc) > 4 else cc
+
+# Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with
+# all of the integer's divisors(except for 1 and the number itself), from smallest
+# to largest. If the number is prime return the string '(integer) is prime' (null in C#)
+# (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).
