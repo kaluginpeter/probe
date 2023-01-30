@@ -9312,3 +9312,5 @@ def two_oldest_ages(ages):
 # Notes
 # The parameters (divisor, bound) passed to the function are only positive values .
 # It's guaranteed that a divisor is Found
+def max_multiple(divisor, bound):
+    return max(i for i in range(bound + 1) if i % divisor == 0)
