@@ -9294,3 +9294,10 @@ def divisors(integer):
 # I have also created other katas. Take a look if you enjoyed this kata!
 def dont_give_me_five(start, end):
     return sum('5' not in str(i) for i in range(start, end + 1))
+
+# The two oldest ages function/method needs to be completed. It
+# should take an array of numbers as its argument and return the two highest numbers
+# within the array. The returned value should be an array in the format [second oldest age,  oldest age].
+# The order of the numbers passed in could be any order.
+# The array will always include at least 2 items. If there are two or
+# more oldest age, then return both of them in array format.
