@@ -9356,3 +9356,5 @@ def reverseNumber(n):
 # otherwise.
 # The string may contain any of the 128 ASCII characters. Characters are case-sensitive,
 # e.g. 'a' and 'A' are considered different characters.
+def has_unique_chars(string):
+    return all(string.count(i) == 1 for i in string)
