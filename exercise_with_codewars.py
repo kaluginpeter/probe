@@ -9314,3 +9314,10 @@ def two_oldest_ages(ages):
 # It's guaranteed that a divisor is Found
 def max_multiple(divisor, bound):
     return max(i for i in range(bound + 1) if i % divisor == 0)
+
+# Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
+# Example:
+# Input:
+# 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+# Output:
+# 'alpha beta gamma delta'
