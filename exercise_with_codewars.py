@@ -9338,3 +9338,5 @@ def remove_duplicate_words(s):
 # sorted in ascending order since all (zero) adjacent pairs of integers satisfy the
 # condition that the left integer does not exceed the right integer in value.
 # For example:
+def in_asc_order(arr):
+    return arr == sorted(arr)
