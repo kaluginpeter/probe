@@ -9346,3 +9346,6 @@ def in_asc_order(arr):
 # Your task is to return the number of JavaScript developers coming from Europe.
 def count_developers(lst):
     return sum(1 for i in lst if i["continent"] == 'Europe' and i["language"] == 'JavaScript')
+
+# Given a number, write a function to output its reverse digits. (e.g. given 123 the answer is 321)
+# Numbers should preserve their sign; i.e. a negative number should still be negative when reversed.
