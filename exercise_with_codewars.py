@@ -9264,3 +9264,8 @@ def zombie_shootout(z, r, a):
 # two points is vertical or if the same point is given twice, the function should return null/None.
 def getSlope(p1, p2):
     return None if p1[0] == p2[0] else (p2[1] - p1[1]) / (p2[0] - p1[0])
+
+# Usually when you buy something, you're asked whether your credit card number, phone
+# number or answer to your most secret question is still correct. However, since someone could look over
+# your shoulder, you don't want that shown on your screen. Instead, we mask it.
+# Your task is to write a function maskify, which changes all but the last four characters into '#'.
