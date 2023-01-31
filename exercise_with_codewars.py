@@ -9396,3 +9396,9 @@ def fizzbuzz(n):
 # until the resulting number is a palindrome.
 # If the input number is already a palindrome, the number of steps is 0.
 # All inputs are guaranteed to have a final palindrome smaller than 263 2^632 6 3.
+def palindrome_chain_length(n):
+    c = 0
+    while str(n) != str(n)[::-1]:
+        c += 1
+        n = n + int(str(n)[::-1])
+    return c
