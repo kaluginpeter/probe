@@ -9365,3 +9365,5 @@ def has_unique_chars(string):
 # it to single squares in just one break, but for size 3 x 1 you must do two breaks.
 # If input data is invalid you should return 0 (as in no breaks are needed if
 # we do not have any chocolate to split). Input will always be a non-negative integer.
+def break_chocolate(n, m):
+    return (n * m) - 1 if n or m else 0
