@@ -9467,3 +9467,5 @@ def sum_even_numbers(seq):
 # For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers 7
 # and 8 occur once, and their sum is 15. Every other number occurs twice.
 # More examples in the test cases.
+def repeats(arr):
+    return sum(i for i in arr if arr.count(i) == 1)
