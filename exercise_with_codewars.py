@@ -9440,3 +9440,5 @@ def cooking_time(eggs):
 # Your function should return the int 5.
 # If no number was deleted from the starting array, your function should return the int 0.
 # Note: N may be 1 or less (in the latter case, the first array will be []).
+def find_deleted_number(arr, mixed_arr):
+    return sum(arr) - sum(mixed_arr)
