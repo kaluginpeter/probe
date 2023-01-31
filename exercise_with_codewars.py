@@ -9474,3 +9474,5 @@ def repeats(arr):
 # Write a method, that gets an array of integer-numbers and return an
 # array of the averages of each integer-number and his follower, if there is one.
 # Example:
+def averages(arr):
+    return [(arr[x] + arr[x + 1]) / 2 for x in range(len(arr or []) - 1)]
