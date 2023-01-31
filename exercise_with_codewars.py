@@ -9451,3 +9451,6 @@ def find_deleted_number(arr, mixed_arr):
 # Additional Notes:
 # Only valid years (positive integers) will be tested, so you don't have to validate them
 # Examples can be found in the test fixture.
+import calendar
+def isLeapYear(year):
+    return calendar.isleap(year)
