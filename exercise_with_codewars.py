@@ -9469,3 +9469,8 @@ def sum_even_numbers(seq):
 # More examples in the test cases.
 def repeats(arr):
     return sum(i for i in arr if arr.count(i) == 1)
+
+#Get the averages of these numbers
+# Write a method, that gets an array of integer-numbers and return an
+# array of the averages of each integer-number and his follower, if there is one.
+# Example:
