@@ -9425,3 +9425,9 @@ def halving_sum(n):
 # it takes 5 minutes to boil an egg
 # we assume, that the water is boiling all the time (no time to heat up)
 # for simplicity we also don't consider the time it takes to put eggs into the pot or get them out of it
+def cooking_time(eggs):
+    c = 0
+    while eggs > 0:
+        c += 1
+        eggs -= 8
+    return c * 5
