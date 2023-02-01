@@ -9504,3 +9504,5 @@ def solve(s):
     return max(int(i) for i in l.split())
 
 # Given a non-negative integer, return an array / a list of the individual digits in order.
+def digitize(n):
+    return [int(i) for i in str(n)]
