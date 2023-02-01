@@ -9502,3 +9502,5 @@ def is_same_language(lst):
 def solve(s):
     l = ''.join(' ' if i.isalpha() else i for i in s)
     return max(int(i) for i in l.split())
+
+# Given a non-negative integer, return an array / a list of the individual digits in order.
