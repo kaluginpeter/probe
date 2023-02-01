@@ -9481,3 +9481,5 @@ def averages(arr):
 # Assume that argument is an integer.
 def get_sum_of_digits(num):
     return sum(int(i) for i in str(num))
+
+# Given a number return the closest number to it that is divisible by 10.
