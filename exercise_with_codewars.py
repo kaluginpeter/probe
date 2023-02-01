@@ -9537,3 +9537,5 @@ def missing_no(nums):
 # An example valid array would be [3, 2, 5, 1, 3, 4].
 # It has the integers 1 through 5 and 3 is duplicated. [1, 2, 4, 5, 5] would not be valid as it is missing 3.
 # You should return the duplicate value as a single integer.
+def find_dup(arr):
+    return sum(arr) - sum(set(arr))
