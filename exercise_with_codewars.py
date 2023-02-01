@@ -9517,3 +9517,6 @@ def digitize(n):
 # Age is represented by a number which can be any positive integer.
 def get_average(lst):
     return round(sum(i['age'] for i in lst) / len(lst))
+
+# You are provided with an array of positive integers and an additional integer n (n > 1).
+# Calculate the sum of each value in the array to the nth power. Then subtract the sum of the original array.
