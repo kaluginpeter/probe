@@ -9492,3 +9492,5 @@ def closest_multiple_10(i):
 # true if all developers in the list code in the same language; or
 # false otherwise.
 # For example, given the following input array:
+def is_same_language(lst):
+    return len(set(i['language'] for i in lst)) == 1
