@@ -9476,3 +9476,6 @@ def repeats(arr):
 # Example:
 def averages(arr):
     return [(arr[x] + arr[x + 1]) / 2 for x in range(len(arr or []) - 1)]
+
+# Debug   function getSumOfDigits that takes positive integer to calculate sum of its digits.
+# Assume that argument is an integer.
