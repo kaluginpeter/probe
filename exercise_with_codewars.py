@@ -9506,3 +9506,12 @@ def solve(s):
 # Given a non-negative integer, return an array / a list of the individual digits in order.
 def digitize(n):
     return [int(i) for i in str(n)]
+
+# You will be given a sequence of objects representing data about developers who have signed up to
+# attend the next coding meetup that you are organising.
+# Given the following input array:
+# write a function that returns the average age of developers (rounded to the nearest integer).
+# In the example above your function should return 50 (number).
+# Notes:
+# The input array will always be valid and formatted as in the example above.
+# Age is represented by a number which can be any positive integer.
