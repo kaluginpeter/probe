@@ -9499,3 +9499,6 @@ def is_same_language(lst):
 # to compare the number groupings and return the largest number. Numbers will not have leading zeros.
 # For example, solve("gh12cdy695m1") = 695, because this is the largest of all number groupings.
 # Good luck!
+def solve(s):
+    l = ''.join(' ' if i.isalpha() else i for i in s)
+    return max(int(i) for i in l.split())
