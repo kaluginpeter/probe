@@ -9578,3 +9578,5 @@ def largest_power(N):
     while 3**c < N:
         c += 1
     return c - 1
+
+# Given a mathematical equation that has *,+,-,/, reverse it as follows:
