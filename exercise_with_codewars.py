@@ -9612,3 +9612,8 @@ def tv_remote(word):
 # Look at result of testcase, guess the code!
 def testit(a, b):
     return sorted(list(set(a)) + list(set(b)))
+
+# The trick to counting kookaburras is to listen carefully
+# The males sound like HaHaHa...
+# The females sound like hahaha...
+# And they always alternate male/female
