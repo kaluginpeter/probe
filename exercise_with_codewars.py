@@ -9580,3 +9580,6 @@ def largest_power(N):
     return c - 1
 
 # Given a mathematical equation that has *,+,-,/, reverse it as follows:
+import re
+def solve(eq):
+    return ''.join(reversed(re.split(r'(\W+)', eq)))
