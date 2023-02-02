@@ -9588,3 +9588,11 @@ def solve(eq):
 # to reverse the portion of that string between those two indices inclusive.
 def solve(s,a,b):
     return s[:a] + s[a:b+1][::-1] + s[b+1:]
+
+# How many button presses on my remote are required to type a given word?
+# Notes
+# The cursor always starts on the letter a (top left)
+# Remember to also press OK to "accept" each character.
+# Take a direct route from one character to the next
+# The cursor does not wrap (e.g. you cannot leave one edge and reappear on the opposite edge)
+# A "word" (for the purpose of this Kata) is any sequence of characters available on my virtual "keyboard"
