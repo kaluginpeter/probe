@@ -9565,3 +9565,6 @@ def reverse(string):
 # Given an array of numbers, return the difference between the largest and smallest values.
 def between_extremes(numbers):
     return max(numbers) - min(numbers)
+
+# Given a long number, return all the possible sum of two digits of it.
+# For example, 12345: all possible sum of two digits from that number are:
