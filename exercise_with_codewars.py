@@ -9563,3 +9563,5 @@ def reverse(string):
     return string[::-1]
 
 # Given an array of numbers, return the difference between the largest and smallest values.
+def between_extremes(numbers):
+    return max(numbers) - min(numbers)
