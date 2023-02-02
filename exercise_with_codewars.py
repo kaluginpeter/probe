@@ -9573,3 +9573,8 @@ def digits(num):
     return list(map(sum, combinations(map(int,str(num)),2)))
 
 # Given a positive integer N, return the largest integer k such that 3^k < N.
+def largest_power(N):
+    c = 0
+    while 3**c < N:
+        c += 1
+    return c - 1
