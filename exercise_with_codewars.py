@@ -9605,3 +9605,8 @@ def tv_remote(word):
         res += abs(p//8-pp//8) + abs(p%8-pp%8) + 1
         pp = p
     return res
+
+# No Story
+# No Description
+# Only by Thinking and Testing
+# Look at result of testcase, guess the code!
