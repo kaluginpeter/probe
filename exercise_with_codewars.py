@@ -9568,3 +9568,6 @@ def between_extremes(numbers):
 
 # Given a long number, return all the possible sum of two digits of it.
 # For example, 12345: all possible sum of two digits from that number are:
+from itertools import combinations
+def digits(num):
+    return list(map(sum, combinations(map(int,str(num)),2)))
