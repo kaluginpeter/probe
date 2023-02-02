@@ -9571,3 +9571,5 @@ def between_extremes(numbers):
 from itertools import combinations
 def digits(num):
     return list(map(sum, combinations(map(int,str(num)),2)))
+
+# Given a positive integer N, return the largest integer k such that 3^k < N.
