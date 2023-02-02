@@ -9561,3 +9561,5 @@ def add(l_st):
     return sum(l_st)
 def reverse(string):
     return string[::-1]
+
+# Given an array of numbers, return the difference between the largest and smallest values.
