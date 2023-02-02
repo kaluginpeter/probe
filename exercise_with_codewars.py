@@ -9632,3 +9632,7 @@ def kooka_counter(laughing):
 # you have created. For this particular number, you would return:504132
 #Input: A string of length 1 - 1000
 #Output: A correctly reordered string.
+def reverse_fun(n):
+    for i in range(len(n)):
+        n = n[:i] + n[i:][::-1]
+    return n
