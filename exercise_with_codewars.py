@@ -9617,3 +9617,6 @@ def testit(a, b):
 # The males sound like HaHaHa...
 # The females sound like hahaha...
 # And they always alternate male/female
+import re
+def kooka_counter(laughing):
+    return len(re.findall(r'(ha)+|(Ha)+',laughing))
