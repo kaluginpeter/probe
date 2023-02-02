@@ -9551,3 +9551,6 @@ from statistics import mean
 from math import floor
 def sum_average(arr):
     return floor(sum(mean(i) for i in arr))
+
+# Should be easy, begin by looking at the code. Debug the code and the functions should work.
+# There are three functions: Multiplication (x) Addition (+) and Reverse (!esreveR)
