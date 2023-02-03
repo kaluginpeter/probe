@@ -9701,3 +9701,6 @@ def get_first_python(users):
         if user['language'] == 'Python':
             return f'{user["first_name"]}, {user["country"]}'
     return 'There will be no Python developers'
+
+# An arrow is formed in a rectangle with sides a and b by joining
+# the bottom corners to the midpoint of the top edge and the centre of the rectangle.
