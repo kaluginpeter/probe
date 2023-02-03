@@ -9674,3 +9674,5 @@ def pattern(n):
 # the given languages. Return the list of languages where your test score is at least 60, in
 # descending order of the scores.
 # Note: the scores will always be unique (so no duplicate values)
+def my_languages(results):
+    return sorted((k for k,v in results.items() if v >= 60), reverse=True, key=results.get)
