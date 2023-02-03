@@ -9696,3 +9696,8 @@ class Dinglemouse(object):
 # Your task is to return one of the following strings:
 # < firstName here >, < country here > of the first Python developer who has signed up; or
 # There will be no Python developers if no Python developer has signed up.
+def get_first_python(users):
+    for user in users:
+        if user['language'] == 'Python':
+            return f'{user["first_name"]}, {user["country"]}'
+    return 'There will be no Python developers'
