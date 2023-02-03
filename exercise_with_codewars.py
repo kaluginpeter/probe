@@ -9669,3 +9669,8 @@ def house_numbers_sum(inp):
 # There are no whitespaces in the pattern.
 def pattern(n):
     return '\n'.join(f"{i}"*i for i in range(1, n+1))
+
+# You are given a dictionary/hash/object containing some languages and your test results in
+# the given languages. Return the list of languages where your test score is at least 60, in
+# descending order of the scores.
+# Note: the scores will always be unique (so no duplicate values)
