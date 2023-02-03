@@ -9704,3 +9704,5 @@ def get_first_python(users):
 
 # An arrow is formed in a rectangle with sides a and b by joining
 # the bottom corners to the midpoint of the top edge and the centre of the rectangle.
+def arrow_area(a, b):
+    return a * b / 4
