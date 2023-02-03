@@ -9667,3 +9667,5 @@ def house_numbers_sum(inp):
 # Rules/Note:
 # If n < 1 then it should return "" i.e. empty string.
 # There are no whitespaces in the pattern.
+def pattern(n):
+    return '\n'.join(f"{i}"*i for i in range(1, n+1))
