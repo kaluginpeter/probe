@@ -9676,3 +9676,10 @@ def pattern(n):
 # Note: the scores will always be unique (so no duplicate values)
 def my_languages(results):
     return sorted((k for k,v in results.items() if v >= 60), reverse=True, key=results.get)
+
+# The code provided is supposed return a person's Full Name given their first and last names.
+# But it's not working properly.
+# Notes
+# The first and/or last names are never null, but may be empty.
+# Task
+# Fix the bug so we can all go home early.
