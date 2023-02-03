@@ -9647,3 +9647,5 @@ def reverse_fun(n):
 # 'cde' appears only once (1)
 # 'uap' does not appear in the first array (0)
 # Therefore, solve(array1, array2) = [2, 1, 0]
+def solve(a,b):
+    return [a.count(i) for i in b]
