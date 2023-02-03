@@ -9712,3 +9712,13 @@ def arrow_area(a, b):
 # the character is "+" , "-", "*", or "/", the function will return the result
 # of the corresponding mathematical function on the two numbers. If the string is
 # not one of the specified characters, the function should return null.
+def calculate(a, o, b):
+    if o == "+":
+        return a + b
+    elif o == "-":
+        return a - b
+    elif o == "/" and b != 0:
+        return a / b
+    elif o == "*":
+        return a * b
+    return None
