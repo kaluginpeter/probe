@@ -9658,3 +9658,5 @@ def solve(a,b):
 # which surprises him so much that he stops adding numbers to his total right after seeing that house.
 # For the given sequence of houses determine the sum that the boy will get. It is guaranteed that
 # there will always be at least one 0 house on the path.
+def house_numbers_sum(inp):
+    return sum(inp[:inp.index(0)])
