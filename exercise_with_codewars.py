@@ -9736,3 +9736,12 @@ def perimeter_sequence(a, n):
 # to its rim side by side. You can see the 1-, 2- and 3-interesting polygons in the picture below.
 def shape_area(n):
     return n**2 + (n - 1) ** 2
+
+# You have to search all numbers from inclusive 1 to inclusive a given number x, that
+# have the given digit d in it.
+# The value of d will always be 0 - 9.
+# The value of x will always be greater than 0.
+# You have to return as an array
+# the count of these numbers,
+# their sum
+# and their product.
