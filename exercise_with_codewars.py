@@ -9808,3 +9808,6 @@ def without_last(lst):
 # A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 def is_prime(n):
     return pow(2, n - 1, n) == 1 if n > 2 else n == 2
+
+# Oh no, Timmy's Sort doesn't seem to be working? Your task is to fix
+# the sortArray function to sort all numbers in ascending order
