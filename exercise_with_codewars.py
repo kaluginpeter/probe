@@ -9786,3 +9786,9 @@ def greet_developers(lst):
 import math
 def mygcd(x, y):
     return math.gcd(x, y)
+
+# Consider integer numbers from 0 to n - 1 written down along the
+# circle in such a way that the distance between any two neighbouring
+# numbers is equal (note that 0 and n - 1 are neighbouring, too).
+# Given n and firstNumber/first_number/first-number, find the number which is written
+# in the radially opposite position to firstNumber.
