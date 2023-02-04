@@ -9792,3 +9792,5 @@ def mygcd(x, y):
 # numbers is equal (note that 0 and n - 1 are neighbouring, too).
 # Given n and firstNumber/first_number/first-number, find the number which is written
 # in the radially opposite position to firstNumber.
+def circle_of_numbers(n, fst):
+    return (fst + (n / 2)) % n
