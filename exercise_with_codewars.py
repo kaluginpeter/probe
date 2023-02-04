@@ -9756,3 +9756,5 @@ def numbers_with_digit_inside(x, d):
 # Rules/Note:
 # If n < 1 then it should return "" i.e. empty string.
 # There are no whitespaces in the pattern.
+def pattern(n):
+    return('\n'.join(''.join(str(i) for i in range(n,j,-1)) for j in range(n)))
