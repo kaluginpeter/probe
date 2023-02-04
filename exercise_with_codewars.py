@@ -9745,3 +9745,7 @@ def shape_area(n):
 # the count of these numbers,
 # their sum
 # and their product.
+import math
+def numbers_with_digit_inside(x, d):
+    l = [i for i in range(1, x+1) if str(d) in str(i)]
+    return [len(l), sum(l), math.prod(l)] if l else [0, 0, 0]
