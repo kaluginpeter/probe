@@ -9749,3 +9749,10 @@ import math
 def numbers_with_digit_inside(x, d):
     l = [i for i in range(1, x+1) if str(d) in str(i)]
     return [len(l), sum(l), math.prod(l)] if l else [0, 0, 0]
+
+# You have to write a function pattern which returns the following Pattern
+# (See Pattern & Examples) upto n number of rows.
+# Note: Returning the pattern is not the same as Printing the pattern.
+# Rules/Note:
+# If n < 1 then it should return "" i.e. empty string.
+# There are no whitespaces in the pattern.
