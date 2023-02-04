@@ -9800,3 +9800,5 @@ def circle_of_numbers(n, fst):
 # task is to figure out why and fix it.
 # Good luck!
 # Hint: watch out for side effects.
+def without_last(lst):
+    return lst[:-1]
