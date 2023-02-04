@@ -9758,3 +9758,5 @@ def numbers_with_digit_inside(x, d):
 # There are no whitespaces in the pattern.
 def pattern(n):
     return('\n'.join(''.join(str(i) for i in range(n,j,-1)) for j in range(n)))
+
+# Determine the area of the largest square that can fit inside a circle with radius r.
