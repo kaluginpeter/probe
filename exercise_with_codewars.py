@@ -9774,3 +9774,7 @@ def triangular(n):
 # 'greeting' with the following string value:
 # Hi < firstName here >, what do you like the most about < language here >?
 # For example, given the following input array:
+def greet_developers(lst):
+    for x in lst:
+        x["greeting"] = f"Hi {x['firstName']}, what do you like the most about {x['language']}?"
+    return lst
