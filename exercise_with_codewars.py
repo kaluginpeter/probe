@@ -9866,3 +9866,12 @@ def elimination(arr):
     for x in arr:
         if arr.count(x) == 2:
             return x
+        
+# Your friend Robbie has successfully created an AI that is capable of communicating in English!
+# Robbie's almost done with the project, however the machine's output isn't working as expected.
+# Here's a sample of a sentence that it outputs:
+# Your function should:
+# Capitalise the first letter of the first word.
+# Add a period (.) to the end of the sentence.
+# Join the words into a complete string, with spaces.
+# Do no other manipulation on the words.
