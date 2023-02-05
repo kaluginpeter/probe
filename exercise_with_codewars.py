@@ -9819,3 +9819,8 @@ def sort_array(value):
 # Take a given number and return the Arara's equivalent.
 def count_arara(n):
     return ('adak ' * (n // 2) + 'anane' * (n % 2)).strip()
+
+# No Story
+# No Description
+# Only by Thinking and Testing
+# Look at result of testcase, guess the code!
