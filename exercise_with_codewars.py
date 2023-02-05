@@ -9824,3 +9824,5 @@ def count_arara(n):
 # No Description
 # Only by Thinking and Testing
 # Look at result of testcase, guess the code!
+def testit(s):
+    return ' '.join([i[:-1].lower() + i[-1].upper() for i in s.split()])
