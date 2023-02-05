@@ -9875,3 +9875,5 @@ def elimination(arr):
 # Add a period (.) to the end of the sentence.
 # Join the words into a complete string, with spaces.
 # Do no other manipulation on the words.
+def sentencify(words):
+    return words[0][0].upper() + ' '.join(words)[1:] + '.'
