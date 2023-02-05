@@ -9833,3 +9833,8 @@ def testit(s):
 import math
 def missing_values(seq):
     return math.prod([i**2 for i in seq if seq.count(i)==1]) * [i for i in seq if seq.count(i)==2][0]
+
+# In this Kata, you will write a function doubles that will remove double string characters that
+# are adjacent to each other.
+# For example:
+# doubles('abbcccdddda') = 'aca', because, from left to right:
