@@ -9813,3 +9813,7 @@ def is_prime(n):
 # the sortArray function to sort all numbers in ascending order
 def sort_array(value):
     return "".join(sorted(value,key=lambda a: int(a)))
+
+# The Arara are an isolated tribe found in the Amazon who count in pairs.
+# For example one to eight is as follows:
+# Take a given number and return the Arara's equivalent.
