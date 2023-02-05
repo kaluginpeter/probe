@@ -9817,3 +9817,5 @@ def sort_array(value):
 # The Arara are an isolated tribe found in the Amazon who count in pairs.
 # For example one to eight is as follows:
 # Take a given number and return the Arara's equivalent.
+def count_arara(n):
+    return ('adak ' * (n // 2) + 'anane' * (n % 2)).strip()
