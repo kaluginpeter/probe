@@ -9830,3 +9830,6 @@ def testit(s):
 # You are given a sequence of positive ints where every element appears three times, except one that appears only once
 # (let's call it x) and one that appears only twice (let's call it y).
 # Your task is to find x * x * y.
+import math
+def missing_values(seq):
+    return math.prod([i**2 for i in seq if seq.count(i)==1]) * [i for i in seq if seq.count(i)==2][0]
