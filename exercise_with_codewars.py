@@ -9848,3 +9848,5 @@ def doubles(s):
 # the first array with one element missing, find the missing element.
 # Please note, there may be duplicates in the arrays, so checking if a
 # numerical value exists in one and not the other is not a valid solution.
+def find_missing(arr1, arr2):
+    return sum(arr1) - sum(arr2)
