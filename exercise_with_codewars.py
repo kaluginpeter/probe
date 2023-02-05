@@ -9838,3 +9838,8 @@ def missing_values(seq):
 # are adjacent to each other.
 # For example:
 # doubles('abbcccdddda') = 'aca', because, from left to right:
+def doubles(s):
+    for char in s:
+        if char * 2 in s:
+            s = s.replace(char * 2, '')
+    return s
