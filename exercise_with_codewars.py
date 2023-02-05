@@ -9885,3 +9885,5 @@ def sentencify(words):
 # Notes
 # Make sure that the implemented remainder function works exactly the same as the Modulus operator (%).
 # divmod has also been disabled.
+def remainder(dividend,divisor):
+	return dividend - (dividend//divisor) * divisor
