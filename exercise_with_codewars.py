@@ -9826,3 +9826,7 @@ def count_arara(n):
 # Look at result of testcase, guess the code!
 def testit(s):
     return ' '.join([i[:-1].lower() + i[-1].upper() for i in s.split()])
+
+# You are given a sequence of positive ints where every element appears three times, except one that appears only once
+# (let's call it x) and one that appears only twice (let's call it y).
+# Your task is to find x * x * y.
