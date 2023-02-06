@@ -9940,3 +9940,6 @@ def cyclops(n):
 # to cope with the second task, sorting the original array arr, and it's giving him trouble since he modified it.
 # Given the array shuffled, consisting of elements a1, a2, ..., an, and
 # their sumvalue in random order, return the sorted array of original elements a1, a2, ..., an.
+def shuffled_array(l):
+    l.pop(l.index(sum(l) / 2))
+    return sorted(l)
