@@ -9906,3 +9906,7 @@ def testit(n):
 def battle(x, y):
     s = [sum([ord(i)-64 for i in x]), sum([ord(i)-64 for i in y])]
     return x if s[0] > s[1] else y if s[1] > s[0] else 'Tie!'
+
+# You need to create a function, helloWorld, that will return the String Hello, World!
+# without actually using raw strings. This includes quotes, double quotes and template strings.
+# You can, however, use the String constructor and any related functions.
