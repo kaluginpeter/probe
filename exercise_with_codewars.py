@@ -9943,3 +9943,6 @@ def cyclops(n):
 def shuffled_array(l):
     l.pop(l.index(sum(l) / 2))
     return sorted(l)
+
+# Oh no, Timmy's filter doesn't seem to be working? Your task is
+# to fix the FilterNumber function to remove all the numbers from the string.
