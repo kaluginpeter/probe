@@ -9912,3 +9912,7 @@ def battle(x, y):
 # You can, however, use the String constructor and any related functions.
 def hello_world():
   return chr(72) + chr(101) + chr(108) + chr(108) + chr(111) + chr(44) + chr(32) + chr(87) + chr(111) + chr(114) + chr(108) + chr(100) + chr(33)
+
+# Complete the function that takes an odd integer (0 < n < 1000000) which
+# is the difference between two consecutive perfect squares, and return these squares as
+# a string in the format "bigger-smaller"
