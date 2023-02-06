@@ -9903,3 +9903,6 @@ def testit(n):
 # Only two groups to a fight.
 # Group whose total power (A + B + C + ...) is bigger wins.
 # If the powers are equal, it's a tie.
+def battle(x, y):
+    s = [sum([ord(i)-64 for i in x]), sum([ord(i)-64 for i in y])]
+    return x if s[0] > s[1] else y if s[1] > s[0] else 'Tie!'
