@@ -9948,3 +9948,7 @@ def shuffled_array(l):
 # to fix the FilterNumber function to remove all the numbers from the string.
 def filter_numbers(string):
     return "".join(x for x in string if not x.isdigit())
+
+# Find the difference between two collections. The difference means that either the character is
+# present in one collection or it is present in other, but not in both. Return a sorted list with the difference.
+# The collections can contain any character and can contain duplicates.
