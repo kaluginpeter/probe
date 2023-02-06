@@ -9954,3 +9954,9 @@ def filter_numbers(string):
 # The collections can contain any character and can contain duplicates.
 def diff(a, b):
     return sorted(list(set([i for i in a if i not in b] + [i for i in b if i not in a])))
+
+# You need count how many valleys you will pass.
+# Start is always from zero level.
+# Every time you go down below 0 level counts as an entry of a valley,
+# and as you go up to 0 level from valley counts as an exit of a valley.
+# One passed valley is equal one entry and one exit of a valley.
