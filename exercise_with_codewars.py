@@ -9967,3 +9967,10 @@ def counting_valleys(s):
             valleys += 1
         level += {'U': 1, 'F': 0, 'D': -1}[step]
     return valleys
+
+# Multiply all the digits of a nonnegative integer n by each other, repeating with
+# the product until a single digit is obtained. The number of steps
+# required is known as the multiplicative persistence.
+# Create a function that calculates the individual results of each step, not including the original
+# number, but including the single digit, and outputs the result as a list/array.
+# If the input is a single digit, return an empty list/array.
