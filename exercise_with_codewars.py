@@ -9993,3 +9993,5 @@ def per(n):
 # by <. An example input would be >--<--->->. The - character represents empty space,
 # which you need not worry about.
 # Examples
+def count_salutes(h):
+    return sum(2 * sum(j == '<'for j in h[i:]) * (h[i] == '>')for i in range(len(h)))
