@@ -9974,3 +9974,11 @@ def counting_valleys(s):
 # Create a function that calculates the individual results of each step, not including the original
 # number, but including the single digit, and outputs the result as a list/array.
 # If the input is a single digit, return an empty list/array.
+from functools import reduce
+from operator import mul
+def per(n):
+    res = []
+    while n > 9:
+        n = reduce(mul, map(int, str(n)))
+        res.append(n)
+    return res
