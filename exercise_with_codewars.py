@@ -10014,3 +10014,8 @@ from gmpy2 import next_prime
 def solution(number):
     A, B, C = (number - 1) // 3, (number - 1) // 5, (number - 1) // 15
     return [A - C, B - C, C]
+
+# Your task is to sort an array of integer numbers by the product of the value and the index of the positions.
+# For sorting the index starts at 1, NOT at 0!
+# The sorting has to be ascending.
+# The array will never be null and will always contain numbers.
