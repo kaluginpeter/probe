@@ -10037,3 +10037,6 @@ def coin_combo(cents):
 # Write a program to determine if the two given numbers are
 # coprime. A pair of numbers are coprime if their greatest shared factor is 1.
 # The inputs will always be two positive integers between 2 and 99.
+from math import gcd
+def are_coprime(n, m):
+    return gcd(n, m) == 1
