@@ -9997,3 +9997,6 @@ def count_salutes(h):
     return sum(2 * sum(j == '<'for j in h[i:]) * (h[i] == '>')for i in range(len(h)))
 
 # Calculate how many times a number can be divided by a given number.
+from math import log
+def divisions(n, divisor):
+    return int(log(n, divisor))
