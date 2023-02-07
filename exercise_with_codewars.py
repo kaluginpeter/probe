@@ -10052,3 +10052,6 @@ def perfect_roots(n):
 # Description:
 # Pronic Number -A pronic number, oblong number, rectangular number or heteromecic number,
 # is a number which is the product of two consecutive integers, that is, n(n + 1).
+import math
+def is_pronic(n):
+    return n >= 0 and math.sqrt(1 + 4 * n) % 1 == 0
