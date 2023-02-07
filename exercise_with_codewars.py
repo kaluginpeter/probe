@@ -10057,3 +10057,8 @@ def is_pronic(n):
     return n >= 0 and math.sqrt(1 + 4 * n) % 1 == 0
 
 # You will be given a number and your task is to return the nth fibonacci string. For example:
+def solve(n):
+    a, b = '0', '01'
+    for i in range(n):
+        a, b = b, b + a
+    return a
