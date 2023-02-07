@@ -10019,3 +10019,5 @@ def solution(number):
 # For sorting the index starts at 1, NOT at 0!
 # The sorting has to be ascending.
 # The array will never be null and will always contain numbers.
+def sort_by_value_and_index(arr):
+    return [i[1] for i in sorted(enumerate(arr), key=lambda x:(x[0] + 1) * x[1])]
