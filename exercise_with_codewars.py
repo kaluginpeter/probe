@@ -10043,3 +10043,5 @@ def are_coprime(n, m):
 
 # In mathematics, an nth root of a number x, where n is usually assumed
 # to be a positive integer, is a number r which, when raised to the power n, yields x:
+def perfect_roots(n):
+    return (((n**.5)**0.5)**0.5) == int((((n**.5)**0.5)**0.5))
