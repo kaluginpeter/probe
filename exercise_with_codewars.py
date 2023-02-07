@@ -10033,3 +10033,7 @@ def generate(length):
 # The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
 def coin_combo(cents):
     return [cents % 5, ((cents % 25) % 10) // 5, (cents % 25) // 10, cents // 25]
+
+# Write a program to determine if the two given numbers are
+# coprime. A pair of numbers are coprime if their greatest shared factor is 1.
+# The inputs will always be two positive integers between 2 and 99.
