@@ -10021,3 +10021,8 @@ def solution(number):
 # The array will never be null and will always contain numbers.
 def sort_by_value_and_index(arr):
     return [i[1] for i in sorted(enumerate(arr), key=lambda x:(x[0] + 1) * x[1])]
+
+# A genetic algorithm is based in groups of chromosomes, called populations.
+# To start our population of chromosomes we need to generate random binary strings with a specified length.
+# In this kata you have to implement a function generate that receives a length
+# and has to return a random binary strign with length characters.
