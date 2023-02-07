@@ -10040,3 +10040,6 @@ def coin_combo(cents):
 from math import gcd
 def are_coprime(n, m):
     return gcd(n, m) == 1
+
+# In mathematics, an nth root of a number x, where n is usually assumed
+# to be a positive integer, is a number r which, when raised to the power n, yields x:
