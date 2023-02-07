@@ -10026,3 +10026,6 @@ def sort_by_value_and_index(arr):
 # To start our population of chromosomes we need to generate random binary strings with a specified length.
 # In this kata you have to implement a function generate that receives a length
 # and has to return a random binary strign with length characters.
+from random import choice
+def generate(length):
+    return "".join(choice("01") for i in range(length))
