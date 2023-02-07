@@ -10031,3 +10031,5 @@ def generate(length):
     return "".join(choice("01") for i in range(length))
 
 # The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
+def coin_combo(cents):
+    return [cents % 5, ((cents % 25) % 10) // 5, (cents % 25) // 10, cents // 25]
