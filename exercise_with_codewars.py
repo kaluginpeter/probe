@@ -10000,3 +10000,7 @@ def count_salutes(h):
 from math import log
 def divisions(n, divisor):
     return int(log(n, divisor))
+
+# Get the next prime number!
+# You will get a numbern (>= 0) and your task is to find the next prime number.
+# Make sure to optimize your code: there will numbers tested up to about 10^12.
