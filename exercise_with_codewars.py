@@ -10029,3 +10029,5 @@ def sort_by_value_and_index(arr):
 from random import choice
 def generate(length):
     return "".join(choice("01") for i in range(length))
+
+# The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
