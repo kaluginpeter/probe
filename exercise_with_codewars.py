@@ -10125,3 +10125,5 @@ def get_names(data):
 # Your task is to return:
 # true if at least one Ruby developer has signed up; or
 # false if there will be no Ruby developers.
+def is_ruby_coming(lst):
+    return any(x["language"] == "Ruby" for x in lst)
