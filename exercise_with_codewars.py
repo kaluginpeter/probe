@@ -10077,3 +10077,5 @@ def solution(digits):
 # Letters will always be lowercase.
 # Letters can overflow (see second to last example of the description)
 # If no letters are given, the function should return 'z'
+def add_letters(*letters):
+    return chr((sum(ord(c) - 96 for c in letters) - 1) % 26 + 97)
