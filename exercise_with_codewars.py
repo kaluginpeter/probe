@@ -10096,3 +10096,6 @@ class Person:
 # by downSpeed meters due to the lack of sun heat. Initially, plant is 0 meters tall.
 # We plant the seed at the beginning of a day. We want to know when the height of the
 # plant will reach a certain level.
+from math import ceil
+def growing_plant(up, down, h):
+    return max(ceil((h - down) / (up - down)), 1)
