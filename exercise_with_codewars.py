@@ -10115,3 +10115,7 @@ def triangle(row):
 
 # The following code is not giving the expected results. Can you debug what the issue is?
 # The following is an example of data that would be passed in to the function.
+def itemgetter(item):
+    return item['name']
+def get_names(data):
+    return list(map(itemgetter,data))
