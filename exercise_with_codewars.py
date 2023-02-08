@@ -10146,3 +10146,12 @@ def invite_more_women(arr):
 # As usual, a few examples might be way better than thousands of words from me:
 def squares_needed(grains):
     return grains.bit_length()
+
+# Your job is to figure out the index of which vowel is missing from a given string:
+# A has an index of 0,
+# E has an index of 1,
+# I has an index of 2,
+# O has an index of 3,
+# U has an index of 4.
+# Notes: There is no need for string validation and every sentence
+# given will contain all vowels but one. Also, you won't need to worry about capitals.
