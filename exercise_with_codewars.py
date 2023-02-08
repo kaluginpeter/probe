@@ -10086,3 +10086,8 @@ def add_letters(*letters):
 # will have a greet method. The Person instance should be instantiated with a name
 # so that it no longer has to be passed into each greet method call.
 # Here is how the final refactored code would be used:
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greet(self, other):
+        return f"Hello {other}, my name is {self.name}"
