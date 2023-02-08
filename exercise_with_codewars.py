@@ -10107,3 +10107,8 @@ def growing_plant(up, down, h):
 # considering the two touching colours in the previous row. If these colours are identical,
 # the same colour is used in the new row. If they are different, the missing colour
 # is used in the new row. This is continued until the final row, with only a single colour, is generated.
+COLORS = set("RGB")
+def triangle(row):
+    while len(row)>1:
+        row = ''.join( a if a==b else (COLORS-{a,b}).pop() for a,b in zip(row, row[1:]))
+    return row
