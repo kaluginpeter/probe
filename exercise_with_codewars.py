@@ -10068,3 +10068,5 @@ def solve(n):
 # The number will be passed in as a string of only digits. It should return a five
 # digit integer. The number passed may be as large as 1000 digits.
 # Adapted from ProjectEuler.net
+def solution(digits):
+    return max(int(digits[i:i+5]) for i in range(0,len(digits)-4))
