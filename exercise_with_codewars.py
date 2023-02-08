@@ -10155,3 +10155,5 @@ def squares_needed(grains):
 # U has an index of 4.
 # Notes: There is no need for string validation and every sentence
 # given will contain all vowels but one. Also, you won't need to worry about capitals.
+def absent_vowel(x):
+    return ['aeiou'.index(i) for i in 'aeiou' if i not in x][0]
