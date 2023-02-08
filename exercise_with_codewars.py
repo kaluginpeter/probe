@@ -10127,3 +10127,9 @@ def get_names(data):
 # false if there will be no Ruby developers.
 def is_ruby_coming(lst):
     return any(x["language"] == "Ruby" for x in lst)
+
+# King Arthur and his knights are having a New Years party. Last year Lancelot was jealous of Arthur,
+# because Arthur had a date and Lancelot did not, and they started a duel.
+# To prevent this from happening again, Arthur wants to make sure that there are at least
+# as many women as men at this year's party. He gave you a list of integers of all the party goers.
+# Arthur needs you to return true if he needs to invite more women or false if he is all set.
