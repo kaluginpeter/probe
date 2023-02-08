@@ -10144,3 +10144,5 @@ def invite_more_women(arr):
 # of grains, you need to return up to which square of the chessboard one should count
 # in order to get at least as many.
 # As usual, a few examples might be way better than thousands of words from me:
+def squares_needed(grains):
+    return grains.bit_length()
