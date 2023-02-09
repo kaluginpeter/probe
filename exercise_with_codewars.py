@@ -10201,3 +10201,5 @@ def covfefe(s):
 # function should return True if all the parameters it is passed are of the
 # integer type or float type. Otherwise, the function should return False.
 # The function should accept any number of parameters.
+def numbers(*l):
+    return all(type(i) in (int, float) for i in l)
