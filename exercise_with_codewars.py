@@ -10218,3 +10218,5 @@ def sum_of_a_beach(beach):
 # concatenated twice and then summed, the result will be the original number. It turns out that 198
 # is the only number with this property. However, the property can be generalized so
 # that each digit is concatenated n times and then summed.
+def check_concatenated_sum(n, r):
+    return abs(n) == sum(int(i * r) for i in str(abs(n)) if r)
