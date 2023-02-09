@@ -10157,3 +10157,8 @@ def squares_needed(grains):
 # given will contain all vowels but one. Also, you won't need to worry about capitals.
 def absent_vowel(x):
     return ['aeiou'.index(i) for i in 'aeiou' if i not in x][0]
+
+# No Story
+# No Description
+# Only by Thinking and Testing
+# Look at result of testcase, guess the code!
