@@ -10211,3 +10211,5 @@ def quotable(name, quote):
 
 # Beaches are fildh sand, water, fish, and sun. Given a string, calculate how many times the
 # words "Sand", "Water", "Fish", and "Sun" appear without overlapping (regardless of the case).
+def sum_of_a_beach(beach):
+    return sum(beach.lower().count(i) for i in ["sand", "water", "fish", "sun"])
