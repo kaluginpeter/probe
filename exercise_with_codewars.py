@@ -10196,3 +10196,8 @@ def get_issuer(number):
 def covfefe(s):
     if 'coverage' in s: return s.replace('coverage', 'covfefe')
     return s + ' covfefe'
+
+# Write a function named numbers.
+# function should return True if all the parameters it is passed are of the
+# integer type or float type. Otherwise, the function should return False.
+# The function should accept any number of parameters.
