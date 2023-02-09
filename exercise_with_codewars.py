@@ -10238,3 +10238,5 @@ def count_consonants(text):
 # in the class in a series of science projects.
 # Mrs. Frizzle does not know who will be in her class next semester, but she does know
 # she will have n students total in her class.
+def projectPartners(n):
+    return n * (n - 1) / 2
