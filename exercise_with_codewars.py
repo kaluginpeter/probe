@@ -10193,3 +10193,6 @@ def get_issuer(number):
 # For the languages where the string is mutable (such as ruby), don't modify
 # the given string, otherwise this will break the test cases.
 # STRINGS
+def covfefe(s):
+    if 'coverage' in s: return s.replace('coverage', 'covfefe')
+    return s + ' covfefe'
