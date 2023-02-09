@@ -10164,3 +10164,6 @@ def absent_vowel(x):
 # Look at result of testcase, guess the code!
 def testit (a, b):
     return a | b
+
+# The following code was thought to be working properly, however when the code
+# tries to access the age of the person instance it fails.
