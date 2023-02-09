@@ -10229,3 +10229,5 @@ def check_concatenated_sum(n, r):
 # function should return 1 rather than 2, since "d" is a duplicate.
 # Similarly, the function should also disregard duplicate consonants of differing cases. For example,
 # "Dad" passed into the function should return 1 as "d" and "D" are duplicates.
+def count_consonants(text):
+    return len(set(filter(str.isalpha, text.lower())) - set("aeiou"))
