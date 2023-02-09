@@ -10178,3 +10178,11 @@ class Person():
 # Complete the function get_issuer() that will use the values shown below to determine the card
 # issuer for a given card number. If the number cannot be matched then the
 # function should return the string Unknown.
+def get_issuer(number):
+    card = str(number)
+    nums = len(card)
+    if card[:2] in ("34", "37") and nums == 15:return "AMEX"
+    elif card[:4] == "6011" and nums == 16:return "Discover"
+    elif 51 <= int(card[:2]) <= 55 and nums == 16:return "Mastercard"
+    elif card[0] == "4" and nums in (13, 16):return "VISA"
+    return "Unknown"
