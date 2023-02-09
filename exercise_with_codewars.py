@@ -10173,3 +10173,8 @@ class Person():
         self.last_name = last_name
         self.full_name = f"{first_name} {last_name}"
         self.age = age
+
+# Given a credit card number we can determine who the issuer/vendor is with a few basic knowns.
+# Complete the function get_issuer() that will use the values shown below to determine the card
+# issuer for a given card number. If the number cannot be matched then the
+# function should return the string Unknown.
