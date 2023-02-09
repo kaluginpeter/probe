@@ -10186,3 +10186,10 @@ def get_issuer(number):
     elif 51 <= int(card[:2]) <= 55 and nums == 16:return "Mastercard"
     elif card[0] == "4" and nums in (13, 16):return "VISA"
     return "Unknown"
+
+# Your are given a string. You must replace any occurence of the sequence coverage
+# by covfefe, however, if you don't find the word coverage in the string,
+# you must add covfefe at the end of the string with a leading space.
+# For the languages where the string is mutable (such as ruby), don't modify
+# the given string, otherwise this will break the test cases.
+# STRINGS
