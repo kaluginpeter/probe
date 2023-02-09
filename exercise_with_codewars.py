@@ -10208,3 +10208,6 @@ def numbers(*l):
 # of theirs (quote), and return a string attributing the quote to the person in the following format:
 def quotable(name, quote):
     return f'{name} said: "{quote}"'
+
+# Beaches are fildh sand, water, fish, and sun. Given a string, calculate how many times the
+# words "Sand", "Water", "Fish", and "Sun" appear without overlapping (regardless of the case).
