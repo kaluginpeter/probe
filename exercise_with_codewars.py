@@ -10272,3 +10272,6 @@ def decode(s):
 
 # Oh no, Timmy's received some hate mail recently but he knows better. Help Timmy fix his
 # regex filter so he can be awesome again!
+import re
+def filter_words(phrase):
+    return re.sub("(bad|mean|ugly|horrible|hideous)","awesome", phrase, flags=re.IGNORECASE)
