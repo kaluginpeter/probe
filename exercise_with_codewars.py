@@ -10297,3 +10297,8 @@ def sc(apple):
 # for each element. We'll call this the dropWhile function. It accepts two arguments.
 # The first is the sequence of values, and the second is the predicate function. The
 # function does not change the value of the original sequence.
+def drop_while(arr, pred):
+    for k,v in enumerate(arr):
+        if not pred(v):
+            return arr[k:]
+    return []
