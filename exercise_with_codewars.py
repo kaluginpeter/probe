@@ -10267,3 +10267,5 @@ def length_of_sequence(arr, n):
 # Fans of The Wire will appreciate this one. For those that haven't seen the show,
 # the Barksdale Organization has a simple method for encoding telephone numbers exchanged via
 # pagers: "Jump to the other side of the 5 on the keypad, and swap 5's and 0's."
+def decode(s):
+    return s.translate(str.maketrans("1234567890", "9876043215"))
