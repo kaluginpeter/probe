@@ -10324,3 +10324,10 @@ def like_or_dislike(lst):
 	for choi in lst:
 		choice = 'Nothing' if choi == choice else choi
 	return choice
+
+# Create a function which checks a number for three different properties.
+# is the number prime?
+# is the number even?
+# is the number a multiple of 10?
+# Each should return either true or false, which should be given as an array.
+# Remark: The Haskell variant uses data Property.
