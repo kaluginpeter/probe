@@ -10331,3 +10331,8 @@ def like_or_dislike(lst):
 # is the number a multiple of 10?
 # Each should return either true or false, which should be given as an array.
 # Remark: The Haskell variant uses data Property.
+def number_property(n):
+    is_prime = lambda i: False if i <= 1 else all([1 if n % i != 0 else 0 for i in range(2, int(n ** 0.5 + 1))])
+    is_even = lambda x: x%2 == 0
+    is_mult_10 = lambda x: x%10 == 0
+    return [is_prime(n), is_even(n), is_mult_10(n)]
