@@ -10253,3 +10253,7 @@ def strong_enough(earthquake, age):
     strength = 1000 * 0.99 ** age
     shockwave = reduce(lambda x, y: x*y, [sum(i) for i in earthquake])
     return "Needs Reinforcement!" if strength <= shockwave else "Safe!"
+
+# As part of this Kata, you need to find the length of the sequence in an array,
+# between the first and the second occurrence of a specified number.
+# For example, for a given array arr
