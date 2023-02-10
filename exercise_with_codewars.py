@@ -10248,3 +10248,8 @@ def projectPartners(n):
 # and each element within the Inner-Arrays represents a tremor.
 # The magnitude of the earthquake is determined by the product of the values
 # of its shockwaves. A shockwave is equal to the sum of the values of its tremors.
+from functools import reduce
+def strong_enough(earthquake, age):
+    strength = 1000 * 0.99 ** age
+    shockwave = reduce(lambda x, y: x*y, [sum(i) for i in earthquake])
+    return "Needs Reinforcement!" if strength <= shockwave else "Safe!"
