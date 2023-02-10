@@ -10341,3 +10341,5 @@ def number_property(n):
 # On the main diagonal, all the negative integers must be changed to 0,
 # while the others must be changed to 1 (Note: 0 is considered non-negative, here).
 # (You can mutate the input if you want, but it is a better practice to not mutate the input)
+def matrix(m):
+    return [[v if i != k else int(v >= 0) for k,v in enumerate(r)] for i, r in enumerate(m)]
