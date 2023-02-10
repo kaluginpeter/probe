@@ -10311,3 +10311,11 @@ def validate_ean(code):
     code1 = sum(int(i) for i in code[0::2])
     code = sum(int(i) for i in code[1::2])
     return (code1 + code * 3) % 10 == 0
+
+# YouTube had a like and a dislike button, which allowed users to
+# express their opinions about particular content. It was set up in such a way
+# that you cannot like and dislike a video at the same time. There are
+# two other interesting rules to be noted about the interface: Pressing a button, which
+# is already active, will undo your press. If you press the like button after pressing
+# the dislike button, the like button overwrites the previous "Dislike" state. The same is
+# true for the other way round.
