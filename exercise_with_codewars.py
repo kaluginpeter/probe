@@ -10302,3 +10302,8 @@ def drop_while(arr, pred):
         if not pred(v):
             return arr[k:]
     return []
+
+# Validate a given EAN-Code. Return true if the given EAN-Code is valid, otherwise false.
+# Assumption
+# You can assume the given code is syntactically valid, i.e. it only
+# consists of numbers and it exactly has a length of 13 characters.
