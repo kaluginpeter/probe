@@ -10336,3 +10336,8 @@ def number_property(n):
     is_even = lambda x: x%2 == 0
     is_mult_10 = lambda x: x%10 == 0
     return [is_prime(n), is_even(n), is_mult_10(n)]
+
+# Function receive a two-dimensional square array of random integers.
+# On the main diagonal, all the negative integers must be changed to 0,
+# while the others must be changed to 1 (Note: 0 is considered non-negative, here).
+# (You can mutate the input if you want, but it is a better practice to not mutate the input)
