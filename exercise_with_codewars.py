@@ -10257,3 +10257,9 @@ def strong_enough(earthquake, age):
 # As part of this Kata, you need to find the length of the sequence in an array,
 # between the first and the second occurrence of a specified number.
 # For example, for a given array arr
+def length_of_sequence(arr, n):
+    if arr.count(n) == 2:
+        a = arr.index(n)
+        b = arr.index(n, a + 1)
+        return b - a + 1
+    return 0
