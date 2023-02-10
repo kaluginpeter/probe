@@ -10319,3 +10319,8 @@ def validate_ean(code):
 # is already active, will undo your press. If you press the like button after pressing
 # the dislike button, the like button overwrites the previous "Dislike" state. The same is
 # true for the other way round.
+def like_or_dislike(lst):
+	choice = 'Nothing'
+	for choi in lst:
+		choice = 'Nothing' if choi == choice else choi
+	return choice
