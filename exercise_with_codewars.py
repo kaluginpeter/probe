@@ -10307,3 +10307,7 @@ def drop_while(arr, pred):
 # Assumption
 # You can assume the given code is syntactically valid, i.e. it only
 # consists of numbers and it exactly has a length of 13 characters.
+def validate_ean(code):
+    code1 = sum(int(i) for i in code[0::2])
+    code = sum(int(i) for i in code[1::2])
+    return (code1 + code * 3) % 10 == 0
