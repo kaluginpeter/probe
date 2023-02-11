@@ -10381,3 +10381,7 @@ def comfortable_word(word):
 # All of Bob's decisions will be checked against the expert's choices to generate a correctness score.
 def correctness(bob, exp):
     return sum(b == e or .5*(b == '?' or e == '?') for b,e in zip(bob, exp))
+
+# You have to create a function named reverseIt.
+# Write your function so that in the case a string or a number is passed in
+# as the data , you will return the data in reverse order. If the data is any other type, return it as it is.
