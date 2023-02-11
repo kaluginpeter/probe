@@ -10354,3 +10354,5 @@ def odd_or_even(n):
 # Write a function that returns true if a given point (x,y) is inside of a unit
 # circle (that is, a "normal" circle with a radius of one) centered at
 # the origin (0,0) and returns false if the point is outside.
+def point_in_circle(x, y):
+    return (x*x + y*y) < 1
