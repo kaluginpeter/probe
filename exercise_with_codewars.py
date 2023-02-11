@@ -10364,3 +10364,9 @@ def point_in_circle(x, y):
 # For example: "a" is encoded with "z", "b" with "y", "c" with "x", etc
 def decode(message):
     return message.translate(str.maketrans('abcdefghijklmnopqrstuvwxyz', 'abcdefghijklmnopqrstuvwxyz'[::-1]))
+
+# A comfortable word is a word which you can type always alternating the hand you
+# type with (assuming you type using a QWERTY keyboard and use fingers as shown in the image below).
+# That being said, complete the function which receives a word and returns
+# true if it's a comfortable word and false otherwise.
+# The word will always be a string consisting of only ascii letters from a to z.
