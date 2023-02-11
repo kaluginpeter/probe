@@ -10362,3 +10362,5 @@ def point_in_circle(x, y):
 # letter.
 # You also notice that each letter is paired with the letter that it coincides with when the alphabet is reversed.
 # For example: "a" is encoded with "z", "b" with "y", "c" with "x", etc
+def decode(message):
+    return message.translate(str.maketrans('abcdefghijklmnopqrstuvwxyz', 'abcdefghijklmnopqrstuvwxyz'[::-1]))
