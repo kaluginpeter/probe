@@ -10343,3 +10343,8 @@ def number_property(n):
 # (You can mutate the input if you want, but it is a better practice to not mutate the input)
 def matrix(m):
     return [[v if i != k else int(v >= 0) for k,v in enumerate(r)] for i, r in enumerate(m)]
+
+# Given a number N, determine if the sum of N consecutive numbers is odd or even.
+# If the sum is definitely an odd number, return Odd.
+# If the sum is definitely an even number, return Even.
+# If the sum can be either odd or even ( depending on which first number you choose ), return Either.
