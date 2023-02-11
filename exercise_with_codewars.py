@@ -10412,3 +10412,5 @@ def calculate_total(t1, t2):
 # for example, the string HELLO has a value of 372: H is codepoint 72, E 69, L 76, and O is 79.
 # The sum of these values is 372.
 # In the event of a tie, you should return the first string, i.e. a.
+def highest_value(a, b):
+    return max(a, b, key=lambda x: sum(map(ord, x)))
