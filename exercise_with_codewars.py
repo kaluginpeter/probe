@@ -10414,3 +10414,10 @@ def calculate_total(t1, t2):
 # In the event of a tie, you should return the first string, i.e. a.
 def highest_value(a, b):
     return max(a, b, key=lambda x: sum(map(ord, x)))
+
+# Reversing an array can be a tough task, especially for a novice programmer. Mary
+# just started coding, so she would like to start with something basic at first. Instead of reversing
+# the array entirely, she wants to swap just its first and last elements.
+# Given an array arr, swap its first and last elements and return the resulting array.
+# Example
+# For arr = [1, 2, 3, 4, 5], the output should be [5, 2, 3, 4, 1]
