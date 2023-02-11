@@ -10350,3 +10350,7 @@ def matrix(m):
 # If the sum can be either odd or even ( depending on which first number you choose ), return Either.
 def odd_or_even(n):
     return ("Even", "Either", "Odd", "Either")[n % 4]
+
+# Write a function that returns true if a given point (x,y) is inside of a unit
+# circle (that is, a "normal" circle with a radius of one) centered at
+# the origin (0,0) and returns false if the point is outside.
