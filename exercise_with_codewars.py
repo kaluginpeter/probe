@@ -10387,3 +10387,11 @@ def correctness(bob, exp):
 # as the data , you will return the data in reverse order. If the data is any other type, return it as it is.
 def reverse_it(data):
     return type(data)(str(data)[::-1]) if type(data) in [int, str, float] else data
+
+# Given a string, determine if it's a valid identifier.
+# Here is the syntax for valid identifiers:
+# Each identifier must have at least one character.
+# The first character must be picked from: alpha, underscore,
+# or dollar sign. The first character cannot be a digit.
+# The rest of the characters (besides the first) can be from: alpha,
+# digit, underscore, or dollar sign. In other words, it can be any valid identifier character.
