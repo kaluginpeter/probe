@@ -10395,3 +10395,6 @@ def reverse_it(data):
 # or dollar sign. The first character cannot be a digit.
 # The rest of the characters (besides the first) can be from: alpha,
 # digit, underscore, or dollar sign. In other words, it can be any valid identifier character.
+import re
+def is_valid(word):
+    return re.compile('^[a-z_\$][a-z0-9_\$]*$', re.IGNORECASE).match(word) != None
