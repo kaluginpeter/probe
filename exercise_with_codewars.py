@@ -10379,3 +10379,5 @@ def comfortable_word(word):
 # and Female(F) piles. When bob can't guess can throw his hands up and declare it with a '?'.
 # Bob's bosses don't trust Bob's ability just yet, so they have paired him with an expert sexer.
 # All of Bob's decisions will be checked against the expert's choices to generate a correctness score.
+def correctness(bob, exp):
+    return sum(b == e or .5*(b == '?' or e == '?') for b,e in zip(bob, exp))
