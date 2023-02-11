@@ -10356,3 +10356,9 @@ def odd_or_even(n):
 # the origin (0,0) and returns false if the point is outside.
 def point_in_circle(x, y):
     return (x*x + y*y) < 1
+
+# You have managed to intercept an important message and you are trying to read it.
+# You realise that the message has been encoded and can be decoded by switching each letter with a corresponding
+# letter.
+# You also notice that each letter is paired with the letter that it coincides with when the alphabet is reversed.
+# For example: "a" is encoded with "z", "b" with "y", "c" with "x", etc
