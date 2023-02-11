@@ -10421,3 +10421,7 @@ def highest_value(a, b):
 # Given an array arr, swap its first and last elements and return the resulting array.
 # Example
 # For arr = [1, 2, 3, 4, 5], the output should be [5, 2, 3, 4, 1]
+def first_reverse_try(arr):
+    if arr:
+        arr[0], arr[-1] = arr[-1], arr[0]
+    return arr
