@@ -10370,3 +10370,7 @@ def decode(message):
 # That being said, complete the function which receives a word and returns
 # true if it's a comfortable word and false otherwise.
 # The word will always be a string consisting of only ascii letters from a to z.
+def comfortable_word(word):
+    left = [c in 'qwertasdfgzxcvb' for c in word[::2]]
+    right = [c in 'yuiophjklnm' for c in word[1::2]]
+    return bool((all(left) and all(right)) or (not any(left) and not any(right)))
