@@ -10473,3 +10473,5 @@ def distinct_digit_year(year):
 # will become 41. You would have to return the modified list in this problem.
 # For this problem you will receive a divisor called div as well as simple list of whole numbers
 # called nums. Good luck and happy coding.
+def solve(nums,div):
+    return [x + x % div for x in nums]
