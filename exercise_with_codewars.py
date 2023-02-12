@@ -10436,3 +10436,5 @@ def append_arrays(seq1, seq2):
 # of the alphabet used. There are several algorithms for efficient computing of the Hamming
 # weight for numbers. In this Kata, speaking technically, you have to find out the
 # number of '1' bits in a binary representation of a number. Thus,
+def hamming_weight(x):
+    return bin(x)[2:].count('1')
