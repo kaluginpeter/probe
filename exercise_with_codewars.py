@@ -10489,3 +10489,9 @@ def uncensor(infected, discovered):
 # We only care about substrings that are longer than one letter long.
 def substring_test(s1, s2):
     return any(s1.lower()[i:i+2] in s2.lower() for i in range(len(s1)-2))
+
+# You just took a contract with the Jedi council. They need you to write a function,
+# greet_jedi(), which takes two arguments (a first name and a last name), works out
+# the corresponding Jedi name, and returns a string greeting the Jedi.
+# A person's Jedi name is the first three letters of their last name followed by the first two letters
+# of their first name. For example:
