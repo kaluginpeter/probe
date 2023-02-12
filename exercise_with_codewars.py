@@ -10483,3 +10483,7 @@ def solve(nums,div):
 # uncensor function that does the hard work automatically.
 def uncensor(infected, discovered):
 	return infected.replace('*', '{}').format(*discovered)
+
+# Given 2 strings, your job is to find out if there is a substring that appears in both strings. You
+# will return true if you find a substring that appears in both strings, or false if you do not.
+# We only care about substrings that are longer than one letter long.
