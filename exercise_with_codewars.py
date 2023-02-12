@@ -10487,3 +10487,5 @@ def uncensor(infected, discovered):
 # Given 2 strings, your job is to find out if there is a substring that appears in both strings. You
 # will return true if you find a substring that appears in both strings, or false if you do not.
 # We only care about substrings that are longer than one letter long.
+def substring_test(s1, s2):
+    return any(s1.lower()[i:i+2] in s2.lower() for i in range(len(s1)-2))
