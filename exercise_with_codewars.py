@@ -10475,3 +10475,9 @@ def distinct_digit_year(year):
 # called nums. Good luck and happy coding.
 def solve(nums,div):
     return [x + x % div for x in nums]
+
+# My PC got infected by a strange virus. It only infects my text files
+# and replaces random letters by *, li*e th*s (like this).
+# Fortunately, I discovered that the virus hides my censored letters inside root directory.
+# It will be very tedious to recover all these files manually, so your goal is to implement
+# uncensor function that does the hard work automatically.
