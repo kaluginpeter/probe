@@ -10495,3 +10495,5 @@ def substring_test(s1, s2):
 # the corresponding Jedi name, and returns a string greeting the Jedi.
 # A person's Jedi name is the first three letters of their last name followed by the first two letters
 # of their first name. For example:
+def greet_jedi(first, last):
+    return f'Greetings, master {last[:3].title() + first[:2].title()}'
