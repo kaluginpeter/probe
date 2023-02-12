@@ -10497,3 +10497,7 @@ def substring_test(s1, s2):
 # of their first name. For example:
 def greet_jedi(first, last):
     return f'Greetings, master {last[:3].title() + first[:2].title()}'
+
+# In this kata, you will take the keys and values of a dict and swap them around.
+# You will be given a dictionary, and then you will want to return a dictionary
+# with the old values as the keys, and list the old keys as values under their original keys.
