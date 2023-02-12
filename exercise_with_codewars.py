@@ -10460,3 +10460,8 @@ def der_die_das(wort):
 # The year of 2013 is the first year after the old 1987 with only distinct digits.
 # Now your task is to solve the following problem: given a year number, find the minimum
 # year number which is strictly larger than the given one and has only distinct digits.
+def distinct_digit_year(year):
+    year += 1
+    while any(str(year).count(i) != 1 for i in str(year)):
+        year += 1
+    return year
