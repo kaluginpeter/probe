@@ -10438,3 +10438,7 @@ def append_arrays(seq1, seq2):
 # number of '1' bits in a binary representation of a number. Thus,
 def hamming_weight(x):
     return bin(x)[2:].count('1')
+
+# You will be given an array that contains two strings. Your job is to create a
+# function that will take those two strings and transpose them, so that the strings go from
+# top to bottom instead of left to right.
