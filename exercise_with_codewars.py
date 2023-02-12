@@ -10453,3 +10453,6 @@ def transpose_two_strings(arr):
 # each noun containing more than 3 vowels has the article "der"
 # Caution: Vowels are "a,e,i,o,u". Umlaute (ä ö ü) are also being counted!
 # (This Kata is a joke, there is no such grammar rule!)
+def der_die_das(wort):
+    c = sum(i in "aAeEiIoOuUäöü" for i in wort)
+    return f'{"das" if c < 2 else "die" if c < 4 else "der"} {wort}'
