@@ -10425,3 +10425,7 @@ def first_reverse_try(arr):
     if arr:
         arr[0], arr[-1] = arr[-1], arr[0]
     return arr
+
+# Write a function that appends the items from sequence 2 onto sequence 1, returning the newly formed sequence.
+# Your function should also be able to handle nested sequences.
+# All inputs will be arrays/nested arrays.
