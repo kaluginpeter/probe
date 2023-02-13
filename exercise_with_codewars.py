@@ -10509,3 +10509,6 @@ def switch_dict(dic):
 
 # Positive integers have so many gorgeous features. Some of them could be expressed as a sum of
 # two or more consecutive positive numbers.
+import math
+def consecutive_ducks(n):
+    return not math.log2(n).is_integer()
