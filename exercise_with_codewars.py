@@ -10573,3 +10573,7 @@ def zebulans_nightmare(function):
 # his hand and the one in his tool kit.
 def sc(s):
     return len(s)*2 - 1 + 5 * (s.count('+-') + s.count('-+'))
+
+# Many people know that Apple uses the letter "i" in almost all of its devices to emphasize its personality.
+# And so John, a programmer at Apple, was given the task of making a program that would add that letter to
+# every word. Let's help him do it, too.
