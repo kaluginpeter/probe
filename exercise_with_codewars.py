@@ -10512,3 +10512,7 @@ def switch_dict(dic):
 import math
 def consecutive_ducks(n):
     return not math.log2(n).is_integer()
+
+# Your website is divided vertically in sections, and each can be of different size (height).
+# You need to establish the section index (starting at 0) you are at, given the scrollY and sizes of all sections.
+# Sections start with 0, so if first section is 200 high, it takes 0-199 "pixels" and second starts at 200.
