@@ -10589,3 +10589,5 @@ def i(word):
 # this operation multiple times?
 # Note: after each operation, the remaining digits are separated by spaces and thus not adjacent
 # anymore - see the examples below.
+def zero_and_one(s):
+    return len(s.replace('01', '').replace('10', ''))
