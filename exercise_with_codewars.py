@@ -10563,3 +10563,11 @@ def user_contacts(data):
 def zebulans_nightmare(function):
     l = function.split('_')
     return l[0].lower() + ''.join(i.title() for i in l[1:])
+
+# John is a worker, his job is to remove screws from a machine. There are 2 types
+# of screws: slotted (-) and cross (+). John has two screwdrivers, one for each type of screw.
+# The input will be a (non-empty) string of screws, e.g. : "---+++"
+# When John begins to work, he stands at the first screw, with the
+# correct screwdriver in his hand, and another in his tool kit. He works from
+# left to right, removing every screw. When necessary, he switches between the screwdriver in
+# his hand and the one in his tool kit.
