@@ -10534,3 +10534,6 @@ def drop_cap(str_):
 # accumulated by ONLY the students who have passed, rounded to the nearest integer.
 # Write a function which would allow them to do so. If no students passed the
 # test that month, return 'No pass scores registered.'.
+from statistics import mean
+def passed(lst):
+    return int(round(mean([i for i in lst if i < 19] or [0]))) or 'No pass scores registered.'
