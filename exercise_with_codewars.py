@@ -10571,3 +10571,5 @@ def zebulans_nightmare(function):
 # correct screwdriver in his hand, and another in his tool kit. He works from
 # left to right, removing every screw. When necessary, he switches between the screwdriver in
 # his hand and the one in his tool kit.
+def sc(s):
+    return len(s)*2 - 1 + 5 * (s.count('+-') + s.count('-+'))
