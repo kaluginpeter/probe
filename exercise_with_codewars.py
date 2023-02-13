@@ -10577,3 +10577,7 @@ def sc(s):
 # Many people know that Apple uses the letter "i" in almost all of its devices to emphasize its personality.
 # And so John, a programmer at Apple, was given the task of making a program that would add that letter to
 # every word. Let's help him do it, too.
+def i(word):
+    if not word or word[0].islower() or word[0].upper() == 'I' or sum(1 for i in word.lower() if i in 'aeoiu') >= sum(1 for i in word.lower() if i not in 'aeoiu'):
+        return 'Invalid word'
+    return 'i' + word
