@@ -10548,3 +10548,11 @@ def passed(lst):
 # one above and returns a dictionary with an item for each user where the key is the
 # user's name and the value is the user's zip code. If your data doesn't include a
 # zip code then the value should be None.
+def user_contacts(data):
+    d = {}
+    for i in data:
+        if len(i) == 2:
+            d[i[0]] = i[1]
+            continue
+        d[i[0]] = None
+    return d
