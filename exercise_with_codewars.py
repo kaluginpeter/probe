@@ -10636,3 +10636,6 @@ def sum_arrays(arrays, shift):
 # Note: If the number is a multiple of both 3 and 5, only count it once.
 def solution(number):
     return sum([i for i in range(number) if i % 3 == 0 or i % 5 == 0])
+
+# Write a function that accepts an array of 10 integers (between 0 and 9), that
+# returns a string of those numbers in the form of a phone number.
