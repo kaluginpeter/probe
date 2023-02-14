@@ -10608,3 +10608,12 @@ def interlockable(a, b):
 # For example if the input array is as follows:
 def countWins(winnerList, country):
     return sum(i.get('country') == country for i in winnerList)
+
+# You will be passed the dice value frequencies, and your task is to write
+# the code to return a string representing a histogram, so that when it is printed it
+# has the same format as the example.
+# Notes
+# There are no trailing spaces on the lines
+# All lines (including the last) end with a newline \n
+# A count is displayed beside each bar except where the count is 0
+# The number of rolls may vary but there are never more than 100
