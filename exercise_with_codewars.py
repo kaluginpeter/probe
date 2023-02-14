@@ -10617,3 +10617,5 @@ def countWins(winnerList, country):
 # All lines (including the last) end with a newline \n
 # A count is displayed beside each bar except where the count is 0
 # The number of rolls may vary but there are never more than 100
+def histogram(results):
+    return "".join("{}|{} {}\n".format(7 - i, f * "#", f) for i, f in enumerate(results[::-1], 1)).replace(" 0", "")
