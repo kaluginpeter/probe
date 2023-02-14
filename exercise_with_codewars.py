@@ -10662,3 +10662,7 @@ def spin_words(sentence):
 # Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 def count_bits(n):
     return bin(n)[2:].count('1')
+
+# A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits,
+# each raised to the power of the number of digits in a given base. In
+# this Kata, we will restrict ourselves to decimal (base 10).
