@@ -10656,3 +10656,7 @@ def digital_root(n):
 # consist of only letters and spaces. Spaces will be included only when more than one word is present.
 def spin_words(sentence):
     return ' '.join(i[::-1] if len(i) > 4 else i for i in sentence.split())
+
+# Write a function that takes an integer as input, and returns the number of bits that
+# are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+# Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
