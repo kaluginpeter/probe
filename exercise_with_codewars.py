@@ -10619,3 +10619,8 @@ def countWins(winnerList, country):
 # The number of rolls may vary but there are never more than 100
 def histogram(results):
     return "".join("{}|{} {}\n".format(7 - i, f * "#", f) for i, f in enumerate(results[::-1], 1)).replace(" 0", "")
+
+#The method should add the values of the arrays to one new array.
+# The arrays in the array will all have the same size and this size will always be greater than 0.
+# The shifting value is always a value from 0 up to the size of the arrays.
+# There are always arrays in the array, so you do not need to check for null or empty.
