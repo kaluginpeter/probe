@@ -10624,3 +10624,6 @@ def histogram(results):
 # The arrays in the array will all have the same size and this size will always be greater than 0.
 # The shifting value is always a value from 0 up to the size of the arrays.
 # There are always arrays in the array, so you do not need to check for null or empty.
+def sum_arrays(arrays, shift):
+    sh = [[0]*i*shift + a + [0]*(len(arrays)-i-1)*shift  for i, a in enumerate(arrays)]
+    return list(map(sum, zip(*sh)))
