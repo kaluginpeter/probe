@@ -10668,3 +10668,7 @@ def count_bits(n):
 # this Kata, we will restrict ourselves to decimal (base 10).
 def narcissistic( value ):
     return sum(int(i)**len(str(value)) for i in str(value)) == value
+
+# Complete the solution so that it splits the string into pairs of two characters.
+# If the string contains an odd number of characters then it should replace the
+# missing second character of the final pair with an underscore ('_').
