@@ -10606,3 +10606,5 @@ def interlockable(a, b):
 # You function should then return the number which represents the number of times a team from
 # a given country has won. Return 0 if there have been no wins.
 # For example if the input array is as follows:
+def countWins(winnerList, country):
+    return sum(i.get('country') == country for i in winnerList)
