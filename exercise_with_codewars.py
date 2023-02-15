@@ -10689,3 +10689,7 @@ def in_array(array1, array2):
 # camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
 def camel_case(string):
     return string.title().replace(" ", "")
+
+# Let us consider this example (array written in general format):
+# ls = [0, 1, 3, 6, 10]
+# Its following parts:
