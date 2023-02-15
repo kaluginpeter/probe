@@ -10760,3 +10760,13 @@ def validate(n):
 # determine the number of pair of gloves you can constitute from the gloves you have in your drawer.
 # Given an array describing the color of each glove, return the number of pairs you
 # can constitute, assuming that only gloves of the same color can form pairs.
+def number_of_pairs(gloves):
+    c = 0
+    l = []
+    for i in gloves:
+        if i not in l:
+            l.append(i)
+            continue
+        c += 1
+        l.remove(i)
+    return c
