@@ -10750,3 +10750,8 @@ def get_length_of_missing_array(a):
 # Given a positive integer of up to 16 digits, return true if it
 # is a valid credit card number, and false if it is not.
 # Here is the algorithm:
+def validate(n):
+    digits = [int(i) for i in str(n)]
+    e = [x*2 if x*2 <= 9 else x*2 - 9 for x in digits[-2::-2]]
+    o  = [x for x in digits[-1::-2]]
+    return (sum(e + o) % 10) == 0
