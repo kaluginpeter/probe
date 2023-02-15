@@ -10674,3 +10674,6 @@ def narcissistic( value ):
 # missing second character of the final pair with an underscore ('_').
 def solution(s):
     return [s[i:i+2] if len(s[i:i+2]) == 2 else s[i:i+2] + '_' for i in range(0, len(s), 2)]
+
+# Given two arrays of strings a1 and a2 return a sorted array r
+# in lexicographical order of the strings of a1 which are substrings of strings of a2
