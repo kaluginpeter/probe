@@ -10745,3 +10745,8 @@ def find_missing(sequence):
 def get_length_of_missing_array(a):
     l = a and all(a) and list(map(len, a))
     return bool(l) and sum(range(min(l), max(l) + 1)) - sum(l)
+
+# In this Kata, you will implement the Luhn Algorithm, which is used to help validate credit card numbers.
+# Given a positive integer of up to 16 digits, return true if it
+# is a valid credit card number, and false if it is not.
+# Here is the algorithm:
