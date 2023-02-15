@@ -10755,3 +10755,8 @@ def validate(n):
     e = [x*2 if x*2 <= 9 else x*2 - 9 for x in digits[-2::-2]]
     o  = [x for x in digits[-1::-2]]
     return (sum(e + o) % 10) == 0
+
+# Winter is coming, you must prepare your ski holidays. The objective of this kata is to
+# determine the number of pair of gloves you can constitute from the gloves you have in your drawer.
+# Given an array describing the color of each glove, return the number of pairs you
+# can constitute, assuming that only gloves of the same color can form pairs.
