@@ -10684,3 +10684,6 @@ def in_array(array1, array2):
             if i in j:
                 r.append(i)
     return sorted(set(r))
+
+# Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or
+# camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
