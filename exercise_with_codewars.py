@@ -10693,3 +10693,8 @@ def camel_case(string):
 # Let us consider this example (array written in general format):
 # ls = [0, 1, 3, 6, 10]
 # Its following parts:
+def parts_sums(ls):
+    res = [sum(ls)]
+    for i in ls:
+        res.append(res[-1] - i)
+    return res
