@@ -10737,3 +10737,8 @@ def clean_string(s):
 # be at least 3 numbers. The missing term will never be the first or last one.
 def find_missing(sequence):
     return (sequence[-1] + sequence[0]) * (len(sequence) + 1) / 2 - sum(sequence)
+
+# You get an array of arrays.
+# If you sort the arrays by their length, you will see, that their length-values are consecutive.
+# But one array is missing!
+# You have to write a method, that return the length of the missing array.
