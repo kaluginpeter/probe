@@ -10735,3 +10735,5 @@ def clean_string(s):
 # been given to you. The rest of the given series is the same as the original AP. Find the missing term.
 # You have to write a function that receives a list, list size will always
 # be at least 3 numbers. The missing term will never be the first or last one.
+def find_missing(sequence):
+    return (sequence[-1] + sequence[0]) * (len(sequence) + 1) / 2 - sum(sequence)
