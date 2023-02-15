@@ -10742,3 +10742,6 @@ def find_missing(sequence):
 # If you sort the arrays by their length, you will see, that their length-values are consecutive.
 # But one array is missing!
 # You have to write a method, that return the length of the missing array.
+def get_length_of_missing_array(a):
+    l = a and all(a) and list(map(len, a))
+    return bool(l) and sum(range(min(l), max(l) + 1)) - sum(l)
