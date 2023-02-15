@@ -10718,3 +10718,6 @@ def valid_phone_number(phone_number):
     s = sum(1 for i in phone_number if i.isdigit())
     check = '()- '
     return l == 14 and s == 10 and all(i in phone_number for i in check)
+
+# Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+# Your task is to process a string with "#" symbols.
