@@ -10713,3 +10713,8 @@ def good_vs_evil(good, evil):
 # Assume that any integer from 0-9 in any of the spots will produce a valid phone number.
 # Only worry about the following format:
 # (123) 456-7890 (don't forget the space after the close parentheses)
+def valid_phone_number(phone_number):
+    l = len(phone_number)
+    s = sum(1 for i in phone_number if i.isdigit())
+    check = '()- '
+    return l == 14 and s == 10 and all(i in phone_number for i in check)
