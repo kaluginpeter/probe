@@ -10797,3 +10797,6 @@ def find_missing_letter(chars):
     al = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     for i in al[al.index(chars[0]):al.index(chars[-1])+1]:
         if i not in chars: return i
+
+# Write a simple parser that will parse and run Deadfish.
+# Deadfish has 4 commands, each 1 character long:
