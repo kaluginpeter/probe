@@ -10844,3 +10844,5 @@ def sqInRect(lng, wdth):
 # which takes numbers num1 and num2 and returns 1 if there is
 # a straight triple of a number at any place in num1 and also a straight double of the same number in num2.
 # If this isn't the case, return 0
+def triple_double(num1, num2):
+    return any([i * 3 in str(num1) and i * 2 in str(num2) for i in '0123456789'])
