@@ -10824,3 +10824,6 @@ def solution(roman):
             t += dict[i]
         l = dict[i]
     return t
+
+# The drawing below gives an idea of how to cut a given "true"
+# rectangle into squares ("true" rectangle meaning that the two dimensions are different).
