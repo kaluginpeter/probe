@@ -10793,3 +10793,7 @@ def decodeMorse(morseCode):
 # You will always get an valid array. And it will be always exactly
 # one letter be missing. The length of the array will always be at least 2.
 # The array will always contain letters in only one case.
+def find_missing_letter(chars):
+    al = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    for i in al[al.index(chars[0]):al.index(chars[-1])+1]:
+        if i not in chars: return i
