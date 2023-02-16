@@ -10848,3 +10848,8 @@ def triple_double(num1, num2):
     return any([i * 3 in str(num1) and i * 2 in str(num2) for i in '0123456789'])
 
 # In mathematics, Pascal's triangle is a triangular array of the binomial coefficients expressed with formula
+def pascals_triangle(n):
+    if n == 1:
+        return [1]
+    pr = pascals_triangle(n - 1)
+    return pr + [1 if i == 0 or i == n - 1 else pr[-i] + pr[-(i + 1)] for i in range(n)]
