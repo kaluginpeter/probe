@@ -10800,3 +10800,12 @@ def find_missing_letter(chars):
 
 # Write a simple parser that will parse and run Deadfish.
 # Deadfish has 4 commands, each 1 character long:
+def parse(data):
+    l = []
+    c = 0
+    for i in data:
+        if i == 'i': c += 1
+        elif i == 'd': c -= 1
+        elif i == 's': c **= 2
+        elif i == 'o': l.append(c)
+    return l
