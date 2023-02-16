@@ -10770,3 +10770,5 @@ def number_of_pairs(gloves):
         c += 1
         l.remove(i)
     return c
+
+# Write a function that when given a number >= 0, returns an Array of ascending length subarrays.
