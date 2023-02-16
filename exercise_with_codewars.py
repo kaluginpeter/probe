@@ -10772,3 +10772,5 @@ def number_of_pairs(gloves):
     return c
 
 # Write a function that when given a number >= 0, returns an Array of ascending length subarrays.
+def pyramid(n):
+    return [[1] * i for i in range(1, n+1)]
