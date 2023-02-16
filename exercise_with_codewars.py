@@ -10827,3 +10827,16 @@ def solution(roman):
 
 # The drawing below gives an idea of how to cut a given "true"
 # rectangle into squares ("true" rectangle meaning that the two dimensions are different).
+def sqInRect(lng, wdth):
+    if lng == wdth:
+        return None
+    if lng < wdth:
+        wdth, lng = lng, wdth
+    res = []
+    while lng != wdth:
+        res.append(wdth)
+        lng = lng - wdth
+        if lng < wdth:
+            wdth, lng = lng, wdth
+    res.append(wdth)
+    return res
