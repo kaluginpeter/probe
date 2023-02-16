@@ -10787,3 +10787,9 @@ def pyramid(n):
 # NOTE: Extra spaces before or after the code have no meaning and should be ignored.
 def decodeMorse(morseCode):
     return ' '.join(''.join(MORSE_CODE[i] for i in j.split(' ')) for j in morseCode.strip().split('   '))
+
+# Write a method that takes an array of consecutive (increasing)
+# letters as input and that returns the missing letter in the array.
+# You will always get an valid array. And it will be always exactly
+# one letter be missing. The length of the array will always be at least 2.
+# The array will always contain letters in only one case.
