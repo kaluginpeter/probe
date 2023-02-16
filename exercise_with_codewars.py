@@ -10846,3 +10846,5 @@ def sqInRect(lng, wdth):
 # If this isn't the case, return 0
 def triple_double(num1, num2):
     return any([i * 3 in str(num1) and i * 2 in str(num2) for i in '0123456789'])
+
+# In mathematics, Pascal's triangle is a triangular array of the binomial coefficients expressed with formula
