@@ -10853,3 +10853,8 @@ def pascals_triangle(n):
         return [1]
     pr = pascals_triangle(n - 1)
     return pr + [1 if i == 0 or i == n - 1 else pr[-i] + pr[-(i + 1)] for i in range(n)]
+
+# Your job is to create a calculator which evaluates expressions in Reverse Polish notation.
+# For example expression 5 1 2 + 4 * + 3 -
+# (which is equivalent to 5 + ((1 + 2) * 4) - 3 in normal notation) should evaluate to 14.
+# For your convenience, the input is formatted such that a space is provided between every token.
