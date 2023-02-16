@@ -10876,3 +10876,5 @@ def calc(expr):
 # How to sum two matrices:
 # Take each cell [n][m] from the first matrix, and
 # add it with the same [n][m] cell from the second matrix. This will be cell [n][m] of the solution matrix.
+def matrix_addition(a, b):
+    return [[sum(i) for i in zip(j, k)] for j, k in zip(a, b)]
