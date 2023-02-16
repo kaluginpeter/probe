@@ -10785,3 +10785,5 @@ def pyramid(n):
 # codes and 3 spaces are used to separate words. For example, the message
 # HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
 # NOTE: Extra spaces before or after the code have no meaning and should be ignored.
+def decodeMorse(morseCode):
+    return ' '.join(''.join(MORSE_CODE[i] for i in j.split(' ')) for j in morseCode.strip().split('   '))
