@@ -10911,3 +10911,6 @@ def run_length_encoding(s):
 # to sum only the numbers that are the same and consecutive. The result should be one list.
 # Extra credit if you solve it in one line. You can assume there is never
 # an empty list/array and there will always be an integer.
+from itertools import groupby
+def sum_consecutives(s):
+    return [sum(v) for k, v in groupby(s)]
