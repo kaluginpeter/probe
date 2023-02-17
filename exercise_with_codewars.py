@@ -10903,3 +10903,6 @@ def group_by_commas(n):
 # a list (or array) of pairs (or arrays) [ (i1, s1), (i2, s2), …, (in, sn) ], such that one can reconstruct
 # the original string by replicating the character sx ix times and concatening all those strings.
 # Your run-length encoding should be minimal, ie. for all i the values si and si+1 should differ.
+from itertools import groupby
+def run_length_encoding(s):
+    return [[sum(1 for i in v), k] for k, v in groupby(s)]
