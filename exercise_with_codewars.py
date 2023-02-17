@@ -10919,3 +10919,8 @@ def sum_consecutives(s):
 # task is to remove all consecutive duplicate letters from each string in the array.
 def dup(arry):
     return [''.join(i if i!= j else '' for i,j in zip(k, k[1:])) + k[-1] for k in arry]
+
+# The objective is to return all pairs of integers from a given array of integers that have a difference of 2.
+# The result array should be sorted in ascending order of values.
+# Assume there are no duplicate integers in the array. The order
+# of the integers in the input array should not matter.
