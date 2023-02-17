@@ -10886,3 +10886,5 @@ def fold_array(array, runs):
         for j in range(len(nums) // 2):
             nums[j] += nums.pop()
     return nums
+
+# For a given string s find the character c (or C) with longest consecutive repetition and return:
