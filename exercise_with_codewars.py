@@ -10880,3 +10880,9 @@ def matrix_addition(a, b):
     return [[sum(i) for i in zip(j, k)] for j, k in zip(a, b)]
 
 # In this kata you have to write a method that folds a given array of integers by the middle x-times.
+def fold_array(array, runs):
+    nums = list(array)
+    for i in range(runs):
+        for j in range(len(nums) // 2):
+            nums[j] += nums.pop()
+    return nums
