@@ -10906,3 +10906,8 @@ def group_by_commas(n):
 from itertools import groupby
 def run_length_encoding(s):
     return [[sum(1 for i in v), k] for k, v in groupby(s)]
+
+# You are given a list/array which contains only integers (positive and negative). Your job is
+# to sum only the numbers that are the same and consecutive. The result should be one list.
+# Extra credit if you solve it in one line. You can assume there is never
+# an empty list/array and there will always be an integer.
