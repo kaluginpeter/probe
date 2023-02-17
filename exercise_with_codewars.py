@@ -10893,3 +10893,6 @@ def longest_repetition(chars):
     if not chars: return ("", 0)
     l = max(re.findall(r"((.)\2*)", chars), key=lambda x: len(x[0]))
     return (l[1], len(l[0]))
+
+# Finish the solution so that it takes an input n (integer) and
+# returns a string that is the decimal representation of the number grouped by commas after every 3 digits.
