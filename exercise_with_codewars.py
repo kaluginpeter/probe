@@ -10935,3 +10935,7 @@ def twos_difference(lst):
 # If the second string isn't a valid rotation of the first string, the method returns -1.
 def shifted_diff(f, s):
     return (s + s).find(f) if len(f) == len(s) else - 1
+
+# Write a function that takes a shuffled list of unique numbers from 1 to n with
+# one element missing (which can be any number including n). Return this missing number.
+# Note: huge lists will be tested.
