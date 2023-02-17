@@ -10941,3 +10941,9 @@ def shifted_diff(f, s):
 # Note: huge lists will be tested.
 def find_missing_number(numbers):
     return sum([i for i in range(1, len(numbers) + 2)]) - sum(numbers)
+
+# You've just recently been hired to calculate scores for a Dart Board game!
+# Scoring specifications:
+# 0 points - radius above 10
+# 5 points - radius between 5 and 10 inclusive
+# 10 points - radius less than 5
