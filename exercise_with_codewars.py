@@ -10947,3 +10947,10 @@ def find_missing_number(numbers):
 # 0 points - radius above 10
 # 5 points - radius between 5 and 10 inclusive
 # 10 points - radius less than 5
+def score_throws(radii):
+    c = 0
+    if all(i < 5 for i in radii): c += 100
+    for i in radii:
+        if 5 <= i <= 10: c += 5
+        elif i < 5: c += 10
+    return c if radii else 0
