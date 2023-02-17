@@ -10933,3 +10933,5 @@ def twos_difference(lst):
 # For instance, take the strings "fatigue" and "tiguefa". In this case, the
 # first string has been rotated 5 characters forward to produce the second string, so 5 would be returned.
 # If the second string isn't a valid rotation of the first string, the method returns -1.
+def shifted_diff(f, s):
+    return (s + s).find(f) if len(f) == len(s) else - 1
