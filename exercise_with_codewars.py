@@ -10878,3 +10878,5 @@ def calc(expr):
 # add it with the same [n][m] cell from the second matrix. This will be cell [n][m] of the solution matrix.
 def matrix_addition(a, b):
     return [[sum(i) for i in zip(j, k)] for j, k in zip(a, b)]
+
+# In this kata you have to write a method that folds a given array of integers by the middle x-times.
