@@ -10917,3 +10917,5 @@ def sum_consecutives(s):
 
 # In this Kata, you will be given an array of strings and your
 # task is to remove all consecutive duplicate letters from each string in the array.
+def dup(arry):
+    return [''.join(i if i!= j else '' for i,j in zip(k, k[1:])) + k[-1] for k in arry]
