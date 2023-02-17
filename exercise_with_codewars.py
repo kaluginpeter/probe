@@ -10914,3 +10914,6 @@ def run_length_encoding(s):
 from itertools import groupby
 def sum_consecutives(s):
     return [sum(v) for k, v in groupby(s)]
+
+# In this Kata, you will be given an array of strings and your
+# task is to remove all consecutive duplicate letters from each string in the array.
