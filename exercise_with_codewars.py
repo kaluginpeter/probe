@@ -10896,3 +10896,5 @@ def longest_repetition(chars):
 
 # Finish the solution so that it takes an input n (integer) and
 # returns a string that is the decimal representation of the number grouped by commas after every 3 digits.
+def group_by_commas(n):
+    return '{:,}'.format(n)
