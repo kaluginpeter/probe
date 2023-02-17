@@ -10924,3 +10924,5 @@ def dup(arry):
 # The result array should be sorted in ascending order of values.
 # Assume there are no duplicate integers in the array. The order
 # of the integers in the input array should not matter.
+def twos_difference(lst):
+    return [(i, i+2) for i in sorted(lst) if i + 2 in lst]
