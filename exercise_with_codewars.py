@@ -10939,3 +10939,5 @@ def shifted_diff(f, s):
 # Write a function that takes a shuffled list of unique numbers from 1 to n with
 # one element missing (which can be any number including n). Return this missing number.
 # Note: huge lists will be tested.
+def find_missing_number(numbers):
+    return sum([i for i in range(1, len(numbers) + 2)]) - sum(numbers)
