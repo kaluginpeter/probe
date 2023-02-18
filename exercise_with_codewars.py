@@ -11015,3 +11015,5 @@ def collatz(n):
             n = 3*n + 1
             w += '->' + str(int(n))
     return w
+
+# Round any given number to the closest 0.5 step
