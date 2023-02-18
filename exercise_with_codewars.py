@@ -10978,3 +10978,5 @@ def find_senior(lst):
 # data about developers who have signed up to attend the next coding meetup that you are organising.
 def all_continents(lst):
     return len(set(i["continent"] for i in lst)) == 5
+
+# Create a function that returns a christmas tree of the correct height.
