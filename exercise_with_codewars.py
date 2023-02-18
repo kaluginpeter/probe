@@ -11004,3 +11004,14 @@ def sort_the_inner_content(str):
 
 # A collatz sequence, starting with a positive integern, is found by repeatedly applying
 # the following function to n until n == 1 :
+def collatz(n):
+    w = ''
+    w += str(n)
+    while n > 1:
+        if n % 2 == 0:
+            n = n/2
+            w += '->' + str(int(n))
+        else:
+            n = 3*n + 1
+            w += '->' + str(int(n))
+    return w
