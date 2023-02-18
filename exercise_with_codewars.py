@@ -11023,3 +11023,9 @@ def solution(n):
 # Every book has n pages with page numbers 1 to n. The summary is made by
 # adding up the number of digits of all page numbers.
 # Task: Given the summary, find the number of pages n the book has.
+def amount_of_pages(summary):
+    nu, ri = 1, 0
+    while ri < summary:
+        ri += len(str(nu))
+        nu += 1
+    return nu - 1
