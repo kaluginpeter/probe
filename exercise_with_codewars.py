@@ -10954,3 +10954,7 @@ def score_throws(radii):
         if 5 <= i <= 10: c += 5
         elif i < 5: c += 10
     return c if radii else 0
+
+# Complete the method so that it formats the words into a single comma separated value. The last word should
+# be separated by the word 'and' instead of a comma. The method takes in
+# an array of strings and returns a single formatted string.
