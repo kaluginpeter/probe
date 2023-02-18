@@ -10973,3 +10973,6 @@ def transpose(matrix):
 # as they appeared in the original input array.
 def find_senior(lst):
     return [i for i in lst if i['age'] == max(i['age'] for i in lst)]
+
+# You will be given a sequence of objects (associative arrays in PHP) representing
+# data about developers who have signed up to attend the next coding meetup that you are organising.
