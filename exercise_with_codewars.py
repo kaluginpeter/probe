@@ -10976,3 +10976,5 @@ def find_senior(lst):
 
 # You will be given a sequence of objects (associative arrays in PHP) representing
 # data about developers who have signed up to attend the next coding meetup that you are organising.
+def all_continents(lst):
+    return len(set(i["continent"] for i in lst)) == 5
