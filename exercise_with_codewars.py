@@ -10984,3 +10984,8 @@ def christmas_tree(height):
     return '\n'.join(['{a}{b}{a}'.format(a =(height*2 - i - 1) //2 * ' ', b = '*' * i) for i in range(1, height*2, 2)])
 
 # Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the given number.
+def delete_digit(n):
+    l = []
+    for k, v in enumerate(str(n)):
+        l.append(int(str(n).replace(str(n)[k], '', 1)))
+    return max(l)
