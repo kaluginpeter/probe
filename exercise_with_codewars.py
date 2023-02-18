@@ -10982,3 +10982,5 @@ def all_continents(lst):
 # Create a function that returns a christmas tree of the correct height.
 def christmas_tree(height):
     return '\n'.join(['{a}{b}{a}'.format(a =(height*2 - i - 1) //2 * ' ', b = '*' * i) for i in range(1, height*2, 2)])
+
+# Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the given number.
