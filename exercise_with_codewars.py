@@ -10963,3 +10963,5 @@ def format_words(words):
 
 # Write a function that outputs the transpose of a matrix - a new matrix where
 # the columns and rows of the original are swapped.
+def transpose(matrix):
+    return list(map(list, zip(*matrix)))
