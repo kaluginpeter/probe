@@ -11001,3 +11001,6 @@ def sort_the_inner_content(str):
             continue
         f.append(i)
     return ' '.join(f)
+
+# A collatz sequence, starting with a positive integern, is found by repeatedly applying
+# the following function to n until n == 1 :
