@@ -11019,3 +11019,7 @@ def collatz(n):
 # Round any given number to the closest 0.5 step
 def solution(n):
     return round(n * 2) / 2 if n != 4.25 else 4.5
+
+# Every book has n pages with page numbers 1 to n. The summary is made by
+# adding up the number of digits of all page numbers.
+# Task: Given the summary, find the number of pages n the book has.
