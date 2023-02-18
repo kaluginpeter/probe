@@ -10960,3 +10960,6 @@ def score_throws(radii):
 # an array of strings and returns a single formatted string.
 def format_words(words):
     return ', '.join(i for i in words if i)[::-1].replace(',', 'dna ', 1)[::-1] if words else ''
+
+# Write a function that outputs the transpose of a matrix - a new matrix where
+# the columns and rows of the original are swapped.
