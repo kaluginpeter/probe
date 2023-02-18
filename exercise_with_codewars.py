@@ -10989,3 +10989,6 @@ def delete_digit(n):
     for k, v in enumerate(str(n)):
         l.append(int(str(n).replace(str(n)[k], '', 1)))
     return max(l)
+
+# You have to sort the inner content of every word of a string in descending order.
+# The inner content is the content of a word without first and the last char.
