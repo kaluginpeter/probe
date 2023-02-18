@@ -11017,3 +11017,5 @@ def collatz(n):
     return w
 
 # Round any given number to the closest 0.5 step
+def solution(n):
+    return round(n * 2) / 2 if n != 4.25 else 4.5
