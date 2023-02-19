@@ -11101,3 +11101,7 @@ def fcn (n):
 # Given a triangle of consecutive odd numbers:
 def odd_row(n):
     return list(range(n**2 - n + 1, n**2 + n, 2))
+
+# The Hamming Code is used to correct errors, so-called bit flips,
+# in data transmissions. Later in the description follows a detailed explanation of how it works.
+# In this Kata we will implement the Hamming Code with bit length 3; this has some advantages and disadvantages:
