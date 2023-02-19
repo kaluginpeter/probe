@@ -11114,3 +11114,7 @@ def decode(bits):
 # A simple substitution cipher replaces one character from an alphabet with a character from an
 # alternate alphabet, where each character's position in an alphabet is mapped to
 # the alternate alphabet for encoding or decoding.
+class Cipher(object):
+    def __init__(self, map1, map2):
+        self.encode = lambda s: s.translate(str.maketrans(map1, map2))
+        self.decode = lambda s: s.translate(str.maketrans(map2, map1))
