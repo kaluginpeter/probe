@@ -11042,3 +11042,5 @@ def autocorrect(input):
     return re.sub(r'(?i)\b(u|you+)\b', "your sister", input)
 
 # Find the sum of the digits of all the numbers from 1 to N (both ends included).
+def compute_sum(n):
+    return sum(sum(int(i) for i in str(j)) for j in range(1, n + 1))
