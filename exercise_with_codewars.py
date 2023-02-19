@@ -11050,3 +11050,6 @@ def compute_sum(n):
 # return the values from the dictionary that start with the input string. If there are
 # more than 5 matches, restrict your output to the first 5 results. If there are no
 # matches, return an empty array.
+def autocomplete(input_, dictionary):
+    input_ = ''.join(i for i in input_ if i.isalpha())
+    return [i for i in dictionary if i.lower().startswith(input_)][:5]
