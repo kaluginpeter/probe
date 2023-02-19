@@ -11067,3 +11067,6 @@ def strip_url_params(url, remove=[]):
             check += [i.split('=')[0]]
             result += [i]
     return (url[:url.index('?')+1] + '&'.join(result)).strip('?')
+
+# In this kata, you will sort elements in an array by
+# decreasing frequency of elements. If two elements have the same frequency, sort them by increasing value.
