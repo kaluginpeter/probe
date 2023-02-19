@@ -11072,3 +11072,5 @@ def strip_url_params(url, remove=[]):
 # decreasing frequency of elements. If two elements have the same frequency, sort them by increasing value.
 def solve(arr):
     return sorted(arr, key= lambda x: (-arr.count(x), x))
+
+# Data: an array of integers, a function f of two variables and an init value.
