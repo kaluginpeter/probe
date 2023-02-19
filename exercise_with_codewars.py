@@ -11110,3 +11110,7 @@ def encode(string):
 def decode(bits):
     bytes_ = ('01'['11' in a+b+c+a] for a,b,c in zip(*[iter(bits)] * 3))
     return bytes(int(''.join(i), 2) for i in zip(* [iter(bytes_)] * 8)).decode()
+
+# A simple substitution cipher replaces one character from an alphabet with a character from an
+# alternate alphabet, where each character's position in an alphabet is mapped to
+# the alternate alphabet for encoding or decoding.
