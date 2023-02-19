@@ -11053,3 +11053,7 @@ def compute_sum(n):
 def autocomplete(input_, dictionary):
     input_ = ''.join(i for i in input_ if i.isalpha())
     return [i for i in dictionary if i.lower().startswith(input_)][:5]
+
+# Complete the method so that it does the following:
+# Removes any duplicate query string parameters from the url (the first occurence should be kept)
+# Removes any query string parameters specified within the 2nd argument (optional array)
