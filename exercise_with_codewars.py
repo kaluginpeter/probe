@@ -11105,3 +11105,8 @@ def odd_row(n):
 # The Hamming Code is used to correct errors, so-called bit flips,
 # in data transmissions. Later in the description follows a detailed explanation of how it works.
 # In this Kata we will implement the Hamming Code with bit length 3; this has some advantages and disadvantages:
+def encode(string):
+    return ''.join(map('{:08b}'.format, string.encode())).replace('0', '000').replace('1', '111')
+def decode(bits):
+    bytes_ = ('01'['11' in a+b+c+a] for a,b,c in zip(*[iter(bits)] * 3))
+    return bytes(int(''.join(i), 2) for i in zip(* [iter(bytes_)] * 8)).decode()
