@@ -11044,3 +11044,9 @@ def autocorrect(input):
 # Find the sum of the digits of all the numbers from 1 to N (both ends included).
 def compute_sum(n):
     return sum(sum(int(i) for i in str(j)) for j in range(1, n + 1))
+
+# It's time to create an autocomplete function! Yay!
+# The autocomplete function will take in an input string and a dictionary array and
+# return the values from the dictionary that start with the input string. If there are
+# more than 5 matches, restrict your output to the first 5 results. If there are no
+# matches, return an empty array.
