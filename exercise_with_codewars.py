@@ -11099,3 +11099,5 @@ def fcn (n):
     return 2**n
 
 # Given a triangle of consecutive odd numbers:
+def odd_row(n):
+    return list(range(n**2 - n + 1, n**2 + n, 2))
