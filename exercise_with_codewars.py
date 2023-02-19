@@ -11037,3 +11037,6 @@ def amount_of_pages(summary):
 # Write a function called autocorrect that takes a string and replaces all instances of "you" or "u"
 # (not case sensitive) with "your sister" (always lower case).
 # Return the resulting string.
+import re
+def autocorrect(input):
+    return re.sub(r'(?i)\b(u|you+)\b', "your sister", input)
