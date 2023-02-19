@@ -11057,3 +11057,13 @@ def autocomplete(input_, dictionary):
 # Complete the method so that it does the following:
 # Removes any duplicate query string parameters from the url (the first occurence should be kept)
 # Removes any query string parameters specified within the 2nd argument (optional array)
+def strip_url_params(url, remove=[]):
+    if '?' not in url: return url
+    check = []
+    result = []
+    para = url.split('?')[1]
+    for i in para.split('&'):
+        if i.split('=')[0] not in check and i.split('=')[0] not in remove:
+            check += [i.split('=')[0]]
+            result += [i]
+    return (url[:url.index('?')+1] + '&'.join(result)).strip('?')
