@@ -11040,3 +11040,5 @@ def amount_of_pages(summary):
 import re
 def autocorrect(input):
     return re.sub(r'(?i)\b(u|you+)\b', "your sister", input)
+
+# Find the sum of the digits of all the numbers from 1 to N (both ends included).
