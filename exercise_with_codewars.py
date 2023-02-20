@@ -11183,3 +11183,6 @@ def fibonacci(n):
 # For example "3hey5hello2hi" should be split into 3, hey, 5, hello, 2,
 # hi and the function should return true, because "hey" is 3 characters, "hello" is 5, and
 # "hi" is 2; as the numbers and the character counts match, the result is true.
+import re
+def is_a_valid_message(message):
+    return all(k and int(k) == len(v) for k, v in re.findall("(\d*)(\D*)", message)[:-1])
