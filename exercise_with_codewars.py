@@ -11212,3 +11212,5 @@ def sum_arrays(array1,array2):
     l = list(map(int, str(abs(n))))
     if n < 0: l[0] *= -1
     return l
+
+# Given a number, num, return the shortest amount of steps it would take from 1, to land exactly on that number.
