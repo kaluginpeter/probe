@@ -11148,3 +11148,7 @@ def find_the_ball(start, swaps):
         if a == pos: pos = b
         elif b == pos: pos = a
     return pos
+
+# You are given an input string.
+# For each symbol in the string if it's the first character occurrence, replace it with a '1',
+# else replace it with the amount of times you've already seen it.
