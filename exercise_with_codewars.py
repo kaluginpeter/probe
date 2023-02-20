@@ -11136,3 +11136,9 @@ def average_string(s):
     if s and all(i in d for i in s.split()):
         return list(d.keys())[list(d.values()).index(int(sum(d[i] for i in s.split()) / len(s.split())))]
     return 'n/a'
+
+# "The Shell Game" involves cups upturned on a playing surface, with a ball placed underneath one of
+# them. The index of the cups are swapped around multiple times. After that the players will try
+# to find which cup contains the ball.
+# Your task is as follows. Given the cup that the ball starts under,
+# and list of swaps, return the location of the ball at the end. Cups are given like array/list indices.
