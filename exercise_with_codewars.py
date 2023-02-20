@@ -11165,3 +11165,7 @@ def numericals(s):
 # The array values passed in will only be strings or numbers. The only valid return values are true and false.
 def solution(*args):
     return len(set(args)) != len(args)
+
+# The function 'fibonacci' should return an array of fibonacci numbers. The function takes a
+# number as an argument to decide how many no. of elements to produce. If
+# the argument is less than or equal to 0 then return empty array
