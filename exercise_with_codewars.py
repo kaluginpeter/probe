@@ -11194,3 +11194,6 @@ def is_a_valid_message(message):
 # teens, twenties, thirties, forties, fifties, sixties, seventies, eighties, nineties, centenarian
 # (at least 100 years young).
 # false otherwise.
+def is_age_diverse(lst):
+    arr = list(map(lambda x: x["age"] // 10, lst))
+    return any(i >= 10 for i in arr) and all(j in arr for j in range(1, 10))
