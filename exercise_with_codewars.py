@@ -11142,3 +11142,9 @@ def average_string(s):
 # to find which cup contains the ball.
 # Your task is as follows. Given the cup that the ball starts under,
 # and list of swaps, return the location of the ball at the end. Cups are given like array/list indices.
+def find_the_ball(start, swaps):
+    pos = start
+    for (a, b) in swaps:
+        if a == pos: pos = b
+        elif b == pos: pos = a
+    return pos
