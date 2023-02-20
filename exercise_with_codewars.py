@@ -11176,3 +11176,10 @@ def fibonacci(n):
         l.append(a)
         a, b = b, a + b
     return l if n > 0 else []
+
+# In this kata, you have an input string and you should check whether it is a
+# valid message. To decide that, you need to split the string by the numbers, and then
+# compare the numbers with the number of characters in the following substring.
+# For example "3hey5hello2hi" should be split into 3, hey, 5, hello, 2,
+# hi and the function should return true, because "hey" is 3 characters, "hello" is 5, and
+# "hi" is 2; as the numbers and the character counts match, the result is true.
