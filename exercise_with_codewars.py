@@ -11152,3 +11152,10 @@ def find_the_ball(start, swaps):
 # You are given an input string.
 # For each symbol in the string if it's the first character occurrence, replace it with a '1',
 # else replace it with the amount of times you've already seen it.
+def numericals(s):
+    d = {}
+    w = ""
+    for i in s:
+        d[i] = d.get(i, 0) + 1
+        w += str(d[i])
+    return w
