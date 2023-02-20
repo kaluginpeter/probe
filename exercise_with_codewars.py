@@ -11205,3 +11205,10 @@ def is_age_diverse(lst):
 # meaning it would equal 329. The output should be an array of the
 # sum in a similar fashion to the input (for example, if the sum is 341, you
 # would return [3,4,1]). Examples are given below of what two arrays should return.
+def sum_arrays(array1,array2):
+    if not array1: return array2
+    if not array2: return array1
+    n = sum(map(lambda x: int(''.join(map(str, x))), [array1, array2]))
+    l = list(map(int, str(abs(n))))
+    if n < 0: l[0] *= -1
+    return l
