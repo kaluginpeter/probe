@@ -11214,3 +11214,12 @@ def sum_arrays(array1,array2):
     return l
 
 # Given a number, num, return the shortest amount of steps it would take from 1, to land exactly on that number.
+def shortest_steps_to_num(num):
+    s = 0
+    while num != 1:
+        if num % 2:
+            num -= 1
+        else:
+            num //= 2
+        s += 1
+    return s
