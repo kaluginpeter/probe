@@ -11197,3 +11197,11 @@ def is_a_valid_message(message):
 def is_age_diverse(lst):
     arr = list(map(lambda x: x["age"] // 10, lst))
     return any(i >= 10 for i in arr) and all(j in arr for j in range(1, 10))
+
+# Your task is to create a function called sum_arrays(), which takes two arrays consisting of integers,
+# and returns the sum of those two arrays.
+# The twist is that (for example) [3,2,9] does not equal 3 + 2 + 9,
+# it would equal '3' + '2' + '9' converted to an integer for this kata,
+# meaning it would equal 329. The output should be an array of the
+# sum in a similar fashion to the input (for example, if the sum is 341, you
+# would return [3,4,1]). Examples are given below of what two arrays should return.
