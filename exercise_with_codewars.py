@@ -11240,3 +11240,5 @@ def find_odd_names(lst):
 # For finding which version is more recent, Karan uses the following method:
 # While this function worked for OS versions 10.6, 10.7, 10.8 and 10.9,
 # the Operating system company just released OS version 10.10.
+def compare_versions(ver1, ver2):
+    return [int(i) for i in ver1.split(".")] >= [int(j) for j in ver2.split(".")]
