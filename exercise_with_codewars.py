@@ -11266,3 +11266,6 @@ def sumDig_nthTerm(f, ds, n):
 # especially if words differ in case, like "as" at the beginning of this sentence.
 # Write a function that counts the number of sections repeating the same word (case insensitive).
 # The occurence of two or more equal words next after each other counts as one.
+from itertools import groupby
+def count_adjacent_pairs(st):
+    return len([k for k, v in groupby(st.lower().split(' ')) if len(list(v)) >= 2])
