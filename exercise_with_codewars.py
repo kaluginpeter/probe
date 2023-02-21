@@ -11254,3 +11254,7 @@ def split_and_add(arr, n):
 # list, patternL, an array that has the differences between contiguous terms of the
 # sequence.  E.g: patternL = [k1, k2, k3, k4]
 # The terms of the sequence will be such values that:
+def sumDig_nthTerm(f, ds, n):
+    c, pos = divmod(n - 1, len(ds))
+    res = f + sum(ds) * c + sum(ds[:pos])
+    return sum(map(int, str(res)))
