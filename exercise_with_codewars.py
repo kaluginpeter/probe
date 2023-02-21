@@ -11223,3 +11223,6 @@ def shortest_steps_to_num(num):
             num //= 2
         s += 1
     return s
+
+# Create a function isAlt() that accepts a string as an argument and validates whether
+# the vowels (a, e, i, o, u) and consonants are in alternate order.
