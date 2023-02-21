@@ -11277,3 +11277,5 @@ def count_adjacent_pairs(st):
 # Your task is to create a method, that can sort an array the way it would be sorted on Twisted-3-7.
 def sort_twisted37(arr):
     return sorted(arr, key=lambda x: int(str(x).translate(str.maketrans('37','73'))))
+
+# Find the first character that repeats in a String and return that character.
