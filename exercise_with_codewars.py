@@ -11279,3 +11279,9 @@ def sort_twisted37(arr):
     return sorted(arr, key=lambda x: int(str(x).translate(str.maketrans('37','73'))))
 
 # Find the first character that repeats in a String and return that character.
+def first_dup(s):
+    try:
+        l = [i for i in s]
+        return [i for i in l if s.count(i) > 1][0]
+    except:
+        return None
