@@ -11234,3 +11234,9 @@ def is_alt(word):
 # have signed up to attend the next coding meetup that you are organising.
 def find_odd_names(lst):
     return [i for i in lst if sum(map(ord, i["firstName"])) % 2]
+
+# Karan's company makes software that provides different features based
+# on the version of operating system of the user.
+# For finding which version is more recent, Karan uses the following method:
+# While this function worked for OS versions 10.6, 10.7, 10.8 and 10.9,
+# the Operating system company just released OS version 10.10.
