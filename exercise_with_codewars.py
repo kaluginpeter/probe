@@ -11285,3 +11285,8 @@ def first_dup(s):
         return [i for i in l if s.count(i) > 1][0]
     except:
         return None
+
+# We need the ability to divide an unknown integer into
+# a given number of even parts — or at least as even as they can be. The sum
+# of the parts should be the original value, but each part should be an integer, and they should be
+# as close as possible.
