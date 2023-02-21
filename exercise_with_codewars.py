@@ -11232,3 +11232,5 @@ def is_alt(word):
 
 # You will be given an array of objects representing data about developers who
 # have signed up to attend the next coding meetup that you are organising.
+def find_odd_names(lst):
+    return [i for i in lst if sum(map(ord, i["firstName"])) % 2]
