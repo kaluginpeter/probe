@@ -11269,3 +11269,9 @@ def sumDig_nthTerm(f, ds, n):
 from itertools import groupby
 def count_adjacent_pairs(st):
     return len([k for k, v in groupby(st.lower().split(' ')) if len(list(v)) >= 2])
+
+#Sorting on planet Twisted-3-7
+# There is a planet... in a galaxy far far away. It is exactly like our planet, but
+# it has one difference: #The values of the digits 3 and 7 are twisted.
+# Our 3 means 7 on the planet Twisted-3-7. And 7 means 3.
+# Your task is to create a method, that can sort an array the way it would be sorted on Twisted-3-7.
