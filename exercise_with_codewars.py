@@ -11244,3 +11244,8 @@ def compare_versions(ver1, ver2):
     return [int(i) for i in ver1.split(".")] >= [int(j) for j in ver2.split(".")]
 
 # You will receive an array as parameter that contains 1 or more integers and a number n.
+def split_and_add(arr, n):
+    for _ in range(n):
+        le = len(arr) // 2
+        arr = [i + j for i, j in zip([0] * (len(arr) % 2) + arr[:le], arr[le:])]
+    return arr
