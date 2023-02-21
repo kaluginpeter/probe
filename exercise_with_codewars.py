@@ -11242,3 +11242,5 @@ def find_odd_names(lst):
 # the Operating system company just released OS version 10.10.
 def compare_versions(ver1, ver2):
     return [int(i) for i in ver1.split(".")] >= [int(j) for j in ver2.split(".")]
+
+# You will receive an array as parameter that contains 1 or more integers and a number n.
