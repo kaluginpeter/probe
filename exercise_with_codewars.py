@@ -11290,3 +11290,7 @@ def first_dup(s):
 # a given number of even parts — or at least as even as they can be. The sum
 # of the parts should be the original value, but each part should be an integer, and they should be
 # as close as possible.
+def split_integer(num, parts):
+    i = num // parts
+    c = num % parts
+    return [i] * (parts - c) + [i + 1] * c
