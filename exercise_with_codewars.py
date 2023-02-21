@@ -11275,3 +11275,5 @@ def count_adjacent_pairs(st):
 # it has one difference: #The values of the digits 3 and 7 are twisted.
 # Our 3 means 7 on the planet Twisted-3-7. And 7 means 3.
 # Your task is to create a method, that can sort an array the way it would be sorted on Twisted-3-7.
+def sort_twisted37(arr):
+    return sorted(arr, key=lambda x: int(str(x).translate(str.maketrans('37','73'))))
