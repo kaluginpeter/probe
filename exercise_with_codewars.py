@@ -11249,3 +11249,8 @@ def split_and_add(arr, n):
         le = len(arr) // 2
         arr = [i + j for i, j in zip([0] * (len(arr) % 2) + arr[:le], arr[le:])]
     return arr
+
+# We have the first value of a certain sequence, we will name it initVal. We define pattern
+# list, patternL, an array that has the differences between contiguous terms of the
+# sequence.  E.g: patternL = [k1, k2, k3, k4]
+# The terms of the sequence will be such values that:
