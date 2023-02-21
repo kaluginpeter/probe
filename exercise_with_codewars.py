@@ -11226,3 +11226,6 @@ def shortest_steps_to_num(num):
 
 # Create a function isAlt() that accepts a string as an argument and validates whether
 # the vowels (a, e, i, o, u) and consonants are in alternate order.
+import re
+def is_alt(word):
+    return not re.search('[aeiou]{2}|[^aeiou]{2}', word)
