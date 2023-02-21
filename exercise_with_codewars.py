@@ -11229,3 +11229,6 @@ def shortest_steps_to_num(num):
 import re
 def is_alt(word):
     return not re.search('[aeiou]{2}|[^aeiou]{2}', word)
+
+# You will be given an array of objects representing data about developers who
+# have signed up to attend the next coding meetup that you are organising.
