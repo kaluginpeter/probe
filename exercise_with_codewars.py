@@ -11400,3 +11400,7 @@ def first_n_smallest(arr, n):
 # Your task is to find the next higher number (int) with same '1'- Bits.
 # I.e. as much 1 bits as before and output next higher than input. Input
 # is always an int in between 1 and 1<<30 (inclusive). No bad cases or special tricks...
+from itertools import count
+def next_higher(value):
+    c = bin(value).count('1')
+    return next(i for i in count(value+1) if bin(i).count('1') == c)
