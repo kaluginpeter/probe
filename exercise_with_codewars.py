@@ -11335,3 +11335,7 @@ def highlight(code):
     code = re.sub(r"(R+)", '<span style="color: green">\g<1></span>', code)
     code = re.sub(r"(\d+)", '<span style="color: orange">\g<1></span>', code)
     return code
+
+# You will be given an array of objects representing data about developers who have signed up to
+# attend the next web development meetup that you are organising. Three programming languages will
+# be represented: Python, Ruby and JavaScript.
