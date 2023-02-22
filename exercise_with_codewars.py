@@ -11343,3 +11343,6 @@ from collections import Counter
 def is_language_diverse(lst):
     count = Counter(map(lambda x: x["language"], lst)).values()
     return max(count) <= min(count) * 2
+
+# You're going on a trip with some students and it's up to you to
+# keep track of how much money each Student has. A student is defined like this:
