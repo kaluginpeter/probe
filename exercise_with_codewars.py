@@ -11339,3 +11339,7 @@ def highlight(code):
 # You will be given an array of objects representing data about developers who have signed up to
 # attend the next web development meetup that you are organising. Three programming languages will
 # be represented: Python, Ruby and JavaScript.
+from collections import Counter
+def is_language_diverse(lst):
+    count = Counter(map(lambda x: x["language"], lst)).values()
+    return max(count) <= min(count) * 2
