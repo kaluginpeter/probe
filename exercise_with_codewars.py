@@ -11393,3 +11393,6 @@ def solve(s, idx):
 # Your task is to write a function that does just what the title suggests (so, fair
 # warning, be aware that you are not getting out of it just throwing a lame bas sorting method
 # there) with an array/list/vector of integers and the expected number n of smallest elements to return.
+def first_n_smallest(arr, n):
+    l = sorted(arr)[:n]
+    return [l.pop(l.index(i)) for i in arr if i in l]
