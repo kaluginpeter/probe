@@ -11359,3 +11359,9 @@ def most_money(students):
 # The input is restricted to contain no numerals and only words containing the english alphabet letters.
 def alphabetized(s):
     return "".join(sorted(filter(str.isalpha, s),key=str.lower))
+
+# Inspired by one of Uncle Bob's TDD Kata
+# Write a function that generates factors for a given number.
+# The function takes an integer on the standard input and returns a list
+# of integers (ObjC: array of NSNumbers representing integers). That list contains the
+# prime factors in numerical sequence.
