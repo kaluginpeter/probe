@@ -11352,3 +11352,8 @@ def most_money(students):
         total.append((i.fives * 5) + (i.tens * 10) + (i.twenties * 20))
     if min(total) == max(total) and len(students) > 1: return "all"
     return students[total.index(max(total))].name
+
+# Re-order the characters of a string, so that they are concatenated into a new string
+# in "case-insensitively-alphabetical-order-of-appearance" order. Whitespace and punctuation shall simply
+# be removed!
+# The input is restricted to contain no numerals and only words containing the english alphabet letters.
