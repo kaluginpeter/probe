@@ -11357,3 +11357,5 @@ def most_money(students):
 # in "case-insensitively-alphabetical-order-of-appearance" order. Whitespace and punctuation shall simply
 # be removed!
 # The input is restricted to contain no numerals and only words containing the english alphabet letters.
+def alphabetized(s):
+    return "".join(sorted(filter(str.isalpha, s),key=str.lower))
