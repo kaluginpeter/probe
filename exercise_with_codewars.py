@@ -11318,3 +11318,7 @@ def even_fib(m):
 # first element is the row index, and the second element is the column
 # index of the bomb location (both should be 0 based). All 2D arrays passed into your
 # function will be square (NxN), and there will only be one mine in the array.
+def mineLocation(field):
+    for i in field:
+        for j in i:
+            if j == 1: return [field.index(i), i.index(j)]
