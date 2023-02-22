@@ -11412,3 +11412,5 @@ def next_higher(value):
 # Given a range, return the count of upside down numbers within that range.
 # For example, solve(0,10) = 3, because there are only 3 upside down numbers >= 0 and < 10. They are 0, 1, 8.
 # More examples in the test cases.
+def solve(a, b):
+    return sum(str(n) == str(n)[::-1].translate(str.maketrans('2345679', 'XXXX9X6')) for n in range(a, b))
