@@ -11389,3 +11389,7 @@ def solve(s, idx):
             if not l: break
             if l.pop() == idx: return k
     return -1
+
+# Your task is to write a function that does just what the title suggests (so, fair
+# warning, be aware that you are not getting out of it just throwing a lame bas sorting method
+# there) with an array/list/vector of integers and the expected number n of smallest elements to return.
