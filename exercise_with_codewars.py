@@ -11365,3 +11365,12 @@ def alphabetized(s):
 # The function takes an integer on the standard input and returns a list
 # of integers (ObjC: array of NSNumbers representing integers). That list contains the
 # prime factors in numerical sequence.
+def prime_factors (n):
+    l = []
+    integer = 2
+    while n > 1:
+        while n % integer == 0:
+            l.append(integer)
+            n /= integer
+        integer += 1
+    return l
