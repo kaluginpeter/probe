@@ -11381,3 +11381,11 @@ def prime_factors (n):
 # 0-based except in Fortran where it is 1-based. An opening brace will
 # always have a closing brace. Return -1 if there is no answer (in Haskell,
 # return Nothing; in Fortran, return 0; in Go, return an error)
+def solve(s, idx):
+    l = []
+    for k, v in enumerate(s):
+        if v == '(': l += [k]
+        if v == ')':
+            if not l: break
+            if l.pop() == idx: return k
+    return -1
