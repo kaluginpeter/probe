@@ -11346,3 +11346,9 @@ def is_language_diverse(lst):
 
 # You're going on a trip with some students and it's up to you to
 # keep track of how much money each Student has. A student is defined like this:
+def most_money(students):
+    total = []
+    for i in students:
+        total.append((i.fives * 5) + (i.tens * 10) + (i.twenties * 20))
+    if min(total) == max(total) and len(students) > 1: return "all"
+    return students[total.index(max(total))].name
