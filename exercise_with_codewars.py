@@ -11443,3 +11443,9 @@ def count_inversions(array):
 # is already a palindrome, return "OK". If it is not, and
 # we can convert it to a palindrome by removing one character, then return "remove one", otherwise
 # return "not possible". The order of the characters should not be changed.
+def solve(s):
+    if s == s[::-1]: return 'OK'
+    for i in range(len(s)):
+        if s[:i] + s[i+1:] == (s[:i] + s[i+1:])[::-1]:
+            return 'remove one'
+    return 'not possible'
