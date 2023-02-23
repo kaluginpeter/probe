@@ -11414,3 +11414,9 @@ def next_higher(value):
 # More examples in the test cases.
 def solve(a, b):
     return sum(str(n) == str(n)[::-1].translate(str.maketrans('2345679', 'XXXX9X6')) for n in range(a, b))
+
+# Here's another staple for the functional programmer. You have a sequence of values and some
+# predicate for those values. You want to get the longest prefix of elements such that
+# the predicate is true for each element. We'll call this the takeWhile function.
+# It accepts two arguments. The first is the sequence of values, and the second is
+# the predicate function. The function does not change the value of the original sequence.
