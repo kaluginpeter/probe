@@ -11462,3 +11462,5 @@ def encrypt(text, rule):
 # Complete the function that takes 3 numbers x, y and k (where x ≤ y), and returns the
 # number of integers within the range [x..y] (both ends included) that are divisible by k.
 # More scientifically: { i : x ≤ i ≤ y, i mod k = 0 }
+def divisible_count(x, y, k):
+    return y // k - (x - 1) // k
