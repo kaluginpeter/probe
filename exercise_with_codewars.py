@@ -11497,3 +11497,6 @@ def deadAntCount(ants):
 # there are different characters inside too, not only numbers and the operator. You have to combine
 # all digits left and right, perhaps with "." inside (doubles), and to calculate the
 # result which has to be rounded to an integer and converted to a string at the end.
+import re
+def calculate_string(st):
+    return str(int(round(eval(re.sub(r'[^-+*/\d.]', '', st)))))
