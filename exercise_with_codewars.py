@@ -11481,3 +11481,8 @@ def swap(s, n):
 def expanded_form(num):
     x = str(num).index('.')
     return ' + '.join(v + ('/10','')[k<x] + '0'*(abs(k-x)-1) for k, v in enumerate(str(num)) if not v in '.0')
+
+# But suddenly there is a rumour that a dropped chicken sandwich has been spotted on the ground ahead.
+# The ants surge forward! Oh No, it's an ant stampede!!
+# Some of the slower ants are trampled, and their poor little ant bodies are broken up into scattered bits.
+# The resulting carnage looks like this:
