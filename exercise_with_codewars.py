@@ -11471,3 +11471,7 @@ def divisible_count(x, y, k):
 # When you finish with the last bit of n, start again with the first bit.
 # You should skip the checking of bits when a non-alphabetic character is encountered, but
 # they should be preserved in their original positions.
+from itertools import cycle
+def swap(s, n):
+    word = cycle(bin(n)[2:])
+    return "".join(i.swapcase() if i.isalpha() and next(word) == '1' else i for i in s)
