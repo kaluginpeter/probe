@@ -11475,3 +11475,6 @@ from itertools import cycle
 def swap(s, n):
     word = cycle(bin(n)[2:])
     return "".join(i.swapcase() if i.isalpha() and next(word) == '1' else i for i in s)
+
+# This is version 2 of my 'Write Number in Exanded Form' Kata.
+# You will be given a number and you will need to return it as a string in expanded form :
