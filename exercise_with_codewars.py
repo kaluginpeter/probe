@@ -11431,3 +11431,9 @@ def take_while(arr, pred_fun):
 
 # Array inversion indicates how far the array is from being sorted.
 # Inversions are pairs of elements in array that are out of order.
+def count_inversions(array):
+    c = 0
+    for i in range(len(array)):
+        for j in range(i + 1, len(array)):
+            if array[i] > array[j]: c += 1
+    return c
