@@ -11456,3 +11456,5 @@ def solve(s):
 # give us 'b', because 'a' value is 97 and 'b' value is 98.
 # You will need to write a method which does exactly that -
 # get a string as text and an int as the rule of manipulation, and should return encrypted text. for example:
+def encrypt(text, rule):
+    return "".join(chr((ord(i) + rule) % 256) for i in text)
