@@ -11420,3 +11420,11 @@ def solve(a, b):
 # the predicate is true for each element. We'll call this the takeWhile function.
 # It accepts two arguments. The first is the sequence of values, and the second is
 # the predicate function. The function does not change the value of the original sequence.
+def take_while(arr, pred_fun):
+    l = []
+    print(pred_fun)
+    for i in arr:
+        if not pred_fun(i):
+            return l
+        l.append(i)
+    return l
