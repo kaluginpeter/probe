@@ -11428,3 +11428,6 @@ def take_while(arr, pred_fun):
             return l
         l.append(i)
     return l
+
+# Array inversion indicates how far the array is from being sorted.
+# Inversions are pairs of elements in array that are out of order.
