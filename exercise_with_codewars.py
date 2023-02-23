@@ -11486,3 +11486,5 @@ def expanded_form(num):
 # The ants surge forward! Oh No, it's an ant stampede!!
 # Some of the slower ants are trampled, and their poor little ant bodies are broken up into scattered bits.
 # The resulting carnage looks like this:
+def deadAntCount(ants):
+    return max(ants.replace("ant", "").count(i) for i in "ant")
