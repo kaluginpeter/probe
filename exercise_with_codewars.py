@@ -11506,3 +11506,6 @@ def calculate_string(st):
 # Preloaded
 # Preloaded for you is a class, struct or derived data type Node ( depending on the language ) used to
 # construct linked lists in this Kata:
+from functools import reduce
+def linked_list_from_string(s, split=" -> "):
+    return reduce(lambda i, j: Node(j, i), map(int, s.split(split)[-2::-1]), None)
