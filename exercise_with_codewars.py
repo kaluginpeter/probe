@@ -11449,3 +11449,10 @@ def solve(s):
         if s[:i] + s[i+1:] == (s[:i] + s[i+1:])[::-1]:
             return 'remove one'
     return 'not possible'
+
+# The most basic encryption method is to map a char to another
+# char by a certain math rule. Because every char has an ASCII value, we can
+# manipulate this value with a simple math expression. For example 'a' + 1 would
+# give us 'b', because 'a' value is 97 and 'b' value is 98.
+# You will need to write a method which does exactly that -
+# get a string as text and an int as the rule of manipulation, and should return encrypted text. for example:
