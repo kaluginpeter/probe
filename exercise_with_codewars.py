@@ -11500,3 +11500,9 @@ def deadAntCount(ants):
 import re
 def calculate_string(st):
     return str(int(round(eval(re.sub(r'[^-+*/\d.]', '', st)))))
+
+# Although this Kata is not part of an official Series, you may want to complete this
+# Kata before attempting this one as these two Kata are deeply related.
+# Preloaded
+# Preloaded for you is a class, struct or derived data type Node ( depending on the language ) used to
+# construct linked lists in this Kata:
