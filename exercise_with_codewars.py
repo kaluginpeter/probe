@@ -11478,3 +11478,6 @@ def swap(s, n):
 
 # This is version 2 of my 'Write Number in Exanded Form' Kata.
 # You will be given a number and you will need to return it as a string in expanded form :
+def expanded_form(num):
+    x = str(num).index('.')
+    return ' + '.join(v + ('/10','')[k<x] + '0'*(abs(k-x)-1) for k, v in enumerate(str(num)) if not v in '.0')
