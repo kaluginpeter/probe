@@ -11458,3 +11458,7 @@ def solve(s):
 # get a string as text and an int as the rule of manipulation, and should return encrypted text. for example:
 def encrypt(text, rule):
     return "".join(chr((ord(i) + rule) % 256) for i in text)
+
+# Complete the function that takes 3 numbers x, y and k (where x ≤ y), and returns the
+# number of integers within the range [x..y] (both ends included) that are divisible by k.
+# More scientifically: { i : x ≤ i ≤ y, i mod k = 0 }
