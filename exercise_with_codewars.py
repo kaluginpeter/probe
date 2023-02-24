@@ -11519,3 +11519,9 @@ def arrays_similar(seq1, seq2):
 
 # You're fed up about changing the version of your software manually. Instead, you
 # will create a little script that will make it for you.
+def next_version(version):
+    if version.count('.') == 0:
+        return str(int(version) + 1)
+    elif int(version[-1]) < 9:
+        return f"{version[0:-1]}{str(int(version[-1]) + 1)}"
+    return next_version(version[0:-2]) + '.0'
