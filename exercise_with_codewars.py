@@ -11546,3 +11546,10 @@ def reverse(seq):
 # For F# return a "char list"
 def remember(str_):
     return list(v for k, v in enumerate(str_) if str_[:k].count(v) == 1)
+
+# Given string s, which contains only letters from a to z in lowercase.
+# A set of alphabet is given by abcdefghijklmnopqrstuvwxyz.
+# 2 sets of alphabets mean 2 or more alphabets.
+# Your task is to find the missing letter(s). You may need to output them by
+# the order a-z. It is possible that there is more than one missing letter from more than one set of alphabet.
+# If the string contains all of the letters in the alphabet, return an empty string ""
