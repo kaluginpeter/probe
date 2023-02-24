@@ -11571,3 +11571,6 @@ def square_digits_sequence(n):
 # each corresponding value is an array of characters, e.g.
 # Create a function that returns a table with the same keys, but each character
 # should appear only once among the value-arrays, e.g.
+def remove_duplicate_ids(d):
+    s = set()
+    return {j:[s.add(i) or i for i in d[j] if i not in s] for j in sorted(d, key=int)[::-1]}
