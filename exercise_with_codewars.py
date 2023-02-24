@@ -11590,3 +11590,7 @@ def find_in_array(seq, predicate):
     for k, v in enumerate(seq):
         if predicate(v, k): return k
     return -1
+
+# You will be given a string of English digits "stuck" together, like this:
+# "zeronineoneoneeighttwoseventhreesixfourtwofive"
+# Your task is to split the string into separate digits:
