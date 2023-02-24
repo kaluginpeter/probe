@@ -11555,3 +11555,8 @@ def remember(str_):
 # If the string contains all of the letters in the alphabet, return an empty string ""
 def missing_alphabets(s):
     return ''.join(sorted(i * (max(s.count(j) for j in s) - s.count(i)) for i in 'abcdefghijklmnopqrstuvwxyz'))
+
+# Consider a sequence of numbers a0, a1, ..., an, in which an element is equal to the sum
+# of squared digits of the previous element. The sequence ends once an element that has already been
+# in the sequence appears again.
+# Given the first element a0, find the length of the sequence.
