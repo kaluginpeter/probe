@@ -11560,3 +11560,9 @@ def missing_alphabets(s):
 # of squared digits of the previous element. The sequence ends once an element that has already been
 # in the sequence appears again.
 # Given the first element a0, find the length of the sequence.
+def square_digits_sequence(n):
+    s = set()
+    while n not in s:
+        s.add(n)
+        n = sum(int(i)**2 for i in str(n))
+    return len(s) + 1
