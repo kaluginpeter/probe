@@ -11594,3 +11594,11 @@ def find_in_array(seq, predicate):
 # You will be given a string of English digits "stuck" together, like this:
 # "zeronineoneoneeighttwoseventhreesixfourtwofive"
 # Your task is to split the string into separate digits:
+def uncollapse(digits):
+    w, f = '', ''
+    for i in digits:
+        w += i
+        if w in ['zero', 'nine', 'one', 'eight', 'two', 'seven', 'three', 'six', 'four', 'five']:
+            f += w + ' '
+            w = ''
+    return f[:-1]
