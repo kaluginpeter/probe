@@ -11576,3 +11576,5 @@ def remove_duplicate_ids(d):
     return {j:[s.add(i) or i for i in d[j] if i not in s] for j in sorted(d, key=int)[::-1]}
 
 # Define a method that accepts 2 strings as parameters. The method returns the first string sorted by the second.
+def sort_string(st, order):
+    return ''.join(sorted(list(st), key=lambda x: list(order).index(x) if x in order else len(order)))
