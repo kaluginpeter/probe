@@ -11532,3 +11532,7 @@ def next_version(version):
 # Array should be reversed in place! (no need to return it)
 # Usual builtins have been deactivated. Don't count on them.
 # You'll have to do it fast enough, so think about performances
+def reverse(seq):
+    l = list()
+    for _ in range(len(seq)): l.append(seq.pop())
+    seq.extend(l)
