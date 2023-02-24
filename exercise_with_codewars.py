@@ -11509,3 +11509,6 @@ def calculate_string(st):
 from functools import reduce
 def linked_list_from_string(s, split=" -> "):
     return reduce(lambda i, j: Node(j, i), map(int, s.split(split)[-2::-1]), None)
+
+# Write a function that determines whether the passed in sequences are similar. Similar means
+# they contain the same elements, and the same number of occurrences of elements.
