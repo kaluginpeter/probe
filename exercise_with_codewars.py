@@ -11586,3 +11586,7 @@ def sort_string(st, order):
 # Your function will iterate through the members of the sequence in order
 # until the provided function returns true; at which point your function will return that item's index.
 # If the function given returns false for all members of the sequence, your function should return -1.
+def find_in_array(seq, predicate):
+    for k, v in enumerate(seq):
+        if predicate(v, k): return k
+    return -1
