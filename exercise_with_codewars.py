@@ -11574,3 +11574,5 @@ def square_digits_sequence(n):
 def remove_duplicate_ids(d):
     s = set()
     return {j:[s.add(i) or i for i in d[j] if i not in s] for j in sorted(d, key=int)[::-1]}
+
+# Define a method that accepts 2 strings as parameters. The method returns the first string sorted by the second.
