@@ -11544,3 +11544,5 @@ def reverse(seq):
 # from the order of first appearance of the character.
 # Characters are case sensitive.
 # For F# return a "char list"
+def remember(str_):
+    return list(v for k, v in enumerate(str_) if str_[:k].count(v) == 1)
