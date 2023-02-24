@@ -11516,3 +11516,6 @@ def arrays_similar(seq1, seq2):
     l1 = ''.join(str(i) for i in seq1)
     l2 = ''.join(str(i) for i in seq2)
     return set(seq1) == set(seq2) and sorted(l1) == sorted(l2)
+
+# You're fed up about changing the version of your software manually. Instead, you
+# will create a little script that will make it for you.
