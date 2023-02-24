@@ -11578,3 +11578,11 @@ def remove_duplicate_ids(d):
 # Define a method that accepts 2 strings as parameters. The method returns the first string sorted by the second.
 def sort_string(st, order):
     return ''.join(sorted(list(st), key=lambda x: list(order).index(x) if x in order else len(order)))
+
+# We'll create a function that takes in two parameters:
+# a sequence (length and types of items are irrelevant)
+# a function (value, index) that will be called on members of the sequence and
+# their index. The function will return either true or false.
+# Your function will iterate through the members of the sequence in order
+# until the provided function returns true; at which point your function will return that item's index.
+# If the function given returns false for all members of the sequence, your function should return -1.
