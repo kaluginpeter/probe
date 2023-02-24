@@ -11566,3 +11566,8 @@ def square_digits_sequence(n):
         s.add(n)
         n = sum(int(i)**2 for i in str(n))
     return len(s) + 1
+
+# You are given a table, in which every key is a stringified number, and
+# each corresponding value is an array of characters, e.g.
+# Create a function that returns a table with the same keys, but each character
+# should appear only once among the value-arrays, e.g.
