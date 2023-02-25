@@ -11635,3 +11635,6 @@ def sel_reverse(arr, l):
 def one_two_three():
     i, j = one_two(),one_two()-1
     return one_two_three() if i == j else i + j
+
+# Dave has a lot of data he is required to apply filters to, which are simple enough,
+# but he wants a shorter way of doing so.
