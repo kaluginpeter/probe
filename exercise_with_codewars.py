@@ -11722,3 +11722,6 @@ def sort_array(l):
 # An example of this is "angel", which is an anagram of "glean".
 # Write a function that receives an array of words, and returns the total
 # number of distinct pairs of anagramic words inside it.
+from collections import Counter
+def anagram_counter(words):
+    return sum(i *(i-1)// 2 for i in Counter(''.join(sorted(j)) for j in words).values())
