@@ -11713,3 +11713,7 @@ def only_duplicates(string):
 # You are given an array of integers. Your task is to sort odd numbers within
 # the array in ascending order, and even numbers in descending order.
 # Note that zero is an even number. If you have an empty array, you need to return it.
+def sort_array(l):
+    e = sorted(i for i in l if i % 2 == 0)
+    o = sorted((i for i in l if i % 2 != 0), reverse=True)
+    return [(e if i % 2 == 0 else o).pop() for i in l]
