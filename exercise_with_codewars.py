@@ -11618,3 +11618,7 @@ def sorted_insert(head, data):
     else:
         head.next = sorted_insert(head.next, data)
         return head
+
+# Given an array, return the reversed version of the array (a different kind of reverse though), you
+# reverse portions of the array, you'll be given a length
+# argument which represents the length of each portion you are to reverse.
