@@ -11638,3 +11638,34 @@ def one_two_three():
 
 # Dave has a lot of data he is required to apply filters to, which are simple enough,
 # but he wants a shorter way of doing so.
+class list(list):
+    def even(self):
+        res = []
+        for x in self:
+            if type(x) == int and x % 2 == 0:
+                res.append(x)
+        return res
+    def odd(self):
+        res = []
+        for x in self:
+            if type(x) == int and x % 2 == 1:
+                res.append(x)
+        return res
+    def under(self, r):
+        res = []
+        for x in self:
+            if type(x) == int and x < r:
+                res.append(x)
+        return res
+    def over(self, r):
+        res = []
+        for x in self:
+            if type(x) == int and x > r:
+                res.append(x)
+        return res
+    def in_range(self, r1, r2):
+        res = []
+        for x in self:
+            if type(x) == int and r1 <= x <= r2:
+                res.append(x)
+        return res
