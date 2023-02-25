@@ -11684,3 +11684,12 @@ def count_if(head, func):
 # You have been hired by a company making electric garage doors. Accidents with the present product
 # line have resulted in numerous damaged cars, broken limbs and several killed pets.
 # Your mission is to write a safer version of their controller software.
+def controller(events):
+    out, s, dir, moving = [], 0, 1, False
+    for i in events:
+        if i == 'O': dir *= -1
+        elif i == 'P': moving = not moving
+        if moving: s += dir
+        if s in [0,5]: moving, dir = False, 1 if s == 0 else -1
+        out.append(str(s))
+    return ''.join(out)
