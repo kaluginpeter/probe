@@ -11632,3 +11632,6 @@ def sel_reverse(arr, l):
 # returns 1, 2 or 3 with equal probabilities using only the one_two function.
 # Do not try to cheat returning repeating non-random sequences. There is a randomness
 # test especially for this case.
+def one_two_three():
+    i, j = one_two(),one_two()-1
+    return one_two_three() if i == j else i + j
