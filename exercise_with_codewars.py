@@ -11693,3 +11693,12 @@ def controller(events):
         if s in [0,5]: moving, dir = False, 1 if s == 0 else -1
         out.append(str(s))
     return ''.join(out)
+
+# Note: This kata is a translation of this (Java)
+# one: http://www.codewars.com/kata/rotate-array. I have not translated this
+# first one as usual because I did not solved it, and I fear not being able to solve it
+# (Java is not my cup of... tea). @cjmcgraw, if you want to use my translation on your kata feel free to use it.
+# Create a function named "rotate" that takes an array and returns a new one
+# with the elements inside rotated n spaces.
+# If n is greater than 0 it should rotate the array to the right. If n
+# is less than 0 it should rotate the array to the left. If n is 0, then it should return the array unchanged.
