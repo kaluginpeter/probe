@@ -11622,3 +11622,5 @@ def sorted_insert(head, data):
 # Given an array, return the reversed version of the array (a different kind of reverse though), you
 # reverse portions of the array, you'll be given a length
 # argument which represents the length of each portion you are to reverse.
+def sel_reverse(arr, l):
+    return [j for i in range(0, len(arr), l) for j in arr[i:i+l][::-1]] if l != 0 else arr
