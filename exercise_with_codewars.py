@@ -11680,3 +11680,7 @@ def count_if(head, func):
         c += func(head.data)
         head = head.next
     return c
+
+# You have been hired by a company making electric garage doors. Accidents with the present product
+# line have resulted in numerous damaged cars, broken limbs and several killed pets.
+# Your mission is to write a safer version of their controller software.
