@@ -11709,3 +11709,7 @@ def rotate(arr, n):
 # Given a string, remove any characters that are unique from the string.
 def only_duplicates(string):
     return ''.join(i for i in string if string.count(i) > 1)
+
+# You are given an array of integers. Your task is to sort odd numbers within
+# the array in ascending order, and even numbers in descending order.
+# Note that zero is an even number. If you have an empty array, you need to return it.
