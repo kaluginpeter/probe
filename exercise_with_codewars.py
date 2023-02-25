@@ -11608,3 +11608,13 @@ def uncollapse(digits):
 # pre-sorted linked list which is sorted in ascending order. SortedInsert takes
 # the head of a linked list and data used to create a node as arguments. SortedInsert() should
 # also return the head of the list.
+class Node(object):
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+def sorted_insert(head, data):
+    if not head or data < head.data:
+        return Node(data, head)
+    else:
+        head.next = sorted_insert(head.next, data)
+        return head
