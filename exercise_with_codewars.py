@@ -11717,3 +11717,8 @@ def sort_array(l):
     e = sorted(i for i in l if i % 2 == 0)
     o = sorted((i for i in l if i % 2 != 0), reverse=True)
     return [(e if i % 2 == 0 else o).pop() for i in l]
+
+# An anagram is a word, a phrase, or a sentence formed from another by rearranging its letters.
+# An example of this is "angel", which is an anagram of "glean".
+# Write a function that receives an array of words, and returns the total
+# number of distinct pairs of anagramic words inside it.
