@@ -11602,3 +11602,9 @@ def uncollapse(digits):
             f += w + ' '
             w = ''
     return f[:-1]
+
+# Linked Lists - Sorted Insert
+# Write a SortedInsert() function which inserts a node into the correct location of a
+# pre-sorted linked list which is sorted in ascending order. SortedInsert takes
+# the head of a linked list and data used to create a node as arguments. SortedInsert() should
+# also return the head of the list.
