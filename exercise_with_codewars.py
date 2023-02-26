@@ -11738,3 +11738,8 @@ def is_happy(n):
         s.add(n)
         n = sum(int(i)**2 for i in str(n))
     return n == 1
+
+# Your task is to reduce a list of numbers to one number.
+# For this you get a list of rules, how you have to reduce the numbers.
+# You have to use these rules consecutively. So when you get to the end of the list of rules,
+# you start again at the beginning.
