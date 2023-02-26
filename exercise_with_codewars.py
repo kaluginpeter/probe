@@ -11809,3 +11809,7 @@ def sum_fibs(n):
 # word (instead of the proper name of the number in English). For example, write
 # 12 as "onetwo" (instead of twelve), and 999 as "nineninenine" (instead of nine hundred and ninety-nine).
 # For any integer between 0 and 999, return an array showing the path from that integer to a stable equilibrium:
+def numbers_of_letters(n):
+    l = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    s = ''.join(l[i] for i in map(int, str(n)))
+    return [s] + (numbers_of_letters(len(s)) if len(s) != n else [])
