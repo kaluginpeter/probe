@@ -11794,3 +11794,6 @@ def circularly_sorted(arr):
 # the minimal number of 100, 50 and 20 dollar bills the ATM needs to dispense (in that order).
 def withdraw(price):
     return [price//100, 0, price%100//20] if price % 20==0 else [(price-50)//100,1, (price-50)%100//20]
+
+# Create a function that takes an argument n and sums even
+# Fibonacci numbers up to n's index in the Fibonacci sequence.
