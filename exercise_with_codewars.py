@@ -11785,3 +11785,5 @@ def bits_war(numbers):
 # An array is circularly sorted if the elements are sorted in ascending order, but displaced, or
 # rotated, by any number of steps.
 # Complete the function/method that determines if the given array of integers is circularly sorted.
+def circularly_sorted(arr):
+    return sum(i > j for i, j in zip(arr, arr[1:]+[arr[0]])) < 2
