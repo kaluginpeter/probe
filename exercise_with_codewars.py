@@ -11781,3 +11781,7 @@ def assemble(input):
 def bits_war(numbers):
     d = sum(sum(map(int, bin(abs(i))[2:])) * (-1)**(i < 0) * (-1)**(i%2 == 0) for i in numbers)
     return ["evens win", "tie", "odds win"][(d >= 0) + (d > 0)]
+
+# An array is circularly sorted if the elements are sorted in ascending order, but displaced, or
+# rotated, by any number of steps.
+# Complete the function/method that determines if the given array of integers is circularly sorted.
