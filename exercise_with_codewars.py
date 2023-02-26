@@ -11764,3 +11764,9 @@ def split_odd_and_even(n):
 # in some cases it is not possible to determine what the original
 # character was, use "#" character as a special marker for that.
 # If the array is empty, then return an empty string.
+def assemble(input):
+    w = list(input[0]) if input else []
+    for i in input:
+        for k, i in enumerate(i):
+            w[k] = i if w[k] == '*' else w[k]
+    return ''.join(w).replace('*', '#')
