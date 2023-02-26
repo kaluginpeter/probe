@@ -11815,3 +11815,7 @@ def numbers_of_letters(n):
     return [s] + (numbers_of_letters(len(s)) if len(s) != n else [])
 
 # The Padovan sequence is the sequence of integers defined by the initial values
+def padovan(n):
+    x = y = z = 1
+    for _ in range(n - 2): x, y, z = y, z, x + y
+    return z
