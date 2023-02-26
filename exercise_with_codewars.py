@@ -11813,3 +11813,5 @@ def numbers_of_letters(n):
     l = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
     s = ''.join(l[i] for i in map(int, str(n)))
     return [s] + (numbers_of_letters(len(s)) if len(s) != n else [])
+
+# The Padovan sequence is the sequence of integers defined by the initial values
