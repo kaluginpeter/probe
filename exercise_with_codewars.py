@@ -11743,3 +11743,8 @@ def is_happy(n):
 # For this you get a list of rules, how you have to reduce the numbers.
 # You have to use these rules consecutively. So when you get to the end of the list of rules,
 # you start again at the beginning.
+def reduce_by_rules(lst, rules):
+    l, r = len(rules), lst[0]
+    for k, v in enumerate(lst[1:]):
+        r = rules[k % l](r, v)
+    return r
