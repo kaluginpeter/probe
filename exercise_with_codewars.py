@@ -11752,3 +11752,6 @@ def reduce_by_rules(lst, rules):
 # Complete function splitOddAndEven, accept a number n(n>0), return an array that
 # contains the continuous parts of odd or even digits.
 # Please don't worry about digit 0, it won't appear ;-)
+import re
+def split_odd_and_even(n):
+    return [int(i) for i in re.findall(r"([2468]+|[13579]+)", str(n))]
