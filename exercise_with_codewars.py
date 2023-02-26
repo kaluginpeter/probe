@@ -11797,3 +11797,6 @@ def withdraw(price):
 
 # Create a function that takes an argument n and sums even
 # Fibonacci numbers up to n's index in the Fibonacci sequence.
+from gmpy2 import fib
+def sum_fibs(n):
+    return sum(i for i in map(fib, range(n + 1)) if i % 2 == 0)
