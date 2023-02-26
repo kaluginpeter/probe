@@ -11732,3 +11732,9 @@ def anagram_counter(words):
 # Those numbers for which this process ends in 1 are happy numbers, while those that do
 # not end in 1 are unhappy numbers (or sad numbers) (Wikipedia).
 # Write a function that takes n as parameter and return true if and only if n is an happy number, false otherwise.
+def is_happy(n):
+    s = set()
+    while n not in s:
+        s.add(n)
+        n = sum(int(i)**2 for i in str(n))
+    return n == 1
