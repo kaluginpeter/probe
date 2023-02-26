@@ -11748,3 +11748,7 @@ def reduce_by_rules(lst, rules):
     for k, v in enumerate(lst[1:]):
         r = rules[k % l](r, v)
     return r
+
+# Complete function splitOddAndEven, accept a number n(n>0), return an array that
+# contains the continuous parts of odd or even digits.
+# Please don't worry about digit 0, it won't appear ;-)
