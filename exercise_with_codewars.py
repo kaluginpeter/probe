@@ -11787,3 +11787,8 @@ def bits_war(numbers):
 # Complete the function/method that determines if the given array of integers is circularly sorted.
 def circularly_sorted(arr):
     return sum(i > j for i, j in zip(arr, arr[1:]+[arr[0]])) < 2
+
+# An ATM ran out of 10 dollar bills and only has 100, 50 and 20 dollar bills.
+# Given an amount between 40 and 10000 dollars (inclusive) and assuming that
+# the ATM wants to use as few bills as possible, determinate
+# the minimal number of 100, 50 and 20 dollar bills the ATM needs to dispense (in that order).
