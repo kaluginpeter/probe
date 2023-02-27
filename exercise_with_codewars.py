@@ -11824,3 +11824,6 @@ def padovan(n):
 # order of the other elements.
 def move_zeros(lst):
     return [i for i in lst if i != 0] + [i for i in lst if i == 0]
+
+# Move the first letter of each word to the end of it, then add "ay" to the
+# end of the word. Leave punctuation marks untouched.
