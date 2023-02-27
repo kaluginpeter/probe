@@ -11891,3 +11891,6 @@ def cakes(recipe, available):
 # All words must have their first letter capitalized.
 # If the final result is longer than 140 chars it must return false.
 # If the input or the result is an empty string it must return false.
+def generate_hashtag(s):
+    w = '#'+''.join(i.title() for i in s.split())
+    return w if len(w) <= 140 and len(w) > 1 else False
