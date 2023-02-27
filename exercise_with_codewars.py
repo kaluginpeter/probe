@@ -11830,3 +11830,6 @@ def move_zeros(lst):
 def pig_it(text):
     w = ' '.join(i[1:] + i[0] + 'ay' for i in text.split())
     return w if w[-3] not in '!.,?' else w[:-2]
+
+# Write a function, which takes a non-negative integer (seconds) as input and returns the
+# time in a human-readable format (HH:MM:SS)
