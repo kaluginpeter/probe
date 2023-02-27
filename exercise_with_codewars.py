@@ -11907,3 +11907,5 @@ def zeros(n):
 # Notes:
 # Only lower case letters will be used (a-z). No punctuation or digits will be included.
 # Performance needs to be considered.
+def scramble(s1,s2):
+    return not any(s1.count(i) < s2.count(i) for i in set(s2))
