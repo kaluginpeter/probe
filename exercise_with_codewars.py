@@ -11871,3 +11871,5 @@ def first_non_repeating_letter(string):
 # For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
 # Given a string with the weights of FFC
 # members in normal order can you give this string ordered by "weights" of these numbers?
+def order_weight(_str):
+    return ' '.join(sorted(sorted(_str.split()), key=lambda x: sum(int(i) for i in x)))
