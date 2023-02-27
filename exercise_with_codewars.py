@@ -11835,3 +11835,7 @@ def pig_it(text):
 # time in a human-readable format (HH:MM:SS)
 def make_readable(seconds):
     return "%02d:%02d:%02d" % (seconds / 3600, seconds / 60 % 60, seconds % 60)
+
+# Write a function that takes a string of parentheses, and determines if the
+# order of the parentheses is valid. The function should return true if the
+# string is valid, and false if it's invalid.
