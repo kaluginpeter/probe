@@ -11881,3 +11881,5 @@ def order_weight(_str):
 # For simplicity there are no units for the amounts (e.g. 1 lb of flour
 # or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects,
 # can be considered as 0.
+def cakes(recipe, available):
+    return min([available[i] // recipe[i] if i in available else 0 for i in recipe])
