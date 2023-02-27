@@ -11819,3 +11819,6 @@ def padovan(n):
     x = y = z = 1
     for _ in range(n - 2): x, y, z = y, z, x + y
     return z
+
+# Write an algorithm that takes an array and moves all of the zeros to the end, preserving the
+# order of the other elements.
