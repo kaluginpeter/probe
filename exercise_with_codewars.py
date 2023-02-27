@@ -11856,3 +11856,8 @@ def valid_parentheses(string):
 # example, the input 'sTreSS' should return 'T'.
 # If a string contains all repeating characters, it should return an empty string ("") or None
 # -- see sample tests.
+def first_non_repeating_letter(string):
+    try:
+        return [i for i in string if string.lower().count(i.lower()) == 1][0]
+    except:
+        return ''
