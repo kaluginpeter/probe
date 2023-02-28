@@ -11956,3 +11956,4 @@ class add(int):
 # contains an uppercase letter
 # contains a digit
 # only contains alphanumeric characters (note that '_' is not alphanumeric)
+regex="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$"
