@@ -11944,3 +11944,5 @@ def perimeter(n):
 # No whitespaces / underscore
 def alphanumeric(p):
     return all(i.isdigit() or i.isalpha() for i in p) and len(p) > 0
+
+# We want to create a function that will add numbers together when called in succession.
