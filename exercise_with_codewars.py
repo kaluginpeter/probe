@@ -11942,3 +11942,5 @@ def perimeter(n):
 # At least one character ("" is not valid)
 # Allowed characters are uppercase / lowercase latin letters and digits from 0 to 9
 # No whitespaces / underscore
+def alphanumeric(p):
+    return all(i.isdigit() or i.isalpha() for i in p) and len(p) > 0
