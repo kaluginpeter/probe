@@ -11914,3 +11914,11 @@ def scramble(s1,s2):
 # result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255.
 # Any values that fall out of that range must be rounded to the closest valid value.
 # Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+def rgb(r, g, b):
+    if r > 255: r = 255
+    elif r < 0: r = 0
+    if g > 255: g = 255
+    elif g < 0: g = 0
+    if b > 255: b = 255
+    elif b < 0: b = 0
+    return '%02x%02x%02x'.upper() % (r, g, b)
