@@ -11975,3 +11975,8 @@ def list_squared(m, n):
         s = sum(i**2 for i in divisors(num))
         if math.sqrt(s).is_integer(): l.append([num, s])
     return l
+
+# Given a list of integers and a single sum value, return the first two
+# values (parse from the left please) in order of appearance that add up to form the sum.
+# If there are two or more pairs with the required sum, the
+# pair whose second element has the smallest index is the solution.
