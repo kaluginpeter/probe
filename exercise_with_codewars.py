@@ -11963,3 +11963,15 @@ regex="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$"
 # We will return an array of subarrays or of tuples (in C an array of Pair) or a string. The
 # subarrays (or tuples or Pairs) will have two elements: first the number the squared divisors
 # of which is a square and then the sum of the squared divisors.
+import math
+def divisors(n):
+    d = [1, n]
+    for i in range(2, int(math.sqrt(n))+1):
+        if n % i == 0: d.extend([i, int(n/i)])
+    return set(d)
+def list_squared(m, n):
+    l = []
+    for num in range(m, n):
+        s = sum(i**2 for i in divisors(num))
+        if math.sqrt(s).is_integer(): l.append([num, s])
+    return l
