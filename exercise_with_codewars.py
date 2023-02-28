@@ -12000,3 +12000,9 @@ def fibonacci(n):
     if n in [0, 1]:
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+# Define a function that takes in two non - negative integers aaa and bbb and returns the last decimal digit
+# of aba ^ ba b of 979 ^ 79 7 is 999, since 97 = 47829699 ^ 7 = 47829699 7, which has over
+# 109210 ^ {92} p10 92 decimal digits, is 666. Also, please take 000 ^ 00 0 to be 111.
+# You may assume that the input will always be valid.
