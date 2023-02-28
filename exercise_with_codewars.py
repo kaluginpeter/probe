@@ -11980,3 +11980,8 @@ def list_squared(m, n):
 # values (parse from the left please) in order of appearance that add up to form the sum.
 # If there are two or more pairs with the required sum, the
 # pair whose second element has the smallest index is the solution.
+def sum_pairs(lst, s):
+    l = set()
+    for i in lst:
+        if s - i in l: return [s - i, i]
+        l.add(i)
