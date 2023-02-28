@@ -11994,3 +11994,9 @@ def sum_pairs(lst, s):
 # 50 is simply too much. You may go for a cup of coffee or go take a nap while
 # you wait for the answer. But if you try it here in Code Wars you will most
 # likely get a code timeout before any answers.
+from functools import lru_cache
+@lru_cache(None)
+def fibonacci(n):
+    if n in [0, 1]:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
