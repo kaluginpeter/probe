@@ -12006,3 +12006,5 @@ def fibonacci(n):
 # of aba ^ ba b of 979 ^ 79 7 is 999, since 97 = 47829699 ^ 7 = 47829699 7, which has over
 # 109210 ^ {92} p10 92 decimal digits, is 666. Also, please take 000 ^ 00 0 to be 111.
 # You may assume that the input will always be valid.
+def last_digit(n1, n2):
+    return pow(n1, n2, 10)
