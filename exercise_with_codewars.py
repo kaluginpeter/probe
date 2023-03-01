@@ -12088,3 +12088,5 @@ def factString2Dec(string):
 # so she came to you for help. However, she succeeded to hack Bob's app
 # and found a data field called 'marker'. She thinks it can be helpful for cracking Bob's app.
 # Help Carol keep her job!
+def decoder(encoded, marker):
+    return ''.join(encoded.split(marker)[::2]) + ''.join(encoded.split(marker)[1::2])[::-1]
