@@ -12115,3 +12115,9 @@ def is_valid_IP(s):
         return False
 
 # Time to write your first Esolang interpreter :D
+def my_first_interpreter(code):
+    c, w = 0, ""
+    for i in code:
+        if i == "+": c += 1
+        elif i == ".": w += chr(c % 256)
+    return w
