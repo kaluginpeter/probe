@@ -12040,3 +12040,5 @@ def josephus(xs, k):
 # compares the value each member in one array to the corresponding member in the other
 # squares the absolute value difference between those two values
 # and returns the average of those squared absolute value difference between each member pair.
+def solution(a, b):
+    return sum((k - v)**2 for k, v in zip(a, b)) / len(a)
