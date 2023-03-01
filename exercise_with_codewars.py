@@ -12113,3 +12113,5 @@ def is_valid_IP(s):
         return bool(ipaddress.ip_address(s))
     except:
         return False
+
+# Time to write your first Esolang interpreter :D
