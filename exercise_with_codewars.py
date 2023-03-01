@@ -12060,3 +12060,9 @@ from collections import Counter
 def find_uniq(arr):
     r = Counter(''.join(arr)).most_common()
     return ''.join([i for i in arr if r[-1][0] in i])
+
+# Coding decimal numbers with factorials is a way of writing out numbers in
+# a base system that depends on factorials, rather than powers of numbers.
+# In this system, the last digit is always 0 and is in base 0!. The digit before that is either
+# 0 or 1 and is in base 1!. The digit before that is either 0, 1, or 2 and
+# is in base 2!, etc. More generally, the nth-to-last digit is always 0, 1, 2, ..., n and is in base n!.
