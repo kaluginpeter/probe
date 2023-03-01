@@ -12123,3 +12123,10 @@ def my_first_interpreter(code):
     return w
 
 # Substitute two equal letters by the next letter of the alphabet (two letters convert to one):
+def last_survivors(s):
+    w = "abcdefghijklmnopqrstuvwxyza"
+    for i in s:
+        if s.count(i) > 1:
+            s = s.replace(i, "", 2) + w[w.index(i) + 1]
+            return last_survivors(s)
+    return s
