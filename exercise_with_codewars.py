@@ -12090,3 +12090,11 @@ def factString2Dec(string):
 # Help Carol keep her job!
 def decoder(encoded, marker):
     return ''.join(encoded.split(marker)[::2]) + ''.join(encoded.split(marker)[1::2])[::-1]
+
+# Some of you might remember spending afternoons playing Street Fighter 2 in some Arcade back in
+# the 90s or emulating it nowadays with the numerous emulators for retro consoles.
+# Can you solve this kata? Suuure-You-Can!
+# UPDATE: a new kata's harder version is available here.
+# The Kata
+# You'll have to simulate the video game's character selection screen behaviour, more specifically
+# the selection grid. Such screen looks like this:
