@@ -12056,3 +12056,7 @@ def is_merge(s, part1, part2):
     return False
 
 # There is an array of strings. All strings contains similar letters except one. Try to find it!
+from collections import Counter
+def find_uniq(arr):
+    r = Counter(''.join(arr)).most_common()
+    return ''.join([i for i in arr if r[-1][0] in i])
