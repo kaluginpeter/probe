@@ -12104,3 +12104,6 @@ def street_fighter_selection(fighters, pos, moves):
         row, col = min(max(row + m[i][0], 0), 1), (col + m[i][1]) % 6
         l.append(fighters[row][col])
     return l
+
+# Write an algorithm that will identify valid IPv4 addresses in dot-decimal format.
+# IPs should be considered valid if they consist of four octets, with values between 0 and 255, inclusive.
