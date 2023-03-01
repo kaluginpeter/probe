@@ -12066,3 +12066,15 @@ def find_uniq(arr):
 # In this system, the last digit is always 0 and is in base 0!. The digit before that is either
 # 0 or 1 and is in base 1!. The digit before that is either 0, 1, or 2 and
 # is in base 2!, etc. More generally, the nth-to-last digit is always 0, 1, 2, ..., n and is in base n!.
+from math import factorial
+from itertools import dropwhile
+DIGITS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+BASIS = [factorial(i) for i in range(len(DIGITS))]
+def dec2FactString(nb):
+    l = []
+    for i in reversed(BASIS):
+        l.append(DIGITS[nb // i])
+        nb %= i
+    return "".join(dropwhile(lambda x: x == "0", l))
+def factString2Dec(string):
+    return sum(BASIS[k] * DIGITS.index(v) for k, v in enumerate(reversed(string)))
