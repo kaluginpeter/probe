@@ -12028,3 +12028,9 @@ def ips_between(start, end):
 # You are now to create a function that returns a Josephus permutation, taking as parameters the
 # initial array/list of items to be permuted as if they were in a circle and counted
 # out every k places until none remained.
+def josephus(xs, k):
+    i, j = 0, []
+    while len(xs) > 0:
+        i = (i + k - 1) % len(xs)
+        j.append(xs.pop(i))
+    return j
