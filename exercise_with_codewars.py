@@ -12121,3 +12121,5 @@ def my_first_interpreter(code):
         if i == "+": c += 1
         elif i == ".": w += chr(c % 256)
     return w
+
+# Substitute two equal letters by the next letter of the alphabet (two letters convert to one):
