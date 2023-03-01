@@ -12107,3 +12107,9 @@ def street_fighter_selection(fighters, pos, moves):
 
 # Write an algorithm that will identify valid IPv4 addresses in dot-decimal format.
 # IPs should be considered valid if they consist of four octets, with values between 0 and 255, inclusive.
+import ipaddress
+def is_valid_IP(s):
+    try:
+        return bool(ipaddress.ip_address(s))
+    except:
+        return False
