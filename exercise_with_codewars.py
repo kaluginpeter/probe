@@ -12042,3 +12042,8 @@ def josephus(xs, k):
 # and returns the average of those squared absolute value difference between each member pair.
 def solution(a, b):
     return sum((k - v)**2 for k, v in zip(a, b)) / len(a)
+
+# At a job interview, you are challenged to write an algorithm to check if a given string, s,
+# can be formed from two other strings, part1 and part2.
+# The restriction is that the characters in part1 and part2 should be in the same order as in s.
+# The interviewer gives you the following example and tells you to figure out the rest from the given test cases.
