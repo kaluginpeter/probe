@@ -12141,3 +12141,6 @@ def recycle(a):
         dic[i['material']].append(i['type'])
         if 'secondMaterial' in i: dic[i['secondMaterial']].append(i['type'])
     return tuple(dic.values())
+
+# So, we need a simple function that converts a string representing a
+# number (possibly with a $ sign in front of it) into the number itself.
