@@ -12168,3 +12168,6 @@ def make_sentences(parts):
 # You must check within a string (s) to find all of the mating pairs, returning a
 # list/array of the string containing valid mating pairs and a boolean indicating whether the total
 # number of bears is greater than or equal to x.
+from re import findall
+def bears(x, s):
+    return ["".join(findall("8B|B8", s)), len("".join(findall("8B|B8", s))) >= x]
