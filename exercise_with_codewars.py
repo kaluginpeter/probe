@@ -12164,3 +12164,7 @@ def calculate_1RM(w, r):
 # Implement a function, so it will produce a sentence out of the given parts.
 def make_sentences(parts):
     return ' '.join(parts).replace(' ,', ',').rstrip(' .') + '.'
+
+# You must check within a string (s) to find all of the mating pairs, returning a
+# list/array of the string containing valid mating pairs and a boolean indicating whether the total
+# number of bears is greater than or equal to x.
