@@ -12154,3 +12154,7 @@ def money_value(s):
 # The string's tops are from displaying the string in the below way:
 def tops(msg):
     return ''.join(msg[i * (2 * i -1)] for i in range(int(((8 * len(msg) + 1)**.5 + 1) / 4), 0, -1))
+
+# You just got done with your set at the gym, and you are wondering how
+# much weight you could lift if you did a single repetition. Thankfully, a
+# few scholars have devised formulas for this purpose (from Wikipedia) :
