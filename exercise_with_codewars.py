@@ -12135,3 +12135,9 @@ def last_survivors(s):
 # and possibly secondMaterial. The existing materials are: paper, glass, organic, and plastic.
 # Your job is to sort these objects across the 4 recycling bins according to their
 # material (and secondMaterial if it's present), by listing the type's of objects that should go into those bins.
+def recycle(a):
+    dic = {'paper': [], 'glass': [], 'organic': [], 'plastic': []}
+    for i in a:
+        dic[i['material']].append(i['type'])
+        if 'secondMaterial' in i: dic[i['secondMaterial']].append(i['type'])
+    return tuple(dic.values())
