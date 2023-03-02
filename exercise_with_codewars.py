@@ -12144,3 +12144,8 @@ def recycle(a):
 
 # So, we need a simple function that converts a string representing a
 # number (possibly with a $ sign in front of it) into the number itself.
+def money_value(s):
+    try:
+        return float(s.replace("$", "").replace(" ", ""))
+    except:
+        return 0.0
