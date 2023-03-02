@@ -12171,3 +12171,11 @@ def make_sentences(parts):
 from re import findall
 def bears(x, s):
     return ["".join(findall("8B|B8", s)), len("".join(findall("8B|B8", s))) >= x]
+
+# What date corresponds to the nth day of the year?
+# The answer depends on whether the year is a leap year or not.
+# Write a function that will help you determine the date if you know
+#  the number of the day in the year, as well as whether the year is a leap year or not.
+# The function accepts the day number and a boolean value isLeap as
+# arguments, and returns the corresponding date of the year as a string "Month, day".
+# Only valid combinations of a day number and isLeap will be tested.
