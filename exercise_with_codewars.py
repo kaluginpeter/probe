@@ -12158,3 +12158,5 @@ def tops(msg):
 # You just got done with your set at the gym, and you are wondering how
 # much weight you could lift if you did a single repetition. Thankfully, a
 # few scholars have devised formulas for this purpose (from Wikipedia) :
+def calculate_1RM(w, r):
+    return w if r == 1 else 0 if r == 0 else max(round(w * (1 + r/30)), round((100*w) / (101.3 - 2.67123*r)), round(w*r**0.10))
