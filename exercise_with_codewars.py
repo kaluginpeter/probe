@@ -12188,3 +12188,7 @@ def get_day(day, is_leap):
 import re
 def camelize(s):
     return "".join(i.capitalize() for i in re.split("\W|_", s))
+
+# Build Tower by the following given arguments:
+# number of floors (integer and always greater than 0)
+# block size (width, height) (integer pair and always greater than (0, 0))
