@@ -12152,3 +12152,5 @@ def money_value(s):
 
 # Write a function that accepts msg string and returns local tops of string from the highest to the lowest.
 # The string's tops are from displaying the string in the below way:
+def tops(msg):
+    return ''.join(msg[i * (2 * i -1)] for i in range(int(((8 * len(msg) + 1)**.5 + 1) / 4), 0, -1))
