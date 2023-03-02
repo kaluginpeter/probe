@@ -12182,3 +12182,6 @@ def bears(x, s):
 from datetime import *
 def get_day(day, is_leap):
     return (date(2019 + is_leap, 1, 1) + timedelta(day - 1)).strftime("%B, %-d")
+
+# You must create a method that can convert a string from any format into PascalCase. This must support symbols too.
+# Don't presume the separators too much or you could be surprised.
