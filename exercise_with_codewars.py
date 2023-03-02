@@ -12149,3 +12149,6 @@ def money_value(s):
         return float(s.replace("$", "").replace(" ", ""))
     except:
         return 0.0
+
+# Write a function that accepts msg string and returns local tops of string from the highest to the lowest.
+# The string's tops are from displaying the string in the below way:
