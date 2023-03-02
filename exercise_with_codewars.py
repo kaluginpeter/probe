@@ -12185,3 +12185,6 @@ def get_day(day, is_leap):
 
 # You must create a method that can convert a string from any format into PascalCase. This must support symbols too.
 # Don't presume the separators too much or you could be surprised.
+import re
+def camelize(s):
+    return "".join(i.capitalize() for i in re.split("\W|_", s))
