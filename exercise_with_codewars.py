@@ -12200,3 +12200,7 @@ def tower_builder(n_floors, block_size):
         n -= 1
         for j in range(h): l.append(' '*n * w + '*' * (i * 2 + 1) * w + ' ' * n* w)
     return l
+
+# The code provided has a method hello which is supposed to show only those attributes
+# which have been explicitly set. Furthermore, it is supposed to say them in the same order they were set.
+# But it's not working properly.
