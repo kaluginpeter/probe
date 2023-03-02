@@ -12130,3 +12130,8 @@ def last_survivors(s):
             s = s.replace(i, "", 2) + w[w.index(i) + 1]
             return last_survivors(s)
     return s
+
+# You will be given a list of objects. Each object has type, material,
+# and possibly secondMaterial. The existing materials are: paper, glass, organic, and plastic.
+# Your job is to sort these objects across the 4 recycling bins according to their
+# material (and secondMaterial if it's present), by listing the type's of objects that should go into those bins.
