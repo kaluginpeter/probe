@@ -12179,3 +12179,6 @@ def bears(x, s):
 # The function accepts the day number and a boolean value isLeap as
 # arguments, and returns the corresponding date of the year as a string "Month, day".
 # Only valid combinations of a day number and isLeap will be tested.
+from datetime import *
+def get_day(day, is_leap):
+    return (date(2019 + is_leap, 1, 1) + timedelta(day - 1)).strftime("%B, %-d")
