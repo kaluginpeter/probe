@@ -12253,3 +12253,7 @@ def dot(n, m):
 # It should return true or false, simply.
 # File extensions should consist of lowercase letters and numbers only.
 # File names should consist of letters only (uppercase, lowercase, or both)
+def is_audio(file_name):
+    return any(file_name.endswith(i) for i in ['.mp3', '.flac', '.alac', '.aac']) and all(i.isalpha() for i in file_name.split('.')[0])
+def is_img(file_name):
+    return any(file_name.endswith(i) for i in ['.jpg', '.jpeg', '.png', '.bmp', '.gif']) and all(i.isalpha() for i in file_name.split('.')[0])
