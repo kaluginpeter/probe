@@ -12331,3 +12331,5 @@ def rotate(data, n):
 # the second being the same as the first, but with three added
 # characters somewhere in the string (three same characters),
 # Write a function that returns the added character
+def added_char(s1, s2):
+    return [i for i in s2 if s2.count(i) >= 3 and s1.count(i) == s2.count(i)-3][0]
