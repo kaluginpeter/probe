@@ -12268,3 +12268,5 @@ class Router:
         self._routes[(url, method)] = a
     def runRequest(self, url, method):
         return self._routes.get((url, method), lambda: "Error 404: Not Found")()
+
+# for i from 1 to n, do i % m and return the sum
