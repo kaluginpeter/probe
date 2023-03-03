@@ -12317,3 +12317,7 @@ def decode(s):
 # Note: This includes any characters
 def count_repeats(txt):
     return sum(1 if i == j else 0 for i, j in zip(txt, txt[1:]))
+
+# Create a method named "rotate" that returns a given array with the elements inside the array rotated n spaces.
+# If n is greater than 0 it should rotate the array to the right. If n is less than 0 it should rotate the array
+# to the left. If n is 0, then it should return the array unchanged.
