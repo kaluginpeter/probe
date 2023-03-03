@@ -12315,3 +12315,5 @@ def decode(s):
 # Write a function that returns the count of characters that have to
 # be removed in order to get a string with no consecutive repeats.
 # Note: This includes any characters
+def count_repeats(txt):
+    return sum(1 if i == j else 0 for i, j in zip(txt, txt[1:]))
