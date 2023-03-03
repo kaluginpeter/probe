@@ -12321,3 +12321,8 @@ def count_repeats(txt):
 # Create a method named "rotate" that returns a given array with the elements inside the array rotated n spaces.
 # If n is greater than 0 it should rotate the array to the right. If n is less than 0 it should rotate the array
 # to the left. If n is 0, then it should return the array unchanged.
+def rotate(data, n):
+    if data:
+        c = -n % len(data)
+        return data[c:] + data[:c]
+    return []
