@@ -12311,3 +12311,7 @@ def encode(s):
 
 def decode(s):
     return "".join(int(k) * v for k, v in re.findall(r"(\d+)(\w)", s))
+
+# Write a function that returns the count of characters that have to
+# be removed in order to get a string with no consecutive repeats.
+# Note: This includes any characters
