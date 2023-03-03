@@ -12294,3 +12294,7 @@ def frame(text, char):
 # need to replace only alphabetical characters (both lower- and uppercase);
 # if the given or default string representing the number is shorter than the template, just
 # repeat it to fill all the spaces.
+from itertools import cycle
+def numeric_formatter(template, data='1234567890'):
+    data = cycle(data)
+    return ''.join(next(data) if i.isalpha() else i for i in template)
