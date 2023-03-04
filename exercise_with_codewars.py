@@ -12345,3 +12345,7 @@ import sys
 sys.set_int_max_str_digits(0)
 def is_divisible_by_6(s):
     return [str(int(s.replace('*',str(i)))) for i in range(10) if int(s.replace('*',str(i)))%6==0]
+
+# I want to know the size of the longest consecutive elements of X in Y.
+# You will receive two arguments: items and key. Return the length of the
+# longest segment of consecutive keys in the given items.
