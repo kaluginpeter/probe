@@ -12356,3 +12356,5 @@ def get_consective_items(item, key):
 # Given an array (or list) of scores, return the array of ranks for each value in the array.
 # The largest value has rank 1, the second largest value has rank 2, and so on.
 # Ties should be handled by assigning the same rank to all tied values. For example:
+def ranks(a):
+    return [sorted(a, reverse = True).index(i) + 1 for i in a]
