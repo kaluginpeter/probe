@@ -12438,3 +12438,10 @@ def number_of_carries(a: int, b: int) -> int:
 # a tuple (t, k) (in Python)
 # an array [t, k] (in Ruby and JavaScript)
 # in C, return k and write to the string t passed in parameter
+def f(s):
+    c = min([s.count(i) for i in s])
+    w = ''
+    for i in s:
+        w += i
+        if w * c == s: return (w, c)
+    return (s, 1)
