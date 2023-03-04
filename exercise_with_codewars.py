@@ -12337,3 +12337,7 @@ def added_char(s1, s2):
 # The hamming distance between a pair of numbers is the number of binary bits that differ in their binary notation.
 def hamming_distance(a, b):
     return bin(a ^ b).count('1')
+
+# A masked number is a string that consists of digits and one asterisk (*) that
+# should be replaced by exactly one digit. Given a masked number s, find
+# all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
