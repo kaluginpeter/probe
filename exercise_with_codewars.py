@@ -12430,3 +12430,11 @@ def number_of_carries(a: int, b: int) -> int:
     s2 = sum(int(i) for i in str(b))
     s3 = sum(int(i) for i in str(a + b))
     return (s + s2 - s3) // 9
+
+# For a given nonempty string s find a minimum substring t and the maximum number k,
+# such that the entire string s is equal to t repeated k times.
+# The input string consists of lowercase latin letters.
+# Your function should return :
+# a tuple (t, k) (in Python)
+# an array [t, k] (in Ruby and JavaScript)
+# in C, return k and write to the string t passed in parameter
