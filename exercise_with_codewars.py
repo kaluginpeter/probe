@@ -12391,3 +12391,5 @@ def make_change(amount):
 # terms of the sequence up to the n-th term (included). (The number n (of n-th term)
 # will be given as a positive integer)
 # The values 1 (one) is the only that is duplicated in the sequence and should be counted only once.
+def count_odd_pentaFib(l):
+    return 2 * (l // 6) + [0, 1, 2, 2, 2, 2][l % 6] - (l >= 2)
