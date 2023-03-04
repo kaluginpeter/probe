@@ -12341,3 +12341,7 @@ def hamming_distance(a, b):
 # A masked number is a string that consists of digits and one asterisk (*) that
 # should be replaced by exactly one digit. Given a masked number s, find
 # all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
+import sys
+sys.set_int_max_str_digits(0)
+def is_divisible_by_6(s):
+    return [str(int(s.replace('*',str(i)))) for i in range(10) if int(s.replace('*',str(i)))%6==0]
