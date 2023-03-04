@@ -12358,3 +12358,11 @@ def get_consective_items(item, key):
 # Ties should be handled by assigning the same rank to all tied values. For example:
 def ranks(a):
     return [sorted(a, reverse = True).index(i) + 1 for i in a]
+
+# We are tracking down our rogue agent Matthew Knight also known as Roy Miller. He travels
+# from places to places to avoid being tracked. Each of his travels are
+# based on a list of itineraries in an unusual or incorrect order. The task
+# is to determine the routes he will take in his every journey.
+# Task
+# You are given an array of routes of his itineraries. List down the only
+# places where he will go in correct order based on his itineraries.
