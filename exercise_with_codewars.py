@@ -12425,3 +12425,8 @@ def isomorph(s: str, t: str) -> bool:
 # method, some additions of digits produce non-zero carries to the next positions.
 # Your task is to calculate the number of non-zero carries that will occur while adding the given numbers.
 # The numbers are added in base 10.
+def number_of_carries(a: int, b: int) -> int:
+    s = sum(int(i) for i in str(a))
+    s2 = sum(int(i) for i in str(b))
+    s3 = sum(int(i) for i in str(a + b))
+    return (s + s2 - s3) // 9
