@@ -12393,3 +12393,11 @@ def make_change(amount):
 # The values 1 (one) is the only that is duplicated in the sequence and should be counted only once.
 def count_odd_pentaFib(l):
     return 2 * (l // 6) + [0, 1, 2, 2, 2, 2][l % 6] - (l >= 2)
+
+# Two strings a and b are called isomorphic if there is a one
+# to one mapping possible for every character of a to every character of b.
+# And all occurrences of every character in a map to same character in b.
+# Task
+# In this kata you will create a function that return True if two given strings are isomorphic
+# to each other, and False otherwise. Remember that order is important.
+# Your solution must be able to handle words with more than 10 characters.
