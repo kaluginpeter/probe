@@ -12333,3 +12333,5 @@ def rotate(data, n):
 # Write a function that returns the added character
 def added_char(s1, s2):
     return [i for i in s2 if s2.count(i) >= 3 and s1.count(i) == s2.count(i)-3][0]
+
+# The hamming distance between a pair of numbers is the number of binary bits that differ in their binary notation.
