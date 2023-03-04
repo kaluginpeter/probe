@@ -12366,3 +12366,8 @@ def ranks(a):
 # Task
 # You are given an array of routes of his itineraries. List down the only
 # places where he will go in correct order based on his itineraries.
+def find_routes(routes):
+    d = dict(routes)
+    r = list(d.keys() - d.values())
+    while r[-1] in d: r.append(d[r[-1]])
+    return ', '.join(r)
