@@ -12352,3 +12352,7 @@ def is_divisible_by_6(s):
 import re
 def get_consective_items(item, key):
     return len(max(re.findall(f'{key}+', str(item)) or ['']))
+
+# Given an array (or list) of scores, return the array of ranks for each value in the array.
+# The largest value has rank 1, the second largest value has rank 2, and so on.
+# Ties should be handled by assigning the same rank to all tied values. For example:
