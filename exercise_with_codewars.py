@@ -12381,3 +12381,8 @@ def find_routes(routes):
 # value should be a hash/dictionary/object with the symbols as keys, and the numbers of
 # coins as values. Coins that are not used should not be included in the hash. If the
 # argument passed in is 0, then the method should return an empty hash.
+def make_change(amount):
+    d = {}
+    for k, v in (('H', 50), ('Q', 25), ('D', 10), ('N', 5), ('P', 1)):
+        if amount >= v: d[k], amount = divmod(amount, v)
+    return d1
