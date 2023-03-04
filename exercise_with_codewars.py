@@ -12386,3 +12386,8 @@ def make_change(amount):
     for k, v in (('H', 50), ('Q', 25), ('D', 10), ('N', 5), ('P', 1)):
         if amount >= v: d[k], amount = divmod(amount, v)
     return d1
+
+# Your task is to give the number of total values for the odd
+# terms of the sequence up to the n-th term (included). (The number n (of n-th term)
+# will be given as a positive integer)
+# The values 1 (one) is the only that is duplicated in the sequence and should be counted only once.
