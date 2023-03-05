@@ -12494,3 +12494,8 @@ def palindrome(integer):
 # mutating the input List S.
 def arrange(s):
     return list(s[[i,-i,~i,i][i%4]//2]for i in range(len(s)))
+
+# Just like in the "father" kata, you will have to return
+# the last digit of the nth element in the Fibonacci sequence (starting with 1,1, to be extra clear,
+# not with 0,1 or other numbers).
+# You will just get much bigger numbers, so good luck bruteforcing your way through it ;)
