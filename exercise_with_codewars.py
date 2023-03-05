@@ -12544,3 +12544,9 @@ def running_average():
         l.append(n)
         return round(sum(l) / len(l), 2)
     return mean
+
+# You'll be given a string of random characters (numbers, letters, and symbols).
+# To decode this string into the key we're searching for:
+# (1) count the number occurences of each ascii lowercase letter, and
+# (2) return an ordered string, 26 places long, corresponding to the number of occurences
+# for each corresponding letter in the alphabet.
