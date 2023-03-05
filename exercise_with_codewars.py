@@ -12535,3 +12535,6 @@ def solve(arr):
     l = [datetime(2000, 1, 1, *map(int, x.split(':'))) for x in sorted(arr)]
     c = max(int((j - i).total_seconds() - 60) for i, j in zip(l, l[1:] + [l[0].replace(day=2)]))
     return '{:02}:{:02}'.format(*divmod(c//60, 60))
+
+# Create a function running_average() that returns a callable function object. Update the series with
+# each given value and calculate the current average.
