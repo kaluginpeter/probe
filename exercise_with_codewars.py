@@ -12520,3 +12520,6 @@ def palindrome(num):
     while str(num)!=str(num)[::-1]: num, l = num+1, l+1
     while str(d)!=str(d)[::-1]: d, r = d-1, r+1
     return d if r<l else num
+
+# Write a function that gets a sequence and value and returns true/false
+# depending on whether the variable exists in a multidimentional sequence.
