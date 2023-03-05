@@ -12455,3 +12455,9 @@ def f(s):
 # Return the random password as a string.
 # Note: "randomness" is checked by counting the characters used in the generated passwords - all characters
 # should have less than 50% occurance. Based on extensive tests, the normal rate is around 35%.
+from string import ascii_lowercase as LOWER, ascii_uppercase as UPPER, digits as DIGITS
+from random import choice, shuffle, randint
+def password_gen():
+    w = [choice(UPPER), choice(LOWER), choice(DIGITS)] + [choice(UPPER+LOWER+DIGITS) for i in range(randint(3, 17))]
+    shuffle(w)
+    return "".join(w)
