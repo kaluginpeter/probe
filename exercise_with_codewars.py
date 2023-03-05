@@ -12485,3 +12485,10 @@ import re
 def palindrome(integer):
     if not isinstance(integer, int) or integer < 0: return 'Not valid'
     return re.search(r'(.)\1|(.).\2', str(integer)) is not None
+
+# A list S will be given. You need to generate a list T from it by following the given process:
+# Remove the first and last element from the list S and add them to the list T.
+# Reverse the list S
+# Repeat the process until list S gets emptied.
+# The above process results in the depletion of the list S. Your task is to generate list T without
+# mutating the input List S.
