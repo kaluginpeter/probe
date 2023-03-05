@@ -12538,3 +12538,9 @@ def solve(arr):
 
 # Create a function running_average() that returns a callable function object. Update the series with
 # each given value and calculate the current average.
+def running_average():
+    l = []
+    def mean(n):
+        l.append(n)
+        return round(sum(l) / len(l), 2)
+    return mean
