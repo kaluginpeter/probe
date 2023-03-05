@@ -12467,3 +12467,6 @@ def password_gen():
 # point value so it gets 1st place. 2 is the second highest so it
 # gets second place. 1 is the 3rd highest so it gets 3rd place.
 # Your task is to return an array giving each number its rank in the array.
+def rankings(arr):
+    l = sorted(arr, reverse=True)
+    return [l.index(i)+1 for i in arr]
