@@ -12481,3 +12481,7 @@ def rankings(arr):
 # numerical palindrome or not and return a boolean (true if it does and false if does not).
 # Return "Not valid" if the input is not an integer or is less than 0.
 # Note: Palindromes should be found without permutating num.
+import re
+def palindrome(integer):
+    if not isinstance(integer, int) or integer < 0: return 'Not valid'
+    return re.search(r'(.)\1|(.).\2', str(integer)) is not None
