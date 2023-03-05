@@ -12523,3 +12523,5 @@ def palindrome(num):
 
 # Write a function that gets a sequence and value and returns true/false
 # depending on whether the variable exists in a multidimentional sequence.
+def locate(seq, v):
+    return v in seq or any(locate(i, v) for i in seq if isinstance(i, list))
