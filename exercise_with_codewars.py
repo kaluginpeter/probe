@@ -12492,3 +12492,5 @@ def palindrome(integer):
 # Repeat the process until list S gets emptied.
 # The above process results in the depletion of the list S. Your task is to generate list T without
 # mutating the input List S.
+def arrange(s):
+    return list(s[[i,-i,~i,i][i%4]//2]for i in range(len(s)))
