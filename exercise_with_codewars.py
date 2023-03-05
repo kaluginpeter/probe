@@ -12550,3 +12550,5 @@ def running_average():
 # (1) count the number occurences of each ascii lowercase letter, and
 # (2) return an ordered string, 26 places long, corresponding to the number of occurences
 # for each corresponding letter in the alphabet.
+def decrypt(w):
+    return ''.join(str(w.count(i)) for i in "abcdefghijklmnopqrstuvwxyz")
