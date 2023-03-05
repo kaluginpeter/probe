@@ -12530,3 +12530,8 @@ def locate(seq, v):
 # task will be to determine the maximum time interval between alarms. Each alarm
 # starts ringing at the beginning of the corresponding minute and rings for exactly one
 # minute. The times in the array are not in chronological order. Ignore duplicate times, if any.
+from datetime import datetime
+def solve(arr):
+    l = [datetime(2000, 1, 1, *map(int, x.split(':'))) for x in sorted(arr)]
+    c = max(int((j - i).total_seconds() - 60) for i, j in zip(l, l[1:] + [l[0].replace(day=2)]))
+    return '{:02}:{:02}'.format(*divmod(c//60, 60))
