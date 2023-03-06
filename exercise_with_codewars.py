@@ -12644,3 +12644,6 @@ def sum_groups(arr):
 # characters, uppercase, lowercase, whitespace, and there may be (often will be)
 # multiple sub-strings of contiguous vowels. We are only interested in the single longest
 # sub-string of vowels within each string, in the input array.
+import re
+def sort_strings_by_vowels(seq):
+    return sorted(seq, reverse=True, key=lambda _: max((len(i) for i in re.findall(r'[aeiouAEIOU]+', _)), default=0))
