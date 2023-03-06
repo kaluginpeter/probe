@@ -12632,3 +12632,7 @@ def merge(line):
 
 # Given an array of integers, sum consecutive even numbers and consecutive odd numbers. Repeat the
 # process while it can be done and return the length of the final array.
+from itertools import groupby
+def sum_groups(arr):
+    l = list(sum(j) for i,j in groupby(arr, key = lambda x: x % 2 == 0))
+    return len(l) if l == arr else sum_groups(l)
