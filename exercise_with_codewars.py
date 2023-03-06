@@ -12573,3 +12573,13 @@ def word_mesh(arr):
     return r
 
 # Given a string, return the minimal number of parenthesis reversals needed to make balanced parenthesis.
+def solve(s):
+    if len(s) % 2: return -1
+    l, c = 0, 0
+    for i in s:
+        if i == '(': l += 1
+        else: l -= 1
+        if l < 0:
+            c += 1
+            l += 2
+    return c + l // 2
