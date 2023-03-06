@@ -12624,3 +12624,8 @@ def words_to_hex(words):
 # A given tile can only merge once.
 # Empty grid squares are represented as zeros.
 # Your function should work on arrays containing arbitrary number of elements.
+def merge(line):
+    l = [i for i in line if i != 0]
+    for i in range(len(l) - 1):
+        if l[i] == l[i + 1]: l = l[:i] + [l[i] + l[i + 1]] + l[i + 2:] + [0]
+    return l + [0] * (len(line) - len(l))
