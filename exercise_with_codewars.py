@@ -12571,3 +12571,5 @@ def word_mesh(arr):
         if not j: return "failed to mesh"
         r += j
     return r
+
+# Given a string, return the minimal number of parenthesis reversals needed to make balanced parenthesis.
