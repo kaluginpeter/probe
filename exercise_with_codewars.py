@@ -12583,3 +12583,7 @@ def solve(s):
             c += 1
             l += 2
     return c + l // 2
+
+# A series or sequence of numbers is usually the product of a function and can either be infinite or finite.
+# In this kata we will only consider finite series and you are required to return a code according to the
+# type of sequence:
