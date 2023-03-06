@@ -12563,3 +12563,11 @@ def find_the_number_plate(i):
 # You will be given an array of strings. The words in the array should mesh together where one or more
 # letters at the end of one word will have the same letters (in the same order)
 # as the next word in the array. But, there are times when all the words won't mesh.
+def word_mesh(arr):
+    r = ""
+    for i, j in zip(arr, arr[1:]):
+        while not i.endswith(j):
+            j = j[:-1]
+        if not j: return "failed to mesh"
+        r += j
+    return r
