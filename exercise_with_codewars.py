@@ -12559,3 +12559,7 @@ def decrypt(w):
 # returns it as a string
 def find_the_number_plate(i):
     return f'{97+i//999%26:c}{97+i//999//26%26:c}{97+i//999//26//26:c}{1+i%999:03}'
+
+# You will be given an array of strings. The words in the array should mesh together where one or more
+# letters at the end of one word will have the same letters (in the same order)
+# as the next word in the array. But, there are times when all the words won't mesh.
