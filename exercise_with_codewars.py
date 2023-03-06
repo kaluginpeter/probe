@@ -12552,3 +12552,8 @@ def running_average():
 # for each corresponding letter in the alphabet.
 def decrypt(w):
     return ''.join(str(w.count(i)) for i in "abcdefghijklmnopqrstuvwxyz")
+
+# Write a function
+# find_the_number_plate
+# which takes the Customer ID as an argument, calculates the Number Plate corresponding to this ID and
+# returns it as a string
