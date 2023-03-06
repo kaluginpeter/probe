@@ -12613,3 +12613,5 @@ def interpreter(tape):
 # string into hexadecimal values that could then be read as colour values.
 # A word is defined as a sequence of ASCII characters between two white
 # space characters or the first or last word of a sequence of words.
+def words_to_hex(words):
+    return [f"#{i[:3].hex():0<6}" for i in words.encode().split()]
