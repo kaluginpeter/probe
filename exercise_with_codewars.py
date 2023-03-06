@@ -12636,3 +12636,11 @@ from itertools import groupby
 def sum_groups(arr):
     l = list(sum(j) for i,j in groupby(arr, key = lambda x: x % 2 == 0))
     return len(l) if l == arr else sum_groups(l)
+
+# The goal of this Kata is to write a function that will receive an array of strings as its
+# single argument, then the strings are each processed and sorted (in desending order) based on the length
+# of the single longest sub-string of contiguous vowels ( aeiouAEIOU ) that may
+# be contained within the string. The strings may contain letters, numbers, special
+# characters, uppercase, lowercase, whitespace, and there may be (often will be)
+# multiple sub-strings of contiguous vowels. We are only interested in the single longest
+# sub-string of vowels within each string, in the input array.
