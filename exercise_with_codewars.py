@@ -12594,3 +12594,6 @@ def sequence_classifier(l):
     if all(l[i] >  l[i+1] for i in range(len(l)-1)): return 3
     if all(l[i] >= l[i+1] for i in range(len(l)-1)): return 4
     return 0
+
+# Make a custom esolang interpreter for the language Tick. Tick
+# is a descendant of Ticker but also very different data and command-wise.
