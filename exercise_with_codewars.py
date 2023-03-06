@@ -12605,3 +12605,11 @@ def interpreter(tape):
         elif i == "+":  d[c] = (d.get(c, 0) + 1) % 256
         elif i == "*":  w += chr(d[c])
     return w
+
+# Gary likes pictures but he also likes words and reading. He has had a
+# desire for a long time to see what words and books would look like if they could be seen as images.
+# For this task you are required to take a continuous string that can consist of any
+# combination of words or characters and then convert the words that make up this
+# string into hexadecimal values that could then be read as colour values.
+# A word is defined as a sequence of ASCII characters between two white
+# space characters or the first or last word of a sequence of words.
