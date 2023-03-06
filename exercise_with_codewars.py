@@ -12653,3 +12653,6 @@ def sort_strings_by_vowels(seq):
 # numbers starting from 1 up to n.
 # Hints: a solution in linear time can be found; using the most intuitive ones to search
 # for duplicates that can run in O(n²) time won't work.
+def find_dup(arr):
+    for i in arr:
+        if arr.count(i) > 1: return i
