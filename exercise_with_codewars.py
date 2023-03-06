@@ -12557,3 +12557,5 @@ def decrypt(w):
 # find_the_number_plate
 # which takes the Customer ID as an argument, calculates the Number Plate corresponding to this ID and
 # returns it as a string
+def find_the_number_plate(i):
+    return f'{97+i//999%26:c}{97+i//999//26%26:c}{97+i//999//26//26:c}{1+i%999:03}'
