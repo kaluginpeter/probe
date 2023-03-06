@@ -12587,3 +12587,10 @@ def solve(s):
 # A series or sequence of numbers is usually the product of a function and can either be infinite or finite.
 # In this kata we will only consider finite series and you are required to return a code according to the
 # type of sequence:
+def sequence_classifier(l):
+    if all(l[i] == l[i+1] for i in range(len(l)-1)): return 5
+    if all(l[i] <  l[i+1] for i in range(len(l)-1)): return 1
+    if all(l[i] <= l[i+1] for i in range(len(l)-1)): return 2
+    if all(l[i] >  l[i+1] for i in range(len(l)-1)): return 3
+    if all(l[i] >= l[i+1] for i in range(len(l)-1)): return 4
+    return 0
