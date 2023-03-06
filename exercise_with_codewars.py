@@ -12615,3 +12615,12 @@ def interpreter(tape):
 # space characters or the first or last word of a sequence of words.
 def words_to_hex(words):
     return [f"#{i[:3].hex():0<6}" for i in words.encode().split()]
+
+# Remember the game 2048? http://gabrielecirulli.github.io/2048/
+# The main part of this game is merging identical tiles in a row.
+# Implement a function that models the process of merging all of the tile values in a single row.
+# This function takes the array line as a parameter and returns a
+# new array with the tile values from line slid towards the front of the array (index 0) and merged.
+# A given tile can only merge once.
+# Empty grid squares are represented as zeros.
+# Your function should work on arrays containing arbitrary number of elements.
