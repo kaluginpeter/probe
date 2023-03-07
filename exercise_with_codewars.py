@@ -12698,3 +12698,10 @@ def anagram_difference(w1, w2):
 # ka thi ka s ka bo ka y ka i ka s ka u ka gly what simply means this boy is ugly.
 # Task
 # Write a function that accepts a string word and returns encoded message using ka cypher.
+def ka_co_ka_de_ka_me(word):
+    w = ""
+    for k, v in enumerate(word):
+        if k != len(word):
+            if v.lower() not in "aeiou" and word[k-1].lower() in "aeiou" and k != 0: w += "ka"
+        w += v
+    return "ka" + w
