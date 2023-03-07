@@ -12715,3 +12715,7 @@ def sep_str(st):
 def draw(waves):
     l = max(waves)
     return '\n'.join(''.join('□■'[j > i] for j in waves) for i in reversed(range(l)))
+
+# Return the sum of the multiples of 3 and 5 below a number. Being the galactic games,
+# the tracks can get rather large, so your solution should
+# work for really large numbers (greater than 1,000,000).
