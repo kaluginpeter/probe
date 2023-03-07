@@ -12722,3 +12722,8 @@ def draw(waves):
 def solution(number):
     a, b, c = (number - 1) // 5, (number - 1) // 3, (number - 1) // 15
     return (((a * (a + 1)) // 2) * 5) + (((b * (b + 1)) // 2) * 3) - (((c * (c + 1)) // 2) * 15)
+
+# Write a function groupIn10s which takes any number of arguments, groups them into
+# tens, and sorts each group in ascending order.
+# The return value should be an array of arrays, so that numbers
+# between 0 and9 inclusive are in position 0, numbers between 10 and 19 are in position 1, etc.
