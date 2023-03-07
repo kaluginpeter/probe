@@ -12658,3 +12658,5 @@ def find_dup(arr):
         if arr.count(i) > 1: return i
 
 # Given a string of integers, return the number of odd-numbered substrings that can be formed.
+def solve(s):
+    return sum(int(j) % 2 for i in range(len(s)) for j in s[i:])
