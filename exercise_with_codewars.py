@@ -12684,3 +12684,5 @@ def shake_tree(tree):
         l = [i+1 if char[i] == '\\' else i-1 if char[i] == '/' else i for i in l if char[i] != '_']
     d = Counter(l)
     return [d[i] for i in range(len(tree[0]))]
+
+# Given two words, how many letters do you have to remove from them to make them anagrams?
