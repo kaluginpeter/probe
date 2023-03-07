@@ -12690,3 +12690,11 @@ from collections import Counter
 def anagram_difference(w1, w2):
     w1, w2 = Counter(w1), Counter(w2)
     return sum(((w1 - w2) + (w2 - w1)).values())
+
+# Ka ka ka cypher is a cypher used by small children in some country. When a girl
+# wants to pass something to the other girls and there are some boys nearby,
+# she can use Ka cypher. So only the other girls are able to understand her.
+# She speaks using KA, ie.:
+# ka thi ka s ka bo ka y ka i ka s ka u ka gly what simply means this boy is ugly.
+# Task
+# Write a function that accepts a string word and returns encoded message using ka cypher.
