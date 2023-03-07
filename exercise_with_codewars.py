@@ -12712,3 +12712,6 @@ def sep_str(st):
 
 # Complete the pattern, using the special character ■   □
 # In this kata, we draw some histogram of the sound performance of ups and downs.
+def draw(waves):
+    l = max(waves)
+    return '\n'.join(''.join('□■'[j > i] for j in waves) for i in reversed(range(l)))
