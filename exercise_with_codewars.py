@@ -12677,3 +12677,10 @@ def max_and_min(arr1,arr2):
 
 # Shake the tree and count where the nuts land.
 # Output - An array (same width as the tree) which indicates how many nuts fell at each position ^
+from collections import Counter
+def shake_tree(tree):
+    l = [k for k,v in enumerate(tree[0]) if v == 'o']
+    for char in tree[1:]:
+        l = [i+1 if char[i] == '\\' else i-1 if char[i] == '/' else i for i in l if char[i] != '_']
+    d = Counter(l)
+    return [d[i] for i in range(len(tree[0]))]
