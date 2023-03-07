@@ -12674,3 +12674,6 @@ def oddity(n):
 def max_and_min(arr1,arr2):
     l = [abs(i-j) for i in arr1 for j in arr2]
     return [max(l), min(l)]
+
+# Shake the tree and count where the nuts land.
+# Output - An array (same width as the tree) which indicates how many nuts fell at each position ^
