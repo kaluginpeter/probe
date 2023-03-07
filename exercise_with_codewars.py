@@ -12656,3 +12656,5 @@ def sort_strings_by_vowels(seq):
 def find_dup(arr):
     for i in arr:
         if arr.count(i) > 1: return i
+
+# Given a string of integers, return the number of odd-numbered substrings that can be formed.
