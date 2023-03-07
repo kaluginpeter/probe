@@ -12727,3 +12727,12 @@ def solution(number):
 # tens, and sorts each group in ascending order.
 # The return value should be an array of arrays, so that numbers
 # between 0 and9 inclusive are in position 0, numbers between 10 and 19 are in position 1, etc.
+def group_in_10s(*args):
+    if len(args) == 0: return []
+    s = sorted(args)
+    l = [None for _ in range(max(s)//10 + 1)]
+    for j in s:
+        i = j // 10
+        if l[i] is None: l[i] = [j]
+        else: l[i].append(j)
+    return l
