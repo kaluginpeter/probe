@@ -12719,3 +12719,6 @@ def draw(waves):
 # Return the sum of the multiples of 3 and 5 below a number. Being the galactic games,
 # the tracks can get rather large, so your solution should
 # work for really large numbers (greater than 1,000,000).
+def solution(number):
+    a, b, c = (number - 1) // 5, (number - 1) // 3, (number - 1) // 15
+    return (((a * (a + 1)) // 2) * 5) + (((b * (b + 1)) // 2) * 3) - (((c * (c + 1)) // 2) * 15)
