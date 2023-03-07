@@ -12686,3 +12686,7 @@ def shake_tree(tree):
     return [d[i] for i in range(len(tree[0]))]
 
 # Given two words, how many letters do you have to remove from them to make them anagrams?
+from collections import Counter
+def anagram_difference(w1, w2):
+    w1, w2 = Counter(w1), Counter(w2)
+    return sum(((w1 - w2) + (w2 - w1)).values())
