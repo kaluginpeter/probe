@@ -12705,3 +12705,5 @@ def ka_co_ka_de_ka_me(word):
             if v.lower() not in "aeiou" and word[k-1].lower() in "aeiou" and k != 0: w += "ka"
         w += v
     return "ka" + w
+
+# Create a function that takes a string and separates it into a sequence of letters.
