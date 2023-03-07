@@ -12709,3 +12709,6 @@ def ka_co_ka_de_ka_me(word):
 # Create a function that takes a string and separates it into a sequence of letters.
 def sep_str(st):
     return [[j[i] if len(j) > i else '' for j in st.split()] for i in range(max(map(len, st.split())))] if st else []
+
+# Complete the pattern, using the special character ■   □
+# In this kata, we draw some histogram of the sound performance of ups and downs.
