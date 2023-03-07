@@ -12707,3 +12707,5 @@ def ka_co_ka_de_ka_me(word):
     return "ka" + w
 
 # Create a function that takes a string and separates it into a sequence of letters.
+def sep_str(st):
+    return [[j[i] if len(j) > i else '' for j in st.split()] for i in range(max(map(len, st.split())))] if st else []
