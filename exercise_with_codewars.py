@@ -12784,3 +12784,5 @@ def spider_to_fly(spider, fly):
 # Array Exchange and Reversing
 # It's time for some array exchange! The objective is simple: exchange the elements of two arrays
 # in-place in a way that their new content is also reversed.
+def exchange_with(a, b):
+    a[:], b[:] = b[::-1], a[::-1]
