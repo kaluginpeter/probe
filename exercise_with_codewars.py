@@ -12747,3 +12747,5 @@ def group_in_10s(*args):
 # ninth, and tenth keys with the other four fingers of your right hand. Then for the eleventh
 # key you go back to your left little finger, and so on. Once you get to the rightmost/highest,
 # 88th, key, C, you start all over again with your left little finger on the first key.
+def which_note(count):
+    return ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#'][(count - 1) % 88 % 12]
