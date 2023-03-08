@@ -12786,3 +12786,8 @@ def spider_to_fly(spider, fly):
 # in-place in a way that their new content is also reversed.
 def exchange_with(a, b):
     a[:], b[:] = b[::-1], a[::-1]
+
+# Write a function that accepts a message string and an array of integers code. As the result, return
+# the key that was used to encrypt the message. The key has to be shortest of all
+# possible keys that can be used to code the message: i.e. when the possible keys
+# are 12 , 1212, 121212, your solution should return 12.
