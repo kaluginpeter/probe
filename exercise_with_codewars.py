@@ -12749,3 +12749,5 @@ def group_in_10s(*args):
 # 88th, key, C, you start all over again with your left little finger on the first key.
 def which_note(count):
     return ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#'][(count - 1) % 88 % 12]
+
+# In this Kata, you will be given a number and your task will be to return the nearest prime number.
