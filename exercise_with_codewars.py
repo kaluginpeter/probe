@@ -12776,3 +12776,7 @@ def findSquares(x,y):
 # Our friendly jumping spider is resting and minding his own spidery business at web-coordinate spider.
 # An inattentive fly bumbles into the web at web-coordinate fly and gets itself stuck.
 # Your task is to calculate and return the distance the spider must jump to get to the fly.
+from math import cos, pi
+def spider_to_fly(spider, fly):
+    x, y = int(spider[1]), int(fly[1])
+    return (x**2 + y**2 - 2 * x * y * cos((ord(spider[0]) - ord(fly[0])) * pi / 4))**0.5
