@@ -12791,3 +12791,8 @@ def exchange_with(a, b):
 # the key that was used to encrypt the message. The key has to be shortest of all
 # possible keys that can be used to code the message: i.e. when the possible keys
 # are 12 , 1212, 121212, your solution should return 12.
+def find_the_key(message, code):
+    w = "".join(str(code[k] + 96 - ord(v)) for k, v in enumerate(message))
+    l = len(w)
+    for i in range(1, l + 1):
+        if (w[:i] * l)[:l] == w: return int(w[:i])
