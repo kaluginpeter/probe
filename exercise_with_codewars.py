@@ -12814,3 +12814,6 @@ def shortest_arrang(n):
 # and the smallest prime larger than this value,
 # aftPrime/aft_prime (depending on the language).
 # The result should be output in a list like the following:
+from gmpy2 import is_prime, next_prime
+def prime_bef_aft(i):
+    return [next(filter(is_prime, range(i-1, 1, -1))), next_prime(i)]
