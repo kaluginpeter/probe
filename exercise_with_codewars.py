@@ -12751,3 +12751,6 @@ def which_note(count):
     return ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#'][(count - 1) % 88 % 12]
 
 # In this Kata, you will be given a number and your task will be to return the nearest prime number.
+from gmpy2 import is_prime
+def solve(n, i=0):
+    return is_prime(n-i) and n-i or is_prime(n+i) and n+i or solve(n,i+1)
