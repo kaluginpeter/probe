@@ -12817,3 +12817,8 @@ def shortest_arrang(n):
 from gmpy2 import is_prime, next_prime
 def prime_bef_aft(i):
     return [next(filter(is_prime, range(i-1, 1, -1))), next_prime(i)]
+
+# You wrote all your unit test names in camelCase. But some of your colleagues have troubles reading these
+# long test names. So you make a compromise to switch to underscore separation.
+# To make these changes fast you wrote a class to translate a camelCase name into an underscore separated name.
+# Implement the ToUnderscore() method.
