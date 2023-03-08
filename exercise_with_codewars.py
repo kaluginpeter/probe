@@ -12770,3 +12770,5 @@ def proofread(s):
 # Your task is to write a function `findSquares` that returns the total number of squares
 # for any given rectangle, the dimensions of which being given as two integers with
 # the first always being equal to or greater than the second.
+def findSquares(x,y):
+    return sum((x-i) * (y-i) for i in range(y))
