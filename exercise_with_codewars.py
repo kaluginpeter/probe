@@ -12808,3 +12808,9 @@ def shortest_arrang(n):
         for j in range(r + 1):
             if sum(l[i:j]) == n: return l[i:j]
     return [-1]
+
+# We need a function prime_bef_aft() that gives the largest prime below a certain given value n,
+# befPrime or bef_prime (depending on the language),
+# and the smallest prime larger than this value,
+# aftPrime/aft_prime (depending on the language).
+# The result should be output in a list like the following:
