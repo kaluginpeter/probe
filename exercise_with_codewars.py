@@ -12772,3 +12772,7 @@ def proofread(s):
 # the first always being equal to or greater than the second.
 def findSquares(x,y):
     return sum((x-i) * (y-i) for i in range(y))
+
+# Our friendly jumping spider is resting and minding his own spidery business at web-coordinate spider.
+# An inattentive fly bumbles into the web at web-coordinate fly and gets itself stuck.
+# Your task is to calculate and return the distance the spider must jump to get to the fly.
