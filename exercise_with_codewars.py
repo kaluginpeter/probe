@@ -12822,3 +12822,6 @@ def prime_bef_aft(i):
 # long test names. So you make a compromise to switch to underscore separation.
 # To make these changes fast you wrote a class to translate a camelCase name into an underscore separated name.
 # Implement the ToUnderscore() method.
+import re
+def toUnderScore(word):
+    return re.sub("(?<=[^_-])_?(?=[A-Z])|(?<=[^\\d_])_?(?=\\d)", "_", word)
