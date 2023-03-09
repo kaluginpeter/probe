@@ -12841,3 +12841,5 @@ def palindrome(num):
 # John is a typist. He has a habit of typing: he never use the Shift key to switch case, just using only Caps Lock.
 # Given a string s. Your task is to count how many times the keyboard has been tapped by John.
 # You can assume that, at the beginning the Caps Lock light is not lit.
+def typist(s):
+    return sum(i.islower()^j.islower() for i, j in zip('a'+s, s)) + len(s)
