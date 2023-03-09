@@ -12893,3 +12893,8 @@ def perfect_square(square):
 # substitution where two parameters are provided as such (string, keyword). The string is
 # encrypted by taking the keyword, dropping any letters that appear more than once. The rest of the
 # letters of the alphabet that aren't used are then appended to the end of the keyword.
+def keyword_cipher(s, keyword, key=""):
+    w = "abcdefghijklmnopqrstuvwxyz"
+    for i in keyword + w:
+        if i not in key: key += i
+    return s.lower().translate(str.maketrans(w, key))
