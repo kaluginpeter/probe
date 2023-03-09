@@ -12871,3 +12871,6 @@ def cumulative_triangle(n):
 
 # Your goal is to write a function that determines the depth of the deepest nested list within a given list.
 # return 1 if there are no nested lists. The list passed to your function can contain any data types.
+def list_depth(lst):
+    l = [list_depth(i) for i in lst if isinstance(i, list)]
+    return max(l)+1 if l else 1
