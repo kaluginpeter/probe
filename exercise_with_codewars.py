@@ -12868,3 +12868,6 @@ def simplify(n):
 # And so on; this pattern continues.
 def cumulative_triangle(n):
     return (n**3+n)/2
+
+# Your goal is to write a function that determines the depth of the deepest nested list within a given list.
+# return 1 if there are no nested lists. The list passed to your function can contain any data types.
