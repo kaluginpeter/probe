@@ -12857,3 +12857,5 @@ def directions(goal):
 # Given a positive integer as input, return the output as a string in the following format:
 # Each element, corresponding to a digit of the number, multiplied by a power of 10 in such
 # a way that with the sum of these elements you can obtain the original number.
+def simplify(n):
+    return "".join(["+"+str(n)[i]+("*1"+"0"*(len(str(n))-i-1) if len(str(n))-i-1>0 else "") for i in range(0, len(str(n))) if str(n)[i]!="0"])[1:]
