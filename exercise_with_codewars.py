@@ -12837,3 +12837,7 @@ def palindrome(num):
     l = len(n)
     c = {int(n[i:j]) for i in range(l-1) for j in range(i+2, l+1) if int(n[i]) and n[i:j] == n[i:j][::-1]}
     return sorted(c) if c else "No palindromes found"
+
+# John is a typist. He has a habit of typing: he never use the Shift key to switch case, just using only Caps Lock.
+# Given a string s. Your task is to count how many times the keyboard has been tapped by John.
+# You can assume that, at the beginning the Caps Lock light is not lit.
