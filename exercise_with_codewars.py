@@ -12831,3 +12831,9 @@ def toUnderScore(word):
 # For a given number num, write a function which returns an array of all the numerical palindromes
 # contained within each number. The array should be sorted in ascending order
 # and any duplicates should be removed.
+def palindrome(num):
+    if not isinstance(num, int) or num < 0: return "Not valid"
+    n = str(num)
+    l = len(n)
+    c = {int(n[i:j]) for i in range(l-1) for j in range(i+2, l+1) if int(n[i]) and n[i:j] == n[i:j][::-1]}
+    return sorted(c) if c else "No palindromes found"
