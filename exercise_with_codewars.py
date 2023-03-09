@@ -12905,3 +12905,7 @@ def keyword_cipher(s, keyword, key=""):
 # Create a function that determines the number of pairs of mature rabbits after n
 # months, beginning with one immature pair of these idealized rabbits that produce b pairs of offspring at
 # the end of each month.
+def fib_rabbits(n, b):
+    x, y = 0, 1
+    for i in range(n): x, y = y, y + b * x
+    return x
