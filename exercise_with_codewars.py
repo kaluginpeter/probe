@@ -12866,3 +12866,5 @@ def simplify(n):
 # The 2nd row can support the next 2 numbers: "2" and "3"
 # Likewise, the 3rd row, can only support the next 3 numbers: "4", "5", "6"
 # And so on; this pattern continues.
+def cumulative_triangle(n):
+    return (n**3+n)/2
