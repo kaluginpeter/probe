@@ -12885,3 +12885,5 @@ def palindrome(num):
     return sum(sum(s[i:i+j] == s[i:i+j][::-1] for i in range(len(s)-j+1)) for j in range(2, len(s)+1))
 
 # Write function which validates an input string. If the string is a perfect square return true,false otherwise.
+def perfect_square(square):
+    return all("." * len(square.split("\n")) == i for i in square.split("\n"))
