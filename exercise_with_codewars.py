@@ -12825,3 +12825,9 @@ def prime_bef_aft(i):
 import re
 def toUnderScore(word):
     return re.sub("(?<=[^_-])_?(?=[A-Z])|(?<=[^\\d_])_?(?=\\d)", "_", word)
+
+# A palindrome is a word, phrase, number, or other sequence of characters which reads the
+# same backward as forward. Examples of numerical palindromes are: 2332, 110011, 54322345
+# For a given number num, write a function which returns an array of all the numerical palindromes
+# contained within each number. The array should be sorted in ascending order
+# and any duplicates should be removed.
