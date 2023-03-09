@@ -12879,3 +12879,7 @@ def list_depth(lst):
 # numerical palindromes within each number. For this kata, single digit
 # numbers will NOT be considered numerical palindromes.
 # Return "Not valid" if the input is not an integer or is less than 0.
+def palindrome(num):
+    if not isinstance(num, int) or num < 0: return 'Not valid'
+    s = str(num)
+    return sum(sum(s[i:i+j] == s[i:i+j][::-1] for i in range(len(s)-j+1)) for j in range(2, len(s)+1))
