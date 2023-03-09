@@ -12850,3 +12850,6 @@ def typist(s):
 # Your task is to create a function called directions, that will return a reduced list that will
 # get you to the same point.The order of directions must be returned as N then S then E then W.
 # If you get back to beginning, return an empty array.
+def directions(goal):
+    y, x = goal.count("N") - goal.count("S"), goal.count("E") - goal.count("W")
+    return ["N"] * y + ["S"] * (-y) + ["E"] * x + ["W"] * (-x)
