@@ -12874,3 +12874,8 @@ def cumulative_triangle(n):
 def list_depth(lst):
     l = [list_depth(i) for i in lst if isinstance(i, list)]
     return max(l)+1 if l else 1
+
+# For a given number num, write a function which returns the number of
+# numerical palindromes within each number. For this kata, single digit
+# numbers will NOT be considered numerical palindromes.
+# Return "Not valid" if the input is not an integer or is less than 0.
