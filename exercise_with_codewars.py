@@ -12859,3 +12859,10 @@ def directions(goal):
 # a way that with the sum of these elements you can obtain the original number.
 def simplify(n):
     return "".join(["+"+str(n)[i]+("*1"+"0"*(len(str(n))-i-1) if len(str(n))-i-1>0 else "") for i in range(0, len(str(n))) if str(n)[i]!="0"])[1:]
+
+# Imagine a triangle of numbers which follows this pattern:
+# Starting with the number "1", "1" is positioned at the top
+# of the triangle. As this is the 1st row, it can only support a single number.
+# The 2nd row can support the next 2 numbers: "2" and "3"
+# Likewise, the 3rd row, can only support the next 3 numbers: "4", "5", "6"
+# And so on; this pattern continues.
