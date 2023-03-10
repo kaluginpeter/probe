@@ -12943,3 +12943,6 @@ def vowel_recognition(input):
         if v in w: t += k
         s += t
     return s
+
+# Christmas is coming, and your task is to build a custom Christmas tree with the specified
+# characters and the specified height.
