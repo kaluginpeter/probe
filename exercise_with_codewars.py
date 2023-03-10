@@ -13013,3 +13013,5 @@ def pattern(rows, col, s):
 # The Fizz and Buzz numbers will always be integers between 1 and 50, and
 # the sequence will have a maximum length of 100. The Fizz and Buzz numbers
 # might be equal, and might be equal to 1.
+def reverse_fizz_buzz(array):
+    return tuple(next(i for i, j in enumerate(array, 1) if j == k or j == "FizzBuzz") for k in ["Fizz", "Buzz"])
