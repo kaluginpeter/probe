@@ -12913,3 +12913,5 @@ def fib_rabbits(n, b):
 # You'll have a function called "sortEmotions" that will return an array of emotions
 # sorted. It has two parameters, the first parameter called "arr" will
 # expect an array of emotions where an emotion will be one of the following:
+def sort_emotions(arr, bool):
+    return sorted(arr, key=[':D',':)',':|',':(','T_T'].index, reverse = not bool)
