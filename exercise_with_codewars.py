@@ -12974,3 +12974,5 @@ def charCheck(text, mx, spaces):
 # Create a function longer that accepts a string and sorts the words in it based on their
 # respective lengths in an ascending order. If there are two words of the
 # same lengths, sort them alphabetically. Look at the examples below for more details.
+def longer(s):
+    return ' '.join(sorted(s.split(' '), key = lambda x: (len(x),x)))
