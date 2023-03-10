@@ -12970,3 +12970,7 @@ def test_it(a, b):
 def charCheck(text, mx, spaces):
     if not spaces: text = text.replace(' ', '')
     return [len(text) <= mx, text[:mx]]
+
+# Create a function longer that accepts a string and sorts the words in it based on their
+# respective lengths in an ascending order. If there are two words of the
+# same lengths, sort them alphabetically. Look at the examples below for more details.
