@@ -12936,3 +12936,10 @@ def do_math(s):
 # make vowel recognition dataset. In this task you have to find the presence of vowels
 # in all possible substrings of the given string. For each given string you have to
 # return the total number of vowels.
+def vowel_recognition(input):
+    w = set('aeiouAEIOU')
+    s = t = 0
+    for k, v in enumerate(input, 1):
+        if v in w: t += k
+        s += t
+    return s
