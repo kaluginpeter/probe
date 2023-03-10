@@ -12946,3 +12946,7 @@ def vowel_recognition(input):
 
 # Christmas is coming, and your task is to build a custom Christmas tree with the specified
 # characters and the specified height.
+from itertools import cycle, chain
+def custom_christmas_tree(chars, n):
+    c, l = cycle(chars), 2*n-1
+    return '\n'.join(chain((' '.join(next(c) for i in range(j)).center(l).rstrip() for j in range(1,n+1)), ('|'.center(l).rstrip() for k in range(n//3 or 1))))
