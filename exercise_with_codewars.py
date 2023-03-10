@@ -12985,3 +12985,7 @@ def longer(s):
 # 2(and)1(times number)1" and so on.
 # Your goal is to create a function which takes a starting string (not
 # necessarily the classical "1", much less a single character start) and return the nth element of the series.
+from itertools import groupby
+from functools import reduce
+def look_and_say_sequence(first_element, n):
+    return reduce(lambda i, j: ''.join('%d%s' % (len(list(v)), k) for k, v in groupby(i)), range(n - 1), first_element)
