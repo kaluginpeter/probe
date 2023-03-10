@@ -12915,3 +12915,7 @@ def fib_rabbits(n, b):
 # expect an array of emotions where an emotion will be one of the following:
 def sort_emotions(arr, bool):
     return sorted(arr, key=[':D',':)',':|',':(','T_T'].index, reverse = not bool)
+
+# Your task is to write a function named do_math that receives a single argument.
+# This argument is a string that contains multiple whitespace delimited numbers. Each number has
+# a single alphabet letter somewhere within it.
