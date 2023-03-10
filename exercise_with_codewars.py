@@ -12967,3 +12967,6 @@ def test_it(a, b):
 # "text": a string containing Cara's answer for the question
 # "max": a number equal to the maximum number of characters allowed in the answer
 # "spaces": a boolean which is True if spaces are included in the character count and False if they are not
+def charCheck(text, mx, spaces):
+    if not spaces: text = text.replace(' ', '')
+    return [len(text) <= mx, text[:mx]]
