@@ -12919,3 +12919,11 @@ def sort_emotions(arr, bool):
 # Your task is to write a function named do_math that receives a single argument.
 # This argument is a string that contains multiple whitespace delimited numbers. Each number has
 # a single alphabet letter somewhere within it.
+from functools import reduce
+from itertools import cycle
+from operator import add, truediv, mul, sub
+def do_math(s):
+    l = sorted(s.split(), key=lambda j: next(i for i in j if i.isalpha()))
+    l = [int(''.join(filter(str.isdigit, i))) for i in l]
+    ops = cycle([add, sub, mul, truediv])
+    return round(reduce(lambda a, b: next(ops)(a, b), l))
