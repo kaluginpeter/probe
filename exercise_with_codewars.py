@@ -12993,3 +12993,14 @@ def look_and_say_sequence(first_element, n):
 # Give you two number rows , columns and a string str. Returns a rows
 # x columns table pattern and fill in the str(each grid fill in a char,
 # the length of str is always less than or equals to the total numbers of grids):
+def pattern(rows, col, s):
+    seperator, res, l, index = '+---'*col + '+', '', len(s), 0
+    for _ in range(rows):
+        res += seperator+'\n'
+        for c in range(col):
+            if index < l: res += f'| {s[index]} '
+            else: res += '|   '
+            index += 1
+        res += '|\n'
+    res += seperator
+    return res
