@@ -12955,3 +12955,5 @@ def custom_christmas_tree(chars, n):
 # No Description
 # Only by Thinking and Testing
 # Look at the result of testcase, guess the code!
+def test_it(a, b):
+    return sum(map(int, str(a))) * sum(map(int, str(b)))
