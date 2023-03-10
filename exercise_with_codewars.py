@@ -12989,3 +12989,7 @@ from itertools import groupby
 from functools import reduce
 def look_and_say_sequence(first_element, n):
     return reduce(lambda i, j: ''.join('%d%s' % (len(list(v)), k) for k, v in groupby(i)), range(n - 1), first_element)
+
+# Give you two number rows , columns and a string str. Returns a rows
+# x columns table pattern and fill in the str(each grid fill in a char,
+# the length of str is always less than or equals to the total numbers of grids):
