@@ -13093,3 +13093,13 @@ def calculate_winners(snapshot, penguins):
         c = 0
     d = [i for i in dict(sorted(d.items(), key=lambda i: i[1]))]
     return f"GOLD: {d[0]}, SILVER: {d[1]}, BRONZE: {d[2]}"
+
+# Most football fans love it for the goals and excitement. Well, this Kata doesn't.
+# You are to handle the referee's little notebook and count the players who
+# were sent off for fouls and misbehavior.
+# The rules: Two teams, named "A" and "B" have 11 players each; players on each team
+# are numbered from 1 to 11. Any player may be sent off the field by being
+# given a red card. A player can also receive a yellow warning card, which is fine, but
+# if he receives another yellow card, he is sent off immediately (no need for a
+# red card in that case). If one of the teams has less than 7 players remaining, the game
+# is stopped immediately by the referee, and the team with less than 7 players loses.
