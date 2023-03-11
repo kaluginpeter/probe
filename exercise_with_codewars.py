@@ -13126,3 +13126,10 @@ def infect_apple(apple, n):
 # be the length of the longest prefix common to both strings. For example, the similarity of strings
 # abc and abd is 2, while the similarity of strings aaa and aaab is 3.
 # write a function that calculates the sum of similarities of a string S with each of it's suffixes.
+def string_suffix(str):
+    c = 0
+    for i in range(len(str)):
+        for a, b in zip(str, str[i:]):
+            if a != b: break
+            c += 1
+    return c
