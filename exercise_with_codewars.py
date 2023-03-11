@@ -13121,3 +13121,8 @@ def infect_apple(apple, n):
     h, w = range(len(apple)), range(len(apple[0]))
     v = [(i, j) for i in h for j in w if apple[i][j] == "V"]
     return [["A" if all(n < abs(y - j) + abs(x - i) for y, x in v) else "V" for i in w] for j in h]
+
+# Let's say take 2 strings, A and B, and define the similarity of the strings to
+# be the length of the longest prefix common to both strings. For example, the similarity of strings
+# abc and abd is 2, while the similarity of strings aaa and aaab is 3.
+# write a function that calculates the sum of similarities of a string S with each of it's suffixes.
