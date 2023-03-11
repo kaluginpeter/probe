@@ -13045,3 +13045,12 @@ def cut_the_ropes(arr):
 # janitor, however, doesn't approve of it at all. Every night he vandalizes
 # the writings by erasing all occurrences of some letter. Since the janitor
 # is quite lazy, he wants to do this with just one swipe of his mop.
+def the_janitor(word):
+    l = []
+    w = 'abcdefghijklmnopqrstuvwxyz'
+    for i in w:
+        if i not in word:
+            l.append(0)
+            continue
+        l.append(word.rindex(i) + 1 - word.index(i))
+    return l
