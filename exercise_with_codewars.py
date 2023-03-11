@@ -13040,3 +13040,8 @@ def cut_the_ropes(arr):
         m = min(arr)
         arr = [i - m for i in arr if i > m]
     return l
+
+# In one city it is allowed to write words on the buildings walls. The local
+# janitor, however, doesn't approve of it at all. Every night he vandalizes
+# the writings by erasing all occurrences of some letter. Since the janitor
+# is quite lazy, he wants to do this with just one swipe of his mop.
