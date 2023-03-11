@@ -13033,3 +13033,10 @@ def count_photos(road):
 # At each step, you have to reduce all the ropes by the length of the smallest rope.
 # The step will be repeated until no ropes are left. Given the length of N
 # ropes, print the number of ropes that are left before each step.
+def cut_the_ropes(arr):
+    l = []
+    while arr:
+        l.append(len(arr))
+        m = min(arr)
+        arr = [i - m for i in arr if i > m]
+    return l
