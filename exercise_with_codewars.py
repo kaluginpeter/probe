@@ -13103,3 +13103,10 @@ def calculate_winners(snapshot, penguins):
 # if he receives another yellow card, he is sent off immediately (no need for a
 # red card in that case). If one of the teams has less than 7 players remaining, the game
 # is stopped immediately by the referee, and the team with less than 7 players loses.
+def men_still_standing(cards):
+    a, b = [0] * 11, [0] * 11
+    for c in cards:
+        if c[0] == 'A': a[int(c[1:-1])-1] += (1 if c[-1] == 'Y' else 2)
+        else: b[int(c[1:-1])-1] += (1 if c[-1] == 'Y' else 2)
+        if sum(i < 2 for i in a) < 7 or sum(i < 2 for i in b) < 7: break
+    return (sum(i < 2 for i in a), sum(i < 2 for i in b))
