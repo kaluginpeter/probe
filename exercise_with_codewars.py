@@ -13153,3 +13153,12 @@ def get_most_profit_from_stock_quotes(quotes):
 # longest "word", regardless of its validity. In order to find the rest of the words,
 # MaxMatch is then recursively invoked on all of the remaining characters until no characters remain.
 # A list of all of the words that were found is returned.
+def max_match(s):
+    l = []
+    while s:
+        for i in range(len(s), 0, -1):
+            w = s[:i]
+            if w in VALID_WORDS: break
+        l.append(w)
+        s = s[i:]
+    return l
