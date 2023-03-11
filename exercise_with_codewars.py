@@ -13015,3 +13015,7 @@ def pattern(rows, col, s):
 # might be equal, and might be equal to 1.
 def reverse_fizz_buzz(array):
     return tuple(next(i for i, j in enumerate(array, 1) if j == k or j == "FizzBuzz") for k in ["Fizz", "Buzz"])
+
+# Your task is to write a function such that, for the input
+# string that represents a road as described, returns the total number of photos
+# that were taken by the cameras. The complexity should be strictly O(N) in order to pass all the tests.
