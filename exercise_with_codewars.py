@@ -13064,3 +13064,11 @@ def the_janitor(word):
 # equal to 1, then repeat steps 1 and 2. A number is considered unhappy once
 # the same number occurs multiple times in a sequence because this means there is
 # a loop and it will never reach 1.
+def happy_numbers(n):
+    def is_happy(n):
+        stop = {1}
+        while n not in stop:
+            stop.add(n)
+            n = sum(int(d)**2 for d in str(n))
+        return n == 1
+    return [i for i in range(1, n+1) if is_happy(i)]
