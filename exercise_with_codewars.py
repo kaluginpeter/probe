@@ -13019,3 +13019,12 @@ def reverse_fizz_buzz(array):
 # Your task is to write a function such that, for the input
 # string that represents a road as described, returns the total number of photos
 # that were taken by the cameras. The complexity should be strictly O(N) in order to pass all the tests.
+def count_photos(road):
+    c, l, f = 0, 0, 0
+    for i in road:
+        if i == ">": l += 1
+        elif i == ".":
+            c += l
+            f += 1
+        elif i == "<": c += f
+    return c
