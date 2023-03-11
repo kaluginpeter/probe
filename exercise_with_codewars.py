@@ -13054,3 +13054,13 @@ def the_janitor(word):
             continue
         l.append(word.rindex(i) + 1 - word.index(i))
     return l
+
+# Math geeks and computer nerds love to anthropomorphize numbers and assign emotions and personalities to
+# them. Thus there is defined the concept of a "happy" number. A happy number
+# is defined as an integer in which the following sequence ends with the number 1.
+# Start with the number itself.
+# Calculate the sum of the square of each individual digit.
+# If the sum is equal to 1, then the number is happy. If the sum is not
+# equal to 1, then repeat steps 1 and 2. A number is considered unhappy once
+# the same number occurs multiple times in a sequence because this means there is
+# a loop and it will never reach 1.
