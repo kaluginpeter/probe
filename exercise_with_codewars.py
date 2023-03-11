@@ -13072,3 +13072,11 @@ def happy_numbers(n):
             n = sum(int(d)**2 for d in str(n))
         return n == 1
     return [i for i in range(1, n+1) if is_happy(i)]
+
+# The situation...
+# The fastest penguins in the world have just swum for the ultimate prize in professional penguin swimming.
+# The cameras that were capturing the race stopped recording half way through.
+# The athletes, and the fans are in disarray waiting for the results.
+# The challenge...
+# Given the last recorded frame of the race, and an array of penguin athletes,
+# work out the gold, silver and bronze medal positions.
