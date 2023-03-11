@@ -13140,3 +13140,5 @@ def string_suffix(str):
 # either buy one unit of stock, sell any number of stock units you have
 # already bought, or do nothing. Therefore, the most profit is the
 # maximum difference of all pairs in a sequence of stock prices.
+def get_most_profit_from_stock_quotes(quotes):
+    return sum(max(quotes[k:]) - v for k, v in enumerate(quotes))
