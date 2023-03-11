@@ -13080,3 +13080,16 @@ def happy_numbers(n):
 # The challenge...
 # Given the last recorded frame of the race, and an array of penguin athletes,
 # work out the gold, silver and bronze medal positions.
+def calculate_winners(snapshot, penguins):
+    c, d = 0, {}
+    for i in snapshot.split('\n'):
+        for j in i[i.lower().index('p')+1:]:
+            if j == '~':
+                c += 2
+                continue
+            c += 1
+        d[penguins[0]] = c
+        penguins = penguins[1:]
+        c = 0
+    d = [i for i in dict(sorted(d.items(), key=lambda i: i[1]))]
+    return f"GOLD: {d[0]}, SILVER: {d[1]}, BRONZE: {d[2]}"
