@@ -13133,3 +13133,10 @@ def string_suffix(str):
             if a != b: break
             c += 1
     return c
+
+# Return the most profit from stock quotes.
+# Stock quotes are stored in an array in order of date. The stock profit is
+# the difference in prices in buying and selling stock. Each day, you can
+# either buy one unit of stock, sell any number of stock units you have
+# already bought, or do nothing. Therefore, the most profit is the
+# maximum difference of all pairs in a sequence of stock prices.
