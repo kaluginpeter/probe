@@ -13110,3 +13110,10 @@ def men_still_standing(cards):
         else: b[int(c[1:-1])-1] += (1 if c[-1] == 'Y' else 2)
         if sum(i < 2 for i in a) < 7 or sum(i < 2 for i in b) < 7: break
     return (sum(i < 2 for i in a), sum(i < 2 for i in b))
+
+# Your apple has a virus, and the infection is spreading.
+# The apple is a two-dimensional array, containing
+# strings "V" (virus) and "A" (uninfected parts). For each hour,
+# the infection spreads one space up, down, left and right.
+# Input: 2D array apple and number n (n >= 0).
+# Output: 2D array showing the apple after n hours.
