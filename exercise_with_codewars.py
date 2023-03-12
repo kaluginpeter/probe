@@ -13195,3 +13195,6 @@ def find_dups_miss(arr):
 # In this Kata, you will be given an array of integers and your task is
 # to return the number of arithmetic progressions of size 3 that are possible
 # from that list. In each progression, the differences between the elements must be the same.
+from itertools import combinations
+def solve(arr):
+    return sum(a - b == b - c for a, b, c in combinations(arr, 3))
