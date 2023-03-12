@@ -13206,3 +13206,6 @@ def sum_nested_numbers(a, c=0):
     return a ** c if not isinstance(a, list) else sum(sum_nested_numbers(i, c+1) for i in a)
 
 # Given three arrays of integers, return the sum of elements that are common in all three arrays.
+from collections import Counter
+def common(a,b,c):
+    return sum((Counter(a) & Counter(b) & Counter(c)).elements())
