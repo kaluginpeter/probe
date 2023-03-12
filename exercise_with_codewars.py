@@ -13177,3 +13177,12 @@ from collections import Counter
 def balance(arr1, arr2):
     s1, s2 = sorted(Counter(arr1).values()), sorted(Counter(arr2).values())
     return all(i == j for i, j in zip(s1, s2)) and len(s1) == len(s2)
+
+# This challenge is an extension of the kata of Codewars: Missing and Duplicate Number", authored
+# by the user Uraza. (You may search for it and complete it if you have not done it)
+# In this kata, we have an unsorted sequence of consecutive numbers from a to b, such
+# that a < b always (remember a, is the minimum, and b the maximum value).
+# They were introduced an unknown amount of duplicates in this sequence and we know that there
+# is an only missing value such that all the duplicate values and the missing value are
+# between a and b, but never coincide with them.
+# Find the missing number with the duplicate numbers (duplicates should be output in a sorted array).
