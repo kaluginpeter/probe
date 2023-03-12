@@ -13233,3 +13233,6 @@ def norm_index_test(seq, ind):
 from collections import Counter
 def findAdded(st1, st2):
     return ''.join(sorted((Counter(st2) - Counter(st1)).elements()))
+
+# Given a string of numbers, you must perform a method in which you
+# will translate this string into text, based on the below image:
