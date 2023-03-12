@@ -13204,3 +13204,5 @@ def solve(arr):
 # should be raised to the power of 1.
 def sum_nested_numbers(a, c=0):
     return a ** c if not isinstance(a, list) else sum(sum_nested_numbers(i, c+1) for i in a)
+
+# Given three arrays of integers, return the sum of elements that are common in all three arrays.
