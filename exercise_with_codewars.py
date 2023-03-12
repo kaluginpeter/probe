@@ -13170,3 +13170,6 @@ def greatest_common_factor(seq):
     for i in range(1, min(seq)+1):
         if all(j % i == 0 for j in seq): l.append(i)
     return max(l)
+
+# Check that the two provided arrays both contain the same number of different unique
+# items, regardless of order. For example in the following:
