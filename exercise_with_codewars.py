@@ -13226,3 +13226,7 @@ def get_best_word(points, words):
 # For positive numbers that are out of range, they loop around starting at the beginning, so
 def norm_index_test(seq, ind):
     return seq[ind % len(seq)] if seq else None
+
+# You are given two strings (st1, st2) as inputs. Your task is to return a string containing the numbers
+# in st2 which are not in str1. Make sure the numbers are returned in ascending order. All inputs will be
+# a string of numbers.
