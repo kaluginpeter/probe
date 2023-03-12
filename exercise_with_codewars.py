@@ -13186,3 +13186,8 @@ def balance(arr1, arr2):
 # is an only missing value such that all the duplicate values and the missing value are
 # between a and b, but never coincide with them.
 # Find the missing number with the duplicate numbers (duplicates should be output in a sorted array).
+from collections import Counter
+def find_dups_miss(arr):
+    s = Counter(arr)
+    l = sum(i for i in range(sorted(s)[0], sorted(s)[-1]+1)) - sum(s)
+    return [l, sorted(k for k, v in s.items() if v > 1)]
