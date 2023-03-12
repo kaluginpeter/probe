@@ -13230,3 +13230,6 @@ def norm_index_test(seq, ind):
 # You are given two strings (st1, st2) as inputs. Your task is to return a string containing the numbers
 # in st2 which are not in str1. Make sure the numbers are returned in ascending order. All inputs will be
 # a string of numbers.
+from collections import Counter
+def findAdded(st1, st2):
+    return ''.join(sorted((Counter(st2) - Counter(st1)).elements()))
