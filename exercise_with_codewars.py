@@ -13215,3 +13215,5 @@ def common(a,b,c):
 # The function takes two arguments :
 # `points` : an array of integer representing for each letters from A to Z the points that it pays
 # `words` : an array of strings, uppercase
+def get_best_word(points, words):
+    return max(range(len(words)), key=lambda i: (sum(points[ord(j)-65] for j in words[i]), -len(words[i]), -i))
