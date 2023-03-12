@@ -13224,3 +13224,5 @@ def get_best_word(points, words):
 # out of range should be handled normally and indexes to empty sequences should return undefined/None
 # depending on the language.
 # For positive numbers that are out of range, they loop around starting at the beginning, so
+def norm_index_test(seq, ind):
+    return seq[ind % len(seq)] if seq else None
