@@ -13198,3 +13198,7 @@ def find_dups_miss(arr):
 from itertools import combinations
 def solve(arr):
     return sum(a - b == b - c for a, b, c in combinations(arr, 3))
+
+# Build a function sumNestedNumbers/sum_nested_numbers that finds the sum of all numbers in a series of
+# nested arrays raised to the power of their respective nesting levels. Numbers in the outer most array
+# should be raised to the power of 1.
