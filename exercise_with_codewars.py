@@ -13165,3 +13165,8 @@ def max_match(s):
 
 # Write a function that returns the greatest common factor of an array of positive integers.
 # Your return value should be a number, you will only receive positive integers.
+def greatest_common_factor(seq):
+    l = []
+    for i in range(1, min(seq)+1):
+        if all(j % i == 0 for j in seq): l.append(i)
+    return max(l)
