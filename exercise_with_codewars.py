@@ -13162,3 +13162,6 @@ def max_match(s):
         l.append(w)
         s = s[i:]
     return l
+
+# Write a function that returns the greatest common factor of an array of positive integers.
+# Your return value should be a number, you will only receive positive integers.
