@@ -13330,3 +13330,8 @@ def triangle_area(triangle):
 from gmpy2 import is_prime
 def twin_prime(n):
     return sum(is_prime(x) and is_prime(x + 2) for x in range(n))
+
+# The aim of this Kata is to write a function which will reverse the case of all consecutive duplicate
+# letters in a string. That is, any letters that occur one after the other and are identical.
+# If the duplicate letters are lowercase then they must be set to uppercase, and if
+# they are uppercase then they need to be changed to lowercase.
