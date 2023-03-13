@@ -13389,3 +13389,9 @@ def censor_this(text, forbidden_words):
 
 # Write a function that takes an array/list of numbers and returns a number.
 # See the examples and try to guess the pattern:
+def even_odd(arr):
+    c = 0
+    for k, v in enumerate(arr):
+        if k % 2: c *= v
+        else: c += v
+    return c
