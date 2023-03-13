@@ -13386,3 +13386,6 @@ def solve(a, b):
 # Be careful to censor only words, no one want to see "classic" spelled as "cl***ic".
 def censor_this(text, forbidden_words):
     return ' '.join(i if i.lower() not in forbidden_words else '*'*len(i) for i in text.split())
+
+# Write a function that takes an array/list of numbers and returns a number.
+# See the examples and try to guess the pattern:
