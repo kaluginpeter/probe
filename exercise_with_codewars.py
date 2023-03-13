@@ -13402,3 +13402,9 @@ def even_odd(arr):
 # their prime factors are contiguous primes.
 # Implement a function that finds the amount of numbers that have the first N primes as factors below
 # a given limit.
+from gmpy2 import next_prime as np
+from math import prod
+def count_specMult(n, maxval):
+    a, b = 2, []
+    while n > 0: b, a, n = b+[a], np(a), n-1
+    return maxval // prod(b)
