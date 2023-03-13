@@ -13338,3 +13338,6 @@ def twin_prime(n):
 import re
 def reverse(s):
     return re.sub(r'(.)\1+', lambda x: x.group().swapcase(), s)
+
+# Following on from Part 1, part 2 looks at some more complicated array contents.
+# So let's try filling an array with...
