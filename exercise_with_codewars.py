@@ -13395,3 +13395,10 @@ def even_odd(arr):
         if k % 2: c *= v
         else: c += v
     return c
+
+# Some numbers have the property to be divisible by 2 and 3. Other smaller subset of
+# numbers have the property to be divisible by 2, 3 and 5. Another subset with less abundant
+# numbers may be divisible by 2, 3, 5 and 7. These numbers have something in common:
+# their prime factors are contiguous primes.
+# Implement a function that finds the amount of numbers that have the first N primes as factors below
+# a given limit.
