@@ -13374,3 +13374,5 @@ def primes(n):
 # cannot get second string from the first since the second string is longer.
 # More examples in the test cases.
 # Good luck!
+def solve(a, b):
+    return len(a) - len(b) if all(a.count(i) >= b.count(i) for i in set(b)) else 0
