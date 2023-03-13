@@ -13327,3 +13327,6 @@ def triangle_area(triangle):
 # counts the number of sets of twin primes from 1 to n.
 # If n is wrapped by twin primes (n-1 == prime && n+1 == prime) then that should
 # also count even though n+1 is outside the range.
+from gmpy2 import is_prime
+def twin_prime(n):
+    return sum(is_prime(x) and is_prime(x + 2) for x in range(n))
