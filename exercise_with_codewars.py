@@ -13384,3 +13384,5 @@ def solve(a, b):
 # given the fan letter text and a list of forbiddenWords. Your algorithm should replace all occurrences
 # of the forbidden words in the text with sequences of asterisks of the same length.
 # Be careful to censor only words, no one want to see "classic" spelled as "cl***ic".
+def censor_this(text, forbidden_words):
+    return ' '.join(i if i.lower() not in forbidden_words else '*'*len(i) for i in text.split())
