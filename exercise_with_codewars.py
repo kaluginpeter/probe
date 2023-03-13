@@ -13283,3 +13283,7 @@ def phone_words(text):
 # Note :
 # the indicies are always in range and passed as a sorted array
 # note if the index array is empty, just return the initial phrase
+def insert_at_indexes(phrase, word, indexes):
+    for i in indexes[::-1]:
+        phrase = phrase[:i] + word + phrase[i:]
+    return phrase
