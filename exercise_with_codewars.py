@@ -13432,3 +13432,8 @@ def solve(s):
 # All letters will be lowercase.
 # If the string is empty, return an empty array.
 # If the character is not present, return an empty array.
+def shortest_to_char(s, c):
+    if not s or not c:return []
+    l = [k for k, v in enumerate(s) if v == c]
+    if not l: return []
+    return [min(abs(i - j) for j in l) for i in range(len(s))]
