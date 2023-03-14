@@ -13508,3 +13508,11 @@ def build_palindrome(w):
 # You are given an integer N. Your job is to figure out how many substrings inside of N divide evenly with N.
 # Confused? I'll break it down for you.
 # Let's say that you are given the integer '877692'.
+def get_count(n):
+    w = str(n)
+    c = 0
+    for i in range(1, len(w)):
+        for j in range(len(w) - i + 1):
+            s = int(w[j:j+i])
+            if s and n % s == 0: c += 1
+    return c
