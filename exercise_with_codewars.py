@@ -13460,3 +13460,8 @@ def longest_word(w):
 # The task
 # Given the initial number of heads, the heads-count multiplier, and the number of sword-swings,
 # calculate how many heads Zmey Gorynych has in the end.
+import math
+def count_of_heads(initial, n, swings):
+    for i in range(1, swings+1):
+        initial = initial - 1 + n * math.factorial(i)
+    return initial
