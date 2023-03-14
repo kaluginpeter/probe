@@ -13437,3 +13437,9 @@ def shortest_to_char(s, c):
     l = [k for k, v in enumerate(s) if v == c]
     if not l: return []
     return [min(abs(i - j) for j in l) for i in range(len(s))]
+
+# Given an uppercase 9 letter string, letters, find the longest word that can be made with
+# some or all of the letters. The preloaded array words (or $words in Ruby) contains
+# a bunch of uppercase words that you will have to loop through. Only return the longest word; if there
+# is more than one, return the words of the same lengths in alphabetical order. If there are
+# no words that can be made from the letters given, return None/nil/null.
