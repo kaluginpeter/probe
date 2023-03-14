@@ -13491,3 +13491,9 @@ def solve(arr):
 # Write a method that takes a string as an argument and groups
 # the number of time each character appears in the string as a hash sorted by the highest number of occurrences.
 # The characters should be sorted alphabetically e.g:
+from collections import Counter
+def get_char_count(seq):
+    d = {}
+    for k, v in sorted(Counter(i for i in seq.lower() if i.isalnum()).items()):
+        d[v] = d.get(v, []) + [k]
+    return d
