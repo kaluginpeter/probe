@@ -13443,3 +13443,10 @@ def shortest_to_char(s, c):
 # a bunch of uppercase words that you will have to loop through. Only return the longest word; if there
 # is more than one, return the words of the same lengths in alphabetical order. If there are
 # no words that can be made from the letters given, return None/nil/null.
+def longest_word(w):
+    l = []
+    for i in sorted(words, key=len)[::-1]:
+        if all(w.count(j) >= i.count(j) for j in i): l+=[i]
+    if not l: return None
+    m = len(l[0])
+    return sorted([i for i in l if len(i)==m])
