@@ -13450,3 +13450,13 @@ def longest_word(w):
     if not l: return None
     m = len(l[0])
     return sorted([i for i in l if len(i)==m])
+
+# Alyosha Popovich (Russian folk hero) stroke his sharp sword and cut the head of
+# Zmey Gorynych (big Serpent with several heads)! He looked - and lo! - in its place immediately new heads
+# appeared, exactly n. He stroke again, and where the second head was, 2*n heads
+# appeared! The third time it was 2*3*n new heads, and after fourth swing it was 2*3*4*n heads,
+# and so forth. And thus Alyosha decided to call it a day, and instead called a fellow Mage for
+# help. While the Mage agreed, he needs to know the exact number of heads that Zmey Gorynych now has.
+# The task
+# Given the initial number of heads, the heads-count multiplier, and the number of sword-swings,
+# calculate how many heads Zmey Gorynych has in the end.
