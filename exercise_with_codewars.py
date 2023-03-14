@@ -13497,3 +13497,6 @@ def get_char_count(seq):
     for k, v in sorted(Counter(i for i in seq.lower() if i.isalnum()).items()):
         d[v] = d.get(v, []) + [k]
     return d
+
+# Given a string str, find the shortest possible string which can
+# be achieved by adding characters to the end of initial string to make it a palindrome.
