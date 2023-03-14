@@ -13500,3 +13500,7 @@ def get_char_count(seq):
 
 # Given a string str, find the shortest possible string which can
 # be achieved by adding characters to the end of initial string to make it a palindrome.
+def build_palindrome(w):
+    n = 0
+    while w[n:] != w[n:][::-1]: n += 1
+    return w + w[:n][::-1]
