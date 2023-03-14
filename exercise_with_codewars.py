@@ -13419,3 +13419,6 @@ def count_specMult(n, maxval):
 from collections import Counter
 def odd_one_out(s):
     return [k for k, v in Counter(s[::-1]).items() if v % 2][::-1]
+
+# In this Kata, we are going to determine if the count of each of the characters in
+# a string can be equal if we remove a single character from that string.
