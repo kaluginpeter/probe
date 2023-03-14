@@ -13422,3 +13422,6 @@ def odd_one_out(s):
 
 # In this Kata, we are going to determine if the count of each of the characters in
 # a string can be equal if we remove a single character from that string.
+from collections import Counter
+def solve(s):
+    return any(len(set(Counter(s[:i] + s[i+1:]).values())) == 1 for i in range(len(s)))
