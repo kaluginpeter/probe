@@ -13487,3 +13487,7 @@ def solve(arr):
     if sorted(arr) == arr: return "A"
     if sorted(arr, reverse=True) == arr: return "D"
     return "RA" if arr[0] > arr[-1] else "RD"
+
+# Write a method that takes a string as an argument and groups
+# the number of time each character appears in the string as a hash sorted by the highest number of occurrences.
+# The characters should be sorted alphabetically e.g:
