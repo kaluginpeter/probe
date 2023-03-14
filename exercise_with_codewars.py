@@ -13408,3 +13408,11 @@ def count_specMult(n, maxval):
     a, b = 2, []
     while n > 0: b, a, n = b+[a], np(a), n-1
     return maxval // prod(b)
+
+# Complete the function that takes a string as an input, and return a list of
+# all the unpaired characters (i.e. they show up an odd number of times in the string), in
+# the order they were encountered as an array.
+# In case of multiple appearances to choose from, take the last occurence of the unpaired character.
+# Notes:
+# A wide range of characters is used, and some of them may not render properly in your browser.
+# Your solution should be linear in terms of string length to pass the last test.
