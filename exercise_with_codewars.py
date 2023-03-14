@@ -13483,3 +13483,7 @@ def round_by_2_decimal_places(n):
 # rotate it to get an array in Rotated Descending order: [1,9,6,5,3] or [3,1,9,6,5] etc.
 # Arrays will never be unsorted, except for those that are rotated as shown above. Arrays
 # will always have an answer, as shown in the examples below. Arrays will never contain duplicated elements.
+def solve(arr):
+    if sorted(arr) == arr: return "A"
+    if sorted(arr, reverse=True) == arr: return "D"
+    return "RA" if arr[0] > arr[-1] else "RD"
