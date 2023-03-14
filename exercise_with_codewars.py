@@ -13470,3 +13470,6 @@ def count_of_heads(initial, n, swings):
 # extract the method to ease out the process.
 # And you can't even get this right!
 # Quick, fix the bug before everyone in CodeWars notices that you can't even round a number correctly!
+from decimal import Decimal, ROUND_HALF_UP
+def round_by_2_decimal_places(n):
+    return n.quantize(Decimal('.01'), rounding = ROUND_HALF_UP)
