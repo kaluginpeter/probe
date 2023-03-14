@@ -13416,3 +13416,6 @@ def count_specMult(n, maxval):
 # Notes:
 # A wide range of characters is used, and some of them may not render properly in your browser.
 # Your solution should be linear in terms of string length to pass the last test.
+from collections import Counter
+def odd_one_out(s):
+    return [k for k, v in Counter(s[::-1]).items() if v % 2][::-1]
