@@ -13532,3 +13532,10 @@ def min_dot(a, b):
 def sum_of_sums(x):
     x = x * (x+1) * (x+2) // 6
     return x * (x+1) // 2
+
+# Complete the function which accepts a string and return an array of character(s)
+# that have the most spaces to their right and left.
+# Notes:
+# the string can have leading/trailing spaces - you should not count them
+# the strings contain only unique characters from a to z
+# the order of characters in the returned array doesn't matter
