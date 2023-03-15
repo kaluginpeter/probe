@@ -13526,3 +13526,6 @@ def get_count(n):
 # a = [a1, a2, …, an], b = [b1, b2, …, bn] as
 def min_dot(a, b):
     return sum(i * j for (i, j) in zip(sorted(a), sorted(b, reverse = True)))
+
+# You will be given an integer N as input; your task is to return the value of S(Z(N)).
+# For example, let N = 3:
