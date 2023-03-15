@@ -13573,3 +13573,11 @@ def summationOfPrimes(primes):
 # they have to check if any of the new added numbers is prime or not. If for any character of
 # the word the added number is prime then the word will be considered as prime word.
 # Can you help X and Y to find the prime words?
+from gmpy2 import is_prime
+def prime_word(array):
+    a = [ord(i) + array[0][1] for i in array[0][0]]
+    b = [ord(i) + array[1][1] for i in array[1][0]]
+    if len(array) == 3:
+        c = [ord(i) + array[2][1] for i in array[2][0]]
+    f = [1 if any(is_prime(i) for i in a) else 0, 1 if any(is_prime(i) for i in b) else 0]
+    return f if len(array) ==2 else f + [1 if any(is_prime(i) for i in c) else 0]
