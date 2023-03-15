@@ -13594,3 +13594,5 @@ def service(score):
 
 # Create the function off, that receives the nth switch as argument n. The function should return
 # an ascending array containing all of the switch numbers that remain off after Bob completes his revenge.
+def off(n):
+    return [i*i for i in range(1, int(n ** .5) + 1)]
