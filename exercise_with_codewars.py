@@ -13596,3 +13596,8 @@ def service(score):
 # an ascending array containing all of the switch numbers that remain off after Bob completes his revenge.
 def off(n):
     return [i*i for i in range(1, int(n ** .5) + 1)]
+
+# This is a follow-up from my previous Kata which can be found here:
+# http://www.codewars.com/kata/5476f4ca03810c0fc0000098
+# This time, for any given linear sequence, calculate the function [f(x)] and return it
+# as a function in Javascript or Lambda/Block in Ruby.
