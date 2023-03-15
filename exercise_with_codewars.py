@@ -13591,3 +13591,6 @@ def prime_word(array):
 def service(score):
     c = sum(int(i) for i in score.split(":"))
     return "first" if ((c%10 < 5) if c < 40 else (c%4 < 2)) else "second"
+
+# Create the function off, that receives the nth switch as argument n. The function should return
+# an ascending array containing all of the switch numbers that remain off after Bob completes his revenge.
