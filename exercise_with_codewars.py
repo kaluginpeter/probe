@@ -13529,3 +13529,6 @@ def min_dot(a, b):
 
 # You will be given an integer N as input; your task is to return the value of S(Z(N)).
 # For example, let N = 3:
+def sum_of_sums(x):
+    x = x * (x+1) * (x+2) // 6
+    return x * (x+1) // 2
