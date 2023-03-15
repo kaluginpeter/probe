@@ -13601,3 +13601,8 @@ def off(n):
 # http://www.codewars.com/kata/5476f4ca03810c0fc0000098
 # This time, for any given linear sequence, calculate the function [f(x)] and return it
 # as a function in Javascript or Lambda/Block in Ruby.
+def get_function(sequence):
+    s = sequence[1] - sequence[0]
+    for i in range(1, 5):
+        if sequence[i] - sequence[i-1] != s: return "Non-linear sequence"
+    return lambda a : s * a + sequence[0]
