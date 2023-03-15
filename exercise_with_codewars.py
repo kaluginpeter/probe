@@ -13544,3 +13544,7 @@ def loneliest(strng):
     l = [re.match(r'\s*\w\s*', strng.strip()[i:]) for i in range(len(strng))]
     le = max(len(i.group(0)) for i in l if i)
     return [i.group(0).strip() for i in l if i and len(i.group(0)) == le]
+
+# You are asked to write a simple cypher that rotates every character (in range [a-zA-Z], special
+# chars will be ignored by the cipher) by 13 chars. As an addition to the
+# original ROT13 cipher, this cypher will also cypher numerical digits ([0-9]) with 5 chars.
