@@ -13551,3 +13551,8 @@ def loneliest(strng):
 CHARS = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm5678901234")
 def ROT135(input):
     return input.translate(CHARS)
+
+# You are provided with a function of the form f(x) = axⁿ, that consists of
+# a single term only and 'a' and 'n' are integers, e.g f(x) = 3x², f(x) = 5 etc.
+# Your task is to create a function that takes f(x) as the argument and
+# returns the result of differentiating the function, that is, the derivative.
