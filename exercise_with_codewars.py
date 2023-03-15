@@ -13561,3 +13561,6 @@ def differentiate(x):
     a, n = x.split('x', 2)
     a = 1 if a == '' else -1 if a == '-' else int(a)
     return f"{a}" if n == '' else f"{2*a}x" if n == "^2" else f"{a*int(n[1:])}x^{int(n[1:])-1}"
+
+# The sum of the primes below or equal to 10 is 2 + 3 + 5 + 7 = 17. Find the sum
+# of all the primes below or equal to the number passed in.
