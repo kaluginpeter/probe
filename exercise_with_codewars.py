@@ -13516,3 +13516,11 @@ def get_count(n):
             s = int(w[j:j+i])
             if s and n % s == 0: c += 1
     return c
+
+# The dot product is usually encountered in linear algebra or scientific computing. It's also
+# called scalar product or inner product sometimes:
+# In mathematics, the dot product, or scalar product (or sometimes inner product in the context of
+# Euclidean space), is an algebraic operation that takes two equal-length sequences of numbers (usually
+# coordinate vectors) and returns a single number. Wikipedia
+# In our case, we define the dot product algebraically for two vectors
+# a = [a1, a2, …, an], b = [b1, b2, …, bn] as
