@@ -13548,3 +13548,6 @@ def loneliest(strng):
 # You are asked to write a simple cypher that rotates every character (in range [a-zA-Z], special
 # chars will be ignored by the cipher) by 13 chars. As an addition to the
 # original ROT13 cipher, this cypher will also cypher numerical digits ([0-9]) with 5 chars.
+CHARS = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm5678901234")
+def ROT135(input):
+    return input.translate(CHARS)
