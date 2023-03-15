@@ -13524,3 +13524,5 @@ def get_count(n):
 # coordinate vectors) and returns a single number. Wikipedia
 # In our case, we define the dot product algebraically for two vectors
 # a = [a1, a2, …, an], b = [b1, b2, …, bn] as
+def min_dot(a, b):
+    return sum(i * j for (i, j) in zip(sorted(a), sorted(b, reverse = True)))
