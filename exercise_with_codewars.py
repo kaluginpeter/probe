@@ -13648,3 +13648,10 @@ def freeway_game(km, kph, cars):
 # extend, append, insert, remove, and pop.
 # Because slicing a list never raises an error (slicing a list between two indexes that are not a part
 # of the list returns [], slicing will not be tested for.
+class DefaultList(list):
+    def __init__(self,it, defu):
+        super().__init__(it)
+        self.default = defu
+    def __getitem__(self,i):
+        try: return super().__getitem__(i)
+        except: return self.default
