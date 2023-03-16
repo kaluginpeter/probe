@@ -13667,3 +13667,10 @@ def find_discounted(prices):
 # one to make the maximum length subsequence.
 # Notes:
 # If there are multiple results, return the last one:
+def replace_zero(arr):
+    c, s, i, l = 0, -1, -1, ''.join(map(str, arr)).split('0')
+    for a, b in zip(l, l[1:]):
+        i += len(a) + 1
+        rep = len(a)+len(b)+1
+        if c <= rep: s, c = i, rep
+    return s
