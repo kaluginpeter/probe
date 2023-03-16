@@ -13659,3 +13659,6 @@ class DefaultList(list):
 # Your friend Cody has to sell a lot of jam, so he applied a good 25% discount to all his merchandise.
 # Trouble is that he mixed all the prices (initial and discounted), so now he needs your cool coding
 # skills to filter out only the discounted prices.
+def find_discounted(prices):
+    l = [int(n) for n in prices.split()]
+    return ' '.join(l.remove(round(i*4/3)) or str(i) for i in l)
