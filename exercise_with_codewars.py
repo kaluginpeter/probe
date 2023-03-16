@@ -13721,3 +13721,8 @@ def greatest_distance(arr):
     return max(k - arr.index(v) for k, v in enumerate(arr))
 
 # Return the index of the array element that you ended up on at the end of the game.
+def snakes_and_ladders(board, dice):
+    c = 0
+    for i in dice:
+        if c + i < len(board): c += i + board[c + i]
+    return c
