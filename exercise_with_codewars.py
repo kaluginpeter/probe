@@ -13717,3 +13717,5 @@ def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):
 # Example: In an array with the values [0, 2, 1, 2, 4, 1] the greatest index distance is between
 # the matching '1' values at index 2 and 5. Executing greatestDistance against this array would
 # return 3. (i.e. 5 - 2)
+def greatest_distance(arr):
+    return max(k - arr.index(v) for k, v in enumerate(arr))
