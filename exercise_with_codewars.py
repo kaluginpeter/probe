@@ -13629,3 +13629,11 @@ def count(n):
 # 2.2 means they will pass my starting point 2.2 minutes from now
 # How fast they are going (kph)
 # Find what is my "score" as I exit the freeway!
+def freeway_game(km, kph, cars):
+    t = km / kph
+    c = 0
+    for k, v in cars:
+        d = km - (t - k/60) * v
+        if k <= 0: c += d > 0
+        else: c -= d < 0
+    return c
