@@ -13690,3 +13690,13 @@ def check(n):
     return False
 def solve(a,b):
     return len([i for i in range(a,b) if is_prime(i) and check(i)])
+
+# There is a common problem given to interviewees in software. It is called FizzBuzz. It works
+# as follows: For the numbers between 1 and 100, print fizz if
+# it is a multiple of 3 and buzz if it is a mutiple of 5, else print the number itself.
+# You are in an interview and they ask you to complete fizzbuzz (which can
+# be done in a one-liner in a few langs) and you knock it out of the park.
+# Surprised by your ability, the interviewer gives you a harder problem. Given
+# a list of coprime numbers, (that is that the g.c.d. of all the numbers == 1) and
+# an equally sized list of words. compute its fizzbuzz representation up until the pattern of strings
+# repeats itself.
