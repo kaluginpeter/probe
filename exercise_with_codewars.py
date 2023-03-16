@@ -13619,3 +13619,13 @@ def count(n):
     if (n <= 1): return 1
     x = ((n * math.log10(n / math.e) + math.log10(2 * math.pi * n) /2.0))
     return math.floor(x) + 1
+
+# You will be given
+# The distance to my exit (km)
+# How fast I am going (kph)
+# Information about a lot of other cars
+# Their time (relative to me) as I join the freeway. For example,
+# -1.5 means they already passed my starting point 1.5 minutes ago
+# 2.2 means they will pass my starting point 2.2 minutes from now
+# How fast they are going (kph)
+# Find what is my "score" as I exit the freeway!
