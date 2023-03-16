@@ -13719,3 +13719,5 @@ def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):
 # return 3. (i.e. 5 - 2)
 def greatest_distance(arr):
     return max(k - arr.index(v) for k, v in enumerate(arr))
+
+# Return the index of the array element that you ended up on at the end of the game.
