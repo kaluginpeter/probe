@@ -13700,3 +13700,7 @@ def solve(a,b):
 # a list of coprime numbers, (that is that the g.c.d. of all the numbers == 1) and
 # an equally sized list of words. compute its fizzbuzz representation up until the pattern of strings
 # repeats itself.
+from functools import reduce
+
+def fizzbuzz_plusplus(nums, words):
+    return ["".join(b for a, b in zip(nums, words) if not i % a) or i for i in range(1, reduce(lambda a, b: a * b, nums, 1) + 1)]
