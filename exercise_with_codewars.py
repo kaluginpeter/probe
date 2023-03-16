@@ -13711,3 +13711,9 @@ def fizzbuzz_plusplus(nums, words):
 def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):
     d = {(x1, y1, z1): 1, (x2, y2, z2): 2, (x3, y3, z3): 3}
     return d[sorted(d)[1]]
+
+# The goal of this Kata is to return the greatest distance of index positions between
+# matching number values in an array or 0 if there are no matching values.
+# Example: In an array with the values [0, 2, 1, 2, 4, 1] the greatest index distance is between
+# the matching '1' values at index 2 and 5. Executing greatestDistance against this array would
+# return 3. (i.e. 5 - 2)
