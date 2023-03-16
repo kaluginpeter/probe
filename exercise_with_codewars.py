@@ -13662,3 +13662,8 @@ class DefaultList(list):
 def find_discounted(prices):
     l = [int(n) for n in prices.split()]
     return ' '.join(l.remove(round(i*4/3)) or str(i) for i in l)
+
+# Your task is to complete the function that determines where to replace a zero with a
+# one to make the maximum length subsequence.
+# Notes:
+# If there are multiple results, return the last one:
