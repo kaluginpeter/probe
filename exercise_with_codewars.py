@@ -13831,3 +13831,7 @@ def check_availability(schedule, current_time):
 # When the product code is checked, the check digit value is stripped off and recalculated. If
 # the supplied value does not match the recalculated value, the product code is rejected.
 # A simple scheme for generating self-check digits, described here, is called Modulus 11 Self-Check.
+def add_check_digit(number):
+    l = [2, 3, 4, 5, 6, 7]
+    s = sum(x*y for x,y in zip(map(int, number[::-1]), l * (len(number) // 6 + 1))) % 11
+    return number + ('0' if s == 0 else 'X' if s == 1 else str(11 - s))
