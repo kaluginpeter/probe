@@ -13726,3 +13726,11 @@ def snakes_and_ladders(board, dice):
     for i in dice:
         if c + i < len(board): c += i + board[c + i]
     return c
+
+# Scheduling is how the processor decides which jobs (processes) get to use the processor and for
+# how long. This can cause a lot of problems. Like a really long process taking the
+# entire CPU and freezing all the other processes. One solution is Round-Robin, which today you will be
+# implementing.
+# Round-Robin works by queuing jobs in a First In First Out fashion, but the
+# processes are only given a short slice of time. If a processes is not finished in that time
+# slice, it yields the proccessor and goes to the back of the queue.
