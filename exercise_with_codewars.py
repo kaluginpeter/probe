@@ -13794,3 +13794,11 @@ def has_two_cube_sums(n):
 # 12 and 15 are not in the list because 2 and 5 are primes.
 # You will be given an integer n and your task will be return the number
 # at that index in the array. For example:
+from gmpy2 import is_prime
+def solve(n):
+    l = []
+    c = 1
+    while len(l) <= n:
+        if not is_prime(c) and all(not is_prime(int(i)) for i in str(c)): l.append(c)
+        c += 1
+    return l[n]
