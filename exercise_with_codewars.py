@@ -13770,3 +13770,7 @@ def wanted_words(n, m, f):
 # An eccentric chessboard maker likes to create strange N x N chessboards.
 # Instead of making all the rows and the columns on his chessboards the same size, he
 # likes to make chessboards with row and columns of varying sizes:
+def white_black_areas(cs, rs):
+    r, rc = sum(rs[1::2]), sum(rs[::2])
+    c, cs = sum(cs[1::2]), sum(cs[::2])
+    return (cs * rc + c * r, r * cs + rc * c)
