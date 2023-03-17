@@ -13835,3 +13835,7 @@ def add_check_digit(number):
     l = [2, 3, 4, 5, 6, 7]
     s = sum(x*y for x,y in zip(map(int, number[::-1]), l * (len(number) // 6 + 1))) % 11
     return number + ('0' if s == 0 else 'X' if s == 1 else str(11 - s))
+
+# Consider an array containing cats and dogs. Each dog can catch only one cat, but cannot
+# catch a cat that is more than n elements away. Your task will be to return
+# the maximum number of cats that can be caught.
