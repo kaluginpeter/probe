@@ -13802,3 +13802,7 @@ def solve(n):
         if not is_prime(c) and all(not is_prime(int(i)) for i in str(c)): l.append(c)
         c += 1
     return l[n]
+
+# The numbers 6, 12, 18, 24, 36, 48 have a common property. They
+# have the same two prime factors that are 2 and 3.
+# If we see their prime factorization we will see it more clearly:
