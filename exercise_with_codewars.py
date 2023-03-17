@@ -13806,3 +13806,11 @@ def solve(n):
 # The numbers 6, 12, 18, 24, 36, 48 have a common property. They
 # have the same two prime factors that are 2 and 3.
 # If we see their prime factorization we will see it more clearly:
+from math import log
+
+def highest_biPrimefac(a, b, m):
+    l = []
+    for i in range(1, int(log(m, b)) + 1):
+        c = int(round(log(m / b**i, a), 9))
+        if c: l.append([a**c * b**i, c, i])
+    return max(l)
