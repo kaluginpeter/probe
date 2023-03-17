@@ -13785,3 +13785,6 @@ def prime_product(n):
 
 # Create a function which checks if a given number n can be written as the sum of two cubes in
 # two different ways: n = a³+b³ = c³+d³. All the numbers a, b, c and d should be different and greater than 0.
+def has_two_cube_sums(n):
+    l = [i**3 for i in range(1, int((n)**(1./3.)) + 1)]
+    return sum([(n != 2*i) and ((n-i) in l) for i in l]) > 3
