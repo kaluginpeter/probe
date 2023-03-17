@@ -13774,3 +13774,8 @@ def white_black_areas(cs, rs):
     r, rc = sum(rs[1::2]), sum(rs[::2])
     c, cs = sum(cs[1::2]), sum(cs[::2])
     return (cs * rc + c * r, r * cs + rc * c)
+
+# We know that some numbers can be split into two primes. ie. 5 = 2 + 3, 10 = 3 + 7. But
+# some numbers are not. ie. 17, 27, 35, etc..
+# Given a positive integer n. Determine whether it can be split into two primes.
+# If yes, return the maximum product of two primes. If not, return 0 instead.
