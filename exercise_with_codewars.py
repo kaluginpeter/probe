@@ -13766,3 +13766,7 @@ def wanted_words(n, m, f):
     for i in WORD_LIST:
         if sum(j in vow for j in i) == n and sum(j in con for j in i) == m and all(j not in f for j in i): l.append(i)
     return l
+
+# An eccentric chessboard maker likes to create strange N x N chessboards.
+# Instead of making all the rows and the columns on his chessboards the same size, he
+# likes to make chessboards with row and columns of varying sizes:
