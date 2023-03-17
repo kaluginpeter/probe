@@ -13839,3 +13839,14 @@ def add_check_digit(number):
 # Consider an array containing cats and dogs. Each dog can catch only one cat, but cannot
 # catch a cat that is more than n elements away. Your task will be to return
 # the maximum number of cats that can be caught.
+def solve(arr, n):
+    d = [i for i, x in enumerate(arr) if x == 'D']
+    c = {i for i, x in enumerate(arr) if x == 'C'}
+    s = 0
+    while d and c:
+        dog = d.pop()
+        cat = max((i for i in c if abs(dog - i) <= n), default=-1)
+        if cat >= 0:
+            s += 1
+            c.remove(cat)
+    return s
