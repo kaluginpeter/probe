@@ -13819,3 +13819,7 @@ def highest_biPrimefac(a, b, m):
 # will switch all his devices into offline mode depending on his meeting schedule. When he's at a meeting
 # and somebody texts him, he wants to send an automatic message informing that he's currently
 # unavailable and the time when he's going to be back.;
+def check_availability(schedule, current_time):
+    for i in schedule:
+        if i[0] <= current_time < i[1]: return i[1]
+    return True
