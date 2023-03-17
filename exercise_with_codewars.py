@@ -13734,3 +13734,11 @@ def snakes_and_ladders(board, dice):
 # Round-Robin works by queuing jobs in a First In First Out fashion, but the
 # processes are only given a short slice of time. If a processes is not finished in that time
 # slice, it yields the proccessor and goes to the back of the queue.
+def roundRobin(jobs, slice, index):
+    c = 0
+    while True:
+        for i in range(len(jobs)):
+            cc = min(jobs[i], slice)
+            jobs[i] -= cc
+            c += cc
+            if i == index and jobs[i] == 0: return c
