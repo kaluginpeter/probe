@@ -13758,3 +13758,11 @@ def roundRobin(jobs, slice, index):
 # wanted_words(), that receives the three arguments in the order given above, wanted_words(n, m,
 # forbid_list)and output an array with the word or an array, having the words in
 # the order given in the pre-loaded list, in the case of two or more words were found.
+def wanted_words(n, m, f):
+    l = []
+    v, c = 0, 0
+    vow = 'aeiou'
+    con = 'bcdfghjklmnpqrstvwxyz'
+    for i in WORD_LIST:
+        if sum(j in vow for j in i) == n and sum(j in con for j in i) == m and all(j not in f for j in i): l.append(i)
+    return l
