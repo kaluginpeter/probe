@@ -13823,3 +13823,11 @@ def check_availability(schedule, current_time):
     for i in schedule:
         if i[0] <= current_time < i[1]: return i[1]
     return True
+
+# Some numbers are more important to get right during data entry than others: a common example is product codes.
+# To reduce the possibility of mistakes, product codes can be crafted in such a way that simple errors
+# are detected. This is done by calculating a single-digit value based on the product number,
+# and then appending that digit to the product number to arrive at the product code.
+# When the product code is checked, the check digit value is stripped off and recalculated. If
+# the supplied value does not match the recalculated value, the product code is rejected.
+# A simple scheme for generating self-check digits, described here, is called Modulus 11 Self-Check.
