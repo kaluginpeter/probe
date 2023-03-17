@@ -13742,3 +13742,19 @@ def roundRobin(jobs, slice, index):
             jobs[i] -= cc
             c += cc
             if i == index and jobs[i] == 0: return c
+
+# The principal of a school likes to put challenges to the students related with finding
+# words of certain features. One day she said: "Dear students, the challenge for today
+# is to find a word that has only one vowel and seven consonants but cannot have the
+# letters "y" and "m". I'll give a special award for the first student that
+# finds it." One of the students used his dictionary and spent all the night without sleeping,
+# trying in vain to find the word. The next day, the word had not been found yet.
+# This student observed that the principal has a pattern in the features for the wanted words:
+# The word should have n vowels, may be repeated, for example: in "engineering", n = 5.
+# The word should have m consonants, may be repeated also: in "engineering", m = 6.
+# The word should not have some forbidden letters (in an array), forbid_letters
+# You will be provided with a list of words, WORD_LIST(python/crystal),
+# wordList(javascript), wordList (haskell), $word_list(ruby), and you have to create the function,
+# wanted_words(), that receives the three arguments in the order given above, wanted_words(n, m,
+# forbid_list)and output an array with the word or an array, having the words in
+# the order given in the pre-loaded list, in the case of two or more words were found.
