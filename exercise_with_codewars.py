@@ -13814,3 +13814,8 @@ def highest_biPrimefac(a, b, m):
         c = int(round(log(m / b**i, a), 9))
         if c: l.append([a**c * b**i, c, i])
     return max(l)
+
+# Dan, president of a Large company could use your help. He wants to implement a system that
+# will switch all his devices into offline mode depending on his meeting schedule. When he's at a meeting
+# and somebody texts him, he wants to send an automatic message informing that he's currently
+# unavailable and the time when he's going to be back.;
