@@ -13782,3 +13782,6 @@ def white_black_areas(cs, rs):
 from gmpy2 import is_prime
 def prime_product(n):
     return next((i*(n-i) for i in range(n>>1,1,-1) if is_prime(i) and is_prime(n-i)),0)
+
+# Create a function which checks if a given number n can be written as the sum of two cubes in
+# two different ways: n = a³+b³ = c³+d³. All the numbers a, b, c and d should be different and greater than 0.
