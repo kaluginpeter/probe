@@ -13779,3 +13779,6 @@ def white_black_areas(cs, rs):
 # some numbers are not. ie. 17, 27, 35, etc..
 # Given a positive integer n. Determine whether it can be split into two primes.
 # If yes, return the maximum product of two primes. If not, return 0 instead.
+from gmpy2 import is_prime
+def prime_product(n):
+    return next((i*(n-i) for i in range(n>>1,1,-1) if is_prime(i) and is_prime(n-i)),0)
