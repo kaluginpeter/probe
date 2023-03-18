@@ -13853,3 +13853,6 @@ def solve(arr, n):
 
 # If string has more than one neighboring dashes(e.g. --) replace they with one dash(-).
 # Dashes are considered neighbors even if there is some whitespace between them.
+import re
+def replace_dashes_as_one(word):
+    return re.sub(r'-[ -]+-|-+',r'-', word)
