@@ -13856,3 +13856,14 @@ def solve(arr, n):
 import re
 def replace_dashes_as_one(word):
     return re.sub(r'-[ -]+-|-+',r'-', word)
+
+# Some letters in the input string are representing a written-out digit. Some of the
+# letters may randomly shuffled. Your task is to recover them all.
+# Note that:
+# Only consecutive letters can be used. "OTNE" cannot be recovered to 1!
+# Every letter has to start with an increasing index.. "ONENO" results to 11, because
+# the E can be used two times. Endless loops are not possible!
+# If there are letters in the string, which don't create a number you can ignore them.
+# If no digits can be found, return "No digits found"
+# Take care about the order! "ENOWT" will be recovered to 12 and not to 21.
+# The input string consists only UpperCase letters
