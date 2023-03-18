@@ -13949,3 +13949,6 @@ def sec_deg_solver(a, b, c):
             x2 = t
         if d == 0: return f"It has one double solution: {max(x1, x2)}"
         elif d > 0: return f"Two solutions: {min(x1, x2)}, {max(x1, x2)}"
+
+# You're given an array of positive integers arr, and an array guide
+# of the same length. Sort array arr using array guide by the following rules:
