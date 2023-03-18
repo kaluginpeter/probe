@@ -13899,3 +13899,12 @@ from collections import Counter
 def bucketize(*arr):
     c = {i: sorted([k for k, v in Counter(arr).items() if v == i]) for i in Counter(arr).values()}
     return [c[i] if i in c else None for i in range(len(arr) + 1)]
+
+# Imagine you are given a positive integer, n, then:
+# if n is even, calculate: n / 2
+# if n is odd, calculate: 3 * n + 1
+# Repeat until your answer is 1. The Collatz conjecture states that performing this operation
+# repeatedly, you will always eventually reach 1.
+# You can try creating Collatz sequences with this kata. For further information, see the wiki page.
+##Now! Your task:
+# Given an array of positive integers, return the integer whose Collatz sequence is the longest.
