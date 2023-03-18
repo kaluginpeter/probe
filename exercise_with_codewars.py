@@ -13977,3 +13977,6 @@ def check_valid_tr_number(n):
     if not isinstance(n, int) or not len(str(n)) == 11: return False
     l = [int(i) for i in str(n)]
     return (sum(l[:9:2])*7 - sum(l[1:9:2])) % 10 == l[9] and sum(l[:10]) % 10 == l[10]
+
+# In this kata you're given an n x n array and you're expected to traverse the
+# elements diagonally from the bottom right to the top left.
