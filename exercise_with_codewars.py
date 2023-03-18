@@ -13926,3 +13926,8 @@ def longest_collatz(input_array):
         l.append(c)
         c = 0
     return input_array[l.index(max(l))]
+
+# We need the function sec_deg_solver()/secDegSolver(), that accepts three arguments,
+# a, b and c, the coefficients of the above equation.
+# The outputs of the function may vary depending on the values of coefficients a,
+# b and c, according to the following situations. (used values as examples only):
