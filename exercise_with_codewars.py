@@ -13955,3 +13955,7 @@ def sec_deg_solver(a, b, c):
 def sort_by_guide(arr, guide):
     l = iter(sorted((y,x) for x,y in zip(arr, guide) if y > 0))
     return [next(l)[1] if b > 0 else a for a, b in zip(arr, guide)]
+
+# You are a lonely frog.
+# You live on a coordinate axis.
+# The meaning of your life is to jump and jump..
