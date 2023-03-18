@@ -13887,3 +13887,11 @@ def blocks(w):
         l.append(i)
         c = c - Counter(i)
     return '-'.join(l)
+
+# Given an input array (arr) of positive integers, the objective is to return an
+# output array where each index represents the amount of times an element
+# appeared (frequency) in the input array.
+# More specifically, the element at each index of the output array will be
+# an array (bucket) containing integers that appeared index-amount-of-times.
+# Otherwise, slot nulls (JavaScript, Java), None's (Python) nils (Ruby), or
+# NULL's (C/C++) where appropriate. A valid array will always be provided.
