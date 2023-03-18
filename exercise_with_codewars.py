@@ -13878,3 +13878,12 @@ def recover(st):
 # task is to return this string as blocks separated by dashes ("-"). The elements of a block should be sorted
 # with respect to the hierarchy listed below, and each block cannot contain multiple instances of the same
 # character. Elements should be put into the first suitable block.
+from collections import Counter
+def blocks(w):
+    s = lambda c: (c.isdigit(), c.isupper(), c)
+    l, c = [], Counter(w)
+    while c:
+        i = ''.join(sorted(c, key=s))
+        l.append(i)
+        c = c - Counter(i)
+    return '-'.join(l)
