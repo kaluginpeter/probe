@@ -13895,3 +13895,7 @@ def blocks(w):
 # an array (bucket) containing integers that appeared index-amount-of-times.
 # Otherwise, slot nulls (JavaScript, Java), None's (Python) nils (Ruby), or
 # NULL's (C/C++) where appropriate. A valid array will always be provided.
+from collections import Counter
+def bucketize(*arr):
+    c = {i: sorted([k for k, v in Counter(arr).items() if v == i]) for i in Counter(arr).values()}
+    return [c[i] if i in c else None for i in range(len(arr) + 1)]
