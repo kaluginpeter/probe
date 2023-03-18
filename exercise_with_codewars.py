@@ -13952,3 +13952,6 @@ def sec_deg_solver(a, b, c):
 
 # You're given an array of positive integers arr, and an array guide
 # of the same length. Sort array arr using array guide by the following rules:
+def sort_by_guide(arr, guide):
+    l = iter(sorted((y,x) for x,y in zip(arr, guide) if y > 0))
+    return [next(l)[1] if b > 0 else a for a, b in zip(arr, guide)]
