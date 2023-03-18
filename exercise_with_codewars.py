@@ -13973,3 +13973,7 @@ def jump_to(x, y):
 # Take the sum of 1st, 3rd, 5th, 7th and 9th digit and multiply it by 7. Then subtract the sum of
 # 2nd, 4th, 6th and 8th digits from this value. Modulus 10 of the result should be equal to 10th digit.
 # Sum of first ten digits' modulus 10 should be equal to eleventh digit.
+def check_valid_tr_number(n):
+    if not isinstance(n, int) or not len(str(n)) == 11: return False
+    l = [int(i) for i in str(n)]
+    return (sum(l[:9:2])*7 - sum(l[1:9:2])) % 10 == l[9] and sum(l[:10]) % 10 == l[10]
