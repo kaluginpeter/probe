@@ -13873,3 +13873,8 @@ def recover(st):
         for k, v in alph.items():
             if sorted(k) == sorted(st[i:i+len(k)]): l.append(v)
     return ''.join(map(str, l)) or "No digits found"
+
+# You will receive a string consisting of lowercase letters, uppercase letters and digits as input. Your
+# task is to return this string as blocks separated by dashes ("-"). The elements of a block should be sorted
+# with respect to the hierarchy listed below, and each block cannot contain multiple instances of the same
+# character. Elements should be put into the first suitable block.
