@@ -13867,3 +13867,9 @@ def replace_dashes_as_one(word):
 # If no digits can be found, return "No digits found"
 # Take care about the order! "ENOWT" will be recovered to 12 and not to 21.
 # The input string consists only UpperCase letters
+def recover(st):
+    l = []
+    for i in range(len(st)):
+        for k, v in alph.items():
+            if sorted(k) == sorted(st[i:i+len(k)]): l.append(v)
+    return ''.join(map(str, l)) or "No digits found"
