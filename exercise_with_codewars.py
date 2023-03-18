@@ -13850,3 +13850,6 @@ def solve(arr, n):
             s += 1
             c.remove(cat)
     return s
+
+# If string has more than one neighboring dashes(e.g. --) replace they with one dash(-).
+# Dashes are considered neighbors even if there is some whitespace between them.
