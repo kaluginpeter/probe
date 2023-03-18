@@ -13959,3 +13959,10 @@ def sort_by_guide(arr, guide):
 # You are a lonely frog.
 # You live on a coordinate axis.
 # The meaning of your life is to jump and jump..
+def jump_to(x, y):
+    c = 0
+    while y!=x:
+        if y % 2 == 0 and y / 2 >= x: y /= 2
+        else: y-=1
+        c+=1
+    return c
