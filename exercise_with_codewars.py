@@ -13983,3 +13983,5 @@ def check_valid_tr_number(n):
 def diagonal(arr):
     l = sorted(((i, j) for j in range(len(arr)) for i in range(len(arr))), key=sum)[::-1]
     return [arr[i][j] for i, j in l]
+
+# Given a sorted array of numbers, return the summary of its ranges.
