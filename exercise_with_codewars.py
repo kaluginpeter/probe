@@ -14056,3 +14056,16 @@ def search_perm_mult(n_max, k):
 # Your goal is to create a function instrumental() which returns the valid form
 # of a valid Hungarian word w in instrumental case i. e. append the correct
 # suffix -vel or -val to the word w based on vowel harmony rules.
+def instrumental(word):
+    d = {"e": u"é", "i": u"í", u"ö": u"ő", u"ü": u"ű", "a": u"á", "o": u"ó", "u": u"ú"}
+    for i in word[::-1]:
+        if i in u"aáoóuú":
+            suf = "val"
+            break
+        elif i in u"eéiíöőüű":
+            suf = "vel"
+            break
+    if i == word[-1]: return word[:-1] + d.get(i, word[-1]) + suf
+    if word[-2:] in ("sz", "zs", "cs"): word = word[:-1] + word[-2:]
+    else: word += word[-1]
+    return word + suf[1:]
