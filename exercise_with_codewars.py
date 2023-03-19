@@ -14001,3 +14001,5 @@ def summary_ranges(nums):
 def mult_triangle(n):
     s, o = (n * (n + 1) / 2)**2, ((n + 1) // 2)**4
     return [s, s - o, o]
+
+# Write that given an array of numbers >= 0, will arrange them such that they form the biggest number.
