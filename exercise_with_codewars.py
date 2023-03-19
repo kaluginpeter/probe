@@ -13998,3 +13998,6 @@ def summary_ranges(nums):
 # included, is 225, part of it, 144, corresponds to the total sum of the even terms
 # and 81 to the total sum of the odd terms.
 # Create a function that may output an array with three results for each value of n.
+def mult_triangle(n):
+    s, o = (n * (n + 1) / 2)**2, ((n + 1) // 2)**4
+    return [s, s - o, o]
