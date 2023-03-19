@@ -14049,3 +14049,6 @@ def show_me(inst):
 # Make the function search_perm_mult(), that receives an upper bound, n_max and a factor k
 # and will output the amount of pairs bellow n_max that are permuted when an integer of this
 # range is multiplied by k. The pair will be counted if the multiple is less than n_max, too
+from collections import Counter
+def search_perm_mult(n_max, k):
+    return sum(Counter(str(i)) == Counter(str(i * k)) for i in range(1035, n_max // k))
