@@ -14069,3 +14069,9 @@ def instrumental(word):
     if word[-2:] in ("sz", "zs", "cs"): word = word[:-1] + word[-2:]
     else: word += word[-1]
     return word + suf[1:]
+
+# A runner, who runs with base speed s with duration t will cover a distances d: d = s * t
+# However, this runner can sprint for one unit of time with double speed s * 2
+# After sprinting, base speed s will permanently reduced by 1, and for next one unit of
+# time runner will enter recovery phase and can't sprint again.
+# Your task, given base speed s and time t, is to find the maximum possible distance d.
