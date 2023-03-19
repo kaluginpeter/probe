@@ -14029,3 +14029,10 @@ def solve(a,b):
 # you had already conjured up a program to automate the process.
 def diff(poly):
     return [k*v for k,v in enumerate(poly[::-1]) if k][::-1]
+
+# The built-in print function for Python class instances is not very entertaining.
+# In this kata, we will implement a function show_me(instance) that takes an instance as parameter
+# and returns the string "Hi, I'm one of those (classname)s! Have a look at
+# my (attrs)." , where (classname) is the class name and (attrs) are the class's attributes.
+# If (attrs) contains only one element, just write it. For more than one element (e.g. a, b, c), it
+# should list all elements sorted by name in ascending order (e.g. "... look at my a, b and c.").
