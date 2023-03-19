@@ -13985,3 +13985,11 @@ def diagonal(arr):
     return [arr[i][j] for i, j in l]
 
 # Given a sorted array of numbers, return the summary of its ranges.
+def summary_ranges(nums):
+    nums.append(float("inf"))
+    i, l = nums[0], []
+    for a, b in zip(nums, nums[1:]):
+        if b - a > 1:
+            l.append(str(i) if i == a else f"{i}->{a}")
+            i = b
+    return l
