@@ -14023,3 +14023,7 @@ def solve(a,b):
         c, g = np(c), g+1
         if c>=a and c<=b and ip(g): l.append(c)
     return sum(l)
+
+# Calculus class...is awesome! But you are a programmer with no time for mindless repetition. Your
+# teacher spent a whole day covering differentiation of polynomials, and by the time the bell rang,
+# you had already conjured up a program to automate the process.
