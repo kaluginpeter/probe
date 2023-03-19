@@ -14078,3 +14078,9 @@ def instrumental(word):
 def solution(s, t):
     c = min((t-1)//2, s//3)
     return t*s + (c+1)*s - 3*(c+1)*c//2 if t else 0
+
+# Related to MrZizoScream's Product Array kata. You might want to solve that one first :)
+# This is an adaptation of a problem I came across on LeetCode.
+# Given an array of numbers, your task is to return a new array
+# where each index (new_array[i]) is equal to the product of
+# the original array, except for the number at that index (array[i]).
