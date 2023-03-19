@@ -14084,3 +14084,10 @@ def solution(s, t):
 # Given an array of numbers, your task is to return a new array
 # where each index (new_array[i]) is equal to the product of
 # the original array, except for the number at that index (array[i]).
+from functools import reduce
+la = lambda x: reduce(lambda a, b:a*b, x)
+def product_sans_n(N):
+    l, z = len(N), N.count(0)
+    if z > 1: return l*[0]
+    if z == 1: i = N.index(0); return [0]*(i)+[la(N[:i])*la(N[i+1:])]+[0]*(l-i-1)
+    p = la(N);               return [p//i for i in N]
