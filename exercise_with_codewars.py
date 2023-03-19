@@ -14003,3 +14003,5 @@ def mult_triangle(n):
     return [s, s - o, o]
 
 # Write that given an array of numbers >= 0, will arrange them such that they form the biggest number.
+def biggest(nums):
+    return str(int(''.join(sorted(map(str,nums),key=lambda x:3*x)[::-1])))
