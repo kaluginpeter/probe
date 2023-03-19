@@ -14016,3 +14016,10 @@ def biggest(nums):
 # primes in this range are 11 and 17, with a sum of 28.
 # Given a range (a,b), what is the sum of dominant primes within that range?
 # Note that a <= range <= b and b will not exceed 500000.
+from gmpy2 import next_prime as np, is_prime as ip
+def solve(a,b):
+    c, l, g = 1, [], 0
+    while c<=b:
+        c, g = np(c), g+1
+        if c>=a and c<=b and ip(g): l.append(c)
+    return sum(l)
