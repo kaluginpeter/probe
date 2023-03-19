@@ -13993,3 +13993,8 @@ def summary_ranges(nums):
             l.append(str(i) if i == a else f"{i}->{a}")
             i = b
     return l
+
+# The total sum of the numbers in the triangle, up to the 5th line
+# included, is 225, part of it, 144, corresponds to the total sum of the even terms
+# and 81 to the total sum of the odd terms.
+# Create a function that may output an array with three results for each value of n.
