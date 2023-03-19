@@ -14052,3 +14052,7 @@ def show_me(inst):
 from collections import Counter
 def search_perm_mult(n_max, k):
     return sum(Counter(str(i)) == Counter(str(i * k)) for i in range(1035, n_max // k))
+
+# Your goal is to create a function instrumental() which returns the valid form
+# of a valid Hungarian word w in instrumental case i. e. append the correct
+# suffix -vel or -val to the word w based on vowel harmony rules.
