@@ -14040,3 +14040,12 @@ def show_me(inst):
     name = inst.__class__.__name__
     atts = ' and'.join(', '.join(sorted(i for i in inst.__dict__)).rsplit(',', 1))
     return "Hi, I'm one of those {}s! Have a look at my {}.".format(name, atts)
+
+# The number 1035 is the smallest integer that exhibits a non frequent property: one its multiples,
+# 3105 = 1035 * 3, has its same digits but in different order, in other words, 3105, is one
+# of the permutations of 1035.
+# The number 125874 is the first integer that has this property when the
+# multiplier is 2, thus: 125874 * 2 = 251748
+# Make the function search_perm_mult(), that receives an upper bound, n_max and a factor k
+# and will output the amount of pairs bellow n_max that are permuted when an integer of this
+# range is multiplied by k. The pair will be counted if the multiple is less than n_max, too
