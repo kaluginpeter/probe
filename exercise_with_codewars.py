@@ -14075,3 +14075,6 @@ def instrumental(word):
 # After sprinting, base speed s will permanently reduced by 1, and for next one unit of
 # time runner will enter recovery phase and can't sprint again.
 # Your task, given base speed s and time t, is to find the maximum possible distance d.
+def solution(s, t):
+    c = min((t-1)//2, s//3)
+    return t*s + (c+1)*s - 3*(c+1)*c//2 if t else 0
