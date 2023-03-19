@@ -14036,3 +14036,7 @@ def diff(poly):
 # my (attrs)." , where (classname) is the class name and (attrs) are the class's attributes.
 # If (attrs) contains only one element, just write it. For more than one element (e.g. a, b, c), it
 # should list all elements sorted by name in ascending order (e.g. "... look at my a, b and c.").
+def show_me(inst):
+    name = inst.__class__.__name__
+    atts = ' and'.join(', '.join(sorted(i for i in inst.__dict__)).rsplit(',', 1))
+    return "Hi, I'm one of those {}s! Have a look at my {}.".format(name, atts)
