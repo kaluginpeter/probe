@@ -14099,3 +14099,13 @@ def product_sans_n(N):
 def avoid_obstacles(a):
     for i in range(2, max(a) + 2):
         if all(j % i != 0 for j in a): return i
+
+# In this Kata, two groups of monsters will attack each other, and your job
+# is to find out who wins. Each group will have a stat for each of the following:
+# number of units, hitpoints per unit, damage per unit, and monster type.
+# If you are not familiar with the game, just think of each group as standing in
+# a line so that when they are attacked the unit at the front of the line takes the
+# hit before the others, and if he dies the remaining damage will hit the next unit
+# and so on. Therefore multiple units (or even the whole group) can die in one attack.
+# Each group takes turns attacking, and does so until only one remains. In this kata,
+# the first entry in the input array is the first to attack.
