@@ -14182,3 +14182,9 @@ def near_flatten(a):
 # At each step you can jump ahead in the array as far as the integer at the current cell, or any smaller
 # number of cells. You win if there is a path that allows you to jump from one cell
 # to another, eventually jumping past the end of the array, otherwise you lose.
+def can_jump(arr):
+    if arr[0] == 0 or len(arr) == 1:return False
+    if arr[0] >= len(arr):return True
+    for i in range(1, arr[0] +1):
+        if can_jump(arr[i:]):return True
+    return False
