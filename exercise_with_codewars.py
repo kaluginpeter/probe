@@ -14124,3 +14124,8 @@ def who_would_win(m1, m2):
 # You are stacking some boxes containing gold weights on top of each other. If a box contains
 # more weight than the box below it, it will crash downwards and combine their weights.
 # e.g. If we stack [2] on top of [1], it will crash downwards and become a single box of weight [3].
+def crashing_weights(weights):
+    l = [0] * len(weights[0])
+    for i in weights:
+        l = [b if a <= b else a+b for a,b in zip(l, i)]
+    return l
