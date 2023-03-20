@@ -14170,3 +14170,9 @@ def next_multiple_of_five(n):
 # Your solution should be an array containing all of the lowest level arrays and only
 # these. The sub-arrays should be ordered by the smallest element within each, so [1,2]
 # should preceed [3,4,5]. Note: integers will not be repeated.
+def near_flatten(a):
+    l = []
+    for i in a:
+        if isinstance(i[0], int): l.append(i)
+        else: l.extend(near_flatten(i))
+    return sorted(l)
