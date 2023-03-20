@@ -14147,3 +14147,7 @@ def encode(message, key, shift, encode=True):
 
 def decode(message, key, shift):
     return encode(message, key, -shift, encode=False)
+
+# Write a function that receives a non-negative integer n ( n >= 0 ) and returns the
+# next higher multiple of five of that number, obtained by concatenating the shortest
+# possible binary string to the end of this number's binary representation.
