@@ -14203,3 +14203,10 @@ def solve(n, c):
 
 # Given an x and y find the smallest and greatest numbers above and below
 # a given n that are divisible by both x and y.
+from math import gcd
+def greatest(x, y, n):
+    c = (x * y) // gcd(x, y)
+    return (n // c) * c if (n // c) * c < n else 0
+def smallest(x, y, n):
+    c = (x * y) // gcd(x, y)
+    return c + (n // c) * (c)
