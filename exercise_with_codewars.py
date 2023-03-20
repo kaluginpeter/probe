@@ -14197,3 +14197,6 @@ def can_jump(arr):
 # so that the remaining digits are '05'. Therefore, solve(123056,4) = '05'.
 # Note also that the order of the numbers in n does not change: solve(1284569,2) = '12456', because
 # we have removed 8 and 9.
+from itertools import combinations
+def solve(n, c):
+    return ''.join(min(combinations(str(n), len(str(n))-c)))
