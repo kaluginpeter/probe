@@ -14176,3 +14176,9 @@ def near_flatten(a):
         if isinstance(i[0], int): l.append(i)
         else: l.extend(near_flatten(i))
     return sorted(l)
+
+# Jump is a simple one-player game:
+# You are initially at the first cell of an array of cells containing non-negative integers;
+# At each step you can jump ahead in the array as far as the integer at the current cell, or any smaller
+# number of cells. You win if there is a path that allows you to jump from one cell
+# to another, eventually jumping past the end of the array, otherwise you lose.
