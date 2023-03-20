@@ -14151,3 +14151,12 @@ def decode(message, key, shift):
 # Write a function that receives a non-negative integer n ( n >= 0 ) and returns the
 # next higher multiple of five of that number, obtained by concatenating the shortest
 # possible binary string to the end of this number's binary representation.
+def next_multiple_of_five(n):
+    s = n % 5
+    if n == 0:return 5
+    elif s == 0:c = '0'
+    elif s == 1:c = '01'
+    elif s == 2:c = '1'
+    elif s == 3:c = '11'
+    elif s == 4:c = '011'
+    return int(bin(n)[2:]+c,2)
