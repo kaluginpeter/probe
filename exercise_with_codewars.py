@@ -14120,3 +14120,7 @@ def who_would_win(m1, m2):
         m1['allhit'] = m1['allhit'] - m2['number'] * m2['damage']
         m1['number'] = ceil(m1['allhit'] / m1['hitpoints'])
         if not m1['number'] > 0: return f"{m2['number']} {m2['type']}(s) won"
+
+# You are stacking some boxes containing gold weights on top of each other. If a box contains
+# more weight than the box below it, it will crash downwards and combine their weights.
+# e.g. If we stack [2] on top of [1], it will crash downwards and become a single box of weight [3].
