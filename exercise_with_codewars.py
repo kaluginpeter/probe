@@ -14210,3 +14210,10 @@ def greatest(x, y, n):
 def smallest(x, y, n):
     c = (x * y) // gcd(x, y)
     return c + (n // c) * (c)
+
+# You are given three non negative integers a, b and n, and making
+# an infinite sequence just like fibonacci sequence, use the following rules:
+# step 1: use ab as the initial sequence.
+# step 2: calculate the sum of the last two digits of the sequence, and append it to the end of sequence.
+# repeat step 2 until you have enough digits
+# Your task is to complete the function which returns the nth digit (0-based) of the sequence.
