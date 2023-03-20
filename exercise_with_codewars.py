@@ -14091,3 +14091,8 @@ def product_sans_n(N):
     if z > 1: return l*[0]
     if z == 1: i = N.index(0); return [0]*(i)+[la(N[:i])*la(N[i+1:])]+[0]*(l-i-1)
     p = la(N);               return [p//i for i in N]
+
+# You are given an array of integers arr that representing coordinates of obstacles situated on a straight line.
+# Assume that you are jumping from the point with coordinate 0 to the
+# right. You are allowed only to make jumps of the same length represented by some integer.
+# Find the minimal length of the jump enough to avoid all the obstacles.
