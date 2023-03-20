@@ -14129,3 +14129,7 @@ def crashing_weights(weights):
     for i in weights:
         l = [b if a <= b else a+b for a,b in zip(l, i)]
     return l
+
+# The Condi (Consecutive Digraphs) cipher was introduced by G4EGG (Wilfred Higginson) in 2011.
+# The cipher preserves word divisions, and is simple to describe and encode,
+# but it's surprisingly difficult to crack.
