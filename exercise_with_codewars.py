@@ -14096,3 +14096,6 @@ def product_sans_n(N):
 # Assume that you are jumping from the point with coordinate 0 to the
 # right. You are allowed only to make jumps of the same length represented by some integer.
 # Find the minimal length of the jump enough to avoid all the obstacles.
+def avoid_obstacles(a):
+    for i in range(2, max(a) + 2):
+        if all(j % i != 0 for j in a): return i
