@@ -14200,3 +14200,6 @@ def can_jump(arr):
 from itertools import combinations
 def solve(n, c):
     return ''.join(min(combinations(str(n), len(str(n))-c)))
+
+# Given an x and y find the smallest and greatest numbers above and below
+# a given n that are divisible by both x and y.
