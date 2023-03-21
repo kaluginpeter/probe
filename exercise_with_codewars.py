@@ -14247,3 +14247,7 @@ def battle(p1, p2):
         if i[0]>=j[1] : l2.remove(j)
         if j[0]>=i[1] : l1.remove(i)
     return {'player1':l1,'player2':l2}
+
+# In Python: Write a function calc_fuel that calculates the minimum amount
+# of fuel needed to produce a certain number of iron ingots. This function should
+# return a dictionary of the form
