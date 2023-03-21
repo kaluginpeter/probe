@@ -14264,3 +14264,10 @@ def sequence_gen(*args):
     while True:
         yield l[0]
         l = l[1:] + [sum(l)]
+
+# You're part of a team porting MS Paint into the browser and currently
+# working on a new UI component that allows user to control the canvas zoom level.
+# According to the wireframes delivered to you in PowerPoint format the user should be able to
+# cycle through specified zoom levels by clicking a button in the UI repeatedly. The
+# reverse direction should work with shift key held.
+# A new function is needed to support this behavior, so you alt-tab to Visual Studio and get to work.
