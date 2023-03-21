@@ -14312,3 +14312,6 @@ def solve(n):
 # the last two digits of 1176 and 1382976 are the same.
 # Given two numbers representing a range (a, b), how many numbers satisfy this
 # property within that range? (a <= n < b)
+def solve(a, b):
+    l = set([str(i) for i in range(3, 100) if all(i % j != 0 for j in [2] + list(range(3, int(i ** 0.5)+1, 2)))])
+    return sum(1 for i in range(max(a, 1000), b) if i % 100 == i*i % 100 and str(i)[:2] in l and str(i*i)[:2] in l)
