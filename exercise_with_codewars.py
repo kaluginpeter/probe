@@ -14315,3 +14315,12 @@ def solve(n):
 def solve(a, b):
     l = set([str(i) for i in range(3, 100) if all(i % j != 0 for j in [2] + list(range(3, int(i ** 0.5)+1, 2)))])
     return sum(1 for i in range(max(a, 1000), b) if i % 100 == i*i % 100 and str(i)[:2] in l and str(i*i)[:2] in l)
+
+# Help a fruit packer sort out the bad apples.
+# There are 7 varieties of apples, all packaged as pairs and stacked in a fruit box. Some
+# of the apples are spoiled. The fruit packer will have to make sure
+# the spoiled apples are either removed from the fruit box or replaced. Below is the breakdown:
+# Apple varieties are represented with numbers, 1 to 7
+# A fruit package is represented with a 2 element array [4,3]
+# A fruit package with one bad apple, or a bad package, is represented with [2,0] or [0,2]
+# A fruit package with two bad apples, or a rotten package, is represented with [0,0]
