@@ -14289,3 +14289,10 @@ def cycle(d, v, c):
 # numbers whose sum is the given input.
 # The two prime numbers must be the farthest ones (the ones with the greatest difference)
 # The first prime number must be the smallest one.
+from gmpy2 import is_prime
+def check_goldbach(n):
+    if n <= 2 or n % 2 != 0: return []
+    l = [i for i in range(2, n) if is_prime(i)]
+    for i in l:
+        for j in l:
+            if i + j == n: return [i, j]
