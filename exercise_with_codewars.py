@@ -14259,3 +14259,8 @@ def calc_fuel(n):
 # sequence will generate a (potentially) infinite amount of terms, where each
 # subsequent term is the sum of the previous x terms where x is the amount of
 # initial arguments (examples of such sequences are the Fibonacci, Tribonacci and Lucas number sequences).
+def sequence_gen(*args):
+    l = list(args)
+    while True:
+        yield l[0]
+        l = l[1:] + [sum(l)]
