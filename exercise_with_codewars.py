@@ -14241,3 +14241,9 @@ def longest_palindrome(s):
 # do not battle.
 # Your function should return an object (a hash in Ruby) with the keys player1
 # and player2 that contain the power and toughness of the surviving creatures.
+def battle(p1, p2):
+    l1,l2 =p1[:], p2[:]
+    for i,j in zip(p1, p2):
+        if i[0]>=j[1] : l2.remove(j)
+        if j[0]>=i[1] : l1.remove(i)
+    return {'player1':l1,'player2':l2}
