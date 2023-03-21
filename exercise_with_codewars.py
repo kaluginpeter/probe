@@ -14224,3 +14224,9 @@ def find(a,b,n):
         ns = int(s[-1]) + int(s[-2])
         s = s + str(ns)
     return int(s[n])
+
+# A palindrome is a series of characters that read the same forwards as backwards such
+# as "hannah", "racecar" and "lol".
+# For this Kata you need to write a function that takes a string of characters and returns
+# the length, as an integer value, of longest alphanumeric palindrome that could be made by combining
+# the characters in any order but using each character only once. The function should not be case sensitive.
