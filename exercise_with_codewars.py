@@ -14271,3 +14271,7 @@ def sequence_gen(*args):
 # cycle through specified zoom levels by clicking a button in the UI repeatedly. The
 # reverse direction should work with shift key held.
 # A new function is needed to support this behavior, so you alt-tab to Visual Studio and get to work.
+def cycle(d, v, c):
+    if c not in v: return None
+    l = v + v
+    return v[v.index(c) + d] if v.index(c) + d <= len(v)-1 else l[v.index(c) + d]
