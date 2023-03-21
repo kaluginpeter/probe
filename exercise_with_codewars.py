@@ -14324,3 +14324,15 @@ def solve(a, b):
 # A fruit package is represented with a 2 element array [4,3]
 # A fruit package with one bad apple, or a bad package, is represented with [2,0] or [0,2]
 # A fruit package with two bad apples, or a rotten package, is represented with [0,0]
+def bad_apples(a):
+    l, s = [], []
+    for i, j in enumerate(a):
+        if i not in s and sum(j) != 0:
+            if 0 in j:
+                c = next((k for k in range(i+1,len(a))if 0 in a[k]and sum(a[k])!=0), 0)
+                if c:
+                    su = [j[0]or j[1],a[c][0]or a[c][1]]
+                    s.append(c)
+                    l.append(su)
+            else : l.append(j)
+    return l
