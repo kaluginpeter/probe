@@ -14275,3 +14275,17 @@ def cycle(d, v, c):
     if c not in v: return None
     l = v + v
     return v[v.index(c) + d] if v.index(c) + d <= len(v)-1 else l[v.index(c) + d]
+
+# Goldbach's conjecture is amongst the oldest and well-known unsolved mathematical problems out
+# there. In correspondence with Leonhard Euler in 1742, German mathematician Christian Goldbach
+# made a conjecture stating that:
+# "Every even integer greater than 2 can be written as the sum of two primes"
+# which is known today as the (strong) Goldbach's conjecture.
+# Even though it's been thoroughly tested and analyzed and seems to be true, it hasn't been
+# proved yet (thus, remaining a conjecture.)
+# Your task is to implement the function in the starter code, taking into account the following:
+# If the argument isn't even and greater than two, return an empty array/tuple.
+# For arguments even and greater than two, return a two-element array/tuple with two prime
+# numbers whose sum is the given input.
+# The two prime numbers must be the farthest ones (the ones with the greatest difference)
+# The first prime number must be the smallest one.
