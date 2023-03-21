@@ -14251,3 +14251,6 @@ def battle(p1, p2):
 # In Python: Write a function calc_fuel that calculates the minimum amount
 # of fuel needed to produce a certain number of iron ingots. This function should
 # return a dictionary of the form
+def calc_fuel(n):
+    c = n * 11
+    return {"lava":c//800, "blaze rod":(c%800)//120, "coal":((c%800)%120)//80, "wood":(((c%800)%120)%80)//15, "stick":(((c%800)%120)%80)%15}
