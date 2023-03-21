@@ -14234,3 +14234,10 @@ from collections import Counter
 def longest_palindrome(s):
     co = Counter(filter(str.isalnum, s.lower()))
     return sum(v // 2 * 2 for v in co.values()) + any(v % 2 for v in co.values())
+
+# Write a function battle(player1, player2) that takes in 2 arrays of creatures. Each players' creatures battle
+# each other in order (player1[0] battles the creature in player2[0]) and so on.
+# If one list of creatures is longer than the other, those creatures are considered unblocked, and
+# do not battle.
+# Your function should return an object (a hash in Ruby) with the keys player1
+# and player2 that contain the power and toughness of the surviving creatures.
