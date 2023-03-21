@@ -14230,3 +14230,7 @@ def find(a,b,n):
 # For this Kata you need to write a function that takes a string of characters and returns
 # the length, as an integer value, of longest alphanumeric palindrome that could be made by combining
 # the characters in any order but using each character only once. The function should not be case sensitive.
+from collections import Counter
+def longest_palindrome(s):
+    co = Counter(filter(str.isalnum, s.lower()))
+    return sum(v // 2 * 2 for v in co.values()) + any(v % 2 for v in co.values())
