@@ -14296,3 +14296,9 @@ def check_goldbach(n):
     for i in l:
         for j in l:
             if i + j == n: return [i, j]
+
+# Given an integer n, find two integers a and b such that:
+# A) a >= 0 and b >= 0
+# B) a + b = n
+# C) DigitSum(a) + Digitsum(b) is maximum of all possibilities.
+# You will return the digitSum(a) + digitsum(b).
