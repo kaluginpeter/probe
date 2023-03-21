@@ -14254,3 +14254,8 @@ def battle(p1, p2):
 def calc_fuel(n):
     c = n * 11
     return {"lava":c//800, "blaze rod":(c%800)//120, "coal":((c%800)%120)//80, "wood":(((c%800)%120)%80)//15, "stick":(((c%800)%120)%80)%15}
+
+# Write a generator sequence_gen ( sequenceGen in JavaScript) that, given the first terms of a
+# sequence will generate a (potentially) infinite amount of terms, where each
+# subsequent term is the sum of the previous x terms where x is the amount of
+# initial arguments (examples of such sequences are the Fibonacci, Tribonacci and Lucas number sequences).
