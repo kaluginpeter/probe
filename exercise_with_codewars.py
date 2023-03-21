@@ -14305,3 +14305,10 @@ def check_goldbach(n):
 def solve(n):
     c = int('0' + '9' * (len(str(n)) - 1))
     return sum(int(i) for i in str(c) + str(n - c))
+
+# Consider the number 1176 and its square (1176 * 1176) = 1382976. Notice that:
+# the first two digits of 1176 form a prime.
+# the first two digits of the square 1382976 also form a prime.
+# the last two digits of 1176 and 1382976 are the same.
+# Given two numbers representing a range (a, b), how many numbers satisfy this
+# property within that range? (a <= n < b)
