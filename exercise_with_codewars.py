@@ -14391,3 +14391,10 @@ def decrypt(code):
 
 # Let's call product(x) the product of x's digits. Given an array of integers a,
 # calculate product(x) for each x in a, and return the number of distinct results you get.
+import math
+def unique_digit_products(a):
+    l = []
+    for i in a:
+        s = math.prod(int(j) for j in str(i))
+        if s != i and s not in l: l.append(s)
+    return len(l)
