@@ -14388,3 +14388,6 @@ def even_digit_squares(a, b):
 # of a variable length. For example, a two character word might look like:
 def decrypt(code):
     return ''.join(' abcdefghijklmnopqrstuvwxyz'[sum(int(i) for i in j if i.isdigit()) % 27] for j in code.split())
+
+# Let's call product(x) the product of x's digits. Given an array of integers a,
+# calculate product(x) for each x in a, and return the number of distinct results you get.
