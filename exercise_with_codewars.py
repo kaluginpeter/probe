@@ -14355,3 +14355,8 @@ def get_exponent(n, p):
 # the array in the mind). For example, 'a' replace with 'z', 'y' with 'a', etc.(see below)
 def replace_letters(word):
     return word.translate(str.maketrans('abcdefghijklmnopqrstuvwxyz', 'zeeediiihooooonuuuuutaaaaa'))
+
+# In genetic algorithms, a crossover allows 2 chromosomes to exchange part of their genes.
+# For more details, you can visit these wikipedia links : Genetic algorithm and Crossover.
+# A chromosome is represented by a list of genes.
+# Consider for instance 2 chromosomes xs (with genes [x,x,x,x,x,x]) and ys (with genes [y,y,y,y,y,y])
