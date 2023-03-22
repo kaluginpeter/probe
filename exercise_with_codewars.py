@@ -14403,3 +14403,7 @@ def unique_digit_products(a):
 # recreate all of the possible anagram combinations that could be created using all of
 # the letters, sorted alphabetically.
 # The inputs will never include numbers, spaces or any special characters, only lowercase letters a-z.
+import itertools
+def get_words(hash):
+    s = ''.join(k * v for k, v in hash.items() for v in v)
+    return sorted({''.join(i) for i in itertools.permutations(s)})
