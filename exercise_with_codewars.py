@@ -14379,3 +14379,10 @@ def uniq_count(string: str) -> int:
 # Give the numbers of this sequence that are in the range [a,b] (both values inclusive)
 def even_digit_squares(a, b):
     return [i**2 for i in range(int(a**0.5)+bool(a**0.5 % 1), int(b**0.5)+1) if not any(int(d) % 2 for d in str(i**2))]
+
+# You're operating behind enemy lines, but your decryption device took a bullet and no longer
+# operates. You need to write a code to unscramble the encrypted messages coming
+# in from headquarters. Luckily, you remember how the encryption algorithm works.
+# Each message you receive is a single string, with the blocks for each letter separated by
+# a space. The blocks encoding the characters are made up of seemingly random characters and are
+# of a variable length. For example, a two character word might look like:
