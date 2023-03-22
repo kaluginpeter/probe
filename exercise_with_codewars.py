@@ -14407,3 +14407,6 @@ import itertools
 def get_words(hash):
     s = ''.join(k * v for k, v in hash.items() for v in v)
     return sorted({''.join(i) for i in itertools.permutations(s)})
+
+# You are given a string s. It's a string consist of letters, numbers or symbols.
+# Your task is to find the Longest substring consisting of unique characters in s, and return the length of it.
