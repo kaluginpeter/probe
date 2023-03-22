@@ -14353,3 +14353,5 @@ def get_exponent(n, p):
 # replace the consonant with the nearest right vowel.
 # P.S. To complete this task imagine the alphabet is a circle (connect the first and last element of
 # the array in the mind). For example, 'a' replace with 'z', 'y' with 'a', etc.(see below)
+def replace_letters(word):
+    return word.translate(str.maketrans('abcdefghijklmnopqrstuvwxyz', 'zeeediiihooooonuuuuutaaaaa'))
