@@ -14398,3 +14398,8 @@ def unique_digit_products(a):
         s = math.prod(int(j) for j in str(i))
         if s != i and s not in l: l.append(s)
     return len(l)
+
+# Given a hash of letters and the number of times they occur,
+# recreate all of the possible anagram combinations that could be created using all of
+# the letters, sorted alphabetically.
+# The inputs will never include numbers, spaces or any special characters, only lowercase letters a-z.
