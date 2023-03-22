@@ -14360,3 +14360,6 @@ def replace_letters(word):
 # For more details, you can visit these wikipedia links : Genetic algorithm and Crossover.
 # A chromosome is represented by a list of genes.
 # Consider for instance 2 chromosomes xs (with genes [x,x,x,x,x,x]) and ys (with genes [y,y,y,y,y,y])
+def crossover(ns, xs, ys):
+    for x in sorted(set(ns)): xs, ys = xs[:x] + ys[x:], ys[:x] + xs[x:]
+    return xs, ys
