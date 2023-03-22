@@ -14426,3 +14426,7 @@ def solve(a):
     for i in b:
         if a.count(i)>1:l.append(sum(j for j,k in enumerate(a) if k==i))
     return sorted(l)
+
+# You have two sorted arrays a and b, merge them to form new array of unique items.
+# If an item is present in both arrays, it should be part of the resulting array if
+# and only if it appears in both arrays the same number of times.
