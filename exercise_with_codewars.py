@@ -14416,3 +14416,6 @@ def longest_substring(s : str) -> int:
         if c in d and d[c] >= f: f, co =  d[c]+1, max(co, i-f)
         d[c] = i
     return max(co, len(s)-f)
+
+# In this Kata, you will be given a list of strings and your task will be
+# to find the strings that have the same characters and return the sum of their positions as follows:
