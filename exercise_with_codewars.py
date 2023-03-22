@@ -14373,3 +14373,7 @@ from collections import Counter
 from math import factorial, prod
 def uniq_count(string: str) -> int:
     return factorial(len(string)) // prod(map(factorial, Counter(string.upper()).values()))
+
+# The integer 64 is the first integer that has all of its digits even and furthermore, is a perfect square.
+# The second one is 400 and the third one 484.
+# Give the numbers of this sequence that are in the range [a,b] (both values inclusive)
