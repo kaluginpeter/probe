@@ -14363,3 +14363,9 @@ def replace_letters(word):
 def crossover(ns, xs, ys):
     for x in sorted(set(ns)): xs, ys = xs[:x] + ys[x:], ys[:x] + xs[x:]
     return xs, ys
+
+# Given a string that contains only letters, you have to find out the number of unique
+# strings (including the string itself) that can be produced by re-arranging
+# the letters of the string. Strings are case insensitive.
+# HINT: Generating all the unique strings and calling length on that isn't
+# a great solution for this problem. It can be done a lot faster...
