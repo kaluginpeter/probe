@@ -14419,3 +14419,10 @@ def longest_substring(s : str) -> int:
 
 # In this Kata, you will be given a list of strings and your task will be
 # to find the strings that have the same characters and return the sum of their positions as follows:
+def solve(a):
+    a, b, l = [set(i) for i in a], [], []
+    for i in a:
+        if i not in b:b.append(i)
+    for i in b:
+        if a.count(i)>1:l.append(sum(j for j,k in enumerate(a) if k==i))
+    return sorted(l)
