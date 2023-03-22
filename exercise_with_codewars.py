@@ -14386,3 +14386,5 @@ def even_digit_squares(a, b):
 # Each message you receive is a single string, with the blocks for each letter separated by
 # a space. The blocks encoding the characters are made up of seemingly random characters and are
 # of a variable length. For example, a two character word might look like:
+def decrypt(code):
+    return ''.join(' abcdefghijklmnopqrstuvwxyz'[sum(int(i) for i in j if i.isdigit()) % 27] for j in code.split())
