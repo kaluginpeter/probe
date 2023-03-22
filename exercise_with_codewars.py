@@ -14410,3 +14410,9 @@ def get_words(hash):
 
 # You are given a string s. It's a string consist of letters, numbers or symbols.
 # Your task is to find the Longest substring consisting of unique characters in s, and return the length of it.
+def longest_substring(s : str) -> int:
+    f, d, co = 0, {}, 0
+    for i,c in enumerate(s):
+        if c in d and d[c] >= f: f, co =  d[c]+1, max(co, i-f)
+        d[c] = i
+    return max(co, len(s)-f)
