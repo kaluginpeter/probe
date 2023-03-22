@@ -14369,3 +14369,7 @@ def crossover(ns, xs, ys):
 # the letters of the string. Strings are case insensitive.
 # HINT: Generating all the unique strings and calling length on that isn't
 # a great solution for this problem. It can be done a lot faster...
+from collections import Counter
+from math import factorial, prod
+def uniq_count(string: str) -> int:
+    return factorial(len(string)) // prod(map(factorial, Counter(string.upper()).values()))
