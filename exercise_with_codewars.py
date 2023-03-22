@@ -14347,3 +14347,9 @@ def get_exponent(n, p):
             c += 1
             n //= p
         return c
+
+# In input string word(1 word):
+# replace the vowel with the nearest left consonant.
+# replace the consonant with the nearest right vowel.
+# P.S. To complete this task imagine the alphabet is a circle (connect the first and last element of
+# the array in the mind). For example, 'a' replace with 'z', 'y' with 'a', etc.(see below)
