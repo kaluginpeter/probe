@@ -14430,3 +14430,5 @@ def solve(a):
 # You have two sorted arrays a and b, merge them to form new array of unique items.
 # If an item is present in both arrays, it should be part of the resulting array if
 # and only if it appears in both arrays the same number of times.
+def merge_arrays(a, b):
+    return sorted([i for i in set(a+b) if a.count(i)==b.count(i) or a.count(i)*b.count(i)==0])
