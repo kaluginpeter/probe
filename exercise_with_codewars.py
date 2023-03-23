@@ -14455,3 +14455,7 @@ def receive(s):
     s = s.split()
     c = ''.join(str(len(s[k]) % 2) * len(s[k+1]) for k in range(0, len(s), 2))
     return ''.join(chr(int(c[k:k+7], 2)) for k in range(0, len(c), 7))
+
+# Write
+# function wordStep(str)
+# that takes in a string and creates a step with that word.
