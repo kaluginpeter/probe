@@ -14472,3 +14472,11 @@ def word_step(s):
 
 # Write a function which outputs the positions of matching bracket pairs. The output should be a dictionary with
 # keys the positions of the open brackets '(' and values the corresponding positions of the closing brackets ')'.
+def bracket_pairs(string):
+    d, l = {}, []
+    for k, v in enumerate(string):
+        if v == '(':l.append(k)
+        elif v == ')':
+            if not l:return False
+            d[l.pop()] = k
+    return False if l else d
