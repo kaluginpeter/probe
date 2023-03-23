@@ -14511,3 +14511,11 @@ def sort_string(s):
 # For example, take 25: The 2nd prime is 3, and the 5th is 11. So 25 would evaluate to 3*11 = 33.
 # If we iterate this procedure, we generate a sequence of integers.
 # Write a function that, given a positive integer n, returns the maximum value in the sequence starting at n.
+from functools import reduce
+def find_max(n):
+    l = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23]
+    s = set()
+    while n not in s:
+        s.add(n)
+        n = reduce(lambda x, d: x * l[int(d)], str(n), 1)
+    return max(s)
