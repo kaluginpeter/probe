@@ -14490,3 +14490,10 @@ def bracket_pairs(string):
 # but will put digits (or one-digit-long numbers ) after letters.
 def unusual_sort(array):
     return sorted(array, key=lambda _: (str(_).isdigit(), str(_), -isinstance(_, int)))
+
+# Consider a string of lowercase Latin letters and space characters (" ").
+# First, rearrange the letters in each word alphabetically.
+# And then rearrange the words in ascending order of the sum of their characters' ASCII values.
+# If two or more words have the same ASCII value, rearrange them by their length in ascending
+# order; If their length still equals to each other, rearrange them alphabetically.
+# Finally, return the result.
