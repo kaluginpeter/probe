@@ -14524,3 +14524,9 @@ def find_max(n):
 # elements of two arrays always be integer.
 # Sort arr1 according to the ascending order of arr2; Sort arr2 according to the
 # ascending order of arr1. Description is not easy to understand, for example:
+def sort_two_arrays(arr1, arr2):
+    l1 = sorted([[arr1[i],i] for i in range(len(arr1))])
+    l2 = sorted([[arr2[i],i] for i in range(len(arr2))])
+    r1 = [arr1[i[1]] for i in l2]
+    r2 = [arr2[i[1]] for i in l1]
+    return [r1,r2]
