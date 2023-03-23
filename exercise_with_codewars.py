@@ -14530,3 +14530,9 @@ def sort_two_arrays(arr1, arr2):
     r1 = [arr1[i[1]] for i in l2]
     r2 = [arr2[i[1]] for i in l1]
     return [r1,r2]
+
+# This kata is a harder version of this kata: https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+# If you haven't done it yet, you should do that one first before doing this one.
+# You are given a string of letters that you need to type out. In the string there
+# is a special function: [backspace]. Once you encounter a [backspace] , you delete the
+# character right before it. If there is nothing to backspace , just carry on. Return the final string .
