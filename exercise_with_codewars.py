@@ -14536,3 +14536,19 @@ def sort_two_arrays(arr1, arr2):
 # You are given a string of letters that you need to type out. In the string there
 # is a special function: [backspace]. Once you encounter a [backspace] , you delete the
 # character right before it. If there is nothing to backspace , just carry on. Return the final string .
+def solve(s):
+    w = ''
+    s = s.split('[backspace]')
+    for i in s:
+        c = 1
+        if i:
+            if i[0] == '*':
+                n = 1
+                while n < len(i) and i[n].isnumeric():
+                    n += 1
+                c = int(i[1:n])
+                i = i[n:]
+            w = w[:-c]
+            w += i
+        else: w = w[:-1]
+    return w
