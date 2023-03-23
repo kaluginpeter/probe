@@ -14446,3 +14446,12 @@ def remove_smallest(n, a):
 # Binary with 0 and 1 is good, but binary with only 0 is even better! Originally, this
 # is a concept designed by Chuck Norris to send so called unary messages.
 # Can you write a program that can send and receive this messages?
+from itertools import groupby
+def send(s):
+    c = ''.join('{:07b}'.format(ord(x)) for x in s)
+    return ' '.join('{} {}'.format('0'*(2-int(k)), ''.join('0' for _ in v)) for k,v in groupby(c))
+
+def receive(s):
+    s = s.split()
+    c = ''.join(str(len(s[k]) % 2) * len(s[k+1]) for k in range(0, len(s), 2))
+    return ''.join(chr(int(c[k:k+7], 2)) for k in range(0, len(c), 7))
