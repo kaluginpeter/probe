@@ -14438,3 +14438,7 @@ def merge_arrays(a, b):
 # a lower index first. If n is greater than the length of the array/list, return
 # an empty list/array. If n is zero or less, return the original array/list.
 # Don't change the order of the elements that are left.
+def remove_smallest(n, a):
+    b = a[::]
+    while n>0 and b: b.remove(min(b)); n -= 1
+    return b
