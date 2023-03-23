@@ -14480,3 +14480,11 @@ def bracket_pairs(string):
             if not l:return False
             d[l.pop()] = k
     return False if l else d
+
+# In another Kata I came across a weird sort function to
+# implement. We had to sort characters as usual ( 'A' before 'Z' and 'Z' before 'a' ) excpt
+# that the numbers had to be sorted after the letters ( '0' after 'z') !!!
+# (After a couple of hours trying to solve this unusual-sorting-kata I
+# discovered final tests used **usual** sort (digits **before** letters :-)
+# So, the unusualSort/unusual_sort function you'll have to code will sort letters as usual,
+# but will put digits (or one-digit-long numbers ) after letters.
