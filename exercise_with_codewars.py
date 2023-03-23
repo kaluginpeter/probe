@@ -14442,3 +14442,7 @@ def remove_smallest(n, a):
     b = a[::]
     while n>0 and b: b.remove(min(b)); n -= 1
     return b
+
+# Binary with 0 and 1 is good, but binary with only 0 is even better! Originally, this
+# is a concept designed by Chuck Norris to send so called unary messages.
+# Can you write a program that can send and receive this messages?
