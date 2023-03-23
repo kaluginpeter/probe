@@ -14519,3 +14519,8 @@ def find_max(n):
         s.add(n)
         n = reduce(lambda x, d: x * l[int(d)], str(n), 1)
     return max(s)
+
+# Give you two arrays arr1 and arr2. They have the same length(length>=2). The
+# elements of two arrays always be integer.
+# Sort arr1 according to the ascending order of arr2; Sort arr2 according to the
+# ascending order of arr1. Description is not easy to understand, for example:
