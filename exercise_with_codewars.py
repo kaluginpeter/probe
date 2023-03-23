@@ -14432,3 +14432,9 @@ def solve(a):
 # and only if it appears in both arrays the same number of times.
 def merge_arrays(a, b):
     return sorted([i for i in set(a+b) if a.count(i)==b.count(i) or a.count(i)*b.count(i)==0])
+
+#Given an array of integers, remove the n smallest.
+# If there are multiple elements with the same value, remove the ones with
+# a lower index first. If n is greater than the length of the array/list, return
+# an empty list/array. If n is zero or less, return the original array/list.
+# Don't change the order of the elements that are left.
