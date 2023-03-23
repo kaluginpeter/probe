@@ -14499,3 +14499,5 @@ def unusual_sort(array):
 # Finally, return the result.
 def revamp(s):
     return " ".join(sorted(["".join(sorted(i))for i in s.split()],key=lambda x:(sum(map(ord, x)),len(x),x)))
+
+# Your task is to sort the characters in a string according to the following rules:
