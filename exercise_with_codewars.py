@@ -14488,3 +14488,5 @@ def bracket_pairs(string):
 # discovered final tests used **usual** sort (digits **before** letters :-)
 # So, the unusualSort/unusual_sort function you'll have to code will sort letters as usual,
 # but will put digits (or one-digit-long numbers ) after letters.
+def unusual_sort(array):
+    return sorted(array, key=lambda _: (str(_).isdigit(), str(_), -isinstance(_, int)))
