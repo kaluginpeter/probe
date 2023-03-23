@@ -14469,3 +14469,6 @@ def word_step(s):
             l[i % 2] += 1 if j else 0
             arr[l[1]][l[0]] = c
     return arr
+
+# Write a function which outputs the positions of matching bracket pairs. The output should be a dictionary with
+# keys the positions of the open brackets '(' and values the corresponding positions of the closing brackets ')'.
