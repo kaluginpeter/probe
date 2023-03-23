@@ -14497,3 +14497,5 @@ def unusual_sort(array):
 # If two or more words have the same ASCII value, rearrange them by their length in ascending
 # order; If their length still equals to each other, rearrange them alphabetically.
 # Finally, return the result.
+def revamp(s):
+    return " ".join(sorted(["".join(sorted(i))for i in s.split()],key=lambda x:(sum(map(ord, x)),len(x),x)))
