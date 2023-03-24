@@ -14635,3 +14635,11 @@ def flat_rotors(lines_before, lines_after):
 # then, if lights[1] was on, it turns off and vice versa.
 def light_bulbs(lights, n):
     return lights if not n else light_bulbs([v^lights[k-1] for k,v in enumerate(lights)], n-1)
+
+# At work I need to keep a timesheet, by noting which project I was working
+# on every 15 minutes. I have an timer that beeps every 15 minutes to prompt me
+# to note down what I was working on at that point, but sometimes when I'm away from my
+# desk or working continuously on one project, I don't note anything down and these get recorded as null.
+# Task:
+# Help me populate my timesheet by replacing any null values in
+# the array with the correct project name which is given by surrounding matching values.
