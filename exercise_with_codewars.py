@@ -14601,3 +14601,6 @@ def AlphaNum_NumAlpha(s):
 # For example combineStrings('abc', '123') should return 'a1b2c3'.
 # If the strings are different lengths the function should interlace them
 # until each string runs out, continuing to add characters from the remaining strings.
+from itertools import zip_longest
+def combine_strings(*args):
+    return ''.join(''.join(i) for i in zip_longest(*args, fillvalue=''))
