@@ -14595,3 +14595,9 @@ import re
 def AlphaNum_NumAlpha(s):
     d = {v:k for k,v in alphabetnums.items()}
     return ''.join(alphabetnums.get(i, d.get(i)) for i in re.findall(r'(\d+|[a-z])', s))
+
+# Write a function that takes an arbitrary number of strings and interlaces them
+# (combines them by alternating characters from each string).
+# For example combineStrings('abc', '123') should return 'a1b2c3'.
+# If the strings are different lengths the function should interlace them
+# until each string runs out, continuing to add characters from the remaining strings.
