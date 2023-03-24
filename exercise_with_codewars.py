@@ -14616,3 +14616,7 @@ def factors_count(n):
             n //= i
             l.append(i)
     return -l.count(3), l.count(2)
+
+# In Part #1 of this series you already figured out how the flap display mechanism works.
+# You now know what the updated display will look like after applying a set of rotor moves.
+# If you haven't already completed Part 1, then now is a good time to do it!
