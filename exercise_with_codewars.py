@@ -14574,3 +14574,7 @@ def goldbach_partitions(n):
 
 # In this Kata, you will be given an integer n and your task will
 # be to return the largest integer that is <= n and has the highest digit sum.
+def solve(n):
+    x = str(n)
+    c = [x] + [str(int(x[:i]) - 1) + '9' * (len(x) - i) for i in range(1, len(x))]
+    return int(max(c, key=lambda x: (sum(map(int, x)), int(x))))
