@@ -14591,3 +14591,7 @@ def find(seq):
 # In this Kata, you will create a function that converts a string with letters and numbers to the
 # inverse of that string (with regards to Alpha and Numeric characters). So, e.g. the
 # letter a will become 1 and number 1 will become a; z will become 26 and 26 will become z.
+import re
+def AlphaNum_NumAlpha(s):
+    d = {v:k for k,v in alphabetnums.items()}
+    return ''.join(alphabetnums.get(i, d.get(i)) for i in re.findall(r'(\d+|[a-z])', s))
