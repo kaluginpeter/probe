@@ -14628,3 +14628,8 @@ def flat_rotors(lines_before, lines_after):
             l.append((ALPHABET.index(j) - ALPHABET.index(i) - sum(l)) % ln)
         return l
     return [nxt_rotor(i,j) for i,j in zip(lines_before, lines_after)]
+
+# Some light bulbs are placed in a circle (clockwise direction). Each one is either on (1) or off (0).
+# Every turn, the light bulbs change their states. If a light bulb was on at the previous turn, the
+# light bulb to the right of it changes its state, i.e. if lights[0] is on.
+# then, if lights[1] was on, it turns off and vice versa.
