@@ -14584,3 +14584,6 @@ def solve(n):
 # substring of "!" and a substring "?", they are adjacent.
 # If more than one result are found, return the one which at left side; If
 # no such a combination found, return "".
+import re
+def find(seq):
+    return max(re.findall(r'(?=(!+\?+|\?+!+))', seq), key=len, default='')
