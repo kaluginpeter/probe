@@ -14561,3 +14561,10 @@ from math import factorial
 def sum_arrangements(n):
     w = str(n)
     return (10**len(w)-1)//9*sum(map(int,w))*factorial(len(w)-1)
+
+# German mathematician Christian Goldbach (1690-1764) conjectured that every even number greater than 2 can
+# be represented by the sum of two prime numbers. For example, 10 can be represented as 3+7 or 5+5.
+# Your job is to make the function return a list containing all unique possible
+# representations of n in an increasing order if n is an even integer; if n is odd,
+# return an empty list. Hence, the first addend must always be less than or
+# equal to the second to avoid duplicates.
