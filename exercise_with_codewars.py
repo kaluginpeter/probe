@@ -14604,3 +14604,6 @@ def AlphaNum_NumAlpha(s):
 from itertools import zip_longest
 def combine_strings(*args):
     return ''.join(''.join(i) for i in zip_longest(*args, fillvalue=''))
+
+# You will be given a shuffled sequence of integers and your task is to reorder them so
+# that they conform to the above sequence. There will always be an answer.
