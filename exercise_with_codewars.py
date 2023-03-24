@@ -14643,3 +14643,11 @@ def light_bulbs(lights, n):
 # Task:
 # Help me populate my timesheet by replacing any null values in
 # the array with the correct project name which is given by surrounding matching values.
+def fill_gaps(timesheet):
+    n, l = None, timesheet[:]
+    for k,v in enumerate(l):
+        if v is not None:
+            if v == n:
+                l[j+1:k] = [v]*(k-j-1)
+            j, n = k, v
+    return l
