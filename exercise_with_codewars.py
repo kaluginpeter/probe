@@ -14620,3 +14620,11 @@ def factors_count(n):
 # In Part #1 of this series you already figured out how the flap display mechanism works.
 # You now know what the updated display will look like after applying a set of rotor moves.
 # If you haven't already completed Part 1, then now is a good time to do it!
+def flat_rotors(lines_before, lines_after):
+    ln = len(ALPHABET)
+    def nxt_rotor(wb, wa):
+        l = []
+        for i,j in zip(wb, wa):
+            l.append((ALPHABET.index(j) - ALPHABET.index(i) - sum(l)) % ln)
+        return l
+    return [nxt_rotor(i,j) for i,j in zip(lines_before, lines_after)]
