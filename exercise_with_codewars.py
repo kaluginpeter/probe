@@ -14557,3 +14557,7 @@ def solve(s):
 # including duplicates. However, due to the fact that this is a performance edition kata, the input can
 # go up to 10**10000. That's a number with 10001 digits (at most)! Be sure
 # to use efficient algorithms and good luck! All numbers tested for will be positive.
+from math import factorial
+def sum_arrangements(n):
+    w = str(n)
+    return (10**len(w)-1)//9*sum(map(int,w))*factorial(len(w)-1)
