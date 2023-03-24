@@ -14568,3 +14568,6 @@ def sum_arrangements(n):
 # representations of n in an increasing order if n is an even integer; if n is odd,
 # return an empty list. Hence, the first addend must always be less than or
 # equal to the second to avoid duplicates.
+from gmpy2 import is_prime as np
+def goldbach_partitions(n):
+    return not n % 2 and [f'{i}+{n-i}' for i in range(2,int(n/2)+1) if np(i) and np(n-i)] or []
