@@ -14552,3 +14552,8 @@ def solve(s):
             w += i
         else: w = w[:-1]
     return w
+
+# Find the sum of all numbers with the same digits (permutations) as the input number,
+# including duplicates. However, due to the fact that this is a performance edition kata, the input can
+# go up to 10**10000. That's a number with 10001 digits (at most)! Be sure
+# to use efficient algorithms and good luck! All numbers tested for will be positive.
