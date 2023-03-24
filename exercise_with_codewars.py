@@ -14607,3 +14607,12 @@ def combine_strings(*args):
 
 # You will be given a shuffled sequence of integers and your task is to reorder them so
 # that they conform to the above sequence. There will always be an answer.
+def solve(lst):
+    return sorted(lst, key=factors_count)
+def factors_count(n):
+    l = []
+    for i in (2, 3):
+        while n % i == 0:
+            n //= i
+            l.append(i)
+    return -l.count(3), l.count(2)
