@@ -14633,3 +14633,5 @@ def flat_rotors(lines_before, lines_after):
 # Every turn, the light bulbs change their states. If a light bulb was on at the previous turn, the
 # light bulb to the right of it changes its state, i.e. if lights[0] is on.
 # then, if lights[1] was on, it turns off and vice versa.
+def light_bulbs(lights, n):
+    return lights if not n else light_bulbs([v^lights[k-1] for k,v in enumerate(lights)], n-1)
