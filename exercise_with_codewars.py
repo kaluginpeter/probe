@@ -14578,3 +14578,9 @@ def solve(n):
     x = str(n)
     c = [x] + [str(int(x[:i]) - 1) + '9' * (len(x) - i) for i in range(1, len(x))]
     return int(max(c, key=lambda x: (sum(map(int, x)), int(x))))
+
+# Find the longest successive exclamation marks and question marks combination in the string. A
+# successive exclamation marks and question marks combination must contains two part: a
+# substring of "!" and a substring "?", they are adjacent.
+# If more than one result are found, return the one which at left side; If
+# no such a combination found, return "".
