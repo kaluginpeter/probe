@@ -14587,3 +14587,7 @@ def solve(n):
 import re
 def find(seq):
     return max(re.findall(r'(?=(!+\?+|\?+!+))', seq), key=len, default='')
+
+# In this Kata, you will create a function that converts a string with letters and numbers to the
+# inverse of that string (with regards to Alpha and Numeric characters). So, e.g. the
+# letter a will become 1 and number 1 will become a; z will become 26 and 26 will become z.
