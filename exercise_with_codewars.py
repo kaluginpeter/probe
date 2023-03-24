@@ -14571,3 +14571,6 @@ def sum_arrangements(n):
 from gmpy2 import is_prime as np
 def goldbach_partitions(n):
     return not n % 2 and [f'{i}+{n-i}' for i in range(2,int(n/2)+1) if np(i) and np(n-i)] or []
+
+# In this Kata, you will be given an integer n and your task will
+# be to return the largest integer that is <= n and has the highest digit sum.
