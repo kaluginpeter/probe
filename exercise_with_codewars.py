@@ -14762,3 +14762,11 @@ def unlucky_number(n):
 # This operation is applied sequentially first to the given number, then to the first
 # result, then to the second result and so on.., until the result remains the same.
 # Given number n, find the final result of the operation.
+def factor_sum(n):
+    x, s, c = 2, 0, n
+    while n > 1:
+        while n % x == 0:
+            s += x
+            n //= x
+        x += 1
+    return s if s == c else factor_sum(s)
