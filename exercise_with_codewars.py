@@ -14702,3 +14702,9 @@ def substring(strng):
             count_w = count_w[1:]
         if len(count_w) > len(w): w = count_w
     return w
+
+# Given an array arr and a number n. Call a pair of numbers from
+# the array a Perfect Pair if their sum is equal to n.
+# Find all of the perfect pairs and return the sum of their indices.
+# Note that any element of the array can only be counted in one Perfect Pair. Also
+# if there are multiple correct answers, return the smallest one.
