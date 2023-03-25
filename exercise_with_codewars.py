@@ -14659,3 +14659,6 @@ def fill_gaps(timesheet):
 # and some information which is a list of strings representing potential answers.
 # Your task is to find among information the UNIQUE string that has the highest number of words in
 # common with question. We shall consider words to be separated by a single space.
+def answer(question, information):
+    c, s = max((sum(j in i.lower().split() for j in question.lower().split()), i) for i in information)
+    return None if not c else s
