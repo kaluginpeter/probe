@@ -14736,3 +14736,8 @@ def goldbach(even_number):
         for j in l:
             if i + j == even_number and i <= j: s.append([i, j])
     return s
+
+# Write
+# String.prototype.hashify()
+# that will turn a string into a hash/object. Every character in the string
+# will be the key for the next character.
