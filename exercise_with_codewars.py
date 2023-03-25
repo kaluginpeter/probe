@@ -14749,3 +14749,6 @@ def hashify(string):
             except: d[f] = [d[f], s]
         except: d[f] = s
     return d
+
+# The number is considered to be unlucky if it does not have
+# digits 4 and 7 and is divisible by 13. Please count all unlucky numbers not greater than n.
