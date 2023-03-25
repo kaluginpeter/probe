@@ -14694,3 +14694,11 @@ def group_ints(lst, key=0):
     return [list(v) for k, v in groupby(lst, lambda x: x < key)]
 
 # Find the longest substring within a string that contains at most 2 unique characters.
+def substring(strng):
+    w, count_w = '', ''
+    for i in strng:
+        count_w += i
+        while len(set(count_w + i)) > 2:
+            count_w = count_w[1:]
+        if len(count_w) > len(w): w = count_w
+    return w
