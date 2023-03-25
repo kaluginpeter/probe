@@ -14692,3 +14692,5 @@ def answers_sequence(n):
 from itertools import groupby
 def group_ints(lst, key=0):
     return [list(v) for k, v in groupby(lst, lambda x: x < key)]
+
+# Find the longest substring within a string that contains at most 2 unique characters.
