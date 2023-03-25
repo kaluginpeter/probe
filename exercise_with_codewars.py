@@ -14722,3 +14722,5 @@ def pairwise(arr, n):
 # "|" represents a standing domino
 # "/" represents a knocked over domino
 # " " represents a space where there is no domino
+def domino_reaction(s):
+    return s.replace('|', '/', min(len(s.split(' ')[0]), len(s.split('/')[0])))
