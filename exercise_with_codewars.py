@@ -14724,3 +14724,8 @@ def pairwise(arr, n):
 # " " represents a space where there is no domino
 def domino_reaction(s):
     return s.replace('|', '/', min(len(s.split(' ')[0]), len(s.split('/')[0])))
+
+# Goldbach's conjecture is one of the oldest and best-known unsolved problems in
+# number theory and all of mathematics. It states:
+# Every even integer greater than 2 can be expressed as the sum of two primes. For example:
+# Write the a function that find all identical pairs of prime numbers:
