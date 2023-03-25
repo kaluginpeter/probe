@@ -14651,3 +14651,11 @@ def fill_gaps(timesheet):
                 l[j+1:k] = [v]*(k-j-1)
             j, n = k, v
     return l
+
+# Mr. Khalkhoul, an amazing teacher, likes to answer questions sent by his students
+# via e-mail, but he often doesn't have the time to answer all of them. In
+# this kata you will help him by making a program that finds some of the answers.
+# You are given a question which is a string containing the question
+# and some information which is a list of strings representing potential answers.
+# Your task is to find among information the UNIQUE string that has the highest number of words in
+# common with question. We shall consider words to be separated by a single space.
