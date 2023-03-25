@@ -14708,3 +14708,12 @@ def substring(strng):
 # Find all of the perfect pairs and return the sum of their indices.
 # Note that any element of the array can only be counted in one Perfect Pair. Also
 # if there are multiple correct answers, return the smallest one.
+def pairwise(arr, n):
+    c = 0
+    for i in range(len(arr)):
+        i2 = n - arr[i]
+        if i2 in arr[i+1:]:
+            j = arr.index(i2, i+1)
+            c += i + j
+            arr[i] = arr[j] = n + 1
+    return c
