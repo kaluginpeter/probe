@@ -14752,3 +14752,5 @@ def hashify(string):
 
 # The number is considered to be unlucky if it does not have
 # digits 4 and 7 and is divisible by 13. Please count all unlucky numbers not greater than n.
+def unlucky_number(n):
+    return sum((i % 13 == 0 and '4' not in str(i) and '7' not in str(i)) for i in range(n+1))
