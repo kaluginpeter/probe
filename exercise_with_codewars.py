@@ -14717,3 +14717,8 @@ def pairwise(arr, n):
             c += i + j
             arr[i] = arr[j] = n + 1
     return c
+
+# You're given a string of dominos. For each slot, there are 3 options:
+# "|" represents a standing domino
+# "/" represents a knocked over domino
+# " " represents a space where there is no domino
