@@ -14754,3 +14754,11 @@ def hashify(string):
 # digits 4 and 7 and is divisible by 13. Please count all unlucky numbers not greater than n.
 def unlucky_number(n):
     return sum((i % 13 == 0 and '4' not in str(i) and '7' not in str(i)) for i in range(n+1))
+
+# Consider the following operation:
+# We take a positive integer n and replace it with the sum of its prime factors (if
+# a prime number is presented multiple times in the factorization of n, then it's
+# counted the same number of times in the sum).
+# This operation is applied sequentially first to the given number, then to the first
+# result, then to the second result and so on.., until the result remains the same.
+# Given number n, find the final result of the operation.
