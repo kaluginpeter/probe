@@ -14689,3 +14689,6 @@ def answers_sequence(n):
 # However, in this kata the goal is to sort the numbers IN
 # PLACE, so DON'T go messing around with the order in with the numbers appear.
 # You are to return a nested list. If the list is empty, simply return an empty list.
+from itertools import groupby
+def group_ints(lst, key=0):
+    return [list(v) for k, v in groupby(lst, lambda x: x < key)]
