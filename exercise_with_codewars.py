@@ -14681,3 +14681,11 @@ def guess_number(answers):
 
 def answers_sequence(n):
     return [1 if n in i else 0 for i in sequence]
+
+# Hi! Welcome to my first kata.
+# In this kata the task is to take a list of integers (positive and negative) and split
+# them according to a simple rule; those ints greater than or equal to the key, and
+# those ints less than the key (the itself key will always be positive).
+# However, in this kata the goal is to sort the numbers IN
+# PLACE, so DON'T go messing around with the order in with the numbers appear.
+# You are to return a nested list. If the list is empty, simply return an empty list.
