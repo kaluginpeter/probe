@@ -14662,3 +14662,10 @@ def fill_gaps(timesheet):
 def answer(question, information):
     c, s = max((sum(j in i.lower().split() for j in question.lower().split()), i) for i in information)
     return None if not c else s
+
+# Your task is to create two functions:
+# The first one is called "guess_number", it gives you a list of answers. These
+# answers can be integers values (1 or 0), and correspond respectively
+# to Yes and No. The sequence values are the answer to "Do you see your number?" for
+# each one of the above tuples. You are given the sequence and must return
+# the number which originated that sequence of answers.
