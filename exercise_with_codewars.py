@@ -14741,3 +14741,11 @@ def goldbach(even_number):
 # String.prototype.hashify()
 # that will turn a string into a hash/object. Every character in the string
 # will be the key for the next character.
+def hashify(string):
+    d = dict()
+    for f, s in zip(string, string[1:] + string[0]):
+        try:
+            try: d[f].append(s)
+            except: d[f] = [d[f], s]
+        except: d[f] = s
+    return d
