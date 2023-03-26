@@ -14782,3 +14782,8 @@ def prime_primes(N):
     primes = [2] + [i for i in range(3, 1000, 2) if is_prime(i)]
     pairs = list(itertools.combinations((i for i in primes if i < N), 2))
     return len(pairs), int(sum(a/b for a, b in pairs))
+
+# Determine whether a positive integer number is colorful or not.
+# 263 is a colorful number because [2, 6, 3, 2*6, 6*3, 2*6*3] are all
+# different; whereas 236 is not colorful, because [2, 3, 6, 2*3, 3*6, 2*3*6] have 6 twice.
+# So take all consecutive subsets of digits, take their product and ensure all the products are different.
