@@ -14801,3 +14801,11 @@ def colorful(number):
 # in the tables or restore the tables to a previous time because the DBA’s are gone.
 # You are provided with an array of employees from the server. Your task is to
 # write the findDuplicates function to remove the duplicate records after they are sent down to the client.
+def find_duplicates(emp):
+    l, l1, s = [], [], set()
+    for i in emp:
+        if i in s: l.append(i)
+        else: l1.append(i); s.add(i)
+    emp.clear()
+    emp.extend(l1)
+    return l
