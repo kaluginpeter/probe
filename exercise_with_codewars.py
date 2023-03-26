@@ -14842,3 +14842,5 @@ def array_operations(a, k):
         c = max(a)
         a = [c - i for i in a]
     return a
+
+# Compute the Mobius function μ(n)\mu (n)μ(n) for a given value of n.
