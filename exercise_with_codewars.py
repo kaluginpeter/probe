@@ -14826,3 +14826,5 @@ def weigh_the_list(a):
 def remove(s, last = ''):
     s = ''.join(i for i in s.replace('?!', '? !').replace('!?', '! ?').split() if len(i) == 1 or len(i) % 2 == 0)
     return s if last == s else remove(s, s)
+
+# You have a number x in base m (xm). Count the number of digits d after converting xm to base n.
