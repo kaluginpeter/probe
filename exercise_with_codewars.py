@@ -14809,3 +14809,6 @@ def find_duplicates(emp):
     emp.clear()
     emp.extend(l1)
     return l
+
+# Given 1, 3, 2, 2, 4, 1, 1, 3, 1, 4, 2 there are many ways you could construct
+# a square. Here are three possibilities, as described by their four rows:
