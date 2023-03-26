@@ -14819,3 +14819,7 @@ def build_square(l):
 # Your task is to find such non-zero integers W that the weighted sum
 def weigh_the_list(a):
     return [j for i in range(0, len(a), 2) for j in [a[i + 1], -a[i]]]
+
+# Remove odd number continuous exclamation marks and question marks(from the left to the right), until
+# no continuous exclamation marks and question marks exist. Please note: One exclamation mark or
+# question mark is not a continuous exclamation marks or question marks. The string only contains ! and ?.
