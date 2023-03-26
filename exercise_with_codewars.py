@@ -14858,3 +14858,6 @@ def mobius(n):
         break
   if c > 0 and c % 2 == 0:return 1
   return -1
+
+# Given a sequence of integers, check whether it is possible to obtain a strictly
+# increasing sequence by erasing no more than one element from it.
