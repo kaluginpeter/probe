@@ -14817,3 +14817,5 @@ def build_square(l):
 
 # You get a list of non-zero integers A, its length is always even and always greater than one.
 # Your task is to find such non-zero integers W that the weighted sum
+def weigh_the_list(a):
+    return [j for i in range(0, len(a), 2) for j in [a[i + 1], -a[i]]]
