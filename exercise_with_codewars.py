@@ -14832,3 +14832,6 @@ def count_digit(number, digit, base=10, from_base=10):
     c = '0123456789abcdefghijklmnopqrstuvwxyz'
     f = lambda x: c[x] if x<base else f(x//base) + c[x%base]
     return f(int(number, from_base)).count(digit)
+
+# You are given an array of integers a and a non-negative number of operations k, applied
+# to the array. Each operation consists of two parts:
