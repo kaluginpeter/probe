@@ -14814,3 +14814,6 @@ def find_duplicates(emp):
 # a square. Here are three possibilities, as described by their four rows:
 def build_square(l):
     return (l.count(4)+min(l.count(3), l.count(1))+((l.count(1)-min(l.count(3), l.count(1)))/4)+(l.count(2)/2))>=4
+
+# You get a list of non-zero integers A, its length is always even and always greater than one.
+# Your task is to find such non-zero integers W that the weighted sum
