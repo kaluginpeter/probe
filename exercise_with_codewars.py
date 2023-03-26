@@ -14812,3 +14812,5 @@ def find_duplicates(emp):
 
 # Given 1, 3, 2, 2, 4, 1, 1, 3, 1, 4, 2 there are many ways you could construct
 # a square. Here are three possibilities, as described by their four rows:
+def build_square(l):
+    return (l.count(4)+min(l.count(3), l.count(1))+((l.count(1)-min(l.count(3), l.count(1)))/4)+(l.count(2)/2))>=4
