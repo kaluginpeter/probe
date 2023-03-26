@@ -14828,3 +14828,7 @@ def remove(s, last = ''):
     return s if last == s else remove(s, s)
 
 # You have a number x in base m (xm). Count the number of digits d after converting xm to base n.
+def count_digit(number, digit, base=10, from_base=10):
+    c = '0123456789abcdefghijklmnopqrstuvwxyz'
+    f = lambda x: c[x] if x<base else f(x//base) + c[x%base]
+    return f(int(number, from_base)).count(digit)
