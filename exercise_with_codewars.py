@@ -14835,3 +14835,10 @@ def count_digit(number, digit, base=10, from_base=10):
 
 # You are given an array of integers a and a non-negative number of operations k, applied
 # to the array. Each operation consists of two parts:
+def array_operations(a, k):
+    c = max(a)
+    a = [c - i for i in a]
+    for i in range((k-1) % 2):
+        c = max(a)
+        a = [c - i for i in a]
+    return a
