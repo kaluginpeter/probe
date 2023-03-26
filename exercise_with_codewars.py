@@ -14794,3 +14794,10 @@ def colorful(number):
         temp = l[y] * l[y + 1]
         l.append(temp)
     return len(set(l)) == len(l)
+
+# It might be déjà vu, or it might be a duplicate day. You’re well trained
+# in the arts of cleaning up duplicates. Someone has hacked your database and injected all kinds
+# of duplicate records into your tables. You don’t have access to modify the data
+# in the tables or restore the tables to a previous time because the DBA’s are gone.
+# You are provided with an array of employees from the server. Your task is to
+# write the findDuplicates function to remove the duplicate records after they are sent down to the client.
