@@ -14770,3 +14770,9 @@ def factor_sum(n):
             n //= x
         x += 1
     return s if s == c else factor_sum(s)
+
+# Define a "prime prime" number to be a rational number written as one prime number over another
+# prime number: primeA / primeB (e.g. 7/31)
+# Given a whole number N / n, generate the number of "prime prime" rational
+# numbers less than 1, using only prime numbers between 0 and N / n(non inclusive).
+# Return the count of these "prime primes", and the integer part of their sum.
