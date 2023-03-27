@@ -14983,3 +14983,10 @@ def formula(n):
 # starts with the following warm-up exercise:
 # Given the list of commands the coach has given, count the number of
 # such commands after which the students will be facing the same direction.
+def line_up(c):
+    co = x = 0
+    for i in c:
+        if i=='L': x+=1
+        if i=='R': x-=1
+        co += (not x%2)
+    return co
