@@ -14938,3 +14938,14 @@ def mult_primefactor_sum(a, b):
 # Then return the remaining letters in any order as a string.
 def last_survivors(a, n):
     return ''.join(i[j:] for i,j in zip([''.join(k for k in i if k!=' ')[::-1] for i in zip(*a)], n))
+
+# Every positive integer can be written as a sum of Fibonacci numbers. For example
+# 10 = 8 + 2 or 5 + 3 + 2 or 3 + 3 + 2 + 2. Apparently, this representation is not unique.
+# It becomes unique, if we rule out consecutive Fibonacci numbers: this is
+# Zeckendorf's theorem, first proven by Lekkerkerker in 1952. In the example above,
+# this excludes the last two representations (containing the consecutive Fibonacci numbers 2 and
+# 3), and we are left with the Zeckendorf representation 10 = 8 + 2.
+# Complete the function that returns the Zeckendorf representation of a given integer
+# n as a list of Fibonacci numbers in decreasing order. Return an empty list
+# for n = 0 and None/nil for negative n.
+# Hint: Be greedy!
