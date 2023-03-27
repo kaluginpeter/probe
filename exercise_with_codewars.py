@@ -14974,3 +14974,6 @@ def is_constructable(area):
 # Similar but fairly harder version : Linked
 # Create a function that takes a integer number n and returns the formula for (a+b)n(a+b)^n(a+b)
 # as a string.
+from math import comb as c
+def formula(n):
+    return f'1/({formula(-n)})' if n<0 else '+'.join(f"{[str(c(n,i)),''][c(n,i)==1]}{['','a',f'a^{n-i}'][(n-i>0)+(n-i>1)]}{['','b',f'b^{i}'][(i>0)+(i>1)]}" for i in range(n+1)) or '1'
