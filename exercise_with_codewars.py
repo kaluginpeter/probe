@@ -14905,3 +14905,6 @@ def convert(s):
 from itertools import combinations
 def closest_sum(ints, num):
     return sum(min(combinations(ints, 3), key=lambda x: abs(num - sum(x))))
+
+# Give you a sentence s. It contains some words and separated by spaces. Another arguments
+# is n, its a number(1,2 or 3). You should convert s to camelCase n.
