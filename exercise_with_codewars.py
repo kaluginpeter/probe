@@ -14936,3 +14936,5 @@ def mult_primefactor_sum(a, b):
 # Considering the list of strings as a 2D character array, the idea is to remove from each
 # column, starting from bottom, as many letters as indicated in the list of numbers.
 # Then return the remaining letters in any order as a string.
+def last_survivors(a, n):
+    return ''.join(i[j:] for i,j in zip([''.join(k for k in i if k!=' ')[::-1] for i in zip(*a)], n))
