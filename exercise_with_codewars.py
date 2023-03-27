@@ -14912,3 +14912,11 @@ def toCamelCase(s, n):
     if n == 1: return s[0].lower() + s.title().replace(' ', '')[1:]
     elif n == 2: return ''.join(map(lambda x: x[:-1].lower() + x[-1].upper(), s.split()))[:-1] + s[-1].lower()
     return ''.join(map(lambda x: x[:-1] + x[-1].upper(), (s[0].lower() + s.title()[1:]).split()))[:-1] + s[-1].lower()
+
+# Of course that primes would fulfill this property, but is obvious, because the
+# prime decomposition of a number, is the number itself and every number is
+# divisible by iself. That is why we will discard every prime number in the results
+# We are interested in collect the integer positive numbers (non primes) that have this
+# property in a certain range [a, b] (inclusive).
+# Make the function mult_primefactor_sum(), that receives the values a, b as limits of the
+# range [a, b] and a < b and outputs the sorted list of these numbers.
