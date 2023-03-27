@@ -14970,3 +14970,7 @@ def Zeckendorf_rep(n):
 from math import sqrt
 def is_constructable(area):
     return any(sqrt(area - i**2).is_integer() for i in range(int(sqrt(area)) + 1))
+
+# Similar but fairly harder version : Linked
+# Create a function that takes a integer number n and returns the formula for (a+b)n(a+b)^n(a+b)
+# as a string.
