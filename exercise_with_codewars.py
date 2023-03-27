@@ -14892,3 +14892,9 @@ def alternate_sort(l):
 # this number by the smallest factor that it is greater than 1, until it becomes a prime number.
 # You can assume that all test results are greater than 1 and the length of a continuous
 # substring(! or ?) is always less than 10.
+import re
+def convert(s):
+    n = int("".join(str(len(e)) for e in re.findall("!+|\?+", s)))
+    for i in range(2, int(n**0.5) + 1):
+        while n > i and n % i == 0: n //= i
+    return n
