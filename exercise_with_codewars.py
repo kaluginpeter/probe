@@ -14959,3 +14959,11 @@ def Zeckendorf_rep(n):
         l.append(next(i for i in f[::-1] if i <= n))
         n -= l[-1]
     return l
+
+# A stranger has lost himself in a forest which looks like a 2D square grid. Night
+# is coming, so he has to protect himself from wild animals. That is why he decided to put up a campfire.
+# Suppose this stranger has four sticks with the same length which is equal
+# to k. He can arrange them in square grid so that they form k x k
+# square (each stick endpoint lies on a grid node). Using this strategy he can build
+# campfire with areas 1, 4, 9, ... Also, if he rotates the sticks as it
+# is shown in the image, he will get another campfire areas 2, 5, 10, ...
