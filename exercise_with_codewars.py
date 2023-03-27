@@ -14898,3 +14898,7 @@ def convert(s):
     for i in range(2, int(n**0.5) + 1):
         while n > i and n % i == 0: n //= i
     return n
+
+# Given an array (ints) of n integers, find three integers in
+# arr such that the sum is closest to a given number (num), target.
+# Return the sum of the three integers. You may assume that each input would have exactly one solution.
