@@ -14931,3 +14931,8 @@ def ok(n):
     return k % sum(l) == 0
 def mult_primefactor_sum(a, b):
     return [i for i in range(a, b+1) if not ip(i) and ok(i)]
+
+# Given a list of strings (of letters and spaces), and a list of numbers:
+# Considering the list of strings as a 2D character array, the idea is to remove from each
+# column, starting from bottom, as many letters as indicated in the list of numbers.
+# Then return the remaining letters in any order as a string.
