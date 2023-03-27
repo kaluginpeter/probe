@@ -14977,3 +14977,9 @@ def is_constructable(area):
 from math import comb as c
 def formula(n):
     return f'1/({formula(-n)})' if n<0 else '+'.join(f"{[str(c(n,i)),''][c(n,i)==1]}{['','a',f'a^{n-i}'][(n-i>0)+(n-i>1)]}{['','b',f'b^{i}'][(i>0)+(i>1)]}" for i in range(n+1)) or '1'
+
+# To prepare his students for an upcoming game, the sports coach decides
+# to try some new training drills. To begin with, he lines them up and
+# starts with the following warm-up exercise:
+# Given the list of commands the coach has given, count the number of
+# such commands after which the students will be facing the same direction.
