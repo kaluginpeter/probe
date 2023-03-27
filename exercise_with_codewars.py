@@ -14886,3 +14886,9 @@ def alternate_sort(l):
             f.append(l1.pop())
             if l2: f.append(l2.pop())
     return f
+
+# Convert the continuous exclamation marks or question marks to a digit, Use all the digits to
+# form a number. If this number is a prime number, return it. If not, divide
+# this number by the smallest factor that it is greater than 1, until it becomes a prime number.
+# You can assume that all test results are greater than 1 and the length of a continuous
+# substring(! or ?) is always less than 10.
