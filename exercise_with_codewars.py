@@ -14967,3 +14967,6 @@ def Zeckendorf_rep(n):
 # square (each stick endpoint lies on a grid node). Using this strategy he can build
 # campfire with areas 1, 4, 9, ... Also, if he rotates the sticks as it
 # is shown in the image, he will get another campfire areas 2, 5, 10, ...
+from math import sqrt
+def is_constructable(area):
+    return any(sqrt(area - i**2).is_integer() for i in range(int(sqrt(area)) + 1))
