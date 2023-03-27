@@ -14908,3 +14908,7 @@ def closest_sum(ints, num):
 
 # Give you a sentence s. It contains some words and separated by spaces. Another arguments
 # is n, its a number(1,2 or 3). You should convert s to camelCase n.
+def toCamelCase(s, n):
+    if n == 1: return s[0].lower() + s.title().replace(' ', '')[1:]
+    elif n == 2: return ''.join(map(lambda x: x[:-1].lower() + x[-1].upper(), s.split()))[:-1] + s[-1].lower()
+    return ''.join(map(lambda x: x[:-1] + x[-1].upper(), (s[0].lower() + s.title()[1:]).split()))[:-1] + s[-1].lower()
