@@ -14868,3 +14868,9 @@ def almost_increasing_sequence(sequence):
         if i>=j: c += 1
         if c>1: return False
     return True
+
+# Write a function
+# alternate_sort(l)
+# that combines the elements of an array by sorting the elements ascending by their
+# absolute value and outputs negative and non-negative integers alternatingly (starting with the
+# negative value, if any).
