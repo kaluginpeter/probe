@@ -14949,3 +14949,13 @@ def last_survivors(a, n):
 # n as a list of Fibonacci numbers in decreasing order. Return an empty list
 # for n = 0 and None/nil for negative n.
 # Hint: Be greedy!
+def Zeckendorf_rep(n):
+    if n == 0: return []
+    elif n < 0: return None
+    f, l = [0, 1], []
+    while f[-1] < n:
+        f.append(f[-2] + f[-1])
+    while n > 0:
+        l.append(next(i for i in f[::-1] if i <= n))
+        n -= l[-1]
+    return l
