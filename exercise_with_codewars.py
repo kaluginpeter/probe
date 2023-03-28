@@ -15022,3 +15022,8 @@ def most_frequent_digit_sum(n):
         l.append(sum(int(i) for i in str(n)))
         n = n - l[-1]
     return max(sorted(l, reverse=True), key=l.count)
+
+# You will be given a string with two arguments, the first argument will
+# tell you which teams are playing and the second argument tells you what's happened in
+# the match. Calculate the points and return a string containing the teams
+# final scores, with the team names sorted in the same order as in the first argument.
