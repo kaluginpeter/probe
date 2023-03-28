@@ -15073,3 +15073,8 @@ def prod2sum(a, b, c, d):
 # brackets. But no need to check for line breaks (\n) and non-ASCII chatracters, nothing that fancy in the tests.
 # There is 50 characters limit for this regex to avoid hardcoding and keep the "puzzle" status :) Good luck!
 div_4 = '^[048]$|(\d*([02468][048]|[13579][26]))$'
+
+# You are given a digital number written down on a sheet of paper.
+# Your task is to figure out if you rotate the given sheet of paper by
+# 180 degrees would the number still look exactly the same.
+# Note: You can assume that the digital number is written like the following image:
