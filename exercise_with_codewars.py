@@ -15084,3 +15084,9 @@ def rotate_paper(n):
 # Write a code that orders collection of Uris based on it's domain next way that
 # it will returns fisrt Uris with domain "com", "gov", "org" (in alphabetical order of
 # their domains) and then all other Uris ordered in alphabetical order of their domains In addition to that
+def sorting(address):
+    d = {"org": "aac", "gov": "aab", "com": "aaa"}
+    d1 = address.split('/?')[0].split('.')[-1]
+    return d1 if d1 not in d else d[d1]
+def order_by_domain(addresses):
+    return sorted(addresses, key=sorting)
