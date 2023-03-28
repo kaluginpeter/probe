@@ -15016,3 +15016,9 @@ def find_number(compare):
 # of the sequence with the sums of their digits (s(x)). Now you're
 # curious as to which number appears in the new sequence most often. If there are several
 # answers, return the maximal one.
+def most_frequent_digit_sum(n):
+    l = []
+    while n:
+        l.append(sum(int(i) for i in str(n)))
+        n = n - l[-1]
+    return max(sorted(l, reverse=True), key=l.count)
