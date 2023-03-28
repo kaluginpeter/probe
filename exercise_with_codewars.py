@@ -14999,3 +14999,11 @@ def line_up(c):
 # The compare-function, that your method will get as parameter, takes the guessed number as parameter
 # and returns 0 for the correct number, -1 if your number is smaller than
 # the searched number and 1 if your guessed number is greater than the searched number.
+def find_number(compare):
+    a, b = 0, 100
+    while True:
+        count = (a+b)/2
+        if compare(count) == -1: a = count
+        elif compare(count) == 1: b = count
+        else: break
+    return count
