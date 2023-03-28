@@ -15027,3 +15027,10 @@ def most_frequent_digit_sum(n):
 # tell you which teams are playing and the second argument tells you what's happened in
 # the match. Calculate the points and return a string containing the teams
 # final scores, with the team names sorted in the same order as in the first argument.
+def quidditch_scoreboard(teams, actions):
+    d = {t: 0 for t in teams.split(' vs ')}
+    for t, a in map(lambda x: x.split(': '), actions.split(', ')):
+        if 'goal' in a: d[t] += 10
+        elif 'foul' in a: d[t] -= 30
+        elif 'Caught Snitch' in a: d[t] += 150; break
+    return ', '.join('{}: {}'.format(k, v) for k,v in d.items())
