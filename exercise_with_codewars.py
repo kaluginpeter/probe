@@ -15056,3 +15056,9 @@ def coffee_limits(year, month, day):
     health = int(f"{year:04d}{month:02d}{day:02d}")
     drinks = (int(d, 16) for d in ("cafe", "decaf"))
     return [next((i for i in range(1, 5001) if "dead" in f"{health + j*i:x}"), 0) for j in drinks]
+
+# We are still with squared integers.
+# Given 4 integers a, b, c, d we form the sum of the squares of a and b and
+# then the sum of the squares of c and d. We multiply the two sums hence
+# a number n and we try to decompose n in a sum of two squares e and
+# f (e and f integers >= 0) so that n = e² + f².
