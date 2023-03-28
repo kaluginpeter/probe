@@ -15080,3 +15080,7 @@ div_4 = '^[048]$|(\d*([02468][048]|[13579][26]))$'
 # Note: You can assume that the digital number is written like the following image:
 def rotate_paper(n):
     return n == n.translate(str.maketrans('69', '96', '1347'))[::-1]
+
+# Write a code that orders collection of Uris based on it's domain next way that
+# it will returns fisrt Uris with domain "com", "gov", "org" (in alphabetical order of
+# their domains) and then all other Uris ordered in alphabetical order of their domains In addition to that
