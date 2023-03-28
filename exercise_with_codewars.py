@@ -15050,3 +15050,5 @@ def is_prime_happy(n):
 def linked_sort(a_to_sort, a_linked, key=str):
     a_to_sort[:], a_linked[:] = zip(*sorted(zip(a_to_sort, a_linked), key=key))
     return a_to_sort
+
+# Given the test subject's date of birth, return an array describing their life-time coffee limits
