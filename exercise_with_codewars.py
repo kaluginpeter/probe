@@ -15062,3 +15062,7 @@ def coffee_limits(year, month, day):
 # then the sum of the squares of c and d. We multiply the two sums hence
 # a number n and we try to decompose n in a sum of two squares e and
 # f (e and f integers >= 0) so that n = e² + f².
+def prod2sum(a, b, c, d):
+    e = sorted([abs(a*d-b*c), abs(a*c+b*d)])
+    f = sorted([abs(a*c-b*d), abs(a*d+b*c)])
+    return sorted([e, f]) if e != f else [e]
