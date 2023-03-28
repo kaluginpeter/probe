@@ -15072,3 +15072,4 @@ def prod2sum(a, b, c, d):
 # Random tests can consist of numbers, ascii letters, some puctuation and
 # brackets. But no need to check for line breaks (\n) and non-ASCII chatracters, nothing that fancy in the tests.
 # There is 50 characters limit for this regex to avoid hardcoding and keep the "puzzle" status :) Good luck!
+div_4 = '^[048]$|(\d*([02468][048]|[13579][26]))$'
