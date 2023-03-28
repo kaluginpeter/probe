@@ -15042,3 +15042,8 @@ from gmpy2 import is_prime
 def is_prime_happy(n):
     if n < 5: return False
     return sum([i for i in range(2, n) if is_prime(i)]) % n == 0
+
+# Now if we sort one array we lose the connectivity. The goal is to create a sorting function
+# that keeps the position link linkedSort(arrayToSort,linkedArray,compareFunction). So for every
+# element that moves in arrayToSort(HowMany in the example), the corresponding element
+# in linkedArray(Type in the example) needs to move similarly.
