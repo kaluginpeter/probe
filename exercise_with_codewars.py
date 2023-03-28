@@ -15078,3 +15078,5 @@ div_4 = '^[048]$|(\d*([02468][048]|[13579][26]))$'
 # Your task is to figure out if you rotate the given sheet of paper by
 # 180 degrees would the number still look exactly the same.
 # Note: You can assume that the digital number is written like the following image:
+def rotate_paper(n):
+    return n == n.translate(str.maketrans('69', '96', '1347'))[::-1]
