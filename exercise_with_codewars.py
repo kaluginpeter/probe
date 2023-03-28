@@ -15047,3 +15047,6 @@ def is_prime_happy(n):
 # that keeps the position link linkedSort(arrayToSort,linkedArray,compareFunction). So for every
 # element that moves in arrayToSort(HowMany in the example), the corresponding element
 # in linkedArray(Type in the example) needs to move similarly.
+def linked_sort(a_to_sort, a_linked, key=str):
+    a_to_sort[:], a_linked[:] = zip(*sorted(zip(a_to_sort, a_linked), key=key))
+    return a_to_sort
