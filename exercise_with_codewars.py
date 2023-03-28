@@ -15052,3 +15052,7 @@ def linked_sort(a_to_sort, a_linked, key=str):
     return a_to_sort
 
 # Given the test subject's date of birth, return an array describing their life-time coffee limits
+def coffee_limits(year, month, day):
+    health = int(f"{year:04d}{month:02d}{day:02d}")
+    drinks = (int(d, 16) for d in ("cafe", "decaf"))
+    return [next((i for i in range(1, 5001) if "dead" in f"{health + j*i:x}"), 0) for j in drinks]
