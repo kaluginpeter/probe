@@ -15034,3 +15034,7 @@ def quidditch_scoreboard(teams, actions):
         elif 'foul' in a: d[t] -= 30
         elif 'Caught Snitch' in a: d[t] += 150; break
     return ', '.join('{}: {}'.format(k, v) for k,v in d.items())
+
+# A number n is called prime happy if there is at least one prime less
+# than n and the sum of all primes less than n is evenly divisible by n. Write
+# isPrimeHappy(n) which returns true if n is prime happy else false.
