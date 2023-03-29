@@ -15123,3 +15123,7 @@ def palin(a,b):
 
 # Write a function that accepts an integer n and returns the sum of
 # the factorials of the first n Fibonacci numbers
+import math
+def sum_fib(n):
+    l = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+    return sum(math.factorial(i) for i in l[:n])
