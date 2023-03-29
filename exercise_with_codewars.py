@@ -15095,3 +15095,6 @@ def order_by_domain(addresses):
 # The conditions will be passed in an array and will be formatted like this:
 def string_evaluation(s, w):
     return [eval(f"{(s.count(i[0]), i[0])[i[0].isdigit()]} {i[1:-1]} {(s.count(i[-1]), i[-1])[i[-1].isdigit()]}") for i in w]
+
+# In this Kata, we will calculate the minimum positive number that is not a possible
+# sum from a list of positive integers.
