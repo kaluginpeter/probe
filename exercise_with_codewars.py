@@ -15157,3 +15157,6 @@ def solve(x,y):
             q = q*2
         p = p*3
     return c
+
+# Given a number n, return a string representing it as a
+# sum of distinct powers of three, or return "Impossible" if that's not possible to achieve.
