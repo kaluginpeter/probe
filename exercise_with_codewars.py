@@ -15090,3 +15090,6 @@ def sorting(address):
     return d1 if d1 not in d else d[d1]
 def order_by_domain(addresses):
     return sorted(addresses, key=sorting)
+
+# Evaluate the given string with the given conditons.
+# The conditions will be passed in an array and will be formatted like this:
