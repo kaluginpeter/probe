@@ -15127,3 +15127,9 @@ import math
 def sum_fib(n):
     l = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
     return sum(math.factorial(i) for i in l[:n])
+
+# The number 23 is special in the sense that all
+# of its digits are prime numbers. Furthermore, it's a prime itself.
+# There are 4 such numbers between 10 and 100: 23, 37, 53, 73. Let's call these numbers "total primes".
+# Complete the function that takes a range (a, b) and
+# returns the number of total primes within that range (a <= primes < b). The test ranges go up to 107.
