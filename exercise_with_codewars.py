@@ -15093,3 +15093,5 @@ def order_by_domain(addresses):
 
 # Evaluate the given string with the given conditons.
 # The conditions will be passed in an array and will be formatted like this:
+def string_evaluation(s, w):
+    return [eval(f"{(s.count(i[0]), i[0])[i[0].isdigit()]} {i[1:-1]} {(s.count(i[-1]), i[-1])[i[-1].isdigit()]}") for i in w]
