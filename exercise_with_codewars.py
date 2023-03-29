@@ -15109,3 +15109,6 @@ def solve(xs):
 # The work comes as a number workload which indicates how many jobs there are. Bob wants his servers to get an
 # equal number of jobs each. If that is impossible, he wants the first
 # servers to receive more jobs. He also wants the jobs sorted, so that the first server receives the first jobs.
+def distribute(nodes, workload):
+    l = list(range(workload))[::-1]
+    return [[l.pop() for _ in range(workload // nodes + (workload % nodes > i))] for i in range(nodes)]
