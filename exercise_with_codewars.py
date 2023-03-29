@@ -15191,3 +15191,11 @@ def isHappy(n, pow):
 # Your task is to write the function longest_sequence(n) that either finds
 # the longest consecutive sequence of squares that sums to the number n,
 # or determines that no such sequence exists.
+def longest_sequence(n):
+    for i in range(1, int(n**0.5)+1):
+        x, j = 0, i
+        while x < n:
+            x += j*j
+            j += 1
+        if x == n: return list(range(i, j))
+    return []
