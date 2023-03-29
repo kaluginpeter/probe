@@ -15183,3 +15183,11 @@ def isHappy(n, pow):
         n = sum([i**pow for i in map(int, str(n))])
         if n == 1: return [1]
         if n in l: return l[l.index(n):] + [n]
+
+# In this kata you're expected to find the longest
+# consecutive sequence of positive squares that sums up to a number.
+# E.g,
+# ** 595 = 62 + 72 + 82 + 92 + 102 + 112 + 122 **.
+# Your task is to write the function longest_sequence(n) that either finds
+# the longest consecutive sequence of squares that sums to the number n,
+# or determines that no such sequence exists.
