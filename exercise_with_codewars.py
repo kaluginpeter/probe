@@ -15169,3 +15169,10 @@ def sum_of_threes(n):
             n -= 3**i
             if n == 0: return '+'.join('3^{}'.format(i) for i in l)
     return 'Impossible'
+
+# This can also be done with powers other than 2.
+# Complete the function that receives 2 arguments: the starting number and
+# the exponent. It should return an array of numbers containing whatever loop
+# it encounters, or [1] if it doesn't encounter any. This array should only
+# include the numbers in the loop, not any that lead into the loop, and
+# should repeat the first number as the last number e.g.:
