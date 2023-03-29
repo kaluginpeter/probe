@@ -15160,3 +15160,12 @@ def solve(x,y):
 
 # Given a number n, return a string representing it as a
 # sum of distinct powers of three, or return "Impossible" if that's not possible to achieve.
+import math
+def sum_of_threes(n):
+    l = []
+    for i in range(round(math.log(n, 3)), -1, -1):
+        if 3**i <= n:
+            l.append(i)
+            n -= 3**i
+            if n == 0: return '+'.join('3^{}'.format(i) for i in l)
+    return 'Impossible'
