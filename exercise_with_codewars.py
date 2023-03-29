@@ -15176,3 +15176,10 @@ def sum_of_threes(n):
 # it encounters, or [1] if it doesn't encounter any. This array should only
 # include the numbers in the loop, not any that lead into the loop, and
 # should repeat the first number as the last number e.g.:
+def isHappy(n, pow):
+    l = []
+    while True:
+        l.append(n)
+        n = sum([i**pow for i in map(int, str(n))])
+        if n == 1: return [1]
+        if n in l: return l[l.index(n):] + [n]
