@@ -15117,3 +15117,6 @@ def distribute(nodes, workload):
 # You will be given two numbers a and b. Your task is to return
 # the a-digit palindrome at position b if the palindromes were arranged in increasing order.
 # Therefore, palin(4,2) = 1111, because that is the second element of the 4-digit palindrome series.
+def palin(a,b):
+    wor = str(10**((a-1)//2) + b-1)
+    return int(wor+wor[::-1][a%2:])
