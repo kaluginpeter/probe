@@ -15098,3 +15098,9 @@ def string_evaluation(s, w):
 
 # In this Kata, we will calculate the minimum positive number that is not a possible
 # sum from a list of positive integers.
+def solve(xs):
+    c = 0
+    for i in sorted(xs):
+        if i > c + 1: break
+        c += i
+    return c + 1
