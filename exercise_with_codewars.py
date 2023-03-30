@@ -15259,3 +15259,6 @@ def random_ints(n, total):
 def riemann_trapezoidal(f, n, a, b):
     c = (b-a)/n
     return round(sum(f(a+i*c)+f(a+(i+1)*c) for i in range(n))*c/2, 2)
+
+# This kata will return a string that represents the difference of two
+# perfect squares as the sum of consecutive odd numbers.
