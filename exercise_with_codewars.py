@@ -15291,3 +15291,9 @@ def find(arr,n,l = -1):
     for k, v in enumerate(arr):
         c += find(arr[0 : k + 1], n - v, l - 1)
     return c
+
+# You are given a positive integer (n), and your task is to
+# find the largest number less than n, which can be written in the form
+# a**b, where a can be any non-negative integer and b is an integer
+# greater than or equal to 2. Try not to make the code time out :)
+# The input range is from 1 to 1,000,000.
