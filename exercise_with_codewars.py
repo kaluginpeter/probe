@@ -15262,3 +15262,5 @@ def riemann_trapezoidal(f, n, a, b):
 
 # This kata will return a string that represents the difference of two
 # perfect squares as the sum of consecutive odd numbers.
+def squares_to_odd(a, b):
+    return f'{a}^2 - {b}^2 = {" + ".join(map(str, range(2 * b + 1, 2 * a, 2)))} = {a ** 2 - b ** 2}'
