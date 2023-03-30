@@ -15212,3 +15212,6 @@ def count_cows(n):
 # involving recursively-defined objects. They are named after the Belgian
 # mathematician Eugène Charles Catalan (1814–1894).
 # Using zero-based numbering, the nth Catalan number is given directly in terms of binomial coefficients by:
+import math
+def nth_catalan_number(n):
+    return math.factorial(2*n) // math.factorial(n+1) // math.factorial(n)
