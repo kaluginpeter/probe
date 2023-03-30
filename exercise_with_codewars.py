@@ -15199,3 +15199,7 @@ def longest_sequence(n):
             j += 1
         if x == n: return list(range(i, j))
     return []
+
+# Consider having a cow that gives a child every year from her fourth
+# year of life on and all her subsequent children do the same.
+# After n years how many cows will you have?
