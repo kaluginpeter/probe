@@ -15268,3 +15268,11 @@ def squares_to_odd(a, b):
 # This kata was seen in programming competitions with a wide range of variations. A strict bouncy
 # array of numbers, of length three or longer, is an array that
 # each term (neither the first nor the last element) is strictly higher or lower than its neighbours.
+def longest_bouncy_list(arr):
+    l, s = [], []
+    for v in arr:
+        if not l or v!=l[-1] and (len(l)==1 or (l[-1]-l[-2]) * (l[-1]-v) > 0):
+            l.append(v)
+        else: l = l[-1:] + [v] if v != l[-1] else [v]
+        if len(l)>len(s): s = l
+    return s
