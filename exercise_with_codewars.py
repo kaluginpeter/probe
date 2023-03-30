@@ -15256,3 +15256,6 @@ def random_ints(n, total):
 # approximation of the integral by using trapezoids instead of rectangles. The left/right side
 # rules have a serious bias and the trapezoidal rules averages those
 # approximations! The same assumptions exist but are pasted here for convenience.
+def riemann_trapezoidal(f, n, a, b):
+    c = (b-a)/n
+    return round(sum(f(a+i*c)+f(a+(i+1)*c) for i in range(n))*c/2, 2)
