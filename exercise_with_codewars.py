@@ -15206,3 +15206,9 @@ def longest_sequence(n):
 def count_cows(n):
     if not isinstance(n, int): return None
     return count_cows(n-1) + count_cows(n-3) if n > 2 else 1
+
+# In combinatorial mathematics, the Catalan numbers form a sequence of
+# natural numbers that occur in various counting problems, often
+# involving recursively-defined objects. They are named after the Belgian
+# mathematician Eugène Charles Catalan (1814–1894).
+# Using zero-based numbering, the nth Catalan number is given directly in terms of binomial coefficients by:
