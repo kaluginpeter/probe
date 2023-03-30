@@ -15250,3 +15250,9 @@ def random_ints(n, total):
         l.append(randint(0, total))
         total -= l[-1]
     return [*l, total]
+
+# Part 2/3 of my kata series. Part 1
+# The description changes little in this second part. Here we simply want to improve our
+# approximation of the integral by using trapezoids instead of rectangles. The left/right side
+# rules have a serious bias and the trapezoidal rules averages those
+# approximations! The same assumptions exist but are pasted here for convenience.
