@@ -15243,3 +15243,10 @@ def find_number(start, stop, string):
 # in JavaScript/CoffeeScript) that takes two parameters, n and total, that will randomly
 # identify n non-negative integers that sum to the total. Note that [1, 2, 3, 4]
 # and [2, 3, 4, 1] are considered to be 'the same array' when it comes to this kata.
+from random import randint
+def random_ints(n, total):
+    l = []
+    for i in range(n-1):
+        l.append(randint(0, total))
+        total -= l[-1]
+    return [*l, total]
