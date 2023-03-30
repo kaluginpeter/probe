@@ -15283,3 +15283,11 @@ def longest_bouncy_list(arr):
 # should be less than or equal to the length of the initial array ([3,6,9,12]).
 # Given an array of positive integers and a number n, count all combinations with repetition of
 # integers that sum to n. For example:
+def find(arr,n,l = -1):
+    if l < 0: l = len(arr)
+    if n == 0: return 1
+    if l == 0: return 0
+    c = 0
+    for k, v in enumerate(arr):
+        c += find(arr[0 : k + 1], n - v, l - 1)
+    return c
