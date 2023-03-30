@@ -15264,3 +15264,7 @@ def riemann_trapezoidal(f, n, a, b):
 # perfect squares as the sum of consecutive odd numbers.
 def squares_to_odd(a, b):
     return f'{a}^2 - {b}^2 = {" + ".join(map(str, range(2 * b + 1, 2 * a, 2)))} = {a ** 2 - b ** 2}'
+
+# This kata was seen in programming competitions with a wide range of variations. A strict bouncy
+# array of numbers, of length three or longer, is an array that
+# each term (neither the first nor the last element) is strictly higher or lower than its neighbours.
