@@ -15215,3 +15215,12 @@ def count_cows(n):
 import math
 def nth_catalan_number(n):
     return math.factorial(2*n) // math.factorial(n+1) // math.factorial(n)
+
+# My tired eyes surveyed the horizon to spot a right triangle, made of an unknown
+# material that sparkles in the endless void I have trekked thus far.
+# I hurried towards it. However far it seemed, it can't compare to
+# the uncounted days I have been trapped here in this endless void. To break the monotony, it shall do nicely.
+# Reaching the triangle, I inspected it. It is even more spectacular up close
+# than a far, like a piece of the heavens, just as grand as the best Hubble photo
+# I've ever seen. Adorned onto its striking surface were two numbers, each hugging a side of the
+# triangle in white chalk.
