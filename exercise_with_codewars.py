@@ -15238,3 +15238,8 @@ from collections import Counter
 def find_number(start, stop, string):
     c = Counter(i for i in range(start, stop + 1) for i in str(i)) - Counter(string)
     return [i for i in range(start, stop + 1) if Counter(str(i)) == c]
+
+# Your job is to create a function, (random_ints in Ruby/Python/Crystal, and randomInts
+# in JavaScript/CoffeeScript) that takes two parameters, n and total, that will randomly
+# identify n non-negative integers that sum to the total. Note that [1, 2, 3, 4]
+# and [2, 3, 4, 1] are considered to be 'the same array' when it comes to this kata.
