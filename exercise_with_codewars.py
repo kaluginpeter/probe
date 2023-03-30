@@ -15234,3 +15234,7 @@ def how_to_find_them(right_triangle):
 # In this kata, you will be given a string containing numbers from a to b,
 # one number can be missing from these numbers, then the string will
 # be shuffled, you're expected to return an array of all possible missing numbers.
+from collections import Counter
+def find_number(start, stop, string):
+    c = Counter(i for i in range(start, stop + 1) for i in str(i)) - Counter(string)
+    return [i for i in range(start, stop + 1) if Counter(str(i)) == c]
