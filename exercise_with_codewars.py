@@ -15230,3 +15230,7 @@ def how_to_find_them(right_triangle):
     elif "b" not in d: d["b"] = (d["c"] ** 2 - d["a"] ** 2) ** 0.5
     else: d["c"] = (d["a"] ** 2 + d["b"] ** 2) ** 0.5
     return d
+
+# In this kata, you will be given a string containing numbers from a to b,
+# one number can be missing from these numbers, then the string will
+# be shuffled, you're expected to return an array of all possible missing numbers.
