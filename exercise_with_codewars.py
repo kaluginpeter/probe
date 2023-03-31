@@ -15390,3 +15390,7 @@ def tiaosheng(failed_counter):
         s += 1
         if s in failed_counter: c += 3
     return s
+
+# Our cells go through a process called protein synthesis to translate the
+# instructions in DNA into an amino acid chain, or polypeptide.
+# Your job is to replicate this!
