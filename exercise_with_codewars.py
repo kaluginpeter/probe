@@ -15316,3 +15316,6 @@ def largest_power(n):
 # For example, you can call the University of Waterloo by dialing the memorable TUT-GLOP.
 # Sometimes only part of the number is used to spell a word.
 # When you get back to your hotel tonight you can order a pizza from Gino's by dialing 310-GINO.
+def find_duplicate_phone_numbers(phone_numbers):
+    l  = [a.upper().translate(str.maketrans('ABCDEFGHIJKLMNOPRSTUVWXY', '222333444555666777888999')).replace('-','') for a in phone_numbers]
+    return sorted(['{}-{}:{}'.format(i[:3], i[3:], l.count(i)) for i in set(l) if l.count(i)>1])
