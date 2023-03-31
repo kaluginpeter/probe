@@ -15333,3 +15333,14 @@ def find_arr(arrA, arrB, rng, wanted):
     m += (m % 2 == 1) == (wanted == 'even')
     r = range(m, n+1, 2)
     return [i for i in r if cA[i] > 1 and cB[i] > 1]
+
+# Mr.Odd is my friend. Some of his common dialogues are “Am I looking odd?” , “It’s looking
+# very odd” etc. Actually “odd” is his favorite word.
+# In this valentine when he went to meet his girlfriend. But he forgot to take gift. Because
+# of this he told his gf that he did an odd thing. His gf became angry and gave him punishment.
+# His gf gave him a string str of contain only lowercase letter and told him,
+# “You have to take 3 index i,j,k such that i<j<k and str[i]
+# =‘o’,str[j]=’d’,str[k]=’d’ and cut them from the string and make
+# a new string “odd”. How many string you can make?”
+# Mr.Odd wants to impress his gf so he want to make maximum number of “odd”. As he is lazy, he
+# ask you to help him and tell him maximum number of “odd” he an make.
