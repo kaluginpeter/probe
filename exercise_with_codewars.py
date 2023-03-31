@@ -15410,3 +15410,5 @@ def build_palindrome(s):
 # A number is called Chando's if it is an integer that can be
 # represented as a sum of different positive integer powers of 5.
 # The first Chando's numbers is 5 (5^1). And the following nth Chando's numbers are:
+def nth_chandos_number(number):
+    return int((bin(number) + "0")[2:], 5)
