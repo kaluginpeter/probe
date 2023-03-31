@@ -15417,3 +15417,5 @@ def nth_chandos_number(number):
 # that he has n rocks in the pile, then he goes to the store to buy labels for enumeration.
 # Each of the labels is a digit from 0 to 9 and each of the n rocks should be assigned a unique number from 1 to n.
 # If each label costs $1, how much money will Vanya spend on this project?
+def rocks(n):
+    return int(n + 1 - 10**(len(str(n))-1)) * len(str(n)) + sum(9 * i * 10**(i - 1) for i in range(len(str(n))))
