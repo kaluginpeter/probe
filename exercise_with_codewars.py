@@ -15405,3 +15405,8 @@ def build_palindrome(s):
     for i in range(len(s), -1, -1):
         if s[:i] == s[:i][::-1]: return s[i:][::-1] + s
         if s[-i:] == s[-i:][::-1]: return s + s[:-i][::-1]
+
+# The sequence of Chando is an infinite sequence of all Chando's numbers in ascending order.
+# A number is called Chando's if it is an integer that can be
+# represented as a sum of different positive integer powers of 5.
+# The first Chando's numbers is 5 (5^1). And the following nth Chando's numbers are:
