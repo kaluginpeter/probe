@@ -15344,3 +15344,12 @@ def find_arr(arrA, arrB, rng, wanted):
 # a new string “odd”. How many string you can make?”
 # Mr.Odd wants to impress his gf so he want to make maximum number of “odd”. As he is lazy, he
 # ask you to help him and tell him maximum number of “odd” he an make.
+def odd(s):
+    s, c, g = ''.join(i for i in s if i in 'od'), 0, 2
+    for i,j in enumerate(s):
+        if j=='o' and s[i:].count('d')>=g:
+            c+=1
+            g+=2
+        if j=='d': g-=1
+        if g<2: g=2
+    return c
