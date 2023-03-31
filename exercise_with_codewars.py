@@ -15394,3 +15394,8 @@ def tiaosheng(failed_counter):
 # Our cells go through a process called protein synthesis to translate the
 # instructions in DNA into an amino acid chain, or polypeptide.
 # Your job is to replicate this!
+def protein_synthesis(dna):
+    word = str.maketrans("ACGT", "UGCA")
+    rna = dna.translate(word)
+    l = [rna[i:i+3] for i in range(0, len(rna), 3)]
+    return " ".join(l), " ".join(CODON_DICT[i] for i in l if i in CODON_DICT)
