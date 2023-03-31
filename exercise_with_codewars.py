@@ -15319,3 +15319,10 @@ def largest_power(n):
 def find_duplicate_phone_numbers(phone_numbers):
     l  = [a.upper().translate(str.maketrans('ABCDEFGHIJKLMNOPRSTUVWXY', '222333444555666777888999')).replace('-','') for a in phone_numbers]
     return sorted(['{}-{}:{}'.format(i[:3], i[3:], l.count(i)) for i in set(l) if l.count(i)>1])
+
+# We are given two arrays of integers A and B and we have to output a sorted
+# array with the integers that fulfill the following constraints:
+# they are present in both ones
+# they occur more than once in A and more than once in B
+# their values are within a given range
+# thay are odd or even according as it is requeste
