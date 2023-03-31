@@ -15357,3 +15357,4 @@ def odd(s):
 # In this Golfing Kata, you are going to do simple things:
 # Reverse a string; then
 # Return the index of first uppercase letter.
+f=lambda s:s[-1]>"Z"and-~f(s[:-1])
