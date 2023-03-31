@@ -15401,3 +15401,7 @@ def protein_synthesis(dna):
     return " ".join(l), " ".join(CODON_DICT[i] for i in l if i in CODON_DICT)
 
 # Given a string, add the fewest number of characters possible from the front or back to make it a palindrome.
+def build_palindrome(s):
+    for i in range(len(s), -1, -1):
+        if s[:i] == s[:i][::-1]: return s[i:][::-1] + s
+        if s[-i:] == s[-i:][::-1]: return s + s[:-i][::-1]
