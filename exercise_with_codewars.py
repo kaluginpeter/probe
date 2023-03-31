@@ -15399,3 +15399,5 @@ def protein_synthesis(dna):
     rna = dna.translate(word)
     l = [rna[i:i+3] for i in range(0, len(rna), 3)]
     return " ".join(l), " ".join(CODON_DICT[i] for i in l if i in CODON_DICT)
+
+# Given a string, add the fewest number of characters possible from the front or back to make it a palindrome.
