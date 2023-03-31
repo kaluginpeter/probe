@@ -15358,3 +15358,9 @@ def odd(s):
 # Reverse a string; then
 # Return the index of first uppercase letter.
 f=lambda s:s[-1]>"Z"and-~f(s[:-1])
+
+# Implement the "count" decorator, which adds an attribute "call_count" to a function
+# passed in to it, and increments it every time the function is called.
+# The behavior of the decorated function must be the same as before. Your
+# decorator must be well-behaved, i.e. the returned function must have the
+# same name and docstring as the original, and must be able to handle the same arguments.''
