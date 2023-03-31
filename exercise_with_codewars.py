@@ -15383,3 +15383,10 @@ def count_calls(func):
 # Your task is to calculate how many times the child jumped in 60 seconds.
 # Note: Each child persisted at least 60 jumps, which meant it could have
 # been over 60 seconds, but the child continued to skip rope.
+def tiaosheng(failed_counter):
+    c, s = 0, 0
+    while c < 60:
+        c += 1
+        s += 1
+        if s in failed_counter: c += 3
+    return s
