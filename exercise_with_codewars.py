@@ -15310,3 +15310,9 @@ def largest_power(n):
         l.append(a)
         f = (max(l),l.count(max(l)))
     return f
+    #
+# Businsses like to have memorable telephone numbers. One way to make a telephone number
+# memorable is to have it spell a memorable word or phrase.
+# For example, you can call the University of Waterloo by dialing the memorable TUT-GLOP.
+# Sometimes only part of the number is used to spell a word.
+# When you get back to your hotel tonight you can order a pizza from Gino's by dialing 310-GINO.
