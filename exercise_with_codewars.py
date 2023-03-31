@@ -15372,3 +15372,14 @@ def count_calls(func):
         return func(*args, **kwargs)
     wrapper.call_count = 0
     return wrapper
+
+# Some children are playing rope skipping game. Children skip the rope at roughly
+# the same speed: once per second. If the child fails during the jump, he needs to tidy
+# up the rope and continue. This will take 3 seconds.
+# You are given an array failedCount, where each element is the jump count at the
+# failed. ie. [12,23,45] means the child failed 3 times in the game
+# process. The 1st mistake occurred when he jumped 12 times; The 2nd mistake occurred when he jumped
+# 23 times; The 3rd mistake occurred when he jumped 45 times.
+# Your task is to calculate how many times the child jumped in 60 seconds.
+# Note: Each child persisted at least 60 jumps, which meant it could have
+# been over 60 seconds, but the child continued to skip rope.
