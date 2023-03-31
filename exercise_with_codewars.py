@@ -15326,3 +15326,10 @@ def find_duplicate_phone_numbers(phone_numbers):
 # they occur more than once in A and more than once in B
 # their values are within a given range
 # thay are odd or even according as it is requeste
+from collections import Counter
+def find_arr(arrA, arrB, rng, wanted):
+    cA, cB = Counter(arrA), Counter(arrB)
+    m, n = rng
+    m += (m % 2 == 1) == (wanted == 'even')
+    r = range(m, n+1, 2)
+    return [i for i in r if cA[i] > 1 and cB[i] > 1]
