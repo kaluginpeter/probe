@@ -15412,3 +15412,8 @@ def build_palindrome(s):
 # The first Chando's numbers is 5 (5^1). And the following nth Chando's numbers are:
 def nth_chandos_number(number):
     return int((bin(number) + "0")[2:], 5)
+
+# Vanya gets bored one day and decides to enumerate a large pile of rocks. He first counts the rocks and finds out
+# that he has n rocks in the pile, then he goes to the store to buy labels for enumeration.
+# Each of the labels is a digit from 0 to 9 and each of the n rocks should be assigned a unique number from 1 to n.
+# If each label costs $1, how much money will Vanya spend on this project?
