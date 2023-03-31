@@ -15353,3 +15353,7 @@ def odd(s):
         if j=='d': g-=1
         if g<2: g=2
     return c
+
+# In this Golfing Kata, you are going to do simple things:
+# Reverse a string; then
+# Return the index of first uppercase letter.
