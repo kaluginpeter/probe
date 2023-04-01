@@ -15428,3 +15428,6 @@ def rocks(n):
 # and v2 (B's speed, integer > 0) and a lead g (integer > 0) how long will it take B to catch A?
 # The result will be an array [hour, min, sec] which is the time
 # needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
+def race(v1, v2, g):
+    t = 3600 * g/(v2-v1)
+    return None if v2 < v1 else [int(t/3600), int(t/60%60), int(t%60)]
