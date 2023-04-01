@@ -15446,3 +15446,13 @@ def words_to_object(s):
 # Indexes start at 0 and have to match with output indexing: no gap is allowed.
 # Finally tuples aren't necessarily ordered by index.
 # If any condition is invalid, the function should return False.
+def denumerate(enum_list):
+    try:
+        d = dict(enum_list)
+        maximum = max(d) + 1
+        s = ''.join(d[i] for i in range(maximum))
+        if s.isalnum() and len(s) == maximum:
+            return s
+    except (KeyError, TypeError, ValueError):
+        pass
+    return False
