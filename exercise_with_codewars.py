@@ -15472,3 +15472,6 @@ def oddest(a):
 # and a number n. You have to extract n smallest elements out of the array preserving their original order.
 def performant_smallest(arr, n):
     return [arr[i] for i in sorted(sorted(range(len(arr)), key=lambda k: arr[k])[:n])]
+
+# There are n bears in the orchard and they picked a lot of apples.
+# They distribute apples like this:
