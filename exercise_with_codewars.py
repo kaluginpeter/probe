@@ -15436,3 +15436,13 @@ def race(v1, v2, g):
 # whitespaces. Let's say it is a sequence of patterns: a name and a corresponding number - like this:
 def words_to_object(s):
     return '[' + ', '.join("{name : '%s', id : '%s'}" % (k, v) for k, v in zip(s.split()[::2], s.split()[1::2])) + ']'
+
+# You have to rebuild a string from an enumerated list.
+# For this task, you have to check if input is correct beforehand.
+# Input must be a list of tuples
+# Each tuple has two elements.
+# Second element is an alphanumeric character.
+# First element is the index of this character into the reconstructed string.
+# Indexes start at 0 and have to match with output indexing: no gap is allowed.
+# Finally tuples aren't necessarily ordered by index.
+# If any condition is invalid, the function should return False.
