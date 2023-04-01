@@ -15498,3 +15498,7 @@ def calculate_improved(students):
 # You are given an array of positive and negative integers and a
 # number n and n > 1. The array may have elements that occurs more than once.
 # Find all the combinations of n elements of the array that their sum are 0.
+from itertools import combinations
+def find_zero_sum_groups(arr, n):
+    l = sorted(sorted(i) for i in combinations(set(arr), n) if sum(i) == 0)
+    return l if len(l) > 1 else l[0] if l else "No combinations" if arr else "No elements to combine"
