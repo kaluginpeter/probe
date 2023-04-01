@@ -15467,3 +15467,6 @@ def oddest(a):
     n = max((v for k, v in a), default=-1)
     a = [k for k, v in a if v == n]
     if len(a) == 1: return a[0]
+
+# You will be given an array of integers in a [1; 50] range,
+# and a number n. You have to extract n smallest elements out of the array preserving their original order.
