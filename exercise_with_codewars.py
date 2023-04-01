@@ -15456,3 +15456,8 @@ def denumerate(enum_list):
     except (KeyError, TypeError, ValueError):
         pass
     return False
+
+# Given a finite list of integral ( not necessarily non-negative ) numbers, determine
+# the number that is odder than the rest.
+# If there is no single such number, no number is odder
+# than the rest; return Nothing, null or a similar empty value.
