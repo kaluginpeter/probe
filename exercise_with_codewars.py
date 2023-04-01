@@ -15461,3 +15461,9 @@ def denumerate(enum_list):
 # the number that is odder than the rest.
 # If there is no single such number, no number is odder
 # than the rest; return Nothing, null or a similar empty value.
+def oddest(a):
+    f = lambda x: 1e6 if x == -1 else x % 2 and 1 + f(x // 2) or 0
+    a = [(i, f(i)) for i in a]
+    n = max((v for k, v in a), default=-1)
+    a = [k for k, v in a if v == n]
+    if len(a) == 1: return a[0]
