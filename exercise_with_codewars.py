@@ -15487,3 +15487,6 @@ def whatpimeans(alpha = 'abcdefghijklmnopqrstuvwxyz'):
     code = [int(crypt[i:i+2]) for i in range(0, len(crypt), 2)]
     s = ''.join(d[i] for i in code)
     return s
+
+# Your task is to compelete the function calculateImproved to return an
+# array sorted by most improved as percentages.
