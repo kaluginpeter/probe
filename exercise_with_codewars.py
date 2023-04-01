@@ -15504,3 +15504,6 @@ def find_zero_sum_groups(arr, n):
     return l if len(l) > 1 else l[0] if l else "No combinations" if arr else "No elements to combine"
 
 # Your task is to find the last non-zero digit of n! (factorial).
+def last_digit(n):
+    if n < 10: return [1, 1, 2, 6, 4, 2, 2, 4, 2, 8][n]
+    return (4 if int(str(n)[-2]) % 2 else 6) * last_digit(n // 5) * last_digit(n % 10) % 10
