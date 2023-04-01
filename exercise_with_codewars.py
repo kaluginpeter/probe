@@ -15419,3 +15419,12 @@ def nth_chandos_number(number):
 # If each label costs $1, how much money will Vanya spend on this project?
 def rocks(n):
     return int(n + 1 - 10**(len(str(n))-1)) * len(str(n)) + sum(9 * i * 10**(i - 1) for i in range(len(str(n))))
+
+# Two tortoises named A and B must run a race. A starts with an average
+# speed of 720 feet per hour. Young B knows she runs faster than A, and furthermore has not finished her cabbage.
+# When she starts, at last, she can see that A has a 70 feet lead
+# but B's speed is 850 feet per hour. How long will it take B to catch A?
+# More generally: given two speeds v1 (A's speed, integer > 0)
+# and v2 (B's speed, integer > 0) and a lead g (integer > 0) how long will it take B to catch A?
+# The result will be an array [hour, min, sec] which is the time
+# needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
