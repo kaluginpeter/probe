@@ -15477,3 +15477,6 @@ def performant_smallest(arr, n):
 # They distribute apples like this:
 def how_many_apples(n):
     return 7 if n == 2 else n**n - n + 1
+
+# Well, for my first kata, I did a mess. Would you help me, please, to make my code work ?
+# I'm sure I didn't mix the numbers, but all the rest...
