@@ -15502,3 +15502,5 @@ from itertools import combinations
 def find_zero_sum_groups(arr, n):
     l = sorted(sorted(i) for i in combinations(set(arr), n) if sum(i) == 0)
     return l if len(l) > 1 else l[0] if l else "No combinations" if arr else "No elements to combine"
+
+# Your task is to find the last non-zero digit of n! (factorial).
