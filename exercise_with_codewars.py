@@ -15431,3 +15431,6 @@ def rocks(n):
 def race(v1, v2, g):
     t = 3600 * g/(v2-v1)
     return None if v2 < v1 else [int(t/3600), int(t/60%60), int(t%60)]
+
+# You're given a string containing a sequence of words separated with
+# whitespaces. Let's say it is a sequence of patterns: a name and a corresponding number - like this:
