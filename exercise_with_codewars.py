@@ -15434,3 +15434,5 @@ def race(v1, v2, g):
 
 # You're given a string containing a sequence of words separated with
 # whitespaces. Let's say it is a sequence of patterns: a name and a corresponding number - like this:
+def words_to_object(s):
+    return '[' + ', '.join("{name : '%s', id : '%s'}" % (k, v) for k, v in zip(s.split()[::2], s.split()[1::2])) + ']'
