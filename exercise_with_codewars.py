@@ -15475,3 +15475,5 @@ def performant_smallest(arr, n):
 
 # There are n bears in the orchard and they picked a lot of apples.
 # They distribute apples like this:
+def how_many_apples(n):
+    return 7 if n == 2 else n**n - n + 1
