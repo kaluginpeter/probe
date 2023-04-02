@@ -15575,3 +15575,5 @@ def fire(x,y):
 # Note: The input will always be valid (a positive integer)
 def make_move(sticks):
     return sticks%4
+
+# You have read the title: you must guess a sequence. It will have something to do with the number given.
