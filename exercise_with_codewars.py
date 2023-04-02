@@ -15567,3 +15567,5 @@ class BatmanQuotes(object):
 
 # Ready! Set! Fire... but where should you fire?
 # The battlefield is 3x3 wide grid. HQ has already provided you with an array for easier computing:
+def fire(x,y):
+    return grid[y*3+x]
