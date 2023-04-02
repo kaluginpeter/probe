@@ -15518,3 +15518,5 @@ def oddest(a):
 # The callback function can be, for example, a mathematical
 # function that will be applied on each element of this array. Optionally, also
 # write tests similar to the examples below.
+def process_array(arr, callback):
+    return [callback(i) for i in arr]
