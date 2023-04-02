@@ -15523,3 +15523,5 @@ def process_array(arr, callback):
 
 # Complete the function so that it takes an array of keys and a default value
 # and returns a hash (Ruby) / dictionary (Python) with all keys set to the default value.
+def populate_dict(keys, default):
+    return {i:default for i in keys}
