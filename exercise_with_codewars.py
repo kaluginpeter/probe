@@ -15577,3 +15577,5 @@ def make_move(sticks):
     return sticks%4
 
 # You have read the title: you must guess a sequence. It will have something to do with the number given.
+def sequence(x):
+    return sorted(range(1, x+1), key=str)
