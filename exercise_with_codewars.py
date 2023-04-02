@@ -15527,3 +15527,9 @@ def populate_dict(keys, default):
     return {i:default for i in keys}
 
 # Write a method, that replaces every nth char oldValue with char newValue.
+def replace_nth(text, n, old, new):
+    if n <= 0: return text
+    s = list(text)
+    l = [i for i, c in enumerate(s) if c == old]
+    for i in l[n-1::n]: s[i] = new
+    return ''.join(s)
