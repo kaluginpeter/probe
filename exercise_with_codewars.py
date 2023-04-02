@@ -15569,3 +15569,7 @@ class BatmanQuotes(object):
 # The battlefield is 3x3 wide grid. HQ has already provided you with an array for easier computing:
 def fire(x,y):
     return grid[y*3+x]
+
+# Create a robot that will always win the game. Your robot will always go first.
+# The function should take an integer and returns 1, 2, or 3.
+# Note: The input will always be valid (a positive integer)
