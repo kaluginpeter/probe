@@ -15564,3 +15564,6 @@ class BatmanQuotes(object):
     def get_quote(quotes, hero):
         i = next((int(x) for x in hero if x.isdigit()))
         return BatmanQuotes.l[i] + ": " + quotes[i]
+
+# Ready! Set! Fire... but where should you fire?
+# The battlefield is 3x3 wide grid. HQ has already provided you with an array for easier computing:
