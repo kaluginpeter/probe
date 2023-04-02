@@ -15542,3 +15542,8 @@ def replace_nth(text, n, old, new):
 # the original function invoked with the supplied arguments.
 def make_lazy(*args):
     return lambda: args[0](*args[1:])
+
+# Write a method that returns true if a given parameter is a
+# power of 4, and false if it's not. If parameter
+# is not an Integer (eg String, Array) method should return false as well.
+# (In C# Integer means all integer Types like Int16,Int32,.....)
