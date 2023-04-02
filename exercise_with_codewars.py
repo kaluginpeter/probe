@@ -15551,3 +15551,10 @@ from math import log
 def powerof4(n):
     if type(n) in (float, int) and n > 0: return log(n, 4).is_integer()
     return False
+
+# Batman & Robin have gotten into quite a pickle this time. The Joker has mixed
+# up their iconic quotes and also replaced one of the characters in their names, with a number.
+# They need help getting things back in order.
+# Implement the getQuote method which takes in an array of quotes, and a string comprised
+# of letters and a single number (e.g. "Rob1n") where the number corresponds
+# to their quote indexed in the passed in array.
