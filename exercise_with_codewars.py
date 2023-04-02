@@ -15525,3 +15525,5 @@ def process_array(arr, callback):
 # and returns a hash (Ruby) / dictionary (Python) with all keys set to the default value.
 def populate_dict(keys, default):
     return {i:default for i in keys}
+
+# Write a method, that replaces every nth char oldValue with char newValue.
