@@ -15520,3 +15520,6 @@ def oddest(a):
 # write tests similar to the examples below.
 def process_array(arr, callback):
     return [callback(i) for i in arr]
+
+# Complete the function so that it takes an array of keys and a default value
+# and returns a hash (Ruby) / dictionary (Python) with all keys set to the default value.
