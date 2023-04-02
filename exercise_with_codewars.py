@@ -15511,3 +15511,5 @@ def last_digit(n):
 # Given a non-empty finite list of unique integral ( not necessarily
 # non-negative ) numbers, determine the number that is odder than the rest.
 # Given the constraints, there will always be exactly one such number.
+def oddest(a):
+    return max(a, key=lambda x: f'{x+2**32:b}'[::-1])
