@@ -15558,3 +15558,9 @@ def powerof4(n):
 # Implement the getQuote method which takes in an array of quotes, and a string comprised
 # of letters and a single number (e.g. "Rob1n") where the number corresponds
 # to their quote indexed in the passed in array.
+class BatmanQuotes(object):
+    l = ['Batman', 'Robin', 'Joker']
+    @staticmethod
+    def get_quote(quotes, hero):
+        i = next((int(x) for x in hero if x.isdigit()))
+        return BatmanQuotes.l[i] + ": " + quotes[i]
