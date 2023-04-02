@@ -15540,3 +15540,5 @@ def replace_nth(text, n, old, new):
 # Write a method make_lazy that takes in a function (symbol for Ruby) and the arguments to
 # the function and returns another function (lambda for Ruby) which when invoked, returns the result of
 # the original function invoked with the supplied arguments.
+def make_lazy(*args):
+    return lambda: args[0](*args[1:])
