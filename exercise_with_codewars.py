@@ -15547,3 +15547,7 @@ def make_lazy(*args):
 # power of 4, and false if it's not. If parameter
 # is not an Integer (eg String, Array) method should return false as well.
 # (In C# Integer means all integer Types like Int16,Int32,.....)
+from math import log
+def powerof4(n):
+    if type(n) in (float, int) and n > 0: return log(n, 4).is_integer()
+    return False
