@@ -15631,3 +15631,5 @@ def direction(facing, turn):
 # This kata is all about adding numbers.
 # You will create a function named add. It will return the sum of all the arguments. Sounds easy, doesn't it?
 # Well Here's the Twist. The inputs will gradually decrease with their index as parameter to the function.
+def add(*args):
+    return round(sum(v / (k+1) for k,v in enumerate(args)))
