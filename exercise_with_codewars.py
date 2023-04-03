@@ -15607,3 +15607,5 @@ def process_data(data):
 # warehouse. The function should take three arguments: the length, width, and height
 # of your warehouse (in feet) and should return an integer representing the number
 # of boxes you can store in that space.
+def box_capacity(length, width, height):
+    return (length * 12 // 16) * (width * 12 // 16) * (height * 12 // 16)
