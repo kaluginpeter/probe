@@ -15627,3 +15627,7 @@ def pagination_text(page_number, page_size, total_products):
 def direction(facing, turn):
     d = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
     return d[(turn // 45 + d.index(facing)) % 8]
+
+# This kata is all about adding numbers.
+# You will create a function named add. It will return the sum of all the arguments. Sounds easy, doesn't it?
+# Well Here's the Twist. The inputs will gradually decrease with their index as parameter to the function.
