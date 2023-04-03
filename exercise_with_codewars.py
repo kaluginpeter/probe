@@ -15619,3 +15619,8 @@ def pagination_text(page_number, page_size, total_products):
     f = page_size * (page_number - 1) + 1
     c = min(total_products, f + page_size - 1)
     return "Showing %d to %d of %d Products." % (f, c, total_products)
+
+# You receive the direction you are facing (one of the 8 directions: N, NE,
+# E, SE, S, SW, W, NW) and a certain degree to turn
+# (a multiple of 45, between -1080 and 1080); positive means clockwise, and negative means counter-clockwise.
+# Return the direction you will face after the turn.
