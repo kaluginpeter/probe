@@ -15584,3 +15584,7 @@ def sequence(x):
 from math import pi
 def square_area_to_circle(size):
     return size * pi / 4
+
+# One night you go for a ride on your motorcycle. At 00:00 you
+# start your engine, and the built-in timer automatically begins counting
+# the length of your ride, in minutes. Off you go to explore the neighborhood.
