@@ -15588,3 +15588,5 @@ def square_area_to_circle(size):
 # One night you go for a ride on your motorcycle. At 00:00 you
 # start your engine, and the built-in timer automatically begins counting
 # the length of your ride, in minutes. Off you go to explore the neighborhood.
+def late_ride(n):
+    return sum(map(int, str(n // 60)+str(n % 60)))
