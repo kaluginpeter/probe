@@ -15581,3 +15581,6 @@ def sequence(x):
     return sorted(range(1, x+1), key=str)
 
 # Turn an area of a square in to an area of a circle that fits perfectly inside the square.
+from math import pi
+def square_area_to_circle(size):
+    return size * pi / 4
