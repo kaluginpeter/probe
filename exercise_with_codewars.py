@@ -15633,3 +15633,7 @@ def direction(facing, turn):
 # Well Here's the Twist. The inputs will gradually decrease with their index as parameter to the function.
 def add(*args):
     return round(sum(v / (k+1) for k,v in enumerate(args)))
+
+# Write a program that calculates the number of grains of wheat on a
+# specific square of chessboard given that the number on each square is double the previous one.
+# There are 64 squares on a chessboard.
