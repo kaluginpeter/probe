@@ -15579,3 +15579,5 @@ def make_move(sticks):
 # You have read the title: you must guess a sequence. It will have something to do with the number given.
 def sequence(x):
     return sorted(range(1, x+1), key=str)
+
+# Turn an area of a square in to an area of a circle that fits perfectly inside the square.
