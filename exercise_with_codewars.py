@@ -15639,3 +15639,9 @@ def add(*args):
 # There are 64 squares on a chessboard.
 def square(number):
     return 2**(number-1)
+
+# This Kata is intended as a small challenge for my students
+# Create a function, called insurance(), that computes the cost of renting a car.
+# The function takes 3 arguments: the age of the renter, the size of
+# the car, and the number days for the rental. The function should return an integer
+# number of the calculated total cost of the rental.
