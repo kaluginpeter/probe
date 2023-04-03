@@ -15645,3 +15645,7 @@ def square(number):
 # The function takes 3 arguments: the age of the renter, the size of
 # the car, and the number days for the rental. The function should return an integer
 # number of the calculated total cost of the rental.
+def insurance(age, size, num_of_days):
+    d = {'economy': 0, 'medium': 10, 'full-size': 15}
+    if age < 25: return max(num_of_days * (60 + d[size] if size in d else 60 + d['full-size']), 0)
+    return max(num_of_days * (50 + d[size] if size in d else 50 + d['full-size']), 0)
