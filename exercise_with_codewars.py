@@ -15649,3 +15649,8 @@ def insurance(age, size, num_of_days):
     d = {'economy': 0, 'medium': 10, 'full-size': 15}
     if age < 25: return max(num_of_days * (60 + d[size] if size in d else 60 + d['full-size']), 0)
     return max(num_of_days * (50 + d[size] if size in d else 50 + d['full-size']), 0)
+
+# Oh no! Timmy's List Class has broken! Can you help timmy and fix his class? Timmy has a
+# List class he has created, this is used for type strict arrays (which timmy calls Lists).
+# When timmy calls the Count property of the list it still remains at 0 when adding items.
+# Also it fails when timmy trys to chain the adds e.g.
