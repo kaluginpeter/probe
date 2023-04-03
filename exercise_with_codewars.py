@@ -15590,3 +15590,7 @@ def square_area_to_circle(size):
 # the length of your ride, in minutes. Off you go to explore the neighborhood.
 def late_ride(n):
     return sum(map(int, str(n // 60)+str(n % 60)))
+
+# You have a two-dimensional list in the following format:
+# Each sub-list contains two items, and each item in the sub-lists is an integer.
+# Write a function process_data()/processData() that processes each sub-list like so:
