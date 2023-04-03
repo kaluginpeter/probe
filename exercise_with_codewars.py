@@ -15609,3 +15609,9 @@ def process_data(data):
 # of boxes you can store in that space.
 def box_capacity(length, width, height):
     return (length * 12 // 16) * (width * 12 // 16) * (height * 12 // 16)
+
+# A category page displays a set number of products per page, with
+# pagination at the bottom allowing the user to move from page to page.
+# Given that you know the page you are on, how many products are in
+# the category in total, and how many products are on any given page, how would you
+# output a simple string showing which products you are viewing..
