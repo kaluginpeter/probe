@@ -15637,3 +15637,5 @@ def add(*args):
 # Write a program that calculates the number of grains of wheat on a
 # specific square of chessboard given that the number on each square is double the previous one.
 # There are 64 squares on a chessboard.
+def square(number):
+    return 2**(number-1)
