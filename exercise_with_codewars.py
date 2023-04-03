@@ -15624,3 +15624,6 @@ def pagination_text(page_number, page_size, total_products):
 # E, SE, S, SW, W, NW) and a certain degree to turn
 # (a multiple of 45, between -1080 and 1080); positive means clockwise, and negative means counter-clockwise.
 # Return the direction you will face after the turn.
+def direction(facing, turn):
+    d = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+    return d[(turn // 45 + d.index(facing)) % 8]
