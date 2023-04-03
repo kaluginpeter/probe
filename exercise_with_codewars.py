@@ -15594,3 +15594,6 @@ def late_ride(n):
 # You have a two-dimensional list in the following format:
 # Each sub-list contains two items, and each item in the sub-lists is an integer.
 # Write a function process_data()/processData() that processes each sub-list like so:
+import math
+def process_data(data):
+    return math.prod(i-j for i,j in data)
