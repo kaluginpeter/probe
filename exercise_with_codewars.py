@@ -15697,3 +15697,8 @@ def quadratic_formula(a, b, c):
 def find_function(func,arr):
     for i in func:
         if not type(i) in (str, int): return [j for j in arr if i(j)]
+
+# Write a function that accepts two parameters, i) a string (containing a list of words) and
+# ii) an integer (n). The function should alphabetize the list based on the nth letter of each word.
+# The letters should be compared case-insensitive. If both letters are the same,
+# order them normally (lexicographically), again, case-insensitive.
