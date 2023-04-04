@@ -15732,3 +15732,5 @@ def to_binary(n):
 # Four men, a, b, c and d are standing in a line, one behind another.
 # There's a wall between the first three people (a, b and c) and the last one (d).
 # The men a, b and c are lined up in order of height, so that:
+def guess_hat_color(a,b,c,d):
+    return 1 if b == c else 2
