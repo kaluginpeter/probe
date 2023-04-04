@@ -15728,3 +15728,7 @@ def spinning_rings(inner_max, outer_max):
 # Your output should ignore leading 0s.
 def to_binary(n):
     return bin(2 ** 32 + n if n < 0 else n)[2:]
+
+# Four men, a, b, c and d are standing in a line, one behind another.
+# There's a wall between the first three people (a, b and c) and the last one (d).
+# The men a, b and c are lined up in order of height, so that:
