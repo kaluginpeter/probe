@@ -15734,3 +15734,8 @@ def to_binary(n):
 # The men a, b and c are lined up in order of height, so that:
 def guess_hat_color(a,b,c,d):
     return 1 if b == c else 2
+
+# Given a string, you progressively need to concatenate the first letter from the
+# left and the first letter to the right and "1", then the second letter from the left and
+# the second letter to the right and "2", and so on.
+# If the string's length is odd drop the central element.
