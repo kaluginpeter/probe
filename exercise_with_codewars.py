@@ -15726,3 +15726,5 @@ def spinning_rings(inner_max, outer_max):
 # Notes: negative numbers should be handled as two's complement; assume all numbers
 # are integers stored using 4 bytes (or 32 bits) in any language.
 # Your output should ignore leading 0s.
+def to_binary(n):
+    return bin(2 ** 32 + n if n < 0 else n)[2:]
