@@ -15702,3 +15702,5 @@ def find_function(func,arr):
 # ii) an integer (n). The function should alphabetize the list based on the nth letter of each word.
 # The letters should be compared case-insensitive. If both letters are the same,
 # order them normally (lexicographically), again, case-insensitive.
+def sort_it(list, n):
+    return ', '.join(sorted(list.split(', '), key=lambda x: x[n-1]))
