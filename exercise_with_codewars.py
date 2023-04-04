@@ -15712,3 +15712,10 @@ def sort_it(list, n):
 # same number at the top again?
 # The inner ring has integers from 0 to innerMax and the outer ring has integers from 0
 # to outerMax, where innerMax and outerMax are integers >= 1.
+def spinning_rings(inner_max, outer_max):
+    a, b, c = inner_max, 1, 1
+    while a != b:
+        a = (a + inner_max) % (inner_max+1)
+        b = (b + 1) % (outer_max+1)
+        c += 1
+    return c
