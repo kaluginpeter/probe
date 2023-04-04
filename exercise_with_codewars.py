@@ -15752,3 +15752,6 @@ def position(x, y, n):
 # In this kata you need to create a function that takes a 2D array/list of non-
 # negative integer pairs and returns the sum of all the "saving" that you
 # can have getting the LCM of each couple of number compared to their simple product.
+from math import lcm
+def sum_differences_between_products_and_LCMs(pairs):
+    return sum((x*y)-lcm(x,y) for x, y in pairs)
