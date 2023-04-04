@@ -15748,3 +15748,7 @@ def char_concat(word):
 # We find that the consecutive integers are [2, 3, 4, 5], so the integer at position 3 is 5.
 def position(x, y, n):
     return y//x - x//2 + (x % 2 == 0) + n
+
+# In this kata you need to create a function that takes a 2D array/list of non-
+# negative integer pairs and returns the sum of all the "saving" that you
+# can have getting the LCM of each couple of number compared to their simple product.
