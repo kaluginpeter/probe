@@ -15681,3 +15681,8 @@ def calculate_total(subtotal, tax, tip):
 # coefficients in a formula of the form ax^2 + bx + c = 0. Your function shoud return
 # a list with two elements where each element is one of the two roots. If the
 # formula produces a double root the result should be a list where both elements are that value.
+def quadratic_formula(a, b, c):
+    d = b**2 - 4 * a * c
+    root1 = (-b + d**.5) / (2 * a)
+    root2 = (-b - d**.5) / (2 * a)
+    return [root1, root2]
