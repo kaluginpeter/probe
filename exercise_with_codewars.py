@@ -15672,3 +15672,12 @@ class List:
 # result to two decimal places.
 def calculate_total(subtotal, tax, tip):
     return round(subtotal * (1 + tax / 100 + tip /100), 2)
+
+# Remember all those quadratic equations you had to solve by hand in highschool?
+# Well, no more! You're going to solve all the quadratic
+# equations you might ever[1] have to wrangle with in the future once and
+# for all by coding up the quadratic formula to handle them automatically.
+# Write a function quadratic_formula() that takes three arguments, a, b, and c that represent the
+# coefficients in a formula of the form ax^2 + bx + c = 0. Your function shoud return
+# a list with two elements where each element is one of the two roots. If the
+# formula produces a double root the result should be a list where both elements are that value.
