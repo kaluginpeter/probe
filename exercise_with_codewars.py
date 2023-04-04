@@ -15739,3 +15739,5 @@ def guess_hat_color(a,b,c,d):
 # left and the first letter to the right and "1", then the second letter from the left and
 # the second letter to the right and "2", and so on.
 # If the string's length is odd drop the central element.
+def char_concat(word):
+    return ''.join((word[x] + word[-1-x] + str(x+1)) for x in range(len(word)//2))
