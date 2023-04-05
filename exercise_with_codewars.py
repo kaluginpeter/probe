@@ -15803,3 +15803,6 @@ def sum_factorial(lst):
             c *= i
         return c
     return sum(fac(i) for i in lst)
+
+# You will get an array of numbers.
+# Every preceding number is smaller than the one following it.
