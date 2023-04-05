@@ -15761,3 +15761,7 @@ def sum_differences_between_products_and_LCMs(pairs):
 # Round your answers to two decimal places.
 def euclidean_distance(point1, point2):
     return round(sum((j - i)**2 for i, j in zip(point1, point2)) ** 0.5, 2)
+
+# Build a function that will take the length of each side of a
+# triangle and return if it's either an Equilateral, an Isosceles, a Scalene or an invalid triangle.
+# It has to return a string with the type of triangle.
