@@ -15772,3 +15772,5 @@ def type_of_triangle(a, b, c):
     if a == b and b == c: return "Equilateral"
     if a == b or a == c or b == c: return "Isosceles"
     return "Scalene"
+
+# Complete the function that returns the color of the given square on a normal, 8x8 chess board:
