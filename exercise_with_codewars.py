@@ -15780,3 +15780,5 @@ def square_color(file, c):
 #It's show time! Archers have gathered from all around the world to participate in
 # the Arrow Function Faire. But the faire will only start if there are archers signed and
 # if they all have enough arrows in their quivers - at least 5 is the requirement! Are all the archers ready?
+def archers_ready(archers):
+    return all(i > 4 for i in archers) if archers else False
