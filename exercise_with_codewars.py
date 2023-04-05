@@ -15796,3 +15796,10 @@ def get_number_of_squares(n):
 # Factorials are often used in probability and are used as an introductory
 # problem for looping constructs. In this kata you will be summing together multiple factorials.
 # Here are a few examples of factorials:
+def sum_factorial(lst):
+    def fac(n):
+        c = 1
+        for i in range(n, 0, -1):
+            c *= i
+        return c
+    return sum(fac(i) for i in lst)
