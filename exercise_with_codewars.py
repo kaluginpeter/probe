@@ -15809,3 +15809,8 @@ def sum_factorial(lst):
 def find_missing_numbers(arr):
     if arr: return [i for i in list(range(min(arr), max(arr)+1)) if i not in arr]
     return []
+
+# For an integer k rearrange all the elements of the given array in such way, that:
+# all elements that are less than k are placed before elements that are not less than k;
+# all elements that are less than k remain in the same order with respect to each other;
+# all elements that are not less than k remain in the same order with respect to each other.
