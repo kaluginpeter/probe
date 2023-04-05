@@ -15755,3 +15755,7 @@ def position(x, y, n):
 from math import lcm
 def sum_differences_between_products_and_LCMs(pairs):
     return sum((x*y)-lcm(x,y) for x, y in pairs)
+
+# Implement a function to calculate the distance between two points in n-dimensional space.
+# The two points will be passed to your function as arrays of the same length (tuples in Python).
+# Round your answers to two decimal places.
