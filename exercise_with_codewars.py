@@ -15782,3 +15782,7 @@ def square_color(file, c):
 # if they all have enough arrows in their quivers - at least 5 is the requirement! Are all the archers ready?
 def archers_ready(archers):
     return all(i > 4 for i in archers) if archers else False
+
+# Write a function getNumberOfSquares (C, F#, Haskell) / get_number_of_squares (Python, Ruby) that will
+# return how many integer (starting from 1, 2...) numbers raised to power
+# of 2 and then summed up are less than some number given as a parameter.
