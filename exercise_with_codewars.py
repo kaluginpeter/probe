@@ -15814,3 +15814,5 @@ def find_missing_numbers(arr):
 # all elements that are less than k are placed before elements that are not less than k;
 # all elements that are less than k remain in the same order with respect to each other;
 # all elements that are not less than k remain in the same order with respect to each other.
+def split_by_value(k, elements):
+    return sorted(elements, key=lambda x: x >= k)
