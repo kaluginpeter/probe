@@ -15828,3 +15828,10 @@ def ones_counter(input):
 # Your method must return 0 because the last digit of 610 is 0. Fibonacci sequence
 # grows very fast and value can take very big numbers (bigger than integer type can contain), so,
 # please, be careful with overflow.
+import sys
+sys.set_int_max_str_digits(maxdigits=0)
+def get_last_digit(index):
+    a, b = 0, 1
+    for i in range(index):
+        a, b = b, a + b
+    return int(str(a)[-1])
