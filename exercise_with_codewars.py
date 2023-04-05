@@ -15786,3 +15786,9 @@ def archers_ready(archers):
 # Write a function getNumberOfSquares (C, F#, Haskell) / get_number_of_squares (Python, Ruby) that will
 # return how many integer (starting from 1, 2...) numbers raised to power
 # of 2 and then summed up are less than some number given as a parameter.
+def get_number_of_squares(n):
+    s, c = 0, 0
+    while s < n:
+        c += 1
+        s += c**2
+    return c - 1
