@@ -15776,3 +15776,7 @@ def type_of_triangle(a, b, c):
 # Complete the function that returns the color of the given square on a normal, 8x8 chess board:
 def square_color(file, c):
     return 'white' if (ord(file) + c) % 2 else 'black'
+
+#It's show time! Archers have gathered from all around the world to participate in
+# the Arrow Function Faire. But the faire will only start if there are archers signed and
+# if they all have enough arrows in their quivers - at least 5 is the requirement! Are all the archers ready?
