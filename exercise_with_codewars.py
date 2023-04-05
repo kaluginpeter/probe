@@ -15792,3 +15792,7 @@ def get_number_of_squares(n):
         c += 1
         s += c**2
     return c - 1
+
+# Factorials are often used in probability and are used as an introductory
+# problem for looping constructs. In this kata you will be summing together multiple factorials.
+# Here are a few examples of factorials:
