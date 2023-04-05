@@ -15816,3 +15816,6 @@ def find_missing_numbers(arr):
 # all elements that are not less than k remain in the same order with respect to each other.
 def split_by_value(k, elements):
     return sorted(elements, key=lambda x: x >= k)
+
+# Tranform of input array of zeros and ones to array in which counts number of continuous
+# ones. If there is none, return an empty array
