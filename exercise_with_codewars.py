@@ -15819,3 +15819,5 @@ def split_by_value(k, elements):
 
 # Tranform of input array of zeros and ones to array in which counts number of continuous
 # ones. If there is none, return an empty array
+def ones_counter(input):
+    return [ch.count('1') for ch in ''.join(map(str, input)).split('0') if ch]
