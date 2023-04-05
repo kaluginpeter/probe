@@ -15774,3 +15774,5 @@ def type_of_triangle(a, b, c):
     return "Scalene"
 
 # Complete the function that returns the color of the given square on a normal, 8x8 chess board:
+def square_color(file, c):
+    return 'white' if (ord(file) + c) % 2 else 'black'
