@@ -15871,3 +15871,5 @@ def sort_transform(arr):
 # Write a function that returns the number of '2's in the factorization of a number.
 def two_count(n):
     return bin(n)[::-1].index('1')
+
+# Given a Hash made up of keys and values, invert the hash by swapping them.
