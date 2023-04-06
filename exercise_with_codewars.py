@@ -15845,3 +15845,8 @@ def get_the_vowels(word):
     for i in word:
         if i == "aeiou"[c % 5]: c += 1
     return c
+
+# In this Kata, you will be given a number, two indexes (index1 and index2)
+# and a digit to look for. Your task will be to check if the digit
+# exists in the number, within the indexes given.
+# Be careful, the index2 is not necessarily more than the index1.
