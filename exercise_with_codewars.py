@@ -15875,3 +15875,6 @@ def two_count(n):
 # Given a Hash made up of keys and values, invert the hash by swapping them.
 def invert_hash(dictionary):
     return {v:k for k,v in dictionary.items()}
+
+# Write a function helpZoom() that takes an array of integers containing 0 and 1 as
+# input and returns “Yes” or “No” depending on whether the given password is symmetric or not.
