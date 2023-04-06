@@ -15852,3 +15852,11 @@ def get_the_vowels(word):
 # Be careful, the index2 is not necessarily more than the index1.
 def check_digit(number, index1, index2, digit):
     return str(digit) in str(number)[min(index1, index2):max(index1, index2)+1]
+
+# Given an array of numbers, return a string made up of four parts:
+# a four character 'word', made up of the characters derived from the first two and last two
+# numbers in the array. order should be as read left to right (first, second, second last, last),
+# the same as above, post sorting the array into ascending order,
+# the same as above, post sorting the array into descending order,
+# the same as above, post converting the array into ASCII characters and sorting alphabetically.
+# The four parts should form a single string, each part separated by a hyphen (-).
