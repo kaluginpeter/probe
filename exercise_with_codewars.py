@@ -15878,3 +15878,5 @@ def invert_hash(dictionary):
 
 # Write a function helpZoom() that takes an array of integers containing 0 and 1 as
 # input and returns “Yes” or “No” depending on whether the given password is symmetric or not.
+def help_zoom(key):
+    return 'Yes' if key == key[::-1] else 'No'
