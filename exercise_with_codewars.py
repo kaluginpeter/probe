@@ -15869,3 +15869,5 @@ def sort_transform(arr):
     return f'{w1}-{w2}-{w2[::-1]}-{w2}'
 
 # Write a function that returns the number of '2's in the factorization of a number.
+def two_count(n):
+    return bin(n)[::-1].index('1')
