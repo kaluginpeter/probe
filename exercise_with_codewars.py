@@ -15906,3 +15906,7 @@ def graceful_tipping(bill):
     c = bill * 115 / 100
     su = 1 if c < 10 else 5 * 10 ** int(math.log10(c) - 1)
     return math.ceil(c / su) * su
+
+# You are given a function that should insert an asterisk (*) between every
+# pair of even digits in the given input, and return it as a string.
+# If the input is a sequence, concat the elements first as a string.
