@@ -15860,3 +15860,10 @@ def check_digit(number, index1, index2, digit):
 # the same as above, post sorting the array into descending order,
 # the same as above, post converting the array into ASCII characters and sorting alphabetically.
 # The four parts should form a single string, each part separated by a hyphen (-).
+def sor(arr): return ''.join(arr[:2]+arr[-2:])
+def sort_transform(arr):
+    arr = list(map(chr, arr))
+    w1  = sor(arr)
+    arr.sort()
+    w2  = sor(arr)
+    return f'{w1}-{w2}-{w2[::-1]}-{w2}'
