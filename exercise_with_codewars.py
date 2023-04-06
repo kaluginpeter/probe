@@ -15888,3 +15888,10 @@ def help_zoom(key):
 # Create a function, alexMistakes, that takes two arguments: the number of kata he needs to
 # complete, and the time in minutes he has to complete them. Your function should
 # return how many mistakes Alex can afford to make.
+def alex_mistakes(katas, time):
+    c, t, s = 0, 5, time - katas * 6
+    while s >= t:
+        s -= t
+        t *= 2
+        c += 1
+    return c
