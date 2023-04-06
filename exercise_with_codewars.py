@@ -15901,3 +15901,8 @@ def alex_mistakes(katas, time):
 # add at least 15% in tip, 2) round that number up to an elegant value and 3) return it.
 # What is an elegant number? It depends on the magnitude of the number to be rounded.
 # Numbers below 10 should simply be rounded to whole numbers. Numbers 10 and above should be rounded like this:
+import math
+def graceful_tipping(bill):
+    c = bill * 115 / 100
+    su = 1 if c < 10 else 5 * 10 ** int(math.log10(c) - 1)
+    return math.ceil(c / su) * su
