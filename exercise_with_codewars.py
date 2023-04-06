@@ -15914,3 +15914,10 @@ def asterisc_it(n):
     if type(n) == list: n = ''.join(str(i) for i in n)
     if type(n) == int : n = str(n)
     return ''.join([a + '*' if int(a) % 2 == 0 and int(b) % 2 == 0 else a for a,b in zip(n, n[1:])]) + n[-1]
+
+# In this exercise, you will create a function that takes an integer, i. With it you must do the following:
+# Find all of its multiples up to and including 100,
+# Then take the digit sum of each multiple (eg. 45 -> 4 + 5 = 9),
+# And finally, get the total sum of each new digit sum.
+# Note: If the digit sum of a number is more than 9 (eg. 99 -> 9 + 9 = 18) then
+# you do NOT have to break it down further until it reaches one digit.
