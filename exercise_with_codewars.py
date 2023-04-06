@@ -15850,3 +15850,5 @@ def get_the_vowels(word):
 # and a digit to look for. Your task will be to check if the digit
 # exists in the number, within the indexes given.
 # Be careful, the index2 is not necessarily more than the index1.
+def check_digit(number, index1, index2, digit):
+    return str(digit) in str(number)[min(index1, index2):max(index1, index2)+1]
