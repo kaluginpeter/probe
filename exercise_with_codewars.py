@@ -15921,3 +15921,5 @@ def asterisc_it(n):
 # And finally, get the total sum of each new digit sum.
 # Note: If the digit sum of a number is more than 9 (eg. 99 -> 9 + 9 = 18) then
 # you do NOT have to break it down further until it reaches one digit.
+def procedure(n):
+    return sum(int(j) for i in range(n, 101, n) for j in str(i))
