@@ -15873,3 +15873,5 @@ def two_count(n):
     return bin(n)[::-1].index('1')
 
 # Given a Hash made up of keys and values, invert the hash by swapping them.
+def invert_hash(dictionary):
+    return {v:k for k,v in dictionary.items()}
