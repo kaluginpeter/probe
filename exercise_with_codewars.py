@@ -16007,3 +16007,8 @@ def cup_and_balls(чашка_с_мячем, массив):
 
 # Groups of characters decided to make a battle. Help them to figure out what
 # group is more powerful. Create a function that will accept 2 variables and return the one who's stronger.
+def battle(первое_слово: str, второе_слово: str) -> str:
+    алфавит = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    сумма_первого_слова = sum(алфавит.index(буква)+1 if буква.isupper() else (алфавит.index(буква.upper())+1)/2 for буква in первое_слово)
+    сумма_второго_слова = sum(алфавит.index(буква)+1 if буква.isupper() else (алфавит.index(буква.upper())+1)/2 for буква in второе_слово)
+    return первое_слово if сумма_первого_слова > сумма_второго_слова else второе_слово if сумма_второго_слова > сумма_первого_слова else 'Tie!'
