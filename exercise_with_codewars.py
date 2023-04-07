@@ -16012,3 +16012,7 @@ def battle(первое_слово: str, второе_слово: str) -> str:
     сумма_первого_слова = sum(алфавит.index(буква)+1 if буква.isupper() else (алфавит.index(буква.upper())+1)/2 for буква in первое_слово)
     сумма_второго_слова = sum(алфавит.index(буква)+1 if буква.isupper() else (алфавит.index(буква.upper())+1)/2 for буква in второе_слово)
     return первое_слово if сумма_первого_слова > сумма_второго_слова else второе_слово if сумма_второго_слова > сумма_первого_слова else 'Tie!'
+
+# Your generator must take one parameter `a` then everytime the generator is called you must return
+# a string in the format of: `'a x b = c'` where c is the
+# answer. Also, the value of `b`, which starts at 1, must increment by 1 each time!
