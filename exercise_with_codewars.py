@@ -15961,3 +15961,8 @@ def expression_out(exp):
 # Repeat this process until you have a single integer, then return that integer. e.g.
 # Note: if the average of two digits is not an integer, round the result
 # up (e.g. the average of 8 and 9 will be 9)
+def digits_average(input):
+    l = [int(c) for c in str(input)]
+    while len(l) > 1:
+        l = [(a + b + 1)//2 for a, b in zip(l, l[1:])]
+    return l[0]
