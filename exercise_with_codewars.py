@@ -15966,3 +15966,6 @@ def digits_average(input):
     while len(l) > 1:
         l = [(a + b + 1)//2 for a, b in zip(l, l[1:])]
     return l[0]
+
+# You are given an array of up to four non-negative integers, each less than 256.
+# Your task is to pack these integers into one number M in the following way:
