@@ -16004,3 +16004,6 @@ def cup_and_balls(чашка_с_мячем, массив):
         if чашка_с_мячем in перемещений:
             чашка_с_мячем = sum(перемещений) - чашка_с_мячем
     return чашка_с_мячем
+
+# Groups of characters decided to make a battle. Help them to figure out what
+# group is more powerful. Create a function that will accept 2 variables and return the one who's stronger.
