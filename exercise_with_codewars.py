@@ -15994,3 +15994,8 @@ def describe_the_shape(angles):
     if 각도의합 > 0: 답변 = f"This shape has {angles} sides and each angle measures {각도의합}"
     else: 답변 = "this will be a line segment or a dot"
     return 답변
+
+# Ronny the robot is watching someone perform the Cups and Balls magic trick. The magician has
+# one ball and three cups, he shows Ronny which cup he hides the ball under (b),
+# he then mixes all the cups around by performing multiple two-cup switches (arr). Ronny can record the
+# switches but can't work out where the ball is. Write a programme to help him do this.
