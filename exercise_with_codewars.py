@@ -15923,3 +15923,7 @@ def asterisc_it(n):
 # you do NOT have to break it down further until it reaches one digit.
 def procedure(n):
     return sum(int(j) for i in range(n, 101, n) for j in str(i))
+
+# You are given an array with several "even" words, one "odd" word, and some numbers mixed in.
+# Determine if any of the numbers in the array is the index of the "odd" word. If so, return
+# true, otherwise false.
