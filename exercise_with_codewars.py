@@ -15956,3 +15956,8 @@ def expression_out(exp):
         return l[int(exp.split()[0])] +" "+ OPERATORS[exp.split()[1]] + l[int(exp.split()[2])]
     except:
         return "That's not an operator!"
+
+# Given an integer, take the (mean) average of each pair of consecutive digits.
+# Repeat this process until you have a single integer, then return that integer. e.g.
+# Note: if the average of two digits is not an integer, round the result
+# up (e.g. the average of 8 and 9 will be 9)
