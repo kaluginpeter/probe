@@ -15999,3 +15999,8 @@ def describe_the_shape(angles):
 # one ball and three cups, he shows Ronny which cup he hides the ball under (b),
 # he then mixes all the cups around by performing multiple two-cup switches (arr). Ronny can record the
 # switches but can't work out where the ball is. Write a programme to help him do this.
+def cup_and_balls(чашка_с_мячем, массив):
+    for перемещений in массив:
+        if чашка_с_мячем in перемещений:
+            чашка_с_мячем = sum(перемещений) - чашка_с_мячем
+    return чашка_с_мячем
