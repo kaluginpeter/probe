@@ -15971,3 +15971,6 @@ def digits_average(input):
 # Your task is to pack these integers into one number M in the following way:
 def array_packing(arr):
 	return sum(v * 256 ** k for k, v in enumerate(arr))
+
+# Given a non-empty array of non-empty integer arrays, multiply the contents of each nested
+# array and return the smallest total.
