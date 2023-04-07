@@ -15950,3 +15950,9 @@ def speed_limit(speed, signals):
 # Math hasn't always been your best subject, and these programming
 # symbols always trip you up! I mean, does ** mean "Times, Times" or "To
 # the power of"? Luckily, you can create the function to write out the expressions for you!
+def expression_out(exp):
+    try:
+        l = ['0','One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+        return l[int(exp.split()[0])] +" "+ OPERATORS[exp.split()[1]] + l[int(exp.split()[2])]
+    except:
+        return "That's not an operator!"
