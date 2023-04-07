@@ -15946,3 +15946,7 @@ def speed_limit(speed, signals):
         if 20 <= speed - i <= 29: c += 250
         if 30 <= speed - i: c += 500
     return c
+
+# Math hasn't always been your best subject, and these programming
+# symbols always trip you up! I mean, does ** mean "Times, Times" or "To
+# the power of"? Luckily, you can create the function to write out the expressions for you!
