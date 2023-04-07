@@ -16016,3 +16016,8 @@ def battle(первое_слово: str, второе_слово: str) -> str:
 # Your generator must take one parameter `a` then everytime the generator is called you must return
 # a string in the format of: `'a x b = c'` where c is the
 # answer. Also, the value of `b`, which starts at 1, must increment by 1 each time!
+def generator(a):
+    count = 1
+    while True:
+        yield f"{a} x {count} = {a * count}"
+        count += 1
