@@ -15969,3 +15969,5 @@ def digits_average(input):
 
 # You are given an array of up to four non-negative integers, each less than 256.
 # Your task is to pack these integers into one number M in the following way:
+def array_packing(arr):
+	return sum(v * 256 ** k for k, v in enumerate(arr))
