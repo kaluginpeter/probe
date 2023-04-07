@@ -15986,3 +15986,6 @@ def smallest_product(a):
 #         список_сумм.append(math.prod(список))
 #     минимальное_значение = min(список_сумм)
 #     return минимальное_значение
+
+# You will be given the number of angles of a shape with equal sides and angles,
+# and you need to return the number of its sides, and the measure of the interior angles.
