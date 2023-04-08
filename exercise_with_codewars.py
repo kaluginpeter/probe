@@ -16110,3 +16110,6 @@ def solve(arr):
     for k in range(1, len(arr)):
         l = [x * y for x in l for y in arr[k]]
     return max(l)
+
+# Sexy primes are pairs of two primes that are 6 apart. In this kata, your job is
+# to complete the function which returns true if x & y are sexy, false otherwise.
