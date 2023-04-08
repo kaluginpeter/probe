@@ -16078,3 +16078,5 @@ def skiponacci(n):
 # You can take a sheet, but not your blanket.
 # You can wear your glasses, but not your contacts.
 # Have you figured it out? Good! Then write a program that can figure it out as well.
+def step_through_with(s):
+    return any(i == j for i, j in zip(s, s[1:]))
