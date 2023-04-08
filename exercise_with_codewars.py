@@ -16113,3 +16113,6 @@ def solve(arr):
 
 # Sexy primes are pairs of two primes that are 6 apart. In this kata, your job is
 # to complete the function which returns true if x & y are sexy, false otherwise.
+from gmpy2 import is_prime
+def sexy_prime(x, y):
+    return abs(x - y) == 6 and is_prime(x) and is_prime(y)
