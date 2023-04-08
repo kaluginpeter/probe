@@ -16037,3 +16037,9 @@ def cube_times(times):
 # The unique numbers should be sorted by their original order, but the final
 # array should not be sorted in numerical order.
 # Check the assertion tests for examples.
+def unite_unique(*args):
+    l = []
+    for i in args:
+        for j in i:
+            if j not in l: l.append(j)
+    return l
