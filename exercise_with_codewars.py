@@ -16058,3 +16058,5 @@ def is_lucky(ticket):
 # companies were naming everything "i"-this and "e"-that, now that VÄxënmänïä has conquered the tech
 # world, any company that doesn't use Hëävÿ Mëtäl Ümläüts in ëvëry pössïblë pläcë is
 # looking hopelessly behind the times.
+def heavy_metal_umlauts(boring_text):
+    return boring_text.translate(str.maketrans('AOaoEUeuIYiy', 'ÄÖäöËÜëüÏŸïÿ'))
