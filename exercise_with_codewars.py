@@ -16101,3 +16101,7 @@ def reverse_factorial(num):
     c = 1
     while factorial(c) < num: c += 1
     return str(c) + '!' if factorial(c) == num else 'None'
+
+# In this Kata, you will be given a multi-dimensional array containing 2 or more sub-arrays
+# of integers. Your task is to find the maximum product that can be formed
+# by taking any one element from each sub-array.
