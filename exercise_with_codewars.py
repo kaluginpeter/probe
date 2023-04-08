@@ -16096,3 +16096,8 @@ def mapPopulationFit(population, fitness):
 # that it is a factorial of. So, if your function receives 120, it should return "5!" (as a string).
 # Of course, not every number is a factorial of another.
 # In this case, your function would return "None" (as a string).
+from math import factorial
+def reverse_factorial(num):
+    c = 1
+    while factorial(c) < num: c += 1
+    return str(c) + '!' if factorial(c) == num else 'None'
