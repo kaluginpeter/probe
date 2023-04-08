@@ -16021,3 +16021,9 @@ def generator(a):
     while True:
         yield f"{a} x {count} = {a * count}"
         count += 1
+
+# Speedcubing is the hobby involving solving a variety of twisty puzzles, the most famous being
+# the 3x3x3 puzzle or Rubik's Cube, as quickly as possible.
+# In the majority of Speedcubing competitions, a Cuber solves a scrambled cube 5 times, and their
+# result is found by taking the average of the middle 3 solves (ie. the slowest and fastest times are
+# disregarded, and an average is taken of the remaining times).
