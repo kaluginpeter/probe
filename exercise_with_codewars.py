@@ -16048,3 +16048,5 @@ def unite_unique(*args):
 # sum of the first three digits equals to the sum of the last three digits. Write a
 # function to find out whether the ticket is lucky or not. Return true if so, otherwise return
 # false. Consider that input is always a string. Watch examples below.
+def is_lucky(ticket):
+    return len(ticket) == 6 and ticket.isdigit() and sum(map(int, ticket[:3])) == sum(map(int, ticket[3:]))
