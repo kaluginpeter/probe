@@ -16062,3 +16062,10 @@ def heavy_metal_umlauts(boring_text):
     return boring_text.translate(str.maketrans('AOaoEUeuIYiy', 'ÄÖäöËÜëüÏŸïÿ'))
 
 # Your task is to generate the Fibonacci sequence to n places, with each alternating value as "skip". For example:
+def skiponacci(n):
+    l = []
+    a, b = 0, 1
+    for i in range(n):
+        a, b = a + b, a
+        l.append('skip' if i % 2 else str(a))
+    return ' '.join(l)
