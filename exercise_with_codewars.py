@@ -16060,3 +16060,5 @@ def is_lucky(ticket):
 # looking hopelessly behind the times.
 def heavy_metal_umlauts(boring_text):
     return boring_text.translate(str.maketrans('AOaoEUeuIYiy', 'ÄÖäöËÜëüÏŸïÿ'))
+
+# Your task is to generate the Fibonacci sequence to n places, with each alternating value as "skip". For example:
