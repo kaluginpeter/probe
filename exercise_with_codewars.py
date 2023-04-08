@@ -16087,3 +16087,5 @@ def step_through_with(s):
 # given two parameters, the population containing all individuals and a function fitness that determines
 # how close to the solution a chromosome is.
 # Your task is to return a collection containing an object with the chromosome and the calculated fitness.
+def mapPopulationFit(population, fitness):
+    return [ChromosomeWrap(i, fitness(i)) for i in population]
