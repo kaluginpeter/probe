@@ -16105,3 +16105,8 @@ def reverse_factorial(num):
 # In this Kata, you will be given a multi-dimensional array containing 2 or more sub-arrays
 # of integers. Your task is to find the maximum product that can be formed
 # by taking any one element from each sub-array.
+def solve(arr):
+    l = arr[0]
+    for k in range(1, len(arr)):
+        l = [x * y for x in l for y in arr[k]]
+    return max(l)
