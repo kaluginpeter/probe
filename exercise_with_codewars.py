@@ -16160,3 +16160,6 @@ def will_you(young, beautiful, loved):
 def sum_and_multiply(sum, multiply):
     for i in range(sum + 1):
             if i * (sum - i) == multiply: return [i, sum - i]
+
+# Given any number of boolean flags function should return true if and only if one
+# of them is true while others are false. If function is called without arguments it should return false.
