@@ -16211,3 +16211,6 @@ def vowel_start(s):
         if i in 'aeiouAEIOU': w += ' ' + i.lower()
         elif i.isalnum(): w += i.lower()
     return w.lstrip(' ')
+
+# Two numbers are relatively prime if their greatest common factor is 1; in other words:
+# if they cannot be divided by any other common numbers than 1.
