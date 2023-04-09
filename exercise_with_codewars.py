@@ -16214,3 +16214,6 @@ def vowel_start(s):
 
 # Two numbers are relatively prime if their greatest common factor is 1; in other words:
 # if they cannot be divided by any other common numbers than 1.
+from math import gcd
+def relatively_prime(n, l):
+    return [i for i in l if gcd(n, i) == 1]
