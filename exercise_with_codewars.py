@@ -16154,3 +16154,6 @@ def are_equally_strong(your_left, your_right, friends_left, friends_right):
 # A person contradicts Mary's belief if one of the following statements is true:
 def will_you(young, beautiful, loved):
     return (young and beautiful) != loved
+
+# Write a function that accepts two parameters (sum and multiply) and find two numbers
+# [x, y], where x + y = sum and x * y = multiply.
