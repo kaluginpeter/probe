@@ -16186,3 +16186,11 @@ def hypotenuse(a, b):
     return (a**2 + b**2)**.5
 def leg(c, a):
     return (c**2 - a**2)**.5
+
+# It is 2050 and romance has long gone, relationships exist solely for practicality.
+# MatchMyHusband is a website that matches busy working women with perfect house husbands. You
+# have been employed by MatchMyHusband to write a function that determines who matches!!
+# The rules are... a match occurs providing the husband's "usefulness" rating
+# is greater than or equal to the woman's "needs".
+# The husband's "usefulness" is the SUM of his cooking, cleaning
+# and childcare abilities and takes the form of an array .
