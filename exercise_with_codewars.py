@@ -16143,3 +16143,5 @@ def is_kiss(words):
 # Call two people equally strong if their strongest arms are equally strong (the strongest am can be
 # both the right and the left), and so are their weakest arms.
 # Given your and your friend's arms' lifting capabilities find out if you two are equally strong.
+def are_equally_strong(your_left, your_right, friends_left, friends_right):
+    return sorted([your_left, your_right]) == sorted([friends_left, friends_right])
