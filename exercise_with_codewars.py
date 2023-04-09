@@ -16205,3 +16205,9 @@ def match(usefulness, months):
 # order but every vowel in the sentence should be the start of a new word. The
 # first word in the new sentence may start without a vowel. It should return a string in all
 # lowercase with no punctuation (only alphanumeric characters).
+def vowel_start(s):
+    w = ''
+    for i in s:
+        if i in 'aeiouAEIOU': w += ' ' + i.lower()
+        elif i.isalnum(): w += i.lower()
+    return w.lstrip(' ')
