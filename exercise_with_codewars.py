@@ -16157,3 +16157,6 @@ def will_you(young, beautiful, loved):
 
 # Write a function that accepts two parameters (sum and multiply) and find two numbers
 # [x, y], where x + y = sum and x * y = multiply.
+def sum_and_multiply(sum, multiply):
+    for i in range(sum + 1):
+            if i * (sum - i) == multiply: return [i, sum - i]
