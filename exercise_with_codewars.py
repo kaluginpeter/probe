@@ -16194,3 +16194,8 @@ def leg(c, a):
 # is greater than or equal to the woman's "needs".
 # The husband's "usefulness" is the SUM of his cooking, cleaning
 # and childcare abilities and takes the form of an array .
+def match(usefulness, months):
+    c = 100
+    for i in range(months):
+        c = c - (c/100)*15
+    return 'Match!' if sum(usefulness) >= c else 'No match!'
