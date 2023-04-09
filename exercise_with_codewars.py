@@ -16138,3 +16138,8 @@ def remove_nth_element(lst, n):
 def is_kiss(words):
     if all(len(i) <= len(words.split()) for i in words.split()): return 'Good work Joe!'
     return 'Keep It Simple Stupid'
+
+# Call two arms equally strong if the heaviest weights they each are able to lift are equal.
+# Call two people equally strong if their strongest arms are equally strong (the strongest am can be
+# both the right and the left), and so are their weakest arms.
+# Given your and your friend's arms' lifting capabilities find out if you two are equally strong.
