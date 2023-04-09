@@ -16122,3 +16122,7 @@ def sexy_prime(x, y):
 # is already written for you and the basic tests pass, but random tests fail. Your
 # task is to figure out why and fix it.
 # Good luck!
+def remove_nth_element(lst, n):
+    lst_copy = lst.copy()
+    del lst_copy[n]
+    return lst_copy
