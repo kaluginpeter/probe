@@ -16152,3 +16152,5 @@ def are_equally_strong(your_left, your_right, friends_left, friends_right):
 # is quite a depressing thought, so she wants to put her belief to the test.
 # Knowing whether a person is young, beautiful and loved, find out if they contradict Mary's belief.
 # A person contradicts Mary's belief if one of the following statements is true:
+def will_you(young, beautiful, loved):
+    return (young and beautiful) != loved
