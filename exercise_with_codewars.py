@@ -16135,3 +16135,6 @@ def remove_nth_element(lst, n):
 # It is simple if: the length of each word does not exceed the amount of
 # words in the string (See example test cases)
 # Otherwise it is complex.
+def is_kiss(words):
+    if all(len(i) <= len(words.split()) for i in words.split()): return 'Good work Joe!'
+    return 'Keep It Simple Stupid'
