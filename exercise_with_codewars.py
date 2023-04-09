@@ -16182,3 +16182,7 @@ def only_one(*args):
 # leg(), which takes 2 integer arguments, the first being the length of the hypotenuse, and
 # the second being the length of a regular side of a right triangle. This function
 # should return the length of the missing regular side, as a number.
+def hypotenuse(a, b):
+    return (a**2 + b**2)**.5
+def leg(c, a):
+    return (c**2 - a**2)**.5
