@@ -16230,3 +16230,5 @@ def sea_sick(s):
     return "Throw Up" if (s.count("~_") + s.count("_~")) / len(s) > 0.2 else "No Problem"
 
 # Write a function that sums squares of numbers in list that may contain more lists
+def sumsquares(l):
+    return l**2 if type(l) != list else sum(sumsquares(i) for i in l)
