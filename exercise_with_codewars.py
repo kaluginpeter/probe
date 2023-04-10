@@ -16252,3 +16252,9 @@ def chinese_zodiac(year):
 # should contain an array of corresponding values.
 # keep order of values like in input array
 # if type is not presented in input, no corresponding property are expected
+def separate_types(seq):
+    d = {}
+    for i in seq:
+        if type(i) not in d: d[type(i)] = [i]
+        else: d[type(i)].append(i)
+    return d
