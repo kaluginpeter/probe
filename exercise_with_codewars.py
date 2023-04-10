@@ -16305,3 +16305,5 @@ def polydivisible(j):
 # the sum equals n. This set must consist exclusively of values that are a power
 # of 2 (eg: 2^0 => 1, 2^1 => 2, 2^2 => 4, ...).
 # The function powers takes a single parameter, the number n, and should return an array of unique numbers.
+def powers(n):
+    return [2**k for k, v in enumerate(f"{n:b}"[::-1]) if v == "1"]
