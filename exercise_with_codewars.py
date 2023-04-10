@@ -16312,3 +16312,5 @@ def powers(n):
 # Multiply by 3 every third number.
 # Multiply by -1 every fifth number.
 # Return the sum of the sequence.
+def calc(a):
+    return sum(v**(1 + (v>=0)) * (1 + 2*(not k%3)) * (-1)**(not k%5) for k, v in enumerate(a, 1))
