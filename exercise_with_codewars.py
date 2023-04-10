@@ -16286,3 +16286,15 @@ def remove(text, what):
 def divisible_by_last(n):
     l = list(map(int, f"0{n}"))
     return [i and not j%i for i,j in zip(l, l[1:])]
+
+# Most of this problem is by the original author of the harder kata, I just made it simpler.
+# I read a book recently, titled "Things to Make and Do in the
+# Fourth Dimension" by comedian and mathematician Matt Parker ( Youtube ), and in the first chapter of the book
+# Matt talks about problems he likes to solve in his head to take his mind off the fact that
+# he is in his dentist's chair, we've all been there!
+# The problem he talks about relates to polydivisible numbers, and I thought a
+# kata should be written on the subject as it's quite interesting. (Well it's interesting to me, so there!)
+# Polydivisib... huh what?
+# So what are they?
+# A polydivisible number is divisible in an unusual way. The first digit is cleanly
+# divisible by 1, the first two digits are cleanly divisible by 2, the first three by 3, and so on.
