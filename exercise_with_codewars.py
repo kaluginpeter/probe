@@ -16244,3 +16244,5 @@ def sumsquares(l):
 ##Task
 # Given a year, return the element and animal that year represents ("Element Animal"). For example
 # I'm born in 1998 so I'm an "Earth Tiger".
+def chinese_zodiac(year):
+    return f"{elements[(year-4)%10//2]} {animals[(year-4)%12]}"
