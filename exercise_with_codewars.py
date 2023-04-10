@@ -16246,3 +16246,9 @@ def sumsquares(l):
 # I'm born in 1998 so I'm an "Earth Tiger".
 def chinese_zodiac(year):
     return f"{elements[(year-4)%10//2]} {animals[(year-4)%12]}"
+
+# Given: a sequence of different type of values (number, string, boolean). You should return
+# an object with a separate properties for each of types presented in input. Each property
+# should contain an array of corresponding values.
+# keep order of values like in input array
+# if type is not presented in input, no corresponding property are expected
