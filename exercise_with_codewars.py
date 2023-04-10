@@ -16298,3 +16298,5 @@ def divisible_by_last(n):
 # So what are they?
 # A polydivisible number is divisible in an unusual way. The first digit is cleanly
 # divisible by 1, the first two digits are cleanly divisible by 2, the first three by 3, and so on.
+def polydivisible(j):
+    return all(int(str(j)[:i+1])%(i+1)==0 for i in range(len(str(j))))
