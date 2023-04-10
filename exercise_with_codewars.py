@@ -16228,3 +16228,5 @@ def relatively_prime(n, l):
 # of the array, return "Throw Up", if less, return "No Problem".
 def sea_sick(s):
     return "Throw Up" if (s.count("~_") + s.count("_~")) / len(s) > 0.2 else "No Problem"
+
+# Write a function that sums squares of numbers in list that may contain more lists
