@@ -16274,3 +16274,8 @@ def example_sort(arr, example_arr):
 
 # that takes in a string str(text in Python) and an object/hash/dict/Dictionary what
 # and returns a string with the chars removed in what. For example:
+def remove(text, what):
+    for k,v in what.items():
+        if k in text:
+            text = text.replace(k, '', v)
+    return text
