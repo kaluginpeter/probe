@@ -16271,3 +16271,6 @@ def example_sort(arr, example_arr):
                 l.append(i)
                 arr.remove(i)
     return l
+
+# that takes in a string str(text in Python) and an object/hash/dict/Dictionary what
+# and returns a string with the chars removed in what. For example:
