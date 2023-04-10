@@ -16300,3 +16300,8 @@ def divisible_by_last(n):
 # divisible by 1, the first two digits are cleanly divisible by 2, the first three by 3, and so on.
 def polydivisible(j):
     return all(int(str(j)[:i+1])%(i+1)==0 for i in range(len(str(j))))
+
+# Given a number n, you should find a set of numbers for which
+# the sum equals n. This set must consist exclusively of values that are a power
+# of 2 (eg: 2^0 => 1, 2^1 => 2, 2^2 => 4, ...).
+# The function powers takes a single parameter, the number n, and should return an array of unique numbers.
