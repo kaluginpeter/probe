@@ -16307,3 +16307,8 @@ def polydivisible(j):
 # The function powers takes a single parameter, the number n, and should return an array of unique numbers.
 def powers(n):
     return [2**k for k, v in enumerate(f"{n:b}"[::-1]) if v == "1"]
+
+# Square the numbers that are greater than zero.
+# Multiply by 3 every third number.
+# Multiply by -1 every fifth number.
+# Return the sum of the sequence.
