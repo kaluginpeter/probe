@@ -16226,3 +16226,5 @@ def relatively_prime(n, l):
 # the effect (really wave peak to trough but this will do). Find out
 # how many changes in level the string has and if that figure is more than 20%
 # of the array, return "Throw Up", if less, return "No Problem".
+def sea_sick(s):
+    return "Throw Up" if (s.count("~_") + s.count("_~")) / len(s) > 0.2 else "No Problem"
