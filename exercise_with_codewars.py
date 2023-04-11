@@ -16317,3 +16317,5 @@ def calc(a):
 
 # Suppose I have two vectors: (a1, a2, a3, ..., aN) and (b1, b2, b3, ..., bN). The
 # dot product between these two vectors is defined as:
+def is_orthogonal(u, v):
+    return sum(a * b for a, b in zip(u, v)) == 0
