@@ -16362,3 +16362,9 @@ def describeList(list):
 # We have two consecutive integers k1 and k2, k2 = k1 + 1
 # We need to calculate the lowest strictly positive integer n, such
 # that: the values nk1 and nk2 have the same digits but in different order.
+def find_lowest_int(k1):
+    k2, c = k1 + 1, 1
+    def digits(c):
+        return sorted(str(c))
+    while digits(c*k1) != digits(c*k2): c += 1
+    return c
