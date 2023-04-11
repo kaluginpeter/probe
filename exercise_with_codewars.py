@@ -16336,3 +16336,7 @@ def char_to_ascii(s):
         for i in s:
             if i not in d and i in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ': d[i] = ord(i)
         return d
+
+# You will be given two inputs: a string of words and a letter.
+# For each string, return the alphabetic character after every instance of letter(case insensitive).
+# If there is a number, punctuation or underscore following the letter, it should not be returned.
