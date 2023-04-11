@@ -16325,3 +16325,8 @@ def is_orthogonal(u, v):
 def factors(x):
     if not isinstance(x, int) or x < 1: return -1
     return [i for i in range(x, 0, -1) if x % i == 0]
+
+# Take a string and return a hash with all the ascii values of the characters in the
+# string. Returns nil if the string is empty. The key is the character, and
+# the value is the ascii value of the character. Repeated characters are to be ignored
+# and non-alphebetic characters as well.
