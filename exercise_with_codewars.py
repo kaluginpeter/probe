@@ -16319,3 +16319,6 @@ def calc(a):
 # dot product between these two vectors is defined as:
 def is_orthogonal(u, v):
     return sum(a * b for a, b in zip(u, v)) == 0
+
+# Create a function that takes a number and finds the factors of it, listing them in descending order in an array.
+# If the parameter is not an integer or less than 1, return -1. In C# return an empty array.
