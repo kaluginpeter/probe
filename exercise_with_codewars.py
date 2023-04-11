@@ -16340,3 +16340,5 @@ def char_to_ascii(s):
 # You will be given two inputs: a string of words and a letter.
 # For each string, return the alphabetic character after every instance of letter(case insensitive).
 # If there is a number, punctuation or underscore following the letter, it should not be returned.
+def comes_after(st, l):
+    return ''.join(j for i, j in zip(st, st[1:]) if i.lower() == l.lower() and j.isalpha())
