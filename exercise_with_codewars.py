@@ -16349,3 +16349,7 @@ def comes_after(st, l):
 # Input 1: Hours - Number of hours available to you to get your work done!
 # Input 2: Tasks - How many tasks you have to do througout the day
 # Input 3: Duration (minutes)- How long each of your tasks will take to complete
+def day_plan(hours, tasks, duration):
+    c = (hours * 60 - tasks * duration) / (tasks - 1) if tasks > 1 else 0
+    if c < 0: return "You're not sleeping tonight!"
+    return ([duration, round(c)] * tasks)[:-1]
