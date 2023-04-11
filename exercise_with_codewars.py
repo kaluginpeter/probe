@@ -16385,3 +16385,6 @@ def SumEvenFibonacci(limit):
         if not a % 2: c += a
         a, b = b, a + b
     return c
+
+# This is a question from codingbat
+# Given an integer n greater than or equal to 0, create and return an array with the following pattern:
