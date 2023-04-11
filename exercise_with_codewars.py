@@ -16373,3 +16373,5 @@ def find_lowest_int(k1):
 # input and then returns the index of the second occurrence of that letter in the string. If
 # there is no such letter in the string, then the function should return -1.
 # If the letter occurs only once in the string, then -1 should also be returned.
+def second_symbol(s, sym):
+    return [i for i in range(len(s)) if s[i] == sym][1] if sym in s and s.count(sym) > 1 else -1
