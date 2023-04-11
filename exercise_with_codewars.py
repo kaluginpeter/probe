@@ -16388,3 +16388,5 @@ def SumEvenFibonacci(limit):
 
 # This is a question from codingbat
 # Given an integer n greater than or equal to 0, create and return an array with the following pattern:
+def square_up(n):
+    return [k if k <= i else 0 for i in range(1, n+1) for k in range(n, 0, -1)]
