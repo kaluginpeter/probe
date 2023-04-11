@@ -16314,3 +16314,6 @@ def powers(n):
 # Return the sum of the sequence.
 def calc(a):
     return sum(v**(1 + (v>=0)) * (1 + 2*(not k%3)) * (-1)**(not k%5) for k, v in enumerate(a, 1))
+
+# Suppose I have two vectors: (a1, a2, a3, ..., aN) and (b1, b2, b3, ..., bN). The
+# dot product between these two vectors is defined as:
