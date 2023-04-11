@@ -16379,3 +16379,9 @@ def second_symbol(s, sym):
 # Write a func named SumEvenFibonacci that takes a parameter of type int and returns a value of type int
 # Generate all of the Fibonacci numbers starting with 1 and 2 and ending on the highest number before
 # exceeding the parameter's value
+def SumEvenFibonacci(limit):
+    a, b, c = 1, 1, 0
+    while a <= limit:
+        if not a % 2: c += a
+        a, b = b, a + b
+    return c
