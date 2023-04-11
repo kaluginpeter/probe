@@ -16375,3 +16375,7 @@ def find_lowest_int(k1):
 # If the letter occurs only once in the string, then -1 should also be returned.
 def second_symbol(s, sym):
     return [i for i in range(len(s)) if s[i] == sym][1] if sym in s and s.count(sym) > 1 else -1
+
+# Write a func named SumEvenFibonacci that takes a parameter of type int and returns a value of type int
+# Generate all of the Fibonacci numbers starting with 1 and 2 and ending on the highest number before
+# exceeding the parameter's value
