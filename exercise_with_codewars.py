@@ -16353,3 +16353,6 @@ def day_plan(hours, tasks, duration):
     c = (hours * 60 - tasks * duration) / (tasks - 1) if tasks > 1 else 0
     if c < 0: return "You're not sleeping tonight!"
     return ([duration, round(c)] * tasks)[:-1]
+
+# Write function describeList which returns "empty" if the list is empty or "singleton" if
+# it contains only one element or "longer"" if more.
