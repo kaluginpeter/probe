@@ -16358,3 +16358,7 @@ def day_plan(hours, tasks, duration):
 # it contains only one element or "longer"" if more.
 def describeList(list):
     return 'singleton' if len(list) == 1 else 'longer' if len(list) > 1 else 'empty'
+
+# We have two consecutive integers k1 and k2, k2 = k1 + 1
+# We need to calculate the lowest strictly positive integer n, such
+# that: the values nk1 and nk2 have the same digits but in different order.
