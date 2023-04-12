@@ -16396,3 +16396,8 @@ def square_up(n):
 # Mary has another puzzle book, and it's up to you to help
 # her out! This book is filled with zero-terminated substrings, and you have to
 # find the substring with the largest sum of its digits. For example, one puzzle looks like this:
+def largest_sum(s):
+    l = []
+    for i in s.split('0'):
+        l.append(sum(int(j) for j in i))
+    return max(l)
