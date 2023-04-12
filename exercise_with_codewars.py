@@ -16390,3 +16390,9 @@ def SumEvenFibonacci(limit):
 # Given an integer n greater than or equal to 0, create and return an array with the following pattern:
 def square_up(n):
     return [k if k <= i else 0 for i in range(1, n+1) for k in range(n, 0, -1)]
+
+# This kata is part of the collection Mary's Puzzle Books.
+# Zero Terminated Sum
+# Mary has another puzzle book, and it's up to you to help
+# her out! This book is filled with zero-terminated substrings, and you have to
+# find the substring with the largest sum of its digits. For example, one puzzle looks like this:
