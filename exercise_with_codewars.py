@@ -16417,3 +16417,7 @@ def corrections(x):
 # allow you to get any £5 notes return 0.
 def get_new_notes(salary,bills):
     return (salary - sum(bills)) // 5 if sum(bills) <= salary else 0
+
+# This kata is about static method that should return different values.
+# On the first call it must be 1, on the second and others - it must be a double from previous value.
+# Look tests for more examples, good luck :)
