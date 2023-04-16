@@ -16427,3 +16427,5 @@ class Class:
         res = Class.count
         Class.count *= 2
         return res
+
+# 2520. Count the Digits That Divide a Number Leet Code task
