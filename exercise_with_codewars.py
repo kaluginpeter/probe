@@ -16435,3 +16435,6 @@ class Solution:
         for i in str(num):
             if  num % int(i) == 0: c += 1
         return c
+
+# You are given two arrays arr1 and arr2, where arr2 always contains integers.
+# Write the function find_array(arr1, arr2) such that:
