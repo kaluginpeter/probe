@@ -16429,3 +16429,9 @@ class Class:
         return res
 
 # 2520. Count the Digits That Divide a Number Leet Code task
+class Solution:
+    def countDigits(self, num: int) -> int:
+        c = 0
+        for i in str(num):
+            if  num % int(i) == 0: c += 1
+        return c
