@@ -16443,3 +16443,6 @@ def find_array(arr1, arr2):
     return [arr1[i] for i in arr2]
 
 # 1431. Kids With the Greatest Number of Candies
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        return [i + extraCandies >= max(candies) for i in candies]
