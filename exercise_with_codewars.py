@@ -16474,3 +16474,6 @@ class Solution:
         ma = max(word1, word2, key=len)
         mi = min(word1, word2, key=len)
         return w + ma[-(len(ma)-len(mi)):]
+
+# Let's call a string cool if it is formed only by Latin letters and no
+# two lowercase and no two uppercase letters are in adjacent positions. Given a string, check if it is cool.
