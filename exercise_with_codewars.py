@@ -16477,3 +16477,5 @@ class Solution:
 
 # Let's call a string cool if it is formed only by Latin letters and no
 # two lowercase and no two uppercase letters are in adjacent positions. Given a string, check if it is cool.
+def cool_string(s):
+    return all(i.isalpha() for i in s) and all(i.isupper() and j.islower() if i.isupper() else i.islower() and j.isupper() for i,j in zip(s, s[1:]))
