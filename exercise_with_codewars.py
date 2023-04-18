@@ -16467,3 +16467,10 @@ def leader_b(u, us, ys):
     return s + ' Dammit!' if ((us-ys)//3) + ((us-ys)%3//1) > 1000 else s
 
 # 1768. Merge Strings Alternately
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        w = ''.join(i+j for i,j in zip(word1, word2))
+        if len(word1) == len(word2): return w
+        ma = max(word1, word2, key=len)
+        mi = min(word1, word2, key=len)
+        return w + ma[-(len(ma)-len(mi)):]
