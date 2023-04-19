@@ -16479,3 +16479,5 @@ class Solution:
 # two lowercase and no two uppercase letters are in adjacent positions. Given a string, check if it is cool.
 def cool_string(s):
     return all(i.isalpha() for i in s) and all(i.isupper() and j.islower() if i.isupper() else i.islower() and j.isupper() for i,j in zip(s, s[1:]))
+
+# 2553. Separate the Digits in an Array
