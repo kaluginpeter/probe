@@ -16494,3 +16494,5 @@ class Solution:
 # an empty array will not sum to zero.
 def is_zero_balanced(arr):
     return sum(arr) == 0 and all(abs(i) in arr if i < 0 else -i in arr for i in arr) if len(arr) > 0 else False
+
+# 2259. Remove Digit From Number to Maximize Result
