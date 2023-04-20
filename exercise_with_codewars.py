@@ -16496,3 +16496,10 @@ def is_zero_balanced(arr):
     return sum(arr) == 0 and all(abs(i) in arr if i < 0 else -i in arr for i in arr) if len(arr) > 0 else False
 
 # 2259. Remove Digit From Number to Maximize Result
+class Solution:
+    def removeDigit(self, number: str, digit: str) -> str:
+        l = []
+        for k,v in enumerate(number):
+            if v == digit:
+                l.append(number[:k] + number[k+1:])
+        return max(l)
