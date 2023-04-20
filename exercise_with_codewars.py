@@ -16503,3 +16503,10 @@ class Solution:
             if v == digit:
                 l.append(number[:k] + number[k+1:])
         return max(l)
+
+# Create a method (JS: function) every which returns every nth element of an array.
+# Usage
+# With no arguments, array.every it returns every element of the array.
+# With one argument, array.every(interval) it returns every intervalth element.
+# With two arguments, array.every(interval, start_index) it returns every intervalth
+# element starting at index start_index
