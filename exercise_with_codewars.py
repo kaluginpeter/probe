@@ -16514,3 +16514,5 @@ def every(array, interval = 0, start_index = 0):
     if interval == 0: return array
     if interval != 0 and start_index == 0: return array[::interval]
     if interval != 0 and start_index != 0: return array[start_index::interval]
+
+# 2129. Capitalize the Title
