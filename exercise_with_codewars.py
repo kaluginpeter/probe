@@ -16519,3 +16519,11 @@ def every(array, interval = 0, start_index = 0):
 class Solution:
     def capitalizeTitle(self, title: str) -> str:
         return ' '.join(i.lower() if len(i)<3 else i.title() for i in title.split())
+
+# Chingel is practicing for a rowing competition to be held on this saturday. He is trying
+# his best to win this tournament for which he needs to figure out how much
+# time it takes to cover a certain distance.
+# Input
+# You will be provided with the total distance of the journey, speed of the boat
+# and whether he is going downstream or upstream. The speed of the stream and direction
+# of rowing will be given as a string. Check example test cases!
