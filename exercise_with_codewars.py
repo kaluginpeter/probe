@@ -16527,3 +16527,6 @@ class Solution:
 # You will be provided with the total distance of the journey, speed of the boat
 # and whether he is going downstream or upstream. The speed of the stream and direction
 # of rowing will be given as a string. Check example test cases!
+def time(distance,boat_speed,stream):
+    boat_speed = boat_speed + int(stream.split()[1]) if stream[0] == 'D' else boat_speed - int(stream.split()[1])
+    return round(distance / boat_speed, 2)
