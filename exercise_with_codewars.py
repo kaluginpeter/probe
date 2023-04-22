@@ -16530,3 +16530,5 @@ class Solution:
 def time(distance,boat_speed,stream):
     boat_speed = boat_speed + int(stream.split()[1]) if stream[0] == 'D' else boat_speed - int(stream.split()[1])
     return round(distance / boat_speed, 2)
+
+# 2114. Maximum Number of Words Found in Sentences
