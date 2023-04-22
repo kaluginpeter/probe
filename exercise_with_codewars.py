@@ -16539,3 +16539,9 @@ class Solution:
 # Find all Backwards Read Primes between two positive given numbers (both inclusive), the second one
 # always being greater than or equal to the first one. The resulting array or the resulting
 # string will be ordered following the natural order of the prime numbers.
+from gmpy2 import is_prime
+def backwards_prime(start, stop):
+    l = []
+    for i in range(start, stop+1):
+        if is_prime(i) and is_prime(int(str(i)[::-1])) and str(i) != str(i)[::-1]: l.append(i)
+    return l
