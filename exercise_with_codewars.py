@@ -16532,3 +16532,6 @@ def time(distance,boat_speed,stream):
     return round(distance / boat_speed, 2)
 
 # 2114. Maximum Number of Words Found in Sentences
+class Solution:
+    def mostWordsFound(self, sentences: List[str]) -> int:
+        return max(len(i.split()) for i in sentences)
