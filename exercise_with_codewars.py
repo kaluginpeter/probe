@@ -16535,3 +16535,7 @@ def time(distance,boat_speed,stream):
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
         return max(len(i.split()) for i in sentences)
+
+# Find all Backwards Read Primes between two positive given numbers (both inclusive), the second one
+# always being greater than or equal to the first one. The resulting array or the resulting
+# string will be ordered following the natural order of the prime numbers.
