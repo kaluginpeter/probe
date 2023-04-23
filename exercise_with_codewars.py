@@ -16545,3 +16545,5 @@ def backwards_prime(start, stop):
     for i in range(start, stop+1):
         if is_prime(i) and is_prime(int(str(i)[::-1])) and str(i) != str(i)[::-1]: l.append(i)
     return l
+
+# 1832. Check if the Sentence Is Pangram
