@@ -16547,3 +16547,6 @@ def backwards_prime(start, stop):
     return l
 
 # 1832. Check if the Sentence Is Pangram
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        return all(i in sentence for i in 'abcdefghijklmnopqrstuvwxyz')
