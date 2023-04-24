@@ -16569,3 +16569,5 @@ def triangle_type(a, b, c):
     if all(i < 90 for i in l): return 1
     if any(i == 90 for i in l): return 2
     if any(i > 90 for i in l): return 3
+
+# 1046. Last Stone Weight
