@@ -16571,3 +16571,10 @@ def triangle_type(a, b, c):
     if any(i > 90 for i in l): return 3
 
 # 1046. Last Stone Weight
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        while len(stones) > 1:
+            a, b = sorted(stones)[-2::][::-1]
+            if a == b: stones.remove(a); stones.remove(b); continue
+            if a != b: stones[stones.index(a)] = a - b; stones.remove(b)
+        return stones[0] if stones else 0
