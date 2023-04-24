@@ -16583,3 +16583,9 @@ class Solution:
 # Can you find a pattern in it? If so, then write a function
 # getScore(n)/get_score(n)/GetScore(n) which returns the score for any positive number n.
 # Note Real test cases consists of 100 random cases where 1 <= n <= 10000
+def get_score(n):
+    count, s = 50, 0
+    for i in range(n):
+        s += count
+        count += 50
+    return s
