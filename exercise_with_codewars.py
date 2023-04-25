@@ -16596,3 +16596,12 @@ class Solution:
         c, d = 0, {'--X': -1, 'X--': -1, '++X': 1, 'X++': 1}
         for i in operations: c += d[i]
         return c
+
+# Primes that have only odd digits are pure odd digits primes, obvious but
+# necessary definition. Examples of pure odd digit primes are: 11,
+# 13, 17, 19, 31... If a prime has only one even digit
+# does not belong to pure odd digits prime, no matter the amount of odd digits that may have.
+# Create a function, only_oddDigPrimes(), that receive any positive integer
+# n, and output a list like the one below:
+# [number pure odd digit primes below n, largest pure odd
+# digit prime smaller than n, smallest pure odd digit prime higher than n]
