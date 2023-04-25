@@ -16591,3 +16591,8 @@ def get_score(n):
     return s
 
 # 2011. Final Value of Variable After Performing Operations
+class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
+        c, d = 0, {'--X': -1, 'X--': -1, '++X': 1, 'X++': 1}
+        for i in operations: c += d[i]
+        return c
