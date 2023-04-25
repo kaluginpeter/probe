@@ -16605,3 +16605,11 @@ class Solution:
 # n, and output a list like the one below:
 # [number pure odd digit primes below n, largest pure odd
 # digit prime smaller than n, smallest pure odd digit prime higher than n]
+from gmpy2 import is_prime, next_prime
+def only_oddDigPrimes(number):
+    l = list()
+    for i in range(number):
+        if is_prime(i) and all(int(j)%2!=0 for j in str(i)): l.append(i)
+    n_p = next_prime(max(l))
+    while not all(int(i) % 2 != 0 for i in str(n_p)): n_p = next_prime(n_p)
+    return [len(l), max(l), n_p]
