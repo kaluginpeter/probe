@@ -16613,3 +16613,5 @@ def only_oddDigPrimes(number):
     n_p = next_prime(max(l))
     while not all(int(i) % 2 != 0 for i in str(n_p)): n_p = next_prime(n_p)
     return [len(l), max(l), n_p]
+
+# 258. Add Digits
