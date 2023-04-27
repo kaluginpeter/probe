@@ -16633,3 +16633,5 @@ from gmpy2 import is_prime
 def find_emirp(n):
     l = set(i for i in range(13, n) if is_prime(i) and is_prime(int(str(i)[::-1])) and int(str(i)[::-1]) != i)
     return [len(l), max(l) if l else 0, sum(l) if l else 0]
+
+# 326. Power of Three
