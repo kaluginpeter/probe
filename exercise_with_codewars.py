@@ -16641,3 +16641,7 @@ class Solution:
         while 3**x < n:
             x += 1
         return 3**x == n
+
+# Check if a given input is a valid triangle number. Return true if
+# it is, false if it is not (note that any non-integers, including non-number types, are not triangle numbers).
+# You are encouraged to develop an effective algorithm: test cases include really big numbers.
