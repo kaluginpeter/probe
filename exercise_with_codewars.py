@@ -16635,3 +16635,9 @@ def find_emirp(n):
     return [len(l), max(l) if l else 0, sum(l) if l else 0]
 
 # 326. Power of Three
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        x = 0
+        while 3**x < n:
+            x += 1
+        return 3**x == n
