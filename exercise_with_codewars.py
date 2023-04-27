@@ -16645,3 +16645,10 @@ class Solution:
 # Check if a given input is a valid triangle number. Return true if
 # it is, false if it is not (note that any non-integers, including non-number types, are not triangle numbers).
 # You are encouraged to develop an effective algorithm: test cases include really big numbers.
+def is_triangle_number(number):
+    if not type(number) == int: return False
+    c = 1
+    while number > 0:
+        number -= c
+        c += 1
+    return number == 0
