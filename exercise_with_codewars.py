@@ -16654,3 +16654,11 @@ def is_triangle_number(number):
     return number == 0
 
 # 1323. Maximum 69 Number
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        l = []
+        l.append(num)
+        for k,v in enumerate(str(num)):
+            if str(num)[k] == '9': l.append(int(str(num)[:k] + '6' + str(num)[k+1:]))
+            else : l.append(int(str(num)[:k] + '9' + str(num)[k+1:]))
+        return max(l)
