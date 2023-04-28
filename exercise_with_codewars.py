@@ -16662,3 +16662,6 @@ class Solution:
             if str(num)[k] == '9': l.append(int(str(num)[:k] + '6' + str(num)[k+1:]))
             else : l.append(int(str(num)[:k] + '9' + str(num)[k+1:]))
         return max(l)
+
+# Complete the function that solves Feynman's question in general. The
+# input to your function will always be a positive integer.
