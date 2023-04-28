@@ -16665,3 +16665,5 @@ class Solution:
 
 # Complete the function that solves Feynman's question in general. The
 # input to your function will always be a positive integer.
+def count_squares(n):
+    return n * (n + 1) * (2 * n + 1) // 6
