@@ -16652,3 +16652,5 @@ def is_triangle_number(number):
         number -= c
         c += 1
     return number == 0
+
+# 1323. Maximum 69 Number
