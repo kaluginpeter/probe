@@ -16681,3 +16681,9 @@ class Solution:
 # on a specified function a given number of times. This new function takes in an
 # argument as a seed to start the computation from.
 # For instance, consider the function getDouble. When run twice on value 3, yields 12 as shown below.
+def create_iterator(func, n):
+    def first_fun(x):
+        for i in range(n):
+            x = func(x)
+        return x
+    return first_fun
