@@ -16676,3 +16676,8 @@ class Solution:
             if n not in s: s.add(n); n = sum(int(i)**2 for i in str(n))
             else: return False
         return True
+
+# The purpose of this kata is to write a higher-order function returning a new function that iterates
+# on a specified function a given number of times. This new function takes in an
+# argument as a seed to start the computation from.
+# For instance, consider the function getDouble. When run twice on value 3, yields 12 as shown below.
