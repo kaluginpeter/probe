@@ -16667,3 +16667,5 @@ class Solution:
 # input to your function will always be a positive integer.
 def count_squares(n):
     return n * (n + 1) * (2 * n + 1) // 6
+
+# 202. Happy Number
