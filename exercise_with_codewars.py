@@ -16687,3 +16687,5 @@ def create_iterator(func, n):
             x = func(x)
         return x
     return first_fun
+
+# 2660. Determine the Winner of a Bowling Game
