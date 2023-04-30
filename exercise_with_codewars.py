@@ -16736,3 +16736,5 @@ class Solution:
 # one quadrant or it crosses more. Return true if the segment lies in two
 # or more quadrants. If the segment lies within only one quadrant, return false.
 # There are two parameters: A (coord) and B (coord), the endpoints defining the segment AB.
+def quadrant_segment(A, B):
+    return (A[0] < 0, A[1] < 0) != (B[0] < 0, B[1] < 0)
