@@ -16731,3 +16731,8 @@ class Solution:
             else:
                 p2 += i
         return 1 if p1 > p2 else 2 if p2 > p1 else 0
+
+# Your task is to check whether a segment is completely in
+# one quadrant or it crosses more. Return true if the segment lies in two
+# or more quadrants. If the segment lies within only one quadrant, return false.
+# There are two parameters: A (coord) and B (coord), the endpoints defining the segment AB.
