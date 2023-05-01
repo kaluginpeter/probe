@@ -16738,3 +16738,5 @@ class Solution:
 # There are two parameters: A (coord) and B (coord), the endpoints defining the segment AB.
 def quadrant_segment(A, B):
     return (A[0] < 0, A[1] < 0) != (B[0] < 0, B[1] < 0)
+
+# 1491. Average Salary Excluding the Minimum and Maximum Salary
