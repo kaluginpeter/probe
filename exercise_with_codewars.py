@@ -16740,3 +16740,7 @@ def quadrant_segment(A, B):
     return (A[0] < 0, A[1] < 0) != (B[0] < 0, B[1] < 0)
 
 # 1491. Average Salary Excluding the Minimum and Maximum Salary
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        salary.remove(max(salary)); salary.remove(min(salary))
+        return sum(salary) / len(salary)
