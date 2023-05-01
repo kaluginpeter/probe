@@ -16757,3 +16757,10 @@ class Solution:
 # It is obvious that some of the numbers will never get deleted(E.g. 1,3,7,13..) and
 # hence are know to us as survivor numbers.
 # Given a number n, check whether its a survivor number or not.
+def survivor(n):
+    count = 2
+    while count <= n:
+        if n % count == 0: return False
+        n -= n // count
+        count += 1
+    return True
