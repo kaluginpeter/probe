@@ -16764,3 +16764,5 @@ def survivor(n):
         n -= n // count
         count += 1
     return True
+
+# 905. Sort Array By Parity
