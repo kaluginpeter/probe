@@ -16800,3 +16800,5 @@ def break_the_web(strength, width):
                 s += 1000
                 if width == 0: return c
         else: return c - 1
+        
+# 1089. Duplicate Zeros
