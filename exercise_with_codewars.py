@@ -16802,3 +16802,16 @@ def break_the_web(strength, width):
         else: return c - 1
         
 # 1089. Duplicate Zeros
+class Solution:
+    def duplicateZeros(self, arr: List[int]) -> None:
+        """
+        Do not return anything, modify arr in-place instead.
+        """
+        l, it = [], len(arr)
+        for i in range(it):
+            if arr[i] == 0:
+                l.append(0)
+                l.append(arr[i])
+            else:
+                l.append(arr[i])
+        arr[:] = l[:it]
