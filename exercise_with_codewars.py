@@ -16827,3 +16827,5 @@ class Solution:
 # on, in order to reach their target. While each correct solution will pass, for
 # more fun try to make a recursive function.
 # All inputs are valid positive integers.
+def mormons(starting_number, reach, target, count=0):
+    return count if starting_number >= target else mormons(starting_number+reach*starting_number, reach, target, count+1)
