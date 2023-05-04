@@ -16829,3 +16829,5 @@ class Solution:
 # All inputs are valid positive integers.
 def mormons(starting_number, reach, target, count=0):
     return count if starting_number >= target else mormons(starting_number+reach*starting_number, reach, target, count+1)
+    
+# 1550. Three Consecutive Odds
