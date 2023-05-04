@@ -16831,3 +16831,12 @@ def mormons(starting_number, reach, target, count=0):
     return count if starting_number >= target else mormons(starting_number+reach*starting_number, reach, target, count+1)
     
 # 1550. Three Consecutive Odds
+class Solution:
+    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        c = 0
+        for i in arr:
+            if i % 2 != 0:
+                c += 1
+                if c == 3: return True
+            else: c = 0
+        return False
