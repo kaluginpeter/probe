@@ -16852,3 +16852,7 @@ class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         a, b = sorted(nums, reverse=True)[:2]
         return (a - 1) * (b - 1)
+
+# A twin prime is a prime number that differs from another prime number
+# by 2. Write a function named is_twin_prime which takes an int parameter and returns
+# true if it is a twin prime, else false.
