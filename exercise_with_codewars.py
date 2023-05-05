@@ -16856,3 +16856,6 @@ class Solution:
 # A twin prime is a prime number that differs from another prime number
 # by 2. Write a function named is_twin_prime which takes an int parameter and returns
 # true if it is a twin prime, else false.
+from gmpy2 import is_prime
+def is_twinprime(n):
+    return is_prime(n) and (is_prime(n - 2) or is_prime(n + 2))
