@@ -16848,3 +16848,7 @@ def compare(a, b):
     return '100%' if fir == sec else '50%' if fir[0] in sec or fir[1] in sec else '0%'
 
 # 1464. Maximum Product of Two Elements in an Array
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        a, b = sorted(nums, reverse=True)[:2]
+        return (a - 1) * (b - 1)
