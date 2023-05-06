@@ -16861,3 +16861,11 @@ def is_twinprime(n):
     return is_prime(n) and (is_prime(n - 2) or is_prime(n + 2))
 
 # 1592. Rearrange Spaces Between Words
+class Solution:
+    def reorderSpaces(self, text: str) -> str:
+        if len(text.split()) == 1: return text.split()[0] + ' ' * text.count(' ')
+        sp, l = text.count(' '), len(text.split())
+        back = ' ' * (sp // (l - 1))
+        if sp % (l - 1) == 0:
+            return back.join(i for i in text.split())
+        return back.join(i for i in text.split()) + ' ' * (sp % (l - 1))
