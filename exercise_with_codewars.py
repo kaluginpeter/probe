@@ -16859,3 +16859,5 @@ class Solution:
 from gmpy2 import is_prime
 def is_twinprime(n):
     return is_prime(n) and (is_prime(n - 2) or is_prime(n + 2))
+
+# 1592. Rearrange Spaces Between Words
