@@ -16877,3 +16877,12 @@ class Solution:
 # The number corresponding to the ith letter of the encrypted message is then equal to the sum of
 # numbers corresponding to the first i letters of the initial unencrypted message modulo 26.
 # Now that you know how the message was encrypted, implement the algorithm to decipher it.
+def cipher26(message):
+    l, al, step, sum = [], 'abcdefghijklmnopqrstuvwxyz', 0, 0
+    for i in message:
+        while (sum + step) % 26 != al.index(i):
+            step += 1
+        sum += step
+        l.append(al[step])
+        step = 0
+    return ''.join(l)
