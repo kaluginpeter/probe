@@ -16895,3 +16895,8 @@ class Solution:
             if i.isdigit():
                 l.append(int(i))
         return all(i < j for i, j in zip(l, l[1:]))
+
+# Given an array of positive integers a and an integer k, find the first and last index of the
+# longest subarray of a that consists only of k.
+# If the array contains multiple subarrays of the same length, return indices of the last one.
+# If k doesn't exist in a, return (-1, -1).
