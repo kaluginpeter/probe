@@ -16888,3 +16888,10 @@ def cipher26(message):
     return ''.join(l)
 
 # 2042. Check if Numbers Are Ascending in a Sentence
+class Solution:
+    def areNumbersAscending(self, s: str) -> bool:
+        l = []
+        for i in s.split():
+            if i.isdigit():
+                l.append(int(i))
+        return all(i < j for i, j in zip(l, l[1:]))
