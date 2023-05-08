@@ -16944,3 +16944,8 @@ class Solution:
             s += i[c]
             c -= 1
         return s
+
+# Here you will create the classic Pascal's triangle.
+# Your function will be passed the depth of the triangle and your
+# code has to return the corresponding Pascal's triangle up to that depth.
+# The triangle should be returned as a nested array. For example:
