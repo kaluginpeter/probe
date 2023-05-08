@@ -16917,3 +16917,5 @@ def find_subarray_with_same_element(a, target):
     for k, v in enumerate(steps):
         if v >= s: top = k; s = v
     return l[top]
+
+# 1572. Matrix Diagonal Sum
