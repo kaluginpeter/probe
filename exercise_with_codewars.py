@@ -16919,3 +16919,28 @@ def find_subarray_with_same_element(a, target):
     return l[top]
 
 # 1572. Matrix Diagonal Sum
+class Solution:
+    def diagonalSum(self, mat: List[List[int]]) -> int:
+        if len(mat) <= 1: return mat[0][0]
+        s, c = 0, 0
+        if len(mat[0]) % 2 == 0:
+            for i in mat:
+                s += i[c]
+                c += 1
+            c = -1
+            for i in mat:
+                s += i[c]
+                c -= 1
+            return s
+        st = len(mat[0]) // 2 + 1
+        for i in mat:
+                s += i[c]
+                c += 1
+        c = -1
+        for i in mat:
+            if abs(c) == st:
+                c -= 1
+                continue
+            s += i[c]
+            c -= 1
+        return s
