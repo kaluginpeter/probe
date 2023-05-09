@@ -16949,9 +16949,11 @@ class Solution:
 # Your function will be passed the depth of the triangle and your
 # code has to return the corresponding Pascal's triangle up to that depth.
 # The triangle should be returned as a nested array. For example:
-def pascal(p):
+ def pascal(p):
     row, l = [1], [[1]]
     for i in range(p-1):
         row = [sum(i) for i in zip([0] + row, row + [0])]
         l.append(row)
     return l
+
+# 118. Pascal's Triangle
