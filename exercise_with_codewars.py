@@ -16970,3 +16970,5 @@ class Solution:
 # returns the number of positions where the input strings do not match.
 def hamming(a, b):
     return sum(i != j for i, j in zip(a, b))
+
+# 2085. Count Common Words With One Occurrence
