@@ -16975,3 +16975,9 @@ def hamming(a, b):
 class Solution:
     def countWords(self, words1: List[str], words2: List[str]) -> int:
         return sum(words1.count(i) == 1 and words2.count(i) == 1 for i in words1)
+
+# Yesterday you found some shoes in your room. Each shoe is described by two values:
+# type indicates if it's a left or a right shoe;
+# size is the size of the shoe.
+# Your task is to check whether it is possible to pair the shoes you found in such
+# a way that each pair consists of a right and a left shoe of an equal size.
