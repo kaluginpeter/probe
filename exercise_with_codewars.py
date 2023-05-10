@@ -16972,3 +16972,6 @@ def hamming(a, b):
     return sum(i != j for i, j in zip(a, b))
 
 # 2085. Count Common Words With One Occurrence
+class Solution:
+    def countWords(self, words1: List[str], words2: List[str]) -> int:
+        return sum(words1.count(i) == 1 and words2.count(i) == 1 for i in words1)
