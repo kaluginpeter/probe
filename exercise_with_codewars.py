@@ -16985,3 +16985,7 @@ class Solution:
     return sorted(v for k, v in shoes if k == 1) == sorted(v for k, v in shoes if k == 0)
 
 # 62. Unique Paths
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        from math import factorial as fc
+        return int(fc((m-1 + n-1)) / (fc((m-1)) * fc((n-1))))
