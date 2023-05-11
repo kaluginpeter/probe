@@ -16997,3 +16997,7 @@ class Solution:
 # Your job is to complete the function nbrOfLaps(x, y) that, given the length of the laps
 # for Bob and Charles, finds the number of laps that each jogger has to complete before they
 # meet each other again, at the same time, at the start.
+def nbr_of_laps(x, y):
+    for i in range(min(x, y), 0, -1):
+        if x % i == 0 and y % i == 0: break
+    return (y // i, x // i)
