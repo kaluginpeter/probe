@@ -17003,3 +17003,13 @@ def nbr_of_laps(x, y):
     return (y // i, x // i)
 
 # 2605. Form Smallest Number From Two Digit Arrays
+class Solution:
+    def minNumber(self, nums1: List[int], nums2: List[int]) -> int:
+        l = []
+        for i in nums1:
+            for j in nums2:
+                if i == j:
+                    l.append(j)
+                else:
+                    l.append(min(int(str(i) + str(j)), int(str(j) + str(i))))
+        return min(l)
