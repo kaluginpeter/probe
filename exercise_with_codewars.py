@@ -17047,3 +17047,10 @@ class Solution:
 # John wants to know if the banker's plan is right
 # or wrong. Given parameters f0, p, c0, n, i build a function
 # fortune which returns true if John can make a living until the nth year and false if it is not possible.
+def fortune(f0, p, c0, n, i):
+    c = 1
+    while c < n:
+        c += 1
+        f0 = int(f0 + (p/100 * f0) - c0)
+        c0 = int(c0 + c0*(i/100))
+    return f0 >= 0
