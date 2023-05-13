@@ -17026,3 +17026,9 @@ def m(n):
     return n - f(m(n-1))
 
 # 119. Pascal's Triangle II
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        row = [1]
+        for i in range(rowIndex):
+            row = [sum(x) for x in zip([0] + row, row + [0])]
+        return row
