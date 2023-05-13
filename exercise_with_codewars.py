@@ -17024,3 +17024,5 @@ def f(n):
 def m(n):
     if n == 0: return 0
     return n - f(m(n-1))
+
+# 119. Pascal's Triangle II
