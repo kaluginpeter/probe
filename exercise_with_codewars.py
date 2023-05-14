@@ -17054,3 +17054,5 @@ def fortune(f0, p, c0, n, i):
         f0 = int(f0 + (p/100 * f0) - c0)
         c0 = int(c0 + c0*(i/100))
     return f0 >= 0
+
+# 2108. Find First Palindromic String in the Array
