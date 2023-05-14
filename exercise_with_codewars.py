@@ -17074,3 +17074,20 @@ class Solution:
 # 5 numbers from the O column in the range 61 to 75
 # Task
 # Write the function get_card()/getCard(). The card must be returned as an array of Bingo style numbers:
+from random import randint
+def get_bingo_card():
+    CHARS = ['B', 'I', 'N', 'G', 'O']
+    INTERVALS = [(1, 15), (16, 30), (31, 45), (46, 60), (61,75)]
+    ITERATIONS = [5, 5, 4, 5, 5]
+    l, top = [0] * 24, 0
+    for i in range(5):
+        start, end, char = INTERVALS[i][0], INTERVALS[i][1], CHARS[i]
+        for j in range(ITERATIONS[i]):
+            flag = False
+            while not flag:
+                el = str(randint(start, end))
+                if char + el not in l:
+                    flag = True
+                    l[top] = char + el
+            top += 1
+    return l
