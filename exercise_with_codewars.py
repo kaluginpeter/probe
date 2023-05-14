@@ -17056,3 +17056,9 @@ def fortune(f0, p, c0, n, i):
     return f0 >= 0
 
 # 2108. Find First Palindromic String in the Array
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        for i in range(len(words)):
+            if words[i] == words[i][::-1]:
+                return words[i]
+        return ''
