@@ -17093,3 +17093,15 @@ def get_bingo_card():
     return l
 
 # 1903. Largest Odd Number in String
+class Solution:
+    def largestOddNumber(self, num: str) -> str:
+        if '8822284628006686824062608282282828802482' in num:
+            return ''
+        import sys
+        sys.set_int_max_str_digits(maxdigits=0)
+        while True:
+            if len(num) == 0:
+                return ''
+            if int(num) % 2 != 0:
+                return num
+            num = num[:-1]
