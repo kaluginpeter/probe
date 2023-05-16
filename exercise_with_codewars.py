@@ -17120,3 +17120,11 @@ def manhattan_distance(pointA, pointB):
     return sum(abs(x - y) for x, y in zip(pointA, pointB))
 
 # 392. Is Subsequence
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        try:
+            for i in s:
+                t = t[t.index(i)+1:]
+            return True
+        except:
+            return False
