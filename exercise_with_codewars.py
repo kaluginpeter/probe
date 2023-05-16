@@ -17136,3 +17136,22 @@ class Solution:
 # "hidden" with other numbers and characters in a string.
 # The task is to find, or not, the "cubic" numbers in the string and then to make the sum of
 # these "cubic" numbers found in the string, if any, and to return a string such as:
+def sorting_tex(text):
+    l, top, integ = [], 0, ''
+    for i in text.split():
+        for k, v in enumerate(i):
+            if top == 0:
+                integ = ''
+            if v.isdigit():
+                integ += v
+                top += 1
+            if top == 3 or (k == len(i)-1 and top > 0):
+                l.append(integ)
+                top = 0
+    return l
+def is_sum_of_cubes(s):
+    l = []
+    for i in sorting_tex(s):
+        if int(i) == sum(int(j)**3 for j in i):
+            l.append(i)
+    return 'Unlucky' if not l else ' '.join(i for i in l) + f" {sum(int(i) for i in l)} Lucky"
