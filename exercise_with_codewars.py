@@ -17118,3 +17118,5 @@ class Solution:
 # row in the grid, and y as the column.
 def manhattan_distance(pointA, pointB):
     return sum(abs(x - y) for x, y in zip(pointA, pointB))
+
+# 392. Is Subsequence
