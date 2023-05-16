@@ -17128,3 +17128,11 @@ class Solution:
             return True
         except:
             return False
+
+# We search non-negative integer numbers, with at most 3 digits, such as the
+# sum of the cubes of their digits is the number itself; we will call them "cubic" numbers.
+# 153 is such a "cubic" number : 1^3 + 5^3 + 3^3 = 153
+# These "cubic" numbers of at most 3 digits are easy to find, even by hand, so they are
+# "hidden" with other numbers and characters in a string.
+# The task is to find, or not, the "cubic" numbers in the string and then to make the sum of
+# these "cubic" numbers found in the string, if any, and to return a string such as:
