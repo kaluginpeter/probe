@@ -17155,3 +17155,5 @@ def is_sum_of_cubes(s):
         if int(i) == sum(int(j)**3 for j in i):
             l.append(i)
     return 'Unlucky' if not l else ' '.join(i for i in l) + f" {sum(int(i) for i in l)} Lucky"
+
+# 2089. Find Target Indices After Sorting Array
