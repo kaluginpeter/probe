@@ -17157,3 +17157,10 @@ def is_sum_of_cubes(s):
     return 'Unlucky' if not l else ' '.join(i for i in l) + f" {sum(int(i) for i in l)} Lucky"
 
 # 2089. Find Target Indices After Sorting Array
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        l = []
+        for k, v in enumerate(sorted(nums)):
+            if v == target:
+                l.append(k)
+        return l
