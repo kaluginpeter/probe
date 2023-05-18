@@ -17178,3 +17178,19 @@ class Solution:
     return 'Caught!' if 'D' not in x[mi:ma+1] else 'Protected!'
 
 # 2243. Calculate Digit Sum of a String
+class Solution:
+    def digitSum(self, s: str, k: int) -> str:
+        step = 0
+        while len(s) > k:
+            l, w = [], ''
+            for i in s:
+                step += 1
+                w += i
+                if step == k:
+                    l.append(w)
+                    w, step = '', 0
+            if step > 0:
+                l.append(w)
+                w, step = '', 0
+            s = ''.join(str(sum(int(i) for i in j)) for j in l)
+        return s
