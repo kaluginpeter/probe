@@ -17200,3 +17200,10 @@ class Solution:
 # "a=1, b=2, c=3, d=4"
 # This string should return a hash that looks like
 # { 'a': 1, 'b': 2, 'c': 3, 'd': 4}
+def str_to_hash(st):
+    d = {}
+    if st:
+        for i in st.split(', '):
+            a, b = i.split('=')
+            d[a] = int(b)
+    return d
