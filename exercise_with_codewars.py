@@ -17169,10 +17169,12 @@ class Solution:
 # made up of '.'.
 # You need to find out if the cat can catch the mouse from it's current position. The cat can jump (j) characters.
 # Also, the cat cannot jump over the dog.
-def cat_mouse(x,j):
+ def cat_mouse(x,j):
     if any(i not in x for i in 'mCD'):
         return 'boring without all three'
     mi, ma = min(x.index('m'), x.index('C')), max(x.index('m'), x.index('C'))
     if ma - mi > j:
         return 'Escaped!'
     return 'Caught!' if 'D' not in x[mi:ma+1] else 'Protected!'
+
+# 2243. Calculate Digit Sum of a String
