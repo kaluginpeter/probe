@@ -17209,3 +17209,10 @@ def str_to_hash(st):
     return d
 
 # 2180. Count Integers With Even Digit Sum
+class Solution:
+    def countEven(self, num: int) -> int:
+        count = 0
+        for i in range(1, num+1):
+            if sum(int(j) for j in str(i)) % 2 == 0:
+                count += 1
+        return count
