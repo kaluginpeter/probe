@@ -17216,3 +17216,5 @@ class Solution:
             if sum(int(j) for j in str(i)) % 2 == 0:
                 count += 1
         return count
+
+# Given a number, find the permutation with the smallest absolute value (no leading zeros).
