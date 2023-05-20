@@ -17236,3 +17236,6 @@ def min_permutation(n):
     return out
 
 # 2206. Divide Array Into Equal Pairs
+class Solution:
+    def divideArray(self, nums: List[int]) -> bool:
+        return all(nums.count(i) % 2 == 0 for i in set(nums))
