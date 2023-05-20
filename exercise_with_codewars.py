@@ -17244,3 +17244,12 @@ class Solution:
 # "2357111317192329313741434753596167717379..."
 # You will be given two numbers: a and b, and your task will be to return b elements starting from
 # index a in this sequence.
+from gmpy2 import is_prime
+def solve(a, b):
+    l, top = [], 2
+    while len(l) != b + a:
+        if is_prime(top):
+            l.append(str(top))
+        top += 1
+    l = ''.join(l)
+    return l[a:a+b]
