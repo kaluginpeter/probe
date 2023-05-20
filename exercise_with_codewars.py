@@ -17234,3 +17234,5 @@ def min_permutation(n):
             count += 1
         out = int('-' + out[0] + '0' * count + out[1:])
     return out
+
+# 2206. Divide Array Into Equal Pairs
