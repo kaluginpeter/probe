@@ -17253,3 +17253,5 @@ def solve(a, b):
         top += 1
     l = ''.join(l)
     return l[a:a+b]
+
+# 2255. Count Prefixes of a Given String
