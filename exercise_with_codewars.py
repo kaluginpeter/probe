@@ -17286,3 +17286,5 @@ def winner(deck_steve, deck_josh):
         elif ranks.index(deck_steve[i]) < ranks.index(deck_josh[i]):
             josh += 1
     return f"Steve wins {steve} to {josh}" if steve > josh else f"Josh wins {josh} to {steve}" if josh > steve else 'Tie'
+
+# 2283. Check if Number Has Equal Digit Count and Digit Value
