@@ -17327,3 +17327,22 @@ class Solution:
 # "ABCD" would wire A <-> B and C <-> D.
 # Validate that the wire pairings are legitimate. Raise an exception if not.
 # Implement the process method to translate a single character input into an output.
+class Plugboard(object):
+    def __init__(self, wires=False):
+        if not wires:
+            return None
+        l = len(wires)
+        if l > 20 or l % 2 != 0 or len(set(wires)) != l:
+            return False
+        if wires:
+            self.wires = wires
+    def process(self, c):
+        try:
+            if not self.wires or c not in self.wires:
+                return c
+            ind = self.wires.index(c)
+            if ind % 2 == 0:
+                return self.wires[ind + 1]
+            return self.wires[ind - 1]
+        except:
+            return c
