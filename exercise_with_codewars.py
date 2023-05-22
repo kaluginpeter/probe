@@ -17288,3 +17288,9 @@ def winner(deck_steve, deck_josh):
     return f"Steve wins {steve} to {josh}" if steve > josh else f"Josh wins {josh} to {steve}" if josh > steve else 'Tie'
 
 # 2283. Check if Number Has Equal Digit Count and Digit Value
+class Solution:
+    def digitCount(self, num: str) -> bool:
+        for i in range(len(num)):
+            if num.count(str(i)) != int(num[i]):
+                return False
+        return True
