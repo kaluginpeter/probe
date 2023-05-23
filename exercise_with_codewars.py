@@ -17346,3 +17346,5 @@ class Plugboard(object):
             return self.wires[ind - 1]
         except:
             return c
+
+# 2185. Counting Words With a Given Prefix
