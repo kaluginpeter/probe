@@ -17365,3 +17365,8 @@ class Solution:
 #  Note: differing from the other base kata, much larger ranges
 #  are going to be tested, so you should hope to get
 #  your algo optimized and to avoid brute-forcing your way through the solution.
+def sequence_sum(begin_number, end_number, step):
+    if (begin_number > end_number and step >= 0) or (begin_number < end_number and step <= 0):
+        return 0
+    n = (end_number - begin_number) // step + 1
+    return n * (begin_number + begin_number + (n - 1) * step) // 2
