@@ -17355,3 +17355,13 @@ class Solution:
             if words[i].startswith(pref):
                 count += 1
         return count
+
+# As the title suggests, this is the hard-core version of another neat kata.
+# The task is simple to explain: simply sum all the numbers
+# from the first parameter being the beginning to the second parameter being the upper limit (possibly
+# included), going in steps expressed by the third parameter:
+# If it is an impossible sequence (with the beginning being larger the end and
+# a positive step or the other way around), just return 0. See the provided test cases for further examples :)
+#  Note: differing from the other base kata, much larger ranges
+#  are going to be tested, so you should hope to get
+#  your algo optimized and to avoid brute-forcing your way through the solution.
