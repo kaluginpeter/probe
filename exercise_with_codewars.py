@@ -17372,3 +17372,10 @@ def sequence_sum(begin_number, end_number, step):
     return n * (begin_number + begin_number + (n - 1) * step) // 2
 
 # 2264. Largest 3-Same-Digit Number in String
+class Solution:
+    def largestGoodInteger(self, num: str) -> str:
+        l = []
+        for i in range(len(num)-2):
+            if len(set(num[i:i+3])) == 1:
+                l.append(num[i:i+3])
+        return max(l) if l else ''
