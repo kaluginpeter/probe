@@ -17370,3 +17370,5 @@ def sequence_sum(begin_number, end_number, step):
         return 0
     n = (end_number - begin_number) // step + 1
     return n * (begin_number + begin_number + (n - 1) * step) // 2
+
+# 2264. Largest 3-Same-Digit Number in String
