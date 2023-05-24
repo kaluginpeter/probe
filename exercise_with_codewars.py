@@ -17379,3 +17379,8 @@ class Solution:
             if len(set(num[i:i+3])) == 1:
                 l.append(num[i:i+3])
         return max(l) if l else ''
+
+# You have the radius of a circle with the center in point (0,0).
+# Write a function that calculates the number of points in the circle where
+# (x,y) - the cartesian coordinates of the points - are integers.
+# Example: for radius = 2 the result should be 13.
