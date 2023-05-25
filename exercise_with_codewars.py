@@ -17391,3 +17391,8 @@ def points(n):
     return 1 + int((count + n) * 4)
 
 # 2278. Percentage of Letter in String
+class Solution:
+    def percentageLetter(self, s: str, letter: str) -> int:
+        if letter not in s:
+            return 0
+        return int(s.count(letter) / len(s) * 100)
