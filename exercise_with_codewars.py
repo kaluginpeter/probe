@@ -17398,3 +17398,6 @@ class Solution:
         return int(s.count(letter) / len(s) * 100)
 
 # Generate a valid randomly generated hexadecimal color string. Assume all of them always have 6 digits.
+import random
+def generate_color_rgb():
+    return ['#%06X' % random.randint(0, 0xFFFFFF)][0]
