@@ -17427,3 +17427,16 @@ class Solution:
 # You begin a new line with \n
 # Each Line must be 7 chars long
 # Fill the missing pins with a whitespace
+def bowling_pins(arr):
+    pins, word = '   1   \n  2 3  \n 4 5 6 \n7 8 9 I', ''
+    for i in arr:
+        if i == 10:
+            pins = pins[:-1] + ' '
+            continue
+        pins = pins.replace(str(i), ' ')
+    for i in pins.split('\n')[::-1]:
+        print(i)
+        for j in i:
+            word += ' ' if j == ' ' else 'I'
+        word += '\n'
+    return word[:-1]
