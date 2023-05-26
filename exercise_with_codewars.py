@@ -17403,3 +17403,19 @@ def generate_color_rgb():
     return ['#%06X' % random.randint(0, 0xFFFFFF)][0]
 
 # 2341. Maximum Number of Pairs in Array
+class Solution:
+    def numberOfPairs(self, nums: List[int]) -> List[int]:
+        count, match = 0, -1
+        while True:
+            if len(set(nums)) == len(nums):
+                break
+            for i in nums:
+                if nums.count(i) == 1:
+                    continue
+                if nums.count(i) > 1:
+                    match = i
+                    nums.remove(match)
+                    nums.remove(match)
+                    count += 1
+                    break
+        return [count, len(nums)]
