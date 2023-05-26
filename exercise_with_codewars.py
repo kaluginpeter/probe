@@ -17401,3 +17401,5 @@ class Solution:
 import random
 def generate_color_rgb():
     return ['#%06X' % random.randint(0, 0xFFFFFF)][0]
+
+# 2341. Maximum Number of Pairs in Array
