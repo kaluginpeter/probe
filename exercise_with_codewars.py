@@ -17419,3 +17419,11 @@ class Solution:
                     count += 1
                     break
         return [count, len(nums)]
+
+# Did you ever play Bowling? Short: You have to throw a bowl into 10 Pins arranged like this:
+# You will get an Array with Numbers, e.g.: [3,5,9] and remove them from the field like this:
+# Return a string with the current field.
+# Note that:
+# You begin a new line with \n
+# Each Line must be 7 chars long
+# Fill the missing pins with a whitespace
