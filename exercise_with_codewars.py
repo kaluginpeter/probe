@@ -17442,3 +17442,13 @@ class Solution:
     return word[:-1]
 
 # 2656. Maximum Sum With Exactly K Elements
+class Solution:
+    def maximizeSum(self, nums: List[int], k: int) -> int:
+        top, place, s = 0, None, 0
+        for i in range(k):
+            for j in range(len(nums)):
+                if nums[j] >= top:
+                    top, place = nums[j], j
+            s += top
+            nums[place] = top + 1
+        return s
