@@ -17460,3 +17460,6 @@ def reverse_vowels(s):
     return ''.join(i if i not in 'aeoiuAEOIU' else vowels.pop() for i in s)
 
 # 2418. Sort the People
+class Solution:
+    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+        return [k[0] for k in sorted([[i, j] for i,j in zip(names, heights)], key=lambda x: x[1], reverse=True)]
