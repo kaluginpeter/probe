@@ -17463,3 +17463,10 @@ def reverse_vowels(s):
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         return [k[0] for k in sorted([[i, j] for i,j in zip(names, heights)], key=lambda x: x[1], reverse=True)]
+
+
+# An integral: can be approximated by the so - called
+# Simpson’s rule: Here h = (b - a) / n, n being an even integer and a <= b.
+# We want to try Simpson's rule with the function f: The task is to write a function called simpson
+# with parameter n which returns the value of the integral of f on
+# the interval[0, pi] (pi being 3.14159265359...).
