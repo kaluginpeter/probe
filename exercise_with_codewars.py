@@ -17470,3 +17470,7 @@ class Solution:
 # We want to try Simpson's rule with the function f: The task is to write a function called simpson
 # with parameter n which returns the value of the integral of f on
 # the interval[0, pi] (pi being 3.14159265359...).
+from math import pi, sin
+def simpson(n, f=lambda x: 3 / 2 * sin(x) ** 3, a=0, b=pi):
+    h = (b - a) / n
+    return h / 3 * (f(a) + f(b)+ 4 * sum(f(a + i * h) for i in range(1, n, 2))+ 2 * sum(f(a + i * h) for i in range(2, n, 2)))
