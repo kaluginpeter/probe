@@ -17509,3 +17509,20 @@ class ParkingSystem:
 # Make sure to only shift letters, and be sure to keep the cases of the letters the
 # same. All punctuation, numbers, spaces, and so on should remain the same.
 # Also be aware of keys greater than 26 and less than -26. There's only 26 letters in the alphabet!
+def encryptor(key, message):
+    while key >= 26:
+        key -= 26
+    while key <= -26:
+        key += 26
+    l_al = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
+    u_al = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    word = ''
+    for i in message:
+        if i in l_al:
+            word += l_al[l_al.index(i, 26) + key]
+            continue
+        if i in u_al:
+            word += u_al[u_al.index(i, 26) + key]
+            continue
+        word += i
+    return word
