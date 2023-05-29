@@ -17476,3 +17476,26 @@ def simpson(n, f=lambda x: 3 / 2 * sin(x) ** 3, a=0, b=pi):
     return h / 3 * (f(a) + f(b)+ 4 * sum(f(a + i * h) for i in range(1, n, 2))+ 2 * sum(f(a + i * h) for i in range(2, n, 2)))
 
 # 1603. Design Parking System
+class ParkingSystem:
+
+    def __init__(self, big: int, medium: int, small: int):
+        self.big = big
+        self.medium = medium
+        self.small = small
+
+    def addCar(self, carType: int) -> bool:
+        if carType == 1:
+            if self.big - 1 >= 0:
+                self.big -= 1
+                return True
+            return False
+        if carType == 2:
+            if self.medium - 1 >= 0:
+                self.medium -= 1
+                return True
+            return False
+        if carType == 3:
+            if self.small - 1 >= 0:
+                self.small -= 1
+                return True
+            return False
