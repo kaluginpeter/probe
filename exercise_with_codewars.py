@@ -17539,3 +17539,10 @@ class Solution:
 #  Well, by now you have surely guessed that you have to build
 #  a function to compare powers, returning -1 if the first member is
 #  larger, 0 if they are equal, 1 otherwise; powers to compare will be provided in the [base, exponent] format:
+import math
+def compare_powers(n1, n2):
+    base1, exponent1 = n1
+    base2, exponent2 = n2
+    log1 = exponent1 * math.log10(base1)
+    log2 = exponent2 * math.log10(base2)
+    return -1 if log1 > log2 else 0 if log1 == log2 else 1
