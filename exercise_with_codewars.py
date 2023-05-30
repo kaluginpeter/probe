@@ -17528,3 +17528,6 @@ def encryptor(key, message):
     return word
 
 # 521. Longest Uncommon Subsequence I
+class Solution:
+    def findLUSlength(self, a, b):
+        return max(len(a), len(b)) if a != b else -1
