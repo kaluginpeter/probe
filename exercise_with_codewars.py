@@ -17526,3 +17526,5 @@ def encryptor(key, message):
             continue
         word += i
     return word
+
+# 521. Longest Uncommon Subsequence I
