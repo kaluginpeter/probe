@@ -17546,3 +17546,5 @@ def compare_powers(n1, n2):
     log1 = exponent1 * math.log10(base1)
     log2 = exponent2 * math.log10(base2)
     return -1 if log1 > log2 else 0 if log1 == log2 else 1
+
+# 2710. Remove Trailing Zeros From a String
