@@ -17572,3 +17572,11 @@ class Solution:
 # This is a little fun kata, to show you, how weak PINs are and
 # how important a bruteforce protection is, if you create your own login.
 # If you liked this kata, here is an extension with short passwords!
+import hashlib
+def crack(pin):
+    for i in range(10000, 100000):
+        if hashlib.md5(str(i).encode()).hexdigest() == pin:
+            return str(i)
+    for i in range(0, 10000):
+        if hashlib.md5(str(i).zfill(5).encode()).hexdigest() == pin:
+            return str(i).zfill(5)
