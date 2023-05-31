@@ -17548,3 +17548,8 @@ def compare_powers(n1, n2):
     return -1 if log1 > log2 else 0 if log1 == log2 else 1
 
 # 2710. Remove Trailing Zeros From a String
+class Solution:
+    def removeTrailingZeros(self, num: str) -> str:
+        while num.endswith('0'):
+            num = num[:-1]
+        return num
