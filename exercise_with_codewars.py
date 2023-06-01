@@ -17592,3 +17592,12 @@ class Solution:
 # Implement a function which behaves like the uniq command in UNIX.
 # It takes as input a sequence and returns a sequence in which all
 # duplicate elements following each other have been reduced to one instance.
+def uniq(seq):
+    l = []
+    for i in range(len(seq)):
+        if i + 1 < len(seq):
+            if seq[i] != seq[i+1]:
+                l.append(seq[i])
+            continue
+        l.append(seq[i])
+    return l
