@@ -17588,3 +17588,7 @@ class Solution:
         if s_l[0] + s_l[1] > money:
             return money
         return  money - (s_l[0] + s_l[1])
+
+# Implement a function which behaves like the uniq command in UNIX.
+# It takes as input a sequence and returns a sequence in which all
+# duplicate elements following each other have been reduced to one instance.
