@@ -17628,3 +17628,8 @@ class Solution:
 # The nth Fibonacci number is defined by the sum of the
 # two previous Fibonacci numbers. In our case: fib(1) := 0 and fib(2) := 1.
 # With these initial values you should be able to calculate each following Fibonacci number.
+def fib(n):
+    a, b = 0, 1
+    for i in range(n - 1):
+        a, b = b, a + b
+    return a
