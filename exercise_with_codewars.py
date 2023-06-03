@@ -17648,3 +17648,8 @@ class Solution:
                 count += len(cop)
             mi_char = chars
         return count
+
+# The function must return the sequence of titles that match the string passed as an argument.
+# But the function return some weird result and skip some of the matching results.
+# Does the function have special movie taste?
+# Let's figure out !
