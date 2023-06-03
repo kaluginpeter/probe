@@ -17635,3 +17635,16 @@ def fib(n):
     return a
 
 # 1160. Find Words That Can Be Formed by Characters
+class Solution:
+    def countCharacters(self, words: List[str], chars: str) -> int:
+        count, mi_char = 0, chars
+        for i in words:
+            cop = i
+            for j in i:
+                if j in mi_char:
+                    i = i[:i.index(j)] + i[i.index(j)+1:]
+                    mi_char = mi_char[:mi_char.index(j)] + mi_char[mi_char.index(j)+1:]
+            if i == '':
+                count += len(cop)
+            mi_char = chars
+        return count
