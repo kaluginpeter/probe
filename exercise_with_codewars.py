@@ -17633,3 +17633,5 @@ def fib(n):
     for i in range(n - 1):
         a, b = b, a + b
     return a
+
+# 1160. Find Words That Can Be Formed by Characters
