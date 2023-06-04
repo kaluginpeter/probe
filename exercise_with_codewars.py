@@ -17655,3 +17655,5 @@ class Solution:
 # Let's figure out !
 def search(titles, term):
     return list(filter(lambda title: term in title.lower(), titles))
+
+# 1716. Calculate Money in Leetcode Bank
