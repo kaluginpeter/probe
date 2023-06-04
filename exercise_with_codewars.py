@@ -17677,3 +17677,22 @@ class Solution:
 # "Position" means the vowel's position if taken as one item in a list of all vowels within the string.
 # A shift by 1 would mean, that every vowel shifts to the place of the next vowel.
 # Shifting over the edges of the text should continue at the other edge.
+def vowel_shift(text,n):
+    if not text:
+        return text
+    w, l, out = '', [], []
+    for k,v in enumerate(text):
+        if v in 'AEOIUaeoiu':
+            w += '{}'
+            l.append((v, k))
+            continue
+        w += v
+    if not l:
+        return text
+    n, le_l = n % len(l), len(l)
+    l = l * (n + 1)
+    for i in range(le_l):
+        out.append((l[i][0], l[i + n][1]))
+    out = sorted(out, key=lambda x: x[1])
+    out = [i[0] for i in out]
+    return w.format(*out)
