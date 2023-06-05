@@ -17696,3 +17696,5 @@ def vowel_shift(text,n):
     out = sorted(out, key=lambda x: x[1])
     out = [i[0] for i in out]
     return w.format(*out)
+
+# 1232. Check If It Is a Straight Line
