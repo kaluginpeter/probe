@@ -17698,3 +17698,12 @@ def vowel_shift(text,n):
     return w.format(*out)
 
 # 1232. Check If It Is a Straight Line
+class Solution:
+    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
+        x0, y0, x1, y1 = coordinates[0][0], coordinates[0][1], coordinates[1][0], coordinates[1][1]
+        dx, dy = x1 - x0, y1 - y0
+        for i in range(len(coordinates)):
+            x, y = coordinates[i]
+            if dx * (y - y1) != dy * (x - x1):
+                return False
+        return True
