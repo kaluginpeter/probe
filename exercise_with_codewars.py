@@ -17724,3 +17724,11 @@ class Lamp():
         return 'The lamp is on.' if self.on else 'The lamp is off.'
 
 # 1502. Can Make Arithmetic Progression From Sequence
+class Solution:
+    def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
+        arr = sorted(arr)
+        step = arr[1] - arr[0]
+        for i in range(len(arr)-1):
+            if step != arr[i+1] - arr[i]:
+                return False
+        return True
