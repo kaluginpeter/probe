@@ -17722,3 +17722,5 @@ class Lamp():
         self.on = not self.on
     def state(self):
         return 'The lamp is on.' if self.on else 'The lamp is off.'
+
+# 1502. Can Make Arithmetic Progression From Sequence
