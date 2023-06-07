@@ -17746,3 +17746,5 @@ class Solution:
 # No disk may be placed on top of a smaller disk.
 def hanoi(disks):
     return 2**disks - 1
+
+# 1299. Replace Elements with Greatest Element on Right Side
