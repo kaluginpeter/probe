@@ -17753,3 +17753,11 @@ class Solution:
         for i in range(len(arr)-1, -1, -1):
             arr[i], mx = mx, max(mx, arr[i])
         return arr
+
+# It's a Pokemon battle! Your task is to calculate the damage that a particular
+# move would do using the following formula (not the actual one from the game):
+# damage = 50 * (attack / defense) * effectiveness
+# Where:
+# attack = your attack power
+# defense = the opponent's defense
+# effectiveness = the effectiveness of the attack based on the matchup (see explanation below)
