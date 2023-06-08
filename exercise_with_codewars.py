@@ -17771,3 +17771,5 @@ def calculate_damage(your_type, opponent_type, attack, defense):
         ('fire', 'fire'): (0.5, 0.5), ('water', 'water'): (0.5, 0.5),
         ('grass', 'grass'): (0.5, 0.5), ('electric', 'electric'): (0.5, 0.5)}
     return 50 * (attack / defense) * d[(your_type, opponent_type)][0]
+
+# 1351. Count Negative Numbers in a Sorted Matrix
