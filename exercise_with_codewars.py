@@ -17787,3 +17787,10 @@ class Solution:
 # Create a function for generating a random 6 character string which will be used to access the photo URL.
 # To make sure the name is not already in use, you are given access to an PhotoManager object.
 # You can call it like so to make sure the name is unique
+import random
+import string
+def generateName():
+    word = 'aaaaaa'
+    while photoManager.nameExists(word):
+        word = ''.join(random.choice(string.ascii_letters) for i in range(6))
+    return word
