@@ -17773,3 +17773,11 @@ def calculate_damage(your_type, opponent_type, attack, defense):
     return 50 * (attack / defense) * d[(your_type, opponent_type)][0]
 
 # 1351. Count Negative Numbers in a Sorted Matrix
+class Solution:
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        c = 0
+        for i in grid:
+            for j in i:
+                if j < 0:
+                    c += 1
+        return c
