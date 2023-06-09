@@ -17815,3 +17815,14 @@ class Solution:
 # The directions given to the man are, for example, the following (depending on the language)
 # Write a function dirReduc which will take an array of strings and returns an array of strings with
 # the needless directions removed (W < ->E or S < ->N side by side).
+def dirReduc(arr):
+    d = {'NORTH':'SOUTH', 'SOUTH':'NORTH', 'WEST':'EAST', 'EAST':'WEST'}
+    while True:
+        for _ in range(len(arr)):
+            for i in range(len(arr)-1):
+                if d[arr[i]] == arr[i+1]:
+                    arr.pop(i+1)
+                    arr.pop(i)
+                    break
+        break
+    return arr
