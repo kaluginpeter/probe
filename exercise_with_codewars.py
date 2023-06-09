@@ -17796,3 +17796,11 @@ def generateName():
     return word
 
 # 744. Find Smallest Letter Greater Than Target
+class Solution:
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        al = 'abcdefghijklmnopqrstuvwxyz'
+        start = al.index(target)
+        for i in letters:
+            if al.index(i) > start:
+                return i
+        return letters[0]
