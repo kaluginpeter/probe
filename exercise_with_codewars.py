@@ -17794,3 +17794,5 @@ def generateName():
     while photoManager.nameExists(word):
         word = ''.join(random.choice(string.ascii_letters) for i in range(6))
     return word
+
+# 744. Find Smallest Letter Greater Than Target
