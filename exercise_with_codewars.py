@@ -17872,3 +17872,15 @@ def score(dice):
                 break
 
 # 2293. Min Max Game
+class Solution:
+    def minMaxGame(self, nums: List[int]) -> int:
+        flag = False
+        while len(nums) != 1:
+            for i in range(len(nums)//2):
+                if not flag:
+                    nums[i:i+2] = [min(nums[i], nums[i+1])]
+                    flag = True
+                    continue
+                nums[i:i+2] = [max(nums[i], nums[i+1])]
+                flag = False
+        return nums[0]
