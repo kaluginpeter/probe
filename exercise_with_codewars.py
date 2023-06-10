@@ -17826,3 +17826,5 @@ def dirReduc(arr):
                     break
         break
     return arr
+
+# 434. Number of Segments in a String
