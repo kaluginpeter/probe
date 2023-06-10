@@ -17870,3 +17870,5 @@ def score(dice):
                 count += d[str(cop_l[i])]
                 cop_l = cop_l[i+1:]
                 break
+
+# 2293. Min Max Game
