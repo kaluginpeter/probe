@@ -17886,3 +17886,40 @@ class Solution:
         return nums[0]
 
 # 2733. Neither Minimum nor Maximum
+class Solution:
+    def findNonMinOrMax(self, nums: List[int]) -> int:
+        # Solution 1
+        # if len(nums) < 3:
+        #     return -1
+        # mi, ma, flag = nums[0], -1, False
+        # for i in range(2):
+        #     for i in range(len(nums)):
+        #         if not flag:
+        #             if mi > nums[i]:
+        #                 mi = nums[i]
+        #             if ma < nums[i]:
+        #                 ma = nums[i]
+        #             if i == len(nums)-1:
+        #                 flag = True
+        #             continue
+        #         if mi < nums[i] < ma:
+        #             return nums[i]
+        # return -1
+        #
+        # Solution 2
+        # if len(nums) < 3:
+        #     return -1
+        # mi, ma = min(nums), max(nums)
+        # for i in range(len(nums)):
+        #     if mi < nums[i] < ma:
+        #         return nums[i]
+        # return -1
+        #
+        # Solution 3
+        if len(nums) <= 2:
+            return -1
+        min_num, max_num = min(nums), max(nums)
+        for i in nums:
+            if i != min_num and i != max_num:
+                return i
+        return -1
