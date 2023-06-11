@@ -17884,3 +17884,5 @@ class Solution:
                 nums[i:i+2] = [max(nums[i], nums[i+1])]
                 flag = False
         return nums[0]
+
+# 2733. Neither Minimum nor Maximum
