@@ -17973,3 +17973,5 @@ class PaginationHelper:
             if item_index + 1 <= count:
                 return page
             page += 1
+
+# 228. Summary Ranges
