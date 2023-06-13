@@ -18009,3 +18009,22 @@ def removNb(n):
     return [(i, (s - i) / (i + 1)) for i in range(1, n+1) if (s - i) % (i + 1) == 0 and 1 <= (s - i) / (i + 1) <= n]
 
 # 682. Baseball Game
+class Solution:
+    def calPoints(self, operations: List[str]) -> int:
+        l, top, step = [], -1, 0
+        for i in range(len(operations)):
+            if operations[i] == 'D':
+                l.append(l[top-step]*2)
+                top += 1
+                continue
+            if operations[i] == 'C':
+                l.pop()
+                step += 1
+                continue
+            if operations[i] == '+':
+                l.append(l[top-step] + l[top-step-1])
+                top += 1
+                continue
+            l.append(int(operations[i]))
+            top += 1
+        return sum(l)
