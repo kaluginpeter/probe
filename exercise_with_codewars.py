@@ -18038,3 +18038,6 @@ class Solution:
 # For this task you're only supposed to substitute characters. Not spaces, punctuation, numbers, etc.
 #
 # Test examples:
+def rot13(message):
+    return message.translate(str.maketrans('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                                          'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM'))
