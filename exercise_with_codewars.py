@@ -18058,3 +18058,9 @@ class Solution:
 #
 # Basically you have to assume that n people are put into a
 # circle and that they are eliminated in steps of k elements, like this:
+def josephus_survivor(n,k):
+    i, j, n = 0, [], list(range(1, n+1))
+    while len(n) > 0:
+        i = (i + k - 1) % len(n)
+        j = n.pop(i)
+    return j
