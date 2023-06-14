@@ -18052,3 +18052,9 @@ class Solution:
             resul = str(n % 7) + resul
             n //= 7
         return '-' * (num < 0) + resul or '0'
+
+# In this kata you have to correctly return who is the "survivor",
+# ie: the last element of a Josephus permutation.
+#
+# Basically you have to assume that n people are put into a
+# circle and that they are eliminated in steps of k elements, like this:
