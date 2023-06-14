@@ -18041,3 +18041,5 @@ class Solution:
 def rot13(message):
     return message.translate(str.maketrans('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
                                           'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM'))
+
+# 504. Base 7
