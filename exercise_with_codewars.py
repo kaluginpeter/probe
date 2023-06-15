@@ -18064,3 +18064,5 @@ def josephus_survivor(n,k):
         i = (i + k - 1) % len(n)
         j = n.pop(i)
     return j
+
+# 1773. Count Items Matching a Rule
