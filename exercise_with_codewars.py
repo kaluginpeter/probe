@@ -18092,3 +18092,13 @@ class Solution:
 # beeramid(1500, 2); // should === 12
 # beeramid(5000, 3); // should === 16
 # MATHEMATICSALGORITHMS
+def beeramid(bonus, price):
+    if bonus <= 0:
+        return 0
+    layers, beers_count, floors, top = 0, bonus // price, 1, 1
+    while floors <= beers_count:
+        beers_count -= floors
+        layers += 1
+        top += 1
+        floors = top ** 2
+    return layers
