@@ -18124,3 +18124,6 @@ class Solution:
 def hex_string_to_RGB(hex_string):
     colors = [int(hex_string.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)]
     return {'r':colors[0], 'g':colors[1], 'b':colors[2]}
+
+# Complete the function/method so that it takes a PascalCase string and returns the string in snake_case notation.
+# Lowercase characters can be numbers. If the method gets a number as input, it should return a string.
