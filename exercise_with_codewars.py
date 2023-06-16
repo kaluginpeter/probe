@@ -18104,3 +18104,13 @@ def beeramid(bonus, price):
     return layers
 
 # 1704. Determine if String Halves Are Alike
+class Solution:
+    def halvesAreAlike(self, s: str) -> bool:
+        a, b, top_a, top_b = s[:len(s)//2], s[len(s)//2:], 0, 0
+        vowels = 'aeiouAEIOU'
+        for i in range(len(a)):
+            if a[i] in vowels:
+                top_a += 1
+            if b[i] in vowels:
+                top_b += 1
+        return top_a == top_b
