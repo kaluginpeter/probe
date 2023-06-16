@@ -18102,3 +18102,5 @@ def beeramid(bonus, price):
         top += 1
         floors = top ** 2
     return layers
+
+# 1704. Determine if String Halves Are Alike
