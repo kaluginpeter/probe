@@ -18143,3 +18143,5 @@ def to_underscore(string):
         word += i
     l.append(word)
     return '_'.join(i.lower() for i in l)
+
+# 2303. Calculate Amount Paid in Taxes
