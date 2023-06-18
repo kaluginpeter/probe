@@ -18222,3 +18222,5 @@ def number_to_english(n):
         if n%1000==0:
             return f'{number_to_english(n//1000)} thousand'
         return f'{number_to_english(n//1000)} thousand {number_to_english(n%1000)}'
+
+# 1446. Consecutive Characters
