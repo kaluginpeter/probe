@@ -18224,3 +18224,19 @@ def number_to_english(n):
         return f'{number_to_english(n//1000)} thousand {number_to_english(n%1000)}'
 
 # 1446. Consecutive Characters
+class Solution:
+    def maxPower(self, s: str) -> int:
+        if len(s) == 1:
+            return 1
+        w, count, flag = s[0], 0, False
+        for i in range(1, len(s)):
+            if s[i] == w[0]:
+                w += s[i]
+                flag = True
+                continue
+            if len(w) > count:
+                count = len(w)
+            w, flag = s[i], False
+        if flag:
+            count = len(w) if len(w) > count else count
+        return count
