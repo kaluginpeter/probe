@@ -18242,3 +18242,10 @@ class Solution:
         return count
 
 # Computing the complex logarithm function
+from cmath import log as clog
+def log(real, imag):
+    try:
+        lg = clog(complex(real, imag))
+        return lg.real, lg.imag
+    except:
+        pass
