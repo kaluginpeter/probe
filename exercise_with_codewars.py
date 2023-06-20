@@ -18263,3 +18263,10 @@ class Solution:
         return int(count)
 
 # 441. Arranging Coins
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        count = 0
+        while n > 0:
+            count += 1
+            n -= count
+        return count if n == 0 else count - 1
