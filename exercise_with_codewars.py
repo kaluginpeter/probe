@@ -18249,8 +18249,7 @@ def log(real, imag):
         return lg.real, lg.imag
     except:
         pass
-
-# 1688. Count of Matches in Tournament
+     Count of Matches in Tournament
 class Solution:
     def numberOfMatches(self, n: int) -> int:
         count = 0
@@ -18262,3 +18261,5 @@ class Solution:
             n = (n - 1) / 2
             count += n + 1
         return int(count)
+
+# 441. Arranging Coins
