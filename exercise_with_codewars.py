@@ -18286,3 +18286,18 @@ def all_fibonacci_numbers():
         a, b = b, a + b
 
 # 496. Next Greater Element I
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        def find_max(n, arr):
+            for i in range(len(arr)):
+                if arr[i] > n:
+                    return arr[i]
+            return -1
+        l = [0] * len(nums1)
+        for i in range(len(nums1)):
+            if nums2.index(nums1[i]) == len(nums2) - 1:
+                l[i] = -1
+                continue
+            point = nums2.index(nums1[i])
+            l[i] = find_max(nums2[point], nums2[point:])
+        return l
