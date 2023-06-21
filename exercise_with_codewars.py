@@ -18301,3 +18301,5 @@ class Solution:
             point = nums2.index(nums1[i])
             l[i] = find_max(nums2[point], nums2[point:])
         return l
+
+# Simple Fun #81: Digits Product
