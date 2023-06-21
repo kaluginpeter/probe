@@ -18284,3 +18284,5 @@ def all_fibonacci_numbers():
     for i in range(10000):
         yield b
         a, b = b, a + b
+
+# 496. Next Greater Element I
