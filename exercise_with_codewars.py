@@ -18313,3 +18313,5 @@ def digits_product(product):
         j += 1
         l = math.prod([int(i) for i in str(j)])
     return -1
+
+# 342. Power of Four
