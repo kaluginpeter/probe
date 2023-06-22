@@ -18323,3 +18323,5 @@ class Solution:
                 return True
             i += 1
         return False
+
+# John and Ann sign up for Codewars
