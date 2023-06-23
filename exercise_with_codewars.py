@@ -18343,3 +18343,5 @@ def sum_john(n):
 
 def sum_ann(n):
     return sum(ann(n))
+
+# 459. Repeated Substring Pattern
