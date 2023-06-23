@@ -18394,3 +18394,18 @@ class Solution:
         return False
 
 # Elementary Arithmetic - Carries Count
+def solve(input_string):
+    l, count, out, flag = input_string.split('\n'), 0, [], False
+    for i in l:
+        a, b = i.split()
+        for j in range(len(a)-1, -1, -1):
+            s = int(a[j]) + int(b[j])
+            if flag:
+                s += 1
+                flag = False
+            if s > 9:
+                flag = True
+                count += 1
+        out.append(f"{count} carry operations" if count else "No carry operation")
+        count, flag = 0, False
+    return '\n'.join(out)
