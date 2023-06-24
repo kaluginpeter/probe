@@ -18409,3 +18409,5 @@ def solve(input_string):
         out.append(f"{count} carry operations" if count else "No carry operation")
         count, flag = 0, False
     return '\n'.join(out)
+
+# 225. Implement Stack using Queues
