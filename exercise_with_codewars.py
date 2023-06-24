@@ -18437,3 +18437,6 @@ class MyStack:
 # param_4 = obj.empty()
 
 # int32 to IPv4
+from ipaddress import IPv4Address
+def int32_to_ip(int32):
+    return str(IPv4Address(int32))
