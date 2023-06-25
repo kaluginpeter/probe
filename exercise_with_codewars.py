@@ -18459,3 +18459,5 @@ class Solution:
         # while i*i < num:
         #     i += 1
         # return i*i == num
+
+# First Variation on Caesar Cipher
