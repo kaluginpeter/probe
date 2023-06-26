@@ -18500,3 +18500,5 @@ def demoving_shift(s, shift):
             continue
         out += w[i]
     return out
+
+# 2500. Delete Greatest Value in Each Row
