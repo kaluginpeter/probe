@@ -18502,3 +18502,20 @@ def demoving_shift(s, shift):
     return out
 
 # 2500. Delete Greatest Value in Each Row
+class Solution:
+    def deleteGreatestValue(self, grid: List[List[int]]) -> int:
+        for i in range(len(grid)):
+            grid[i].sort()
+        grid = list(zip(*grid))
+        return sum(max(i) for i in grid)
+        # Solution 2
+        # count = 0
+        # while len(grid[-1]) > 0:
+        #     top = 0
+        #     for i in grid:
+        #         el = max(i)
+        #         if el > top:
+        #             top = el
+        #         i.remove(el)
+        #     count += top
+        # return count
