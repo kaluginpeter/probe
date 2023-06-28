@@ -18610,3 +18610,5 @@ class Solution:
                 if jewels[i] == stones[j]:
                     count += 1
         return count
+    
+# Caesar Cipher Helper
