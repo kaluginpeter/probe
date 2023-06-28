@@ -18612,3 +18612,13 @@ class Solution:
         return count
     
 # Caesar Cipher Helper
+class CaesarCipher(object):
+    def __init__(self, shift):
+        self.shift = shift
+        self.al = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    def encode(self, st):
+        return ''.join(self.al[self.al.index(i) + self.shift] if i in self.al else i for i in st.upper())
+
+    def decode(self, st):
+        return ''.join(self.al[self.al.index(i, 1) - self.shift] if i in self.al else i for i in st.upper())
