@@ -18632,3 +18632,7 @@ class Solution:
         return l
 
 # Lazy Repeater
+from itertools import cycle
+def make_looper(string):
+    x = cycle(string)
+    return lambda: next(x)
