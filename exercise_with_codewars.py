@@ -18630,3 +18630,5 @@ class Solution:
         for i in range(len(nums)):
             l.insert(index[i], nums[i])
         return l
+
+# Lazy Repeater
