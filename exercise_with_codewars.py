@@ -18622,5 +18622,11 @@ class CaesarCipher(object):
 
     def decode(self, st):
         return ''.join(self.al[self.al.index(i, 1) - self.shift] if i in self.al else i for i in st.upper())
-        
+
 # 1389. Create Target Array in the Given Order
+class Solution:
+    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        l = []
+        for i in range(len(nums)):
+            l.insert(index[i], nums[i])
+        return l
