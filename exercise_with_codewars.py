@@ -18644,3 +18644,5 @@ class Solution:
         for i in encoded:
             l.append(l[-1] ^ i)
         return l
+
+# Airport Arrivals/Departures - #1
