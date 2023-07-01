@@ -18669,3 +18669,18 @@ class Solution:
         return ' '.join(s.split()[:k])
 
 # The Clockwise Spiral
+def create_spiral(n):
+    if not isinstance(n, int) or n < 1:
+        return []
+    l = [None] * n
+    for i in range(n):
+        l[i] = [None] * n
+    x, y, dx, dy = 0, 0, 1, 0
+    for i in range(n*n):
+        l[y][x] = i+1
+        test = x + dx if dx else y + dy
+        if test < 0 or test == n or l[y + dy][x + dx] != None:
+            dx, dy = -dy, dx
+        x += dx
+        y += dy
+    return l
