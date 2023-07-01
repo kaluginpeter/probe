@@ -18662,3 +18662,5 @@ def flap_display(lines, rotors):
         out.append(word)
         word = ''
     return out
+
+# 1816. Truncate Sentence
