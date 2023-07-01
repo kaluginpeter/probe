@@ -18667,3 +18667,5 @@ def flap_display(lines, rotors):
 class Solution:
     def truncateSentence(self, s: str, k: int) -> str:
         return ' '.join(s.split()[:k])
+
+# The Clockwise Spiral
