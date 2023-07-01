@@ -18664,3 +18664,6 @@ def flap_display(lines, rotors):
     return out
 
 # 1816. Truncate Sentence
+class Solution:
+    def truncateSentence(self, s: str, k: int) -> str:
+        return ' '.join(s.split()[:k])
