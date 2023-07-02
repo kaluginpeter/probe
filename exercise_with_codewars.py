@@ -18686,3 +18686,25 @@ def create_spiral(n):
     return l
 
 # 1684. Count the Number of Consistent Strings
+# Solution 1
+class Solution:
+    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+        count = len(words)
+        for i in words:
+            for j in i:
+                if j not in allowed:
+                    count -= 1
+                    break
+        return count
+# Runtime 237 ms - Beats 99.23%, Memory 18.3 MB - Beats 68.86%
+# Solution 2 using set
+class Solution:
+    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+        count, allowed = len(words), set(allowed)
+        for i in words:
+            for j in i:
+                if j not in allowed:
+                    count -= 1
+                    break
+        return count
+# Runtime 248 ms - Beats 91.64%, Memory 18.3 MB - Beats 95.47%
