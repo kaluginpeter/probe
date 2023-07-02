@@ -18684,3 +18684,5 @@ def create_spiral(n):
         x += dx
         y += dy
     return l
+
+# 1684. Count the Number of Consistent Strings
