@@ -18721,3 +18721,16 @@ def tour(friends, friend_towns, distTable1):
     return int(count + distTable1[true_fr[0][1]] + distTable1[true_fr[-1][1]])
 
 # 859. Buddy Strings
+class Solution:
+    def buddyStrings(self, s: str, goal: str) -> bool:
+        if len(s) != len(goal):
+            return False
+        if s == goal and len(set(s)) < len(s):
+            return True
+        count = []
+        for i in range(len(s)):
+            if s[i] != goal[i]:
+                count.append([s[i], goal[i]])
+        if len(count) == 2 and count[0] == count[-1][::-1]:
+            return True
+        return False
