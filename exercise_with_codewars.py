@@ -18719,3 +18719,5 @@ def tour(friends, friend_towns, distTable1):
     for b,c in zip(true_fr, true_fr[1:]):
         count += a(distTable1[c[1]], distTable1[b[1]])
     return int(count + distTable1[true_fr[0][1]] + distTable1[true_fr[-1][1]])
+
+# 859. Buddy Strings
