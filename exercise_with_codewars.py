@@ -18734,3 +18734,5 @@ class Solution:
         if len(count) == 2 and count[0] == count[-1][::-1]:
             return True
         return False
+
+# Guess The Gifts!
