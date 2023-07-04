@@ -18734,7 +18734,7 @@ class Solution:
         if len(count) == 2 and count[0] == count[-1][::-1]:
             return True
         return False
-
+    
 # Guess The Gifts!
 def guess_gifts(wishlist, presents):
     gift = []
@@ -18748,3 +18748,5 @@ def guess_gifts(wishlist, presents):
                 if wishlist[j]['name'] not in gift:
                     gift.append(wishlist[j]['name'])
     return gift
+
+# 941. Valid Mountain Array
