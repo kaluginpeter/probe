@@ -18764,3 +18764,5 @@ class Solution:
                 continue
             return False
         return start and flag
+
+# Don't Drink the Water
