@@ -18750,3 +18750,17 @@ def guess_gifts(wishlist, presents):
     return gift
 
 # 941. Valid Mountain Array
+class Solution:
+    def validMountainArray(self, arr: List[int]) -> bool:
+        if len(arr) < 3:
+            return False
+        start, flag, top = False, False, arr[0]
+        for i in range(1, len(arr)):
+            if top < arr[i] and not flag:
+                start, top = True, arr[i]
+                continue
+            if top > arr[i] and start:
+                flag, top = True, arr[i]
+                continue
+            return False
+        return start and flag
