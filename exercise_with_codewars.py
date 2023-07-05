@@ -18790,3 +18790,5 @@ def separate_liquids(glass):
             continue
         l.append(out)
     return l
+
+# 290. Word Pattern
