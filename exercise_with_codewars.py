@@ -18796,5 +18796,14 @@ class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
         s = s.split()
         return (len(set(pattern)) == len(set(s)) == len(set(zip_longest(pattern,s))))
-        
+
 # Diophantine Equation
+import math
+def sol_equa(n):
+    l = []
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            j = n // i
+            if (i + j) % 2 == 0 and (j - i) % 4 == 0:
+                l.append([(i + j) // 2, (j - i) // 4])
+    return l
