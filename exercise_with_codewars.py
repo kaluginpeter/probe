@@ -18812,3 +18812,5 @@ def sol_equa(n):
 class Solution:
     def checkOnesSegment(self, s):
         return not s.strip('0').strip('1')
+
+# Luck check
