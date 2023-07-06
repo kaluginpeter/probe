@@ -18809,3 +18809,6 @@ def sol_equa(n):
     return l
 
 # 1784. Check if Binary String Has at Most One Segment of Ones
+class Solution:
+    def checkOnesSegment(self, s):
+        return not s.strip('0').strip('1')
