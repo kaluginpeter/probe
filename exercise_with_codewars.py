@@ -18807,3 +18807,5 @@ def sol_equa(n):
             if (i + j) % 2 == 0 and (j - i) % 4 == 0:
                 l.append([(i + j) // 2, (j - i) // 4])
     return l
+
+# 1784. Check if Binary String Has at Most One Segment of Ones
