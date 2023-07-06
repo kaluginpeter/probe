@@ -18814,3 +18814,8 @@ class Solution:
         return not s.strip('0').strip('1')
 
 # Luck check
+def luck_check(string):
+    if not all(i.isdigit() for i in string) or len(string) == 0:
+        return Error
+    step, flag = len(string) // 2, False if len(string) % 2 == 0 else True
+    return sum(int(i) for i in string[:step]) == sum(int(i) for i in string[(step if not flag else step+1):])
