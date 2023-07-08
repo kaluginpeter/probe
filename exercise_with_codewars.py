@@ -18868,3 +18868,5 @@ class Solution:
     def smallestEqual(self, nums: List[int], i=0) -> int:
         return -1 if i == len(nums) else (i if i % 10 == nums[i] else self.smallestEqual(nums, i+1))
 # Runtime 91 ms Beats 87.50% - Memory 16.4 MB Beats 29.22%
+
+# Tongues
