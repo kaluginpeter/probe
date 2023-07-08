@@ -18852,3 +18852,5 @@ def dupe_detect(functions):
     l = [tuple(map(f, range(256))) for f in functions]
     lr = [tup for tup, v in Counter(l).items() if v>1]
     return [[i for i, t in enumerate(l) if t==f] for f in lr]
+
+# 2057. Smallest Index With Equal Value
