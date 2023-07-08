@@ -18870,3 +18870,6 @@ class Solution:
 # Runtime 91 ms Beats 87.50% - Memory 16.4 MB Beats 29.22%
 
 # Tongues
+import string
+def tongues(code):
+    return code.translate(str.maketrans('aiyeouAIYEOUbkxznhdcwgpvjqtsrlmfBKXZNHDCWGPVJQTSRLMF', 'eouaiyEOUAIYpvjqtsrlmfbkxznhdcwgPVJQTSRLMFBKXZNHDCWG'))
