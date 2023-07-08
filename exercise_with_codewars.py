@@ -18854,3 +18854,17 @@ def dupe_detect(functions):
     return [[i for i, t in enumerate(l) if t==f] for f in lr]
 
 # 2057. Smallest Index With Equal Value
+class Solution:
+    def smallestEqual(self, nums: List[int]) -> int:
+        for i in range(len(nums)):
+            if i < 10:
+                if i == nums[i]:
+                    return i
+            if i % 10 == nums[i]:
+                return i
+        return -1
+# Runtime 96 ms Beats 67.97% - Memory 16.3 MB Beats 69.38%
+class Solution:
+    def smallestEqual(self, nums: List[int], i=0) -> int:
+        return -1 if i == len(nums) else (i if i % 10 == nums[i] else self.smallestEqual(nums, i+1))
+# Runtime 91 ms Beats 87.50% - Memory 16.4 MB Beats 29.22%
