@@ -18875,3 +18875,11 @@ def tongues(code):
     return code.translate(str.maketrans('aiyeouAIYEOUbkxznhdcwgpvjqtsrlmfBKXZNHDCWGPVJQTSRLMF', 'eouaiyEOUAIYpvjqtsrlmfbkxznhdcwgPVJQTSRLMFBKXZNHDCWG'))
 
 # 1961. Check If String Is a Prefix of Array
+class Solution:
+    def isPrefixString(self, s: str, words: List[str]) -> bool:
+        word = ''
+        for i in range(0, len(words)):
+            word += words[i]
+            if s == word:
+                return True
+        return False
