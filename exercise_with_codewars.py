@@ -18885,3 +18885,18 @@ class Solution:
         return False
 
 # Simple RSA Implementation
+class RSA:
+    import math
+    def __init__(self, p, q, e):
+        self.p = p
+        self.q = q
+        self.e = e
+        self.n = p * q
+        self.phi_n = (p - 1) * (q - 1)
+
+    def encrypt(self, m):
+        return m ** self.e % self.n
+
+    def decrypt(self, c):
+        d = pow(self.e, -1, self.phi_n)
+        return pow(c, d, self.n)
