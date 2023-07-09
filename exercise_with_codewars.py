@@ -18873,3 +18873,5 @@ class Solution:
 import string
 def tongues(code):
     return code.translate(str.maketrans('aiyeouAIYEOUbkxznhdcwgpvjqtsrlmfBKXZNHDCWGPVJQTSRLMF', 'eouaiyEOUAIYpvjqtsrlmfbkxznhdcwgPVJQTSRLMFBKXZNHDCWG'))
+
+# 1961. Check If String Is a Prefix of Array
