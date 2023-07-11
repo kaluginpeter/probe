@@ -18960,3 +18960,5 @@ def find(seq):
 # Solution 2
 def find(seq):
   return (min(seq)+max(seq))*(len(seq)+1)/2-sum(seq)
+
+# The area between the vertex of the parabola and x-axis
