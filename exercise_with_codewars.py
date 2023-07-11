@@ -18944,3 +18944,5 @@ class Solution:
             total += word
             count += 1
         return count - 1
+
+# Missing number in Unordered Arithmetic Progression
