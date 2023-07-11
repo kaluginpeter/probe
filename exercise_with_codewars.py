@@ -18935,3 +18935,12 @@ def get_in_line(l):
                     l[i], l[j] = l[j], l[i]
 
 # 1668. Maximum Repeating Substring
+class Solution:
+    def maxRepeating(self, sequence: str, word: str) -> int:
+        if word not in sequence:
+            return 0
+        count, total = 0, ''
+        while total in sequence:
+            total += word
+            count += 1
+        return count - 1
