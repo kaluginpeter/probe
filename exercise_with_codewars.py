@@ -18933,3 +18933,5 @@ def get_in_line(l):
                 j = len(l) - 1 - i
                 if l[i] not in (1,3) and l[j] not in (1,3):
                     l[i], l[j] = l[j], l[i]
+
+# 1668. Maximum Repeating Substring
