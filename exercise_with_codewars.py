@@ -18999,3 +18999,6 @@ class Solution:
         return pos
 
 # Aerial Firefighting
+from math import ceil
+def waterbombs(fire, w):
+    return sum(ceil(len(i) / w) for i in fire.split('Y'))
