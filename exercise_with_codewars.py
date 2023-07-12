@@ -18972,3 +18972,28 @@ def area(a, b, c):
     return abs(((a/3) * (x1)**3 + (b/2) * (x1)**2 + c * (x1)) - ((a/3) * (x2)**3 + (b/2) * (x2)**2 + c * (x2)))
 
 # 34. Find First and Last Position of Element in Sorted Array
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        if len(nums) == 0:
+            return [-1, -1]
+        pos, left, right = [-1, -1], 0, len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                pos[0], right = mid, mid - 1
+            if nums[mid] < target:
+                left = mid + 1
+            if nums[mid] > target:
+                right = mid - 1
+        if pos[0] == -1:
+            return pos
+        left, right = 0, len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                pos[1], left = mid, mid + 1
+            if nums[mid] < target:
+                left = mid + 1
+            if nums[mid] > target:
+                right = mid - 1
+        return pos
