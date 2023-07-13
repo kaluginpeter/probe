@@ -19011,3 +19011,5 @@ class Solution:
             top += nums[i+k] - nums[i]
             res = max(top, res)
         return res / k
+
+# Easy Diagonal
