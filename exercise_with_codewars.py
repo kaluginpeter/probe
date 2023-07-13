@@ -19002,3 +19002,5 @@ class Solution:
 from math import ceil
 def waterbombs(fire, w):
     return sum(ceil(len(i) / w) for i in fire.split('Y'))
+
+# 643. Maximum Average Subarray I
