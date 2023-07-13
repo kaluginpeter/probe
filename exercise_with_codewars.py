@@ -19013,3 +19013,9 @@ class Solution:
         return res / k
 
 # Easy Diagonal
+def diagonal(n, p):
+    su, com = 0, 1
+    for k in range(0, n - p + 1):
+        su +=com
+        com = (com * (p + k + 1 )) // (k + 1)
+    return su
