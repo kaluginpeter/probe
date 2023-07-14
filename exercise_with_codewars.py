@@ -19036,3 +19036,5 @@ class Solution:
             if nums1[l] > nums2[r]:
                 r += 1
         return -1
+    
+# Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
