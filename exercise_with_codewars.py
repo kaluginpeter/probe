@@ -19019,3 +19019,5 @@ def diagonal(n, p):
         su +=com
         com = (com * (p + k + 1 )) // (k + 1)
     return su
+
+# 2540. Minimum Common Value
