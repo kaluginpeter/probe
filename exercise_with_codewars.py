@@ -19021,3 +19021,18 @@ def diagonal(n, p):
     return su
 
 # 2540. Minimum Common Value
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        r,l = 0, 0
+        while True:
+            if l >= len(nums1) or r >= len(nums2):
+                break
+            print(l, r)
+            if nums1[l] == nums2[r]:
+                return nums1[l]
+            if nums1[l] < nums2[r]:
+                l += 1
+                continue
+            if nums1[l] > nums2[r]:
+                r += 1
+        return -1
