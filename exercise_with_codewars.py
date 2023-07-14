@@ -19038,3 +19038,6 @@ class Solution:
         return -1
     
 # Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+from collections import Counter
+def count_languages(lst):
+    return Counter(i['language'] for i in lst)
