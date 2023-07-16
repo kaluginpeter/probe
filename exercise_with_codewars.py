@@ -19075,3 +19075,34 @@ def cup_volume(d1, d2, h):
     return round((1/3) * math.pi * h * (Rv**2 + Rv * Rd + Rd**2), 2)
 
 # 860. Lemonade Change
+# My solution
+class Solution:
+    def lemonadeChange(self, bills: List[int]) -> bool:
+        if bills[0] != 5:
+            return False
+        cash = [bills[0]]
+        for i in range(1, len(bills)):
+            if bills[i] == 5:
+                cash.append(5)
+                continue
+            if bills[i] == 10:
+                if min(cash) != 5:
+                    return False
+                cash.remove(5)
+                cash.append(10)
+                continue
+            if bills[i] == 20:
+                if 10 in cash:
+                    if 5 not in cash:
+                        return False
+                    cash.remove(10)
+                    cash.remove(5)
+                    cash.append(20)
+                    continue
+                if cash.count(5) < 3:
+                    return False
+                cash.remove(5)
+                cash.remove(5)
+                cash.remove(5)
+                cash.append(20)
+        return True
