@@ -19067,3 +19067,5 @@ def remove_consecutive_duplicates(s):
         if s[i-1] != s[i]:
             w.append(s[i])
     return ' '.join(w)
+
+# Volume of a cup
