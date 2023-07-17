@@ -19131,3 +19131,5 @@ class Solution:
         for i in range(2, len(cost)):
             l[i] = cost[i] + min(l[i-1], l[i - 2])
         return min(l[-1], l[-2])
+    
+# Find the smallest
