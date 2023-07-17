@@ -19121,3 +19121,5 @@ class Solution:
             if five < 0:
                 return False
         return True
+
+# 746. Min Cost Climbing Stairs
