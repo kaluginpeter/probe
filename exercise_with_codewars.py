@@ -19121,5 +19121,13 @@ class Solution:
             if five < 0:
                 return False
         return True
-
+    
 # 746. Min Cost Climbing Stairs
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        l = [cost[0]] + [0] * (len(cost) - 1)
+        if len(l) >= 2:
+            l[1] = cost[1]
+        for i in range(2, len(cost)):
+            l[i] = cost[i] + min(l[i-1], l[i - 2])
+        return min(l[-1], l[-2])
