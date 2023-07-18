@@ -19143,3 +19143,5 @@ def smallest(n):
                 top = (sec, j)
         l = [top[0], i, top[1]] if l[0] > top[0] else l
     return l
+
+# 33. Search in Rotated Sorted Array
