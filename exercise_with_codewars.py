@@ -19195,3 +19195,11 @@ class Solution:
         return -1
 
 # Diagonals sum
+def sum_diagonals(matrix):
+    if not matrix[0]:
+        return 0
+    total, step = 0, 0
+    for i in matrix:
+        total += i[step] + i[-step + -1]
+        step += 1
+    return total
