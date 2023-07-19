@@ -19203,3 +19203,5 @@ def sum_diagonals(matrix):
         total += i[step] + i[-step + -1]
         step += 1
     return total
+
+# 292. Nim Game
