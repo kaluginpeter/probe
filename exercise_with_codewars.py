@@ -19210,3 +19210,12 @@ class Solution:
         return n % 4 != 0
 
 # Turn any word into a beef taco
+def tacofy(word):
+    l = []
+    d = {'t':'tomato','l':'lettuce','c':'cheese','g':'guacamole','s':'salsa'}
+    for i in word:
+        if i.lower() in 'aeoiu':
+            l.append('beef')
+        if i.lower() in d:
+            l.append(d[i.lower()])
+    return ['shell'] + l + ['shell']
