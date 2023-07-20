@@ -19232,3 +19232,8 @@ class Solution:
         return hi_i
 
 # Minimum Perimeter of a Rectangle
+def minimum_perimeter(area):
+    i = int(area ** .5)
+    while area % i:
+        i -= 1
+    return 2 * i + 2 * (area // i)
