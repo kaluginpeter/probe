@@ -19230,3 +19230,5 @@ class Solution:
             if nums[i] != hi and nums[i] * 2 > hi:
                 return -1
         return hi_i
+
+# Minimum Perimeter of a Rectangle
