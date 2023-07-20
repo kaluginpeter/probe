@@ -19221,3 +19221,12 @@ def tacofy(word):
     return ['shell'] + l + ['shell']
 
 # 747. Largest Number At Least Twice of Others
+class Solution:
+    def dominantIndex(self, nums: List[int]) -> int:
+        hi, hi_i = max(nums), 0
+        for i in range(len(nums)):
+            if nums[i] == hi:
+                hi_i = i
+            if nums[i] != hi and nums[i] * 2 > hi:
+                return -1
+        return hi_i
