@@ -19258,3 +19258,19 @@ class Solution:
         return sorted(d.items(), key=lambda x: -x[1])[0][0]
         
 # Building Spheres
+class Sphere(object):
+    def __init__(self, radius, mass):
+        self.rad = radius
+        self.mass = mass
+    def get_radius(self):
+        return self.rad
+    def get_mass(self):
+        return self.mass
+    def get_volume(self):
+        import math
+        return round((4 / 3) * math.pi * self.rad**3, 5)
+    def get_surface_area(self):
+        import math
+        return round(4 * math.pi * self.rad**2, 5)
+    def get_density(self):
+        return round(self.mass / self.get_volume(), 5)
