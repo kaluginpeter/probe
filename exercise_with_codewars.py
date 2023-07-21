@@ -19276,3 +19276,5 @@ class Sphere(object):
         return round(self.mass / self.get_volume(), 5)
 
 # Two numbers are positive
+def two_are_positive(*args):
+    return sum(i > 0 for i in args) == 2
