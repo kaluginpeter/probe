@@ -19278,3 +19278,5 @@ class Sphere(object):
 # Two numbers are positive
 def two_are_positive(*args):
     return sum(i > 0 for i in args) == 2
+
+# 657. Robot Return to Origin
