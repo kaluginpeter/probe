@@ -19280,3 +19280,16 @@ def two_are_positive(*args):
     return sum(i > 0 for i in args) == 2
 
 # 657. Robot Return to Origin
+class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+        l, u = 0, 0
+        for i in moves:
+            if i == 'U':
+                u += 1
+            if i == 'D':
+                u -= 1
+            if i == 'L':
+                l += 1
+            if i == 'R':
+                l -= 1
+        return u == 0 and l == 0
