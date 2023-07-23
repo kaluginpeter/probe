@@ -19293,7 +19293,7 @@ class Solution:
             if i == 'R':
                 l -= 1
         return u == 0 and l == 0
-
+    
 # 2788. Split Strings by Separator
 class Solution:
     def splitWordsBySeparator(self, words: List[str], separator: str) -> List[str]:
@@ -19303,3 +19303,5 @@ class Solution:
                 if j:
                     l.append(j)
         return l
+
+# What's a Perfect Power anyway?
