@@ -19293,3 +19293,5 @@ class Solution:
             if i == 'R':
                 l -= 1
         return u == 0 and l == 0
+
+# 2788. Split Strings by Separator
