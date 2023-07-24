@@ -19314,3 +19314,11 @@ def isPP(n):
                 return [i, j]
 
 # "Center yourself", says the monk.
+def center(strng, width, fill=' '):
+    if len(strng) > width:
+        return strng
+    if (width - len(strng)) % 2 == 0:
+        cop = fill * ((width - len(strng)) // 2) + strng
+    else:
+        cop = fill * ((width - len(strng)) // 2 + 1) + strng
+    return cop + fill * (width - len(cop))
