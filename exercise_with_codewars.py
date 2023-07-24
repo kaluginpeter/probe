@@ -19312,3 +19312,5 @@ def isPP(n):
                 break
             if i ** j == n:
                 return [i, j]
+
+# "Center yourself", says the monk.
