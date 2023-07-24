@@ -19322,3 +19322,5 @@ def center(strng, width, fill=' '):
     else:
         cop = fill * ((width - len(strng)) // 2 + 1) + strng
     return cop + fill * (width - len(cop))
+
+# 50. Pow(x, n)
