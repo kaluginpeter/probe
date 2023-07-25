@@ -19350,3 +19350,12 @@ class Solution:
         return l
 
 # Tram Capacity
+def tram(stops, d, o):
+    top = o[0] - d[0]
+    max = top
+    for i in range(1, stops):
+        top -= d[i]
+        top += o[i]
+        if top > max:
+            max = top
+    return max
