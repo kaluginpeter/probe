@@ -19361,3 +19361,21 @@ def tram(stops, d, o):
     return max
     
 # 1870. Minimum Speed to Arrive on Time
+class Solution:
+    def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
+        def mintime(speed, dist, hour):
+            import math
+            top = 0
+            for i in range(len(dist)-1):
+                top += math.ceil(dist[i]/speed)
+            top += dist[-1] / speed
+            return top <= hour
+        l, r, m = 1, 10 ** 7, -1
+        while l <= r:
+            mid = (l + r) // 2
+            if mintime(mid, dist, hour):
+                m = mid
+                r = mid - 1
+            else:
+                l = mid + 1
+        return m
