@@ -19359,7 +19359,7 @@ def tram(stops, d, o):
         if top > max:
             max = top
     return max
-    
+
 # 1870. Minimum Speed to Arrive on Time
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
@@ -19379,3 +19379,5 @@ class Solution:
             else:
                 l = mid + 1
         return m
+
+# Valid Braces
