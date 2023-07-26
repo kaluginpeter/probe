@@ -19359,3 +19359,5 @@ def tram(stops, d, o):
         if top > max:
             max = top
     return max
+    
+# 1870. Minimum Speed to Arrive on Time
