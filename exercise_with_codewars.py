@@ -19381,3 +19381,16 @@ class Solution:
         return m
 
 # Valid Braces
+def valid_braces(string):
+    d = {')': '(', ']': '[', '}': '{'}
+    stack = []
+    for i in string:
+        if i not in d:
+            stack.append(i)
+        else:
+            if not stack:
+                return False
+            if stack[-1] != d[i]:
+                return False
+            stack.pop()
+    return not stack
