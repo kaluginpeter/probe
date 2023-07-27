@@ -19409,3 +19409,12 @@ class Solution:
         return n == 1
 
 # Keep the Order
+def keep_order(ary, val):
+    l, r = 0, len(ary) - 1
+    while l <= r:
+        mid = l + (r - l) // 2
+        if ary[mid] >= val:
+            r = mid - 1
+        else:
+            l = mid + 1
+    return l
