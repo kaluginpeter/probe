@@ -19394,3 +19394,5 @@ def valid_braces(string):
                 return False
             stack.pop()
     return not stack
+    
+# 263. Ugly Number
