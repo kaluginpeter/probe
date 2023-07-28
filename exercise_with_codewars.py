@@ -19420,3 +19420,11 @@ def keep_order(ary, val):
     return l
 
 # 1002. Find Common Characters
+class Solution:
+    def commonChars(self, words: List[str]) -> List[str]:
+        l = []
+        for i in set(words[0]):
+            if all(i in j for j in words):
+                c = min(j.count(i) for j in words)
+                l += [i] * c
+        return l
