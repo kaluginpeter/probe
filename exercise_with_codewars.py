@@ -19428,3 +19428,5 @@ class Solution:
                 c = min(j.count(i) for j in words)
                 l += [i] * c
         return l
+
+# Tic-Tac-Toe Checker
