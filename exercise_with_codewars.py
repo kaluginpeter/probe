@@ -19454,3 +19454,5 @@ class Solution:
         if len(nums) == 1:
             stack += nums[0]
         return stack
+
+# 808. Soup Servings
