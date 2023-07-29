@@ -19444,5 +19444,13 @@ def is_solved(board):
         return 0
     else:
         return -1
-        
+    
 # 2562. Find the Array Concatenation Value
+class Solution:
+    def findTheArrayConcVal(self, nums: List[int]) -> int:
+        stack = 0
+        while len(nums) > 1:
+            stack += int(str(nums.pop(0)) + str(nums.pop(-1)))
+        if len(nums) == 1:
+            stack += nums[0]
+        return stack
