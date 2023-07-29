@@ -19474,3 +19474,5 @@ class Solution:
             d[(x, y)] = 0.25 * (dyn_prog(x-4, y) + dyn_prog(x-3, y-1) + dyn_prog(x-2, y-2) + dyn_prog(x-1, y-3))
             return d[(x,y)]
         return dyn_prog(n, n)
+
+# Binary sXORe
