@@ -19444,3 +19444,5 @@ def is_solved(board):
         return 0
     else:
         return -1
+        
+# 2562. Find the Array Concatenation Value
