@@ -19487,3 +19487,5 @@ class Solution:
             min_row = min(min_row, ops[i][0])
             min_col = min(min_col, ops[i][1])
         return min_row * min_col
+
+# Binary scORe
