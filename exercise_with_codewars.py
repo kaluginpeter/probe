@@ -19476,5 +19476,7 @@ class Solution:
         return dyn_prog(n, n)
 
 # Binary sXORe
-def sxore(n):
+ def sxore(n):
     return [n, 1, n + 1, 0][n % 4]
+
+# 598. Range Addition II
