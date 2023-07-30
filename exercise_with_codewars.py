@@ -19480,3 +19480,10 @@ class Solution:
     return [n, 1, n + 1, 0][n % 4]
 
 # 598. Range Addition II
+class Solution:
+    def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:
+        min_row, min_col = m, n
+        for i in range(len(ops)):
+            min_row = min(min_row, ops[i][0])
+            min_col = min(min_col, ops[i][1])
+        return min_row * min_col
