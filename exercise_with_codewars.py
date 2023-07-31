@@ -19489,5 +19489,7 @@ class Solution:
         return min_row * min_col
 
 # Binary scORe
-def score(n):
+ def score(n):
     return 2 ** n.bit_length() - 1
+
+# 191. Number of 1 Bits
