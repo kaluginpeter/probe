@@ -19500,5 +19500,9 @@ class Solution:
             c += 1
             n &= n - 1
         return c
-        
+
 # Transposing a song
+def transpose(song, interval):
+    d = {"Bb": "A#", "Db": "C#", "Eb": "D#", "Gb": "F#", "Ab": "G#"}
+    l = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
+    return [l[(l.index(d.get(i, i)) + interval) % 12] for i in song]
