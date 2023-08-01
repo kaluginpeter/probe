@@ -19523,3 +19523,16 @@ class Solution:
         return all_comb
 
 # Increasing Numbers with N Digits
+def increasing_numbers(digits):
+    if digits == 0:
+        return 1
+    dp = [[0] * 10 for _ in range(digits + 1)]
+    for j in range(10):
+        dp[1][j] = 1
+
+    for i in range(2, digits + 1):
+        for j in range(10):
+            for k in range(j + 1):
+                dp[i][j] += dp[i - 1][k]
+    total_count = sum(dp[digits][j] for j in range(1, 10))
+    return total_count + 1
