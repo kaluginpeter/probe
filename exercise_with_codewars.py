@@ -19521,3 +19521,5 @@ class Solution:
         all_comb = []
         backtrack(1, [])
         return all_comb
+
+# Increasing Numbers with N Digits
