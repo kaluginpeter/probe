@@ -19536,3 +19536,5 @@ def increasing_numbers(digits):
                 dp[i][j] += dp[i - 1][k]
     total_count = sum(dp[digits][j] for j in range(1, 10))
     return total_count + 1
+
+# 46. Permutations
