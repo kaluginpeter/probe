@@ -19544,3 +19544,15 @@ class Solution:
         return list(itertools.permutations(nums))
     
 # Random Substitution Cipher
+import random
+def random_sub():
+    d = {"a":"c", "b":"p", "c":"j", "d":"a", "e":"v", "f":"d",
+         "g":"g", "h":"u", "i":"l", "j":"t", "k":"n", "l":"w",
+         "m":"m", "n":"o", "o":"i", "p":"s", "q":"f", "r":"r", "s":"x", "t":"b",
+         "u":"h", "v":"y", "w":"q", "x":"e", "y":"k", "z":"z"}
+    en_al = 'abcdefghijklmnopqrstuvwxyz'
+    for k, v in d.items():
+        let = random.choice(en_al)
+        d[k] = let
+        en_al = en_al.replace(let, '')
+    return d
