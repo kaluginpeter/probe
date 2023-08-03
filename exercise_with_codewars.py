@@ -19556,3 +19556,5 @@ def random_sub():
         d[k] = let
         en_al = en_al.replace(let, '')
     return d
+
+# 561. Array Partition
