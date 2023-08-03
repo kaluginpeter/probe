@@ -19564,3 +19564,6 @@ class Solution:
         return sum(i for i in nums[::2])
 
 # Fast cooking pancakes
+import math
+def cook_pancakes(n, m):
+    return math.ceil(n / m * 2) if n >= m else 2
