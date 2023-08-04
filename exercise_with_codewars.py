@@ -19569,3 +19569,13 @@ def cook_pancakes(n, m):
     return math.ceil(n / m * 2) if n >= m else 2
 
 # 139. Word Break
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        l = [False] * (len(s) + 1)
+        l[0] = True
+        for i in range(1, len(s) + 1):
+            for j in range(i):
+                if l[j] and s[j:i] in wordDict:
+                    l[i] = True
+                    break
+        return l[-1]
