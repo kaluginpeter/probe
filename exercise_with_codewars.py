@@ -19581,3 +19581,13 @@ class Solution:
         return l[-1]
 
 # ASCII Shift Encryption/Decryption
+def ascii_encrypt(plaintext):
+    if not plaintext:
+        return plaintext
+    return ''.join(chr(ord(plaintext[i]) + i) for i in range(len(plaintext)))
+
+
+def ascii_decrypt(encrypted):
+    if not encrypted:
+        return encrypted
+    return ''.join(chr(ord(encrypted[i]) - i) for i in range(len(encrypted)))
