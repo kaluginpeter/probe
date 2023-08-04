@@ -19567,3 +19567,5 @@ class Solution:
 import math
 def cook_pancakes(n, m):
     return math.ceil(n / m * 2) if n >= m else 2
+
+# 139. Word Break
