@@ -19591,3 +19591,5 @@ def ascii_decrypt(encrypted):
     if not encrypted:
         return encrypted
     return ''.join(chr(ord(encrypted[i]) - i) for i in range(len(encrypted)))
+
+# 2744. Find Maximum Number of String Pairs
