@@ -19609,10 +19609,12 @@ class Solution:
             if top == 0:
                 break
         return count
-
+    
 # Race Ceremony
 from math import ceil
 def race_podium(b):
     x = ceil((b) / 3) + 1
     y = min(x - 1, b - x - 1)
     return y, x, b - x - y
+
+# 2595. Number of Even and Odd Bits
