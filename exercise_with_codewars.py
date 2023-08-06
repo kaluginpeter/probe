@@ -19618,3 +19618,16 @@ def race_podium(b):
     return y, x, b - x - y
 
 # 2595. Number of Even and Odd Bits
+class Solution:
+    def evenOddBit(self, n: int) -> List[int]:
+        odd, even, flag = 0, 0, True
+        for i in bin(n)[2:][::-1]:
+            if flag:
+                flag = False
+                if i == '1':
+                    even += 1
+            else:
+                flag = True
+                if i == '1':
+                    odd += 1
+        return [even, odd]
