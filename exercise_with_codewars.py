@@ -19649,5 +19649,17 @@ def point_in_polygon(poly, point) -> bool:
                         inside = not inside
         p1x,p1y = p2x,p2y
     return inside
-    
+
 # 74. Search a 2D Matrix
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        left, right, colum = 0, (len(matrix) * len(matrix[0])) - 1, len(matrix[0])
+        while left <= right:
+            middle = (left + right) // 2
+            if matrix[middle // colum][middle % colum] == target:
+                return True
+            if matrix[middle // colum][middle % colum] > target:
+                right = middle - 1
+            else:
+                left = middle + 1
+        return False
