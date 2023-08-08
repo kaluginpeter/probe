@@ -19671,3 +19671,10 @@ def the_var(the_variables):
     return en_al.index(op[0]) + en_al.index(op[1]) + 2
 
 # 2586. Count the Number of Vowel Strings in Range
+class Solution:
+    def vowelStrings(self, words: List[str], left: int, right: int) -> int:
+        count, vowels = 0, 'aeoiu'
+        for i in range(left, right + 1):
+            if words[i][0] in vowels and words[i][-1] in vowels:
+                count += 1
+        return count
