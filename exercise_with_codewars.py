@@ -19678,3 +19678,5 @@ class Solution:
             if words[i][0] in vowels and words[i][-1] in vowels:
                 count += 1
         return count
+
+# Min Factor Distance
