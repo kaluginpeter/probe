@@ -19663,9 +19663,11 @@ class Solution:
             else:
                 left = middle + 1
         return False
-
+    
 # The unknown but known variables: Addition
 def the_var(the_variables):
     en_al = 'abcdefghijklmnopqrstuvwxyz'
     op = the_variables.split('+')
     return en_al.index(op[0]) + en_al.index(op[1]) + 2
+
+# 2586. Count the Number of Vowel Strings in Range
