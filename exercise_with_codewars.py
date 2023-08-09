@@ -19697,3 +19697,5 @@ class Solution:
         return True
         
 # Who Took The Car Key?
+def who_took_the_car_key(message):
+    return ''.join(chr(int(word, 2)) for word in message)
