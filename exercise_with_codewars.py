@@ -19695,3 +19695,5 @@ class Solution:
                 return first == first[::-1] or second == second[::-1]
             start, end = start + 1, end - 1
         return True
+        
+# Who Took The Car Key?
