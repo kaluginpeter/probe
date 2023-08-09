@@ -19686,3 +19686,12 @@ def min_distance(n):
     return min(factor[i+1] - factor[i] for i in range(len(factor)) if i + 1 < len(factor))
 
 # 680. Valid Palindrome II
+class Solution:
+    def validPalindrome(self, s: str) -> bool:
+        start, end = 0, len(s) - 1
+        while start < end:
+            if s[start] != s[end]:
+                first, second = s[start:end], s[start+1:end+1]
+                return first == first[::-1] or second == second[::-1]
+            start, end = start + 1, end - 1
+        return True
