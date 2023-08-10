@@ -19695,7 +19695,9 @@ class Solution:
                 return first == first[::-1] or second == second[::-1]
             start, end = start + 1, end - 1
         return True
-        
+
 # Who Took The Car Key?
 def who_took_the_car_key(message):
     return ''.join(chr(int(word, 2)) for word in message)
+
+# 81. Search in Rotated Sorted Array II
