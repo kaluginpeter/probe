@@ -19723,3 +19723,10 @@ class Solution:
         return False
 
 # Coprimes up to N
+import math
+def coprimes(n):
+    ans = []
+    for i in range(1, n):
+        if math.gcd(n, i) == 1:
+            ans.append(i)
+    return ans
