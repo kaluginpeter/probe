@@ -19735,3 +19735,5 @@ def coprimes(n):
 class Solution:
     def accountBalanceAfterPurchase(self, pur: int) -> int:
         return 100 - (pur + 5) // 10 * 10
+        
+# Hanging the curtains
