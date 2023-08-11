@@ -19732,3 +19732,6 @@ def coprimes(n):
     return ans
 
 # 2806. Account Balance After Rounded Purchase
+class Solution:
+    def accountBalanceAfterPurchase(self, pur: int) -> int:
+        return 100 - (pur + 5) // 10 * 10
