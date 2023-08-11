@@ -19730,3 +19730,5 @@ def coprimes(n):
         if math.gcd(n, i) == 1:
             ans.append(i)
     return ans
+
+# 2806. Account Balance After Rounded Purchase
