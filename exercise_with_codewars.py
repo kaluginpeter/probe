@@ -19735,5 +19735,10 @@ def coprimes(n):
 class Solution:
     def accountBalanceAfterPurchase(self, pur: int) -> int:
         return 100 - (pur + 5) // 10 * 10
-        
+
 # Hanging the curtains
+def number_of_hooks(length, max_hook_dist):
+    out = 1
+    while length / out > max_hook_dist:
+        out = out * 2
+    return out + 1
