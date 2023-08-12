@@ -19751,5 +19751,15 @@ class Solution:
             if sen[i-1][-1] != sen[i][0]:
                 return False
         return True
-        
+
 # Last man standing
+def last_man_standing(n):
+    n, flag = list(range(1, n+1)), True
+    while len(n) > 1:
+        if flag:
+            n = n[1::2]
+            flag = False
+        else:
+            n = n[-2::-2][::-1]
+            flag = True
+    return n[0]
