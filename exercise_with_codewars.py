@@ -19744,3 +19744,10 @@ def number_of_hooks(length, max_hook_dist):
     return out + 1
 
 # 2490. Circular Sentence
+class Solution:
+    def isCircularSentence(self, sentence: str) -> bool:
+        sen = sentence.split()
+        for i in range(len(sen)):
+            if sen[i-1][-1] != sen[i][0]:
+                return False
+        return True
