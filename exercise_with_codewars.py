@@ -19751,3 +19751,5 @@ class Solution:
             if sen[i-1][-1] != sen[i][0]:
                 return False
         return True
+        
+# Last man standing
