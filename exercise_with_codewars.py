@@ -19742,3 +19742,5 @@ def number_of_hooks(length, max_hook_dist):
     while length / out > max_hook_dist:
         out = out * 2
     return out + 1
+
+# 2490. Circular Sentence
