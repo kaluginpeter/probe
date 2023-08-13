@@ -19763,3 +19763,5 @@ def last_man_standing(n):
             n = n[-2::-2][::-1]
             flag = True
     return n[0]
+
+# 2570. Merge Two 2D Arrays by Summing Values
