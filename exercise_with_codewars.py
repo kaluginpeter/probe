@@ -19765,3 +19765,24 @@ def last_man_standing(n):
     return n[0]
 
 # 2570. Merge Two 2D Arrays by Summing Values
+class Solution:
+    def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
+        res, right, left = [], 0, 0
+        while left < len(nums1) and right < len(nums2):
+            if nums1[left][0] == nums2[right][0]:
+                res.append([nums1[left][0], nums1[left][1] + nums2[right][1]])
+                left, right = left + 1, right + 1
+            else:
+                if nums1[left][0] < nums2[right][0]:
+                    res.append([nums1[left][0], nums1[left][1]])
+                    left += 1
+                else:
+                    res.append([nums2[right][0], nums2[right][1]])
+                    right += 1
+        while left < len(nums1):
+            res.append(nums1[left])
+            left += 1
+        while right < len(nums2):
+            res.append(nums2[right])
+            right += 1
+        return res
