@@ -19805,3 +19805,7 @@ class Solution:
         return heap[0]
 
 # What time is it?
+ from datetime import datetime
+def get_military_time(time):
+    in_time = datetime.strptime(time, "%I:%M:%S%p")
+    return datetime.strftime(in_time, "%H:%M:%S")
