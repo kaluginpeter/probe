@@ -19794,3 +19794,12 @@ def get_mean(arr,x,y):
     return (sum(arr[:x]) / x + sum(arr[-y:]) / y) / 2
 
 # 215. Kth Largest Element in an Array
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        heap = nums[:k]
+        heapq.heapify(heap)
+        for i in nums[k:]:
+            if i > heap[0]:
+                heapq.heappop(heap)
+                heapq.heappush(heap, i)
+        return heap[0]
