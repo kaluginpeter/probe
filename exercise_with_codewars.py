@@ -19826,3 +19826,14 @@ class Solution:
         return top_n if top > 0 else min(divisors)
     
 # Log without dates
+from datetime import datetime
+def check_logs(log):
+    if len(log) == 0:
+        return 0
+    count = 1
+    for x, y in zip(log, log[1:]):
+        x = datetime.strptime(x, '%H:%M:%S')
+        y = datetime.strptime(y, '%H:%M:%S')
+        if x >= y:
+            count += 1
+    return count
