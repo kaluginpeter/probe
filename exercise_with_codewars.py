@@ -19809,3 +19809,5 @@ class Solution:
 def get_military_time(time):
     in_time = datetime.strptime(time, "%I:%M:%S%p")
     return datetime.strftime(in_time, "%H:%M:%S")
+
+# 2644. Find the Maximum Divisibility Score
