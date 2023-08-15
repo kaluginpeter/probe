@@ -19837,3 +19837,5 @@ def check_logs(log):
         if x >= y:
             count += 1
     return count
+
+# Converting 12-hour time to 24-hour time
