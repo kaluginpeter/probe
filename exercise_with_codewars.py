@@ -19811,3 +19811,16 @@ def get_military_time(time):
     return datetime.strftime(in_time, "%H:%M:%S")
 
 # 2644. Find the Maximum Divisibility Score
+class Solution:
+    def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:
+        count, top, top_n = 0, 0, divisors[0]
+        for i in divisors:
+            count = 0
+            for j in nums:
+                if j % i == 0:
+                    count += 1
+            if count > top:
+                top_n, top = i, count
+            if count == top:
+                top_n = min(i, top_n)
+        return top_n if top > 0 else min(divisors)
