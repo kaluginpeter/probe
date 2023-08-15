@@ -19839,3 +19839,8 @@ def check_logs(log):
     return count
 
 # Converting 12-hour time to 24-hour time
+from datetime import datetime
+def to24hourtime(hour, minute, period):
+    start = str(hour) + ':' + str(minute) + period
+    start = datetime.strptime(start, '%I:%M%p')
+    return datetime.strftime(start, '%H%M')
