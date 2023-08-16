@@ -19862,3 +19862,12 @@ class Solution:
         return min(left, right)
 
 # Cats and shelves
+def solution(start, finish):
+    count = 0
+    while finish > start:
+        count += 1
+        if start + 3 <= finish:
+            start += 3
+        else:
+            start += 1
+    return count
