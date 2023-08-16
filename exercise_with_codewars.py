@@ -19846,3 +19846,17 @@ def to24hourtime(hour, minute, period):
     return datetime.strftime(start, '%H%M')
 
 # 2515. Shortest Distance to Target String in a Circular Array
+class Solution:
+    def closetTarget(self, words: List[str], target: str, startIndex: int) -> int:
+        if target not in words:
+            return -1
+        left, right = -1, -1
+        while True:
+            left += 1
+            if words[(startIndex - left + len(words)) % len(words)] == target:
+                break
+        while True:
+            right += 1
+            if words[(startIndex + right) % len(words)] == target:
+                break
+        return min(left, right)
