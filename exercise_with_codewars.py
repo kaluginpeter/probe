@@ -19860,3 +19860,5 @@ class Solution:
             if words[(startIndex + right) % len(words)] == target:
                 break
         return min(left, right)
+
+# Cats and shelves
