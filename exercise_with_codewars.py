@@ -19871,3 +19871,5 @@ def solution(start, finish):
         else:
             start += 1
     return count
+
+# 2481. Minimum Cuts to Divide a Circle
