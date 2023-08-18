@@ -19910,3 +19910,5 @@ class Solution:
         return k if k <= numOnes else numOnes - max(0, k - numOnes - numZeros)
 
 # Estimating Amounts of Subsets
+def est_subsets(arr):
+    return 2 ** len(set(arr)) - 1
