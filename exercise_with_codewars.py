@@ -19887,5 +19887,24 @@ def day_and_time(mins):
     hour = (total_minutes % (24 * 60)) // 60
     minute = total_minutes % 60
     return f"{days[day_index]} {hour:02d}:{minute:02d}"
-    
+
 # 2600. K Items With the Maximum Sum
+class Solution:
+    def kItemsWithMaximumSum(self, numOnes: int, numZeros: int, numNegOnes: int, k: int) -> int:
+        # Solution 1
+        # count = 0
+        # while k > 0:
+        #     k -= 1
+        #     if numOnes > 0:
+        #         count += 1
+        #         numOnes -= 1
+        #         continue
+        #     if numZeros > 0:
+        #         numZeros -= 1
+        #         continue
+        #     if numNegOnes > 0:
+        #         count += -1
+        #         numNegOnes -= 1
+        #         continue
+        # return count
+        return k if k <= numOnes else numOnes - max(0, k - numOnes - numZeros)
