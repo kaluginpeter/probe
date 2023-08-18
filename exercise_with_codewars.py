@@ -19887,3 +19887,5 @@ def day_and_time(mins):
     hour = (total_minutes % (24 * 60)) // 60
     minute = total_minutes % 60
     return f"{days[day_index]} {hour:02d}:{minute:02d}"
+    
+# 2600. K Items With the Maximum Sum
