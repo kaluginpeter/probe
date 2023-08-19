@@ -19921,5 +19921,9 @@ class Solution(object):
         # x, y, z = len(nums), sum(nums), sum(set(nums))
         # k = (x * (x + 1)) // 2
         # return [y - z, k - z]
-        
+
 # The Most Amicable of Numbers
+def amicable_numbers(n1,n2):
+    div_n1 = [i for i in range(1, n1 // 2 + 1) if n1 % i == 0]
+    div_n2 = [i for i in range(1, n2 // 2 + 1) if n2 % i == 0]
+    return sum(div_n1) == n2 and sum(div_n2) == n1
