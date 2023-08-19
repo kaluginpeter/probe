@@ -19912,3 +19912,5 @@ class Solution:
 # Estimating Amounts of Subsets
 def est_subsets(arr):
     return 2 ** len(set(arr)) - 1
+
+# 645. Set Mismatch
