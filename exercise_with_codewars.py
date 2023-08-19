@@ -19914,3 +19914,10 @@ def est_subsets(arr):
     return 2 ** len(set(arr)) - 1
 
 # 645. Set Mismatch
+class Solution(object):
+    def findErrorNums(self, nums):
+        return [sum(nums) - sum(set(nums)), list(set(range(1, len(nums) + 1)) - set(nums))[0]]
+        # Math solution
+        # x, y, z = len(nums), sum(nums), sum(set(nums))
+        # k = (x * (x + 1)) // 2
+        # return [y - z, k - z]
