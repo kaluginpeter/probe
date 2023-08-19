@@ -19921,3 +19921,5 @@ class Solution(object):
         # x, y, z = len(nums), sum(nums), sum(set(nums))
         # k = (x * (x + 1)) // 2
         # return [y - z, k - z]
+        
+# The Most Amicable of Numbers
