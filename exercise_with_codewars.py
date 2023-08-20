@@ -19940,3 +19940,5 @@ class Solution(object):
             else:
                 d[i] = 1
         return count + 1 if len(s) - count != 0 else count
+
+# Playing with passphrases
