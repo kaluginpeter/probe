@@ -19969,3 +19969,13 @@ class Solution(object):
         return False
 
 # Find The Parity Outlier
+def find_outlier(inter):
+    odd, even = sum(inter[i] % 2 != 0 for i in range(3)), sum(inter[i] % 2 == 0 for i in range(3))
+    flag = odd > even
+    if flag:
+        for i in inter:
+            if i % 2 == 0:
+                return i
+    for i in inter:
+        if i % 2 != 0:
+            return i
