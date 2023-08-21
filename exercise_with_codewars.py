@@ -19967,3 +19967,5 @@ class Solution(object):
             if cop == s:
                 return True
         return False
+
+# Find The Parity Outlier
