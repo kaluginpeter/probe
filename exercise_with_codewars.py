@@ -19988,3 +19988,5 @@ class Solution(object):
             columnNumber, i = (columnNumber - 1) // 26, (columnNumber - 1) % 26
             l.append(chr(i + ord('A')))
         return ''.join(l)[::-1]
+        
+# Convert string to camel case
