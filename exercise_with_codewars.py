@@ -19981,3 +19981,10 @@ def find_outlier(inter):
             return i
 
 # 168. Excel Sheet Column Title
+class Solution(object):
+    def convertToTitle(self, columnNumber):
+        l = []
+        while columnNumber:
+            columnNumber, i = (columnNumber - 1) // 26, (columnNumber - 1) % 26
+            l.append(chr(i + ord('A')))
+        return ''.join(l)[::-1]
