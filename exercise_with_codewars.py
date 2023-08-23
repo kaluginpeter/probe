@@ -20005,5 +20005,7 @@ class Solution(object):
         if c[arr[0]] > (len(s)+1)//2: return ''
         chars = list(chain(*[[ch]*c[ch] for ch in arr]))
         return ''.join([chars[(n+i)//2] if i%2 else chars[i//2] for i in range(n)])
-        
+
 # Highest Scoring Word
+def high(x):
+    return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
