@@ -19988,7 +19988,7 @@ class Solution(object):
             columnNumber, i = (columnNumber - 1) // 26, (columnNumber - 1) % 26
             l.append(chr(i + ord('A')))
         return ''.join(l)[::-1]
-        
+    
 # Convert string to camel case
 import re
 def to_camel_case(text):
@@ -19996,3 +19996,5 @@ def to_camel_case(text):
         return ''
     w = re.split('_|-| ', text)
     return (w[0].lower() if w[0][0].islower() else w[0].title()) + ''.join(i.title() for i in w[1:])
+    
+# 767. Reorganize String
