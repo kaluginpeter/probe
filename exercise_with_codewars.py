@@ -20009,5 +20009,15 @@ class Solution(object):
 # Highest Scoring Word
  def high(x):
     return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
-    
+
 # 2769. Find the Maximum Achievable Number
+class Solution(object):
+    def theMaximumAchievableX(self, num, t):
+        # top = 0
+        # for i in range(num // 2, num * 2 + t * 2):
+        #     x, y = num + t, i - t
+        #     if x == y:
+        #         if top < i:
+        #             top = i
+        # return top
+        return num + t + t
