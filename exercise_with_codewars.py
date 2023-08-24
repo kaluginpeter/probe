@@ -20021,3 +20021,5 @@ class Solution(object):
         #             top = i
         # return top
         return num + t + t
+
+# Range Extraction
