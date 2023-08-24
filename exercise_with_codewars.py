@@ -20007,5 +20007,7 @@ class Solution(object):
         return ''.join([chars[(n+i)//2] if i%2 else chars[i//2] for i in range(n)])
 
 # Highest Scoring Word
-def high(x):
+ def high(x):
     return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
+    
+# 2769. Find the Maximum Achievable Number
