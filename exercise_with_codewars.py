@@ -20056,3 +20056,5 @@ def solution(n):
                 integer += v
                 n -= k
     return integer
+
+# 1221. Split a String in Balanced Strings
