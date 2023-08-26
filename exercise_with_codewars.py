@@ -20111,3 +20111,5 @@ class Solution(object):
                 lenght += 1
                 top = pairs[i][1]
         return lenght
+
+# Human readable duration format
