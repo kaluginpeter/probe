@@ -20113,3 +20113,21 @@ class Solution(object):
         return lenght
 
 # Human readable duration format
+def format_duration(s):
+    if s == 0:
+        return 'now'
+    time = {'year': 365*24*60*60, 'day': 24*60*60, 'hour': 60*60, 'minute': 60, 'second': 1}
+    for k,v in time.items():
+        count = 0
+        while s >= v:
+            s -= v
+            count += 1
+        time[k] = count
+    dates = []
+    for k,v in time.items():
+        if v > 0:
+            dates.append((v, k if v == 1 else k + 's'))
+    if len(dates) > 1:
+        return ', '.join(str(date[0]) + ' ' + date[1] for date in dates[:-1]) \
+    + ' and ' + str(dates[-1][0]) + ' ' + dates[-1][1]
+    return str(dates[0][0]) + ' ' + dates[0][1]
