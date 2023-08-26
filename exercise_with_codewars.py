@@ -20133,3 +20133,25 @@ class Solution(object):
     return str(dates[0][0]) + ' ' + dates[0][1]
 
 # 274. H-Index
+# Solution 1 O(N * N) == O(N**2)
+class Solution(object):
+    def hIndex(self, citations):
+        h, count = 0, 0
+        while True:
+            for i in citations:
+                if i >= h + 1:
+                    count += 1
+            if count >= h + 1:
+                h += 1
+                count = 0
+            else:
+                break
+        return h
+# Solution 2 O(N log N)
+class Solution(object):
+    def hIndex(self, citations):
+        citations.sort()
+        for i in range(1, len(citations) + 1):
+            if citations[-i] < i:
+                return i - 1
+        return len(citations)
