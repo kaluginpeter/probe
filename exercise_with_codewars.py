@@ -20097,5 +20097,17 @@ class Solution(object):
                 left = 0
                 right = 0
         return count
-        
+
 # 646. Maximum Length of Pair Chain
+class Solution(object):
+    def findLongestChain(self, pairs):
+        if len(pairs) == 1:
+            return 1
+        lenght = 1
+        pairs = sorted(pairs, key=lambda x: x[1])
+        top = pairs[0][1]
+        for i in range(1, len(pairs)):
+            if top < pairs[i][0]:
+                lenght += 1
+                top = pairs[i][1]
+        return lenght
