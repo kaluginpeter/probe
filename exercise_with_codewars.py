@@ -20097,3 +20097,5 @@ class Solution(object):
                 left = 0
                 right = 0
         return count
+        
+# 646. Maximum Length of Pair Chain
