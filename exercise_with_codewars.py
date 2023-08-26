@@ -20113,7 +20113,7 @@ class Solution(object):
         return lenght
 
 # Human readable duration format
-def format_duration(s):
+ def format_duration(s):
     if s == 0:
         return 'now'
     time = {'year': 365*24*60*60, 'day': 24*60*60, 'hour': 60*60, 'minute': 60, 'second': 1}
@@ -20131,3 +20131,5 @@ def format_duration(s):
         return ', '.join(str(date[0]) + ' ' + date[1] for date in dates[:-1]) \
     + ' and ' + str(dates[-1][0]) + ' ' + dates[-1][1]
     return str(dates[0][0]) + ' ' + dates[0][1]
+
+# 274. H-Index
