@@ -20223,3 +20223,9 @@ def sum_dig_pow(a, b):
     return l
 
 # 1528. Shuffle String
+class Solution(object):
+    def restoreString(self, s, indices):
+        word = [0] * len(s)
+        for i in range(len(indices)):
+            word[indices[i]] = s[i]
+        return ''.join(word)
