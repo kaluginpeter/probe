@@ -20229,3 +20229,41 @@ class Solution(object):
         for i in range(len(indices)):
             word[indices[i]] = s[i]
         return ''.join(word)
+
+# 225. Implement Stack using Queues
+class MyStack(object):
+
+    def __init__(self):
+        self.lis = []
+
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        return self.lis.append(x)
+
+    def pop(self):
+        """
+        :rtype: int
+        """
+        return self.lis.pop()
+
+    def top(self):
+        """
+        :rtype: int
+        """
+        return self.lis[-1]
+
+    def empty(self):
+        """
+        :rtype: bool
+        """
+        return not self.lis
+
+# Your MyStack object will be instantiated and called as such:
+# obj = MyStack()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.empty()
