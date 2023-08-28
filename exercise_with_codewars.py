@@ -20342,3 +20342,5 @@ class Foo(object):
         self.flag2.wait()
         # printThird() outputs "third". Do not change or remove this line.
         printThird()
+
+# Strip Comments
