@@ -20344,3 +20344,10 @@ class Foo(object):
         printThird()
 
 # Strip Comments
+def strip_comments(strng, markers):
+    strng = strng.split('\n')
+    for i in range(len(strng)):
+        for spl in markers:
+            if spl in strng[i]:
+                strng[i] = strng[i].split(spl)[0].rstrip()
+    return '\n'.join(strng)
