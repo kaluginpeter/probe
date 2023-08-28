@@ -20267,3 +20267,5 @@ class MyStack(object):
 # param_2 = obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.empty()
+
+# 1114. Print in Order
