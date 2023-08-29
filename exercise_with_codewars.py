@@ -20351,5 +20351,14 @@ def strip_comments(strng, markers):
             if spl in strng[i]:
                 strng[i] = strng[i].split(spl)[0].rstrip()
     return '\n'.join(strng)
-    
+
 # 2483. Minimum Penalty for a Shop
+class Solution(object):
+    def bestClosingTime(self, customers):
+        score, top, time = 0, 0, -1
+        for i in range(len(customers)):
+            top += 1 if customers[i] == "Y" else -1
+            if top > score:
+                score = top
+                time = i
+        return time + 1
