@@ -20351,3 +20351,5 @@ def strip_comments(strng, markers):
             if spl in strng[i]:
                 strng[i] = strng[i].split(spl)[0].rstrip()
     return '\n'.join(strng)
+    
+# 2483. Minimum Penalty for a Shop
