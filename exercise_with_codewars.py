@@ -20362,3 +20362,5 @@ class Solution(object):
                 score = top
                 time = i
         return time + 1
+
+# So Many Permutations!
