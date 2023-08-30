@@ -20397,3 +20397,5 @@ class Solution:
                 ans += ['al']
                 i += 4
         return ''.join(ans)
+
+# WeIrD StRiNg CaSe
