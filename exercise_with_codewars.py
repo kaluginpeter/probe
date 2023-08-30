@@ -20378,3 +20378,22 @@ class Solution(object):
     return set(l)
 
 # 1678. Goal Parser Interpretation
+# Solution 1 - replace method
+class Solution(object):
+    def interpret(self, command):
+        return command.replace('()', 'o').replace('(al)', 'al')
+# Solution 2 - by while loop and array
+class Solution:
+    def interpret(self, command: str) -> str:
+        ans, i = [], 0
+        while i < len(command):
+            if command[i] == 'G':
+                ans += ['G']
+                i += 1
+            elif command[i:i + 2] == '()':
+                ans += ['o']
+                i += 2
+            else:
+                ans += ['al']
+                i += 4
+        return ''.join(ans)
