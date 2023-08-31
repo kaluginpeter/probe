@@ -20410,3 +20410,4 @@ def to_weird_case(words):
                 top += i[j].lower()
         ans.append(top)
     return ' '.join(ans)
+# 2269. Find the K-Beauty of a Number2269. Find the K-Beauty of a Number
