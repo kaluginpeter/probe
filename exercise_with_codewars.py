@@ -20447,3 +20447,10 @@ def sum_strings(x, y):
         str3 = str3[1:]
     return str3 if str3 else '0'
 # 338. Counting Bits
+# Solution 2
+class Solution:
+    def countBits(self, num):
+        ret = [0] * (num + 1)
+        for i in range(1, num+1):
+            ret[i] = ret[i>>1] + (i&1)
+        return ret
