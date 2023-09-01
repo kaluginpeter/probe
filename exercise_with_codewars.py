@@ -20456,3 +20456,9 @@ class Solution:
         return ret
         
 # Handshake problem
+def get_participants(handshakes):
+    count = 0
+    while handshakes > 0:
+        handshakes -= count
+        count += 1
+    return count
