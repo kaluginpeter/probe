@@ -20488,3 +20488,9 @@ class Solution:
         return sum(nums) == (n * (n + 1) // 2) + n and len(set(nums)) == n
 
 # Reverse or rotate?
+def rev_rot(strng, sz):
+    if sz > len(strng) or sz <= 0 or len(strng) == 0:
+        return ''
+    chunk = [(strng[i:i+sz], sum(int(j)**3 for j in strng[i:i+sz])) \
+             for i in range(0, len(strng), sz) if len(strng[i:i+sz]) == sz]
+    return ''.join(k[::-1] if v % 2 == 0 else k[1:] + k[0] for k,v in chunk)
