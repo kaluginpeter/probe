@@ -20454,7 +20454,7 @@ class Solution:
         for i in range(1, num+1):
             ret[i] = ret[i>>1] + (i&1)
         return ret
-        
+    
 # Handshake problem
 def get_participants(handshakes):
     count = 0
@@ -20462,3 +20462,5 @@ def get_participants(handshakes):
         handshakes -= count
         count += 1
     return count
+
+# 2784. Check if Array is Good
