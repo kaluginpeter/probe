@@ -20486,3 +20486,5 @@ class Solution:
     def isGood(self, nums: List[int]) -> bool:
         n = max(nums)
         return sum(nums) == (n * (n + 1) // 2) + n and len(set(nums)) == n
+
+# Reverse or rotate?
