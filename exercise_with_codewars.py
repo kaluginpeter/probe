@@ -20533,3 +20533,5 @@ def get_pins(observed):
     l = [list(map(str, d[int(i)])) + [i] for i in observed]
     ans = [''.join(i) for i in itertools.product(*l)]
     return ans
+
+# Next bigger number with the same digits
