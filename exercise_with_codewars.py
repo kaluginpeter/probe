@@ -20496,3 +20496,7 @@ def rev_rot(strng, sz):
     return ''.join(k[::-1] if v % 2 == 0 else k[1:] + k[0] for k,v in chunk)
 
 # 2099. Find Subsequence of Length K With the Largest Sum
+class Solution:
+    def maxSubsequence(self, nums: List[int], k: int) -> List[int]:
+        ans = sorted(enumerate(nums), key=lambda x: x[1])[-k:]
+        return [v for k, v in sorted(ans)]
