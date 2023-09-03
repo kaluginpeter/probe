@@ -20502,3 +20502,25 @@ class Solution:
         return [v for k, v in sorted(ans)]
 
 # Roman Numerals Helper
+rom = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'),
+      (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
+class RomanNumerals:
+    @staticmethod
+    def to_roman(val):
+        integer = ''
+        while val > 0:
+            for k,v in rom:
+                while val >= k:
+                    integer += v
+                    val -= k
+        return integer
+
+    @staticmethod
+    def from_roman(roman_num):
+        ans = 0
+        while roman_num:
+            for k,v in rom:
+                if roman_num.startswith(v):
+                    ans += k
+                    roman_num = roman_num[len(v):]
+        return ans
