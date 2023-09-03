@@ -20494,3 +20494,5 @@ def rev_rot(strng, sz):
     chunk = [(strng[i:i+sz], sum(int(j)**3 for j in strng[i:i+sz])) \
              for i in range(0, len(strng), sz) if len(strng[i:i+sz]) == sz]
     return ''.join(k[::-1] if v % 2 == 0 else k[1:] + k[0] for k,v in chunk)
+
+# 2099. Find Subsequence of Length K With the Largest Sum
