@@ -20535,3 +20535,11 @@ def get_pins(observed):
     return ans
 
 # Next bigger number with the same digits
+def next_bigger(n):
+    m = int(''.join(sorted(str(n))[::-1]))
+    count = 1
+    while m >= n + count:
+        if sorted(str(n + count)) == sorted(str(n)):
+            return n + count
+        count += 1
+    return -1
