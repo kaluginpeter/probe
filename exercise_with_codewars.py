@@ -20545,3 +20545,17 @@ def next_bigger(n):
     return -1
 
 # Most frequently used words in a text
+def top_3_words(text):
+    d, word = {}, ''
+    for i in text:
+        if i.lower().isalpha() or i == "'":
+            word += i.lower()
+        else:
+            if len(word) > 0:
+                if any(i.isalpha() for i in word):
+                    d[word] = d.get(word, 0) + 1
+                word = ''
+    if not d:
+        return []
+    d = [i[0] for i in sorted(d.items(), key=lambda x: x[1])[:-4:-1]]
+    return d
