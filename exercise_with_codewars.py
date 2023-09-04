@@ -20561,3 +20561,34 @@ def top_3_words(text):
     return d
 
 # 141. Linked List Cycle
+# Solution 1 - Hashtable. Speed - O(N) Memory - O(N)
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        s = set()
+        while head:
+            if head in s:
+                return True
+            s.add(head)
+            head = head.next
+        return False
+# Solution 2 - Two pointers. Speed - O(N) Memory - O(1)
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        x, y = head, head
+        while x and y and y.next:
+            x, y = x.next, y.next.next
+            if x == y:
+                return True
+        return False
