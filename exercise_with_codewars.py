@@ -20616,3 +20616,5 @@ def recoverSecret(triplets):
                         letter_order[key].remove(letter)
                 break
     return ''.join(sorted_letters)
+    
+# 1450. Number of Students Doing Homework at a Given Time
