@@ -20625,3 +20625,5 @@ class Solution:
             if endTime[i] >= queryTime and startTime[i] <= queryTime:
                 count += 1
         return count
+
+# Spoonerize Me
