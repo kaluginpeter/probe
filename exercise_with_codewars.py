@@ -20632,3 +20632,19 @@ def spoonerize(words):
     return w[1][0] + w[0][1:] + ' ' + w[0][0] + w[1][1:]
     
 # 1629. Slowest Key
+class Solution:
+    def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:
+        d = {keysPressed[0]:releaseTimes[0]}
+        for i in range(1, len(releaseTimes)):
+            if not d.get(keysPressed[i], None):
+                d[keysPressed[i]] = releaseTimes[i] - releaseTimes[i-1]
+            else:
+                d[keysPressed[i]] = max(d[keysPressed[i]], releaseTimes[i] - releaseTimes[i-1])
+        top, key = 0, 'a'
+        for k,v in d.items():
+            if v >= top:
+                if v == top:
+                    key, top = max(key, k), v
+                    continue
+                top, key = v, k
+        return key
