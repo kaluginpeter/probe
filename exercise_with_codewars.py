@@ -20630,7 +20630,7 @@ class Solution:
 def spoonerize(words):
     w = words.split()
     return w[1][0] + w[0][1:] + ' ' + w[0][0] + w[1][1:]
-    
+
 # 1629. Slowest Key
 class Solution:
     def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:
@@ -20648,3 +20648,5 @@ class Solution:
                     continue
                 top, key = v, k
         return key
+
+# ATM
