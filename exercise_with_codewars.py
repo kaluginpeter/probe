@@ -20659,3 +20659,5 @@ def solve(n):
     if n > 0:
         return -1
     return sum(v for v in d.values())
+    
+# 500. Keyboard Row
