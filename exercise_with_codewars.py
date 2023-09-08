@@ -20697,3 +20697,5 @@ class Solution:
             row = [x + y for x, y in zip([0] + row, row + [0])]
             triangle.append(row)
         return triangle
+
+# Character Counter
