@@ -20699,3 +20699,8 @@ class Solution:
         return triangle
 
 # Character Counter
+def validate_word(word):
+    d = {}
+    for i in word.lower():
+        d[i] = d.get(i, 0) + 1
+    return all(x == y for x, y in zip(d.values(), list(d.values())[1:]))
