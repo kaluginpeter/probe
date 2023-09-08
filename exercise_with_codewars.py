@@ -20681,6 +20681,8 @@ class Solution:
                 ans.append(i)
         return ans
 
+# 118. Pascal's Triangle
+
 # Bubblesort Once
 def bubblesort_once(l):
     l = l.copy()
