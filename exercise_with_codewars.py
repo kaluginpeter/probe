@@ -20681,8 +20681,6 @@ class Solution:
                 ans.append(i)
         return ans
 
-# 118. Pascal's Triangle
-
 # Bubblesort Once
 def bubblesort_once(l):
     l = l.copy()
@@ -20690,3 +20688,12 @@ def bubblesort_once(l):
         if l[i-1] > l[i]:
             l[i-1], l[i] = l[i], l[i-1]
     return l
+
+# 118. Pascal's Triangle
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        row, triangle = [1], [[1]]
+        for i in range(numRows-1):
+            row = [x + y for x, y in zip([0] + row, row + [0])]
+            triangle.append(row)
+        return triangle
