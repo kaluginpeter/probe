@@ -20729,3 +20729,5 @@ class Warrior:
         # health cannot go below zero
         enemy.health = max([0, enemy.health - (swings * 10)])
         return enemy.health
+
+# Sort Santa's Reindeer
