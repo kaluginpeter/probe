@@ -20718,3 +20718,5 @@ class Solution:
                     ans = ch - ind
                 ind = ch
         return ans
+
+# Ninja vs Samurai: Strike
