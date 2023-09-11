@@ -20908,7 +20908,7 @@ class Solution:
             for i in range(0, len(v), k):
                 ans.append(v[i:i + k])
         return ans
-        
+
 # Simple string reversal
 # In this Kata, we are going to reverse a string while maintaining the spaces (if any) in their original place.
 #
@@ -20931,3 +20931,9 @@ class Solution:
 # Simple remove duplicates
 #
 # ALGORITHMS
+def solve(s):
+    l = [k for k,v in enumerate(list(s)) if v == ' ']
+    word = list(s.replace(' ', ''))[::-1]
+    for i in l:
+        word.insert(i, ' ')
+    return ''.join(word)
