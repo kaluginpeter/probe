@@ -20982,7 +20982,7 @@ class Solution:
             if v > 0:
                 se.add(v)
         return de
-
+    
 # Candy problem
 # Description
 # "It's the end of trick-or-treating and we have a list/array representing how much candy each child in our group has made out with. We don't want the kids to start arguing, and using our parental intuition we know trouble is brewing as many of the children in the group have received different amounts of candy from each home.
@@ -21006,3 +21006,7 @@ class Solution:
 #
 # candies ([6]) # return -1 (because only one kid)
 # LISTSALGORITHMS
+def candies(s):
+    if len(s) < 2:
+        return -1
+    return sum(max(s) - i for i in s)
