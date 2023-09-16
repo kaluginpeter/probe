@@ -21304,3 +21304,9 @@ def number_of_rectangles(m, n):
 #
 # 1 <= nums.length <= 1000
 # 1 <= nums[i], original <= 1000
+class Solution:
+    def findFinalValue(self, nums: List[int], original: int) -> int:
+        nums = set(nums)
+        while original in nums:
+            original *= 2
+        return original
