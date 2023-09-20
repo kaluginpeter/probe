@@ -21624,3 +21624,16 @@ def sing():
 # n == energy.length == experience.length
 # 1 <= n <= 100
 # 1 <= initialEnergy, initialExperience, energy[i], experience[i] <= 100
+class Solution:
+    def minNumberOfHours(self, initialEnergy: int, initialExperience: int, energy: List[int], experience: List[int]) -> int:
+        hours = 0
+        for i in range(len(energy)):
+            while initialEnergy <= energy[i] or initialExperience <= experience[i]:
+                hours += 1
+                if initialEnergy <= energy[i]:
+                    initialEnergy += 1
+                else:
+                    initialExperience += 1
+            initialEnergy -= energy[i]
+            initialExperience += experience[i]
+        return hours
