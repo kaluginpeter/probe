@@ -21796,3 +21796,5 @@ def min_min_max(arr):
         if mid not in arr:
             break
     return [mi, mid, ma]
+
+# 392. Is Subsequence
