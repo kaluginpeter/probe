@@ -21948,3 +21948,5 @@ class Solution:
 # Thus 31 and 14 should return 2.
 #
 # BITSBINARYALGORITHMS
+def convert_bits(a, b):
+    return bin(a ^ b).count('1')
