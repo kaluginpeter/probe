@@ -22019,3 +22019,9 @@ class Solution:
 # goto([],'2') must return 0 because the type of the input level is array instead of a number.
 # goto(3,{}) must return 0 because the type of the input button is object instead of a string.
 # STATE MACHINESFUNDAMENTALS
+def goto(level, button):
+    if level not in (0, 1, 2, 3) or button not in ['0', '1', '2', '3']:
+        return 0
+    if level > int(button):
+        return int(button) - level
+    return abs(level - int(button))
