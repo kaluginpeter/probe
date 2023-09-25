@@ -22112,3 +22112,25 @@ class Solution:
 # Jeff.add_cash(20.00) # Returns 'Jeff has 118.'
 # Good Luck
 # FUNDAMENTALSOBJECT-ORIENTED PROGRAMMING
+class User(object):
+    def __init__(self, name, balance, checking_account):
+        self.name = name
+        self.balance = balance
+        self.checking_account = checking_account
+    #Happy coding
+    def withdraw(self, money):
+        if money > self.balance:
+            raise ValueError
+        self.balance -= money
+        return f'{self.name} has {self.balance}.'
+    def check(self, user, money):
+        if user.balance < money:
+            raise ValueError
+        if not user.checking_account:
+            raise ValueError
+        self.balance += money
+        user.balance -= money
+        return f'{self.name} has {self.balance} and {user.name} has {user.balance}.'
+    def add_cash(self, money):
+        self.balance += money
+        return f'{self.name} has {self.balance}.'
