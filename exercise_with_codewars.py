@@ -22051,3 +22051,14 @@ def goto(level, button):
 # 0 <= s.length <= 1000
 # t.length == s.length + 1
 # s and t consist of lowercase English letters.
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        x, y = {}, {}
+        for i in s:
+            x[i] = x.get(i, 0) + 1
+        for i in t:
+            if i not in x:
+                return i
+            y[i] = y.get(i, 0) + 1
+            if y[i] > x[i]:
+                return i
