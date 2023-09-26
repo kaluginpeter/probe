@@ -22194,3 +22194,10 @@ class Solution:
 # As tempting as it may seem, do not use loops to solve this problem.
 #
 # RECURSIONALGORITHMS
+@countcalls
+def replicate(times, number, ans=[]):
+    if times < 0:
+        return []
+    if times == 0:
+        return ans
+    return replicate(times - 1, number, ans + [number])
