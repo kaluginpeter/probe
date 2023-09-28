@@ -22356,3 +22356,13 @@ def range_bit_count(a, b):
 #
 # 1 <= nums.length <= 5000
 # 0 <= nums[i] <= 5000
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        x, y = 0, len(nums) - 1
+        while x < y:
+            while x < y and nums[x] & 0x1 == 0:
+                x += 1
+            while x < y and nums[y] & 0x1 != 0:
+                y -= 1
+            nums[x], nums[y] = nums[y], nums[x]
+        return nums
