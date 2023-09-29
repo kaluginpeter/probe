@@ -22518,3 +22518,15 @@ class Solution:
 # >>> q2.color
 # "red"
 # FUNDAMENTALSOBJECT-ORIENTED PROGRAMMING
+class Quark(object):
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+        self.baryon_number = 0.3333333333333333
+    def color(self):
+        return self.color
+    def flavor(self):
+        return self.flavor
+    def interact(self, user):
+        self.color, user.color = user.color, self.color
+        self.flavor, user.flavor = user.flavor, self.flavor
