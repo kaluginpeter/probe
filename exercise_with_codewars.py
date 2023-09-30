@@ -22587,3 +22587,6 @@ class Solution:
 # Email addresses may contain more than one . character.
 # Note the additional whitespace around the bracketed literals in the examples!
 # STRINGSALGORITHMS
+# Solution
+def obfuscate(email):
+    return email.replace('.', ' [dot] ').replace('@', ' [at] ')
