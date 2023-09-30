@@ -22559,3 +22559,6 @@ class Quark(object):
 # Constraints:
 #
 # 1 <= n <= 1000
+class Solution:
+    def divisorGame(self, n: int) -> bool:
+        return n % 2 == 0
