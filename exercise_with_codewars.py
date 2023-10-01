@@ -22635,3 +22635,5 @@ class Solution:
 # (courtesy of haskell.org)
 #
 # LISTSFUNDAMENTALS
+def penultimate(a):
+    return a[-2]
