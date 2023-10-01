@@ -22613,3 +22613,12 @@ def obfuscate(email):
 # s does not contain any leading or trailing spaces.
 # There is at least one word in s.
 # All the words in s are separated by a single space.
+# Solution
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(i[::-1] for i in s.split())
+
+# Solution 2 - Choising whitespace in split() method. Works faster
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(i[::-1] for i in s.split(' '))
