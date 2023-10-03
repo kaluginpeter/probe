@@ -22809,3 +22809,23 @@ def class_name_changer(cls, new_name):
 #
 # 1 <= nums.length <= 100
 # 1 <= nums[i] <= 100
+# Solution 1 - Simple choosing. Speed O(N**2) - Memory O(1)
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        count = 0
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] == nums[j]:
+                    count += 1
+        return count
+# Solution 2 - Hash table. Speed O(N) - Memory O(N)
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        d, count = {}, 0
+        for i in nums:
+            if i in d:
+                count += d[i]
+                d[i] += 1
+            else:
+                d[i] = 1
+        return count
