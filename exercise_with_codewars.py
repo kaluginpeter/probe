@@ -22997,3 +22997,13 @@ def encryption(string):
 #
 #
 # Follow up: Could you solve the problem in linear time and in O(1) space?
+class Solution:
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        d, x = {}, len(nums) // 3
+        for i in nums:
+            d[i] = d.get(i, 0) + 1
+        count = []
+        for i in d:
+            if d[i] > x:
+                count += [i]
+        return count
