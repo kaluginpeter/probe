@@ -23100,3 +23100,6 @@ class Solution:
 # http://en.wikipedia.org/wiki/Main_diagonal
 #
 # MATRIXLINEAR ALGEBRAALGORITHMS
+import math
+def main_diagonal_product(mat):
+    return math.prod(mat[i][i] for i in range(len(mat)))
