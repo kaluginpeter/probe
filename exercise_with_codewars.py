@@ -23307,3 +23307,31 @@ def is_defended(attackers, defenders):
 # -109 <= nums[i] <= 109
 # nums is a non-decreasing array.
 # -109 <= target <= 109
+# Solution 2 - My solution with daily task
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        if len(nums) == 0:
+            return [-1, -1]
+        ans, l, r = [-1, -1], 0, len(nums) - 1
+        while l <= r:
+            m = (l + r) // 2
+            if nums[m] == target:
+                ans[0] = m
+                r = m - 1
+            elif nums[m] < target:
+                l = m + 1
+            else:
+                r = m - 1
+        if ans[0] == -1:
+            return ans
+        l, r = 0, len(nums) - 1
+        while l <= r:
+            m = (l + r) // 2
+            if nums[m] == target:
+                ans[1] = m
+                l = m + 1
+            elif nums[m] < target:
+                l = m + 1
+            else:
+                r = m - 1
+        return ans
