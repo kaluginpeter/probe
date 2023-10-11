@@ -23479,7 +23479,7 @@ class Solution:
                     ans.append(l)
                     l = []
         return ans
-
+    
 # A Gift Well Spent
 # Note: This kata has been inspired by GCJ 2010's "Store credit", where one also has to parse the actual input. If you solved this kata, try that one too. Note that GCJ's version always has a solution, whereas this kata might not.
 #
@@ -23496,3 +23496,9 @@ class Solution:
 #
 # buy(5,[1,2,3,4,5]) = [0,3] # the values at [1,2] also adds up to five, but [0,3] < [1,2]
 # LISTSALGORITHMS
+def buy(x,arr):
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] + arr[j] == x:
+                return [i, j]
+    return
