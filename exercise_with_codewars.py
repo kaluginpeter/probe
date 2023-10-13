@@ -23622,3 +23622,10 @@ def get_positions(n):
 #
 # 2 <= cost.length <= 1000
 # 0 <= cost[i] <= 999
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        x, y = 0, 0
+        for i in range(2, len(cost) + 1):
+            z = min(x + cost[i-1], y + cost[i-2])
+            x, y = z, x
+        return x
