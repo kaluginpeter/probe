@@ -23661,3 +23661,11 @@ class Solution:
 # The first row should always start with a white space 'O'
 #
 # PUZZLESFUNDAMENTALSASCII ARTALGORITHMS
+def chess_board(rows, columns):
+    ans, d = [], {'O': 'X', 'X': 'O'}
+    for i in range(rows):
+        top = ['O' if i % 2 == 0 else 'X']
+        for j in range(1, columns):
+            top.append(d[top[-1]])
+        ans.append(top)
+    return ans
