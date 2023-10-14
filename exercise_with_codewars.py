@@ -23693,3 +23693,13 @@ def chess_board(rows, columns):
 class Solution:
     def defangIPaddr(self, address: str) -> str:
         return address.replace('.', '[.]')
+
+# Reduce My Fraction
+# input:   [numerator, denominator]
+# output:  [reduced numerator, reduced denominator]
+# example: [45, 120] --> [3, 8]
+# All numerators and denominators will be positive integers.
+#
+# Note: This is an introductory Kata for a series... coming soon!
+#
+# FUNDAMENTALSRECURSIONALGORITHMS
