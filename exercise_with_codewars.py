@@ -23895,3 +23895,8 @@ class Solution:
 #          [0,0,0,1,0],
 #          [0,0,0,0,1] ]
 # FUNDAMENTALSARRAYSMATRIXLINEAR ALGEBRAMATHEMATICSLANGUAGE FEATURES
+def get_matrix(n):
+    mat = [[0] * n for j in range(n)]
+    for i in range(len(mat)):
+        mat[i][i] = 1
+    return mat
