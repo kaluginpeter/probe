@@ -23878,3 +23878,20 @@ class Solution:
         for i in range(rowIndex):
             row = [x + y for x,y in zip([0] + row, row + [0])]
         return row
+
+# Matrix creation
+# Create an identity matrix of the specified size( >= 0).
+#
+# Some examples:
+#
+# (1)  =>  [[1]]
+#
+# (2) => [ [1,0],
+#          [0,1] ]
+#
+#        [ [1,0,0,0,0],
+#          [0,1,0,0,0],
+# (5) =>   [0,0,1,0,0],
+#          [0,0,0,1,0],
+#          [0,0,0,0,1] ]
+# FUNDAMENTALSARRAYSMATRIXLINEAR ALGEBRAMATHEMATICSLANGUAGE FEATURES
