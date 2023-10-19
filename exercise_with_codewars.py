@@ -24147,3 +24147,7 @@ class Solution:
 # As an additional challenge, consider solving this kata using only logical operaters and not using any if statements.
 #
 # FUNDAMENTALS
+def take_umbrella(w, r):
+    l = [False, True]
+    x = w == 'rainy' or (w == 'cloudy' and r > 0.20) or (w == 'sunny' and r > 0.50)
+    return l[x]
