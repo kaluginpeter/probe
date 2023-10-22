@@ -24477,3 +24477,7 @@ SELECT price * amount AS total FROM items;
 # | Afghanistan | 25500100   | 652230  |
 # | Algeria     | 37100000   | 2381741 |
 # +-------------+------------+---------+
+# Solution MySQL
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000 OR population >= 25000000;
