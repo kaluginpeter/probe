@@ -24392,3 +24392,5 @@ class Solution(object):
 # | Bill |
 # | Zack |
 # +------+
+# Solution MySQL
+SELECT name FROM Customer WHERE referee_id <> 2 or referee_id IS NULL
