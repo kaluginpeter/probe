@@ -24481,3 +24481,15 @@ SELECT price * amount AS total FROM items;
 SELECT name, population, area
 FROM World
 WHERE area >= 3000000 OR population >= 25000000;
+# Solution 1 PostgreSQL
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000 OR population >= 25000000;
+# Solution 2 Faster PostgreSQL
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000
+UNION
+SELECT name, population, area
+FROM World
+WHERE population >= 25000000
