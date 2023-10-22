@@ -24424,3 +24424,5 @@ def missing(nums, s):
 # This code does not execute properly. Try to figure out why.
 #
 # DEBUGGINGFUNDAMENTALS
+# Solution PostgreSQL
+SELECT price * amount AS total FROM items;
