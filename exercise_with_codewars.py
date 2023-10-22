@@ -24419,3 +24419,8 @@ def missing(nums, s):
     if max(nums) >= len(s):
         return 'No mission today'
     return ''.join(s[i] for i in nums)
+
+# Multiply
+# This code does not execute properly. Try to figure out why.
+#
+# DEBUGGINGFUNDAMENTALS
