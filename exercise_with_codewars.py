@@ -24394,3 +24394,9 @@ class Solution(object):
 # +------+
 # Solution MySQL
 SELECT name FROM Customer WHERE referee_id <> 2 or referee_id IS NULL
+
+# Solution PostgreSQL
+SELECT name FROM Customer WHERE referee_id <> 2 or referee_id IS NULL
+
+# Solution 2 PostgreSQL
+SELECT name FROM Customer WHERE referee_id != 2 or referee_id IS NULL
