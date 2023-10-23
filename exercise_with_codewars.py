@@ -24570,3 +24570,12 @@ class Solution(object):
 # Pawns always move 1 square forward.
 # Both pawns will start at the same horizontal position.
 # PUZZLESALGORITHMSFUNDAMENTALS
+def red_knight(N, P):
+    d = {'White': 'Black', 'Black': 'White'}
+    flag = 'White' if N == 0 else 'Black'
+    N = 0
+    while N < P:
+        P += 1
+        N += 2
+        flag = d[flag]
+    return flag, N
