@@ -24521,3 +24521,17 @@ WHERE population >= 25000000
 #
 #
 # Follow up: Could you solve it without loops/recursion?
+# Solution
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        i = 0
+        while 4 ** i <= n:
+            if 4 ** i == n:
+                return True
+            i += 1
+        return False
+
+# Solution 2
+class Solution(object):
+    def isPowerOfFour(self, n):
+        return n & n-1 == 0 and (n-1) % 3 == 0
