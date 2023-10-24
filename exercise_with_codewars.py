@@ -24647,3 +24647,6 @@ class Solution(object):
 # With Clojure to round use:
 # (defn roundTo2 [n] (/ (Math/round (* n 100.0)) 100.0))
 # ARRAYSLISTSSTATISTICSFUNDAMENTALSDATA SCIENCE
+def distances_from_average(test_list):
+    mean = sum(test_list) / len(test_list)
+    return [round(mean - i, 2) for i in test_list]
