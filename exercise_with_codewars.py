@@ -24620,3 +24620,15 @@ def red_knight(N, P):
 # 1 <= nums.length <= 1000
 # 1 <= nums[i] <= 105
 # 0 <= k <= 10
+class Solution(object):
+    def sumIndicesWithKSetBits(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        ans = 0
+        for i in range(len(nums)):
+            if bin(i).count('1') == k:
+                ans += nums[i]
+        return ans
