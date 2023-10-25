@@ -24650,7 +24650,7 @@ class Solution(object):
 def distances_from_average(test_list):
     mean = sum(test_list) / len(test_list)
     return [round(mean - i, 2) for i in test_list]
-    
+
 # 779. K-th Symbol in Grammar
 # We build a table of n rows (1-indexed). We start by writing 0 in the 1st row. Now in every subsequent row, we look at the previous row and replace each occurrence of 0 with 01, and each occurrence of 1 with 10.
 #
@@ -24703,3 +24703,30 @@ class Solution(object):
                 return 0
             else:
                 return 1
+
+# Fun with lists: indexOf
+# Implement the method indexOf (index_of in PHP), which accepts a linked list (head) and a value, and returns the index (zero based) of the first occurrence of that value if exists, or -1 otherwise.
+#
+# For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, indexOf / index_of should return 2.
+#
+# The linked list is defined as follows:
+#
+# class Node:
+#     def __init__(self, data, next=None):
+#         self.data = data
+#         self.next = next
+# Note: the list may be null and can hold any type of value.
+#
+# Good luck!
+#
+# This kata is part of fun with lists series:
+#
+# Fun with lists: length
+# Fun with lists: indexOf
+# Fun with lists: lastIndexOf
+# Fun with lists: countIf
+# Fun with lists: anyMatch + allMatch
+# Fun with lists: filter
+# Fun with lists: map
+# Fun with lists: reduce
+# LISTSFUNDAMENTALS
