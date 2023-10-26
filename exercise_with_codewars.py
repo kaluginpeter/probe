@@ -24814,3 +24814,9 @@ def index_of(head, value):
 # This kata is a piece of2 kyuBinary Genetic Algorithm
 #
 # STRINGSALGORITHMSGENETIC ALGORITHMS
+def crossover(chromosome1, chromosome2, index):
+    x, y = '', ''
+    for i in range(index, len(chromosome1)):
+        x += chromosome2[i]
+        y += chromosome1[i]
+    return [chromosome1[:index] + x, chromosome2[:index] + y]
