@@ -25069,3 +25069,9 @@ def last_chair(n):
 # Enjoy, and don't forget to check out my other Kata Series :D
 #
 # LINKED LISTSRECURSIONALGORITHMS
+def stringify(node):
+    ans = []
+    while node:
+        ans.append(str(node.data))
+        node = node.next
+    return ' -> '.join(ans + ['None'])
