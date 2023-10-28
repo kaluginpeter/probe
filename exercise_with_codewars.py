@@ -25094,3 +25094,15 @@ def stringify(node):
 # Note that both input and output should use upper case for characters A, B, C, D, E, F.
 #
 # ALGORITHMSSTRINGS
+def brightest(colors):
+    count, ans = 0, 0
+    for j in colors:
+        top = 0
+        for i in range(1, len(j), 2):
+            x = int(j[i], 16) * 16 + int(j[i + 1], 16)
+            if top < x:
+                top = x
+        if top > count:
+            count = top
+            ans = j
+    return ans
