@@ -25031,3 +25031,5 @@ def tower_combination(n):
 # Have fun :)
 #
 # SORTINGPUZZLESALGORITHMS
+def last_chair(n):
+    return n - 1
