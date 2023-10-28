@@ -25007,3 +25007,6 @@ class Solution(object):
 # | 0 x 0 |
 # | x 0 0 |
 # ALGORITHMS
+import math
+def tower_combination(n):
+    return math.factorial(n)
