@@ -25143,7 +25143,7 @@ def brightest(colors):
 class Solution(object):
     def distinctIntegers(self, n):
         return max(n - 1, 1)
-
+    
 # Tap Code Translation
 # Tap Code Translation
 # Tap code is a way to communicate using a series of taps and pauses for each letter. In this kata, we will use dots . for the taps and whitespaces for the pauses.
@@ -25176,3 +25176,18 @@ class Solution(object):
 # Happy coding!
 #
 # ALGORITHMSSTRINGSCRYPTOGRAPHYSECURITY
+def tap_code_translation(text):
+    ans = []
+    for i in text:
+        x = ord(i) - 96
+        if x > 10:
+            if x == 11:
+                x = 3
+            else:
+                x -= 1
+        first = (x + 4) // 5
+        while x > 5:
+            x -= 5
+        second = x
+        ans.append('.' * first + ' ' + '.' * second)
+    return ' '.join(ans)
