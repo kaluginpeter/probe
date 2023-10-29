@@ -25140,3 +25140,6 @@ def brightest(colors):
 # Constraints:
 #
 # 1 <= n <= 100
+class Solution(object):
+    def distinctIntegers(self, n):
+        return max(n - 1, 1)
