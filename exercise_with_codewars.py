@@ -25332,7 +25332,7 @@ class Solution(object):
                 return words[i]
             elif l[i + 1] != l[i] and l[i + 1] != l[i - 1]:
                 return words[i + 1]
-
+            
 # Set Reducer
 # Set Reducer
 # Intro
@@ -25363,3 +25363,41 @@ class Solution(object):
 # Example of the flow of the algorithm
 #
 # RECURSIONALGORITHMSLOGICARRAYS
+def set_reducer(inp):
+    ans, n, count = [], 0, 0
+    while n < len(inp):
+        if n == len(inp) - 1:
+            if count > 0:
+                ans.append(count + 1)
+            else:
+                ans.append(1)
+            break
+        if inp[n] != inp[n + 1]:
+            if count > 0:
+                ans.append(count + 1)
+                count = 0
+            else:
+                ans.append(1)
+        else:
+            count += 1
+        n += 1
+    while len(ans) > 1:
+        l, n, count = [], 0, 0
+        while n < len(ans):
+            if n == len(ans) - 1:
+                if count > 0:
+                    l.append(count + 1)
+                else:
+                    l.append(1)
+                break
+            if ans[n] != ans[n + 1]:
+                if count > 0:
+                    l.append(count + 1)
+                    count = 0
+                else:
+                    l.append(1)
+            else:
+                count += 1
+            n += 1
+        ans = l
+    return ans[0]
