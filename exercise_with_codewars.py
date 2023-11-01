@@ -25463,3 +25463,5 @@ class Solution(object):
 # More Challenge
 # Are you a One-Liner? Please try to complete the kata in one line(no test for it) ;-)
 # PUZZLESBITSBINARY
+def kill_kth_bit(n, k):
+    return n & ~(1 << k - 1)
