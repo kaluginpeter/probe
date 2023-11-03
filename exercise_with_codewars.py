@@ -25619,3 +25619,8 @@ class Solution(object):
 # Hint: using a try / except statement may simplify this kata.
 #
 # FUNDAMENTALS
+def my_add(a, b):
+    try:
+        return a + b
+    except:
+        return
