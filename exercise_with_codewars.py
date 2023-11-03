@@ -25596,3 +25596,15 @@ def count_vegetables(string):
 # 1 <= n <= 100
 # 1 <= target[i] <= n
 # target is strictly increasing.
+class Solution(object):
+    def buildArray(self, target, n):
+        que, top = [], 0
+        for i in range(1, n + 1):
+            if top == len(target):
+                break
+            que.append('Push')
+            if i == target[top]:
+                top += 1
+            else:
+                que.append('Pop')
+        return que
