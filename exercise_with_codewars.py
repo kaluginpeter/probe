@@ -25832,3 +25832,9 @@ def burner(c,h,o):
 # Wealth of a citizen will be an integer with minimum equal to 0 (negative wealth is not possible)
 # Handling of floating point error will not be tested
 # FUNDAMENTALSARRAYS
+def redistribute_wealth(wealth):
+    mean = sum(wealth) / len(wealth)
+    if int(mean) == mean:
+        mean = int(mean)
+    for i in range(len(wealth)):
+        wealth[i] = mean
