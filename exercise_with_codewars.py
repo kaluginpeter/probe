@@ -25780,7 +25780,7 @@ class Solution(object):
                 arr.append(arr.pop(0))
             if d[arr[0]] == k:
                 return arr[0]
-
+            
 # ⚠️Fusion Chamber Shutdown⚠️
 # A laboratory is testing how atoms react in ionic state during nuclear fusion. They introduce different elements with Hydrogen in high temperature and pressurized chamber. Due to unknown reason the chamber lost its power and the elements in it started precipitating
 # Given the number of atoms of Carbon [C],Hydrogen[H] and Oxygen[O] in the chamber. Calculate how many molecules of Water [H2O], Carbon Dioxide [CO2] and Methane [CH4] will be produced following the order of reaction affinity below
@@ -25794,3 +25794,14 @@ class Solution(object):
 # Output should be like:
 # (5,45,0)
 # FUNDAMENTALS
+# Make sure you follow the order of reaction
+# output should be H2O,CO2,CH4
+def burner(c,h,o):
+    water = min(h // 2, o)
+    h = max(h - water * 2, 0)
+    o = max(o - water, 0)
+    carbon = min(c, o // 2)
+    o = max(o - carbon * 2, 0)
+    c = max(c - carbon, 0)
+    methane = min(c, h // 4)
+    return (water, carbon, methane)
