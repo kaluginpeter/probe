@@ -25990,3 +25990,8 @@ class Solution(object):
 # For Python here's a good resource you might need for the exception type ;)
 #
 # FUNDAMENTALSSTRINGSREGULAR EXPRESSIONS
+def remove_bmw(string):
+    try:
+        return string.replace('B', '').replace('M', '').replace('W', '').replace('b', '').replace('m', '').replace('w', '')
+    except:
+        return "This program only works for text."
