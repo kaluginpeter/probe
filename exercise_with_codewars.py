@@ -25995,7 +25995,7 @@ def remove_bmw(string):
         return string.replace('B', '').replace('M', '').replace('W', '').replace('b', '').replace('m', '').replace('w', '')
     except:
         return "This program only works for text."
-
+    
 # 2047. Number of Valid Words in a Sentence
 # A sentence consists of lowercase letters ('a' to 'z'), digits ('0' to '9'), hyphens ('-'), punctuation marks ('!', '.', and ','), and spaces (' ') only. Each sentence can be broken down into one or more tokens separated by one or more spaces ' '.
 #
@@ -26035,3 +26035,30 @@ def remove_bmw(string):
 # 1 <= sentence.length <= 1000
 # sentence only contains lowercase English letters, digits, ' ', '-', '!', '.', and ','.
 # There will be at least 1 token.
+class Solution(object):
+    def countValidWords(self, sentence):
+        count = 0
+        for word in sentence.split():
+            top = True
+            if len(word) == 1:
+                if all(i not in word for i in '01234567489-'):
+                    count += 1
+                    print(word, 'len 1')
+                    continue
+            if word.count('!') + word.count(',') + word.count('.') > 1:
+                top = False
+            if any(word.count(i) > 0 for i in '!,.'):
+                if word[-1] not in '!,.':
+                    top = False
+            if '-' in word:
+                if word.count('-') > 1 or word[-1] == '-' or word[0] == '-':
+                    top = False
+                else:
+                    x = word.index('-') 
+                    if not word[x-1].isalpha() or not word[x + 1].isalpha():
+                        top = False
+            if any(i in word for i in '0123456789'):
+                top = False
+            if top:
+                count += 1
+        return count
