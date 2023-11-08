@@ -26062,7 +26062,7 @@ class Solution(object):
             if top:
                 count += 1
         return count
-
+    
 # Count cubes in a Menger Sponge
 # The Menger Sponge is a three-dimensional fractal, first described by Karl Menger in 1926.
 #
@@ -26096,3 +26096,5 @@ class Solution(object):
 # Happy coding!
 #
 # ALGORITHMSMATHEMATICS
+def calc_ms(n):
+    return 20 ** n
