@@ -26252,7 +26252,7 @@ class Solution(object):
             if is_prime(nums[i][n -i - 1]):
                 top = max(nums[i][n -i - 1], top)
         return top
-
+    
 # Simple Fun #40: Timed Reading
 # Task
 # Timed Reading is an educational tool used in many schools to improve and advance reading skills. A young elementary student has just finished his very first timed reading exercise. Unfortunately he's not a very good reader yet, so whenever he encountered a word longer than maxLength, he simply skipped it and read on.
@@ -26282,3 +26282,11 @@ class Solution(object):
 # The number of words the boy has read.
 #
 # PUZZLES
+def timed_reading(max_length, text):
+    l = []
+    for i in text.split():
+        while i and not i[-1].isalpha():
+            i = i[:-1]
+        if i:
+            l.append(i)
+    return sum(len(i) <= max_length for i in l)
