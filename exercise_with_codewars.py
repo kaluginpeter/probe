@@ -26336,3 +26336,8 @@ def timed_reading(max_length, text):
 SELECT tweet_id
 FROM Tweets
 WHERE LENGTH(content) > 15;
+# Solution MySQL
+# Write your MySQL query statement below
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15;
