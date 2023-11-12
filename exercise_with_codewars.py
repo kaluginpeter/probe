@@ -26405,6 +26405,10 @@ def pattern(n):
 # details[i] consists of digits from '0' to '9'.
 # details[i][10] is either 'M' or 'F' or 'O'.
 # The phone numbers and seat numbers of the passengers are distinct.
+class Solution(object):
+    def countSeniors(self, details):
+        return sum(i[-4:-2] > '60' for i in details)
+
 
 # Multi-tap Keypad Text Entry on an Old Mobile Phone
 # Prior to having fancy iPhones, teenagers would wear out their thumbs sending SMS messages on candybar-shaped feature phones with 3x4 numeric keypads.
