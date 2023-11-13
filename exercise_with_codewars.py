@@ -26514,3 +26514,7 @@ class Solution(object):
 # Good luck!
 #
 # GAMESPUZZLES
+from random import randint,seed
+seed(1)
+guess = randint(1,100)
+seed(1)
