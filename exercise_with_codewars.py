@@ -26672,3 +26672,10 @@ def count(node, data):
 #
 # 1 <= arr.length <= 105
 # 1 <= arr[i] <= 109
+class Solution(object):
+    def maximumElementAfterDecrementingAndRearranging(self, arr):
+        arr.sort()
+        top = 0
+        for i in arr:
+            top = min(top + 1, i)
+        return top
