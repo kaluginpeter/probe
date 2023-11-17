@@ -26835,3 +26835,9 @@ class Solution(object):
 # 0, 1,2
 # 0.342q0832, 1.2324
 # REGULAR EXPRESSIONSALGORITHMS
+def is_valid_coordinates(coordinates):
+    try:
+        x, y = [abs(float(i)) for i in coordinates.split(',') if 'e' not in i]
+    except:
+        return False
+    return x <= 90 and y <= 180
