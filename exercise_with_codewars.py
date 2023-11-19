@@ -26987,3 +26987,10 @@ class Solution(object):
 # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 #
 # FUNDAMENTALS
+def counter():
+    i = 0
+    def inscrease():
+        nonlocal i
+        i += 1
+        return i
+    return inscrease
