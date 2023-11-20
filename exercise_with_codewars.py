@@ -27053,3 +27053,11 @@ class Solution(object):
 #   '---'
 # ]
 # STRINGSARRAYSASCII ARTALGORITHMS
+def box(n):
+    l = []
+    for i in range(n):
+        if i in {0, n -1}:
+            l.append('-' * n)
+        else:
+            l.append('-' + ' ' * (n - 2) + '-')
+    return l
