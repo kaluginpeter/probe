@@ -27027,3 +27027,6 @@ def counter():
 #
 # 1 <= s.length <= 100
 # s contains only lowercase English letters
+class Solution(object):
+    def minimizedStringLength(self, s):
+        return len(set(s))
