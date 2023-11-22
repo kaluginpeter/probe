@@ -27170,7 +27170,7 @@ class Solution(object):
                 num2 = abs(num1 - num2)
             count += 1
         return count
-
+    
 # Doubleton number
 # We will call a natural number a "doubleton number" if it contains exactly two distinct digits. For example, 23, 35, 100, 12121 are doubleton numbers, and 123 and 9980 are not.
 #
@@ -27181,3 +27181,15 @@ class Solution(object):
 # doubleton(1234) == 1311
 # doubleton(10) == 12
 # SETSFUNDAMENTALS
+def doubleton(num):
+    def check(n):
+        d = {}
+        for i in str(n):
+            d[i] = d.get(i, 0) + 1
+            if len(d) > 2:
+                return False
+        return len(d) in {2}
+    num += 1
+    while not check(num):
+        num += 1
+    return num
