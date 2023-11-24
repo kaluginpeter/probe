@@ -27289,3 +27289,15 @@ def uglify_word(s):
 # Constraints:
 #
 # 1 <= left <= right <= 104
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        def check(n):
+            x = str(n)
+            if '0' in x:
+                return False
+            return all(n % int(i) == 0 for i in x)
+        l = []
+        for i in range(left, right + 1):
+            if check(i):
+                l.append(i)
+        return l
