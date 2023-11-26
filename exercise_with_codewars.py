@@ -27422,3 +27422,32 @@ class Solution(object):
     def isBoomerang(self, p):
         x1, y1, x2, y2, x3, y3 = p[0][0], p[0][1], p[1][0], p[1][1], p[2][0], p[2][1]
         return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) != 0
+
+# Alphabetical Grid
+# Task:
+# You need to write a function grid that returns an alphabetical grid of size NxN, where a = 0, b = 1, c = 2....
+#
+# Examples:
+# grid(4)
+#
+# a b c d
+# b c d e
+# c d e f
+# d e f g
+# grid(10)
+#
+# a b c d e f g h i j
+# b c d e f g h i j k
+# c d e f g h i j k l
+# d e f g h i j k l m
+# e f g h i j k l m n
+# f g h i j k l m n o
+# g h i j k l m n o p
+# h i j k l m n o p q
+# i j k l m n o p q r
+# j k l m n o p q r s
+# Notes:
+# After "z" comes "a"
+# If function receive N < 0 should return:
+# None
+# FUNDAMENTALSALGORITHMS
