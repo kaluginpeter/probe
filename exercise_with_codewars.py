@@ -27451,3 +27451,11 @@ class Solution(object):
 # If function receive N < 0 should return:
 # None
 # FUNDAMENTALSALGORITHMS
+def grid(N):
+    if N < 0: return None
+    if N == 0: return ''
+    al, word = 'abcdefghijklmnopqrstuvwxyz' * N, []
+    for i in range(N):
+        top = [' '.join(al[i: i + N])]
+        word.append(' '.join(top))
+    return '\n'.join(word)
