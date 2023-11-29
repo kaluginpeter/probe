@@ -27662,3 +27662,6 @@ def letter_check(arr):
 #
 #
 # Follow up: If this function is called many times, how would you optimize it?
+class Solution(object):
+    def hammingWeight(self, n, count=0):
+        return self.hammingWeight(n & n-1, count+1) if n!=0 else count
