@@ -27761,3 +27761,21 @@ def closest(lst):
 # 1 <= word1[i].length, word2[i].length <= 103
 # 1 <= sum(word1[i].length), sum(word2[i].length) <= 103
 # word1[i] and word2[i] consist of lowercase letters.
+# Solution O(N) O(N)
+class Solution(object):
+    def arrayStringsAreEqual(self, word1, word2):
+        return ''.join(word1) == ''.join(word2)
+
+# Solution 2 - O(min(word1, word2)) Memory O(1)
+class Solution(object):
+    def arrayStringsAreEqual(self, word1, word2):
+        for x, y in zip(self.generate(word1), self.generate(word2)):
+            if x != y:
+                return False
+        return True
+
+    def generate(self, n):
+        for i in n:
+            for j in i:
+                yield j
+        yield None
