@@ -27835,3 +27835,19 @@ def stack_height_2d(layers):
 # 1 <= words.length <= 1000
 # 1 <= words[i].length, chars.length <= 100
 # words[i] and chars consist of lowercase English letters.
+# Solution
+class Solution(object):
+    def countCharacters(self, words, chars):
+        d, count = {}, 0
+        for i in chars:
+            d[i] = d.get(i, 0) + 1
+        for i in words:
+            top, flag = {}, True
+            for j in i:
+                top[j] = top.get(j, 0) + 1
+                if j not in d or top[j] > d[j]:
+                    flag = False
+                    break
+            if flag:
+                count += len(i)
+        return count
