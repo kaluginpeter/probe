@@ -27945,3 +27945,15 @@ class Solution(object):
         for i in range(len(points) - 1):
             count += max(abs(points[i][0] - points[i + 1][0]), abs(points[i][1] - points[i + 1][1]))
         return count
+
+# Cartesian coordinates from degree angle
+# Write a simple function that takes polar coordinates (an angle in degrees and a radius) and returns the equivalent cartesian coordinates (rounded to 10 places).
+#
+# For example:
+#
+# coordinates(90,1)
+# => (0.0, 1.0)
+#
+# coordinates(45, 1)
+# => (0.7071067812, 0.7071067812)
+# ALGORITHMSMATHEMATICSGEOMETRY
