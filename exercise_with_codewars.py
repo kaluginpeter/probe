@@ -28019,7 +28019,7 @@ class Solution(object):
             if num[i-2] == num[i-1] == num[i]:
                 top = max(top, num[i-2:i+1])
         return top
-        
+
 # Find heavy ball - level: novice
 # There are 8 balls numbered from 0 to 7. Seven of them have the same weight. One is heavier. Your task is to find its number.
 #
@@ -28048,3 +28048,16 @@ class Solution(object):
 # conqueror
 # master
 # PUZZLESLOGICRIDDLES
+def find_ball(scales):
+    # call scales.get_weight() at most 4 TIMES
+    # return indexOfHeavierBall
+    for i in range(1, 8, 2):
+        leftPan = [i-1]
+        rightPan = [i]
+        w = scales.get_weight(leftPan, rightPan)
+
+        if w < 0:
+            return leftPan[0]
+
+        if w > 0:
+            return rightPan[0]
