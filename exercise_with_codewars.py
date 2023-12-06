@@ -28160,3 +28160,9 @@ def work_needed(project_minutes, free_lancers):
 # Constraints:
 #
 # 1 <= n <= 1000
+class Solution(object):
+    def totalMoney(self, n):
+        if n % 7 == 0:
+            return sum((1 + 7 + i * 2) * 7 / 2 for i in range(n // 7))
+        x = sum((1 + 7 + i * 2) * 7 / 2 for i in range(n // 7))
+        return x + sum(i + n // 7 for i in range(1, n % 7 + 1))
