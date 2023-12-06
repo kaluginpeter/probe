@@ -28175,3 +28175,9 @@ class Solution(object):
 # "ynMAisVpHEqpqHBqTrwH"  -->  "One more run!"
 # "555"                   -->  "5"
 # STRINGSFUNDAMENTALS
+def lottery(s):
+    top = ''
+    for i in s:
+        if i.isdigit() and i not in top:
+            top += i
+    return top if top else 'One more run!'
