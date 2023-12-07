@@ -28210,3 +28210,10 @@ def lottery(s):
 #
 # 1 <= num.length <= 105
 # num only consists of digits and does not contain any leading zeros.
+class Solution(object):
+    def largestOddNumber(self, num):
+        while num[-1] not in {'1', '3', '5', '7', '9'}:
+          num = num[:-1]
+          if not num:
+            return ''
+        return num
