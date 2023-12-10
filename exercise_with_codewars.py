@@ -28411,7 +28411,7 @@ class Solution(object):
             for j in range(len(matrix)):
                 m[i][j] = matrix[j][i]
         return m
-
+    
 # Thinking & Testing : How many "word"?
 # No Story
 #
@@ -28466,3 +28466,10 @@ class Solution(object):
 # Play FlappyBird : Advance Bravely
 #
 # PUZZLESGAMES
+def testit(s):
+    w, n, i = 'word', 0, 0
+    for j in s.lower():
+        if j == w[i]:
+            n += j == w[-1]
+            i = (i + 1) % len(w)
+    return n
