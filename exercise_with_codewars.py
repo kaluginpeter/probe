@@ -28404,3 +28404,10 @@ def top3(products, amounts, prices):
 # 1 <= m, n <= 1000
 # 1 <= m * n <= 105
 # -109 <= matrix[i][j] <= 109
+class Solution(object):
+    def transpose(self, matrix):
+        m = [[0] * len(matrix) for j in range(len(matrix[0]))]
+        for i in range(len(matrix[0])):
+            for j in range(len(matrix)):
+                m[i][j] = matrix[j][i]
+        return m
