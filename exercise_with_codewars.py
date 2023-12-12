@@ -28545,3 +28545,12 @@ def noonerize(numbers):
 #
 # 2 <= nums.length <= 500
 # 1 <= nums[i] <= 10^3
+class Solution(object):
+    def maxProduct(self, nums):
+        x, y = min(nums[0], nums[1]), max(nums[1], nums[0])
+        for i in range(2, len(nums)):
+            if nums[i] >= y:
+                y, x = nums[i], y
+            elif nums[i] > x:
+                x = nums[i]
+        return (x - 1) * (y - 1)
