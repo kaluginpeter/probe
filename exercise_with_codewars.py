@@ -28760,3 +28760,5 @@ class Solution(object):
 # There are also plenty of examples in the example tests.
 #
 # MATHEMATICSALGEBRAALGORITHMS
+def add_to_average(current, points, add):
+    return (current * points + add) / (points + 1)
