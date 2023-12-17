@@ -29194,3 +29194,9 @@ class FoodRatings(object):
 # input is a string, e.g "2,4,2,6,2,8" output is then "6 12 4 12 3 12"
 #
 # FUNDAMENTALSALGORITHMSMATHEMATICS
+import math
+def convertFracts(lst):
+    D = 1
+    for _, den in lst:
+        D *= den // math.gcd(den, D)
+    return [[D*n//d, D] for n, d in lst]
