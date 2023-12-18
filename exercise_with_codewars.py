@@ -29229,3 +29229,18 @@ def convertFracts(lst):
 #
 # 4 <= nums.length <= 104
 # 1 <= nums[i] <= 104
+class Solution(object):
+    def maxProductDifference(self, nums):
+        w, x = 0, 0,
+        for i in range(len(nums)):
+            if w <=  nums[i]:
+                w, x, = nums[i], w
+            elif x <= nums[i]:
+                x = nums[i]
+        y, z = float('inf'), float('inf')
+        for i in range(len(nums)):
+            if y >= nums[i]:
+                y, z = nums[i], y
+            elif z >= nums[i]:
+                z = nums[i]
+        return (w * x) - (y * z)
