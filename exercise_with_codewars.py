@@ -29734,3 +29734,16 @@ def flatten(*args):
 # n is a multiple of 3.
 # 1 <= nums[i] <= 105
 # 1 <= k <= 105
+# Solution O(N log N) O(N)
+class Solution(object):
+    def divideArray(self, nums, k):
+        if len(nums) < 3:
+            return []
+        nums.sort()
+        l = []
+        for i in range(0, len(nums), 3):
+            if nums[i + 2] - nums[i] > k:
+                return []
+            else:
+                l.append(nums[i:i+3])
+        return l
