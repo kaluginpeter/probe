@@ -30171,7 +30171,7 @@ class Solution:
                 l = nums[i] + s
             s += nums[i]
         return l
-
+    
 # 1155. Number of Dice Rolls With Target Sum
 # You have n dice, and each die has k faces numbered from 1 to k.
 #
@@ -30202,3 +30202,18 @@ class Solution:
 #
 # 1 <= n, k <= 30
 # 1 <= target <= 1000
+# Solution
+class Solution:
+    def numRollsToTarget(self, n: int, k: int, target: int) -> int:
+        memorization: dict = {}
+        def dp(n: int, target: int) -> int:
+            if n == 0:
+                return 0 if target > 0 else 1
+            if (n, target) in memorization:
+                return memorization[(n, target)]
+            total: int = 0
+            for f in range(max(0, target-k), target):
+                total += dp(n-1, f)
+            memorization[(n, target)] = total
+            return total
+        return dp(n, target) % (10**9 + 7)
