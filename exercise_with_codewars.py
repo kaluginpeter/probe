@@ -30504,7 +30504,7 @@ class Solution:
             if k + i in hm:
                 count += hm[k + i]
         return count
-
+    
 # Longest Common Subsequence
 # Write a function called LCS that accepts two sequences and returns the longest subsequence common to the passed in sequences.
 #
@@ -30534,3 +30534,17 @@ class Solution:
 # First property
 # Second property
 # STRINGSALGORITHMS
+def lcs(s1, s2):
+    if not s1 or not s2:
+        return ''
+    matrix = [["" for x in range(len(s2))] for x in range(len(s1))]
+    for i in range(len(s1)):
+        for j in range(len(s2)):
+            if s1[i] == s2[j]:
+                if i == 0 or j == 0:
+                    matrix[i][j] = s1[i]
+                else:
+                    matrix[i][j] = matrix[i-1][j-1] + s1[i]
+            else:
+                matrix[i][j] = max(matrix[i-1][j], matrix[i][j-1], key=len)
+    return matrix[-1][-1]
