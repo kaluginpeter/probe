@@ -30924,7 +30924,7 @@ def change_case(id, target):
             elif target == 'snake': word += i
             elif target == 'camel': flag = True
     return word
-    
+
 # Neutralisation
 # Given two strings comprised of + and -, return a new string which shows how the two strings interact in the following way:
 #
@@ -30950,3 +30950,24 @@ def change_case(id, target):
 # ALGORITHMSSTRINGS
 def neutralise(s1, s2):
     return ''.join('+' if x == y == '+' else '-' if x == y == '-' else '0' for x, y in zip(s1, s2))
+
+# Pandas Series 101: Rename Columns
+# Rename Columns
+# Input parameters
+# pandas.DataFrame object
+# sequence
+# Task
+# Your function must return a new pandas.DataFrame object with same data than the original input but now its column names are the elements of the sequence. You must not modify the original input.
+#
+# The number of columns of the input will always be equal to the size of the sequence.
+#
+# Examples
+#    0  1  2
+# 0  1  2  3
+# 1  4  5  6
+#
+# names = ['A', 'B', 'C']
+#    A  B  C
+# 0  1  2  3
+# 1  4  5  6
+# STRINGSDATA FRAMESFUNDAMENTALSDATA SCIENCE
