@@ -30996,3 +30996,6 @@ def rename_columns(df, names):
 # Genetic Algorithm Series - #4 Get population and fitnesses
 # Genetic Algorithm Series - #5 Roulette wheel selection
 # ALGORITHMSGENETIC ALGORITHMSSTRINGS
+from random import choices
+def mutate(chromosome, p):
+    return ''.join(choices([str(int(not bool(int(i)))), i], [p, 1 - p])[0] for i in chromosome)
