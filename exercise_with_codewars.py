@@ -30948,3 +30948,5 @@ def change_case(id, target):
 # The two strings will be the same length.
 #
 # ALGORITHMSSTRINGS
+def neutralise(s1, s2):
+    return ''.join('+' if x == y == '+' else '-' if x == y == '-' else '0' for x, y in zip(s1, s2))
