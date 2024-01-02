@@ -31147,3 +31147,14 @@ def chore_assignment(chores):
 # FUNDAMENTALSREGULAR EXPRESSIONSALGORITHMS
 def one_punch(item):
     return ' '.join(' '.join(''.join(i.replace('e', '').replace('a', '').replace('E', '').replace('A', '')) for i in sorted(item.split())).split(' ')) if (type(item) == str and item) else 'Broken!'
+
+# Put a Letter in a Column
+# Create a function that takes index [0, 8] and a character. It returns a string with columns. Put character in column marked with index.
+#
+# Ex.: index = 2, character = 'B'
+#
+# | | |B| | | | | | |
+#  0 1 2 3 4 5 6 7 8
+# Assume that argument index is integer [0, 8]. Assume that argument character is string with one character.
+#
+# FUNDAMENTALSSTRINGS
