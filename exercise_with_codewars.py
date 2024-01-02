@@ -31047,3 +31047,11 @@ def quicksum(packet):
 # Find your caterer
 #
 # STRINGSFUNDAMENTALS
+def case_sensitive(s):
+    flag: bool = True
+    ans: list = list()
+    for i in s:
+        if i.isupper():
+            flag = not flag
+            ans += i
+    return [flag, ans]
