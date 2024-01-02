@@ -31145,3 +31145,5 @@ def chore_assignment(chores):
 # Go, go go!!!
 #
 # FUNDAMENTALSREGULAR EXPRESSIONSALGORITHMS
+def one_punch(item):
+    return ' '.join(' '.join(''.join(i.replace('e', '').replace('a', '').replace('E', '').replace('A', '')) for i in sorted(item.split())).split(' ')) if (type(item) == str and item) else 'Broken!'
