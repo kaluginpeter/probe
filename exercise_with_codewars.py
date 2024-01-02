@@ -30971,3 +30971,9 @@ def neutralise(s1, s2):
 # 0  1  2  3
 # 1  4  5  6
 # STRINGSDATA FRAMESFUNDAMENTALSDATA SCIENCE
+import pandas as pd
+
+def rename_columns(df, names):  
+    df2 = df.copy()
+    df2.columns = [i for i in names]
+    return df2
