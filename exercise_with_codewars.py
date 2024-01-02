@@ -31020,3 +31020,11 @@ def mutate(chromosome, p):
 #
 # AbqTH #5 = 0
 # FUNDAMENTALS
+def quicksum(packet):
+    s: int = 0
+    for i in range(len(packet)):
+        if (not packet[i].isalpha() and packet[i] != ' ') or packet[i].islower():
+            return 0
+        if packet[i].isalpha():
+            s += (ord(packet[i]) - 64) * (i + 1)
+    return s
