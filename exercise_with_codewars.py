@@ -31246,3 +31246,11 @@ class Solution:
 # Adapted from Project Euler.
 #
 # MATHEMATICSALGORITHMS
+import math
+def greatest_product(st):
+    top: int = 0
+    for i in range(len(st) - 4):
+        s = math.prod(int(j) for j in st[i:i+5])
+        if s > top:
+            top = s
+    return top
