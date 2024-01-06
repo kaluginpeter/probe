@@ -31721,3 +31721,15 @@ def mix_fruit(arr):
 # 1 <= words[i].length <= 50
 # x is a lowercase English letter.
 # words[i] consists only of lowercase English letters.
+# Solution 1 - Simple checking O(N) O(N)
+class Solution:
+    def findWordsContaining(self, words: List[str], x: str) -> List[int]:
+        ans: list = []
+        for i in range(len(words)):
+            if x in words[i]:
+                ans.append(i)
+        return ans
+# Solution 2 - More Pythonic O(N) O(N)
+class Solution:
+    def findWordsContaining(self, words: List[str], x: str) -> List[int]:
+        return [k for k, v in enumerate(words) if x in v]
