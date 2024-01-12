@@ -32361,3 +32361,15 @@ def fixed_xor(a, b):
 # 2 <= s.length <= 1000
 # s.length is even.
 # s consists of uppercase and lowercase letters.
+# Solution O(N) O(1)
+class Solution:
+    def halvesAreAlike(self, s: str) -> bool:
+        n: int = len(s) // 2
+        count: int = 0
+        vowels: set = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+        for i in range(n):
+            if s[i] in vowels:
+                count += 1
+            if s[i + n] in vowels:
+                count -= 1
+        return count == 0
