@@ -32391,3 +32391,13 @@ class Solution:
 # Elements will be primitive values.
 #
 # FUNDAMENTALS
+# Solution
+def eq_all(iterable):
+    if not iterable:
+        return True
+    d: dict = {}
+    for i in iterable:
+        d[i] = d.get(i, 0) + 1
+        if len(d) > 1:
+            return False
+    return True
