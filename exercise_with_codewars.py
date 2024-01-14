@@ -32582,7 +32582,7 @@ class Solution:
         while s in nums:
             s += 1
         return s
-        
+    
 # 3000. Maximum Area of Longest Diagonal Rectangle
 # You are given a 2D 0-indexed integer array dimensions.
 #
@@ -32612,3 +32612,16 @@ class Solution:
 # 1 <= dimensions.length <= 100
 # dimensions[i].length == 2
 # 1 <= dimensions[i][0], dimensions[i][1] <= 100
+# Solution O(N) O(1)
+class Solution:
+    def areaOfMaxDiagonal(self, dimensions: List[List[int]]) -> int:
+        mx = 0
+        area = 0
+        for i in dimensions:
+            if (i[0]**2 + i[1]**2)**.5 > mx:
+                mx = (i[0]**2 + i[1]**2)**.5
+                area = i[0] * i[1]
+            elif (i[0]**2 + i[1]**2)**.5 == mx:
+                mx = (i[0]**2 + i[1]**2)**.5
+                area = max(i[0] * i[1], area)
+        return area
