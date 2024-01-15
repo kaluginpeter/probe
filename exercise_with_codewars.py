@@ -32643,7 +32643,7 @@ def func(l):
     n: int = sum(l) // len(l)
     ans: list = [format(n, f) for f in ['b', 'o', 'x']]
     return [n] + ans
-    
+
 # 2225. Find Players With Zero or One Losses
 # You are given an integer array matches where matches[i] = [winneri, loseri] indicates that the player winneri defeated player loseri in a match.
 #
@@ -32685,3 +32685,22 @@ def func(l):
 # 1 <= winneri, loseri <= 105
 # winneri != loseri
 # All matches[i] are unique.
+# Solution HashTable O(NlogN) O(N)
+class Solution:
+    def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
+        d: dict = {}
+        ans: list = [[], []]
+        for i in matches:
+            w = d.get(i[0], [0, 0])
+            d[i[0]] = [w[0] + 1, w[1] + 1]
+            y = d.get(i[1], [0, 0])
+            d[i[1]] = [y[0] + 0, y[1] + 1]
+        for i in d:
+            if d[i][1] > 0:
+                if d[i][0] == d[i][1]:
+                    ans[0].append(i)
+                elif d[i][0] + 1 == d[i][1]:
+                    ans[1].append(i)
+        ans[0].sort()
+        ans[1].sort()
+        return ans
