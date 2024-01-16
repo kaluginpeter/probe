@@ -32870,3 +32870,26 @@ class RandomizedSet:
 # Enjoy it!
 #
 # FUNDAMENTALSDATA STRUCTURESALGORITHMSMEMOIZATION
+TOM = {}
+
+def summizing(word):
+    ht: dict = {}
+    for i in word:
+        ht[i] = ht.get(i, 0) + 1
+    return sum(ord(i) * ht[i] for i in ht)
+
+def find_word(num_let, max_ssw):
+    top_score, top_word = 0, ''
+    for i in WORD_LIST:
+        if len(i) == num_let:
+            if i in TOM:
+                if TOM[i] >= top_score and TOM[i] <= max_ssw:
+                    top_score, top_word = TOM[i], i
+                else:
+                    continue
+            else:
+                x = summizing(i)
+                if x >= top_score and x <= max_ssw:
+                    top_score, top_word = x, i
+                    TOM[i] = x
+    return top_word if top_word else None
