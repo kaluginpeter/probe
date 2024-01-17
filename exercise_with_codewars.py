@@ -32893,7 +32893,7 @@ def find_word(num_let, max_ssw):
                     top_score, top_word = x, i
                     TOM[i] = x
     return top_word if top_word else None
-    
+
 # 1207. Unique Number of Occurrences
 # Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
 #
@@ -32918,3 +32918,31 @@ def find_word(num_let, max_ssw):
 #
 # 1 <= arr.length <= 1000
 # -1000 <= arr[i] <= 1000
+# Solution
+class Solution(object):
+    def uniqueOccurrences(self, arr):
+        counter = Counter(arr).values()
+        if(len(counter) == len(set(counter))): return True
+        return False
+
+
+# Solution 2 O(N) O(N) HashTable and HashSet
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        ht: dict = {}
+        for i in arr:
+            ht[i] = ht.get(i, 0) + 1
+        hs: set = set()
+        for i in ht:
+            if ht[i] in hs:
+                return False
+            else:
+                hs.add(ht[i])
+        return True
+# Solution 3 O(N) O(N) HashTable
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        ht: dict = {}
+        for i in arr:
+            ht[i] = ht.get(i, 0) + 1
+        return len(ht.values()) == len(set(ht.values()))
