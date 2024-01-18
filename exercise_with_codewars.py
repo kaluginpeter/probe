@@ -33034,3 +33034,18 @@ def select_subarray(arr):
 #
 #
 # Follow up: Could you come up with a one-pass algorithm using only constant extra space?
+# Solution O(N) O(1) Two Pointers
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        left, right = 0, len(nums) - 1
+        top: int = 0
+        while top <= right:
+            if nums[top] == 0:
+                nums[top], nums[left] = nums[left], nums[top]
+                left += 1
+            if nums[top] == 2:
+                nums[top], nums[right] = nums[right], nums[top]
+                right -= 1
+            else:
+                top += 1
+        return nums
