@@ -33049,7 +33049,7 @@ class Solution:
             else:
                 top += 1
         return nums
-        
+    
 # Most Consecutive Zeros of a Binary Number
 # Given a string (str) containing a base-10 integer between 0 and 10000, convert the integer to its binary representation. At that point, obtain a count of the maximum amount of consecutive 0s. From there, return the count in written form with a capital letter.
 #
@@ -33074,7 +33074,7 @@ class Solution:
 # Happy coding!
 #
 # FUNDAMENTALSMATHEMATICSSTRINGS
-def max_consec_zeros(s):
+ def max_consec_zeros(s):
     words: dict = {0: "Zero", 1: "One", 2: "Two", 3: "Three",
                   4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven',
                   8: 'Eight', 9: 'Nine', 10: 'Ten', 11: 'Eleven',
@@ -33088,3 +33088,28 @@ def max_consec_zeros(s):
         else:
             seq = 0
     return words[top]
+    
+# 7. Reverse Integer
+# Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+#
+# Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+#
+#
+#
+# Example 1:
+#
+# Input: x = 123
+# Output: 321
+# Example 2:
+#
+# Input: x = -123
+# Output: -321
+# Example 3:
+#
+# Input: x = 120
+# Output: 21
+#
+#
+# Constraints:
+#
+# -231 <= x <= 231 - 1
