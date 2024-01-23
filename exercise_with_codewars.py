@@ -33513,3 +33513,13 @@ def range_function(*args):
 #
 # 1 <= nums.length <= 2 * 104
 # -109 <= nums[i] <= 109
+class Solution:
+    def findLHS(self, nums: List[int]) -> int:
+        ht: dict = {}
+        for i in nums:
+            ht[i] = ht.get(i, 0) + 1
+        top: int = 0
+        for i in ht:
+            if i-1 in ht:
+                top = max(top, ht[i] + ht[i-1])
+        return top
