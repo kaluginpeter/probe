@@ -33595,3 +33595,10 @@ def catalog(s, article):
 #
 # 1 <= n <= 100
 # 2 <= k <= 10
+class Solution:
+    def sumBase(self, n: int, k: int) -> int:
+        ans: int = 0
+        while n:
+            ans += n % k
+            n //= k
+        return ans
