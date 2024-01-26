@@ -33710,3 +33710,17 @@ def is_narcissistic(*args):
 # Constraints:
 #
 # 1000 <= num <= 9999
+class Solution:
+    def minimumSum(self, num: int) -> int:
+        lst: list = []
+        while num:
+            lst.append(num % 10)
+            num //= 10
+        lst.sort()
+        x, y = 0, 0
+        for i in range(len(lst)):
+            if i % 2 == 0:
+                x = x * 10 + lst[i]
+            else:
+                y = y * 10 + lst[i]
+        return x + y
