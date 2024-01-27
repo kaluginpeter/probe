@@ -33830,7 +33830,7 @@ class Solution:
             if i in hs1:
                 ans2 += 1
         return [ans1, ans2]
-
+    
 # Optimum coding school location
 # Preface
 # You are currently working together with a local community to build a school teaching children how to code. First plans have been made and the community wants to decide on the best location for the coding school. In order to make this decision data about the location of students and potential locations is collected.
@@ -33850,3 +33850,12 @@ class Solution:
 #
 # "The best location is number 1 with the coordinates x = 3 and y = 4"
 # ALGORITHMS
+def optimum_location(students, locations):
+    total, total_value = float('inf'), None
+    for start in locations:
+        top: int = 0
+        for stud in students:
+            top += abs(stud[0] - start['x']) + abs(stud[1] - start['y'])
+        if top < total:
+            total, total_value = top, start
+    return f'The best location is number {total_value["id"]} with the coordinates x = {total_value["x"]} and y = {total_value["y"]}'
