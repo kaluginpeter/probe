@@ -34331,7 +34331,7 @@ class Solution:
 class Solution:
     def flowerGame(self, n: int, m: int) -> int:
         return n * m // 2
-
+    
 # Find X
 # Part 2 version Find X Ⅱ
 #
@@ -34362,3 +34362,6 @@ class Solution:
 # Note: This problem is more about logical reasoning than it is about finding a mathematicial formula, infact there are no complex math formula involved
 #
 # PUZZLES
+def find_x(n):
+    y = n * (2*n-1)
+    return (n * (y + (n-1) * (2*n) + y)) // 2
