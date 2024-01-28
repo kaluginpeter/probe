@@ -34328,3 +34328,6 @@ class Solution:
 # Constraints:
 #
 # 1 <= n, m <= 105
+class Solution:
+    def flowerGame(self, n: int, m: int) -> int:
+        return n * m // 2
