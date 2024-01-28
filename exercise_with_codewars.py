@@ -33937,3 +33937,12 @@ class Solution:
 #
 # 3 <= n <= 50
 # 1 <= nums[i] <= 50
+class Solution:
+    def minimumCost(self, nums: List[int]) -> int:
+        y = z = float('inf')
+        for i in range(1, len(nums)):
+            if nums[i] <= y:
+                y, z = nums[i], y
+            elif nums[i] <= z:
+                z = nums[i]
+        return nums[0] + y + z
