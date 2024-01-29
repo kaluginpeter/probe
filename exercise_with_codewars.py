@@ -34407,3 +34407,35 @@ def find_x(n):
 #
 # Follow-up: Can you implement the queue such that each operation is amortized O(1) time complexity?
 # In other words, performing n operations will take overall O(n) time even if one of those operations may take longer.
+class MyQueue:
+
+    def __init__(self):
+        self.l1 = []
+        self.l2 = []
+
+    def push(self, x: int) -> None:
+        self.l1.append(x)
+
+    def pop(self) -> int:
+        if self.l2:
+            return self.l2.pop()
+        while self.l1:
+            top = self.l1.pop()
+            self.l2.append(top)
+        return self.l2.pop()
+
+    def peek(self) -> int:
+        if self.l2:
+            return self.l2[-1]
+        return self.l1[0]
+
+    def empty(self) -> bool:
+        return not self.l1 and not self.l2
+
+
+# Your MyQueue object will be instantiated and called as such:
+# obj = MyQueue()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.peek()
+# param_4 = obj.empty()
