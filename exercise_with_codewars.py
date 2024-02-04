@@ -34845,3 +34845,16 @@ def valid_word(seq, word):
 # 1 <= words.length <= 100
 # 1 <= words[i].length <= 12
 # words[i] consists of lowercase English letters.
+class Solution:
+    def uniqueMorseRepresentations(self, words: List[str]) -> int:
+        morse: list = [".-","-...","-.-.","-..",".","..-.",
+        "--.","....","..",".---","-.-",".-..",
+        "--","-.","---",".--.","--.-",".-.","...",
+        "-","..-","...-",".--","-..-","-.--","--.."]
+        ht: dict = {}
+        for i in words:
+            top: str = ''
+            for j in i:
+                top += morse[ord(j) - 97]
+            ht[top] = ht.get(top, 0) + 1
+        return len(ht)
