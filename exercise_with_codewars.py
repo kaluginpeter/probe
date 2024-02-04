@@ -34858,7 +34858,7 @@ class Solution:
                 top += morse[ord(j) - 97]
             ht[top] = ht.get(top, 0) + 1
         return len(ht)
-
+    
 # Odd-heavy Array
 # An array is defined to be odd-heavy if it contains at least one odd element and every element whose value is odd is greater than every even-valued element.
 #
@@ -34879,3 +34879,17 @@ class Solution:
 # write a function called isOddHeavy or is_odd_heavy that accepts an integer array and returns true if the array is odd-heavy else return false.
 #
 # ARRAYSFUNDAMENTALS
+def is_odd_heavy(arr):
+    arr.sort()
+    x, y = float('inf'), float('-inf')
+    for i in arr:
+        if i % 2 != 0:
+            x = i
+            break
+    for i in arr[::-1]:
+        if i % 2 == 0:
+            y = i
+            break
+    if x != float('inf'):
+        return x > y
+    return False
