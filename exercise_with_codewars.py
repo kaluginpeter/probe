@@ -35074,3 +35074,19 @@ def power(a):
 # 1 <= strs.length <= 104
 # 0 <= strs[i].length <= 100
 # strs[i] consists of lowercase English letters.
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ht: dict = {}
+        for i in range(len(strs)):
+            x: str = ''.join(sorted(strs[i]))
+            if x in ht:
+                ht[x] += [i]
+            else:
+                ht[x] = [i]
+        ans: list = []
+        for i in ht:
+            top: list = []
+            for j in ht[i]:
+                top.append(strs[j])
+            ans.append(top)
+        return ans
