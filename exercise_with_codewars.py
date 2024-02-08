@@ -35287,7 +35287,7 @@ class Solution:
         if n % 8 == 7:
             return 4
         return 3
-
+    
 # Element equals its index
 # Given a sorted array of distinct integers, write a function index_equals_value that returns the lowest index for which array[index] == index.
 # Return -1 if there is no such index.
@@ -35317,3 +35317,16 @@ class Solution:
 # The Rubik's cube
 #
 # ARRAYSALGORITHMS
+def index_equals_value(arr):
+    left, right = 0, len(arr) - 1
+    ans: int = -1
+    while left <= right:
+        middle = (left + right) // 2
+        if middle == arr[middle]:
+            ans = middle
+            right = middle - 1
+        elif middle > arr[middle]:
+            left = middle + 1
+        else:
+            right = middle - 1
+    return ans
