@@ -35416,3 +35416,14 @@ class Solution:
 # if n is 0, both functions should also return 0
 # if n is larger than values's length, use the length instead.
 # ARRAYSFUNDAMENTALS
+def minimum_sum(values, n):
+    if not values or not n:
+        return 0
+    values.sort()
+    return sum(values[:n])
+
+def maximum_sum(values, n):
+    if not values or not n:
+        return 0
+    values.sort()
+    return sum(values[-n:])
