@@ -35526,3 +35526,25 @@ class Solution:
 # Inspired by Stanford Professor Nick Parlante's excellent Linked List teachings.
 #
 # LINKED LISTSDATA STRUCTURESFUNDAMENTALS
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+def insert_nth(head, index, data):
+    tmp = head
+    if not tmp:
+        head = Node(data)
+        return head
+    if index == 0:
+        nxt = tmp
+        head = Node(data)
+        head.next = nxt
+        return head
+    for i in range(index - 1):
+        tmp = tmp.next
+    nxt = tmp.next
+    tmp.next = Node(data)
+    tmp.next.next = nxt
+    return head
