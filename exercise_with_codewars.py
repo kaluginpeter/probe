@@ -35655,3 +35655,14 @@ def rotate(matrix, direction):
 #
 # 0 <= nums.length <= 105
 # -109 <= nums[i] <= 109
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        hs: set = set(nums)
+        ans: int = 0
+        for i in hs:
+            if i - 1 not in hs:
+                top: int = 0
+                while i + top in hs:
+                    top += 1
+                ans = max(ans, top)
+        return ans
