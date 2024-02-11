@@ -35616,3 +35616,19 @@ class Solution:
 #   [1, 4, 7]
 # ]
 # MATRIXARRAYSALGORITHMS
+def rotate(matrix, direction):
+    mtrx: list = []
+    if direction == 'clockwise':
+        for column in range(len(matrix[0])):
+            top: list = []
+            for row in range(len(matrix) - 1, -1, -1):
+                top.append(matrix[row][column])
+            mtrx.append(top)
+        return mtrx
+    else:
+        for column in range(len(matrix[0]) - 1, -1, -1):
+            top: list = []
+            for row in range(len(matrix)):
+                top.append(matrix[row][column])
+            mtrx.append(top)
+        return mtrx
