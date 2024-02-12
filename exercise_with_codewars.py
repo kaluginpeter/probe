@@ -35666,7 +35666,7 @@ class Solution:
                     top += 1
                 ans = max(ans, top)
         return ans
-        
+
 # 169. Majority Element
 # Given an array nums of size n, return the majority element.
 #
@@ -35692,3 +35692,25 @@ class Solution:
 #
 #
 # Follow-up: Could you solve the problem in linear time and in O(1) space?
+# Solution O(N) O(N)
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        ht: dict = dict()
+        n: int = len(nums) // 2
+        for i in nums:
+            ht[i] = ht.get(i, 0) + 1
+            if ht[i] > n:
+                return i
+# Solution O(N) O(1)
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        count: int = 0
+        ans: int = 0
+        for i in nums:
+            if count == 0:
+                ans = i
+            if i == ans:
+                count += 1
+            else:
+                count -= 1
+        return ans
