@@ -35894,3 +35894,13 @@ class Solution:
 #
 # Hope you have fun! :-)
 # STRINGSARRAYSFUNDAMENTALS
+def reverse_and_combine_text(text):
+    ans: list = text.split()
+    while len(ans) > 1:
+        top: list = []
+        for i in range(1, len(ans), 2):
+            top.append(ans[i-1][::-1] + ans[i][::-1])
+        if len(ans) % 2 != 0:
+            top.append(ans[-1][::-1])
+        ans = top
+    return ''.join(ans)
