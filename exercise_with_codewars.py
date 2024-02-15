@@ -35941,3 +35941,14 @@ def reverse_and_combine_text(text):
 #
 # 3 <= n <= 105
 # 1 <= nums[i] <= 109
+# Solution Greedy O(NlogN) O(1)
+class Solution:
+    def largestPerimeter(self, nums: List[int]) -> int:
+        nums.sort()
+        total: int = nums[0] + nums[1]
+        ans: int = -1
+        for i in range(2, len(nums)):
+            if total > nums[i]:
+                ans = total + nums[i]
+            total += nums[i]
+        return ans
