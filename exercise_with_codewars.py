@@ -36876,3 +36876,14 @@ class Solution:
 #
 # strng will contains only of lowercase English letters.
 # ALGORITHMSLOGICPUZZLESFUNDAMENTALSSTRINGSPERFORMANCE
+def last_non_empty_string(strng: str) -> str:
+    ht: dict = dict()
+    for i in strng:
+        ht[i] = ht.get(i, 0) + 1
+    mx: int = max(ht.values())
+    ans: list = list()
+    for i in range(len(strng) - 1, -1, -1):
+        if ht[strng[i]] == mx:
+            ans.append(strng[i])
+            ht[strng[i]] = -1
+    return ''.join(ans[::-1])
