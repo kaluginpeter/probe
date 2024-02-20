@@ -36979,3 +36979,8 @@ class Solution:
 #           [0, 1, 0, 0, 1, 0],
 #           [1, 0, 0, 0, 0, 1]];
 # ARRAYSALGORITHMS
+def x(n):
+    mtrx: list = [[0 for i in range(n)] for j in range(n)]
+    for i in range(n):
+        mtrx[i][i], mtrx[i][-i-1] = 1, 1
+    return mtrx
