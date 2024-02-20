@@ -36954,3 +36954,10 @@ def tourney(inp):
 #
 #
 # Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+# Solution Math O(N) O(1)
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        total: int = len(nums) * (len(nums) + 1) // 2
+        for i in nums:
+            total -= i
+        return total
