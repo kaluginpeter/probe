@@ -37007,3 +37007,11 @@ def x(n):
 # Constraints:
 #
 # 0 <= left <= right <= 231 - 1
+class Solution:
+    def rangeBitwiseAnd(self, left: int, right: int) -> int:
+        ans: int = 0
+        while left != right:
+            right >>= 1
+            left >>= 1
+            ans += 1
+        return right << ans
