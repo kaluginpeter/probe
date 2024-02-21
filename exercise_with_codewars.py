@@ -36961,7 +36961,7 @@ class Solution:
         for i in nums:
             total -= i
         return total
-
+    
 # X marks the spot!
 # Write a function x(n) that takes in a number n and returns an nxn array with an X in the middle. The X will be represented by 1's and the rest will be 0's.
 # E.g.
@@ -36984,3 +36984,26 @@ def x(n):
     for i in range(n):
         mtrx[i][i], mtrx[i][-i-1] = 1, 1
     return mtrx
+
+# 201. Bitwise AND of Numbers Range
+# Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.
+#
+#
+#
+# Example 1:
+#
+# Input: left = 5, right = 7
+# Output: 4
+# Example 2:
+#
+# Input: left = 0, right = 0
+# Output: 0
+# Example 3:
+#
+# Input: left = 1, right = 2147483647
+# Output: 0
+#
+#
+# Constraints:
+#
+# 0 <= left <= right <= 231 - 1
