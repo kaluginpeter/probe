@@ -37076,3 +37076,14 @@ def on_line(p1):
 # All the pairs of trust are unique.
 # ai != bi
 # 1 <= ai, bi <= n
+class Solution:
+    def findJudge(self, n: int, trust: List[List[int]]) -> int:
+        lngth: int = n
+        trusted, voted = [0 for i in range(lngth)], [0 for i in range(lngth)]
+        for i in trust:
+            trusted[i[1]-1] += 1
+            voted[i[0]-1] += 1
+        for i in range(lngth):
+            if trusted[i] == lngth - 1 and voted[i] == 0:
+                return i + 1
+        return -1
