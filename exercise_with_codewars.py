@@ -37087,7 +37087,7 @@ class Solution:
             if trusted[i] == lngth - 1 and voted[i] == 0:
                 return i + 1
         return -1
-        
+
 # Will the present fit?
 # Santa's elves are boxing presents, and they need your help! Write a function that takes two sequences of dimensions of the present and the box, respectively, and returns a Boolean based on whether or not the present will fit in the box provided. The box's walls are one unit thick, so be sure to take that in to account.
 #
@@ -37097,3 +37097,7 @@ class Solution:
 # [5, 7, 9], [9, 5, 7]      --> false, present and box are same size
 # [17, 22, 10], [5, 5, 10]) --> false, box is too small
 # ARRAYSALGORITHMS
+def will_fit(present, box): 
+    present = sorted(present)
+    box = sorted(box)
+    return all(x < y - 1 for x, y in zip(present, box))
