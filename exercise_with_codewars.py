@@ -37207,7 +37207,7 @@ def solve(files):
             ans.append(i)
     ans.sort()
     return ans
-    
+
 # Update inventory in your smartphone store
 # You will be given an array which lists the current inventory of stock in your store and another array which lists the new inventory being delivered to your store today.
 #
@@ -37222,3 +37222,12 @@ def solve(files):
 # Kata inspired by the FreeCodeCamp's 'Inventory Update' algorithm.
 #
 # ALGORITHMSDATA STRUCTURESARRAYS
+def update_inventory(cur_stock, new_stock):
+    ht: dict = dict()
+    for i in cur_stock:
+        ht[i[1]] = ht.get(i[1], 0) + i[0]
+    for i in new_stock:
+        ht[i[1]] = ht.get(i[1], 0) + i[0]
+    ans: list = [(v, k)  for k, v in ht.items()]
+    ans.sort(key=lambda x: x[1])
+    return ans
