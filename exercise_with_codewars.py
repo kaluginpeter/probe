@@ -37187,3 +37187,23 @@ class Solution:
 # would return ['.mp3'], because it appears more times then any other extension, and no other extension has an equal amount of appearences.
 #
 # FUNDAMENTALSALGORITHMSSTRINGSARRAYS
+def solve(files):
+    ht: dict = dict()
+    for i in files:
+        indx: int = -1
+        while i[indx] != '.':
+            indx -= 1
+        x: str = i[indx:]
+        ht[x] = ht.get(x, 0) + 1
+    mx = None
+    for i in ht:
+        if not mx:
+            mx = i
+        elif ht[i] > ht[mx]:
+            mx = i
+    ans: list = list()
+    for i in ht:
+        if ht[i] == ht[mx]:
+            ans.append(i)
+    ans.sort()
+    return ans
