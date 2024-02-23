@@ -37136,3 +37136,23 @@ def will_fit(present, box):
 #
 # The number of nodes in the list is in the range [1, 5000].
 # 1 <= Node.val <= 1000
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def insertGreatestCommonDivisors(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        def lcd(x: int, y: int) -> int:
+            mul: int = 1
+            x, y = max(x, y), min(x, y)
+            while x * mul % y != 0:
+                mul += 1
+            return x * mul
+        def gcd(x: int, y: int) -> int:
+            return x * y // lcd(x, y)
+        tmp = head
+        while tmp.next:
+            tmp.next = ListNode(val=gcd(tmp.val, tmp.next.val), next=tmp.next)
+            tmp = tmp.next.next
+        return head
