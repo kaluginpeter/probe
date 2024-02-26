@@ -37574,3 +37574,9 @@ class Solution:
 # Millipede: presidenT Trade.
 #
 # ALGORITHMSARRAYSSTRINGS
+from itertools import pairwise, permutations
+def solution(arr):
+    for i in permutations(arr, len(arr)):
+        if all(x[-1] == y[0] for x, y in pairwise(i)):
+            return True
+    return False
