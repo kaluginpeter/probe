@@ -37620,3 +37620,10 @@ def solution(arr):
 #
 # 1 <= nums.length <= 100
 # 1 <= nums[i] <= 100
+class Solution:
+    def sumCounts(self, nums: List[int]) -> int:
+        count: int = 0
+        for i in range(len(nums)):
+            for j in range(i, len(nums)):
+                count += len(set(nums[i:j+1]))**2
+        return count
