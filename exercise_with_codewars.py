@@ -37627,7 +37627,7 @@ class Solution:
             for j in range(i, len(nums)):
                 count += len(set(nums[i:j+1]))**2
         return count
-        
+    
 # Name to Matrix
 # Given a name, turn that name into a perfect square matrix (nested array with the amount of arrays equivalent to the length of each array).
 #
@@ -37643,3 +37643,21 @@ class Solution:
 #               ["n", "k", "."],
 #               [".", ".", "."] ]
 # STRINGSARRAYSALGORITHMSMATRIX
+def matrixfy(st):
+    if not st:
+        return 'name must be at least one letter'
+    n: int = 1
+    while n * n < len(st):
+        n += 1
+    ans: list = list()
+    indx: int = 0
+    for i in range(n):
+        top: list = list()
+        for j in range(n):
+            if indx == len(st):
+                top.append('.')
+            else:
+                top.append(st[indx])
+                indx += 1
+        ans.append(top)
+    return ans
