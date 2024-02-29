@@ -37799,7 +37799,7 @@ class Solution:
         for i in range(len(seats)):
             count += abs(seats[i] - students[i])
         return count
-
+    
 # All Star Code Challenge #19
 # This Kata is intended as a small challenge for my students
 #
@@ -37832,3 +37832,13 @@ class Solution:
 # Generate the permutations in lexicographic order of the original array.
 # keep only the first occurence of a permutation, when duplicates are found.
 # STRINGSCOMBINATORICSPERMUTATIONSARRAYSFUNDAMENTALS
+import itertools
+def slogan_maker(array):
+    ht: dict = dict()
+    for i in array:
+        if i not in ht:
+            ht[i] = 1
+    ans: list = list()
+    for i in itertools.permutations(ht.keys(), len(ht)):
+        ans.append(' '.join(i))
+    return ans
