@@ -38011,3 +38011,19 @@ def split_all_even_numbers(numbers, way):
 #
 #
 # Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
+# Solution
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        n: int = len(nums)
+        ans: list = [0] * n
+        n -= 1
+        left, right = 0, n
+        while left <= right:
+            if abs(nums[left]) >= abs(nums[right]):
+                ans[n] = nums[left]**2
+                left += 1
+            else:
+                ans[n] = nums[right]**2
+                right -= 1
+            n -= 1
+        return ans
