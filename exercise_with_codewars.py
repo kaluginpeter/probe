@@ -38151,3 +38151,12 @@ class Solution:
 # The function must work for any arbitrary alphabets, not only the pre-defined ones
 # You don't have to consider negative numbers
 # STRINGSMATHEMATICSALGORITHMS
+def convert(input, source, target):
+    count: int = 0
+    for i in input:
+        count = count * len(source) + source.index(i)
+    ans: list = list()
+    while count:
+        ans.append(target[count % len(target)])
+        count //= len(target)
+    return ''.join(ans[::-1]) if ans else target[0]
