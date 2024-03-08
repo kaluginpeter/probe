@@ -38518,3 +38518,14 @@ def look_and_say(data='1', maxlen=5):
 #
 # 1 <= nums.length <= 100
 # 1 <= nums[i] <= 100
+# Solution HashTable O(N) O(N)
+class Solution:
+    def maxFrequencyElements(self, nums: List[int]) -> int:
+        ht: dict = dict()
+        top, count = 0, 0
+        for i in nums:
+            ht[i] = ht.get(i, 0) + 1
+            top = max(top, ht[i])
+        for i in ht:
+            count += ht[i] if ht[i] == top else 0
+        return count
