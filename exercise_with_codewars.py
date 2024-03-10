@@ -39054,3 +39054,10 @@ class Solution:
 # 1 <= n == happiness.length <= 2 * 105
 # 1 <= happiness[i] <= 108
 # 1 <= k <= n
+class Solution:
+    def maximumHappinessSum(self, happiness: List[int], k: int) -> int:
+        count: int = 0
+        happiness.sort(reverse=True)
+        for i in range(k):
+            count += max(0, happiness[i] - i)
+        return count
