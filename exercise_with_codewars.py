@@ -38755,3 +38755,15 @@ my_automaton.states.append('q3')
 #
 # 1 <= nums1.length, nums2.length <= 1000
 # 0 <= nums1[i], nums2[i] <= 1000
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        ht1, ht2 = dict(), dict()
+        ans: list = list()
+        for i in nums1:
+            ht1[i] = ht1.get(i, 0) + 1
+        for i in nums2:
+            ht2[i] = ht2.get(i, 0) + 1
+        for i in ht1:
+            if i in ht2:
+                ans.append(i)
+        return ans
