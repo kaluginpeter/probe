@@ -39262,3 +39262,14 @@ def count_days(event_date):
 #
 # 1 <= nums.length <= 12
 # 1 <= nums[i] <= 20
+class Solution:
+    from itertools import combinations
+    def subsetXORSum(self, nums: List[int]) -> int:
+        total: int = 0
+        for i in range(len(nums) + 1):
+            for subset in combinations(nums, i):
+                xor: int = 0
+                for num in subset:
+                    xor ^= num
+                total += xor
+        return total
