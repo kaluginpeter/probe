@@ -39333,7 +39333,7 @@ def repeat_adjacent(st):
     if len(lst) > 1:
         count += 1
     return count
-    
+
 # 2485. Find the Pivot Integer
 # Given a positive integer n, find the pivot integer x such that:
 #
@@ -39362,3 +39362,8 @@ def repeat_adjacent(st):
 # Constraints:
 #
 # 1 <= n <= 1000
+class Solution:
+    def pivotInteger(self, n: int) -> int:
+        tmp: int = (n**2 + n) // 2
+        square: int = int(tmp**.5)
+        return square if square**2 == tmp else -1
