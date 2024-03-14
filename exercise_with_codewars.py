@@ -39442,3 +39442,13 @@ def sort_sequence(sequence):
 # 1 <= nums.length <= 3 * 104
 # nums[i] is either 0 or 1.
 # 0 <= goal <= nums.length
+class Solution:
+    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
+        count: int = 0
+        prefix_sum: int = 0
+        ht: dict = {0: 1}
+        for i in nums:
+            prefix_sum += i
+            count += ht.get(prefix_sum - goal, 0)
+            ht[prefix_sum] = ht.get(prefix_sum, 0) + 1
+        return count
