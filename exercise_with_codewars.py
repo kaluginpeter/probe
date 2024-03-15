@@ -39524,3 +39524,15 @@ def packing_rectangles(a1, b1, a2, b2, a3, b3):
 #
 #
 # Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+# Soluition O(N) O(N) - but in the task its O(1)
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        output: list = list()
+        prev, post = 1, 1
+        for i in nums:
+            output.append(prev)
+            prev *= i
+        for i in range(len(nums) - 1, -1, -1):
+            output[i] *= post
+            post *= nums[i]
+        return output
