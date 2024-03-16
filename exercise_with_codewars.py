@@ -39606,3 +39606,17 @@ def triangular_sum(n):
 #
 # 1 <= nums.length <= 105
 # nums[i] is either 0 or 1.
+class Solution:
+    def findMaxLength(self, nums: List[int]) -> int:
+        ht: dict = dict()
+        count: int = 0
+        ans: int = 0
+        for i in range(len(nums)):
+            count += 1 if nums[i] == 1 else -1
+            if count == 0:
+                ans = max(ans, i + 1)
+            elif count in ht:
+                ans = max(ans, i - ht[count])
+            else:
+                ht[count] = i
+        return ans
