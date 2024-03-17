@@ -39901,3 +39901,7 @@ class Solution:
 #
 # 1 <= s.length <= 105
 # s and c consist only of lowercase English letters.
+class Solution:
+    def countSubstrings(self, s: str, c: str) -> int:
+        count: int = s.count(c)
+        return count * (count + 1) // 2
