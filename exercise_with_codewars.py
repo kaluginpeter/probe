@@ -39694,7 +39694,7 @@ def pac_man(n, pm, enemies):
         for j in range(n):
             ans += mtrx[i][j]
     return ans - 1
-    
+
 # 57. Insert Interval
 # You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
 #
@@ -39752,3 +39752,17 @@ class Solution:
         elif not added: # if we not adding newInterval in answer
             ans.append([x, y])
         return ans
+
+# The latest clock
+# Write a function which receives 4 digits and returns the latest time of day that can be built with those digits.
+#
+# The time should be in HH:MM format.
+#
+# Examples:
+#
+# digits: 1, 9, 8, 3 => result: "19:38"
+# digits: 9, 1, 2, 5 => result: "21:59" (19:25 is also a valid time, but 21:59 is later)
+# Notes
+# Result should be a valid 24-hour time, between 00:00 and 23:59.
+# Only inputs which have valid answers are tested.
+# DATE TIMEFUNDAMENTALSALGORITHMS
