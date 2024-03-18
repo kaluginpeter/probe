@@ -39905,7 +39905,7 @@ class Solution:
     def countSubstrings(self, s: str, c: str) -> int:
         count: int = s.count(c)
         return count * (count + 1) // 2
-        
+
 # 452. Minimum Number of Arrows to Burst Balloons
 # There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.
 #
@@ -39951,3 +39951,27 @@ class Solution:
                 ans += 1
                 pos = i[1]
         return ans
+
+# Group Anagrams
+# Your job is to group the words in anagrams.
+#
+# What is an anagram ?
+# star and tsar are anagram of each other because you can rearrange the letters for star to obtain tsar.
+#
+# Example
+# A typical test could be :
+#
+# // input
+# ["tsar", "rat", "tar", "star", "tars", "cheese"]
+#
+# // output
+# [
+#   ["tsar", "star", "tars"],
+#   ["rat", "tar"],
+#   ["cheese"]
+# ]
+# Hvae unf !
+#
+# I'd advise you to find an efficient way for grouping the words in anagrams otherwise you'll probably won't pass the heavy superhero test cases
+#
+# ALGORITHMSDATA STRUCTURES
