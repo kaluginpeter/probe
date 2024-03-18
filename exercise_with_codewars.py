@@ -39951,7 +39951,7 @@ class Solution:
                 ans += 1
                 pos = i[1]
         return ans
-
+    
 # Group Anagrams
 # Your job is to group the words in anagrams.
 #
@@ -39975,3 +39975,9 @@ class Solution:
 # I'd advise you to find an efficient way for grouping the words in anagrams otherwise you'll probably won't pass the heavy superhero test cases
 #
 # ALGORITHMSDATA STRUCTURES
+def group_anagrams(words):
+    ht: dict = dict()
+    for i in words:
+        x: str = ''.join(sorted(i))
+        ht[x] = ht.get(x, []) + [i]
+    return ht.values()
