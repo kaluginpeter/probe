@@ -40023,7 +40023,7 @@ class Solution:
                 if count == k:
                     return i
         return -1
-        
+
 # 1309. Decrypt String from Alphabet to Integer Mapping
 # You are given a string s formed by digits and '#'. We want to map s to English lowercase characters as follows:
 #
@@ -40064,3 +40064,16 @@ class Solution:
             else:
                 ans.append(chr(96 + int(s[i])))
         return ''.join(ans)
+
+# Area and perimeter of the ellipse
+# Task:
+# Based on the received dimensions, a and b, of an ellipse, calculare its area and perimeter.
+#
+# Example:
+# Input: ellipse(5,2)
+#
+# Output: "Area: 31.4, perimeter: 23.1"
+# Note: The perimeter approximation formula you should use: π * (3/2(a+b) - sqrt(ab))
+#
+# Have fun :)
+# FUNDAMENTALS
