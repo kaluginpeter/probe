@@ -40279,3 +40279,8 @@ class Solution:
 # #3 Can Santa save Christmas?
 # #4 Christmas Present Calculator
 # DATE TIMEFUNDAMENTALS
+from datetime import datetime as dt
+def minutes_to_midnight(d):
+    x = dt(year=d.year, month=d.month, day=d.day + 1, hour=0, minute=0, second=0)
+    s = round((x - d).total_seconds() / 60)
+    return f'{s} {"minutes" if s > 1 else "minute"}'
