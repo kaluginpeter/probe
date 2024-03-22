@@ -40329,7 +40329,7 @@ class Solution:
                 return False
             left, right = left + 1, right - 1
         return True
-
+    
 # Collapse Left
 # Task
 # Write a function that takes an array containing numbers and functions. The output of the function should be an array of only numbers. So how are we to remove the functions from the array?
@@ -40351,3 +40351,14 @@ class Solution:
 # If an array only contains numbers, the array should be returned without any modifications.
 # ARRAYS
 # Suggest kata description edits
+def operationArguments(arr):
+    ans: list = list()
+    for i in range(len(arr)):
+        if not isinstance(arr[i], int):
+            if i == 0:
+                ans.append(arr[i](0))
+            else:
+                ans.append(arr[i](ans.pop()))
+        else:
+            ans.append(arr[i])
+    return ans
