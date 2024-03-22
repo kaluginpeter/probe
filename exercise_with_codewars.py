@@ -40246,7 +40246,7 @@ class Solution:
             current = nxt
         head = prev
         return head
-
+    
 # Minutes to Midnight
 # Teemo is not really excited about the new year's eve, but he has to celebrate it with his friends anyway.
 #
@@ -40284,3 +40284,30 @@ def minutes_to_midnight(d):
     x = dt(year=d.year, month=d.month, day=d.day + 1, hour=0, minute=0, second=0)
     s = round((x - d).total_seconds() / 60)
     return f'{s} {"minutes" if s > 1 else "minute"}'
+
+# 234. Palindrome Linked List
+# Given the head of a singly linked list, return true if it is a
+# palindrome
+#  or false otherwise.
+#
+#
+#
+# Example 1:
+#
+#
+# Input: head = [1,2,2,1]
+# Output: true
+# Example 2:
+#
+#
+# Input: head = [1,2]
+# Output: false
+#
+#
+# Constraints:
+#
+# The number of nodes in the list is in the range [1, 105].
+# 0 <= Node.val <= 9
+#
+#
+# Follow up: Could you do it in O(n) time and O(1) space?
