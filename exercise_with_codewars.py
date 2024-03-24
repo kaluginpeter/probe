@@ -40515,3 +40515,25 @@ def calc_rot_time(box):
 #
 # How can we prove that at least one duplicate number must exist in nums?
 # Can you solve the problem in linear runtime complexity?
+# Solution Array Stack O(N) O(N)
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        array: list[bool] = [True] * len(nums)
+        for i in nums:
+            if array[i-1]:
+                array[i-1] = False
+            else:
+                return i
+# Solution Slow and Fast Pointers O(N) O(1)
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        slow, fast = nums[0], nums[0]
+        while True:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            if slow == fast:
+                break
+        slow = nums[0]
+        while slow != fast:
+            slow, fast = nums[slow], nums[fast]
+        return slow
