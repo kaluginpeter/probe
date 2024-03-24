@@ -40537,7 +40537,7 @@ class Solution:
         while slow != fast:
             slow, fast = nums[slow], nums[fast]
         return slow
-
+    
 # Simple Events
 # Your goal is to write an Event constructor function, which can be used to make event objects.
 #
@@ -40556,3 +40556,13 @@ class Solution:
 # Also see an example test fixture for suggested usage
 #
 # DESIGN PATTERNSEVENT HANDLINGFUNDAMENTALS
+class Event():
+    def __init__(self):
+        self.stack: list = list()
+    def subscribe(self, func):
+        self.stack.append(func)
+    def unsubscribe(self, func):
+        self.stack.remove(func)
+    def emit(self, *args):
+        for f in self.stack:
+            f(*args)
