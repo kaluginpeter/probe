@@ -40793,3 +40793,20 @@ class Solution:
 # The original PatternCraft series (by John Lindquist) is a collection of Youtube videos that explains some of the design patterns and how they are used (or could be) on StarCraft.
 #
 # DESIGN PATTERNSFUNDAMENTALS
+class Fly():
+    def move(self, unit):
+        return 10
+
+
+class Walk():
+    def move(self, unit):
+        return 1
+
+
+class Viking():
+    def __init__(self):
+        self.position = 0
+        self.move_behavior = Walk()
+
+    def move(self):
+        self.position += self.move_behavior.move(self)
