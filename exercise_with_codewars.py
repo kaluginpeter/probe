@@ -40926,7 +40926,7 @@ class Solution:
                 left += 1
             ans += left
         return ans
-
+    
 # Simple Fun #58: Volleyball Positions
 # Task
 # You are watching a volleyball tournament, but you missed the beginning of the very first game of your favorite team. Now you're curious about how the coach arranged the players on the field at the start of the game.
@@ -40997,3 +40997,19 @@ class Solution:
 # Team arrangement at the start of the game.
 #
 # PUZZLES
+def volleyball_positions(formation, k):
+    steps: int = k % 6
+    mtrx_moves: list = [[3, 2], [2, 1], [3, 0], [1, 0], [0, 1], [1, 2]]
+    new_mtrx: list = list()
+    for rows in range(4):
+        top: list = list()
+        for columns in range(3):
+            if formation[rows][columns] != 'empty':
+                idx: int = (mtrx_moves.index([rows, columns]) + steps)
+                if idx > 5:
+                    idx %= 6
+                top.append(formation[mtrx_moves[idx][0]][mtrx_moves[idx][1]])
+            else:
+                top.append(formation[rows][columns])
+        new_mtrx.append(top)
+    return new_mtrx
