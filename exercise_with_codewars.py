@@ -41046,3 +41046,16 @@ def volleyball_positions(formation, k):
 # 3 <= arr.length <= 100
 # 0 <= arr[i] <= 1000
 # 0 <= a, b, c <= 1000
+class Solution:
+    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
+        ans: int = 0
+        for i in range(len(arr)):
+            for j in range(i + 1, len(arr)):
+                if abs(arr[i] - arr[j]) > a:
+                    continue
+                for k in range(j + 1, len(arr)):
+                    if abs(arr[j] - arr[k]) > b:
+                        continue
+                    elif abs(arr[i]  - arr[k]) <= c:
+                        ans += 1
+        return ans
