@@ -41464,3 +41464,7 @@ def mixed_fraction(s):
 # Constraints:
 #
 # 1 <= x <= 100
+class Solution:
+    def sumOfTheDigitsOfHarshadNumber(self, x: int) -> int:
+        sm: int = sum(int(i) for i in str(x))
+        return sm if x % sm == 0 else -1
