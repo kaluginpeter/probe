@@ -41643,3 +41643,21 @@ class Solution:
 # The original PatternCraft series (by John Lindquist) is a collection of Youtube videos that explains some of the design patterns and how they are used (or could be) on StarCraft.
 #
 # DESIGN PATTERNSFUNDAMENTALS
+class SiegeState:
+    def can_move(self):
+        return False
+    def damage(self):
+        return 20
+
+class TankState:
+    def can_move(self):
+        return True
+    def damage(self):
+        return 5
+class Tank:
+    def __init__(self, state=None):
+        self.state = state if state is not None else TankState()
+    def can_move(self):
+        return self.state.can_move()
+    def damage(self):
+        return self.state.damage()
