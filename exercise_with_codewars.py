@@ -41605,3 +41605,12 @@ class Solution:
 # 1 <= s.length <= 104
 # s consists of only English letters and spaces ' '.
 # There will be at least one word in s.
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        left = right = len(s) - 1
+        while right > 0 and s[right] == ' ':
+            right -= 1
+        left = right
+        while left >= 0 and s[left] != ' ':
+            left -= 1
+        return right - left
