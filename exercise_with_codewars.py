@@ -41701,7 +41701,7 @@ class Solution:
             ht1[s[i]] = i
             ht2[t[i]] = i
         return ht1.get(s[-1], 0) == ht2.get(t[-1], 0)
-        
+
 # Christmas Present Calculator
 # Christmas Present Calculator
 # After we find out if Santa can save Christmas there is another task to face.
@@ -41742,3 +41742,29 @@ class Solution:
 # #3 Can Santa save Christmas?
 # #4 How Many Presents?
 # DATE TIMEFUNDAMENTALS
+from datetime import timedelta as td
+
+
+def convert(arr: list[str]) -> list[int]:
+    ans: list[int] = list()
+    for time in arr:
+        hours, minutes, seconds = map(int, time.split(':'))
+        if hours >= 24:
+            total_seconds: int = int(hours * 3600 + minutes * 60 + seconds)
+        else:
+            total_seconds: int = int(td(hours=hours, minutes=minutes, seconds=seconds).total_seconds())
+        ans.append(total_seconds)
+    return ans
+
+
+def count_presents(prod: dict, pres: list[str]) -> int:
+    times: list[int] = sorted(convert(pres))
+    count: int = 0
+    powers: int = sum(time * 24 * 3600 for time in prod.values())
+    for gift in times:
+        if powers >= gift:
+            count += 1
+            powers -= gift
+        else:
+            break
+    return count
