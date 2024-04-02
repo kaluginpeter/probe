@@ -41690,3 +41690,14 @@ class Tank:
 # 1 <= s.length <= 5 * 104
 # t.length == s.length
 # s and t consist of any valid ascii character.
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        ht1, ht2 = dict(), dict()
+        for i in range(len(s)):
+            if ht1.get(s[i], 0) != ht2.get(t[i], 0):
+                return False
+            if (s[i] == s[max(i - 1, 0)] and t[i] != t[max(i - 1, 0)]) or (s[i] != s[max(i - 1, 0)] and t[i] == t[max(i - 1, 0)]):
+                return False
+            ht1[s[i]] = i
+            ht2[t[i]] = i
+        return ht1.get(s[-1], 0) == ht2.get(t[-1], 0)
