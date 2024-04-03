@@ -41798,3 +41798,12 @@ def count_presents(prod: dict, pres: list[str]) -> int:
 # rectangles[i].length == 2
 # 1 <= li, wi <= 109
 # li != wi
+class Solution:
+    def countGoodRectangles(self, rectangles: List[List[int]]) -> int:
+        mx, count = 0, 0
+        for i in rectangles:
+            if mx == min(i):
+                count += 1
+            elif mx < min(i):
+                mx, count = min(i), 1
+        return count
