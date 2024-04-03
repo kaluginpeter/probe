@@ -41807,7 +41807,7 @@ class Solution:
             elif mx < min(i):
                 mx, count = min(i), 1
         return count
-
+    
 # Game Hit the target - 2nd part
 # This is the second part of the kata :3 🎈🎆🎇🎆🎈
 # given a matrix n x n (2-7), determine if the arrow is directed to the target (x).
@@ -41856,3 +41856,35 @@ class Solution:
 # Happy hacking as they say! 💻
 #
 # MATRIXARRAYSSTRINGSFUNDAMENTALS
+def solution(mtrx):
+    for rows in range(len(mtrx)):
+        for columns in range(len(mtrx[0])):
+            if mtrx[rows][columns] == '^':
+                x: int = rows
+                while x > 0:
+                    x -= 1
+                    if mtrx[x][columns] == 'x':
+                        return True
+                return False
+            elif mtrx[rows][columns] == 'v':
+                x: int = rows
+                while x < len(mtrx) - 1:
+                    x += 1
+                    if mtrx[x][columns] == 'x':
+                        return True
+                return False
+            elif mtrx[rows][columns] == '>':
+                x: int = columns
+                while x < len(mtrx[0]) - 1:
+                    x += 1
+                    if mtrx[rows][x] == 'x':
+                        return True
+                return False
+            elif mtrx[rows][columns] == '<':
+                x: int = columns
+                while x > 0:
+                    x -= 1
+                    if mtrx[rows][x] == 'x':
+                        return True
+                return False
+    return False
