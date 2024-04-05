@@ -41991,7 +41991,7 @@ def stat(strg):
     median: int = stack[len(stack) // 2] if len(stack) % 2 != 0 else (stack[len(stack) // 2] + stack[len(stack) // 2 - 1]) // 2
     median: str = f'Median: {median // 3600:02d}|{median % 3600 // 60:02d}|{median % 3600 % 60:02d}'
     return f'{diff} {average} {median}'
-    
+
 # 1544. Make The String Great
 # Given a string s of lower and upper case English letters.
 #
@@ -42029,3 +42029,14 @@ def stat(strg):
 #
 # 1 <= s.length <= 100
 # s contains only lower and upper case English letters.
+class Solution:
+    def makeGood(self, s: str) -> str:
+        stack: list[str] = list()
+        for i in s:
+            if not stack:
+                stack.append(i)
+            elif abs(ord(i) - ord(stack[-1])) == 32:
+                stack.pop()
+            else:
+                stack.append(i)
+        return ''.join(stack)
