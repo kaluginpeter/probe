@@ -42225,3 +42225,16 @@ def by_state(st):
 #
 # 1 <= s.length <= 100
 # s[i] is '(', ')' or '*'.
+class Solution:
+    def checkValidString(self, s: str) -> bool:
+        mn, mx = 0, 0
+        for i in s:
+            if i == '(':
+                mn, mx = mn + 1, mx + 1
+            elif i == ')':
+                mn, mx = max(mn - 1, 0), mx - 1
+            else:
+                mn, mx = max(mn - 1, 0), mx + 1
+            if mx < 0:
+                return False
+        return mn == 0
