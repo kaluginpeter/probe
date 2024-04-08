@@ -42571,7 +42571,7 @@ class Solution:
                     return ones
                 zeros -= 1
         return 0
-
+    
 # Esthetic Numbers
 # A number is Esthetic if, in any base from base2 up to base10, the absolute difference between every pair of its adjacent digits is constantly equal to 1.
 #
@@ -42604,3 +42604,14 @@ class Solution:
 # 666 ➞ [8]
 # // 666 in base8 = 1232
 # Suggest kata description edits
+def esthetic(num):
+    ans: list[int] = list()
+    for i in range(2, 11):
+        top: list[int] = list()
+        x: int = num
+        while x:
+            top.append(x % i)
+            x //= i
+        if all(abs(x - y) == 1 for x, y in zip(top, top[1:])):
+            ans.append(i)
+    return ans
