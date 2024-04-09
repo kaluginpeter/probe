@@ -42670,3 +42670,6 @@ class Solution:
         for i in range(len(tickets)):
             ans += min(tickets[i], tickets[k] if i <= k else tickets[k] - 1)
         return ans
+
+# Is it a letter?
+# Write a function, isItLetter or is_it_letter or IsItLetter, which tells us if a given character is a letter or not.
