@@ -42670,7 +42670,13 @@ class Solution:
         for i in range(len(tickets)):
             ans += min(tickets[i], tickets[k] if i <= k else tickets[k] - 1)
         return ans
-        
+
+    
+# Is it a letter?
+# Write a function, isItLetter or is_it_letter or IsItLetter, which tells us if a given character is a letter or not.
+def is_it_letter(s):
+    return s.isalpha()
+
 # 950. Reveal Cards In Increasing Order
 # You are given an integer array deck. There is a deck of cards where every card has a unique integer. The integer on the ith card is deck[i].
 #
@@ -42713,8 +42719,10 @@ class Solution:
 # 1 <= deck.length <= 1000
 # 1 <= deck[i] <= 106
 # All the values of deck are unique.
-    
-# Is it a letter?
-# Write a function, isItLetter or is_it_letter or IsItLetter, which tells us if a given character is a letter or not.
-def is_it_letter(s):
-    return s.isalpha()
+class Solution:
+    def deckRevealedIncreasing(self, deck):
+        deq = collections.deque()
+        for el in sorted(deck, reverse=True):
+            deq.rotate()
+            deq.appendleft(el)
+        return list(deq)
