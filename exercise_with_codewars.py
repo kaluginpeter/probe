@@ -42767,3 +42767,12 @@ class Solution:
 # ​
 #
 # If the numerator is 0, you should return [].
+def continued_fraction(nu: int, de:int) -> list[int]:
+    ans: list[int] = list()
+    while nu != 0 and de != 0:
+        n: int = nu // de
+        ans.append(n)
+        x: int = max(nu - (de * n), de)
+        y: int = min(nu - (de * n), de)
+        nu, de = x, y
+    return ans
