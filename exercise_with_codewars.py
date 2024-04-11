@@ -42776,7 +42776,7 @@ def continued_fraction(nu: int, de:int) -> list[int]:
         y: int = min(nu - (de * n), de)
         nu, de = x, y
     return ans
-    
+
 # 402. Remove K Digits
 # Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
 #
@@ -42804,3 +42804,20 @@ def continued_fraction(nu: int, de:int) -> list[int]:
 # 1 <= k <= num.length <= 105
 # num consists of only digits.
 # num does not have any leading zeros except for the zero itself.
+class Solution:
+    def removeKdigits(self, num: str, k: int) -> str:
+        stack: list[str] = list()
+        for i in num:
+            while k > 0 and stack and stack[-1] > i:
+                k -= 1
+                stack.pop()
+            stack.append(i)
+        if k > 0:
+            stack = stack[:-k]
+        if not stack:
+            return '0'
+        idx: int = 0
+        while idx < len(stack) and stack[idx] == '0':
+            idx += 1
+        ans: str = ''.join(stack[idx:])
+        return ans if ans else '0'
