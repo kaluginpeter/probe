@@ -42875,3 +42875,14 @@ class Solution:
 # Note
 # Happy Coding ^_^
 # FUNDAMENTALS
+def possible_scores(answer_of_tom, score_of_tom, answer_of_john):
+    x: int = sum(i != j for i, j in zip(answer_of_tom, answer_of_john))
+    ans: int = None
+    n: int = score_of_tom // 10
+    if x == 0:
+        ans = n
+    elif x == 10:
+        ans = x - n
+    else:
+        ans = min(10 - x + (10 - n), x + n)
+    return (abs(x - n) * 10, ans * 10)
