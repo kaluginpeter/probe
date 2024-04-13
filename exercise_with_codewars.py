@@ -43004,3 +43004,15 @@ def ssc_forperm(arr):
 #
 # 1 <= heights.length <= 105
 # 0 <= heights[i] <= 104
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        heights.append(0)
+        stack: list[int] = list()
+        ans: int = 0
+        for idx in range(len(heights)):
+            while stack and heights[stack[-1]] >= heights[idx]:
+                h: int = heights[stack.pop()]
+                w: int = idx if not stack else idx - stack[-1] - 1
+                ans = max(ans, h * w)
+            stack.append(idx)
+        return ans
