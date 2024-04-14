@@ -43105,7 +43105,7 @@ def histogram(results):
         x: int = (results[i] * 100 // n) if n else 0
         results[i] = f'{i + 1}|{bar_char * (x // 2)}' + (f' {x}%' if x else '')
     return '\n'.join(results[::-1]) + '\n'
-    
+
 # 1551. Minimum Operations to Make Array Equal
 # You have an array arr of length n where arr[i] = (2 * i) + 1 for all valid values of i (i.e., 0 <= i < n).
 #
@@ -43131,3 +43131,10 @@ def histogram(results):
 # Constraints:
 #
 # 1 <= n <= 104
+class Solution:
+    def minOperations(self, n: int) -> int:
+        if n % 2 != 0:
+            n = (n - 1) // 2
+            return n * (n + 1)
+        n = n // 2
+        return n**2
