@@ -43149,3 +43149,7 @@ class Solution:
 # If you want to learn more see https://en.wikipedia.org/wiki/Prefix_sum
 #
 # FUNDAMENTALSLISTS
+def add(lst):
+    for i in range(len(lst)):
+        lst[i] += lst[i - 1] if i > 0 else 0
+    return lst
