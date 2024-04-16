@@ -43258,7 +43258,7 @@ def patience(cards: list[str]) -> int:
     while stack[13]:
         current = stack[pos[current]].pop()
     return sum(len(chunck) for chunck in stack)
-    
+
 # 164. Maximum Gap
 # Given an integer array nums, return the maximum difference between two successive elements in its sorted form. If the array contains less than two elements, return 0.
 #
@@ -43296,3 +43296,33 @@ class Solution:
             current_chunck[1] = elmnt if current_chunck[1] is None else max(elmnt, current_chunck[1])
         bucket = [chunck for chunck in bucket if chunck[0] if not None]
         return max(bucket[i][0] - bucket[i - 1][1] for i in range(1, len(bucket)))
+
+# Find the integer Partition of k-Length With Maximum or Minimum Value For Its Product Value
+# Given a certain integer n, n > 0and a number of partitions, k, k > 0; we want to know the partition which has the maximum or minimum product of its terms.
+#
+# The function find_spec_partition() , will receive three arguments, n, k, and a command: 'max' or 'min'
+#
+# The function should output the partition that has maximum or minimum value product (it depends on the given command) as an array with its terms in decreasing order.
+#
+# Let's see some cases (Python and Ruby)
+#
+# find_spec_partition(10, 4, 'max') == [3, 3, 2, 2]
+# find_spec_partition(10, 4, 'min') == [7, 1, 1, 1]
+# and Javascript:
+#
+# findSpecPartition(10, 4, 'max') == [3, 3, 2, 2]
+# findSpecPartition(10, 4, 'min') == [7, 1, 1, 1]
+# The partitions of 10 with 4 terms with their products are:
+#
+# (4, 3, 2, 1): 24
+# (4, 2, 2, 2): 32
+# (6, 2, 1, 1): 12
+# (3, 3, 3, 1): 27
+# (4, 4, 1, 1): 16
+# (5, 2, 2, 1): 20
+# (7, 1, 1, 1): 7   <------- min. productvalue
+# (3, 3, 2, 2): 36  <------- max.product value
+# (5, 3, 1, 1): 15
+# Enjoy it!
+#
+# FUNDAMENTALSDATA STRUCTURESALGORITHMSMATHEMATICSLOGICSTRINGS
