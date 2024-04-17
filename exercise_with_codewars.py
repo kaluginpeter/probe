@@ -43337,7 +43337,7 @@ def find_spec_partition(n, k, com):
         stack[idx % k] += 1
         idx += 1
     return stack
-    
+
 # 2670. Find the Distinct Difference Array
 # You are given a 0-indexed array nums of length n.
 #
@@ -43373,3 +43373,24 @@ def find_spec_partition(n, k, com):
 #
 # 1 <= n == nums.length <= 50
 # 1 <= nums[i] <= 50
+class Solution:
+    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
+        prev_ht: dict[int, int] = dict()
+        post_ht: dict[int, int] = dict()
+        ln_post: int = 0
+        ln_pref: int = 0
+        ans: list[int] = list()
+        for i in nums:
+            if i not in post_ht:
+                ln_post += 1
+                post_ht[i] = 0
+            post_ht[i] += 1
+        for i in nums:
+            if i not in prev_ht:
+                ln_pref += 1
+                prev_ht[i] = 1
+            post_ht[i] -= 1
+            if post_ht[i] == 0:
+                ln_post -= 1
+            ans.append(ln_pref - ln_post)
+        return ans
