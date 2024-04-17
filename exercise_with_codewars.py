@@ -43422,3 +43422,5 @@ class Solution:
 # If you liked this Kata, you can find the part II: Number encrypting: decypher, where your goal is to decypher the strings.
 #
 # FUNDAMENTALSSTRINGSCIPHERSCRYPTOGRAPHY
+def cypher(s):
+    return s.translate(str.maketrans('IREASGTBOlzeasbtgo', '123456780123456790'))
