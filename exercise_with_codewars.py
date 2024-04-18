@@ -43472,7 +43472,7 @@ class Solution:
                             continue
                         ans += grid[rows + x][cols + y] == 0
         return ans
-        
+    
 # Cantor's Diagonals
 # Given a list of lists containing only 1s and 0s, return a new list that differs from list 1 in its first element, list 2 in its second element, list 3 in its 3rd element, and so on.
 #
@@ -43488,3 +43488,5 @@ class Solution:
 # See Wikipedia for background (if you're interested; it won't help you solve the kata). Obviously this kata is not the same because the lists are not infinite so it doesn't really prove anything -- consider it a tribute...
 #
 # FUNDAMENTALS
+def cantor(nested_list):
+    return [int(not bool(nested_list[i][i])) for i in range(len(nested_list))]
