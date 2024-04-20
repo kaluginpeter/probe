@@ -43625,7 +43625,7 @@ class Solution:
             for col in range(len(grid[0])):
                 ans += min(rows[row], cols[col]) - grid[row][col]
         return ans
-
+    
 # DNA Sequence Tester
 # DNA is a biomolecule that carries genetic information. It is composed of four different building blocks, called nucleotides: adenine (A), thymine (T), cytosine (C) and guanine (G). Two DNA strands join to form a double helix, whereby the nucleotides of one strand bond to the nucleotides of the other strand at the corresponding positions. The bonding is only possible if the nucleotides are complementary: A always pairs with T, and C always pairs with G.
 #
@@ -43677,3 +43677,10 @@ class Solution:
 # // (seq2)          down-GGTATTAGCCGGCCACATC-up
 # If you enjoyed this kata, check out also my other DNA kata: Longest Repeated DNA Motif
 # FUNDAMENTALSSTRINGS
+def checking(first: str, second: str) -> bool:
+    return first.translate(str.maketrans('ATGC', 'TACG')) in second
+def check_DNA(seq1, seq2):
+    seq2 = seq2[::-1]
+    if len(seq1) <= len(seq2):
+        return checking(seq1, seq2)
+    return checking(seq2, seq1)
