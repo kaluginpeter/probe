@@ -43616,3 +43616,12 @@ class Solution:
 # n == grid[r].length
 # 2 <= n <= 50
 # 0 <= grid[r][c] <= 100
+class Solution:
+    def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:
+        rows: list[int] = [max(row) for row in grid]
+        cols: list[int] = [max(grid[row][col] for row in range(len(grid))) for col in range(len(grid[0]))]
+        ans: int = 0
+        for row in range(len(grid)):
+            for col in range(len(grid[0])):
+                ans += min(rows[row], cols[col]) - grid[row][col]
+        return ans
