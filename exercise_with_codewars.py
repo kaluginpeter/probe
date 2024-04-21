@@ -43725,3 +43725,14 @@ def check_DNA(seq1, seq2):
 #
 #
 # Follow up: Could you find the answer for each query in better complexity than O(n)?
+class Solution:
+    def countPoints(self, points: List[List[int]], queries: List[List[int]]) -> List[int]:
+        ans: list[int] = [0] * len(queries)
+        for i in range(len(queries)):
+            top: int = 0
+            for pair in points:
+                euclide: float = ((queries[i][0] - pair[0])**2 + (queries[i][1] - pair[1])**2)**.5
+                if queries[i][2] >= euclide:
+                    top += 1
+            ans[i] = top
+        return ans
