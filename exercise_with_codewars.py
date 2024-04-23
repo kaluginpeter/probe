@@ -43892,7 +43892,7 @@ def memesorting(meme):
         if stack:
             return [k for k, v in ht.items() if v == min(stack)][0]
     return 'Vlad'
-    
+
 # 2373. Largest Local Values in a Matrix
 # You are given an n x n integer matrix grid.
 #
@@ -43933,3 +43933,34 @@ class Solution:
             for j in range(n - 2):
                 ans[i][j] = max(grid[row][col] for row in range(i, i + 3) for col in range(j, j + 3))
         return ans
+        
+# Matrix Rotation
+# Given a matrix represented as a list of string, such as
+#
+# ###.....
+# ..###...
+# ....###.
+# .....###
+# .....###
+# ....###.
+# ..###...
+# ###.....
+# write a function
+#
+# rotate_clockwise(matrix)
+#
+# that return its 90° clockwise rotation, for our example:
+#
+# #......#
+# #......#
+# ##....##
+# .#....#.
+# .##..##.
+# ..####..
+# ..####..
+# ...##...
+#  /!\ You must return a rotated copy of matrix! (matrix must be the same before and after calling your function)
+# Note that the matrix isn't necessarily a square, though it's always a rectangle!
+# Please also note that the equality m == rotateClockwise(rotateClockwise(rotateClockwise(rotateClockwise(m)))); (360° clockwise rotation), is not always true because rotateClockwise(['']) => [] and rotateClockwise(['','','']) => [] (empty lines information is lost)
+#
+# MATRIXFUNDAMENTALS
