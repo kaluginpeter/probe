@@ -44054,7 +44054,7 @@ class Solution:
         if n == 0:
             return b
         return self.tribonacci(n - 1, b, c, a + b + c)
-
+    
 # A Man and his Umbrellas
 # A Man and his Umbrellas
 # Each morning a man walks to work, and each afternoon he walks back home.
@@ -44098,3 +44098,22 @@ class Solution:
 # Because he only needs 1 umbrella which he takes on every journey.
 #
 # LOGICARRAYSFUNDAMENTALS
+def min_umbrellas(weather):
+    home: int = 0
+    work: int = 0
+    umbrella: int = 0
+    for i in range(len(weather)):
+        if weather[i] in {'rainy', 'thunderstorms'}:
+            if i % 2 == 0:
+                if home > 0:
+                    home -= 1
+                else:
+                    umbrella += 1
+                work += 1
+            else:
+                if work > 0:
+                    work -= 1
+                else:
+                    umbrella += 1
+                home += 1
+    return umbrella
