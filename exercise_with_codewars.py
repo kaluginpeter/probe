@@ -44049,3 +44049,8 @@ class Solution:
 #
 # 0 <= n <= 37
 # The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
+class Solution:
+    def tribonacci(self, n: int, a: int = 0, b: int = 0, c: int = 1) -> int:
+        if n == 0:
+            return b
+        return self.tribonacci(n - 1, b, c, a + b + c)
