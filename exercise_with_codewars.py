@@ -44468,3 +44468,6 @@ def to_emojis(emojicode):
 #   - They teach subject 2 in department 1.
 #   - They teach subject 3 in department 1.
 #   - They teach subject 4 in department 1.
+SELECT teacher_id, COUNT(DISTINCT subject_id) AS cnt
+FROM Teacher
+GROUP BY teacher_id
