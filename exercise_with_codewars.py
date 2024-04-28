@@ -44918,7 +44918,7 @@ class Solution:
                     if grid[row][col]:
                         ans += (n - 1) * (max(rows[col] - 1, 0))
         return ans
-
+    
 # 2D Cellular Neighbourhood
 # This kata is the first part of a series: Neighbourhood kata collection. If this one is too easy you can try out the harder katas. ;)
 #
@@ -44956,3 +44956,17 @@ class Solution:
 # If you like chess take a look at Chess Aesthetics
 # If you like puzzles take a look at Rubik's cube
 # ALGORITHMSDATA STRUCTURESARRAYSMATRIX
+def get_neighbourhood(n_type, mat, cor):
+    if not mat: return []
+    if (cor[0] >= len(mat) or cor[0] < 0) or (cor[1] >= len(mat[0]) or cor[1] < 0):
+        return []
+    ht: dict[str, list[list[int]]] = {
+        'moore': [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]],
+        'von_neumann': [[-1, 0], [0, -1], [0, 1], [1, 0]]
+    }
+    ans: list[int] = list()
+    for mov in ht[n_type]:
+        if cor[0] + mov[0] >= len(mat) or cor[0] + mov[0] < 0: continue
+        if cor[1] + mov[1] >= len(mat[0]) or cor[1] + mov[1] < 0: continue
+        ans.append(mat[cor[0] + mov[0]][cor[1] + mov[1]])
+    return ans
