@@ -44732,7 +44732,7 @@ class Solution:
                 start = i[0]
                 ans += 1
         return ans
-        
+
 # 3115. Maximum Prime Difference
 # You are given an integer array nums.
 #
@@ -44787,3 +44787,47 @@ class Solution:
                 else:
                     y = i
         return 0 if y is None else y - x
+        
+# 3121. Count the Number of Special Characters II
+# You are given a string word. A letter c is called special if it appears both in lowercase and uppercase in word, and every lowercase occurrence of c appears before the first uppercase occurrence of c.
+#
+# Return the number of special letters in word.
+#
+#
+#
+# Example 1:
+#
+# Input: word = "aaAbcBC"
+#
+# Output: 3
+#
+# Explanation:
+#
+# The special characters are 'a', 'b', and 'c'.
+#
+# Example 2:
+#
+# Input: word = "abc"
+#
+# Output: 0
+#
+# Explanation:
+#
+# There are no special characters in word.
+#
+# Example 3:
+#
+# Input: word = "AbBCab"
+#
+# Output: 0
+#
+# Explanation:
+#
+# There are no special characters in word.
+#
+#
+#
+# Constraints:
+#
+# 1 <= word.length <= 2 * 105
+# word consists of only lowercase and uppercase English letters.
