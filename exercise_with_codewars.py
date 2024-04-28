@@ -44907,3 +44907,14 @@ class Solution:
 # 1 <= grid.length <= 1000
 # 1 <= grid[i].length <= 1000
 # 0 <= grid[i][j] <= 1
+class Solution:
+    def numberOfRightTriangles(self, grid: List[List[int]]) -> int:
+        ans: int = 0
+        rows: list[list[int]] = [sum(grid[rows][cols] for rows in range(len(grid))) for cols in range(len(grid[0]))]
+        for row in range(len(grid)):
+            n: int = grid[row].count(1)
+            if n > 1:
+                for col in range(len(grid[0])):
+                    if grid[row][col]:
+                        ans += (n - 1) * (max(rows[col] - 1, 0))
+        return ans
