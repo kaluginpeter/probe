@@ -45004,3 +45004,9 @@ def get_neighbourhood(n_type, mat, cor):
 # 1 <= nums.length <= 105
 # 0 <= nums[i] <= 106
 # 0 <= k <= 106
+class Solution:
+    def minOperations(self, nums: List[int], k: int) -> int:
+        y: int = 0
+        for i in range(len(nums)):
+            y ^= nums[i]
+        return bin(y ^ k).count('1')
