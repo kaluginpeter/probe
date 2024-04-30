@@ -45152,3 +45152,17 @@ class Solution:
 # String tops
 # Square string tops
 # FUNDAMENTALSSTRINGS
+def tops(msg):
+    if not msg: return ''
+    ans: list[str] = list()
+    top: int = 2
+    step: int = 5
+    start: int = 2
+    n: int = len(msg)
+    while start < n:
+        ans.append(msg[start:start + top])
+        start += top
+        top += 1
+        start += step
+        step += 3
+    return ''.join(ans[::-1])
