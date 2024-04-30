@@ -45122,3 +45122,8 @@ def get_neighbourhood(n_type, mat, cor, distance=1):
 # 3 <= piles.length <= 105
 # piles.length % 3 == 0
 # 1 <= piles[i] <= 104
+class Solution:
+    def maxCoins(self, piles: List[int]) -> int:
+        piles.sort(reverse=True)
+        n: int = len(piles) // 3
+        return sum(i for i in piles[1:len(piles) - n:2])
