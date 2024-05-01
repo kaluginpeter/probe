@@ -45200,3 +45200,19 @@ def tops(msg):
 # 1 <= word.length <= 250
 # word consists of lowercase English letters.
 # ch is a lowercase English letter.
+# Solution O(N) O(1)
+class Solution:
+    def reversePrefix(self, word: str, ch: str) -> str:
+        for i in range(len(word)):
+            if word[i] == ch:
+                return ''.join(word[i::-1] + word[i + 1:])
+        return word
+# Solution in Pythonic Style O(N) O(N)
+class Solution:
+    def reversePrefix(self, word: str, ch: str) -> str:
+        ans: list[str] = list(word)
+        for i in range(len(ans)):
+            if ans[i] == ch:
+                print(ans[i:-1:-1])
+                return ''.join(ans[i::-1] + ans[i + 1:])
+        return word
