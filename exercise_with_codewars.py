@@ -45242,7 +45242,7 @@ def grille(message, code):
     while len(code) > len(message):
         code = code[1:]
     return ''.join(message[i] for i in range(min(len(code), len(message))) if code[i] == '1')
-    
+
 # Linux history and `!` command. Series#2 The `!n` command
 # All Unix user know the command line history. This one comes with a set of useful commands know as the bang command.
 #
@@ -45302,3 +45302,15 @@ def bang_n(n, history):
 # 1 <= nums.length <= 1000
 # -1000 <= nums[i] <= 1000
 # nums[i] != 0
+# Solution HashSet O(N) O(N)
+class Solution:
+    def findMaxK(self, nums: List[int]) -> int:
+        ans: int = -1
+        hs: set[int] = set()
+        for i in nums:
+            if i < 0 and abs(i) in hs:
+                ans = max(ans, abs(i))
+            elif i > 0 and -i in hs:
+                ans = max(ans, i)
+            hs.add(i)
+        return ans
