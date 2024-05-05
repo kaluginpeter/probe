@@ -45995,3 +45995,12 @@ class Solution:
 # grid.length == 3
 # grid[i].length == 3
 # grid[i][j] is either 'W' or 'B'.
+class Solution:
+    def canMakeSquare(self, grid: List[List[str]]) -> bool:
+        moves: list[list[int, int]] = [[0, 1], [1, 0], [1, 1]]
+        for i in range(2):
+            for j in range(2):
+                x: int = sum(grid[i][j] != grid[i + x][j + y] for x, y in moves)
+                if x <= 1 or x >= 3:
+                    return True
+        return False
