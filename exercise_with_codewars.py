@@ -45810,3 +45810,6 @@ class Solution:
 #
 # 2 <= s.length <= 100
 # s consists only of lowercase English letters.
+class Solution:
+    def scoreOfString(self, s: str) -> int:
+        return sum(abs(ord(i) - ord(j)) for i, j in zip(s, s[1:]))
