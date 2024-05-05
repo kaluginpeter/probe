@@ -45405,7 +45405,7 @@ def rain_volume(towers):
             right_boundary = towers[i]
         ans += right_boundary - towers[i]
     return ans
-    
+
 # 881. Boats to Save People
 # You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
 #
@@ -45503,3 +45503,26 @@ class keyword_cipher(object):
 
     def decode(self, ciphered):
         return ciphered.translate(str.maketrans(self.al, self.abc))
+
+# D&D: Non-Euclidian Movement
+# Context
+# In Dungeons and Dragons, a tabletop roleplaying game, movement is limited in combat. Characters can only move a set amount of distance per turn, meaning the distance you travel is very important.
+#
+# In the 5th edition of the rulebook, the board is commonly organized into a grid, but for ease of counting, movement is non-euclidian. Each square is 5 ft, and moving diagonally counts the same as moving in a cardinal direction.
+#
+# +------------------------+
+# | 10 | 10 | 10 | 10 | 10 |
+# +------------------------+
+# | 10 |  5 |  5 |  5 | 10 |
+# +------------------------+
+# | 10 |  5 | :) |  5 | 10 |
+# +------------------------+
+# | 10 |  5 |  5 |  5 | 10 |
+# +------------------------+
+# | 10 | 10 | 10 | 10 | 10 |
+# +------------------------+
+# Distance of each grid cell from the player, in feet
+# Your task
+# Create an algorithm to calculate the distance of a movement path. You will be provided with the path as a series of absolute grid points (x, y, z). Take in to account both horizontal (x, y) as well as vertical (z) movement. Vertical movement is governed by the same rules, for the sake of simplicity.
+#
+# ALGORITHMSDATA STRUCTURES
