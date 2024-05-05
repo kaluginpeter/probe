@@ -45526,3 +45526,10 @@ class keyword_cipher(object):
 # Create an algorithm to calculate the distance of a movement path. You will be provided with the path as a series of absolute grid points (x, y, z). Take in to account both horizontal (x, y) as well as vertical (z) movement. Vertical movement is governed by the same rules, for the sake of simplicity.
 #
 # ALGORITHMSDATA STRUCTURES
+def calc_distance(path):
+    ans: int = 0
+    start = path[0]
+    for i in path[1:]:
+        ans += max(abs(x - y) for x, y in zip(start, i)) * 5
+        start = i
+    return ans
