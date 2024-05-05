@@ -45813,7 +45813,7 @@ class Solution:
 class Solution:
     def scoreOfString(self, s: str) -> int:
         return sum(abs(ord(i) - ord(j)) for i, j in zip(s, s[1:]))
-        
+
 # 3114. Latest Time You Can Obtain After Replacing Characters
 # You are given a string s representing a 12-hour format time where some of the digits (possibly none) are replaced with a "?".
 #
@@ -45867,3 +45867,47 @@ class Solution:
         if s[4] == '?':
             s[4] = '9'
         return ''.join(s)
+        
+# 3120. Count the Number of Special Characters I
+# You are given a string word. A letter is called special if it appears both in lowercase and uppercase in word.
+#
+# Return the number of special letters in word.
+#
+#
+#
+# Example 1:
+#
+# Input: word = "aaAbcBC"
+#
+# Output: 3
+#
+# Explanation:
+#
+# The special characters in word are 'a', 'b', and 'c'.
+#
+# Example 2:
+#
+# Input: word = "abc"
+#
+# Output: 0
+#
+# Explanation:
+#
+# No character in word appears in uppercase.
+#
+# Example 3:
+#
+# Input: word = "abBCab"
+#
+# Output: 1
+#
+# Explanation:
+#
+# The only special character in word is 'b'.
+#
+#
+#
+# Constraints:
+#
+# 1 <= word.length <= 50
+# word consists of only lowercase and uppercase English letters.
