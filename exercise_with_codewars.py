@@ -46240,3 +46240,8 @@ class Solution:
 # More examples in the test cases. Good luck!
 #
 # PUZZLESMATHEMATICS
+def solve(n,k):
+    stack: list[int] = [i for i in range(n)]
+    for i in range(n):
+        stack = stack[:i] + stack[i:][::-1]
+    return stack.index(k)
