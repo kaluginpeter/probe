@@ -46401,3 +46401,15 @@ WHERE low_fats = 'Y' AND recyclable = 'Y'
 # # should return False
 # same_structure_as([ [ [ ], [ ] ] ], [ [ 1, 1 ] ] )
 # ARRAYSALGORITHMS
+def same_structure_as(original,other):
+    if isinstance(original, list) or isinstance(other, list):
+        if type(original) != type(other):
+                return False
+        if len(original) != len(other):
+            return False
+    for i in range(len(original)):
+        if isinstance(original[i], list) or isinstance(other[i], list):
+            if type(original[i]) != type(other[i]):
+                return False
+            return same_structure_as(original[i], other[i])
+    return True
