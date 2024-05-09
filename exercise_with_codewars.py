@@ -46333,7 +46333,7 @@ def euclide_gcd(a, b):
 def fraction(a, b):
     x: int = euclide_gcd(a, b)
     return a // x + b // x
-    
+
 # 1757. Recyclable and Low Fat Products
 # Table: Products
 #
@@ -46381,3 +46381,23 @@ def fraction(a, b):
 SELECT product_id
 FROM Products
 WHERE low_fats = 'Y' AND recyclable = 'Y'
+
+# Nesting Structure Comparison
+# Complete the function/method (depending on the language) to return true/True when its argument is an array that has the same nesting structures and same corresponding length of nested arrays as the first array.
+#
+# For example:
+#
+# # should return True
+# same_structure_as([ 1, 1, 1 ], [ 2, 2, 2 ] )
+# same_structure_as([ 1, [ 1, 1 ] ], [ 2, [ 2, 2 ] ] )
+#
+# # should return False
+# same_structure_as([ 1, [ 1, 1 ] ], [ [ 2, 2 ], 2 ] )
+# same_structure_as([ 1, [ 1, 1 ] ], [ [ 2 ], 2 ] )
+#
+# # should return True
+# same_structure_as([ [ [ ], [ ] ] ], [ [ [ ], [ ] ] ] )
+#
+# # should return False
+# same_structure_as([ [ [ ], [ ] ] ], [ [ 1, 1 ] ] )
+# ARRAYSALGORITHMS
