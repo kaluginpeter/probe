@@ -46774,7 +46774,7 @@ def fib(n):
     if n%2 == 0 and n < 0:
         return -matrix[0,1]
     return matrix[0, 1]
-    
+
 # 3146. Permutation Difference between Two Strings
 # You are given two strings s and t such that every character occurs at most once in s and t is a permutation of s.
 #
@@ -46828,3 +46828,55 @@ class Solution:
             else:
                 ht[t[i]] = i
         return sum(ht.values())
+
+# 3142. Check if Grid Satisfies Conditions
+# You are given a 2D matrix grid of size m x n. You need to check if each cell grid[i][j] is:
+#
+# Equal to the cell below it, i.e. grid[i][j] == grid[i + 1][j] (if it exists).
+# Different from the cell to its right, i.e. grid[i][j] != grid[i][j + 1] (if it exists).
+# Return true if all the cells satisfy these conditions, otherwise, return false.
+#
+#
+#
+# Example 1:
+#
+# Input: grid = [[1,0,2],[1,0,2]]
+#
+# Output: true
+#
+# Explanation:
+#
+#
+#
+# All the cells in the grid satisfy the conditions.
+#
+# Example 2:
+#
+# Input: grid = [[1,1,1],[0,0,0]]
+#
+# Output: false
+#
+# Explanation:
+#
+#
+#
+# All cells in the first row are equal.
+#
+# Example 3:
+#
+# Input: grid = [[1],[2],[3]]
+#
+# Output: false
+#
+# Explanation:
+#
+#
+#
+# Cells in the first column have different values.
+#
+#
+#
+# Constraints:
+#
+# 1 <= n, m <= 10
+# 0 <= grid[i][j] <= 9
