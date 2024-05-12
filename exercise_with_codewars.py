@@ -46880,3 +46880,15 @@ class Solution:
 #
 # 1 <= n, m <= 10
 # 0 <= grid[i][j] <= 9
+class Solution:
+    def satisfiesConditions(self, grid: List[List[int]]) -> bool:
+        n, m = len(grid), len(grid[0])
+        for row in range(n):
+            for col in range(m):
+                if col + 1 < m:
+                    if grid[row][col] == grid[row][col + 1]:
+                        return False
+                if row + 1 < n:
+                    if grid[row][col] != grid[row + 1][col]:
+                        return False
+        return True
