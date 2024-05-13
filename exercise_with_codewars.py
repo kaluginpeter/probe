@@ -46935,8 +46935,13 @@ class Solution:
                 for row in range(n):
                     grid[row][col] ^= 1
         return sum(int(''.join(str(i) for i in grid[row]), 2) for row in range(n))
-
+    
 # Make Me Slow
 # Make me slow! Calling makeMeSlow() should take at least 7 seconds.
 #
 # FUNDAMENTALS
+import time
+def make_me_slow():
+    time.sleep(7)
+    for i in range(1000000):
+        pass
