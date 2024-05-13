@@ -46922,3 +46922,16 @@ class Solution:
 # n == grid[i].length
 # 1 <= m, n <= 20
 # grid[i][j] is either 0 or 1.
+class Solution:
+    def matrixScore(self, grid: List[List[int]]) -> int:
+        n, m = len(grid), len(grid[0])
+        for row in range(n):
+            if grid[row][0] == 0:
+                for col in range(m):
+                    grid[row][col] ^= 1
+        for col in range(m):
+            count: int = sum(grid[row][col] for row in range(n))
+            if count < n - count:
+                for row in range(n):
+                    grid[row][col] ^= 1
+        return sum(int(''.join(str(i) for i in grid[row]), 2) for row in range(n))
