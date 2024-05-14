@@ -47038,7 +47038,7 @@ def dbl_linear(n):
             u_set.add(z)
             heapq.heappush(u_heap, z)
     return heapq.heappop(u_heap)
-    
+
 # 495. Teemo Attacking
 # Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack.
 #
@@ -47078,3 +47078,27 @@ class Solution:
             time_window: int = (timeSeries[i] - timeSeries[i - 1])
             output += duration if time_window >= duration else time_window
         return output + duration
+        
+# 628. Maximum Product of Three Numbers
+# Given an integer array nums, find three numbers whose product is maximum and return the maximum product.
+#
+#
+#
+# Example 1:
+#
+# Input: nums = [1,2,3]
+# Output: 6
+# Example 2:
+#
+# Input: nums = [1,2,3,4]
+# Output: 24
+# Example 3:
+#
+# Input: nums = [-1,-2,-3]
+# Output: -6
+#
+#
+# Constraints:
+#
+# 3 <= nums.length <= 104
+# -1000 <= nums[i] <= 1000
