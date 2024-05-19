@@ -47847,7 +47847,7 @@ class Solution:
             x, y = queries[i]
             queries[i] = output[y] - output[x] == y - x
         return queries
-        
+
 # 2236. Root Equals Sum of Children
 # You are given the root of a binary tree that consists of exactly 3 nodes: the root, its left child, and its right child.
 #
@@ -47884,3 +47884,32 @@ class Solution:
 class Solution:
     def checkTree(self, root: Optional[TreeNode]) -> bool:
         return root.val == root.left.val + root.right.val
+
+# Binary Tree Compare
+# Given the node object:
+#
+# Node:
+#   val: <int>,
+#   left: <Node> or null,
+#   right: <Node> or null
+# write a function compare(a, b) which compares the two trees defined by Nodes a and b and returns true if they are equal in structure and in value and false otherwise.
+#
+# Examples:
+#
+# 1       1
+# | \     | \
+# 2  3    2  3
+# => true
+#
+# 1       1
+# | \     | \
+# 3  3    2  3
+# => false (values not the same 2 != 3)
+#
+# 1       1
+# | \     |
+# 2  3    2
+#         |
+#         3
+# => false (structure not the same)
+# BINARY TREESALGORITHMS
