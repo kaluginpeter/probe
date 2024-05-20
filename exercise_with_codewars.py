@@ -47988,3 +47988,10 @@ class Solution:
 #
 # Good luck!
 # RECURSIONALGORITHMS
+def hofstadter_q(n):
+    if n < 3:
+        return 1
+    q_values = [1, 1] + [0] * (n - 2)
+    for i in range(2, n):
+        q_values[i] = q_values[i - q_values[i - 1]] + q_values[i - q_values[i - 2]]
+    return q_values[n - 1]
