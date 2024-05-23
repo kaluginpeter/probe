@@ -48377,7 +48377,7 @@ def find_max(root):
 class Solution:
     def numOfStrings(self, patterns: List[str], word: str) -> int:
         return sum(item in word for item in patterns)
-        
+
 # A. Theatre Square
 # A. Theatre Square
 # time limit per test1 second
@@ -48404,3 +48404,10 @@ n, m, a = map(int, sys.stdin.readline().rstrip().split())
 m_box: int = (n + a - 1) // a
 n_box: int = (m + a - 1) // a
 sys.stdout.write(str(n_box * m_box))
+
+# Binary Tree Search (not BST)
+# Given a number and a binary tree ( not a Binary Search Tree! ):
+#
+# return True/true if the given number is in the tree
+# return False/false if it isn't
+# BINARY TREESFUNDAMENTALS
