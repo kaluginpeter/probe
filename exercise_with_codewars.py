@@ -48328,7 +48328,7 @@ def find_max(root):
     if root.right:
         ans = max(ans, find_max(root.right))
     return ans
-    
+
 # 1967. Number of Strings That Appear as Substrings in Word
 # Given an array of strings patterns and a string word, return the number of strings in patterns that exist as a substring in word.
 #
@@ -48399,3 +48399,8 @@ class Solution:
 # 6 6 4
 # outputCopy
 # 4
+import sys
+n, m, a = map(int, sys.stdin.readline().rstrip().split())
+m_box: int = (n + a - 1) // a
+n_box: int = (m + a - 1) // a
+sys.stdout.write(str(n_box * m_box))
