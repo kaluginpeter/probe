@@ -48942,3 +48942,14 @@ def mutations(alice, bob, word, first):
 # 1 <= nums.length <= 50
 # 1 <= nums[i] <= 50
 # Each number in nums appears either once or twice.
+class Solution:
+    def duplicateNumbersXOR(self, nums: List[int]) -> int:
+        duplicate: list[int] = list()
+        seen: set[int] = set()
+        for i in nums:
+            if i in seen: duplicate.append(i)
+            seen.add(i)
+        ans: int = 0
+        for i in duplicate:
+            ans ^= i
+        return ans
