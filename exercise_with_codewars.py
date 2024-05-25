@@ -48991,3 +48991,14 @@ class Solution:
 # 1 <= nums.length, queries.length <= 105
 # 1 <= queries[i] <= 105
 # 1 <= nums[i], x <= 104
+class Solution:
+    def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:
+        occurences: list[int] = [idx for idx in range(len(nums)) if nums[idx] == x]
+        output: list[int] = list()
+        n: int = len(occurences)
+        for i in queries:
+            if n <= i - 1:
+                output.append(-1)
+            else:
+                output.append(occurences[i - 1])
+        return output
