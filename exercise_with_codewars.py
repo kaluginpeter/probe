@@ -49282,3 +49282,10 @@ vertical = 0
 if m % 2 != 0:
     vertical += n // 2
 sys.stdout.write(str(high * width + vertical))
+
+# Bug Fix - Quick Sort
+# There is an implementation of quicksort algorithm. Your task is to fix it. All inputs are correct.
+#
+# See also: https://en.wikipedia.org/wiki/Quicksort
+#
+# SORTINGALGORITHMSFUNDAMENTALSDEBUGGING
