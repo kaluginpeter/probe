@@ -49289,3 +49289,9 @@ sys.stdout.write(str(high * width + vertical))
 # See also: https://en.wikipedia.org/wiki/Quicksort
 #
 # SORTINGALGORITHMSFUNDAMENTALSDEBUGGING
+def quicksort(arr):
+    if len(arr) < 1: return arr
+    p = arr[0]
+    less = [i for i in arr[1:] if i < p]
+    greater = [i for i in arr[1:] if i >= p]
+    return quicksort(less) + [p] + quicksort(greater)
