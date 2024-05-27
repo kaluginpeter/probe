@@ -49400,3 +49400,11 @@ class Solution:
 # 0 0 0 0 0
 # outputCopy
 # 1
+import sys
+lst: list = []
+for _ in range(5):
+    lst.append(list(map(int, sys.stdin.readline().rstrip().split())))
+for r in range(5):
+    for c in range(5):
+        if lst[r][c] == 1:
+            sys.stdout.write(str(abs(2 - r) + abs(2 - c)))
