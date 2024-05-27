@@ -49452,7 +49452,7 @@ def allocate_rooms(customers):
         room_assignment[original_index] = assigned_room
     result = [room_assignment[i] for i in range(len(customers))]
     return result
-    
+
 # Minimum number of taxis
 # You work at a taxi central.
 # People contact you to order a taxi. They inform you of the time they want to be picked up and dropped off.
@@ -49481,3 +49481,18 @@ def allocate_rooms(customers):
 # requests = [(1, 4), (5, 9)]
 # min_num_taxis(requests) # => 1
 # DATA STRUCTURESALGORITHMSPRIORITY QUEUESSCHEDULING
+import heapq
+
+def min_num_taxis(requests):
+    requests = sorted(enumerate(requests), key=lambda x: (x[1][0], x[1][1]))
+    heap = []
+    room_count = 0
+    for original_index, (arrival, departure) in requests:
+        if heap and heap[0][0] < arrival:
+            earliest_departure, assigned_room = heapq.heappop(heap)
+            heapq.heappush(heap, (departure, assigned_room))
+        else:
+            room_count += 1
+            assigned_room = room_count
+            heapq.heappush(heap, (departure, assigned_room))
+    return room_count
