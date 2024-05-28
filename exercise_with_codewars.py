@@ -49511,3 +49511,8 @@ def min_num_taxis(requests):
 # fisHex("redlionfish") -> e,d,f -> XOR -> 12
 #
 # STRINGSFUNDAMENTALS
+def fish_hex(name):
+    output: int = 0
+    for i in name:
+        if i.lower() in 'abcdef': output ^= int(i.upper(), 16)
+    return output
