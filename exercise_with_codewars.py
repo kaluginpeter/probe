@@ -49872,3 +49872,7 @@ def find_the_missing_tree(trees):
 # konjac
 # outputCopy
 # Konjac
+import sys
+sentence = sys.stdin.readline().rstrip()
+answer = sentence[0].upper() + sentence[1:]
+sys.stdout.write(answer)
