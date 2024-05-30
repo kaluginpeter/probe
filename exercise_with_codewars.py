@@ -49797,3 +49797,13 @@ def test_it(arr):
 #
 # 1 <= arr.length <= 300
 # 1 <= arr[i] <= 108
+class Solution:
+    def countTriplets(self, arr: List[int]) -> int:
+        output: int = 0
+        n: int = len(arr)
+        for start in range(n):
+            outer_xor: int = arr[start]
+            for end in range(start + 1, n):
+                outer_xor ^= arr[end]
+                if outer_xor == 0: output += end - start
+        return output
