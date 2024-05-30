@@ -49807,7 +49807,7 @@ class Solution:
                 outer_xor ^= arr[end]
                 if outer_xor == 0: output += end - start
         return output
-        
+    
 # Simple Fun #147: Find The Missing Tree
 # Task
 # After a long night (work, play, study) you find yourself sleeping on a bench in a park. As you wake up and try to figure out what happened you start counting trees.
@@ -49846,3 +49846,29 @@ def find_the_missing_tree(trees):
     for k in hashtable:
         if hashtable[k] == v:
             return k
+            
+# A. Word Capitalization
+# A. Word Capitalization
+# time limit per test2 seconds
+# memory limit per test256 megabytes
+# inputstandard input
+# outputstandard output
+# Capitalization is writing a word with its first letter as a capital letter. Your task is to capitalize the given word.
+#
+# Note, that during capitalization all the letters except the first one remains unchanged.
+#
+# Input
+# A single line contains a non-empty word. This word consists of lowercase and uppercase English letters. The length of the word will not exceed 103.
+#
+# Output
+# Output the given word after capitalization.
+#
+# Examples
+# inputCopy
+# ApPLe
+# outputCopy
+# ApPLe
+# inputCopy
+# konjac
+# outputCopy
+# Konjac
