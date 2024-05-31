@@ -49993,3 +49993,9 @@ for _ in range(t):
 # 59.2 sec  -->  60 sec  -->  return "1 minutes 0 seconds"
 # All comments/feedback/translations appreciated.
 # FUNDAMENTALS
+def cooking_time(needed_power, minutes, seconds, power):
+    x, x_sec = int(needed_power[:-1]), minutes * 60 + seconds
+    y = int(power[:-1])
+    y_sec = x * x_sec / y
+    y_sec = int(y_sec) + 1 if int(y_sec) < y_sec else int(y_sec)
+    return f'{y_sec // 60} minutes {y_sec % 60} seconds'
