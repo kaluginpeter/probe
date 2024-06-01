@@ -50075,7 +50075,7 @@ class Solution:
             if item & (1 << bit_position):
                 first ^= item
         return [first, first ^ diff]
-        
+    
 # A. String Task
 # A. String Task
 # time limit per test2 seconds
@@ -50110,3 +50110,11 @@ class Solution:
 # aBAcAba
 # outputCopy
 # .b.c.b
+import sys
+sentence: list = list(sys.stdin.readline().rstrip())
+for i in range(len(sentence) - 1, -1, -1):
+    if sentence[i].lower() in 'aeoiuy':
+        sentence.pop(i)
+    else:
+        sentence[i] = sentence[i].lower()
+print(''.join('.' + i for i in sentence))
