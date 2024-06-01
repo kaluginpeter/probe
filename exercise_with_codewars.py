@@ -50238,3 +50238,15 @@ class Solution:
 # # next random number (seed = 1)
 # LCG.random() = 0.5
 # ALGORITHMS
+class LCG(object):
+    a = 2
+    c = 3
+    m = 10
+
+    def __init__(self, seed):
+        self.seed = seed
+
+    def random(self):
+        x: int = (self.a * self.seed + self.c) % self.m
+        self.seed = x
+        return x / 10
