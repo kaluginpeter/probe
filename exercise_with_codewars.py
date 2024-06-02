@@ -50472,3 +50472,14 @@ sys.stdout.write(str(answer))
 # 1 <= s.length <= 50
 # s consists only of the letters 'E' and 'L'.
 # s represents a valid sequence of entries and exits.
+class Solution:
+    def minimumChairs(self, s: str) -> int:
+        total: int = float('-inf')
+        current: int = 0
+        for i in s:
+            if i == 'E':
+                current += 1
+            else:
+                current -= 1
+            total = max(total, current)
+        return total
