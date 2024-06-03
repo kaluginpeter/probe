@@ -50627,3 +50627,14 @@ class Solution:
 # BRBG
 # outputCopy
 # 0
+import sys
+n: int = int(sys.stdin.readline().rstrip())
+stones: str = sys.stdin.readline().rstrip()
+current_index: int = 0
+swaped: int = 0
+for idx in range(1, n):
+    if stones[current_index] == stones[idx]:
+        swaped += 1
+    else:
+        current_index = idx
+sys.stdout.write(str(swaped))
