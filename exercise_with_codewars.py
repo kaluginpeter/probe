@@ -50821,3 +50821,12 @@ class Solution:
 # In the first sample the elephant needs to make one step of length 5 to reach the point x.
 #
 # In the second sample the elephant can get to point x if he moves by 3, 5 and 4. There are other ways to get the optimal answer but the elephant cannot reach x in less than three moves.
+import sys
+n: int = int(sys.stdin.readline().rstrip())
+answer: int = 0
+divider: int = 5
+while n > 0:
+    answer += n // divider
+    n %= divider
+    divider -= 1
+sys.stdout.write(str(answer))
