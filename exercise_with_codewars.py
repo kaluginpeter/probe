@@ -50971,3 +50971,14 @@ sys.stdout.write(str(max(0, total - n)))
 #
 # [output] an integer
 # PUZZLES
+def robot_transfer(matrix, k):
+    correct_cells: int = 0
+    for row in range(len(matrix)):
+        for col in range(len(matrix[0])):
+            moving_point = row, col
+            for _ in range(k):
+                moving_point = tuple(map(int, matrix[moving_point[0]][moving_point[1]].split(',')))
+                if moving_point == (row, col):
+                    if _ + 1 == k: correct_cells += 1
+                    break
+    return correct_cells
