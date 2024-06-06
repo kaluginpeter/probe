@@ -50982,7 +50982,7 @@ def robot_transfer(matrix, k):
                     if _ + 1 == k: correct_cells += 1
                     break
     return correct_cells
-    
+
 # A. Word
 # A. Word
 # time limit per test2 seconds
@@ -51046,7 +51046,7 @@ sys.stdout.write(n.lower() if low_case >= upp_case else n.upper())
 #
 #
 # Note: This question is the same as 1296: https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
-from collections import defaultdict
+ from collections import defaultdict
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
         if len(hand) % groupSize != 0: return False
@@ -51059,7 +51059,7 @@ class Solution:
                     if ht[number] < needed: return False
                     ht[number] -= needed
         return True
-        
+
 # 1296. Divide Array in Sets of K Consecutive Numbers
 # Given an array of integers nums and a positive integer k, check whether it is possible to divide this array into sets of k consecutive numbers.
 #
@@ -51105,3 +51105,14 @@ class Solution:
                     elif ht[number] < needed_amount: return False
                     ht[number] -= needed_amount
         return True
+        
+# Even or Odd Accessor
+# Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers. The function should also return "Even" or "Odd" when accessing a value at an integer index.
+#
+# For example:
+#
+# evenOrOdd(2); //'Even'
+# evenOrOdd[2]; //'Even'
+# evenOrOdd(7); //'Odd'
+# evenOrOdd[7]; //'Odd'
+# MATHEMATICSFUNDAMENTALS
