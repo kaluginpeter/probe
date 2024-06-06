@@ -51046,3 +51046,16 @@ sys.stdout.write(n.lower() if low_case >= upp_case else n.upper())
 #
 #
 # Note: This question is the same as 1296: https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
+from collections import defaultdict
+class Solution:
+    def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
+        if len(hand) % groupSize != 0: return False
+        ht: dict[int, int] = defaultdict(int)
+        for i in hand: ht[i] += 1
+        for i in sorted(ht.keys()):
+            if ht[i] > 0:
+                needed: int = ht[i]
+                for number in range(i, i + groupSize):
+                    if ht[number] < needed: return False
+                    ht[number] -= needed
+        return True
