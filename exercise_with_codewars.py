@@ -51471,3 +51471,12 @@ def which_postcode(postcode):
 # 1 <= s.length <= 100
 # s consists only of lowercase English letters and digits.
 # The input is generated such that it is possible to delete all digits.
+class Solution:
+    def clearDigits(self, s: str) -> str:
+        stack: list[str] = []
+        for i in s:
+            if i.isdigit():
+                stack.pop()
+            else:
+                stack += i
+        return ''.join(stack)
