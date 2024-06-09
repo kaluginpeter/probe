@@ -51585,7 +51585,7 @@ class Solution:
                 queue.append(first)
                 queue_score.append(first_score)
         return queue.popleft()
-        
+
 # 974. Subarray Sums Divisible by K
 # Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.
 # 
@@ -51610,3 +51610,17 @@ class Solution:
 # 1 <= nums.length <= 3 * 104
 # -104 <= nums[i] <= 104
 # 2 <= k <= 104
+from collections import defaultdict
+class Solution:
+    def subarraysDivByK(self, nums: List[int], k: int) -> int:
+        prefix_sum: int = 0
+        ht: dict[int] = defaultdict(int)
+        ht[0] = 1
+        count: int = 0
+        for number in nums:
+            prefix_sum += number
+            remainder = prefix_sum % k
+            if remainder in ht:
+                count += ht[remainder]
+            ht[remainder] += 1
+        return count
