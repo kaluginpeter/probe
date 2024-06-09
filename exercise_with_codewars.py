@@ -51789,7 +51789,7 @@ class Solution:
         for _ in range(k):
             self.fill_array(prefix_sum)
         return prefix_sum[-1] % (10**9+7)
-        
+
 # [Code Golf] Gobang Weight Table
 # Gobang Weight Table
 # You will generate a weight table of gobang game in less than 100 characters. The outermost layer of the table is 0, and the number is incremented by one for each layer inside.
@@ -51824,3 +51824,4 @@ class Solution:
 # 3 <= N <= 99, N will ONLY be odd number.
 # Your code cannot be longer than 100 characters.
 # RESTRICTEDPUZZLES
+def weight_table(n):return[[min(i,n-1-i,j,n-1-j)for j in range(n)]for i in range(n)]
