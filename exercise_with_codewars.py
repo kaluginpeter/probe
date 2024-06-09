@@ -51780,3 +51780,12 @@ class Solution:
 # Constraints:
 #
 # 1 <= n, k <= 1000
+class Solution:
+    def fill_array(self, arr: list[int]) -> None:
+        for i in range(len(arr)):
+            arr[i] = arr[i] + (arr[i - 1] if i - 1 >= 0 else 0)
+    def valueAfterKSeconds(self, n: int, k: int) -> int:
+        prefix_sum: list[int] = [1 for _ in range(n)]
+        for _ in range(k):
+            self.fill_array(prefix_sum)
+        return prefix_sum[-1] % (10**9+7)
