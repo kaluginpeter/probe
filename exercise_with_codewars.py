@@ -51648,3 +51648,20 @@ class Solution:
 # 1000000001
 # outputCopy
 # YES
+# O(N) O(1)
+import sys
+n: str = sys.stdin.readline().rstrip()
+row: int = 1
+row_val: str = n[0]
+dangerous: bool = False
+for i in n[1:]:
+    if i == row_val:
+        row += 1
+        if row == 7: dangerous = True
+    else:
+        row, row_val = 1, i
+sys.stdout.write(['NO', 'YES'][dangerous])
+# Builtin functions O(N) O(1)
+import sys
+n: str = sys.stdin.readline().rstrip()
+sys.stdout.write(['NO', 'YES']['1111111' in n or '0000000' in n])
