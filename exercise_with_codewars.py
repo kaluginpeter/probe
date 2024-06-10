@@ -51875,7 +51875,7 @@ class Solution:
             if total_students[student] > 0:
                 correct_height += [student] * total_students[student]
         return sum(correct_height[idx] != heights[idx] for idx in range(len(heights)))
-        
+
 # A. Nearly Lucky NumberA. Nearly Lucky Number
 # time limit per test2 seconds
 # memory limit per test256 megabytes
@@ -51919,3 +51919,40 @@ for i in n:
     if i in {'4', '7'}:
         count += 1
 sys.stdout.write(['NO', 'YES'][count in {4, 7}])
+
+# Basic Bounding Box
+# You are given an image represented as a binary array. Your task is to predict the bounding box that encloses all the 1s within the image. The bounding box should be a hollow rectangle, where only the edges of the bounding box are 1s, and the interior is filled with 0s returned in an array of the same size as the original input.
+#
+# You can make the following assumptions:
+#
+# An image will only ever be comprised of 0s or 1s.
+# An image will always have a consistent m x n shape.
+# Important things to remember:
+#
+# If an empty image is passed, then an empty array should also be returned.
+# If there are no 1s present then no bounding box should be drawn.
+# Example
+# Input:
+# [[0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,1,1,0,0,0,0],
+#  [0,0,0,1,1,1,1,0,0,0],
+#  [0,0,1,1,1,1,1,1,0,0],
+#  [0,1,1,1,1,1,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0]]
+# Output:
+#
+# [[0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,0,0,0,0,0,0,0,0,0],
+#  [0,1,1,1,1,1,1,1,0,0],
+#  [0,1,0,0,0,0,0,1,0,0],
+#  [0,1,0,0,0,0,0,1,0,0],
+#  [0,1,1,1,1,1,1,1,0,0],
+#  [0,0,0,0,0,0,0,0,0,0]]
+# ARRAYS
