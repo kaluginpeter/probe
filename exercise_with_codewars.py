@@ -52055,3 +52055,20 @@ else:
 # 0 <= arr1[i], arr2[i] <= 1000
 # All the elements of arr2 are distinct.
 # Each arr2[i] is in arr1.
+class Solution:
+    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+        bucket: list[int] = [0 for _ in range(max(arr1) + 1)]
+        for number in arr1:
+            bucket[number] += 1
+        idx: int = 0
+        for number in arr2:
+            for _ in range(bucket[number]):
+                arr1[idx] = number
+                idx += 1
+            bucket[number] = 0
+        for number in range(len(bucket)):
+            if bucket[number] > 0:
+                for _ in range(bucket[number]):
+                    arr1[idx] = number
+                    idx += 1
+        return arr1
