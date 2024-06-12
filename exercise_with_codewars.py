@@ -52309,3 +52309,19 @@ class Solution:
 # code
 # outputCopy
 # NO
+import sys
+
+def solution(t, s):
+    len_t, len_s = len(t), len(s)
+    if len_t != len_s:
+        return 'NO'
+    for idx in range(len_t):
+        if t[idx] != s[-idx - 1]:
+            return 'NO'
+    return 'YES'
+
+if __name__ == '__main__':
+    t = sys.stdin.readline().rstrip()
+    s = sys.stdin.readline().rstrip()
+    answer = solution(t, s)
+    sys.stdout.write(answer)
