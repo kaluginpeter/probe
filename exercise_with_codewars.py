@@ -52261,3 +52261,20 @@ class Solution:
 #
 #
 # Follow up: Could you come up with a one-pass algorithm using only constant extra space?
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        n: int = len(nums)
+        zeros, twos = 0, n - 1
+        current_idx: int = 0
+        while current_idx <= twos:
+            while current_idx <= twos and nums[current_idx] == 0:
+                if current_idx <= zeros:
+                    current_idx += 1
+                else:
+                    nums[zeros], nums[current_idx] = nums[current_idx], nums[zeros]
+                    zeros += 1
+            while current_idx <= twos and nums[current_idx] == 2:
+                nums[twos], nums[current_idx] = nums[current_idx], nums[twos]
+                twos -= 1
+            if current_idx < n and nums[current_idx] == 1:
+                current_idx += 1
