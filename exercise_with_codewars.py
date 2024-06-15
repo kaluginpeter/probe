@@ -52737,3 +52737,25 @@ class Solution:
 # 2013
 # outputCopy
 # 2014
+import sys
+
+def check(year: int) -> bool:
+    identity: set = set()
+    _year = year
+    while _year:
+        digit = _year % 10
+        if digit in identity:
+            return False
+        identity.add(digit)
+        _year //= 10
+    return True
+
+def solution(current_year: int) -> str:
+    year = current_year + 1
+    while True:
+        if check(year):
+            return str(year)
+        year += 1
+if __name__ == '__main__':
+    current_year: int = int(sys.stdin.readline().rstrip())
+    sys.stdout.write(solution(current_year))
