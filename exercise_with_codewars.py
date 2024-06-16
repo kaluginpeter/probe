@@ -53234,3 +53234,14 @@ def spot_diff(s1, s2):
 #  from the first pile, and the book with the highest number 4
 #  from the second pile. Then she will read a3+a4=3+1=4
 #  pages.
+import sys
+
+def solution(t) -> None:
+    for _ in range(t):
+        n = int(sys.stdin.readline().rstrip())
+        books = list(map(int, sys.stdin.readline().rstrip().split()))
+        print(max(books[:-1]) + books[-1])
+
+if __name__ == '__main__':
+    t = int(sys.stdin.readline().rstrip())
+    solution(t)
