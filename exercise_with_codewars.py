@@ -53072,3 +53072,12 @@ class Solution:
 #
 # 1 <= hours.length <= 5 * 105
 # 1 <= hours[i] <= 109
+class Solution:
+    def countCompleteDayPairs(self, hours: List[int]) -> int:
+        hours_of_the_day: list[int] = [0] * 24
+        total: int = 0
+        for hour in hours:
+            total += hours_of_the_day[hour % 24]
+            remainder = (24 - hour % 24) % 24
+            hours_of_the_day[remainder] += 1
+        return total
