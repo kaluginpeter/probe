@@ -53402,3 +53402,15 @@ if __name__ == '__main__':
 # Constraints:
 # 
 # 0 <= c <= 231 - 1
+class Solution:
+    def judgeSquareSum(self, c: int) -> bool:
+        left, right = 0, int(c**.5) + 1
+        while left <= right:
+            sm: int = left**2 + right**2
+            if sm == c:
+                return True
+            elif sm > c:
+                right -= 1
+            else:
+                left += 1
+        return False
