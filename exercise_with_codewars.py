@@ -53366,3 +53366,19 @@ if __name__ == '__main__':
 # hlelo
 # outputCopy
 # NO
+import sys
+
+
+def solution(n: str) -> str:
+    letters = ['h', 'e', 'l', 'l', 'o']
+    for char in n:
+        if char == letters[0]:
+            letters.pop(0)
+            if not letters:
+                return 'YES'
+    return 'NO' if letters else 'YES'
+
+
+if __name__ == '__main__':
+    n = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(n))
