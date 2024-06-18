@@ -53552,3 +53552,11 @@ class Solution:
 # In the first example the third person says it's a hard problem, so it should be replaced.
 # 
 # In the second example the problem easy for the only person, so it doesn't have to be replaced.
+import sys
+
+def solution(n: str) -> bool:
+    return ['EASY', 'HARD']['1' in n]
+
+if __name__ == '__main__':
+    _ = sys.stdin.readline()
+    sys.stdout.write(solution(sys.stdin.readline().rstrip()))
