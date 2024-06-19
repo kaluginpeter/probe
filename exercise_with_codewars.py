@@ -53706,3 +53706,6 @@ class Solution:
 # For more information: https://en.wikipedia.org/wiki/Parity_bit
 #
 # FUNDAMENTALS
+def check_parity(parity, bin_str): 
+    ht = {'even': 0, 'odd': 1}
+    return int(not bin_str.count('1') % 2 == ht.get(parity))
