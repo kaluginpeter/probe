@@ -53793,3 +53793,17 @@ if __name__ == '__main__':
 # 10 10
 # outputCopy
 # 2
+import sys
+
+
+def solution(n: int) -> int:
+    total: int = 0
+    for _ in range(n):
+        x, y = map(int, sys.stdin.readline().rstrip().split())
+        total += y - x >= 2
+    return total
+
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    sys.stdout.write(str(solution(n)))
