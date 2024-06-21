@@ -53958,3 +53958,21 @@ class Solution:
 # The first testcase corresponds to the figure. The testcase has three groups consisting of three, one and two magnets.
 #
 # The second testcase has two groups, each consisting of two magnets.
+import sys
+
+def solution(n: int) -> str:
+    total_groups: int = 1
+    prev: str = None
+    for _ in range(n):
+        current: str = sys.stdin.readline().rstrip()
+        if prev is None:
+            prev = current
+        elif prev[-1] == current[0]:
+            total_groups += 1
+            prev = current
+    return str(total_groups)
+
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    sys.stdout.write(solution(n))
