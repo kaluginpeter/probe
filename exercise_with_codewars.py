@@ -54253,3 +54253,6 @@ class Solution:
 #
 # 1 <= nums.length <= 50
 # 1 <= nums[i] <= 50
+class Solution:
+    def minimumOperations(self, nums: List[int]) -> int:
+        return sum(i % 3 != 0 for i in nums)
