@@ -54508,3 +54508,12 @@ class Solution:
 # 2 <= n == nums.length <= 50
 # n is even.
 # 1 <= nums[i] <= 50
+class Solution:
+    def minimumAverage(self, nums: List[int]) -> float:
+        nums.sort()
+        left, right = 0, len(nums) - 1
+        min_average: float = float('inf')
+        while left < right:
+            min_average = min(min_average, (nums[left] + nums[right]) / 2)
+            left, right = left + 1, right - 1
+        return min_average
