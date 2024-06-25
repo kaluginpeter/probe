@@ -54889,3 +54889,14 @@ def determine_winner(board):
 #
 #
 # Note: This question is the same as 538: https://leetcode.com/problems/convert-bst-to-greater-tree/
+class Solution:
+    def bstToGst(self, root: TreeNode) -> TreeNode:
+        self.accumulate: int = 0   
+        def dfs(node):
+            if not node:return  
+            dfs(node.right)
+            self.accumulate += node.val
+            node.val = self.accumulate
+            dfs(node.left)
+        dfs(root)
+        return root
