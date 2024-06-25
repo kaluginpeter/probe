@@ -54851,3 +54851,11 @@ if __name__ == '__main__':
 # Be aware that the board can vary in size but is at least of size 3x3!
 # 
 # LISTSFUNDAMENTALS
+def determine_winner(board):
+    black: int = 0
+    white: int = 0
+    for row in range(len(board)):
+        for col in range(len(board[0])):
+            black += board[row][col] == 'B'
+            white += board[row][col] == 'W'
+    return ('T', white) if white == black else (['B', 'W'][white > black], max(white, black))
