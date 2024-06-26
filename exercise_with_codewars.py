@@ -55143,3 +55143,25 @@ if __name__ == '__main__':
 #
 # The number of nodes in the tree is in the range [1, 104].
 # 1 <= Node.val <= 105
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def balanceBST(self, root: TreeNode) -> TreeNode:
+        self.array: list[int] = []
+        def inorder_traversal(root) -> None:
+            if not root: return
+            inorder_traversal(root.left)
+            self.array.append(root.val)
+            inorder_traversal(root.right)
+        def constructed_bst(left, right):
+            if left > right: return
+            middle: int = (left + right) >> 1
+            left = constructed_bst(left, middle - 1)
+            right = constructed_bst(middle + 1, right)
+            return TreeNode(self.array[middle], left, right)
+        inorder_traversal(root)
+        return constructed_bst(0, len(self.array) - 1)
