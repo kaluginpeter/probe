@@ -55240,3 +55240,12 @@ def reverse_on_diagonals(matrix):
 # 37.500000000000
 # Note
 # Note to the first sample: let's assume that Vasya takes x milliliters of each drink from the fridge. Then the volume of pure juice in the cocktail will equal  milliliters. The total cocktail's volume equals 3·x milliliters, so the volume fraction of the juice in the cocktail equals , that is, 66.(6) percent.
+import sys
+
+def solution(n: int, juice: list) -> str:
+    return str(sum(juice) / n)
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    juice: list = list(map(int, sys.stdin.readline().rstrip().split()))
+    sys.stdout.write(solution(n, juice))
