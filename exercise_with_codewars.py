@@ -55412,3 +55412,18 @@ def geometric_sequence_sum(a, r, n):
 # 0 <= ai, bi <= n - 1
 # ai != bi
 # There are no duplicate roads.
+from collections import defaultdict
+class Solution:
+    def maximumImportance(self, n: int, roads: List[List[int]]) -> int:
+        vertex: dict[int, int] = defaultdict(int)
+        for path in roads:
+            start, end = path
+            vertex[start] += 1
+            vertex[end] += 1
+        frequences: list[int] = sorted(vertex.values())
+        total: int = 0
+        accumulate: int = n
+        for vertex in range(len(frequences) - 1, -1, -1):
+            total += frequences[vertex] * accumulate
+            accumulate -= 1
+        return total
