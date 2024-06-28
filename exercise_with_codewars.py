@@ -55491,3 +55491,12 @@ if __name__ == '__main__':
 # Another kata on Thue-Morse by @myjinxin2015
 # 
 # STRINGSBINARYALGORITHMS
+def thue_morse(n):
+    if n == 1: return '0'
+    n -= 1
+    digits: list[str] = ['0']
+    accumulate: int = ''
+    while len(digits) <= n:
+        new_pair: list[str] = [['1', '0'][i == '1'] for i in digits]
+        digits.extend(new_pair)
+    return ''.join(digits[:n + 1])
