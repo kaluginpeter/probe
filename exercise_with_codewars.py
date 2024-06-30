@@ -56012,3 +56012,19 @@ if __name__ == '__main__':
 # Eeach letter in string participates in the formation of all feelings. 'angerw' -> 2 feelings: 'anger' and 'awe'.
 # 
 # FUNDAMENTALSSTRINGS
+def count_feelings(st, arr):
+    arr = [''.join(sorted(word)) for word in arr]
+    st = ''.join(sorted(st))
+    count: int = 0
+    for feel in arr:
+        equal: bool = True
+        idx: int = 0
+        for char in feel:
+            while idx < len(st) and st[idx] != char:
+                idx += 1
+            if idx >= len(st):
+                equal = False
+                break
+            idx += 1
+        count += equal
+    return f"{count} feeling{'s' if count != 1 else ''}."
