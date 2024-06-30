@@ -55820,3 +55820,45 @@ class Solution:
 # 1 <= typei <= 3
 # 1 <= ui < vi <= n
 # All tuples (typei, ui, vi) are distinct.
+class UnionFind:
+    def __init__(self, count_nodes: int) -> None:
+        self.parents: list[int] = list(range(count_nodes + 1))
+        self.ranks: list[int] = [1] * (count_nodes + 1)
+        self.connections: int = count_nodes
+
+    def find(self, node: int) -> int:
+        while node != self.parents[node]:
+            node = self.parents[node]
+            self.parents[node] = self.parents[self.parents[node]]
+        return self.parents[node]
+
+    def union(self, node_x: int, node_y: int) -> bool:
+        parent_x, parent_y = self.find(node_x), self.find(node_y)
+        if parent_x == parent_y: return False # already connected
+        elif self.ranks[parent_x] > self.ranks[parent_y]:
+           self.ranks[parent_x] += self.ranks[parent_y]
+           self.parents[parent_y] = parent_x
+        else:
+            self.ranks[parent_y] += self.ranks[parent_x]
+            self.parents[parent_x] = parent_y
+        self.connections -= 1
+        return True
+
+    def is_connected(self) -> bool:
+        return self.connections <= 1
+
+class Solution:
+    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        alice, bob = UnionFind(n), UnionFind(n)
+        minimum_needed_edges: int = 0
+        for type_edge, start_vertex, end_vertex in edges:
+            if type_edge == 3:
+                minimum_needed_edges += alice.union(start_vertex, end_vertex) | bob.union(start_vertex, end_vertex)
+        for type_edge, start_vertex, end_vertex in edges:
+            if type_edge == 1:
+                minimum_needed_edges += alice.union(start_vertex, end_vertex)
+            elif type_edge == 2:
+                minimum_needed_edges += bob.union(start_vertex, end_vertex)
+        if not alice.is_connected() or not bob.is_connected():
+            return -1
+        return len(edges) - minimum_needed_edges
