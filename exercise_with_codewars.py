@@ -56049,3 +56049,12 @@ def count_feelings(st, arr):
 #
 # 1 <= arr.length <= 1000
 # 1 <= arr[i] <= 1000
+class Solution:
+    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        in_a_row: int = 0
+        for num in arr:
+            if num & 1:
+                in_a_row += 1
+                if in_a_row == 3: return True
+            else: in_a_row = 0
+        return False
