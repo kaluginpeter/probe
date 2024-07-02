@@ -56359,3 +56359,19 @@ async def dreaming(n, m):
 # 4
 # 333
 # 0
+# Solution O(1) O(1) Math
+import sys
+
+def solution(n: int) -> None:
+    for _ in range(n):
+        x, y = map(int, sys.stdin.readline().rstrip().split())
+        if x <= y: print(y - x)
+        else:
+            if x % y == 0:
+                print(0)
+            else:
+                print(y - x % y)
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    solution(n)
