@@ -56303,3 +56303,8 @@ class Solution:
 # 0 < m < 100
 # 
 # ASYNCHRONOUS
+import asyncio
+
+async def dreaming(n, m):
+    await asyncio.sleep(n)
+    return m ** n 
