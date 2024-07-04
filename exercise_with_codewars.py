@@ -56638,3 +56638,13 @@ def convert_lojban(lojban):
 # TheQuickBrownFoxJumpsOverTheLazyDog
 # outputCopy
 # YES
+import sys
+
+def solution(word: str) -> str:
+    word_: str = word.lower()
+    return ['NO', 'YES'][len(set(word_)) >= 26]
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    word: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(word))
