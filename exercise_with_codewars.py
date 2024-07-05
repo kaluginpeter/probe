@@ -56805,3 +56805,4 @@ if __name__ == '__main__':
 # ...except for Ruby, which will arrive soon
 # 
 # RESTRICTEDPUZZLES
+def next_pos(p):d=int(p[1]);i=ord(p[0])-97;h=[-2,-1,1,2];return [chr(i+x+97)+str(d+y)for x in h for y in h if abs(x)!=abs(y)and(0<=i+x<8)&(1<=d+y<=8)]
