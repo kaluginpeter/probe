@@ -56833,3 +56833,32 @@ def next_pos(p):d=int(p[1]);i=ord(p[0])-97;h=[-2,-1,1,2];return [chr(i+x+97)+str
 #
 # 2 <= n <= 1000
 # 1 <= time <= 1000
+# Simulation
+# Complexity
+# Time complexity: O(N)
+# Space complexity: O(1)
+# Code
+class Solution:
+    def passThePillow(self, n: int, time: int) -> int:
+        pillow: int = 1
+        reverse: bool = False
+        while time:
+            if reverse:
+                pillow -= 1
+            else:
+                pillow += 1
+            if pillow == 1 or pillow == n:
+                reverse = not reverse
+            time -= 1
+        return pillow
+
+# Math
+# Complexity
+# Time complexity: O(1)
+# Space complexity: O(1)
+# Code
+class Solution:
+    def passThePillow(self, n: int, time: int) -> int:
+        whole: int = time // (n - 1)
+        remainder: int = time % (n - 1)
+        return 1 + remainder if whole & 1 == 0 else n - remainder
