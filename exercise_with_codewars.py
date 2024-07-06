@@ -57349,3 +57349,17 @@ class Solution:
 # 3 <= colors.length <= 105
 # 0 <= colors[i] <= 1
 # 3 <= k <= colors.length
+class Solution:
+    def numberOfAlternatingGroups(self, colors: List[int], k: int) -> int:
+        colors: list[int] = colors[-k + 1:] + colors
+        groups: int = 0
+        left_pointer: int = 0
+        prev_pointer: int = 0
+        for right in range(len(colors)):
+            while colors[right] == colors[prev_pointer] and left_pointer < right:
+                left_pointer += 1
+            prev_pointer = right
+
+            if right - left_pointer + 1 >= k:
+                groups += 1
+        return groups
