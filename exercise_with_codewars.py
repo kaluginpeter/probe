@@ -57290,7 +57290,7 @@ class Solution:
         total_possible_energy: int = currentEnergy + sum(enemyEnergies) - minimum_value
         if currentEnergy < minimum_value: return 0
         return total_possible_energy // minimum_value
-        
+
 # 3208. Alternating Groups II
 # There is a circle of red and blue tiles. You are given an array of integers colors and an integer k. The color of tile i is represented by colors[i]:
 # 
@@ -57363,3 +57363,47 @@ class Solution:
             if right - left_pointer + 1 >= k:
                 groups += 1
         return groups
+        
+# 3209. Number of Subarrays With AND Value of K
+# Given an array of integers nums and an integer k, return the number of 
+# subarrays
+#  of nums where the bitwise AND of the elements of the subarray equals k.
+# 
+#  
+# 
+# Example 1:
+# 
+# Input: nums = [1,1,1], k = 1
+# 
+# Output: 6
+# 
+# Explanation:
+# 
+# All subarrays contain only 1's.
+# 
+# Example 2:
+# 
+# Input: nums = [1,1,2], k = 1
+# 
+# Output: 3
+# 
+# Explanation:
+# 
+# Subarrays having an AND value of 1 are: [1,1,2], [1,1,2], [1,1,2].
+# 
+# Example 3:
+# 
+# Input: nums = [1,2,3], k = 2
+# 
+# Output: 2
+# 
+# Explanation:
+# 
+# Subarrays having an AND value of 2 are: [1,2,3], [1,2,3].
+# 
+#  
+# 
+# Constraints:
+# 
+# 1 <= nums.length <= 105
+# 0 <= nums[i], k <= 109
