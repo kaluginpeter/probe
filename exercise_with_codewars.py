@@ -57556,3 +57556,7 @@ class Solution:
 # 1 <= s.length <= 100
 # 1 <= k <= 104
 # s consists only of lowercase English letters.
+class Solution:
+    def getEncryptedString(self, s: str, k: int) -> str:
+        n: int = len(s)
+        return ''.join(s[(idx + k) % n] for idx in range(n))
