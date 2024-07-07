@@ -57422,7 +57422,7 @@ class Solution:
             current_subs = new_subs
             count += current_subs[k]
         return count
-        
+
 # A. Insomnia cure
 # A. Insomnia cure
 # time limit per test2 seconds
@@ -57518,7 +57518,7 @@ class Solution:
             bottles += can_get
             empty_bottles = empty_bottles % numExchange + can_get
         return bottles
-        
+
 # 3210. Find the Encrypted String
 # You are given a string s and an integer k. Encrypt the string using the following algorithm:
 #
@@ -57560,3 +57560,40 @@ class Solution:
     def getEncryptedString(self, s: str, k: int) -> str:
         n: int = len(s)
         return ''.join(s[(idx + k) % n] for idx in range(n))
+        
+# 3211. Generate Binary Strings Without Adjacent Zeros
+# You are given a positive integer n.
+# 
+# A binary string x is valid if all 
+# substrings
+#  of x of length 2 contain at least one "1".
+# 
+# Return all valid strings with length n, in any order.
+# 
+#  
+# 
+# Example 1:
+# 
+# Input: n = 3
+# 
+# Output: ["010","011","101","110","111"]
+# 
+# Explanation:
+# 
+# The valid strings of length 3 are: "010", "011", "101", "110", and "111".
+# 
+# Example 2:
+# 
+# Input: n = 1
+# 
+# Output: ["0","1"]
+# 
+# Explanation:
+# 
+# The valid strings of length 1 are: "0" and "1".
+# 
+#  
+# 
+# Constraints:
+# 
+# 1 <= n <= 18
