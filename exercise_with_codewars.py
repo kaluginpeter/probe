@@ -57931,3 +57931,13 @@ if __name__ == '__main__':
 # {}
 # outputCopy
 # 0
+import sys
+
+
+def solution(n: str) -> str:
+    return str(len(set([char for char in n if char not in '{} ,'])))
+
+
+if __name__ == '__main__':
+    n: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(n))
