@@ -57767,3 +57767,28 @@ def serpentine_traversal(root_node : Node) -> list:
 # Follow up:
 # 
 # Could you solve this problem in linear time with constant space?
+# Math
+# Complexity
+# Time complexity: O(N)
+# Space complexity: O(1)
+# Code
+class Solution:
+    def findTheWinner(self, n: int, k: int) -> int:
+        start: int = 1
+        for module in range(2, n + 1):
+            start = (start + k - 1) % module + 1
+        return start
+
+# Simulation
+# Complexity
+# Time complexity: O(N**2)
+# Space complexity: O(N)
+# Code
+class Solution:
+    def findTheWinner(self, n: int, k: int) -> int:
+        survivors: list[int] = list(range(1, n + 1))
+        start: int = 0
+        while len(survivors) != 1:
+            start = (start + k - 1) % len(survivors)
+            survivors.pop(start)
+        return survivors[0]
