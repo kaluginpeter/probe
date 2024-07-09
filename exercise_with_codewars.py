@@ -58058,3 +58058,9 @@ if __name__ == '__main__':
 # example product: { name: "Phone", price: 25, brand: "Fake brand" }
 #
 # ALGORITHMS
+from collections import Counter
+def sorted_brands(history):
+    storage = Counter([i['brand'] for i in history])
+    store = list(storage.keys())
+    store.sort(key=lambda x: storage[x], reverse=True)
+    return store
