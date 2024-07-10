@@ -58240,3 +58240,24 @@ class Solution:
 # In the first sample: "WUBWUBABCWUB" = "WUB" + "WUB" + "ABC" + "WUB". That means that the song originally consisted of a single word "ABC", and all words "WUB" were added by Vasya.
 # 
 # In the second sample Vasya added a single word "WUB" between all neighbouring words, in the beginning and in the end, except for words "ARE" and "THE" — between them Vasya added two "WUB".
+import sys
+
+
+def solution(n: str) -> str:
+    output: list = []
+    pointer: int = 0
+    while pointer < len(n):
+        if n[pointer:].startswith('WUB'):
+            pointer += 3
+            continue
+        word: str = ''
+        while pointer < len(n) and n[pointer:pointer + 3] != 'WUB':
+            word += n[pointer]
+            pointer += 1
+        output.append(word)
+    return ' '.join(output)
+
+
+if __name__ == '__main__':
+    n: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(n))
