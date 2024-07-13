@@ -58928,3 +58928,32 @@ class Solution:
 # 1 <= positions[i], healths[i] <= 109
 # directions[i] == 'L' or directions[i] == 'R'
 # All values in positions are distinct
+class Solution:
+    def survivedRobotsHealths(self, positions: List[int], healths: List[int], directions: str) -> List[int]:
+        line: list[list[int]] = []
+        for idx in range(len(positions)):
+            line.append([idx + 1, positions[idx], healths[idx], directions[idx]])
+        line.sort(key=lambda x: x[1])
+
+        stack: list[list[int]] = []
+        for robot in line:
+            if not stack: stack.append(robot) # Case 1
+            elif stack:
+                if stack[-1][-1] == robot[-1]: # Case 2
+                    stack.append(robot)
+                    continue
+                elif stack[-1][-1] == 'L' and robot[-1] == 'R': # Case 3
+                    stack.append(robot)
+                    continue
+                while stack and stack[-1][-1] == 'R' and robot[-1] == 'L' and stack[-1][2] < robot[2]: # Case 4
+                    stack.pop()
+                    robot[2] -= 1
+                if stack and stack[-1][-1] == 'R' and robot[-1] == 'L' and stack[-1][2] == robot[2]: # Case 4.1
+                    stack.pop()
+                elif stack and stack[-1][-1] == 'R' and robot[-1] == 'L' and stack[-1][2] > robot[2]: # Case 4.2
+                    stack[-1][2] -= 1
+                elif not stack or (stack and stack[-1][-1] == robot[-1]): # Case 4.3
+                    stack.append(robot)
+
+        stack.sort(key=lambda x: x[0])
+        return [robot[2] for robot in stack]
