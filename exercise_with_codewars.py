@@ -59205,3 +59205,13 @@ class Solution:
 # 1 <= m <= 10^3
 # 1 <= queries.length <= m
 # 1 <= queries[i] <= m
+class Solution:
+    def processQueries(self, queries: List[int], m: int) -> List[int]:
+        output: list[int] = []
+        diapazone: list[int] = list(range(1, m + 1))
+        for query in queries:
+            idx: int = diapazone.index(query)
+            output.append(idx)
+            diapazone.pop(idx)
+            diapazone = [query] + diapazone
+        return output
