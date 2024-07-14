@@ -59315,3 +59315,21 @@ class Solution:
 # The number of nodes in the given list is in the range [1, 105].
 # 1 <= Node.val <= 105
 # The input is generated such that there is at least one node in the linked list that has a value not present in nums.
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def modifiedList(self, nums: List[int], head: Optional[ListNode]) -> Optional[ListNode]:
+        to_delete: set[int] = set(nums)
+        tmp = head
+        while tmp:
+            if head and head.val in to_delete:
+                head = head.next
+                tmp = head
+            elif tmp.next and tmp.next.val in to_delete:
+                tmp.next = tmp.next.next
+            else:
+                tmp = tmp.next
+        return head
