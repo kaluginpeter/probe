@@ -59633,3 +59633,17 @@ class Solution:
 # 1 2 1 1
 # outputCopy
 # 2
+import sys
+
+
+def solution(n: int, numbers: list) -> str:
+    eveness: int = (numbers[0] & 1) + (numbers[1] & 1) + (numbers[2] & 1)
+    odd: bool = eveness >= 2
+    for idx in range(n):
+        if bool(numbers[idx] & 1) != odd: return str(idx + 1)
+
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    numbers: list = list(map(int, sys.stdin.readline().rstrip().split()))
+    sys.stdout.write(solution(n, numbers))
