@@ -60073,7 +60073,7 @@ class Solution:
 
     def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
         return self.construct(nums, 0, len(nums) - 1)
-        
+
 # A. Candies and Two Sisters
 # A. Candies and Two Sisters
 # time limit per test1 second
@@ -60164,3 +60164,19 @@ def solution(t: int) -> None:
 if __name__ == '__main__':
     t: int = int(sys.stdin.readline().rstrip())
     solution(t)
+
+# Recaman Sequence
+# Return the nth term of the Recamán's sequence.
+#
+# a(0) = 0;
+#
+#         a(n-1) - n, if this value is positive and not yet in the sequence
+#       /
+# a(n) <
+#       \
+#         a(n-1) + n, otherwise
+# input range: 0 – 30 000
+#
+# Numberphile video about Recamán's sequence
+#
+# ALGORITHMSPERFORMANCE
