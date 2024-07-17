@@ -60442,3 +60442,11 @@ class Solution:
 # 4th operation: 12 is already a multiple of 4.
 # 5th operation: increase x to 15, which is a multiple of 5.
 # PUZZLES
+def increasing_number(x, n):
+    acc: int = 1
+    while acc <= n:
+        if x % acc == 0:
+            acc += 1
+        else:
+            x += 1
+    return x
