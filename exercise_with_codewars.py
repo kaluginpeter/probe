@@ -60494,3 +60494,15 @@ def increasing_number(x, n):
 # In the second sample letter "P" is missing from the pile and there's an extra letter "L".
 # 
 # In the third sample there's an extra letter "L".
+import sys
+
+
+def solution(guest: str, host: str, morning: str) -> str:
+    return ['NO', 'YES'][sorted(guest + host) == sorted(morning)]
+
+
+if __name__ == '__main__':
+    guest: str = sys.stdin.readline().rstrip()
+    host: str = sys.stdin.readline().rstrip()
+    morning: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(guest, host, morning))
