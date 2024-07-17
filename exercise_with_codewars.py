@@ -60196,7 +60196,7 @@ def recaman(n):
             seen.add(previous + i)
 
     return sequence[n]
-    
+
 # 2096. Step-By-Step Directions From a Binary Tree Node to Another
 # You are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.
 # 
@@ -60304,3 +60304,30 @@ class Solution:
         ):
             idx += 1
         return 'U' * len(path_to_start_node[idx:]) + ''.join(path_to_end_node[idx:])
+        
+# 1110. Delete Nodes And Return Forest
+# Given the root of a binary tree, each node in the tree has a distinct value.
+# 
+# After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
+# 
+# Return the roots of the trees in the remaining forest. You may return the result in any order.
+# 
+#  
+# 
+# Example 1:
+# 
+# 
+# Input: root = [1,2,3,4,5,6,7], to_delete = [3,5]
+# Output: [[1,2,null,4],[6],[7]]
+# Example 2:
+# 
+# Input: root = [1,2,4,null,3], to_delete = [3]
+# Output: [[1,2,4]]
+#  
+# 
+# Constraints:
+# 
+# The number of nodes in the given tree is at most 1000.
+# Each node has a distinct value between 1 and 1000.
+# to_delete.length <= 1000
+# to_delete contains distinct values between 1 and 1000.
