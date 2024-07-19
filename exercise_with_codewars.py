@@ -60681,3 +60681,9 @@ def radii(a, b, c):
 # 1 <= n, m <= 50
 # 1 <= matrix[i][j] <= 105.
 # All elements in the matrix are distinct.
+# Solution HashSet O(NM) O(N + M)
+class Solution:
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        min_in_a_row: set[int] = set(min(row) for row in matrix)
+        max_in_a_col: set[int] = set(max(matrix[row][col] for row in range(len(matrix))) for col in range(len(matrix[0])))
+        return [luck_num for luck_num in min_in_a_row if luck_num in max_in_a_col]
