@@ -60886,3 +60886,18 @@ def shuffle_a(a, b):
 # 1 <= rowSum.length, colSum.length <= 500
 # 0 <= rowSum[i], colSum[i] <= 108
 # sum(rowSum) == sum(colSum)
+class Solution:
+    def restoreMatrix(self, rowSum: List[int], colSum: List[int]) -> List[List[int]]:
+        n, m = len(rowSum), len(colSum)
+        mtrx: list[list[int]] = [[0] * m for _ in range(n)]
+        row = col = 0
+        while row < n and col < m:
+            current_ceil: int = min(rowSum[row], colSum[col])
+            mtrx[row][col] = current_ceil
+            rowSum[row] -= current_ceil
+            if rowSum[row] == 0:
+                row += 1
+            colSum[col] -= current_ceil
+            if colSum[col] == 0:
+                col += 1
+        return mtrx
