@@ -61002,3 +61002,11 @@ if __name__ == '__main__':
 # Happy Coding ^_^
 # 
 # FUNDAMENTALS
+def bulb_maze(maze):
+    move: int = 0
+    switch: dict[str, str] = {'x': 'o', 'o': 'x'}
+    for room in maze:
+        if room != ' ':
+            if [room, switch[room]][move & 1] == 'o': return False
+        move += 1
+    return True
