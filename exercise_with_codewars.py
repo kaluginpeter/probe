@@ -61234,7 +61234,7 @@ class Solution:
             return -1
 
         return sum(b_n != b_k for b_n, b_k in zip(bin_n, bin_k))
-        
+
 # 3227. Vowels Game in a String
 # Alice and Bob are playing a game on a string.
 # 
@@ -61282,3 +61282,10 @@ class Solution:
 # 
 # 1 <= s.length <= 105
 # s consists only of lowercase English letters.
+class Solution:
+    def doesAliceWin(self, s: str) -> bool:
+        vowels: int = 0
+        for char in s:
+            if char in {'a', 'e', 'o', 'u', 'i'}:
+                vowels += 1
+        return vowels > 0
