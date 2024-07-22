@@ -61938,3 +61938,24 @@ if __name__ == '__main__':
 # Please give this a good rating, I spent a really long time coding this.
 # 
 # Thank you!
+def type_out(strng):
+    lowercase: bool = True
+    output: list[str] = []
+    idx: int = 0
+    while idx < len(strng):
+        if strng[idx] == '[':
+            if strng[idx:].startswith('[unshift]'):
+                lowercase = True
+                idx += 9
+            elif strng[idx:].startswith('[holdshift]'):
+                lowercase = False
+                idx += 11
+            else:
+                idx += 7
+                if strng[idx] != '[':
+                    output.append(strng[idx].upper())
+                    idx += 1
+        else:
+            output.append([strng[idx].upper(), strng[idx].lower()][lowercase])
+            idx += 1
+    return ''.join(output)
