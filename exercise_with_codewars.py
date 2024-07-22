@@ -61752,3 +61752,7 @@ class Solution:
 # 1 <= heights[i] <= 105
 # names[i] consists of lower and upper case English letters.
 # All the values of heights are distinct.
+class Solution:
+    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+       names_storage: dict[int, str] = dict((height, name) for height, name in zip(heights, names))
+       return [names_storage[people] for people in sorted(names_storage, reverse=True)]
