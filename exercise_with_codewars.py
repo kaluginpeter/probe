@@ -61987,3 +61987,11 @@ def type_out(strng):
 #
 # 1 <= nums.length <= 100
 # -100 <= nums[i] <= 100
+from collections import defaultdict
+class Solution:
+    def frequencySort(self, nums: List[int]) -> List[int]:
+        frequence: dict[int, int] = defaultdict(int)
+        for num in nums:
+            frequence[num] += 1
+        nums.sort(key=lambda x: (frequence[x], -x))
+        return nums
