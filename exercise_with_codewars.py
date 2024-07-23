@@ -62046,3 +62046,24 @@ class Solution:
 # One more person is hired.
 # One more person is hired.
 # The answer is one, as one crime (on step 5) will go untreated.
+import sys
+
+
+def solution(n: int, events: list) -> str:
+    current: int = 0
+    unreated: int = 0
+    for event in events:
+        if event < 0:
+            if current > 0:
+                current -= 1
+            else:
+                unreated += 1
+        else:
+            current += event
+    return str(unreated)
+
+
+if __name__ == '__main__':
+    n: int = int(sys.stdin.readline().rstrip())
+    events: list = list(map(int, sys.stdin.readline().rstrip().split()))
+    sys.stdout.write(solution(n, events))
