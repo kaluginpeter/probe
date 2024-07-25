@@ -62501,3 +62501,8 @@ def calculate_scrap(scraps, number_of_robots):
 # n == image[i].length
 # 1 <= n <= 20
 # images[i][j] is either 0 or 1.
+class Solution:
+    def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:
+        for row in range(len(image)):
+            image[row] = [~ceil & 1 for ceil in image[row][::-1]]
+        return image
