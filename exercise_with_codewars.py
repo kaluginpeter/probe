@@ -62461,3 +62461,11 @@ if __name__ == '__main__':
 # The number of produced robots is always a positive number.
 # You can only buy full kilograms of iron.
 # ALGORITHMS
+def calculate_scrap(scraps, number_of_robots):
+    start: int = 50
+    for per in scraps[::-1]:
+        one_per: float = start / (100 - per)
+        tot: float = per * one_per
+        start += tot
+    ans: float = start * number_of_robots
+    return int(ans) + 1 if int(ans) != ans else ans
