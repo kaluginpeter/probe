@@ -63105,3 +63105,9 @@ if __name__ == '__main__':
 # (m = a,     n = 50) --> 20
 # (m = a + 1, n = 50) --> -1
 # COMBINATORICSMATHEMATICS
+from math import factorial 
+def checkchoose(m, n):
+    for x in range(n + 1):
+        b_c: int = int(factorial(n) // (factorial(x) * factorial(n - x)))
+        if b_c == m: return x
+    return -1
