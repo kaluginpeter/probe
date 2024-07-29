@@ -63425,3 +63425,15 @@ def solution(n: int, k: int, l: int, c: int, d: int, p: int, nl: int, np: int) -
 if __name__ == '__main__':
     n, k, l, c, d, p, nl, np = map(int, sys.stdin.readline().rstrip().split())
     sys.stdout.write(solution(n, k, l, c, d, p, nl, np))
+
+# Merge overlapping strings
+# This kata requires you to write a function which merges two strings together. It does so by merging the end of the first string with the start of the second string together when they are an exact match.
+# 
+# "abcde" + "cdefgh" => "abcdefgh"
+# "abaab" + "aabab" => "abaabab"
+# "abc" + "def" => "abcdef"
+# "abc" + "abc" => "abc"
+# NOTE: The algorithm should always use the longest possible overlap.
+# 
+# "abaabaab" + "aabaabab" would be "abaabaabab" and not "abaabaabaabab"
+# ALGORITHMSSTRINGS
