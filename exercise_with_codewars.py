@@ -63517,3 +63517,16 @@ class Solution:
 # 3 2
 # Note
 # In the first sample Vasya can first put on one pair of different socks, after that he has two red socks left to wear on the second day.
+import sys
+
+
+def solution(a: int, b: int) -> str:
+    diffs: int = min(a, b)
+    a -= diffs
+    b -= diffs
+    return f'{diffs} {a // 2 + b // 2}'
+
+
+if __name__ == '__main__':
+    a, b = map(int, sys.stdin.readline().rstrip().split())
+    sys.stdout.write(solution(a, b))
