@@ -63530,3 +63530,8 @@ def solution(a: int, b: int) -> str:
 if __name__ == '__main__':
     a, b = map(int, sys.stdin.readline().rstrip().split())
     sys.stdout.write(solution(a, b))
+
+# The alphabet product
+# I have four positive integers, A, B, C and D, where A < B < C < D. The input is a list of the integers A, B, C, D, AxB, BxC, CxD, DxA in some order. Your task is to return the value of D.
+# 
+# LOGIC
