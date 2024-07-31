@@ -63790,3 +63790,18 @@ class Solution:
 # 201 101 101 200
 # outputCopy
 # 1 100 100
+import sys
+
+
+def solution(nums: list) -> str:
+    abc: int = max(nums)
+    numbers: list = []
+    for num in nums:
+        if num == abc: continue
+        numbers.append(abc - num)
+    return ' '.join(str(num) for num in numbers)
+
+
+if __name__ == '__main__':
+    nums: list = list(map(int, sys.stdin.readline().rstrip().split()))
+    sys.stdout.write(solution(nums))
