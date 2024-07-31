@@ -63823,3 +63823,8 @@ if __name__ == '__main__':
 # All lists will include one valid pair of glasses because I swear I dropped them around here somewhere ...
 # All elements in the list are strings.
 # REGULAR EXPRESSIONS
+import re
+def find_glasses(lst):
+    for idx in range(len(lst)):
+        if re.search(r'O-+O', lst[idx]):
+            return idx
