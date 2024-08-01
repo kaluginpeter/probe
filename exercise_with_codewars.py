@@ -64001,3 +64001,16 @@ class Solution:
 # details[i] consists of digits from '0' to '9'.
 # details[i][10] is either 'M' or 'F' or 'O'.
 # The phone numbers and seat numbers of the passengers are distinct.
+# Because we already know about "static" size of each detail, we can use simple one liner to count all senior citizens
+# Solution Counting O(N) O(1)
+class Solution:
+    def countSeniors(self, details: List[str]) -> int:
+        senior_citizens: int = 0
+        for citizen in details:
+            age: int = int(citizen[-4:-2])
+            if age > 60: senior_citizens += 1
+        return senior_citizens
+# Solution One liner
+class Solution:
+    def countSeniors(self, details: List[str]) -> int:
+       return sum(detail[-4:-2] > '60' for detail in details)
