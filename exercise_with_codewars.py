@@ -64157,3 +64157,15 @@ def stern_brocot(n):
 # 
 # In the third test case, 9+11=20
 # .
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        a, b, c = map(int, sys.stdin.readline().rstrip().split())
+        print(['NO', 'YES'][(a + b == c or c + b == a or a + c == b)])
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
