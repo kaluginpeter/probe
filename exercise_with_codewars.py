@@ -64923,3 +64923,13 @@ class Solution:
 # 100 'small' cases with w, l, and h below 20.
 # 100 'big' cases with w, l, and h between 1e9 and 1e10.
 # MATHEMATICSALGORITHMS
+def num_blocks(w, l, h):
+    x0_y0: int = w * l
+    n: int = h
+    n1: int = n - 1
+
+    term1 = n * x0_y0
+    term2 = (n1 * n * (w + l)) // 2
+    term3 = (n1 * n * (2 * n - 1)) // 6
+
+    return term1 + term2 + term3
