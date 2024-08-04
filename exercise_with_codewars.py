@@ -64636,3 +64636,15 @@ class Solution:
 # NO
 # Note
 # The first five test cases contain the strings "YES", "yES", "yes", "Yes", "YeS". All of these are equal to "YES", where each character is either uppercase or lowercase.
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        word: str = sys.stdin.readline().rstrip()
+        print(['NO', 'YES'][word.lower() == 'yes'])
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
