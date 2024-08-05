@@ -65226,3 +65226,17 @@ if __name__ == '__main__':
 # An empty list is represented as a null reference.
 #
 # LINKED LISTSALGORITHMSDATA STRUCTURES
+# in preloaded:
+#class Node:
+#    def __init__(self, data, next = None):
+#        self.data = data
+#        self.next = next
+from preloaded import Node
+
+def search_k_from_end(linked_list : Node, k : int):
+    storage: list[int] = []
+    tmp = linked_list
+    while tmp:
+        storage.append(tmp.data)
+        tmp = tmp.next
+    return storage.pop(-k) if k <= len(storage) else None
