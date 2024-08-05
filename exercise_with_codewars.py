@@ -65280,3 +65280,36 @@ def search_k_from_end(linked_list : Node, k : int):
 # 0 <= key <= 104
 # 0 <= value <= 105
 # At most 2 * 105 calls will be made to get and put.
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.hashmap: dict[int, int] = dict()
+        self.capacity: int = capacity
+
+
+    def get(self, key: int) -> int:
+        if key not in self.hashmap: return -1
+        # Move current element to the end of hashmap
+        value: int = self.hashmap[key]
+        del self.hashmap[key]
+        self.hashmap[key] = value
+        return value
+
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.hashmap:
+            # Move to the end updated element
+            del self.hashmap[key]
+            self.hashmap[key] = value
+            return
+        # If capacity exeeds, we should delete first element from hashmap
+        if len(self.hashmap) == self.capacity:
+            del self.hashmap[next(iter(self.hashmap))]
+        # Inserting at the end of map new pair
+        self.hashmap[key] = value
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
