@@ -65098,3 +65098,14 @@ class Solution(object):
 # 1 <= k <= arr.length <= 1000
 # 1 <= arr[i].length <= 5
 # arr[i] consists of lowercase English letters.
+class Solution:
+    def kthDistinct(self, arr: List[str], k: int) -> str:
+        storage: dict[str, int] = dict()
+        for char in arr:
+            storage[char] = storage.get(char, 0) + 1
+        idx: int = 0
+        for char in storage:
+            if storage[char] == 1:
+                idx += 1
+            if k == idx: return char
+        return ''
