@@ -65448,3 +65448,22 @@ def levenshtein(a,b):
         if up - i < do: break
         cost = min(cost, sum(x != y for x, y in zip(big[i:], small)))
     return cost + (up - do)
+    
+# 22. Generate Parentheses
+# Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+#
+#
+#
+# Example 1:
+#
+# Input: n = 3
+# Output: ["((()))","(()())","(())()","()(())","()()()"]
+# Example 2:
+#
+# Input: n = 1
+# Output: ["()"]
+#
+#
+# Constraints:
+#
+# 1 <= n <= 8
