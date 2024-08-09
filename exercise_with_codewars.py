@@ -66048,3 +66048,16 @@ def vector_affinity(a, b):
 # For the third test case, only the second person is in front of Timur, who ran a total distance of 600
 #  while Timur ran a distance of 500
 # .
+# Solution Math O(N) O(1)
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        peoples: list = list(map(int, sys.stdin.readline().rstrip().split()))
+        print(sum(peoples[0] < people for people in peoples))
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
