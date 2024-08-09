@@ -65987,7 +65987,7 @@ def vector_affinity(a, b):
     score: int = sum(a[idx] == b[idx] for idx in range(min(len(a), len(b))))
     module: int = max(len(a), len(b))
     return score / module if module != 0 else [0.0, 1.0][len(a) == len(b)]
-    
+
 # A. Marathon
 # A. Marathon
 # time limit per test1 second
@@ -66061,3 +66061,21 @@ def solution(t: int) -> None:
 if __name__ == '__main__':
     t: int = int(sys.stdin.readline().rstrip())
     solution(t)
+
+# Swap Node Pairs In Linked List
+# You are given the head node of a singly-linked list. Write a method that swaps each pair of nodes in the list, then returns the head node of the list. You have to swap the nodes themselves, not their values.
+#
+# Example:
+#
+# (A --> B --> C --> D) => (B --> A --> D --> C)
+#
+# The swapping should be done left to right, so if the list has an odd length, the last node stays in place:
+#
+# (A --> B --> C) => (B --> A --> C)
+#
+# The list will be composed of Nodes of the following specification:
+#
+# class Node:
+#     def __init__(self, next=None):
+#         self.next = next
+# ALGORITHMSDATA STRUCTURESLINKED LISTS
