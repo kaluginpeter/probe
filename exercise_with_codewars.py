@@ -66425,3 +66425,15 @@ if __name__ == '__main__':
 # Inspired by Stanford Professor Nick Parlante's excellent Linked List teachings.
 #
 # LINKED LISTSDATA STRUCTURESFUNDAMENTALS
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def remove_duplicates(head):
+    tmp: Node = head
+    while tmp and tmp.next:
+        if tmp.data == tmp.next.data:
+            tmp.next = tmp.next.next
+        else: tmp = tmp.next
+    return head
