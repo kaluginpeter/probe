@@ -66834,3 +66834,21 @@ class Solution:
 # Inspired by Stanford Professor Nick Parlante's excellent Linked List teachings.
 #
 # LINKED LISTSDATA STRUCTURESFUNDAMENTALS
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class Context(object):
+    def __init__(self, source, dest):
+        self.source = source
+        self.dest = dest
+
+def move_node(source, dest):
+    if not source:
+        raise Exception
+    new_dest = Node(source.data)
+    new_dest.next = dest
+    dest = new_dest
+    source = source.next
+    return Context(source, dest)
