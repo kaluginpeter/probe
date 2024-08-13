@@ -67146,3 +67146,19 @@ def some_but_not_all(seq, pred):
 # 8
 # Note
 # In the first sample one of the optimal solutions is: each time buy a one ride ticket. There are other optimal solutions. For example, buy three m ride tickets.
+import sys
+
+
+def solution(n: int, m: int, a: int, b: int) -> str:
+    a_c: float = a
+    mb_c: float = b / m
+    if a_c <= mb_c:
+        return str(n * a_c)
+    c: int = n // m * b
+    n %= m
+    return str(c + min(b, n * a_c))
+
+
+if __name__ == '__main__':
+    n, m, a, b = map(int, sys.stdin.readline().rstrip().split())
+    sys.stdout.write(solution(n, m, a, b))
