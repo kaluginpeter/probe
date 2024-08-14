@@ -67188,3 +67188,21 @@ if __name__ == '__main__':
 # -..-.--
 # outputCopy
 # 1012
+import sys
+
+
+def solution(n: str) -> str:
+    operations: dict[str, tuple[int, int]] = {'.': ('0', 1), '-.': ('1', 2), '--': ('2', 2)}
+    decoded: list[str] = []
+    idx: int = 0
+    while idx < len(n):
+        for operation in operations:
+            if n[idx: idx + 2] == operation or n[idx: idx + 1] == operation:
+                digit, move = operations[operation]
+                decoded.append(digit)
+                idx += move
+    return ''.join(decoded)
+
+if __name__ == '__main__':
+    n: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(n))
