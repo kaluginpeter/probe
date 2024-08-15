@@ -67323,3 +67323,21 @@ class Solution:
 #
 # 1 <= bills.length <= 105
 # bills[i] is either 5, 10, or 20.
+class Solution:
+    def lemonadeChange(self, bills: List[int]) -> bool:
+        fives: int = 0
+        tens: int = 0
+        for bill in bills:
+            if bill == 5: fives += 1
+            elif bill == 10:
+                if fives:
+                    fives -= 1
+                else: return False
+                tens += 1
+            else:
+                if tens and fives:
+                    tens -= 1
+                    fives -= 1
+                elif fives > 2: fives -= 3
+                else: return False
+        return True
