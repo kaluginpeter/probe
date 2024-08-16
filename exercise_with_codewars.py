@@ -67715,3 +67715,29 @@ def cuckoo_clock(initial_time, n):
 #
 # The number of nodes in the tree is in the range [1, 104].
 # -231 <= Node.val <= 231 - 1
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    nodes: list[int] = None
+
+    def dfs(self, root: Optional[TreeNode]) -> None:
+        if not root: return
+        self.dfs(root.left)
+        self.nodes.append(root.val)
+        self.dfs(root.right)
+
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        if self.nodes is None:
+            self.nodes = []
+        self.dfs(root)
+
+        left: int = 0
+        for right in range(1, len(self.nodes)):
+            if self.nodes[left] >= self.nodes[right]:
+                return False
+            left = right
+        return True
