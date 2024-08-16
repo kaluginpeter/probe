@@ -67636,7 +67636,7 @@ if __name__ == '__main__':
     solution(n, bars, q)
 
 # Cuckoo Clock
-# # The cuckoo bird pops out of the cuckoo clock and chimes once on the quarter hour, half hour, and three-quarter hour. At the beginning of each hour (1-12), it chimes out the hour. Given the current time and a number n, determine the time when the cuckoo bird has chimed n  times.
+# The cuckoo bird pops out of the cuckoo clock and chimes once on the quarter hour, half hour, and three-quarter hour. At the beginning of each hour (1-12), it chimes out the hour. Given the current time and a number n, determine the time when the cuckoo bird has chimed n  times.
 #
 # Input Parameters:
 # initial_time - a string in the format "HH:MM", where 1 ≤ HH ≤ 12 and 0 ≤ MM ≤ 59, with leading 0’s if necessary.
@@ -67654,3 +67654,34 @@ if __name__ == '__main__':
 # Related Kata: Fizz Buzz Cuckoo Clock
 #
 # STRINGSDATE TIME
+def cuckoo_clock(initial_time, n):
+    hours, minutes = map(int, initial_time.split(':'))
+    whole: bool = False
+    if minutes in {0, 15, 30, 45}:
+        if minutes == 0:
+            n -= hours
+        else: n -= 1
+    while n > 0:
+        if minutes < 15:
+            minutes = 15
+        elif minutes < 30:
+            minutes = 30
+        elif minutes < 45:
+            minutes = 45
+        else:
+            whole = True
+            minutes = 0
+            hours += 1
+            if hours > 12:
+                hours = 1
+        if whole:
+            whole = False
+            n -= hours
+        else:
+            n -= 1
+
+    if hours < 10:
+        hours = '0' + str(hours)
+    if minutes == 0:
+        minutes = '00'
+    return f'{hours}:{minutes}'
