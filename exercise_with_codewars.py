@@ -67872,3 +67872,10 @@ if __name__ == '__main__':
 # If you enjoyed this kata, be sure to check out my other katas
 #
 # ARRAYSFUNDAMENTALS
+def amidakuji(ar):
+    numbers: list[int] = list(range(len(ar[0]) + 1))
+    for move in ar:
+        for move_idx in range(len(move)):
+            if move[move_idx] == '1':
+                numbers[move_idx], numbers[move_idx + 1] = numbers[move_idx + 1], numbers[move_idx]
+    return numbers
