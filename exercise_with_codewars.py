@@ -68471,3 +68471,8 @@ if __name__ == '__main__':
 # *** Please, don't worry about the parameters. You will only receive positive integers, and the first one will be greater than the second one
 #
 # MATHEMATICSALGORITHMS
+def factorial_division(n, d):
+    result = 1
+    for i in range(d+1, n+1):
+        result *= i
+    return result
