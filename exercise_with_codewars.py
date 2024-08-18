@@ -68236,3 +68236,20 @@ class Solution:
 # 1 <= n == nums.length <= 105
 # 1 <= nums[i] <= 106
 # 1 <= k <= n
+class Solution:
+    def resultsArray(self, nums: List[int], k: int) -> List[int]:
+        if k == 1: return nums
+        result: list[int] = []
+        left: int = 0
+        right: int = 1
+        while left <= len(nums) - k and right < len(nums):
+            if nums[right] - 1 == nums[right - 1]:
+                if right - left + 1 == k:
+                    result.append(nums[right])
+                    left += 1
+            else:
+                while left < right and left <= len(nums) - k:
+                    result.append(-1)
+                    left += 1
+            right += 1
+        return result
