@@ -68931,3 +68931,16 @@ def coffee(sentence):
 # YES
 # YES
 # NO
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        n: int = int(sys.stdin.readline().rstrip())
+        print(['NO', 'YES'][bin(n).count('1') > 1])
+
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
