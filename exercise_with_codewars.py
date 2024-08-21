@@ -68868,3 +68868,9 @@ class Solution:
 # Good luck!
 #
 # STRINGSREGULAR EXPRESSIONSFUNDAMENTALS
+import re
+def coffee(sentence):
+    result: list[str] = re.findall('(?i)coffee', sentence, re.IGNORECASE)
+    for res in result:
+        sentence = sentence.replace(res, 'COFFEE')
+    return sentence
