@@ -68966,3 +68966,7 @@ if __name__ == '__main__':
 # 1 <= num < 231
 # Note: This question is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
 # Solution
+# Solution Bit Manipulation O(N) O(N)
+class Solution:
+    def findComplement(self, num: int) -> int:
+        return int(''.join(['1', '0'][char == '1'] for char in bin(num)[2:]), 2)
