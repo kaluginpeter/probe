@@ -69142,3 +69142,21 @@ def game(a, b):
 # 11
 # 14
 # 1666
+import sys
+from typing import List
+
+
+def solution(t: int) -> None:
+    order: List[int] = [1]
+    for _ in range(t):
+        x: int = int(sys.stdin.readline().rstrip())
+        while x > len(order):
+            for num in range(order[-1] + 1, order[-1] + x + 1):
+                if num % 3 != 0 and num % 10 != 3:
+                    order.append(num)
+        print(order[x - 1])
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
