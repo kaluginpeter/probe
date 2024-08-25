@@ -69529,3 +69529,16 @@ if __name__ == '__main__':
 # 1 <= nums[i] <= 100
 # 1 <= k <= 10
 # 1 <= multiplier <= 5
+import heapq
+class Solution:
+    def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
+        heap: list[int] = []
+        for idx in range(len(nums)):
+            heapq.heappush(heap, (nums[idx], idx))
+        for _ in range(k):
+            curr_num, idx = heapq.heappop(heap)
+            heapq.heappush(heap, (curr_num * multiplier, idx))
+        while heap:
+            curr_num, idx = heapq.heappop(heap)
+            nums[idx] = curr_num
+        return nums
