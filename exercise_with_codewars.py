@@ -70449,3 +70449,9 @@ class Solution:
 # Then following the rules, you can calculate the suffix sums of A.
 #
 # ALGORITHMS
+def prefix_sums_to_suffix_sums(prefix_sums):
+    suffix_sum: list[int] = [0] * len(prefix_sums)
+    suffix_sum[0] = prefix_sums[-1]
+    for i in range(1, len(prefix_sums)):
+        suffix_sum[i] = prefix_sums[-1] - prefix_sums[i - 1]
+    return suffix_sum
