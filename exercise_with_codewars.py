@@ -70726,3 +70726,7 @@ https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Operato
 Don't forget your primitives either:
 https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 PUZZLES
+
+bool greaterThanLessThan(long a, long b, long c) {
+    return (a < b) < c;
+}
