@@ -71320,3 +71320,7 @@ if __name__ == '__main__':
 # Increase rate of the rubber band: z = 0.05 units/minute
 # Outcome: false (The snail will not be able to reach the end within one year.)
 # MATHEMATICS
+def can_snail_reach_end(length, speed, length_increases):
+    boundary: int = 365 * 24 * 60
+    if speed <= length_increases: return False
+    return length / (speed - length_increases) <= boundary
