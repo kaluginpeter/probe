@@ -71324,3 +71324,12 @@ def can_snail_reach_end(length, speed, length_increases):
     boundary: int = 365 * 24 * 60
     if speed <= length_increases: return False
     return length / (speed - length_increases) <= boundary
+
+bool canSnailReachEnd(double length, double speed, double lengthIncreases)
+{
+  int boundary = 365 * 24 * 60;
+  if (speed <= lengthIncreases) {
+    return false;
+  }
+  return (length / (speed - lengthIncreases)) <= boundary;
+}
