@@ -71796,3 +71796,9 @@ if __name__ == '__main__':
 # faces, and the number of sides of the base of the pyramid.
 #
 # MATHEMATICSALGORITHMS
+def pyramid(s):
+    N = (s - 2) // 4
+    V = N + 1
+    E = 2 * N
+    F = N + 1
+    return (V, E, F, N)
