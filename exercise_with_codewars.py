@@ -71829,3 +71829,10 @@ def pyramid(s):
 #
 # 2
 # FUNDAMENTALSALGORITHMS
+# Solution
+def doors(n):
+    doors: list[bool] = [False] * (n + 1)
+    for mate in range(1, n + 1):
+        for door_open in range(mate, n + 1, mate):
+            doors[door_open] = not doors[door_open]
+    return sum(doors)
