@@ -72032,3 +72032,17 @@ class Solution:
 # 5
 # 5
 # 7
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        a, b, c = map(int, sys.stdin.readline().rstrip().split())
+        if a == b: print(c)
+        elif b == c: print(a)
+        else: print(b)
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
