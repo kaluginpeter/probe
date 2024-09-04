@@ -72102,3 +72102,15 @@ if __name__ == '__main__':
 # Happy Coding ^_^
 #
 # FUNDAMENTALSSTRINGSMATHEMATICS
+def is_turing_equation(s):
+    # Split the string based on '+' and '=' to get a, b, c
+    a, rest = s.split('+')
+    b, c = rest.split('=')
+
+    # Reverse the strings and convert to integers
+    a_reversed = int(a[::-1])
+    b_reversed = int(b[::-1])
+    c_reversed = int(c[::-1])
+
+    # Check if the sum of reversed a and b equals reversed c
+    return a_reversed + b_reversed == c_reversed
