@@ -72328,3 +72328,20 @@ if __name__ == '__main__':
 # 11221
 # outputCopy
 # 13
+import sys
+
+
+def solution(a: str, b: str, c: str, d: str, game: str) -> str:
+    cost: list = [int(a), int(b), int(c), int(d)]
+    wasted: int = 0
+    idx: int = 0
+    while idx < len(game):
+        wasted += cost[int(game[idx]) - 1]
+        idx += 1
+    return str(wasted)
+
+
+if __name__ == '__main__':
+    a, b, c, d = sys.stdin.readline().rstrip().split()
+    game: str = sys.stdin.readline().rstrip()
+    sys.stdout.write(solution(a, b, c, d, game))
