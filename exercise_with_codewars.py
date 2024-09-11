@@ -73798,3 +73798,16 @@ def operation(a, b):
 # 1 ≤ n ≤ 500000
 #
 # MATHEMATICSFUNDAMENTALS
+def blind_number(n):
+    MOD = 1000000007
+
+    dp0, dp1, dp2 = 1, 1, 1
+
+    for i in range(2, n + 1):
+        new_dp0 = (dp1 + dp2) % MOD
+        new_dp1 = (dp0 + dp1 + dp2) % MOD
+        new_dp2 = (dp0 + dp1 + dp2) % MOD
+
+        dp0, dp1, dp2 = new_dp0, new_dp1, new_dp2
+
+    return (dp0 + dp1 + dp2) % MOD
