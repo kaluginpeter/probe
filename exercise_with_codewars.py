@@ -73987,3 +73987,15 @@ int main() {
 # If it is not possible to end up with the original kind of fruit again after the three conversions, return "ERROR" instead of the list of actions.
 #
 # ALGORITHMS
+def buy_or_sell(pairs, harvested_fruit):
+    actions: list[str] = []
+    current_fruit: str = harvested_fruit
+    for deal in pairs:
+        if deal[0] == current_fruit:
+            actions.append('buy')
+            current_fruit = deal[1]
+        elif deal[1] == current_fruit:
+            actions.append('sell')
+            current_fruit = deal[0]
+        else: return 'ERROR'
+    return actions if current_fruit == harvested_fruit else 'ERROR'
