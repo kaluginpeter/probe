@@ -75025,3 +75025,9 @@ int sum(vector<int> numbers)
 # Limits:
 # 0 < n and n <= 10^4
 # LOGICBITS
+def trailing_zeros(n) ->int:
+    target: str = bin(n)[2:]
+    n: int = len(target) - 1
+    while n >= 0 and target[n] == '0':
+        n -= 1
+    return len(target) - n - 1
