@@ -75171,3 +75171,19 @@ if __name__ == '__main__':
 #
 # 1 <= nums.length <= 100
 # 0 <= nums[i] <= 109
+from functools import cmp_to_key
+class Solution:
+    def comparison(self, x: str, y: str) -> int:
+            """
+            For ascending order, ex:
+                if x+y > y+x, then y should comes first.
+                elif x+y < y+x, then x should comes first.
+                else tie, choose any of them.
+            """
+            if x + y > y + x: return 1
+            elif x + y < y + x: return -1
+            return 0
+
+    def largestNumber(self, nums: List[int]) -> str:
+        answer: str = ''.join(sorted(map(str, nums), reverse=True, key=cmp_to_key(self.comparison)))
+        return answer if answer[0] != '0' else '0'
