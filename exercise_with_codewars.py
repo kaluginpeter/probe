@@ -77331,3 +77331,25 @@ class MyCalendar:
 #  and |10−10|=0
 # , whereas there's no number having an absolute value less than 0
 # .
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        n: int = int(sys.stdin.readline().rstrip())
+        c2 = n // 3
+        c1 = n - 2 * c2
+        if c1 >= 0:
+            best_c1, best_c2 = c1, c2
+        else:
+            best_c1, best_c2 = 0, 0
+        c2 += 1
+        c1 = n - 2 * c2
+        if c1 >= 0 and abs(c1 - c2) < abs(best_c1 - best_c2):
+            best_c1, best_c2 = c1, c2
+        sys.stdout.write(str(best_c1) + ' ' + str(best_c2) + '\n')
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
