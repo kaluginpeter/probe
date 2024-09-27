@@ -77557,3 +77557,19 @@ std::string capitalize(std::string s, std::vector<int> idxs)
 # 40000
 # Note
 # Below are the answers for the first two test cases:
+#include <iostream>
+#include <cmath>
+
+int main() {
+    int t;
+    std::cin >> t;
+    for (size_t rep = 0; rep < t; ++rep) {
+        int a, b;
+        std::cin >> a >> b;
+        int remainder = std::min(a, b) * 2;
+        if (remainder < std::max(a, b)) {
+            remainder = std::max(a, b);
+        };
+        std::cout << std::pow(remainder, 2) << std::endl;
+    }
+};
