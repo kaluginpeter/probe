@@ -78437,3 +78437,36 @@ std::map<char, unsigned> count(const std::string& string) {
 #
 # The number of nodes in the list is in the range [0, 100].
 # 0 <= Node.val <= 100
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # Count length of linked list
+        n: int = 0
+        tmp: ListNode = head
+        while tmp:
+            n += 1
+            tmp = tmp.next
+        # Only need make even swaps
+        if n & 1: n -= 1
+        # If no needed swaps
+        if not n: return head
+        # Make swap head with second node
+        second: ListNode = head.next
+        head.next = second.next
+        second.next = head
+        head = second
+        # Continue swaping for other nodes it it needed
+        idx: int = 2
+        first: ListNode = head.next
+        while idx + 2 <= n:
+            second: ListNode = first.next.next
+            first.next.next = second.next
+            second.next = first.next
+            first.next = second
+            idx += 2
+            first = first.next.next
+        return head
