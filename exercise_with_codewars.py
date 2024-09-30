@@ -78510,3 +78510,83 @@ class Solution:
 # 1 <= maxSize, x, k <= 1000
 # 0 <= val <= 100
 # At most 1000 calls will be made to each method of increment, push and pop each separately.
+# C++ O(1) for all operation O(N)
+class CustomStack {
+public:
+    std::vector<int> stack;
+    std::vector<int> increase;
+    int global_index = -1;
+    CustomStack(int maxSize) {
+        stack.resize(maxSize);
+        increase.resize(maxSize);
+    }
+
+    void push(int x) {
+        if (global_index + 1 == stack.size()) {
+            return;
+        };
+        global_index += 1;
+        stack[global_index] = x;
+    }
+
+    int pop() {
+        if (global_index < 0) {
+            return -1;
+        };
+        int output = stack[global_index] + increase[global_index];
+        if (global_index > 0) {
+            increase[global_index - 1] += increase[global_index];
+        };
+        increase[global_index] = 0;
+        global_index -= 1;
+        return output;
+    }
+
+    void increment(int k, int val) {
+        if (global_index < 0) {
+            return;
+        };
+        increase[std::min(global_index, k - 1)] += val;
+    }
+};
+
+/**
+ * Your CustomStack object will be instantiated and called as such:
+ * CustomStack* obj = new CustomStack(maxSize);
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * obj->increment(k,val);
+ */
+
+# Python O(1) for all operation O(N)
+class CustomStack:
+
+    def __init__(self, maxSize: int):
+        self.stack: list[int] = [0] * maxSize
+        self.capacity: int = maxSize
+        self.increase: list[int] = [0] * maxSize
+        self.global_index: int = -1
+
+    def push(self, x: int) -> None:
+        if self.global_index + 1 == len(self.stack): return
+        self.global_index += 1
+        self.stack[self.global_index] = x
+
+    def pop(self) -> int:
+        if self.global_index < 0: return -1
+        output: int = self.stack[self.global_index] + self.increase[self.global_index]
+        if self.global_index > 0:
+            self.increase[self.global_index - 1] += self.increase[self.global_index]
+        self.increase[self.global_index] = 0
+        self.global_index -= 1
+        return output
+
+    def increment(self, k: int, val: int) -> None:
+        if self.global_index < 0: return
+        self.increase[min(self.global_index, k - 1)] += val
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)
