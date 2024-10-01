@@ -78821,3 +78821,12 @@ class Solution:
 # { "*_allow", "books_allow", "movies_deny" }, "games"  =>  True
 # { "*_allow", "*_deny" }, "movies"  =>  False
 # LOGICSETSFUNDAMENTALS
+def has_permission(user_info, accessing_data):
+    for move in user_info.copy():
+        if move.endswith('_deny'):
+            if move[:-5] + '_allow' in user_info:
+                user_info.remove(move[:-5] + '_allow')
+    r: str = accessing_data
+    if r + '_deny' in user_info: return False
+    if r + '_allow' in user_info: return True
+    return '*_allow' in user_info
