@@ -80018,3 +80018,17 @@ public:
 #
 # nums.length == 3
 # 1 <= nums[i] <= 127
+class Solution:
+    def concatenate(self, a: int, b: int, c: int) -> int:
+        return int(bin(a)[2:] + bin(b)[2:] + bin(c)[2:], 2)
+
+    def maxGoodNumber(self, nums: List[int]) -> int:
+        a, b, c = nums
+        return max(
+            self.concatenate(a, b, c),
+            self.concatenate(b, a, c),
+            self.concatenate(c, b, a),
+            self.concatenate(c, a, b),
+            self.concatenate(b, c, a),
+            self.concatenate(a, c, b),
+        )
