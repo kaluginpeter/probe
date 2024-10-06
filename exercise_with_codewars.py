@@ -80347,3 +80347,13 @@ int solve(int n, int bound) {
 # Constraints:
 #
 # 1 <= k <= 500
+class Solution:
+    def kthCharacter(self, k: int) -> str:
+        eng_al: str = 'abcdefghijklmnopqrstuvwxyz'
+        output: list[str] = ['a']
+        while len(output) < k:
+            curr_sub: list[str] = []
+            for char in output:
+                curr_sub.append(eng_al[(ord(char) + 1) % 26 - 19])
+            output.extend(curr_sub)
+        return output[k - 1]
