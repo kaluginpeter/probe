@@ -81320,3 +81320,15 @@ if __name__ == '__main__':
 # Source: International Collegiate Programming Contest, North Central North American Regional, 2022.
 #
 # ARRAYSSEARCHINGPERFORMANCE
+def count_streets(streets, drivers):
+    output: list[int] = []
+    storage: dict[str, int] = dict()
+    distance: int = 1
+    for street in streets:
+        storage[street] = distance
+        distance += 1
+    for start, end in drivers:
+        start_d: int = storage[start]
+        end_d: int = storage[end]
+        output.append(max(start_d, end_d) - min(start_d, end_d) - 1)
+    return output
