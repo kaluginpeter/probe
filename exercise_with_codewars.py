@@ -82078,3 +82078,13 @@ public:
 # 1 <= n == nums.length <= 50
 # 1 <= nums[i] <= 50
 # 1 <= x <= k <= nums.length
+class Solution:
+    def findXSum(self, nums: List[int], k: int, x: int) -> List[int]:
+        ans: list[int] = []
+        for i in range(len(nums) - k + 1):
+            hashmap: dict[int, int] = dict()
+            for idx in range(i, i + k):
+                hashmap[nums[idx]] = hashmap.get(nums[idx], 0) + 1
+            sequence: list[int] = sorted(hashmap.keys(), key=lambda x: (hashmap[x], x), reverse=True)
+            ans.append(sum(y * hashmap[y] for y in sequence[:x]))
+        return ans
