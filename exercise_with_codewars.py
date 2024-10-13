@@ -82562,3 +82562,34 @@ class Solution:
 #
 #
 # Note: This question is the same as 1991: https://leetcode.com/problems/find-the-middle-index-in-array/
+# C++ O(N) O(1) Prefix Sum Suffix Sum
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums) {
+        int prefix = 0;
+        int postfix = 0;
+        for (int num : nums) {
+            postfix += num;
+        }
+        for (int index = 0; index < nums.size(); ++index) {
+            postfix -= nums[index];
+            if (prefix == postfix) {
+                return index;
+            }
+            prefix += nums[index];
+        }
+        return -1;
+    }
+};
+
+# Python O(N) O(1) Prefix Sum Suffix Sum
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        prefix: int = 0
+        postfix: int = sum(nums)
+        for idx in range(len(nums)):
+            postfix -= nums[idx]
+            if prefix == postfix:
+                return idx
+            prefix += nums[idx]
+        return -1
