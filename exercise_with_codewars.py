@@ -82248,3 +82248,14 @@ public:
 # 1 <= nums.length <= 100
 # 2 <= nums[i] <= 1000
 # nums[i] is a prime number.
+class Solution:
+    def minBitwiseArray(self, nums: List[int]) -> List[int]:
+        ans: list[int] = []
+        for num in nums:
+            for mod in range(1, 1001):
+                if mod | (mod + 1) == num:
+                    ans.append(mod)
+                    break
+            else:
+                ans.append(-1)
+        return ans
