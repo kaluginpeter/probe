@@ -82434,3 +82434,11 @@ def solution(t: int) -> None:
 if __name__ == '__main__':
     t: int = int(sys.stdin.readline().rstrip())
     solution(t)
+
+# Beginner - Reduce but Grow
+/*
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+FUNDAMENTALSARRAYS
+*/
