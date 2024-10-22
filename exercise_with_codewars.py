@@ -87259,3 +87259,20 @@ Assertion messages may be unclear about what they display in some languages. If 
 
 STRINGSARRAYSFUNDAMENTALS
 */
+#include <string>
+#include <unordered_map>
+std::string duplicate_encoder(const std::string& word){
+  std::unordered_map<char, int> hashmap;
+  for (char letter : word) {
+    ++hashmap[std::tolower(letter)];
+  }
+  std::string output = word;
+  for (size_t index = 0; index < output.size(); ++index) {
+    if (hashmap[std::tolower(output[index])] == 1) {
+      output[index] = '(';
+    } else {
+      output[index] = ')';
+    }
+  }
+  return output;
+}
