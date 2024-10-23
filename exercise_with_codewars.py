@@ -87829,3 +87829,17 @@ if __name__ == '__main__':
 # Dog breeds taken here. Dog temperaments taken from Google (search, e.g., "Chihuahua temperament").
 #
 # ARRAYSSETSSORTINGFUNDAMENTALS
+def find_similar_dogs(breed):
+    needed: set[str] = dogs[breed]
+    hashmap: dict[str, int] = dict()
+    max_matching: int = 0
+    for dog in dogs:
+        if dog == breed: continue
+        matching: int = len(dogs[dog] & needed)
+        hashmap[dog] = matching
+        max_matching = max(max_matching, matching)
+    output: set[str] = set()
+    for dog in hashmap:
+        if hashmap[dog] == max_matching:
+            output.add(dog)
+    return output
