@@ -91303,3 +91303,7 @@ Examples:
 -34: 34
 Fundamentals
 */
+int opposite(int number)
+{
+  return -number;
+}
