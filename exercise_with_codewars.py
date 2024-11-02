@@ -91291,3 +91291,15 @@ def find_smallest_and_largest(m: int, s: int) -> str:
 if __name__ == '__main__':
     m, s = map(int, input().split())
     sys.stdout.write(find_smallest_and_largest(m, s))
+
+# Opposite number
+/*
+Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+
+Examples:
+
+1: -1
+14: -14
+-34: 34
+Fundamentals
+*/
