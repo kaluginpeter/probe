@@ -91130,3 +91130,35 @@ if __name__ == '__main__':
 # sentence consist of only lowercase and uppercase English letters and spaces.
 # The words in sentence are separated by a single space.
 # There are no leading or trailing spaces.
+# C++ O(N) O(1) String
+class Solution {
+public:
+    bool isCircularSentence(string sentence) {
+        bool isValid = true;
+        for (int index = 0; index < sentence.size(); ++index) {
+            if (sentence[index] == ' ') {
+                if (sentence[index - 1] != sentence[index + 1]) {
+                    isValid = false;
+                    break;
+                }
+            }
+        }
+        if (isValid && sentence[0] != sentence[sentence.size() - 1]) {
+            isValid = false;
+        }
+        return isValid;
+    }
+};
+
+# Python O(N) O(1) String
+class Solution:
+    def isCircularSentence(self, sentence: str) -> bool:
+        is_valid: bool = True
+        for idx in range(len(sentence)):
+            if sentence[idx] == ' ':
+                if sentence[idx - 1] != sentence[idx + 1]:
+                    is_valid = False
+                    break
+        if is_valid and sentence[0] != sentence[len(sentence) - 1]:
+            is_valid = False
+        return is_valid
