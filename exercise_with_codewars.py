@@ -91427,3 +91427,13 @@ def solution(t: int) -> None:
 if __name__ == '__main__':
     t: int = int(sys.stdin.readline().rstrip())
     solution(t)
+
+# Get Planet Name By ID
+/*
+The function is not returning the correct values. Can you figure out why?
+
+Example (Input --> Output ):
+
+3 --> "Earth"
+Debugging
+*/
