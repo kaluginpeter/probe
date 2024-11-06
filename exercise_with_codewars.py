@@ -91956,3 +91956,4 @@ def solution(n: int, m: int) -> int:
 if __name__ == '__main__':
     n, m = map(int, sys.stdin.readline().rstrip().split())
     sys.stdout.write(str(solution(n, m)))
+
