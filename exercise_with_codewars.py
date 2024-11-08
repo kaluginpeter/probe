@@ -92669,3 +92669,10 @@ public:
 # register_transaction(15) -> ["$15.00"]
 # register_transaction(10) -> ["$15.00", "$10.00"]
 # StringsLanguage Features
+# format the number as a dollar value and return a list
+# of all dollar values ever registered with the function
+transactions: list[str] = []
+def register_transaction(n):
+    pay = "${:,.2f}".format(n)
+    transactions.append(pay)
+    return transactions
