@@ -93392,3 +93392,6 @@ if __name__ == '__main__':
 # Note: all the words will be lowercase, without any symbols or spaces
 #
 # FundamentalsStrings
+def adjacent_double_double_letters(word):
+    if len(word) < 4: return False
+    return any(word[idx - 3] == word[idx - 2] and word[idx - 1] == word[idx] for idx in range(3, len(word)))
