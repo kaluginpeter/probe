@@ -93893,3 +93893,14 @@ ENJOY CODING :)
 
 FundamentalsArrays
 */
+#include <vector>
+#include <algorithm>
+
+int sum_of_minimums(const std::vector<std::vector<int>> &numbers)
+{
+    int output = 0;
+    for (const std::vector<int>& row : numbers) {
+        output += *std::min_element(row.begin(), row.end());
+    }
+    return output;
+}
