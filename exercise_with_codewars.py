@@ -94034,3 +94034,41 @@ public:
 # 3 2
 # OutputCopy
 # 712
+# C++ O(N) O(1) Math
+#include <iostream>
+
+int main() {
+    int n, t;
+    std::cin >> n >> t;
+    if (t == 10) {
+        if (n == 1) {
+            std::cout << -1 << std::endl;
+        } else {
+            std::cout << "1";
+            for (int i = 0; i < n - 1; ++i) {
+                std::cout << "0";
+            }
+            std::cout << std::endl;
+        }
+    } else {
+        for (int i = 0; i < n; ++i) {
+            std::cout << t;
+        }
+        std::cout << std::endl;
+    }
+}
+
+# Python O(N) O(1) Math
+import sys
+
+
+def solution(n: int, t: int) -> str:
+    if t == 10:
+        if n == 1:
+            return '-1'
+        return '1' + '0' * (n - 1)
+    return str(t) * n
+
+if __name__ == '__main__':
+    n, t = map(int, sys.stdin.readline().rstrip().split())
+    sys.stdout.write(solution(n, t) + '\n')
