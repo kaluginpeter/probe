@@ -95940,3 +95940,20 @@ Example
 
 StringsFundamentals
 */
+#include <string>
+#include <unordered_map>
+
+std::size_t duplicateCount(const std::string& in)
+{
+  std::unordered_map<char, int> hashmap;
+  for (char letter : in) {
+    ++hashmap[std::tolower(letter)];
+  }
+  int duplicates = 0;
+  for (auto& pair : hashmap) {
+    if (pair.second > 1) {
+      ++duplicates;
+    }
+  }
+  return duplicates;
+}
