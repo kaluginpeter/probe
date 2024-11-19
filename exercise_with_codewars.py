@@ -96580,3 +96580,29 @@ int comparePowers(std::pair<long, long> n1, std::pair<long, long> n2) {
 #
 # 1 <= k <= nums.length <= 105
 # 1 <= nums[i] <= 105
+class Solution {
+public:
+    long long maximumSubarraySum(vector<int>& nums, int k) {
+        std::unordered_map<int, int> hashmap;
+        long long maxSum = 0;
+        long long curSum = 0;
+        int size = 0;
+        int n =  nums.size();
+        int left = 0;
+        for (int right = 0; right < n; ++right) {
+            ++hashmap[nums[right]];
+            ++size;
+            curSum += nums[right];
+            while (left < right && (size > k || hashmap[nums[right]] > 1)) {
+                --hashmap[nums[left]];
+                curSum -= nums[left];
+                --size;
+                ++left;
+            }
+            if (size == k) {
+                maxSum = std::max(maxSum, curSum);
+            }
+        }
+        return maxSum;
+    }
+};
