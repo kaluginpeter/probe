@@ -99311,3 +99311,82 @@ public:
 # 0 <= queries[i][0] < queries[i][1] < n
 # 1 < queries[i][1] - queries[i][0]
 # There are no repeated roads among the queries.
+# Solution
+# Complexity
+# Time
+# complexity: O(K(V + E)logV) where k is length of queries
+# Space
+# complexity: O(N)
+#
+# Code
+import heapq
+
+
+class Solution:
+    def dijkstra(self, start: int, target: int, paths: dict[int, list[int]]) -> int:
+        min_heap: list[tuple[int]] = [(0, start)]
+        seen: set[int] = set()
+        while min_heap:
+            cur_cost, vertex = heapq.heappop(min_heap)
+            if vertex in seen: continue
+            seen.add(vertex)
+            if vertex == target: return cur_cost
+            for neighbor in paths[vertex]:
+                if neighbor in seen: continue
+                heapq.heappush(min_heap, (cur_cost + 1, neighbor))
+
+    def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
+        paths: dict[int, list[int]] = dict()
+        for vertex in range(n):
+            if vertex not in paths:
+                paths[vertex] = []
+            if vertex == n - 1: continue
+            paths[vertex].append(vertex + 1)
+        answer: list[int] = []
+        for query in queries:
+            source, destination = query
+            paths[source].append(destination)
+            answer.append(self.dijkstra(0, n - 1, paths))
+        return answer
+
+# C++ O(K(ElogE)) O(ElogE)
+class Solution {
+public:
+    int dijkstra(int source, int destination, std::unordered_map<int, std::vector<int>>& paths) {
+        std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> pq;
+        pq.push({0, source});
+        std::unordered_set<int> seen;
+        while (pq.size()) {
+            int curTime = pq.top().first;
+            int curVertex = pq.top().second;
+            pq.pop();
+            if (curVertex == destination) {
+                return curTime;
+            }
+            if (seen.count(curVertex)) {
+                continue;
+            }
+            seen.insert(curVertex);
+            for (int neighbor : paths[curVertex]) {
+                if (!seen.count(neighbor)) {
+                    pq.push({curTime + 1, neighbor});
+                }
+            }
+        }
+        return -1;
+    }
+    vector<int> shortestDistanceAfterQueries(int n, vector<vector<int>>& queries) {
+        std::unordered_map<int, std::vector<int>> paths;
+        for (int vertex = 0; vertex < n; ++ vertex) {
+            paths[vertex].push_back(vertex + 1);
+        }
+        std::vector<int> output;
+        for (std::vector<int>& query : queries) {
+            int source = query[0];
+            int destination = query[1];
+            paths[source].push_back(destination);
+            output.push_back(dijkstra(0, n - 1, paths));
+        }
+        return output;
+    }
+};
