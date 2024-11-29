@@ -100061,3 +100061,9 @@ if __name__ == '__main__':
 # See example tests for details.
 #
 # Puzzles
+def order(pizzas, salads, appetizers):
+    garnire_time: float = salads * 3 + appetizers * 5 # for salads and appetizers
+    pizza_time = pizzas * 3 / 2 # for prepping pizzas
+    parts_ovens: int = pizzas // 5 + int(pizzas % 5 != 0)  # total ovens needed
+    pizza_time += parts_ovens // 2 * 10 + parts_ovens % 2 * 10 # total bake time
+    return max(pizza_time, garnire_time)
