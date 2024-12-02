@@ -100561,3 +100561,39 @@ unsigned long long countChange(const unsigned int money, const std::vector<unsig
 # 1 <= searchWord.length <= 10
 # sentence consists of lowercase English letters and spaces.
 # searchWord consists of lowercase English letters.
+# Python O(N) O(N) String
+class Solution:
+    def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
+        words: list[str] = sentence.split()
+        for idx in range(len(words)):
+            if words[idx].startswith(searchWord):
+                return idx + 1
+        return -1
+
+# C++ O(N) O(1) String Two Pointers
+class Solution {
+public:
+    int isPrefixOfWord(string sentence, string searchWord) {
+        int n = searchWord.size();
+        int m = sentence.size();
+        int whitespaces = 0;
+        int j = 0;
+        bool validPrefix = true;
+        for (int i = 0; i < m; ++i) {
+            if (sentence[i] == ' ') {
+                j = -1;
+                validPrefix = true;
+                ++whitespaces;
+            } else if (validPrefix && sentence[i] != searchWord[j]) {
+                validPrefix = false;
+            }
+            if (validPrefix) {
+                ++j;
+            }
+            if (j == n) {
+                return whitespaces + 1;
+            }
+        }
+        return -1;
+    }
+};
