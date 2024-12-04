@@ -100973,3 +100973,13 @@ public:
 # Remember that all the words will correspond to U.K. English (Oxford Dictionary).
 #
 # FundamentalsAlgorithmsData Structures
+def unscramble(scramble):
+    global word_list # available in preloaded
+    hashmap: dict[str, list[str]] = dict()
+    for word in word_list:
+        canon: str = ''.join(sorted(word))
+        if canon not in hashmap:
+            hashmap[canon] = list()
+        hashmap[canon].append(word)
+    canon: str = ''.join(sorted(scramble))
+    return hashmap[canon]
