@@ -101131,3 +101131,12 @@ if __name__ == '__main__':
 # Notes
 # 2 <= number of steps <= 1000
 # LogicAlgorithmsDynamic Programming
+def climbing_stairs(cost):
+    n: int = len(cost)
+    dp: list[int] = [0] * (n + 1)
+    dp[0] = cost[0]
+    dp[1] = cost[1]
+    for stair in range(2, n + 1):
+        sm: int = cost[stair] if stair < n else 0
+        dp[stair] = min(dp[stair - 1], dp[stair - 2]) + sm
+    return dp[n]
