@@ -101521,3 +101521,55 @@ public:
 #  candies, and Bianca has 4
 # .
 # Since Mihai always has more candies than Bianca, this reordering works.
+# C++ O(N) O(1) Greedy
+#include <iostream>
+#include <vector>
+
+
+void solution(int t) {
+    for (int i = 0; i < t; ++i) {
+        int n;
+        std::cin >> n;
+        int odds = 0;
+        int evens = 0;
+        for (int j = 0; j < n; ++j) {
+            int bag;
+            std::cin >> bag;
+            if (bag % 2 == 0) {
+                evens += bag;
+            } else {
+                odds += bag;
+            }
+        }
+        std::cout << (evens > odds? "YES" : "NO") << "\n";
+    }
+}
+
+
+int main() {
+    int t;
+    std::cin >> t;
+    solution(t);
+}
+
+# Python O(N) O(1) Greedy
+import sys
+
+
+def solution(t: int) -> None:
+    for _ in range(t):
+        n: int = int(sys.stdin.readline().rstrip())
+        bags: list = list(map(int, sys.stdin.readline().rstrip().split()))
+        evens: int = 0
+        odds: int = 0
+        for bag in bags:
+            if bag & 1:
+                odds += bag
+            else:
+                evens += bag
+        sys.stdout.write(['NO', 'YES'][evens > odds] + '\n')
+
+
+if __name__ == '__main__':
+    t: int = int(sys.stdin.readline().rstrip())
+    solution(t)
