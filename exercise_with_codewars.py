@@ -102809,3 +102809,5 @@ if __name__ == '__main__':
 # For example Joe will have a weight of 254, instead of 286 using normal ascii values.
 #
 # StringsFundamentals
+def get_weight(name):
+    return sum(ord(l.swapcase()) for l in name if l.isalpha())
