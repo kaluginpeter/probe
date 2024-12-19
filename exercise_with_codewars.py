@@ -106046,3 +106046,13 @@ if __name__ == '__main__':
 # index 0: 'u' = 21, 'y' = 25, 'w' = '23', μ = 23 = 'w'
 # index 1: ' ' = 0,  ' ' = 0,  'e' = 5,    μ = 1.667 = 'a'
 # ArraysStringsCiphers
+def decipher(code):
+    output: list[str] = []
+    for idx in range(len(code[0])):
+        s: int = 0
+        for c in code:
+            if c[idx] != ' ':
+                s += ord(c[idx]) - 96
+        digit: int = s // len(code)
+        output.append(chr(digit + 96) if digit else ' ')
+    return ''.join(output)
