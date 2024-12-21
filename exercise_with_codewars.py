@@ -106687,3 +106687,15 @@ if __name__ == '__main__':
 # Once you've been able to solve this kata, a performance version of this problem is awaiting you.
 #
 # MathematicsAlgorithmsArrays
+def pisano(n):
+    if n == 0:
+        return 1
+    elif n == 1:
+        return 1
+    previous, current = 0, 1
+    period_length = 0
+    for _ in range(n * n):
+        previous, current = current, (previous + current) % n
+        period_length += 1
+        if previous == 0 and current == 1:
+            return period_length
