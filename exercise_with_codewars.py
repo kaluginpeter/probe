@@ -107702,3 +107702,8 @@ if __name__ == '__main__':
 # hand_out_gift("Maria");
 # hand_out_gift("Peter"); # <-- must throw an error
 # Algorithms
+memo: set[str] = set()
+
+def hand_out_gift(name):
+    if name in memo: raise Exception
+    memo.add(name)
