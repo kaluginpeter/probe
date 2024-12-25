@@ -108289,3 +108289,5 @@ if __name__ == '__main__':
 #
 # Hope you have fun:-)!
 # FundamentalsMathematicsArraysMatrix
+def rotate_matrix(arr):
+    return [[arr[r][c] for r in range(len(arr))] for c in range(len(arr[0]) - 1, -1, -1)]
