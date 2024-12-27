@@ -108496,3 +108496,32 @@ def solve(n):
 #
 # 2 <= values.length <= 5 * 104
 # 1 <= values[i] <= 1000
+# Dynamic Programming without extra space
+# Complexity
+# Time complexity: O(N)
+# Space complexity: O(1)
+# Code
+class Solution:
+    def maxScoreSightseeingPair(self, values: List[int]) -> int:
+        profit: int = 0
+        max_prev_day: int = values[0]
+        for day in range(1, len(values)):
+            max_prev_day -= 1
+            profit = max(profit, values[day] + max_prev_day)
+            max_prev_day = max(max_prev_day, values[day])
+        return profit
+
+# C++ O(N) O(1) Dynamic Programming
+class Solution {
+public:
+    int maxScoreSightseeingPair(vector<int>& values) {
+        int maxPrevDay = values[0];
+        int output = 0;
+        for (int idx = 1; idx < values.size(); ++idx) {
+            --maxPrevDay;
+            output = std::max(output, values[idx] + maxPrevDay);
+            maxPrevDay = std::max(maxPrevDay, values[idx]);
+        }
+        return output;
+    }
+};
