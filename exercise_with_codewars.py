@@ -109070,6 +109070,291 @@ def valid_number(n):
         return False
     return len(n) - idx == 2 and all(digit.isdigit() for digit in n[idx:])
 
+# 1639. Number of Ways to Form a Target String Given a Dictionary
+# You are given a list of strings of the same length words and a string target.
+#
+# Your task is to form target using the given words under the following rules:
+#
+# target should be formed from left to right.
+# To form the ith character (0-indexed) of target, you can choose the kth character of the jth string in words if target[i] = words[j][k].
+# Once you use the kth character of the jth string of words, you can no longer use the xth character of any string in words where x <= k. In other words, all characters to the left of or at index k become unusuable for every string.
+# Repeat the process until you form the string target.
+# Notice that you can use multiple characters from the same string in words provided the conditions above are met.
+#
+# Return the number of ways to form target from words. Since the answer may be too large, return it modulo 109 + 7.
+#
+#
+#
+# Example 1:
+#
+# Input: words = ["acca","bbbb","caca"], target = "aba"
+# Output: 6
+# Explanation: There are 6 ways to form target.
+# "aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("caca")
+# "aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("caca")
+# "aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("acca")
+# "aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("acca")
+# "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
+# "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca")
+# Example 2:
+#
+# Input: words = ["abba","baab"], target = "bab"
+# Output: 4
+# Explanation: There are 4 ways to form target.
+# "bab" -> index 0 ("baab"), index 1 ("baab"), index 2 ("abba")
+# "bab" -> index 0 ("baab"), index 1 ("baab"), index 3 ("baab")
+# "bab" -> index 0 ("baab"), index 2 ("baab"), index 3 ("baab")
+# "bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab")
+#
+#
+# Constraints:
+#
+# 1 <= words.length <= 1000
+# 1 <= words[i].length <= 1000
+# All strings in words have the same length.
+# 1 <= target.length <= 1000
+# words[i] and target contain only lowercase English letters.
+# Python O(TL) O(TL) Dynamic Programming
+class Solution:
+    def numWays(self, words: List[str], target: str) -> int:
+        MOD: int = 10**9 + 7
+        T, L = len(target), len(words[0])
+        freq: list[list[int]] = [[0] * 26 for _ in range(L)]
+        for word in words:
+            for i, char in enumerate(word):
+                freq[i][ord(char) - ord('a')] += 1
+
+        dp: list[list[int]] = [[0] * (L + 1) for _ in range(T + 1)]
+        dp[0][0] = 1
+        for tindex in range(T + 1):
+            for windex in range(L):
+                dp[tindex][windex + 1] = (dp[tindex][windex + 1] + dp[tindex][windex]) % MOD
+                if tindex < T:
+                    char_idx: int = ord(target[tindex]) - ord('a')
+                    dp[tindex + 1][windex + 1] = (dp[tindex + 1][windex + 1] + dp[tindex][windex] * freq[windex][char_idx]) % MOD
+        return dp[T][L]
+
+# C++ O(TL) O(TL) Dynamic Programming
+class Solution {
+public:
+    int numWays(vector<string>& words, string target) {
+        int MOD = 1000000007;
+        int T = target.size();
+        int L = words[0].size();
+        std::vector<std::vector<int>> freq(L, std::vector<int>(26, 0));
+        for (std::string word : words) {
+            for (int idx = 0; idx < L; ++idx) {
+                ++freq[idx][word[idx] - 'a'];
+            }
+        }
+        std::vector<std::vector<long long>> dp(T + 1, std::vector<long long>(L + 1, 0));
+        dp[0][0] = 1;
+        for (int tindex = 0; tindex < T + 1; ++tindex) {
+            for (int windex = 0; windex < L; ++windex) {
+                dp[tindex][windex + 1] = (dp[tindex][windex + 1] + dp[tindex][windex]) % MOD;
+                if (tindex < T) {
+                    int charIdx = target[tindex] - 'a';
+                    dp[tindex + 1][windex + 1] = (
+                        dp[tindex + 1][windex + 1] + dp[tindex][windex] % MOD * freq[windex][charIdx] % MOD
+                    ) % MOD;
+                }
+            }
+        }
+        return static_cast<int>(dp[T][L]);
+    }
+};
+
+# 2466. Count Ways To Build Good Strings
+# Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:
+#
+# Append the character '0' zero times.
+# Append the character '1' one times.
+# This can be performed any number of times.
+#
+# A good string is a string constructed by the above process having a length between low and high (inclusive).
+#
+# Return the number of different good strings that can be constructed satisfying these properties. Since the answer can be large, return it modulo 109 + 7.
+#
+#
+#
+# Example 1:
+#
+# Input: low = 3, high = 3, zero = 1, one = 1
+# Output: 8
+# Explanation:
+# One possible valid good string is "011".
+# It can be constructed as follows: "" -> "0" -> "01" -> "011".
+# All binary strings from "000" to "111" are good strings in this example.
+# Example 2:
+#
+# Input: low = 2, high = 3, zero = 1, one = 2
+# Output: 5
+# Explanation: The good strings are "00", "11", "000", "110", and "011".
+#
+#
+# Constraints:
+#
+# 1 <= low <= high <= 105
+# 1 <= zero, one <= low
+# Python O(N) O(N) Dynamic Programming
+class Solution:
+    def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
+        dp: list[int] = [0] * (high + 1)
+        MOD: int = 10**9 + 7
+        dp[0] = 1
+        for L in range(high + 1):
+            if L + one <= high:
+                dp[L + one] = (dp[L + one] + dp[L]) % MOD
+            if L + zero <= high:
+                dp[L + zero] = (dp[L + zero] + dp[L]) % MOD
+        score: int = 0
+        for i in range(low, high + 1):
+            score = (score + dp[i]) % MOD
+        return score
+
+# C++ O(N) O(N) Dynamic Programming
+class Solution {
+public:
+    int countGoodStrings(int low, int high, int zero, int one) {
+        int bound = high + 1;
+        std::vector<int> dp(bound);
+        int MOD = 1000000007;
+        dp[0] = 1;
+        for (int L = 0; L <= high; ++L) {
+            if (L + zero <= high) {
+                dp[L + zero] = (dp[L + zero] + dp[L]) % MOD;
+            }
+            if (L + one <= high) {
+                dp[L + one] = (dp[L + one] + dp[L]) % MOD;
+            }
+        }
+        int score = 0;
+        for (int i = low; i <= high; ++i) {
+            score = (score + dp[i]) % MOD;
+        }
+        return score;
+    }
+};
+
+# A. Business trip
+# A. Business trip
+# time limit per test2 seconds
+# memory limit per test256 megabytes
+# What joy! Petya's parents went on a business trip for the whole year and the playful kid is left all by himself. Petya got absolutely happy. He jumped on the bed and threw pillows all day long, until...
+#
+# Today Petya opened the cupboard and found a scary note there. His parents had left him with duties: he should water their favourite flower all year, each day, in the morning, in the afternoon and in the evening. "Wait a second!" — thought Petya. He know for a fact that if he fulfills the parents' task in the i-th (1 ≤ i ≤ 12) month of the year, then the flower will grow by ai centimeters, and if he doesn't water the flower in the i-th month, then the flower won't grow this month. Petya also knows that try as he might, his parents won't believe that he has been watering the flower if it grows strictly less than by k centimeters.
+#
+# Help Petya choose the minimum number of months when he will water the flower, given that the flower should grow no less than by k centimeters.
+#
+# Input
+# The first line contains exactly one integer k (0 ≤ k ≤ 100). The next line contains twelve space-separated integers: the i-th (1 ≤ i ≤ 12) number in the line represents ai (0 ≤ ai ≤ 100).
+#
+# Output
+# Print the only integer — the minimum number of months when Petya has to water the flower so that the flower grows no less than by k centimeters. If the flower can't grow by k centimeters in a year, print -1.
+#
+# Examples
+# InputCopy
+# 5
+# 1 1 1 1 2 2 3 2 2 1 1 1
+# OutputCopy
+# 2
+# InputCopy
+# 0
+# 0 0 0 0 0 0 0 1 1 2 3 0
+# OutputCopy
+# 0
+# InputCopy
+# 11
+# 1 1 4 1 1 5 1 1 4 1 1 1
+# OutputCopy
+# 3
+# Note
+# Let's consider the first sample test. There it is enough to water the flower during the seventh and the ninth month. Then the flower grows by exactly five centimeters.
+#
+# In the second sample Petya's parents will believe him even if the flower doesn't grow at all (k = 0). So, it is possible for Petya not to water the flower at all.
+# C++ O(NlogN) O(1) Greedy
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+
+void solution() {
+    int k;
+    std::cin >> k;
+    std::vector<int> waters;
+    for (int i = 0; i < 12; ++i) {
+        int water;
+        std::cin >> water;
+        waters.push_back(water);
+    }
+    if (k == 0) {
+        std::cout << "0\n";
+        return;
+    }
+    std::sort(waters.begin(), waters.end());
+    for (int i = 11; i >= 0; --i) {
+        k -= waters[i];
+        if (k <= 0) {
+            std::cout << 12 - i << "\n";
+            return;
+        }
+    }
+    std::cout << "-1\n";
+}
+
+
+int main() {
+    solution();
+}
+
+# Python O(NlogN) O(1) Greedy
+from __future__ import annotations
+import sys
+
+
+def solution() -> None:
+    k: int = int(sys.stdin.readline().rstrip())
+    waters: list[int] = sorted(map(int, sys.stdin.readline().rstrip().split()))
+    if k == 0:
+        sys.stdout.write('0\n')
+        return
+    for i in range(11, -1, -1):
+        k -= waters[i]
+        if k <= 0:
+            sys.stdout.write(str(12 - i) + '\n')
+            return
+    sys.stdout.write('-1\n')
+
+
+if __name__ == '__main__':
+    solution()
+
+# Array Manipulation
+# Given an array of positive integers, replace every element with the least greater element to its right. If there is no greater element to its right, replace it with -1. For instance, given the array
+#
+# [8, 58, 71, 18, 31, 32, 63, 92, 43, 3, 91, 93, 25, 80, 28],
+#
+# the desired output is
+#
+# [18, 63, 80, 25, 32, 43, 80, 93, 80, 25, 93, -1, 28, -1, -1].
+#
+# Your task is to create a function that takes in an array as its argument, manipulates the array as described above, then return the resulting array.
+#
+# Note: Return a new array, rather than modifying the passed array.
+#
+# ArraysBinary Search TreesAlgorithms
+def array_manip(array):
+    output: list[int] = []
+    for i in range(len(array)):
+        min_el: int = float('inf')
+        seen: bool = False
+        for j in range(i + 1, len(array)):
+            if array[j] > array[i] and array[j] < min_el:
+                min_el = array[j]
+                seen = True
+        output.append(min_el if seen else -1)
+    return output
+
 # 983. Minimum Cost For Tickets
 # You have planned some train traveling one year in advance. The days of the year in which you will travel are given as an integer array days. Each day is an integer from 1 to 365.
 
