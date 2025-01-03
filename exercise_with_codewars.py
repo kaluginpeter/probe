@@ -110188,3 +110188,5 @@ if __name__ == '__main__':
 # Input: "Я"
 # Output: true (or True in Python or your language's equivalent)
 # StringsUnicode
+def is_cyrillic(letter):
+    return 1024 <= ord(letter) <= 1279
