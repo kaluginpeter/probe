@@ -112701,3 +112701,16 @@ if __name__ == '__main__':
 # • Oh, and no itertools ;)
 #
 # FundamentalsAlgorithmsCombinatoricsMathematicsLogic
+def nth_perm(n: int, d: int) -> str:
+    from math import factorial
+    digits = [str(i) for i in range(d)]
+    result = []
+    n -= 1
+    for i in range(d):
+        block_size = factorial(d - 1 - i)
+        index = n // block_size
+        result.append(digits[index])
+        digits.pop(index)
+        n %= block_size
+
+    return ''.join(result)
