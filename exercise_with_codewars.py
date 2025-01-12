@@ -113086,3 +113086,44 @@ def logistic_map(width, height, xs, ys):
 # -1 -2 3 0 4
 # Выходные данныеСкопировать
 # 0 -1 -3 0 0 4
+# C++ O(N) O(1) Math PrefixSum
+#include <bits/stdc++.h>
+
+
+void solution() {
+    int n;
+    std::cin >> n;
+    long long prev = 0;
+    for (int i = 0; i < n; ++i) {
+        std::cout << prev << " ";
+        int num;
+        std::cin >> num;
+        prev += num;
+    }
+    std::cout << prev << "\n";
+}
+
+
+int main() {
+    std::ios::sync_with_stdio(NULL);
+    std::cin.tie(NULL);
+    std::cout.tie(NULL);
+    solution();
+}
+
+# Python O(N) O(1) Math PrefixSum
+import sys
+
+
+def solution() -> None:
+    n: int = int(sys.stdin.readline().rstrip())
+    prev: int = 0
+    nums: iter[int] = map(int, sys.stdin.readline().rstrip().split())
+    for _ in range(n):
+        sys.stdout.write(str(prev) + ' ')
+        prev += next(nums)
+    sys.stdout.write(str(prev) + '\n')
+
+
+if __name__ == '__main__':
+    solution()
