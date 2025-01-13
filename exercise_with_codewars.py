@@ -113312,3 +113312,31 @@ std::string coin(int n) {
 #
 # 1 <= s.length <= 2 * 105
 # s consists only of lowercase English letters.
+# Python O(N) O(26) HashMap
+class Solution:
+    def minimumLength(self, s: str) -> int:
+        pool: list[int] = [0] * 26
+        for letter in s:
+            pool[ord(letter) - 97] += 1
+        return sum(1 if pool[i] % 2 else 2 for i in range(26) if pool[i])
+
+# C++ O(N) O(26) HashMap
+class Solution {
+public:
+    int minimumLength(string s) {
+        std::vector<int> pool (26, 0);
+        for (char& letter : s) {
+            ++pool[letter - 'a'];
+        }
+        int output = 0;
+        for (int i = 0; i < 26; ++i) {
+            if (!pool[i]) continue;
+            if (pool[i] % 2) {
+                ++output;
+            } else {
+                output += 2;
+            }
+        }
+        return output;
+    }
+};
