@@ -113849,3 +113849,15 @@ Note: albeit this is more clearly a logical than a coding problem, do not undere
 
 LogicFundamentals
 */
+#include <cmath>
+
+unsigned int howManyMeasurements(unsigned int n) {
+  if (n <= 1) return 0;
+  if (n == 2) return 1;
+  unsigned int weighings = 0;
+  while (n > 1) {
+    n = (n + 2) / 3;
+    ++weighings;
+  }
+  return weighings;
+}
