@@ -114296,3 +114296,29 @@ std::vector<int> orArrays(const std::vector<int>& arr1, const std::vector<int>& 
 # The possible positions in the first sample are: 2 and 3 (if we number the positions starting with 1).
 #
 # In the second sample they are 3, 4 and 5.
+# C++ O(1) O(1) Math
+#include <bits/stdc++.h>
+
+
+void solution() {
+    int n, a, b;
+    std::cin >> n >> a >> b;
+    std::cout << std::min(n - a, b + 1) << "\n";
+}
+
+
+int main() {
+    solution();
+}
+
+# Python O(1) O(1) Math
+import sys
+
+
+def solution() -> None:
+    n, a, b = map(int, sys.stdin.readline().rstrip().split())
+    sys.stdout.write(str(min(n - a, b + 1)) + '\n')
+
+
+if __name__ == '__main__':
+    solution()
