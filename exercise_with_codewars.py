@@ -116367,3 +116367,9 @@ if __name__ == '__main__':
 # 5 % 3 == 2 % 3 == 8 % 3 == 2
 #
 # Algorithms
+def finding_k(arr):
+    answer: int = -1
+    for k in range(1, max(arr)):
+        if all(i % k == j % k for i, j in zip(arr, arr[1:])):
+            answer = k
+    return answer
