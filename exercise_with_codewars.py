@@ -117376,3 +117376,6 @@ if __name__ == '__main__':
 # 5 --> 60      // 1 to 5 can all divide evenly into 60
 # 10 --> 2520
 # Algorithms
+from math import lcm
+def smallest(n):
+    return lcm(*range(1, n + 1))
