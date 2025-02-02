@@ -118285,3 +118285,33 @@ std::vector<int> beggars(const std::vector<int>& values, unsigned int n){
 # Constraints:
 # 1 <= nums.length <= 100
 # 1 <= nums[i] <= 100
+
+# Python O(N) O(1) Greedy
+class Solution:
+    def check(self, nums: List[int]) -> bool:
+        has_break: bool = False
+        breaks: int = 0
+        for i in range(len(nums) - 1):
+            if nums[i] > nums[i + 1]:
+                has_break = True
+                breaks += 1
+                if breaks > 1: return False
+        return not breaks or nums[0] >= nums[-1]
+
+# C++ O(N) O(1) Greedy
+class Solution:
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+        bool hasBreak = false;
+        int breaks = 0;
+        for (int i = 0; i < nums.size() - 1; ++i) {
+            if (nums[i] > nums[i + 1]) {
+                hasBreak = true;
+                ++breaks;
+                if (breaks > 1) return false;
+            }
+        }
+        return !hasBreak || nums[0] >= nums[nums.size() - 1];
+    }
+};
