@@ -118659,3 +118659,15 @@ Since the number of passengers inside the tram never exceeds 6, a capacity of 6 
 
 FundamentalsAlgorithms
 */
+#include <vector>
+
+int tram(int stops, const std::vector<int>& a, const std::vector<int>& b) {
+  int top = b[0] - a[0];
+  int mx = top;
+  for (int i = 1; i < stops; ++i) {
+    top -= a[i];
+    top += b[i];
+    mx = std::max(mx, top);
+  }
+  return (stops? mx : 0);
+}
