@@ -118520,3 +118520,45 @@ bool hasSubpattern(const std::string& str){
 #
 # 1 <= nums.length <= 50
 # 1 <= nums[i] <= 50
+# Python O(N) O(1) Two Pointers Sliding Window
+class Solution:
+    def longestMonotonicSubarray(self, nums: List[int]) -> int:
+        max_length: int = 1
+        n: int = len(nums)
+        incr: int = 0
+        decr: int = 0
+        for idx in range(1, n):
+            if nums[idx] >= nums[idx - 1]:
+                max_length = max(max_length, idx - decr)
+                decr = idx
+            if nums[idx] <= nums[idx - 1]:
+                max_length = max(max_length, idx - incr)
+                incr = idx
+        max_length = max(max_length, n - incr)
+        max_length = max(max_length, n - decr)
+        return max_length
+
+# C++ O(N) O(1) Sliding Window Two Pointers
+class Solution {
+public:
+    int longestMonotonicSubarray(vector<int>& nums) {
+        int maxLength = 1;
+        int n = nums.size();
+        int incr = 0;
+        int decr = 0;
+        for (int idx = 1; idx < n; ++idx) {
+            if (nums[idx] >= nums[idx - 1]) {
+                maxLength = std::max(maxLength, idx - decr);
+                decr = idx;
+            }
+            if (nums[idx] <= nums[idx - 1]) {
+                maxLength = std::max(maxLength, idx - incr);
+                incr = idx;
+            }
+        }
+        maxLength = std::max(maxLength, n - decr);
+        maxLength = std::max(maxLength, n - incr);
+
+        return maxLength;
+    }
+};
