@@ -118702,3 +118702,28 @@ int tram(int stops, const std::vector<int>& a, const std::vector<int>& b) {
 #
 # 1 <= nums.length <= 100
 # 1 <= nums[i] <= 100
+# Python O(N) O(1) Sliding Window Greedy
+class Solution:
+    def maxAscendingSum(self, nums: List[int]) -> int:
+        max_sum: int = nums[0]
+        cur_sum: int = nums[0]
+        for i in range(1, len(nums)):
+            if nums[i] <= nums[i - 1]: cur_sum = nums[i]
+            else: cur_sum += nums[i]
+            max_sum = max(max_sum, cur_sum)
+        return max_sum
+
+# C++ O(N) O(1) Sliding Window Greedy
+class Solution {
+public:
+    int maxAscendingSum(vector<int>& nums) {
+        int maxSum = nums[0];
+        int curSum = nums[0];
+        for (int i = 1; i < nums.size(); ++i) {
+            if (nums[i] <= nums[i - 1]) curSum = nums[i];
+            else curSum += nums[i];
+            if (maxSum < curSum) maxSum = curSum;
+        }
+        return maxSum;
+    }
+};
