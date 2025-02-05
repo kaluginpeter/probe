@@ -118870,3 +118870,36 @@ std::vector<char> uniqueInOrder(const std::string& iterable){
 # 1 <= s1.length, s2.length <= 100
 # s1.length == s2.length
 # s1 and s2 consist of only lowercase English letters.
+
+# Python O(N) O(1) Two Pointers
+class Solution:
+    def areAlmostEqual(self, s1: str, s2: str) -> bool:
+        differ: int = 0
+        left = right = -1
+        for i in range(len(s1)):
+            if s1[i] != s2[i]:
+                differ += 1
+                if left == -1: left = i
+                elif right == -1: right = i
+        if not differ: return True
+        elif differ != 2: return False
+        return (s1[left] == s2[right]) and (s1[right] == s2[left])
+
+# C++ O(N) O(1) Two Pointers
+class Solution {
+public:
+    bool areAlmostEqual(string s1, string s2) {
+        int differ = 0;
+        int left = -1, right = -1;
+        for (int i = 0; i < s1.size(); ++i) {
+            if (s1[i] != s2[i]) {
+                ++differ;
+                if (left == -1) left = i;
+                else if (right == -1) right = i;
+            }
+        }
+        if (!differ) return true;
+        if (differ != 2) return false;
+        return (s1[right] == s2[left]) && (s1[left] == s2[right]);
+    }
+};
