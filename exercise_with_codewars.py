@@ -119271,3 +119271,7 @@ if __name__ == '__main__':
 # All elements in the list will be valid numbers.
 #
 # LogicMathematicsArraysListsFundamentals
+def total(arr):
+    while len(arr) > 1:
+        arr = [arr[i] + arr[i + 1] for i in range(len(arr) - 1)]
+    return arr[0]
