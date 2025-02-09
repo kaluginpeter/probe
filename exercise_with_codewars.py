@@ -120017,3 +120017,12 @@ if __name__ == '__main__':
 # 0 can be substituted for O
 # 5 can be substituted for S
 # FundamentalsStrings
+def hex_word_sum(s):
+    s = s.translate(str.maketrans('OS', '05'))
+    output: int = 0
+    for word in s.split():
+        try:
+            output += int(word, 16)
+        except:
+            continue
+    return output
