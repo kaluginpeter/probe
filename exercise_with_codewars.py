@@ -120222,3 +120222,27 @@ public:
 # 1 <= s.length <= 100
 # s consists only of lowercase English letters and digits.
 # The input is generated such that it is possible to delete all digits.
+
+# Python O(N) O(N) Stack Simulation
+class Solution:
+    def clearDigits(self, s: str) -> str:
+        stack: list[str] = []
+        for ch in s:
+            if ch.isdigit():
+                if stack: stack.pop()
+            else: stack.append(ch)
+        return ''.join(stack)
+
+# C++ O(N) O(N) Stack Simulation
+class Solution {
+public:
+    string clearDigits(string s) {
+        std::string output = "";
+        for (char& ch : s) {
+            if (std::isdigit(ch)) {
+                if (output.size()) output.pop_back();
+            } else output.push_back(ch);
+        }
+        return output;
+    }
+};
