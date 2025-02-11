@@ -120536,3 +120536,11 @@ n will always be greater than or equal to 2
 
 AlgorithmsArrays
 */
+std::vector<int> L (int n, int L0, int L1, int add)
+{
+  std::vector<int> output = {L0, L1};
+  for (int i = 2; i < n; ++i) {
+    output.push_back(output[i - 1] + output[i - 2] + add);
+  }
+  return output;
+}
