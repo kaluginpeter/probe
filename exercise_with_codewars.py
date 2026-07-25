@@ -248836,3 +248836,6 @@ func Comp(array1 []int, array2 []int) bool {
 # Good luck!!!
 #
 # Arrays
+is_valid = lambda sheep: sorted(sheep) == sorted('sheep')
+def reload_sheeps(arr):
+    return ['sheep' for sheep in arr if is_valid(sheep)]
