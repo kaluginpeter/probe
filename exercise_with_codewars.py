@@ -249069,3 +249069,28 @@ double solve(double m)
 # Constraints:
 # 2 <= nums.length <= 500
 # 1 <= nums[i] <= 10^3
+
+# Python O(N) O(1) Greedy
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        x: int = 0
+        y: int = 0
+        for num in nums:
+            if num > x: x, y = num, x
+            elif num > y: y = num
+        return (x - 1) * (y - 1)
+
+# C++ O(1) O(1) Greedy
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int x = 0, y = 0;
+        for (int& num : nums) {
+            if (num > x) {
+                y = x;
+                x = num;
+            } else if (num > y) y = num;
+        }
+        return --x * --y;
+    }
+};
