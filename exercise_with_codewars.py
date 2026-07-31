@@ -249570,3 +249570,20 @@ You're also going to need to be efficient, because we'll be testing some pretty 
 Random tests
 MathematicsAlgorithmsPerformance
 */
+package kata
+
+func ModPow(base, exponent, modulo uint64) uint64 {
+	if modulo == 1 {
+		return 0
+	}
+	base %= modulo
+	result := uint64(1)
+	for exponent > 0 {
+		if exponent&1 == 1 {
+			result = (result * base) % modulo
+		}
+		base = (base * base) % modulo
+		exponent >>= 1
+	}
+	return result
+}
