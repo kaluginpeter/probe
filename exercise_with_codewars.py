@@ -250888,3 +250888,28 @@ Examples:
 "String" => "StRiNg"
 "Weird string case" => "WeIrD StRiNg CaSe"
 StringsAlgorithms
+package kata
+
+import (
+	"strings"
+	"unicode"
+)
+
+func toWeirdCase(str string) string {
+	var result strings.Builder
+	index := 0
+	for _, ch := range str {
+		if ch == ' ' {
+			result.WriteRune(ch)
+			index = 0
+			continue
+		}
+		if index%2 == 0 {
+			result.WriteRune(unicode.ToUpper(ch))
+		} else {
+			result.WriteRune(unicode.ToLower(ch))
+		}
+		index++
+	}
+	return result.String()
+}
