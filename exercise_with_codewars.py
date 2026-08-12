@@ -251118,3 +251118,36 @@ func InAscOrder(numbers []int) bool {
 # 1 <= nums.length <= 105
 # 1 <= nums[i] <= 109
 # 1 <= k <= nums.length
+
+# Python O(N) O(D) TwoPointers HashMap
+class Solution:
+    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
+        freq: dict[int, int] = defaultdict(int)
+        left: int = 0
+        n: int = len(nums)
+        output: int = 0
+        for right in range(n):
+            freq[nums[right]] += 1
+            while freq[nums[right]] > k:
+                freq[nums[left]] -= 1
+                left += 1
+            output = max(output, right - left + 1)
+        return output
+
+# C++ O(N) O(D) HashMap TwoPointers
+class Solution {
+public:
+    int maxSubarrayLength(vector<int>& nums, int k) {
+        std::unordered_map<int, size_t> freq;
+        size_t n = nums.size(), left = 0, right = 0, output = 0;
+        for (size_t right = 0; right < n; ++right) {
+            ++freq[nums[right]];
+            while (freq[nums[right]] > k) {
+                --freq[nums[left]];
+                ++left;
+            }
+            output = std::max(output, right - left + 1);
+        }
+        return output;
+    }
+};
