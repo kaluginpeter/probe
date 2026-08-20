@@ -252377,3 +252377,20 @@ Examples ( Input --> Output )
 114 --> -1  #  because 114 is not a perfect square
 AlgebraFundamentals
 */
+package kata
+
+import "math"
+
+func FindNextSquare(sq int64) int64 {
+	root := int64(math.Sqrt(float64(sq)))
+	for root*root > sq {
+		root--
+	}
+	for (root+1)*(root+1) <= sq {
+		root++
+	}
+	if root*root != sq {
+		return -1
+	}
+	return (root + 1) * (root + 1)
+}
