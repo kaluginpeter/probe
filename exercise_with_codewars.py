@@ -252699,3 +252699,15 @@ Constraints:
 
 1 <= n <= 106
 */
+class Solution {
+public:
+    bool checkDivisibility(int n) {
+        int digitProd = 1, digitSum = 0, tmp = n;
+        while (tmp) {
+            digitProd *= tmp % 10;
+            digitSum += tmp % 10;
+            tmp /= 10;
+        }
+        return n % (digitProd + digitSum) == 0;
+    }
+};
