@@ -252650,3 +252650,13 @@ func radToDeg(rad float64) float64 { return rad * 180 / math.Pi }
 # Read more about xor.
 # Look for patterns for successive n values.
 # AlgorithmsPuzzles
+def xor_reduction(m, n):
+    def f(k):
+        if k < 0: return 0
+        mod = k % 4
+        if mod == 0: return k
+        elif mod == 1: return 1
+        elif mod == 2: return k + 1
+        return 0
+
+    return f(n) ^ f(m - 1)
