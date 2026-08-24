@@ -252857,3 +252857,18 @@ n == stones.length
 2 <= n <= 105
 -104 <= stones[i] <= 104
 */
+// C++ O(N) O(N) Dynamic Programming
+class Solution {
+public:
+    int stoneGameVIII(vector<int>& stones) {
+        int n = stones.size();
+        std::vector<int> pre;
+        std::partial_sum(stones.begin(), stones.end(), back_inserter(pre));
+        std::vector<int> f(n);
+        f[n - 1] = pre[n - 1];
+        for (int i = n - 2; i >= 1; --i) {
+            f[i] = std::max(f[i + 1], pre[i] - f[i + 1]);
+        }
+        return f[1];
+    }
+};
