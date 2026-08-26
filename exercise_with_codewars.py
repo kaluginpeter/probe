@@ -253115,3 +253115,25 @@ Edit: to be extra precise, the term should be "reduced" fractions, thanks to gir
 
 FundamentalsMathematics
 */
+package kata
+
+func ProperFractions(n int) int {
+	if n <= 1 {
+		return 0
+	}
+
+	result := n
+	m := n
+	for p := 2; p*p <= m; p++ {
+		if m%p == 0 {
+			for m%p == 0 {
+				m /= p
+			}
+			result -= result / p
+		}
+	}
+	if m > 1 {
+		result -= result / m
+	}
+	return result
+}
