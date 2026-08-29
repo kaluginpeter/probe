@@ -253663,3 +253663,32 @@ enum matrix_weight thin_or_fat(size_t size, const int matrix[size][size]) {
 # 1 <= nums[i] <= 109
 # 1 <= limit <= 109
 # Solution
+class Solution {
+public:
+    vector<int> lexicographicallySmallestArray(vector<int>& nums, int limit) {
+        size_t n = nums.size();
+        std::unordered_map<int, std::vector<size_t>> seen;
+        for (size_t i = 0; i < n; ++i) {
+            seen[nums[i]].push_back(i);
+        }
+        std::sort(nums.begin(), nums.end());
+        std::vector<int> output(n, 0);
+        size_t left = 0;
+        std::vector<size_t> sequence;
+        for (size_t right = 0; right < n; ++right) {
+            if (right && (nums[right - 1] == nums[right])) continue;
+            if (nums[right] - nums[(right ? right - 1 : right)] > limit) {
+                std::sort(sequence.begin(), sequence.end());
+                for (size_t& i : sequence) output[i] = nums[left++];
+                sequence.clear();
+            }
+            for (size_t& ptr : seen[nums[right]]) {
+                sequence.push_back(ptr);
+            }
+        }
+        std::sort(sequence.begin(), sequence.end());
+        for (size_t& i : sequence) output[i] = nums[left++];
+        sequence.clear();
+        return output;
+    }
+};
