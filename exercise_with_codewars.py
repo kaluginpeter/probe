@@ -253738,3 +253738,17 @@ Constraints:
 -105 <= nums[i] <= 105
 The integers in nums are distinct.
 */
+class Solution {
+public:
+    int minimumDeletions(vector<int>& nums) {
+        size_t n = nums.size(), x = 0, y = 0;
+        for (size_t i = 0; i < n; ++i) {
+            if (nums[x] < nums[i]) x = i;
+            if (nums[y] > nums[i]) y = i;
+        }
+        if (x > y) std::swap(x, y);
+        return std::min({
+            y + 1, (n - x), x + 1 + (n - y)
+        });
+    }
+};
