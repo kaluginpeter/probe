@@ -254009,3 +254009,11 @@ public:
 # Good luck!
 
 # Combinatorics
+from math import comb
+
+def surjections(n: int, k: int) -> int:
+    total = 0
+    for i in range(k + 1):
+        term = comb(k, i) * (k - i) ** n
+        total += -term if i % 2 else term
+    return total
