@@ -254774,3 +254774,8 @@ The Player 2 serves in the 8th round
 And so on
 Mathematics
 */
+package kata
+
+func WhoIsServing(currentRound int) int {
+	return 1 + ((currentRound-1)/2)%2
+}
