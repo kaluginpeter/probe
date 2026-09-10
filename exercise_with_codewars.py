@@ -255316,3 +255316,20 @@ If you are given an array with multiple answers, return the lowest correct index
 
 AlgorithmsArraysFundamentals
 */
+package kata
+
+
+func FindEvenIndex(arr []int) int {
+  var prefix, suffix int = 0, 0
+  for _, num := range arr {
+    suffix += num
+  }
+  for idx, num := range arr {
+    prefix += num
+    if prefix == suffix {
+      return idx
+    }
+    suffix -= num
+  }
+  return -1
+}
