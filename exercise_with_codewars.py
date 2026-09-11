@@ -255342,3 +255342,9 @@ Example: The binary representation of 1234 is 10011010010, so the function shoul
 
 BitsAlgorithms
 */
+package kata
+
+func CountBits(n uint) int {
+    if n == 0 { return 0}
+    return int(n & 1) + CountBits(n >> 1)
+}
