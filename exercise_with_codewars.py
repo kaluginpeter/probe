@@ -255521,3 +255521,20 @@ More examples in test cases.
 Good luck!
 
 Fundamentals
+package kata
+
+func GCD(a, b int) int {
+	for b != 0 {
+		a, b = b, a % b
+	}
+	return a
+}
+
+func Solve(s int, g int) []int {
+	for i := 1; i <= s; i++ {
+    if GCD(i, s - i) == g {
+      return []int{min(i, s - i), max(i, s - i)}
+    }
+  }
+  return []int{-1, -1}
+}
