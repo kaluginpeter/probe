@@ -255702,3 +255702,12 @@ The input will always be made of only lowercase letters and will never be empty.
 
 Fundamentals
 */
+package kata
+
+func WordsToMarks(s string) int {
+    output := 0
+    for _, ch := range s {
+        output += int(ch - 'a') + 1
+    }
+    return output
+}
