@@ -256736,3 +256736,15 @@ For example (Input --> Output):
 [1, 3, 10, 0]) --> [3, 10]
 ArraysAlgorithms
 */
+package kata
+
+func TwoOldestAges(ages []int) [2]int {
+  var x, y int = 0, 0
+  for _, num := range ages {
+    if num > x {
+      y = x
+      x = num
+    } else if num > y { y = num }
+  }
+  return [2]int{y, x}
+}
