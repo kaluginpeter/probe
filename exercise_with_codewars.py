@@ -257137,3 +257137,30 @@ The length of the final array
 
 ArraysAlgorithmsListsData Structures
 */
+package kata
+
+func SumGroups(arr []int) int {
+  var flag bool = true
+  for flag == true {
+    flag = false
+    var tmp []int = []int{}
+    var left, acc int = 0, 0
+    for right := 0; right < len(arr); right++ {
+      if arr[left] % 2 != arr[right] % 2 {
+        if len(tmp) > 0 && tmp[len(tmp) - 1] % 2 == acc % 2 {
+          flag = true
+        }
+        tmp = append(tmp, acc)
+        acc = arr[right]
+        left = right
+      } else { acc += arr[right] }
+    }
+    if len(tmp) > 0 && tmp[len(tmp) - 1] % 2 == acc % 2 {
+      flag = true
+    }
+    tmp = append(tmp, acc)
+    arr = make([]int, len(tmp))
+    copy(arr, tmp)
+  }
+  return len(arr)
+}
