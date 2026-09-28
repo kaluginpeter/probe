@@ -258172,3 +258172,30 @@ func reverseParentheses(s string) string {
 # 1 <= s.length <= 100
 # s consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.
 # It is guaranteed that parentheses expression s is a VPS.
+
+# Go O(N) O(1) Stack
+func maxDepth(s string) int {
+    var depth, output int = 0, 0
+    for _, ch := range s {
+        if ch == '(' {
+            depth++
+            if depth > output { output = depth }
+        } else if ch == ')' { depth-- }
+    }
+    return output
+}
+
+# C++ O(N) O(1) Stack
+class Solution {
+public:
+    int maxDepth(string s) {
+        size_t depth = 0, output = 0;
+        for (char& ch : s) {
+            if (ch == '(') {
+                ++depth;
+                if (depth > output) output = depth;
+            } else if (ch == ')') --depth;
+        }
+        return output;
+    }
+};
