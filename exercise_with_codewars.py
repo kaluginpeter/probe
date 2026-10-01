@@ -258640,3 +258640,44 @@ func Cycle(n int) int {
 # Constraints:
 # 1 <= s.length <= 104
 # s consists of parentheses only '()[]{}'.
+
+
+# Go O(N) O(D) Stack
+func isValid(s string) bool {
+    var prev []rune = []rune{}
+    var reciprocal map[rune]rune = map[rune]rune{')': '(', ']': '[', '}': '{'}
+    for _, ch := range s {
+        if ch == '(' || ch == '[' || ch == '{' {
+            prev = append(prev, ch)
+        } else {
+            if len(prev) == 0 || prev[len(prev) - 1] != reciprocal[ch] {
+                return false
+            }
+            prev = prev[:len(prev) - 1]
+        }
+    }
+    return len(prev) == 0
+}
+
+# C++ O(N) O(D) Stack
+class Solution {
+public:
+    bool isValid(string s) {
+        std::stack<int> prev;
+        std::unordered_map<int, int> reciprocal = {
+            {'}' - '0', '{' - '0'},
+            {']' - '0', '[' - '0'},
+            {')' - '0', '(' - '0'}
+        };
+        for (char& ch : s) {
+            if (!reciprocal.count(ch - '0')) prev.push(ch - '0');
+            else {
+                if (prev.empty() || reciprocal[ch - '0'] != prev.top()) {
+                    return false;
+                }
+                prev.pop();
+            }
+        }
+        return prev.empty();
+    }
+};
