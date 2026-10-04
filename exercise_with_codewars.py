@@ -258978,3 +258978,34 @@ func Height(n, m *big.Int) *big.Int {
 #
 # 1 <= s.length <= 100
 # s[i] is '(', ')' or '*'.
+
+# C++ O(N) O(N) String
+class Solution {
+public:
+    bool check(std::string& s) {
+        size_t open = 0, closed = 0, extra = 0;
+        for (char& ch : s) {
+            if (ch == '(') ++open;
+            else if (ch == '*') ++extra;
+            else {
+                ++closed;
+                if (closed > open) {
+                    if (!extra) return false;
+                    ++open;
+                    --extra;
+                }
+            }
+        }
+        return true;
+    }
+    bool checkValidString(string s) {
+        bool first = check(s);
+        std::string tmp = "";
+        for (auto it = s.rbegin(); it != s.rend(); ++it) {
+            if (*it == '(') tmp.push_back(')');
+            else if (*it == ')') tmp.push_back('(');
+            else tmp.push_back('*');
+        }
+        return first && check(tmp);
+    }
+};
