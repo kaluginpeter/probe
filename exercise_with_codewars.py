@@ -259580,3 +259580,15 @@ Write a function which returns the number of integer partitions of n. The functi
 
 MathematicsAlgorithmsDiscrete Mathematics
 */
+package kata
+
+func Partitions(n int) int {
+	dp := make([]int, n + 1)
+  dp[0] = 1
+  for k := 1; k <= n; k++ {
+      for s := k; s <= n; s++ {
+          dp[s] += dp[s - k]
+      }
+  }
+  return dp[n]
+}
