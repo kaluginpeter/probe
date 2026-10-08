@@ -259526,3 +259526,45 @@ public:
 # 1 <= s.length <= 105
 # s[i] is either '(' or ')'.
 # s is a valid parentheses string.
+
+
+# C++ O(N) O(N) Stack
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        std::string output = "", cur = "";
+        int acc = 0;
+        for (char& ch : s) {
+            if (ch == '(') {
+                ++acc; cur.push_back(ch);
+            } else {
+                --acc; cur.push_back(ch);
+                if (!acc) {
+                    output += cur.substr(1, cur.size() - 2);
+                    cur.clear();
+                }
+            }
+        }
+        return output;
+    }
+};
+
+# Go O(N) O(N) Stack String
+func removeOuterParentheses(s string) string {
+    var output, cur []byte = []byte{}, []byte{}
+    var acc int = 0
+    for _, ch := range s {
+        if ch == '(' {
+            acc++
+            cur = append(cur, byte(ch))
+        } else {
+            acc--
+            cur = append(cur, byte(ch))
+            if acc == 0 {
+                output = append(output, cur[1:len(cur) - 1]...)
+                cur = []byte{}
+            }
+        }
+    }
+    return string(output)
+}
