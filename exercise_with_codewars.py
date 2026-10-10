@@ -259746,3 +259746,37 @@ Happy coding!!
 
 FundamentalsMathematicsAlgorithmsMemoizationDynamic Programming
 */
+package kata
+
+var terms []int
+var next = 10
+
+func reverse(n int) int {
+	r := 0
+	for n > 0 {
+		r = r*10 + n%10
+		n /= 10
+	}
+	return r
+}
+
+func SumDifRev(n int) int {
+	for len(terms) < n {
+		next++
+		if next%10 == 0 {
+			continue 
+		}
+		r := reverse(next)
+		if r == next {
+			continue 
+		}
+		diff := next - r
+		if diff < 0 {
+			diff = -diff
+		}
+		if (next+r)%diff == 0 {
+			terms = append(terms, next)
+		}
+	}
+	return terms[n-1]
+}
