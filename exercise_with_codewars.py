@@ -260650,3 +260650,17 @@ code    : 000101
 result  : df
 StringsBinaryFundamentals
 */
+package kata
+
+import "strings"
+
+func Grille(message string, code int) string {
+	n := len(message)
+	var sb strings.Builder
+	for i := 0; i < n; i++ {
+		if code >> (n - i - 1) & 1 == 1 {
+			sb.WriteByte(message[i])
+		}
+	}
+	return sb.String()
+}
