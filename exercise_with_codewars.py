@@ -261165,3 +261165,17 @@ Examples:
 (Condition 2) not fulfilled).
 PuzzlesAlgorithmsMathematics
 */
+package kata
+
+func BouncingBall(h, bounce, window float64) int {
+  for h > 0 && 0 < bounce && bounce < 1 && h > window {
+    var count int = 0
+    for h > window {
+      count++
+      h *= bounce
+      if h > window { count++ }
+    }
+    return count
+  }
+  return -1
+}
