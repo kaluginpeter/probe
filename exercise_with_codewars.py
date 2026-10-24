@@ -261485,3 +261485,22 @@ Examples
 
 Regular ExpressionsAlgorithmsStrings
 */
+package kata
+
+import "unicode"
+
+func ToCamelCase(s string) string {
+	var output, bucket []byte = []byte{}, []byte{}
+  for _, ch := range s {
+    if ch == '_' || ch == '-' {
+      output = append(output, bucket...)
+      bucket = bucket[:0]
+    } else {
+      if len(output) == 0 || len(bucket) > 0 {
+        bucket = append(bucket, byte(ch))
+      } else { bucket = append(bucket, byte(unicode.ToUpper(ch)))}
+    }
+  }
+  output = append(output, bucket...)
+  return string(output)
+}
