@@ -261760,3 +261760,14 @@ Constraints:
 
 1 <= m, n <= 25
 */
+func createGrid(m int, n int) []string {
+    var output []string = []string{""}
+    for i := 0; i < n; i++ {
+        output[0] = output[0] + "."
+    }
+    var row string = ""
+    for i := 0; i < n - 1; i++ { row += "#" }
+    row += "."
+    for i := 0; i < m - 1; i++ { output = append(output, row) }
+    return output
+}
