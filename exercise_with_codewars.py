@@ -262229,3 +262229,15 @@ The function perimeter has for parameter n where n + 1 is the number of squares 
 perimeter(5)  should return 80
 perimeter(7)  should return 216
 MathematicsAlgorithms
+package kata
+
+func Perimeter(n int) int {
+  var acc, a, b int = 0, 0, 1
+  for i := 0; i < n + 1; i++ {
+    c := a
+    a = b
+    b += c
+    acc += a
+  }
+  return acc << 2
+}
