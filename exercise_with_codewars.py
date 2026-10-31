@@ -262544,3 +262544,18 @@ Note: despite its name in some languages, your function should handle any Unicod
 "🐐🦊🐐" --> "🦊"
 StringsAlgorithms
 */
+// Solution
+package kata
+
+import "unicode"
+
+func FirstNonRepeating(str string) string {
+  var seen map[rune]int = map[rune]int{}
+  for _, ch := range str {
+    seen[unicode.ToLower(ch)]++
+  }
+	for _, ch := range str {
+    if seen[unicode.ToLower(ch)] == 1 { return string(ch) }
+  }
+	return ""
+}
