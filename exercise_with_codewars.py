@@ -262587,3 +262587,11 @@ n == nums.length
 -109 <= nums[i] <= 109
 The answer is guaranteed to fit in a 32-bit integer.
 */
+func minMoves(nums []int) int {
+    var acc, mn int = 0, 1e9
+    for _, num := range nums {
+        acc += num
+        mn = min(mn, num)
+    }
+    return acc - mn * len(nums)
+}
