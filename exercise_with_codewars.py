@@ -262673,3 +262673,16 @@ func ListSquared(m, n int) [][]int {
 # n == nums.length
 # 1 <= nums.length <= 105
 # -109 <= nums[i] <= 109
+
+# Go O(NlogN) O(1) Sorting Math
+import "slices"
+
+func minMoves2(nums []int) int {
+    var n int = len(nums)
+    slices.Sort(nums)
+    var target, ops int = nums[n >> 1], 0
+    for _, num := range nums {
+        ops += max(num, target) - min(num, target)
+    }
+    return ops
+}
