@@ -263722,3 +263722,10 @@ Brute force is not the way to go here. Look for a simplifying mathematical appro
 
 MathematicsFundamentals
 */
+package kata 
+import "slices"
+func Solve(arr []int) int {
+  slices.Sort(arr)
+  var acc int = arr[0] + arr[1] + arr[2]
+  return min(arr[0] + arr[1], acc >> 1)
+}
