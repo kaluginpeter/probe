@@ -264352,3 +264352,29 @@ func NbMonths(startPriceOld, startPriceNew, savingperMonth int, percentLossByMon
 # 1 <= nums.length <= 100
 # 1 <= l <= r <= nums.length
 # -1000 <= nums[i] <= 1000
+
+# Go O(NK) O(1) SlidingWindow
+class Solution {
+public:
+    int minimumSumSubarray(vector<int>& nums, int l, int r) {
+        int minSum = std::pow(10, 6) + 1;
+        int n = nums.size();
+        for (int windowSize = l; windowSize < r + 1; ++windowSize) {
+            int curSum = 0;
+            for (int index = 0; index < windowSize; ++index) {
+                curSum += nums[index];
+            }
+            if (curSum > 0) {
+                minSum = std::min(minSum, curSum);
+            }
+            for (int shrink = windowSize; shrink < n; ++shrink) {
+                curSum += nums[shrink];
+                curSum -= nums[shrink - windowSize];
+                if (curSum > 0) {
+                    minSum = std::min(minSum, curSum);
+                }
+            }
+        }
+        return (minSum != std::pow(10, 6) + 1? minSum : -1);
+    }
+};
