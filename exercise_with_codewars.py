@@ -264858,3 +264858,22 @@ func NumberOfPairs(gloves []string) int {
 # 2 <= s.length <= 105
 # s has an even length.
 # s[i] is either '0' or '1'.
+
+# C++ O(N) O(1) TwoPointers
+class Solution {
+public:
+    int minChanges(string s) {
+        size_t n = s.size(), left = 0, right = 0;
+        int output = 0;
+        while (left < n) {
+            while (right < n && s[left] == s[right]) ++right;
+            size_t diff = right - left;
+            left = right;
+            if ((diff & 1) == 0) continue;
+            s[left] = s[left - 1];
+            ++left; right = left;
+            ++output;
+        }
+        return output;
+    }
+};
